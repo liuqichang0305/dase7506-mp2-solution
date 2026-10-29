@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "timestamp_utc": "2026-10-29T08:28:14.152936+00:00",
+  "fold_checks": [
+    {
+      "fold": 0,
+      "inner_disjoint": true,
+      "inner_partitions_outer": true,
+      "outer_holdout_disjoint": true,
+      "outer_and_holdout_cover_all": true,
+      "inner_fit_n": 2536,
+      "inner_stop_n": 634,
+      "outer_fit_n": 3170,
+      "holdout_n": 1585
+    },
+    {
+      "fold": 1,
+      "inner_disjoint": true,
+      "inner_partitions_outer": true,
+      "outer_holdout_disjoint": true,
+      "outer_and_holdout_cover_all": true,
+      "inner_fit_n": 2536,
+      "inner_stop_n": 634,
+      "outer_fit_n": 3170,
+      "holdout_n": 1585
+    },
+    {
+      "fold": 2,
+      "inner_disjoint": true,
+      "inner_partitions_outer": true,
+      "outer_holdout_disjoint": true,
+      "outer_and_holdout_cover_all": true,
+      "inner_fit_n": 2536,
+      "inner_stop_n": 634,
+      "outer_fit_n": 3170,
+      "holdout_n": 1585
+    }
+  ],
+  "every_train_question_held_out_once": true,
+  "reference_files_read": false
+}

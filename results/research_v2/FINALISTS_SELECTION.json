@@ -1,0 +1,29 @@
+{
+  "selected_at_utc": "2026-10-29T09:32:41.286922+00:00",
+  "search_closed": true,
+  "allowed_final_fit_experiments": [
+    "attention_regularized_s0",
+    "deepsets_regularized_s0"
+  ],
+  "new_test_enabled": false,
+  "finalists": [
+    {
+      "experiment_id": "attention_regularized_s0",
+      "checkpoint": "artifacts/research_v2/final_attention",
+      "method": "code/solution_v2.py"
+    },
+    {
+      "experiment_id": "deepsets_regularized_s0",
+      "checkpoint": "artifacts/research_v2/final_deepsets",
+      "method": "code/solution_v2.py"
+    }
+  ],
+  "selection_reason": "Best two stable nonlinear families from common train OOF. All three fixed seeds retained; deployment seed was fixed at 3036900957 before trials. No new finalist validation opened.",
+  "ensemble_rejected": "Only equal mixture lost 13 hard OOF questions versus fixed-seed Attention; no weight search or deployment.",
+  "ablation_note": "Hard-normalization and context-removal runs were preregistered diagnostic controls, not new finalist candidates.",
+  "analysis_sha256": "cb45bca747e6dcaa407e4ec596d4ffbf88f3c9199c953a05b14332a0632f33d8",
+  "configuration_sha256": {
+    "attention_regularized_s0": "25defae2559909f6ede404ea7c9cbb194586d5223f0790181f193936a09106ab",
+    "deepsets_regularized_s0": "095c0ce37a96eaced83d66ba8b17a8b1a505250fb48fb375cdc86c7075956a48"
+  }
+}

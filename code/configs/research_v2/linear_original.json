@@ -1,0 +1,14 @@
+{
+  "experiment_id": "linear_original",
+  "family": "linear",
+  "objective": "listwise",
+  "reduction": "full",
+  "l2": 0.1,
+  "seed": 3036900957,
+  "decoder": {
+    "mode": "candidate_max",
+    "alpha": 0,
+    "tau": 1,
+    "mask": false
+  }
+}

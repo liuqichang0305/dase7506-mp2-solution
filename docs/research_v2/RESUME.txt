@@ -1,0 +1,27 @@
+Read SEARCH_PLAN_V2.md, PILOT_BUDGET.md, results/research_v2/STATE.json,
+events.jsonl, common_folds.json, round registrations, Git status and UTC+8 time.
+Preserve all v1 releases/assets/logs/guards and the historical official Issue294.
+
+If FINALISTS_SELECTION.json or FINALISTS_LOCK.json exists, DO NOT resume CV,
+hyperparameter search, seed selection or ensemble search. Only finish the listed
+final fits/verification/reproduction/report/PR steps. FINALISTS_LOCK carries
+the exact source and asset hashes for at most two validation candidates.
+
+Before selection is locked, resume ONLY experiment IDs without summary.json.
+Use each registered configuration unchanged. Completed folds verify source,
+data, config and score hashes. An interrupted fold creates a new attempt directory,
+preserving prior epochs/logs. Never delete a summary to bypass a guard.
+
+Validation confirmation: code/tools/confirm_validation_v2.py resumes completed
+official processes without rerunning them and refuses after validation_summary.
+Fresh-environment reproduction is a separately labeled check of frozen choices,
+not another opportunity for model selection. No retraining replaces frozen assets.
+
+No research entry point accepts test. New formal test and course score updates
+remain disabled unless an explicit applicable instructor process is recorded.
+If such a process is later supplied, use one frozen selected checkpoint only,
+record the already-known old test aggregate, preserve immutable links and do not
+reopen model research after its score. Do not claim a new score or ranking now.
+
+Post-deadline peer review follows the instructor's actual release time; previous
+peer-review resume instructions remain in submission/PEER_REVIEW_RESUME.txt.

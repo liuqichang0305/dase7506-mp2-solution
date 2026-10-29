@@ -1,0 +1,43 @@
+{
+  "experiment_id": "attention_hard_ablation",
+  "fold": 0,
+  "status": "complete",
+  "seed": 3036900957,
+  "fit": {
+    "seconds": 16.940958899998805,
+    "epochs_run": 8,
+    "best_epoch": 8,
+    "inner_best_loss": null,
+    "numpy_max_abs_error": 1.430511474609375e-06,
+    "effective_weight_decay": 0.02249822569198013,
+    "hard_fraction": 0.4444794952681388,
+    "torch_version": "2.15.0+cpu",
+    "device": "cpu",
+    "torch_threads": 1
+  },
+  "inner_stopping": {
+    "seconds": 28.759996499999033,
+    "epochs_run": 16,
+    "best_epoch": 8,
+    "inner_best_loss": 0.4991636574268341,
+    "numpy_max_abs_error": 2.86102294921875e-06,
+    "effective_weight_decay": 0.0224822695035461,
+    "hard_fraction": 0.444794952681388,
+    "torch_version": "2.15.0+cpu",
+    "device": "cpu",
+    "torch_threads": 1
+  },
+  "parameters": 273025,
+  "numeric_asset_bytes": 1125124,
+  "checkpoint": "artifacts/research_v2/attention_hard_ablation/fold0-attempt1",
+  "scores_sha256": "d1005476af908f2b13d54a3526b83fe75438e7052076a10217684ebcad54c150",
+  "correct": 1444,
+  "n": 1585,
+  "accuracy": 91.10410094637224,
+  "hard_correct": 564,
+  "hard_n": 705,
+  "hard_accuracy": 80.0,
+  "single_positive_correct": 140,
+  "single_positive_n": 237,
+  "single_positive_accuracy": 59.07172995780591
+}

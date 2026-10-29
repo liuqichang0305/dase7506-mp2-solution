@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "train_inner": {
+    "correct": 835,
+    "n": 951,
+    "accuracy": 87.80231335436383,
+    "hard_correct": 314,
+    "hard_n": 430,
+    "hard_accuracy": 73.0232558139535
+  },
+  "fit": {
+    "training_seconds": 3.8339875000001484,
+    "optimizer_success": true,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "iterations": 38,
+    "objective": 0.19999649045518358,
+    "max_gradient": 5.041102321021998e-06,
+    "train_questions": 3804,
+    "parameters": 2065
+  },
+  "same_original_inner_rows": true,
+  "validation_all_choices_identical": true,
+  "test_access": false,
+  "official_validation": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "validation",
+    "correct": 724,
+    "n": 798,
+    "accuracy": 90.72681704260651,
+    "scoring_seconds": 0.0958864000003814
+  },
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "code/tools/evaluate.py",
+    "--checkpoint",
+    "artifacts/final_bundle",
+    "--split",
+    "validation",
+    "--output-dir",
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v2\\baseline_reproduction\\validation"
+  ]
+}

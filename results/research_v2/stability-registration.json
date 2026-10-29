@@ -1,0 +1,111 @@
+{
+  "registered_at_utc": "2026-10-29T09:00:00.959695+00:00",
+  "round": "stability",
+  "selection_data": "train common OOF only",
+  "validation_opened_for_new_models": false,
+  "selected": [
+    {
+      "experiment_id": "attention_regularized_s0",
+      "hard_fold_mean": 79.80140500752204,
+      "overall_accuracy": 91.01997896950579
+    },
+    {
+      "experiment_id": "deepsets_regularized_s0",
+      "hard_fold_mean": 78.23991242209327,
+      "overall_accuracy": 90.32597266035752
+    }
+  ],
+  "configs": [
+    {
+      "experiment_id": "attention_regularized_s1",
+      "family": "attention",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 8,
+      "seed": 3036900958,
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "heads": 4
+    },
+    {
+      "experiment_id": "attention_regularized_s2",
+      "family": "attention",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 8,
+      "seed": 3036900959,
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "heads": 4
+    },
+    {
+      "experiment_id": "deepsets_regularized_s1",
+      "family": "deepsets",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 8,
+      "seed": 3036900958,
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "experiment_id": "deepsets_regularized_s2",
+      "family": "deepsets",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 8,
+      "seed": 3036900959,
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    }
+  ],
+  "ablation_finalist_eligibility": null
+}

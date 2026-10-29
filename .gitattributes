@@ -4,3 +4,5 @@
 *.png binary
 artifacts/** -text
 submission/PRE_TEST_FREEZE.json -text
+code/configs/research_v2/** -text
+results/research_v2/** -text

@@ -1,0 +1,35 @@
+test_all_none_has_documented_positional_exception (test_contract_v2.GroupDecisionAuditTests.test_all_none_has_documented_positional_exception) ... ok
+test_group_and_within_group_ties (test_contract_v2.GroupDecisionAuditTests.test_group_and_within_group_ties) ... ok
+test_group_winner_can_differ_from_raw_maximum (test_contract_v2.GroupDecisionAuditTests.test_group_winner_can_differ_from_raw_maximum) ... ok
+test_invalid_high_score_does_not_create_tie (test_contract_v2.GroupDecisionAuditTests.test_invalid_high_score_does_not_create_tie) ... ok
+test_failed_gate_persists_before_any_probability_mixture (test_ensemble_oof_v2.EnsembleOOFTests.test_failed_gate_persists_before_any_probability_mixture) ... ok
+test_gate_threshold_and_failure (test_ensemble_oof_v2.EnsembleOOFTests.test_gate_threshold_and_failure) ... ok
+test_member_alpha_tau_and_candidate_permutation (test_ensemble_oof_v2.EnsembleOOFTests.test_member_alpha_tau_and_candidate_permutation) ... ok
+test_original_index_ties_none_and_actual_probability (test_ensemble_oof_v2.EnsembleOOFTests.test_original_index_ties_none_and_actual_probability) ... ok
+test_passed_gate_records_actual_synthetic_mixture_and_resources (test_ensemble_oof_v2.EnsembleOOFTests.test_passed_gate_records_actual_synthetic_mixture_and_resources) ... ok
+test_probability_average_is_not_logit_average (test_ensemble_oof_v2.EnsembleOOFTests.test_probability_average_is_not_logit_average) ... ok
+test_compression_does_not_reduce_counted_assets (test_integrity.IntegrityTests.test_compression_does_not_reduce_counted_assets) ... ok
+test_official_numeric_equivalence (test_integrity.IntegrityTests.test_official_numeric_equivalence) ... ok
+test_python_int_contract (test_integrity.IntegrityTests.test_python_int_contract) ... ok
+test_test_gate_rejects_unfrozen_manifest (test_integrity.IntegrityTests.test_test_gate_rejects_unfrozen_manifest) ... ok
+test_development_rejects_test_before_any_loading (test_learning.LearningTests.test_development_rejects_test_before_any_loading) ... ok
+test_listwise_extreme_scores_remain_finite (test_learning.LearningTests.test_listwise_extreme_scores_remain_finite) ... ok
+test_listwise_gradient_with_multiple_positives (test_learning.LearningTests.test_listwise_gradient_with_multiple_positives) ... ok
+test_listwise_preserves_all_positive_group (test_learning.LearningTests.test_listwise_preserves_all_positive_group) ... ok
+test_end_to_end_export_ids_batch_permutation_and_alignment (test_models_v2.NeuralArchitectureTests.test_end_to_end_export_ids_batch_permutation_and_alignment) ... ok
+test_numpy_equivalence_parameter_count_and_permutation (test_models_v2.NeuralArchitectureTests.test_numpy_equivalence_parameter_count_and_permutation) ... ok
+test_inference_import_has_no_torch_dependency (test_models_v2.NumericBundleTests.test_inference_import_has_no_torch_dependency) ... ok
+test_linear_preserves_float64_and_rejects_invalid_bundle (test_models_v2.NumericBundleTests.test_linear_preserves_float64_and_rejects_invalid_bundle) ... ok
+test_extreme_scores_and_input_guards (test_selection_v2.SelectionV2Tests.test_extreme_scores_and_input_guards) ... ok
+test_group_max_equivalence_including_ties (test_selection_v2.SelectionV2Tests.test_group_max_equivalence_including_ties) ... ok
+test_lse_formula_and_normalization (test_selection_v2.SelectionV2Tests.test_lse_formula_and_normalization) ... ok
+test_numpy_gradient_finite_differences_and_normalization (test_selection_v2.SelectionV2Tests.test_numpy_gradient_finite_differences_and_normalization) ... ok
+test_official_parser_equivalence_and_none (test_selection_v2.SelectionV2Tests.test_official_parser_equivalence_and_none) ... ok
+test_one_to_four_positives_and_objective_equivalence (test_selection_v2.SelectionV2Tests.test_one_to_four_positives_and_objective_equivalence) ... ok
+test_permutation_question_order_ids_and_n (test_selection_v2.SelectionV2Tests.test_permutation_question_order_ids_and_n) ... ok
+test_torch_loss_and_autograd_match_independent_numpy (test_selection_v2.SelectionV2Tests.test_torch_loss_and_autograd_match_independent_numpy) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 5.612s
+
+OK

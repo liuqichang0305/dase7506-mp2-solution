@@ -1,0 +1,178 @@
+{
+  "timestamp_utc": "2026-10-29T09:23:43.583620+00:00",
+  "status": "passed",
+  "completed_experiments": 16,
+  "checks": [
+    "3-fold coverage",
+    "common-fold SHA",
+    "OOF and per-fold score byte consistency",
+    "metrics independently recomputed from OOF",
+    "config registration",
+    "current training source SHA"
+  ],
+  "rows": [
+    {
+      "experiment_id": "attention_group_s0",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4309,
+      "hard_correct": 1668,
+      "hard_n": 2114,
+      "hard_fold_mean": 78.90245540511496,
+      "training_seconds": 41.68935790000069
+    },
+    {
+      "experiment_id": "attention_regularized_s0",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4328,
+      "hard_correct": 1687,
+      "hard_n": 2114,
+      "hard_fold_mean": 79.80140500752204,
+      "training_seconds": 133.29731520000132
+    },
+    {
+      "experiment_id": "attention_regularized_s1",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4319,
+      "hard_correct": 1678,
+      "hard_n": 2114,
+      "hard_fold_mean": 79.37587309262842,
+      "training_seconds": 1098.3893508
+    },
+    {
+      "experiment_id": "attention_regularized_s2",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4312,
+      "hard_correct": 1671,
+      "hard_n": 2114,
+      "hard_fold_mean": 79.04490382548893,
+      "training_seconds": 60.207461500000136
+    },
+    {
+      "experiment_id": "deepsets_group_s0",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4289,
+      "hard_correct": 1648,
+      "hard_n": 2114,
+      "hard_fold_mean": 77.95642596174511,
+      "training_seconds": 34.265074100001584
+    },
+    {
+      "experiment_id": "deepsets_regularized_s0",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4295,
+      "hard_correct": 1654,
+      "hard_n": 2114,
+      "hard_fold_mean": 78.23991242209327,
+      "training_seconds": 117.76401540000006
+    },
+    {
+      "experiment_id": "deepsets_regularized_s1",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4313,
+      "hard_correct": 1672,
+      "hard_n": 2114,
+      "hard_fold_mean": 79.09151353965184,
+      "training_seconds": 59.90083009999944
+    },
+    {
+      "experiment_id": "linear_group_a0",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4242,
+      "hard_correct": 1601,
+      "hard_n": 2114,
+      "hard_fold_mean": 75.73326348592308,
+      "training_seconds": 14.332354699998177
+    },
+    {
+      "experiment_id": "linear_group_a0p5",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4236,
+      "hard_correct": 1595,
+      "hard_n": 2114,
+      "hard_fold_mean": 75.44957554266067,
+      "training_seconds": 14.54017279999971
+    },
+    {
+      "experiment_id": "linear_group_a1",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4229,
+      "hard_correct": 1588,
+      "hard_n": 2114,
+      "hard_fold_mean": 75.11847195357832,
+      "training_seconds": 13.01044759999968
+    },
+    {
+      "experiment_id": "linear_group_hard",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4242,
+      "hard_correct": 1601,
+      "hard_n": 2114,
+      "hard_fold_mean": 75.73326348592308,
+      "training_seconds": 12.990395599999829
+    },
+    {
+      "experiment_id": "linear_original",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4213,
+      "hard_correct": 1576,
+      "hard_n": 2114,
+      "hard_fold_mean": 74.55096174511068,
+      "training_seconds": 11.718261099998927
+    },
+    {
+      "experiment_id": "mlp_capacity_s0",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4244,
+      "hard_correct": 1603,
+      "hard_n": 2114,
+      "hard_fold_mean": 75.82822909950569,
+      "training_seconds": 42.775077899999815
+    },
+    {
+      "experiment_id": "mlp_group_s0",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4240,
+      "hard_correct": 1599,
+      "hard_n": 2114,
+      "hard_fold_mean": 75.63836503331184,
+      "training_seconds": 32.1143697000025
+    },
+    {
+      "experiment_id": "mlp_listwise_s0",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4253,
+      "hard_correct": 1612,
+      "hard_n": 2114,
+      "hard_fold_mean": 76.25423114119923,
+      "training_seconds": 25.850140100003046
+    },
+    {
+      "experiment_id": "resmlp_group_s0",
+      "source_hashes_current": true,
+      "fold_hash": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "correct": 4241,
+      "hard_correct": 1600,
+      "hard_n": 2114,
+      "hard_fold_mean": 75.68604932301741,
+      "training_seconds": 27.359151000002385
+    }
+  ],
+  "issues": [],
+  "test_references_read": false,
+  "validation_labels_read": false
+}

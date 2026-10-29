@@ -1,0 +1,11 @@
+test_failed_gate_persists_before_any_probability_mixture (test_ensemble_oof_v2.EnsembleOOFTests.test_failed_gate_persists_before_any_probability_mixture) ... ok
+test_gate_threshold_and_failure (test_ensemble_oof_v2.EnsembleOOFTests.test_gate_threshold_and_failure) ... ok
+test_member_alpha_tau_and_candidate_permutation (test_ensemble_oof_v2.EnsembleOOFTests.test_member_alpha_tau_and_candidate_permutation) ... ok
+test_original_index_ties_none_and_actual_probability (test_ensemble_oof_v2.EnsembleOOFTests.test_original_index_ties_none_and_actual_probability) ... ok
+test_passed_gate_records_actual_synthetic_mixture_and_resources (test_ensemble_oof_v2.EnsembleOOFTests.test_passed_gate_records_actual_synthetic_mixture_and_resources) ... ok
+test_probability_average_is_not_logit_average (test_ensemble_oof_v2.EnsembleOOFTests.test_probability_average_is_not_logit_average) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.228s
+
+OK

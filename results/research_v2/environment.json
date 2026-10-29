@@ -1,0 +1,25 @@
+{
+  "utc": "2026-10-29T08:45:03.721810+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+  "processor": "12th Gen Intel(R) Core(TM) i9-12900H",
+  "physical_cores": 14,
+  "logical_cores": 20,
+  "ram_bytes": 16823717888,
+  "gpu_inventory": "NVIDIA GeForce RTX 3070 Ti Laptop GPU, 8192 MiB, 566.07",
+  "training_device": "cpu",
+  "torch_threads": 1,
+  "torch_interop_threads": 1,
+  "torch_cuda_available": false,
+  "inference_device": "cpu",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.15.0+cpu",
+    "threadpoolctl": "3.7.0",
+    "psutil": "7.2.2"
+  },
+  "reference_machine_certification": false,
+  "paid_compute": false
+}

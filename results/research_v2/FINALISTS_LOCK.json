@@ -1,0 +1,47 @@
+{
+  "selected_at_utc": "2026-10-29T09:32:41.286922+00:00",
+  "search_closed": true,
+  "allowed_final_fit_experiments": [
+    "attention_regularized_s0",
+    "deepsets_regularized_s0"
+  ],
+  "new_test_enabled": false,
+  "finalists": [
+    {
+      "experiment_id": "attention_regularized_s0",
+      "checkpoint": "artifacts/research_v2/final_attention",
+      "method": "code/solution_v2.py"
+    },
+    {
+      "experiment_id": "deepsets_regularized_s0",
+      "checkpoint": "artifacts/research_v2/final_deepsets",
+      "method": "code/solution_v2.py"
+    }
+  ],
+  "selection_reason": "Best two stable nonlinear families from common train OOF. All three fixed seeds retained; deployment seed was fixed at 3036900957 before trials. No new finalist validation opened.",
+  "ensemble_rejected": "Only equal mixture lost 13 hard OOF questions versus fixed-seed Attention; no weight search or deployment.",
+  "ablation_note": "Hard-normalization and context-removal runs were preregistered diagnostic controls, not new finalist candidates.",
+  "analysis_sha256": "cb45bca747e6dcaa407e4ec596d4ffbf88f3c9199c953a05b14332a0632f33d8",
+  "configuration_sha256": {
+    "attention_regularized_s0": "25defae2559909f6ede404ea7c9cbb194586d5223f0790181f193936a09106ab",
+    "deepsets_regularized_s0": "095c0ce37a96eaced83d66ba8b17a8b1a505250fb48fb375cdc86c7075956a48"
+  },
+  "sealed_at_utc": "2026-10-29T09:34:31.826350+00:00",
+  "selection_sha256": "84cf7fd21d555cd185aa6201fee8a49fb495c007d94c7c5c31b2005e7ba4e612",
+  "asset_sha256": {
+    "artifacts/research_v2/final_attention/config.json": "fc8a9c37dbff7afe86bd27aeb032bfd400c13411f7c7e08659ea197a6cce9317",
+    "artifacts/research_v2/final_attention/weights.npz": "e020c0075b67b7bc9cf3922e1d60c67fe363b2ba3fd7df683c4089ced0110bab",
+    "artifacts/research_v2/final_deepsets/config.json": "e2c210a3717c5b48ee312226491b4b9c444cb6642d94fb3afd1fa39226bd89cf",
+    "artifacts/research_v2/final_deepsets/weights.npz": "2bb9002701b0bcb6105b30f88863db20d7fd7267bc530ce85048168d47a60ab1"
+  },
+  "inference_source_sha256": {
+    "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "code/predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+    "code/score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+    "code/solution_v2.py": "ef495ae4a06ada90aa26302d9c6c5d614ab0bda8aa33bda14e656e7808b549f9",
+    "code/mp2/__init__.py": "853575bfe208eeb5d5b8e0507c8c76d7841986e53225f8c2d8c95d7788d7e334",
+    "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+    "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+    "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "experiment_id": "linear_original",
+  "fold": 0,
+  "status": "complete",
+  "seed": 3036900957,
+  "fit": {
+    "seconds": 4.134796300000744,
+    "iterations": 46,
+    "optimizer_success": true,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "objective": 0.19628522685663985,
+    "effective_l2": 0.1,
+    "hard_fraction": 0.4444794952681388
+  },
+  "inner_stopping": null,
+  "parameters": 2065,
+  "numeric_asset_bytes": 49544,
+  "checkpoint": "artifacts/research_v2/linear_original/fold0-attempt1",
+  "scores_sha256": "aea9acc117e0efcdb22a5e2e9e9d43420e14e263765b2d62a004ee74caaabf22",
+  "correct": 1403,
+  "n": 1585,
+  "accuracy": 88.5173501577287,
+  "hard_correct": 524,
+  "hard_n": 705,
+  "hard_accuracy": 74.32624113475177,
+  "single_positive_correct": 120,
+  "single_positive_n": 237,
+  "single_positive_accuracy": 50.63291139240506
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "first_only_correct": 71,
+  "second_only_correct": 38,
+  "hard_n": 2114,
+  "stronger_member_hard_correct": 1687,
+  "hard_oracle_correct": 1725,
+  "hard_oracle_gain_over_stronger_percentage_points": 1.7975402081362346,
+  "requirements": {
+    "minimum_each_corrects_other": 10,
+    "minimum_hard_oracle_gain_percentage_points": 1.0
+  },
+  "interpretation": "Passing permits exactly one equal-weight probability mixture; oracle is not an achievable prediction."
+}

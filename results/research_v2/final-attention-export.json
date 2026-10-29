@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "timestamp_utc": "2026-10-29T09:37:38.383001+00:00",
+  "purpose": "Frozen full-validation numerical export check; no accuracy, references, or model selection",
+  "split": "validation",
+  "questions": 798,
+  "candidate_scores": 3192,
+  "reference_data_guard": "Only data/manifest.json and the two validation candidate files can be opened",
+  "rejected_data_reads": [],
+  "checkpoint": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\final_attention",
+  "assets": {
+    "config.json": "fc8a9c37dbff7afe86bd27aeb032bfd400c13411f7c7e08659ea197a6cce9317",
+    "weights.npz": "e020c0075b67b7bc9cf3922e1d60c67fe363b2ba3fd7df683c4089ced0110bab"
+  },
+  "architecture": {
+    "blocks": 1,
+    "context": true,
+    "dropout": 0.3,
+    "expansion": 2,
+    "family": "attention",
+    "heads": 4,
+    "hidden": 64,
+    "layer_norm_eps": 1e-05,
+    "width": 128
+  },
+  "decoder": {
+    "alpha": 0,
+    "mask": true,
+    "mode": "group_lse",
+    "tau": 1
+  },
+  "torch_version": "2.15.0+cpu",
+  "numpy_version": "2.5.3",
+  "dtype": "float32",
+  "device": "cpu",
+  "threads": {
+    "torch_intraop": 1,
+    "torch_interop": 1,
+    "environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "OMP_THREAD_LIMIT": "1"
+    }
+  },
+  "absolute_tolerance": 3e-06,
+  "relative_tolerance": 3e-05,
+  "maximum_absolute_error": 1.9073486328125e-06,
+  "mean_absolute_error": 2.926617001829888e-07,
+  "scores_outside_tolerance": 0,
+  "choice_agreement": {
+    "equal": 798,
+    "n": 798
+  },
+  "differing_row_indices": [],
+  "differing_torch_choices": [],
+  "differing_numpy_choices": [],
+  "raw_argmax_difference_count": 0,
+  "selected_group_probability_margin_minimum": 0.006076885819289168,
+  "selected_group_probability_margin_below_1e_5_count": 0,
+  "torch_forward_seconds": 0.059566399999312125,
+  "numpy_features_and_forward_seconds": 0.2904982000000018,
+  "audit_total_seconds": 0.6101751999995031,
+  "timing_note": "Diagnostic in-process timings only; not the official fresh-process inference-plus-scoring budget",
+  "threadpool_info": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+      "version": "0.3.34.106.0",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libiomp",
+      "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\torch\\lib\\libiomp5md.dll",
+      "version": null
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libiomp",
+      "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\torch\\lib\\libiompstubs5md.dll",
+      "version": null
+    }
+  ]
+}

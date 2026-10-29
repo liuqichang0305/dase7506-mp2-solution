@@ -1,0 +1,40 @@
+{
+  "config": {
+    "experiment_id": "attention_regularized_s1",
+    "family": "attention",
+    "width": 128,
+    "hidden": 64,
+    "dropout": 0.3,
+    "objective": "group",
+    "alpha": 0,
+    "reduction": "full",
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "batch_size": 128,
+    "max_epochs": 60,
+    "patience": 8,
+    "seed": 3036900958,
+    "decoder": {
+      "mode": "group_lse",
+      "alpha": 0,
+      "tau": 1,
+      "mask": true
+    },
+    "heads": 4
+  },
+  "config_sha256": "155b0c5b55220ecc16c5a5fd83c13834b73c9b00544052cf4b0ac1e818787582",
+  "source_files": {
+    "code/mp2/training_v2.py": "351dbaf1db673c86862958fd38d5f0fbab8630ac5ff36c30a0e7c1bdf6bea9ec",
+    "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+    "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+    "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+    "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2"
+  },
+  "data_files": {
+    "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+    "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+    "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2"
+  },
+  "git_commit": "d9585ce4ea52877a448ff146fac5d942ac71b7a1",
+  "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9"
+}

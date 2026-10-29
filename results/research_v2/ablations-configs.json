@@ -1,0 +1,49 @@
+[
+  {
+    "experiment_id": "attention_hard_ablation",
+    "family": "attention",
+    "width": 128,
+    "hidden": 64,
+    "dropout": 0.3,
+    "objective": "group",
+    "alpha": 0,
+    "reduction": "hard",
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "batch_size": 128,
+    "max_epochs": 60,
+    "patience": 8,
+    "seed": 3036900957,
+    "decoder": {
+      "mode": "group_lse",
+      "alpha": 0,
+      "tau": 1,
+      "mask": true
+    },
+    "heads": 4,
+    "scale_regularization": true
+  },
+  {
+    "experiment_id": "deepsets_no_context",
+    "family": "deepsets",
+    "width": 128,
+    "hidden": 64,
+    "dropout": 0.3,
+    "objective": "group",
+    "alpha": 0,
+    "reduction": "full",
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "batch_size": 128,
+    "max_epochs": 60,
+    "patience": 8,
+    "seed": 3036900957,
+    "decoder": {
+      "mode": "group_lse",
+      "alpha": 0,
+      "tau": 1,
+      "mask": true
+    },
+    "context": false
+  }
+]

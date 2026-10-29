@@ -1,0 +1,309 @@
+DASE7506 MP2 — 性能研究升级提示词 v2
+核对日期：2026-10-29，Asia/Shanghai
+用途：接着现有已提交工程做有实验证据的性能研究，直接上传/粘贴给 Codex 执行。
+本文件是新研究分支的任务规范；没有声称下列模型已经训练、已经提分或保证进入前二十。
+
+==================== 给 Codex 的完整提示词 ====================
+
+你是我的机器学习研究工程师。请在现有 DASE7506 MP2 项目上实际执行一次充分、受控、可复现的性能升级研究，目标是增强困难题辨别能力，争取有竞争力的成绩。不要再次只比较几个线性 L2 配置就结束，也不要花大量时间重新搭建已经存在的文档和提交流程。
+
+任务重点：现有模型审计 → 解码/训练目标对齐 → 小型非线性架构 → 共享训练内交叉验证 → 小规模互补融合 → 独立验证与资源审计 → 可审查的升级版本。
+
+先做研究，不保证排名。不能把“反复跑 test，直到进入前二十”写成优化循环。
+
+一、项目入口与研究边界
+
+我的现有仓库：
+https://github.com/liuqichang0305/dase7506-mp2-solution
+
+本提示词核对的已提交代码版本：
+419e1158ba2f83b8c08796429e635f1bf8ab2977
+
+官方规则：
+https://github.com/xudongwu-0/DASE7506-MP2/blob/main/guide/GUIDE.md
+https://github.com/xudongwu-0/DASE7506-MP2/blob/main/code/README.md
+
+已有结果入口：
+- results/development/RESULTS.md
+- results/development/search_summary.json
+- results/development/train_statistics.json
+- results/reliability/summary.json
+- code/mp2/features.py
+- code/mp2/model.py
+- code/mp2/training.py
+- code/solution.py
+- submission/PRE_TEST_FREEZE.json
+- submission/SUBMISSION_RECORD.md（如当前版本存在；否则定位实际正式提交记录路径）
+
+启动先核对当前仓库状态与实际版本、最新课程规则、当前 UTC+8 时间。不能覆盖用户未提交改动，不能把旧版本当成最新版本；如果代码已变化，要记录差异。
+
+授权你在此项目下创建 research/performance-v2 分支或独立 worktree，新增研究代码、训练、验证、修复、commit/push 与审查 PR。旧的 release、提交 commit、artifacts/final_bundle、原始成绩、原始日志和正式 Issue 保持可追溯，不静默替换。新内容放 artifacts/research_v2、results/research_v2、docs/research_v2 等独立路径。
+
+已有 code/mp2/training.py 的 run_search() 会拒绝重复已完成搜索。不要删除 search_summary.json、去掉保护或伪造“第一次开发”。新增明确版本化的 train-only 研究入口，保留原保护。
+
+本次指令允许开展新的训练/验证研究，替代旧工作流中“已冻结即停止全部研究”的做法；不授权使用 test 参考、逐题测试错误或反复测试成绩选模型。记录我们已知旧提交的测试总成绩，因此新的研究不是完全未接触测试反馈的原始实验。
+
+正式新 test 重评和课程成绩更新默认关闭。检查课程是否明确允许已评估后基于 train/validation 的再开发及如何重评；若有明确适用流程，记录出处并照做；没有明确依据时，完成所有开发、验证、冻结和 PR 工作，只将最终重评/更新标记待确认。不能把“可更新提交”自行解读为允许 test 调参，也不能把“禁止 test 调参”说成官方逐字禁止一切后续研究。这个边界不应让你停在计划或等待。
+
+二、必须遵守的资源与数据规则
+
+- 只用官方 train 4,755 题拟合；validation 798 题用于开发确认/选择；每题四候选，可能多个正确。
+- 给定 embedding 是 [N,4,1024]。输出仍是每题一个原始候选索引 0–3，必须 Python int。
+- official parse_answer 与 scorer 原样保留；以最终数值答案是否正确评分，不代表过程逻辑被证明正确。
+- 不下载额外预训练权重，不使用额外训练数据、完整 GSM8K 原库、他人作业预测/权重或题目答案检索。
+- 可复用论文结构与合法开源实现；所有本项目参数从随机初始化、给定训练数据学习。检查许可证并披露复用。
+- 禁止外部 LLM 教师/API 代做题目、伪标签或蒸馏；评估离线，无新生成、无模型下载。
+- 推理所有额外资产未压缩合计 <=16 MiB=16,777,216 bytes；含权重、配置、统计、校准、ensemble、词表等。
+- 完整 CPU 预测新进程＋独立评分进程 <=30 秒，所有库和进程总计 <=4 线程，参考 Xeon Platinum 8457C；本机实测不能冒充参考机认证。
+- 训练 CPU 或最多一张性能不高于 RTX 4090 的 GPU。默认不买算力、不产生外部 API 费用。
+- 不用题目 ID、硬编码 N、答案缓存或参考文件推理，支持未见 audit bank。
+
+三、先核实现有实现，形成具体假设
+
+以下是已核对旧提交的事实，启动时确认当前是否仍成立：
+
+1. 特征为 [embedding, abs(embedding - 同题均值), 16 个统计]，共 2064 维。不是“完全没有关系信息”；绝对差和余弦统计确实提供了非线性特征。
+2. 最终 score 是标准化特征乘一个权重向量加 bias，没有学习到多层非线性交互。
+3. 同题共享的有效答案种数、并列多数答案组数等特征，在单层线性候选排序中相消；不能表达“分歧大时改变对多数票的信任”。不要误称 abs 差分也相消。
+4. 训练使用多正例 listwise：L=LSE(全部候选分数)-LSE(正确候选分数)。但 code/solution.py 最终直接 argmax 单候选，没有按最终答案组聚合。
+5. 有可解析性软特征，没有排除 parse_answer=None 的候选。官方定义下这种候选一定不得分，而每题至少有一正确候选。
+6. 搜索是三种线性设定乘两个 L2，仅六配置；先一次 train 内 80/20 筛选，只有胜出方案做三折 OOF。总搜索记录为 56.0689 秒。未发现多正例标签或折内标准化公式本身的明显错误。
+7. 旧验证结果：724/798=90.7268%；hard 子集 282/355=79.4366%；单正例题 59/117=50.4274%；379/798 题四个候选都正确。不能只盯着整体90%以上的分数。
+8. train 中 2242/4755 题四候选都正确，对原 listwise 排序梯度为0；其余题提供排序信号。加入可解析 mask 后，仅一个有效答案组的题对 group CE 同样没有判别梯度。
+
+写 audit_v2.md，记录事实、代码位置、待实测假设，区分已有结果与新预测。
+
+四、实验 A：先修正选择机制，而不是先堆大模型
+
+所有实验先在 train 内 CV/OOF 上运行，最后按预注册协议检查 validation。不得跑新 test。
+
+A0. 精确复现旧 baseline 的 validation 与 train 内分割，不覆盖原结果；这用于比较，不重新检查 test。
+
+A1. 可解析硬 mask：
+- 对 parse_answer=None 的候选置为不可选。不能将多个 None 当作相同的正常答案。
+- 官方合法题保证至少一正确候选，因而至少一个可解析候选；存在有效候选时，排除 None 不会把原来正确选择变为错误。
+- 未知/合成 bank 若全不可解析，应采用预先定义的确定性回退并记录诊断，不随意 crash 或返回非法值。
+- mask 后若只剩一个有效答案组，选择该组中的候选；不需要模型猜测。此逻辑来自公开任务保证，不是按题记答案。该保证不应外推到没有保证的现实题库。
+- 如果声明通用 audit 输入，也要说明依赖的课程契约；不能为了算力省略数组对齐检查。
+
+A2. 答案组解码：
+先用官方 parse_answer 将有效候选按规范化数值组成 G_a。每个组的最终答案一致，其正确性标签也一致。
+
+比较有限几种预先指定策略：
+  candidate-max：当前最高单候选；
+  group-max：每组最大 s_j；
+  group-LSE：S_a=logsumexp(s_j / tau, j∈G_a)；
+  group-normalized-LSE：S_a=logsumexp(s_j / tau, j∈G_a)-alpha*log(|G_a|)。
+
+alpha 候选为 {0,0.5,1}，先固定 tau=1；如训练内证据值得再对 tau 做很小的预注册网格。group-max 与全体有效候选 argmax 本质等价，应作为实现一致性检查，不伪装为全新模型。
+
+alpha=0 保留数量证据；alpha=1 为 log-mean-exp，抵消显式组大小奖励。相同答案的轨迹相关，不可把相加解释为独立证据。不要未经实测认定 LSE 一定提升。
+
+选中最高分答案组后，返回组内最高分候选的原索引；平票规则确定且记录，不能返回答案值。
+
+对齐示例仅为合成说明：两个答案 A 候选 s=1.0、0.9，答案 B 候选 s=1.4；单候选 max 选B，但组A的 LSE≈1.644，高于1.4。到底 A/B 谁正确由输入数据决定，例子不是提分证据。
+
+A3. 配套训练目标：
+- 保留原多正例 listwise 作对照。
+- 新模型可使用答案组 CE：L_group=LSE_a(S_a)-S_gold_answer。
+- 同题有效答案组中恰有一个正确组，因此答案组 CE 与多正确候选不冲突。
+- 对候选 s_j 做 alpha=0、tau=1 的组聚合，在所有候选有效时，此目标与原多正例 listwise 等价；mask、alpha 或 tau 变化要明确标注，不伪称新损失带来收益。
+- BCE 仍保留全部正确候选，可作独立损失对照，不强行变成唯一正例四分类。
+- 可选 RankNet 风格正负 pair loss，但不是必须项；按题平均正负pair，多个正确候选不互相作负例。
+
+A4. loss 缩放与难题：
+- 先报告完整训练目标，再对含两个以上有效答案组的题平均 group loss 作对照。
+- 不能把无梯度容易组压低平均loss造成的变化，误归因于架构变强。
+- 改归一化/权重时同步调整正则强度；旧 L2=0.1 与神经网 AdamW weight_decay 不是同一可直接照搬的设置。
+- 如做hard加权，用可由输入确定的答案分歧规则，固定小范围权重；单正例标签只能用于train采样/诊断，推理不能知道其值。
+
+五、实验 B：必须实际比较的小型非线性模型
+
+所有主要模型共享相同 train 内题级划分；同题四候选不拆分。先完成 B1、B2，时间允许再跑 B3 或 B4。使用 PyTorch 训练可行；以完整新进程实测决定是否导出轻量 NumPy 推理。
+
+B1. 小型 MLP / Residual MLP verifier
+
+来源：Gorishniy et al., Revisiting Deep Learning Models for Tabular Data, NeurIPS 2021。
+论文：https://arxiv.org/abs/2106.11959
+作者实现：https://github.com/yandex-research/rtdl-revisiting-models
+
+第一版从共享 MLP 2064→128→64→1 开始，ReLU/GELU、dropout；旧关系特征复用，不重新做预训练编码。
+该简单 MLP 约 27.3 万参数，float32 参数约1.04 MiB，仅为结构计算估算，仍须计算实际全部推理资产。
+
+随后比较小 ResMLP：
+  h_j = Linear(x_j, width)
+  h_j = h_j + W2(dropout(activation(W1(LayerNorm(h_j)))))
+  s_j = shared_head(h_j)
+
+width 先128，再考虑256；1–2残差块；dropout {0.1,0.3}；weight_decay 从1e-4、1e-3、1e-2的少量组合筛选；学习率从1e-3/3e-4起步。不是全排列暴力搜索。
+
+LayerNorm、尺寸与损失是本项目改写，不宣称完整复现论文原模型。训练只能fit训练折标准化，不能在validation上fit。
+
+回答：仅加入可学习非线性，是否改善 hard 和单正例题？不是仅靠加参数解释收益。
+
+B2. Deep Sets 风格候选比较器（重点）
+
+来源：Zaheer et al., Deep Sets, NeurIPS 2017。
+论文：https://arxiv.org/abs/1703.06114
+作者代码：https://github.com/manzilzaheer/DeepSets
+
+改写结构：
+  h_j = phi(e_j)                         # 1024→128→128，共享非线性编码
+  m = mean_j(h_j)
+  v = max_j(h_j)
+  u_j = concat(h_j,m,v,abs(h_j-m),h_j*m,t_j)
+  s_j = rho(u_j)                         # 共享非线性头，例如→128→1
+
+t_j 为已有解析、票型、文本统计，可在训练内选择小范围增减。mean/max 在同题四候选上聚合，不能跨题混合。
+
+该模型输出四个分数，要求候选置换等变；不是池化后只输出一个题分数。不要加候选位置embedding作为默认策略。训练置换增强必须同步移动文本、embedding、label、答案组索引，推理还原原索引。
+
+关键对照：线性打分＋原关系特征 vs 同等容量独立MLP vs Deep Sets上下文MLP。这样才能判断收益是否来自候选交互。
+
+不要实现成 s_j=w^T e_j+v^T mean(e)，后半项对同题相同，在argmax中相消。
+
+B3. 候选级轻量 Self-Attention（可选第三家族）
+
+来源：Lee et al., Set Transformer, ICML 2019。
+论文：https://proceedings.mlr.press/v97/lee19d.html
+官方代码：https://github.com/juho-lee/set_transformer
+参考模块：https://github.com/juho-lee/set_transformer/blob/master/modules.py
+
+输入 [batch,4,1024]，共享投影到 [batch,4,128]，一层无位置编码 self-attention，2或4 heads、FFN宽256，再共享逐候选head。若确有证据再考虑第二层。
+
+这里只有4个候选token；不能把1024个embedding维度当1024个token。四token无需引入inducing points或大型decoder；可称“受Set Transformer启发的候选交互模型”，不能冒称完整复现原encoder-decoder。
+
+新增attention容易过拟合，性能与资源均要实测；不得仅因为是Transformer而默认胜出。
+
+B4. TabM 小规模变体（可选较新路线，可替代B3）
+
+来源：Gorishniy et al., TabM: Advancing Tabular Deep Learning with Parameter-Efficient Ensembling, ICLR 2025。
+论文：https://arxiv.org/abs/2410.24210
+官方代码：https://github.com/yandex-research/tabm
+
+将当前数值特征送入小型TabM/共享参数MLP ensemble，k先4或8、宽128，禁用大规模默认配置和外部预训练权重。核实安装版本和API，不盲抄示例。
+
+按官方TabM初始化/输入侧成员缩放，在主干第一次线性特征混合之前为各ensemble成员构造不同表示，而不是共享投影后简单复制同一表示、重复相同网络输出。训练时对各成员loss求平均，不先平均预测再算一次loss。用于本任务时每个成员输出[batch,4]候选分数，再分别做候选/组损失；推理优先平均对齐答案组的概率，而非未经校准的不同尺度logit。
+
+共享权重节省资产，但计算仍随k增加。先测小配置，不因为论文在其他数据上强就断言本项目一定胜出。
+
+六、实验设计：研究要充分，但不要盲目拉满搜索
+
+先测一个小配置单折耗时，再制定真实可完成预算。默认CPU研究预算上限约6小时；按当前距截止时间收缩，至少为最终报告/复现/提交流程保留4–6小时。6小时是工程预算建议，不是课程限制，不要求耗尽预算。
+
+执行顺序：
+1. A组选择机制与损失对齐：原始max、mask max、group-LSE、归一化组聚合，先轻量验证。
+2. B1小MLP/ResMLP与B2 Deep Sets，每家族至少一个真实配置在共同三折上完成；每族最多先探索4个小配置。
+3. 时间够再加入B3 attention或B4 TabM，不把所有架构列在报告中却没有实际运行。
+4. 最有希望的2个结构补2–3个固定seed，评估稳定性，而不挑最幸运的seed。
+5. 至少做“解码变化/损失变化/架构变化”分离消融；避免同时改三项然后把全部收益归给新模型。
+
+所有主要方法必须用同一套题级外折比较。对计算昂贵模型可先单折短训练淘汰明显失败配置，但最后进入主表的每个主要家族必须有共同三折结果；不能只给winner做CV。
+
+数据划分和早停：
+- 只在官方train内部建立固定3个外折，按题分组，可按训练正例数与有效答案种数作稳定分层；稀有组合合并，不强行分层造成失败。
+- 每外折的early stopping子集从该折训练部分再划分；不要用外折标签选epoch后再声称外折完全独立。
+- scaler/PCA/词表/特征选择只在对应拟合部分训练，禁止global fit后再分折。
+- OOF全部来自没有使用该题标签拟合/早停的模型。超参数根据OOF选过后，OOF仍带选择偏差，不能称无偏最终泛化估计。
+- 旧baseline参与新OOF比较或融合时也必须按相同外折重训；不能用旧的全train checkpoint给train打分后冒充OOF。已有OOF仅在划分、训练来源与新协议确实匹配时复用。
+- 最终全train训练的epoch规则由内部训练确定，不能用validation/test反复早停。
+
+指标与选模规则要在跑之前写入 SEARCH_PLAN_V2.md：
+- 完整题级accuracy始终报告。
+- hard定义固定为“至少两个不同有效解析答案”，重点报告hard accuracy、correct/n与折间波动。
+- 单正例子集只作开发诊断，报告59/117基线与新结果；不在推理时读取此标签分层。
+- mask与唯一有效答案组逻辑固定后，容易组由任务契约处理，hard上改进更能体现辨别力；不能改变官方完整评估分母。
+- 在train OOF上优先比较hard平均表现，再比较整体、seed稳定性、资源成本；预先记录这种选择依据是官方test/audit的公开构造条件，非测试错题反馈。
+- 官方validation仍完整评估，hard只是附加固定子集，不能省略总分。
+- 选择一个研究winner后再查看其官方validation结果；如需与多个finalist比较，事先限定最多2个并在记录中披露，不根据validation错误无限开启新搜索。
+- 对主要差异按题paired bootstrap给出区间与实际“多选对几题”；不能把候选视为独立样本。重复选模的乐观性必须说明。
+
+停止条件：预算耗尽、连续两轮基于明确假设的改动无稳定收益、或进入截止缓冲期即停止。若没有可靠提升，保留原方法并提交真实负结果研究，不能捏造提升。不要为了完成某个次数而无意义重跑。
+
+七、融合与置信度：只有证据才加
+
+1. 先比较模型在train OOF上的错误重叠；同错高度一致则ensemble可能没有价值。
+2. 优先等权或预注册少量权重的2–3个小模型；禁止增加十几个成员碰运气。
+3. 每模型先输出可比较的候选/答案组概率，再融合；logit尺度不同不能直接默认相加合理。
+4. 如拟合stacker或校准器，只用train OOF，最好再做meta层交叉拟合；validation用于独立开发确认，不用于拟合。
+5. 改了最终选择器后，旧calibrator的“所选候选正确”事件已变化，不能沿用旧argmax的confidence_features。重新计算实际所选答案组的OOF事件，必要时重新校准。
+6. 多正例场景 max softmax 不自动是所选最终答案正确概率；报告Brier、ECE、样本数、可靠性图，risk–coverage仅作分析，正式不能弃答。
+7. 参数量、所有成员资产、推理总时长全部计入限额。最终保留单模型也是合理结果。
+
+八、实现路径：复用现有工程，不重写整套项目
+
+优先新增：
+- code/mp2/selection_v2.py：mask、答案组、聚合、映射回原候选索引。
+- code/mp2/models_v2.py：MLP/ResMLP、Deep Sets；可选attention/TabM适配。
+- code/mp2/training_v2.py：只允许train内部CV/OOF；校准/融合；可恢复实验。
+- code/train_v2.py：独立训练入口，不删除旧run_search保护。
+- code/solution_v2.py：独立正式接口兼容 predict(bank,arrays,checkpoint)。
+- code/configs/research_v2/：已实际运行的配置，不存一堆未执行伪结果。
+- code/tests/test_selection_v2.py、test_models_v2.py：关键行为验证。
+- artifacts/research_v2/、results/research_v2/、docs/research_v2/。
+
+模型加载用新schema，旧 mp2-linear-v1 能原样复现；版本不匹配明确报错，不静默套错参数。可复用官方工具与现有 evaluate/audit_assets，但开发命令只能允许train/validation。旧test scorer不要被研究脚本顺手调用。
+
+所有训练任务有明确experiment_id、配置hash、seed、数据hash、代码版本、fold、成本、指标、失败原因、状态。长任务输出阶段进度，支持断点续跑，不因一次失败或上下文压缩丢失最佳开发候选。
+
+如有多个代理：一位负责选择器/损失，一位负责神经网络与训练，一位独立审查；分文件执行。不要每个代理各跑一套test，不能把test数据传给模型研究代理。
+
+九、关键测试与资源验收
+
+必须用开发数据或合成输入验证：
+- 1/2/3/4个正确候选；全正例group loss符合预期。
+- 等价分数/小数按官方parser合组，不能自创答案解析。
+- 混合None与有效候选、所有None回退；不能NaN softmax。
+- group-max与有效候选argmax一致；group-LSE合成例子符合公式。
+- loss数值/梯度核对；group CE与alpha=0原listwise的等价条件。
+- 候选置换、题序变化、改ID、改N，输出索引仍正确；并列时记录确定性例外。
+- 真实最终选择器与confidence事件一致，group mask后的margin处理正确。
+- 禁止读取references的隔离推理、离线运行、新bank无需重训。
+- 如果导出NumPy，验证forward分数容差和选择一致，尤其分数非常接近时；不能用近似导出静默改变结果。
+
+资源：
+- 首先计算真实参数数目与全部未压缩资产，目标先留在约8–12MiB以内以留余量；16MiB为硬上限。
+- 外部计时包围新预测子进程与独立评分子进程，包含启动/import/loading/预处理，不能仅测矩阵乘法。
+- 研究阶段先在完整validation测；test关闭时不得伪报最终test时长。
+- 所有库和进程合计最多4线程，不能各自开4再套多进程；必要时先单线程测量。
+- 记录本机CPU/OS/依赖。训练GPU合法不等于推理可用GPU。
+- 资产必须可离线加载，不把数组藏源码或用压缩包大小规避统计。
+
+十、提交与报告的衔接
+
+1. 原有正式提交作为完整旧版本保留，不能将新checkpoint写入旧release URL使旧分数对应失效。
+2. 新建 PR，总结旧模型限制、新架构、实际train CV/validation结果、消融、成本、AI与代码复用；独立审查后修复问题。
+3. 选择器、结构、seed、训练epoch、ensemble、阈值/聚合规则全部依据开发证据固定，形成 V2_FREEZE.json：源码commit、配置和资产SHA-256、选择理由、允许的评估状态。
+4. 在全新环境按README复现冻结v2的validation与资源检查，不重训替代checkpoint。
+5. 如果课程明确允许此类再开发并授权最终重评，按其要求对唯一冻结v2执行正式评分；不能把多个候选带入test比较，不能看到分数后继续改模型，也不能声称这次仍是从未见过test的独立实验。必要时由教师提供未见audit bank复核泛化。
+6. 条件不满足时交付“已完成开发验证、待课程确认重评”的具体可运行成果，不笼统停工，不虚报新test成绩或名次。
+7. 新正式提交如获准，用新的不可变代码commit和匹配资产链接、真实官方accuracy，经MP2网站实际创建/更新所要求的GitHub Issue，保存URL和时间，继续用同一学号与账号。截止2026-10-31 23:59 UTC+8，不能通过改旧记录日期绕过。
+8. 更新不超过10页的报告，保留初版、负结果、最终方法与资源权衡，明确v2开发时旧test总成绩已知。报告表格只填实际运行结果。
+9. AI/论文/开源复用披露准确。中文说明我应该理解的关键变化：答案组目标、非线性上下文、OOF隔离、校准事件和资源成本。
+
+十一、最终需要交给我的内容
+
+- 一张真实实验表：原baseline、mask、group解码、小MLP/ResMLP、Deep Sets，以及实际运行的attention/TabM/ensemble。
+- 所有主表行包括共同train-CV的整体/hard均值与波动、参数量、未压缩MiB、运行成本和是否成功。只有预注册winner或最多2个finalist填写官方validation的correct/n、hard correct/n、单正例correct/n与完整预测+评分时间；其他行写“按协议未评估”，不能为了填表扩大官方validation探查。
+- 未运行项明确写“未运行”，不能填估计成绩。参数预算估计与实测数字分栏。
+- 指出真正有用的改动，以及没有收益或过拟合的改动。
+- 代码、配置、checkpoint、PR、复现命令和资源日志；正式提交状态与阻塞单独列明。
+- 对“能否进入前二十”给证据范围：我们可以证明开发集提升，最终名次取决于合规正式评估与其他人更新，不能承诺。
+
+现在开始：先审查现有工程与开发记录，建立独立research_v2分支、写有限实验计划，立即实现答案组选择器和小型MLP/Deep Sets，开始真实训练内验证。不要停在推荐论文或建议我自行尝试。
+
+==================== 执行提示词结束 ====================
+
+背景数字，仅用于解释目标，不能作为自动搜索或test重跑的反馈条件：
+- 核对到官方榜单快照 generated_at=2026-10-29T07:04:57.955Z，即北京时间15:04:57。
+- 按学号+账号取最高自报成绩并剔除教师test演示后，共47个学生记录。
+- 用户旧成绩74.51820128479658%=348/467。
+- 排序第20个学生记录83.72591006423983%=391/467；比旧结果多43题。
+- 达到同分不能保证前20，严格高于这个快照分数至少392/467≈83.9400%；其他提交会变化且成绩尚未完成教师核验。
+- 不能把validation-hard达到83.7%直接当作test必达83.7%，两者有抽样误差和分布差异。
+
+背景数据来源：
+https://github.com/xudongwu-0/xudongwu-0.github.io/blob/692eb414d868720f68b54843c50f0b889541c5b0/courses/dase7506/data/leaderboard.json
+
+中断恢复指令：
+继续执行 DASE7506_MP2_Performance_Upgrade.txt。先读取research_v2的SEARCH_PLAN、实验注册表、训练状态、V2_FREEZE以及Git状态，核对当前UTC+8时间。保留旧提交和旧保护，不重复已完成的评估，不因已知test总成绩启动test调参。完成下一未完成的train/CV/validation研究项；最终新test/提交是否允许，以记录的明确课程流程为准。输出实际结果、下一动作和真实阻塞。

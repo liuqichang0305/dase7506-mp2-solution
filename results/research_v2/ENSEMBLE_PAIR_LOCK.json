@@ -1,0 +1,36 @@
+{
+  "created_at_utc": "2026-10-29T09:26:39.917682+00:00",
+  "specification": {
+    "first": "attention_regularized_s0",
+    "second": "deepsets_regularized_s0",
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "deployment_seed": 3036900957,
+    "first_input_sha256": {
+      "registration.json": "163eb14a88c219e386339c7656d9a1d28de323ec8e0fd9d47fc3fcf18d87f9f6",
+      "summary.json": "822bba4dcdd4253744303ea650551fcd80780aeacce1f3b8a8bca475c612f497",
+      "oof.npz": "ae5737496f46d725181382ec3c2019d483a559e25b004f9546fbe8fc5d416263"
+    },
+    "second_input_sha256": {
+      "registration.json": "56ffcc3b3b0256f823562aaeca556644df51502c4a7b7c2687ce13eb670adaf6",
+      "summary.json": "a961c3df4dd3a8a549cfc578ad4f23c90f592d31f77aa225dc65ee9293b64b6b",
+      "oof.npz": "81b290b538d261e30f267c1b0c2c7e5487c4248e93b8a94bd902678a106d4b99"
+    },
+    "first_decoder": {
+      "mode": "group_lse",
+      "alpha": 0,
+      "tau": 1,
+      "mask": true
+    },
+    "second_decoder": {
+      "mode": "group_lse",
+      "alpha": 0,
+      "tau": 1,
+      "mask": true
+    },
+    "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9"
+  },
+  "rule": "One equal-weight pair only; subsequent same-pair runs are explicit reproductions."
+}

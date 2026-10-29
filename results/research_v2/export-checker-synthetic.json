@@ -1,0 +1,11 @@
+{
+  "fixture": "Synthetic inputs; loader monkeypatched for harness smoke test. No official data loaded.",
+  "status": "passed",
+  "questions": 13,
+  "maximum_absolute_error": 5.587935447692871e-08,
+  "choice_agreement": {
+    "equal": 13,
+    "n": 13
+  },
+  "rejected_data_reads": []
+}

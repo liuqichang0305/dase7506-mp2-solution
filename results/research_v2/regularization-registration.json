@@ -1,0 +1,66 @@
+{
+  "registered_at_utc": "2026-10-29T08:53:13.680417+00:00",
+  "round": "regularization",
+  "selection_data": "train common OOF only",
+  "validation_opened_for_new_models": false,
+  "selected": [
+    {
+      "experiment_id": "attention_group_s0",
+      "hard_fold_mean": 78.90245540511496,
+      "overall_accuracy": 90.62039957939012
+    },
+    {
+      "experiment_id": "deepsets_group_s0",
+      "hard_fold_mean": 77.95642596174511,
+      "overall_accuracy": 90.19978969505783
+    }
+  ],
+  "configs": [
+    {
+      "experiment_id": "attention_regularized_s0",
+      "family": "attention",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 8,
+      "seed": 3036900957,
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "heads": 4
+    },
+    {
+      "experiment_id": "deepsets_regularized_s0",
+      "family": "deepsets",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 8,
+      "seed": 3036900957,
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    }
+  ],
+  "ablation_finalist_eligibility": null
+}

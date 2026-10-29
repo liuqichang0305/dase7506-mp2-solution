@@ -1,0 +1,62 @@
+{
+  "seed": 3036900958,
+  "effective_weight_decay": 0.001,
+  "hard_fraction": 0.444794952681388,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.2818610276145514,
+      "seconds": 0.8122462999999698,
+      "inner_stop_loss": 0.23146779835224152
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.1607353746044899,
+      "seconds": 1.7867863999999827,
+      "inner_stop_loss": 0.2604392170906067
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.08188377647463832,
+      "seconds": 2.635364199999458,
+      "inner_stop_loss": 0.34324565529823303
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.024883386693683333,
+      "seconds": 3.502016200000071,
+      "inner_stop_loss": 0.4328162372112274
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.00921250384430216,
+      "seconds": 4.335175399999571,
+      "inner_stop_loss": 0.563596785068512
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.004663952037233753,
+      "seconds": 5.279890100000557,
+      "inner_stop_loss": 0.5828887224197388
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.003141146435986981,
+      "seconds": 6.158946499999729,
+      "inner_stop_loss": 0.6481750011444092
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.0009209801992313343,
+      "seconds": 7.013230900000053,
+      "inner_stop_loss": 0.6930432319641113
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.00042324354282686084,
+      "seconds": 7.930289500000072,
+      "inner_stop_loss": 0.706161618232727
+    }
+  ],
+  "best_epoch": 1
+}
