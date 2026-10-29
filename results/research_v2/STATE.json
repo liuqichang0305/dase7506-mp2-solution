@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-29T16:05:17.673644+00:00",
-  "phase": "reproduced-report-and-pr",
+  "updated_utc": "2026-10-29T16:12:22.949474+00:00",
+  "phase": "research-pr-open-pending-course-reevaluation",
   "completed_cv_experiments": [
     "attention_group_s0",
     "attention_hard_ablation",
@@ -22,7 +22,7 @@
     "mlp_listwise_s0",
     "resmlp_group_s0"
   ],
-  "next_action": "Finish rendered PDF QA and independent review, then publish the reviewable PR; no training or new test",
+  "next_action": "Review PR #2 and frozen report; do not train or score test. Resume formal reevaluation only under an explicit applicable instructor process; await actual MP2 peer-review release.",
   "branch": "research/performance-v2",
   "new_test_enabled": false,
   "course_score_updated": false,
