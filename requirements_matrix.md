@@ -15,7 +15,7 @@ Source commit: bb801f4f2e7629d270df765ab12c333b2dc616bb. No difference from work
 | Course | Public code and matching checkpoint before deadline | Guide sec 4 | Frozen commit URLs and anonymous download | Pending |
 | Course | Finish generated GitHub submission issue | Guide sec 4 | Actual issue author/time/payload evidence | NOT SUBMITTED |
 | Course | Disclose AI and reuse; retain licenses | Guide sec 3, attribution | AI_DISCLOSURE.md, licenses | Pending |
-| Workflow | Python 3.12 isolated environment | docs/WORKFLOW.txt stage 0 | .venv Python version | Created |
+| Course + workflow | Python 3.12, isolated environment | code/README.md sec 1; workflow stage 0 | .venv Python version | Python 3.12.0 created and dependencies installed |
 | Workflow | Train-only calibration, reliability and risk curves | Workflow stage 6 | Train OOF/holdout + validation analysis | Pending |
 | Workflow | Internal review and clean-environment reproduction | Workflow stage 10 | CODE_REVIEW.md, REPRODUCTION.md | Pending |
 | Workflow | Peer-review preparation and future recovery | Workflow stage 12 | Checklist, template, resume commands | In progress; actual review awaits release |

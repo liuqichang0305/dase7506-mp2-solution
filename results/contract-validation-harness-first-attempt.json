@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\code\\tools\\check_contract.py\", line 197, in <module>\n  File \"C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\code\\tools\\check_contract.py\", line 152, in main\n  File \"C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\code\\tools\\check_contract.py\", line 131, in worker\nAssertionError: Inference attempted forbidden access: ['socket.gethostname', 'open:\\\\\\\\.\\\\NUL', 'open:\\\\\\\\.\\\\NUL', 'open:\\\\\\\\.\\\\NUL']\n",
+  "input_source": "validation",
+  "reference_files_read": false
+}

@@ -1,0 +1,32 @@
+{
+  "pages": 7,
+  "development": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\development\\search_summary.json",
+  "reliability": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\reliability\\summary.json",
+  "official_score": "results\\test-score.json",
+  "timing": "results\\test-timing.json",
+  "assets": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\asset-audit.json",
+  "freeze": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\submission\\PRE_TEST_FREEZE.json",
+  "visual_qa": "AI inspection of all seven Poppler-rendered PNG pages: no clipping, overlap, missing glyphs, or unreadable charts observed.",
+  "output": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\reports\\report.pdf",
+  "visual_qa_at_utc": "2026-10-29T06:45:45.823369+00:00",
+  "pdf_sha256": "fb4a0253f227a944363bf84609c95479d5f64d85911d0236d5c5435f0227cf88",
+  "render_command": "pdftoppm -r 100 -png reports/report.pdf reports/rendered/page",
+  "inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "input_sha256": {
+    "results\\development\\search_summary.json": "ab6c0784ace1a107cb884754c2a63c0d2df49689246d970510fd7fc009a94a0f",
+    "results\\reliability\\summary.json": "41198fee8ec1ba070dcc496d5a7c6358f81e174410787644dfb5402ece83881e",
+    "results\\test-score.json": "5129103d977984a174e71a5d89697a9fee50a4dd53fff580c271e48e8ea913d7",
+    "results\\test-timing.json": "52c9f5b7af6874e0eabd2ceaf347999239eda2f3a4ad1da1b2481360dd07153d",
+    "results\\asset-audit.json": "096c8081695c8aace039039a4a2887f76da705fb73db8006bb5b0706c98ded01",
+    "submission\\PRE_TEST_FREEZE.json": "2734218beef0a53d63015e7483d374772c9fcebe99c1226785f40cd0cf792899",
+    "code\\tools\\build_report.py": "e97fe890819c7c7a054858edeb6a9e640ef52af5dfc13f16efed63feb89fd26c"
+  }
+}

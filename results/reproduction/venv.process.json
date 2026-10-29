@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:\\Program Files\\Python312\\python.exe",
+    "-m",
+    "venv",
+    "tmp\\reproduction\\venv"
+  ],
+  "returncode": 0,
+  "wall_seconds": 9.732759100000294
+}

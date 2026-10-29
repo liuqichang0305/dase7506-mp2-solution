@@ -1,0 +1,87 @@
+{
+  "schema": "dase7506-mp2-freeze-v1",
+  "frozen": true,
+  "created_at_utc": "2026-10-29T06:40:40.006850+00:00",
+  "source_commit": "8602992842d444524ab4148991da2f1dc88f316f",
+  "upstream_commit": "bb801f4f2e7629d270df765ab12c333b2dc616bb",
+  "source_files": {
+    "code/solution.py": "cb40cd5a2912343dfa5eab8e9865b37c0032e1520d5a2d036d415b9821cbb2a6",
+    "code/train.py": "c9e0690efa295fff1f9b8fb85e506986d6cac3ba40df2f625f8e432baa5b7dcd",
+    "code/mp2/__init__.py": "853575bfe208eeb5d5b8e0507c8c76d7841986e53225f8c2d8c95d7788d7e334",
+    "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+    "code/mp2/model.py": "e1910538ea96dfb53f08c73ecea2c70b98615a6fcd57bdee3274177f4cfbf531",
+    "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+    "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "code/predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+    "code/score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+    "code/check_data.py": "32f203e156e3019f87bb038ade4f303da21ca2f1694bb678a3ddc44661f0b533",
+    "code/configs/recommended.json": "c6152809f41fc327e7d0cb8d33c14beb4c677e11e03050adb14612bc9a341d39",
+    "requirements-inference.txt": "5c12d85e7c08038d1dd9ffbf8119d12ce808885230a47e2bf65dcd9f114659d5",
+    "requirements-training.txt": "6e69ffe6f7841e5d8aea3f05a4bf77c60055d3b0717fcccbb31fd19647e07b7b"
+  },
+  "assets": {
+    "artifacts/final_bundle/config.json": "24473c3b95b9472b5d844b795edf86c7902d21fe7351604cc680d93d7ead0703",
+    "artifacts/final_bundle/weights.npz": "a785f4a48e2d5708aec9fec29c776e9ce1b7fea1832d064e95b25c926626d462"
+  },
+  "uncompressed_asset_bytes": 51923,
+  "seed": 3036900957,
+  "training_split": "train only",
+  "configuration": {
+    "name": "relation-listwise-l2-0.1",
+    "features": "relation",
+    "loss": "listwise",
+    "l2": 0.1,
+    "maxiter": 200,
+    "seed": 3036900957
+  },
+  "calibration": "Train-only three-fold out-of-fold logistic calibrator; does not change choices",
+  "validation": {
+    "experiment_id": "relation-listwise-l2-0.1",
+    "phase": "full_train_validation",
+    "config": {
+      "name": "relation-listwise-l2-0.1",
+      "features": "relation",
+      "loss": "listwise",
+      "l2": 0.1,
+      "maxiter": 200,
+      "seed": 3036900957
+    },
+    "training_seconds": 2.9714020000001256,
+    "optimizer_success": true,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "iterations": 37,
+    "objective": 0.2119161048320327,
+    "max_gradient": 7.378868233499686e-06,
+    "train_questions": 4755,
+    "parameters": 2065,
+    "correct": 724,
+    "n": 798,
+    "accuracy": 90.72681704260651,
+    "hard_correct": 282,
+    "hard_n": 355,
+    "hard_accuracy": 79.43661971830987,
+    "official_score": {
+      "protocol": "dase7506-mp2-open-hard-verifier-v5",
+      "split": "validation",
+      "correct": 724,
+      "n": 798,
+      "accuracy": 90.72681704260651,
+      "scoring_seconds": 0.09205470000006244
+    },
+    "full_local_wall_seconds": 1.4970785000000433,
+    "asset_file_bytes": 50754
+  },
+  "validation_selection_reason": "Highest complete validation accuracy among the prespecified three learned family winners and two baselines. Improvement over embedding BCE is uncertain (paired bootstrap interval crosses zero). No additional search; no test score has been seen.",
+  "test_evaluated_before_freeze": false,
+  "inference_dependencies": [
+    "numpy==2.5.3"
+  ],
+  "threads": 1,
+  "audit_evidence": [
+    "docs/CODE_REVIEW.md",
+    "results/contract-validation.json",
+    "results/contract-synthetic.json",
+    "results/official-hashes.json",
+    "results/asset-audit.json"
+  ]
+}

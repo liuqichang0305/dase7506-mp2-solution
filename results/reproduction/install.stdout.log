@@ -1,0 +1,7 @@
+Collecting numpy==2.5.3 (from -r requirements-inference.txt (line 1))
+  Obtaining dependency information for numpy==2.5.3 from https://files.pythonhosted.org/packages/3c/a1/accf6d4f0c80c5d9ba9735d6b1550e444180599f34dec69ca01360f717ad/numpy-2.5.3-cp312-cp312-win_amd64.whl.metadata
+  Downloading numpy-2.5.3-cp312-cp312-win_amd64.whl.metadata (6.6 kB)
+Downloading numpy-2.5.3-cp312-cp312-win_amd64.whl (12.6 MB)
+   ---------------------------------------- 12.6/12.6 MB 4.0 MB/s eta 0:00:00
+Installing collected packages: numpy
+Successfully installed numpy-2.5.3

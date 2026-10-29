@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-10-29T06:17:15Z",
+  "timezone_for_user_dates": "Asia/Shanghai",
+  "source_repository": "xudongwu-0/xudongwu-0.github.io",
+  "source_commit": "383e61ac4158d6a1d66d632c4fdfa0795d9d379e",
+  "source_path": "courses/dase7506/data/leaderboard.json",
+  "source_blob_sha": "9a9c08f8c0ad2af86d78bee3d0ca6f0f8626e008",
+  "snapshot_generated_at": "2026-10-29T02:18:04.537Z",
+  "publication": {
+    "schema": "dase7506/publication-v1",
+    "projects": {
+      "mp1": {
+        "published_at": "2026-10-01T16:09:01.046Z",
+        "review_ends_at": "2026-10-08T16:09:01.046Z"
+      }
+    }
+  },
+  "mp2_published": false,
+  "mp2_review_status": "not_open",
+  "peer_reproduction_performed": false,
+  "peer_report_issue_created": false,
+  "schedule_created": false,
+  "scope": "Only publication metadata was inspected; no peer solutions, peer scores or test data were used for method development."
+}

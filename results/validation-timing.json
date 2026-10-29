@@ -1,0 +1,69 @@
+{
+  "started_at_utc": "2026-10-29T06:38:45.442986+00:00",
+  "split": "validation",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+  "parent_python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+  "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "logical_cpus": 20,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "OMP_THREAD_LIMIT": "1"
+  },
+  "processes": [
+    {
+      "command": [
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+        "predict.py",
+        "--method",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\code\\solution.py",
+        "--checkpoint",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\final_bundle",
+        "--split",
+        "validation",
+        "--output",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\validation-predictions.json"
+      ],
+      "cwd": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\code",
+      "returncode": 0,
+      "wall_seconds": 0.4206027999998696,
+      "stdout": "validation-prediction.stdout.log",
+      "stderr": "validation-prediction.stderr.log"
+    },
+    {
+      "command": [
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+        "score_predictions.py",
+        "--split",
+        "validation",
+        "--predictions",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\validation-predictions.json",
+        "--output",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\validation-score.json"
+      ],
+      "cwd": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\code",
+      "returncode": 0,
+      "wall_seconds": 0.15835929999957443,
+      "stdout": "validation-scoring.stdout.log",
+      "stderr": "validation-scoring.stderr.log"
+    }
+  ],
+  "freeze": null,
+  "measurement": "Local fresh prediction process + independent scoring process; sequential; includes startup, imports, inputs, assets and I/O. Not a reference-machine eligibility certification.",
+  "total_wall_seconds": 0.580521900000349,
+  "status": "passed",
+  "local_under_30_seconds": true,
+  "official_score": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "validation",
+    "correct": 724,
+    "n": 798,
+    "accuracy": 90.72681704260651,
+    "scoring_seconds": 0.03553290000036213
+  }
+}

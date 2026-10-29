@@ -1,0 +1,19 @@
+DASE7506 MP2 同行评审恢复指令
+准备日期：2026-10-29，Asia/Shanghai。
+学号：3036900957；GitHub 账号：liuqichang0305。
+自己的正式提交：以 submission/SUBMISSION_RECORD.md 中经过核实的课程 Issue 为唯一依据。本准备文件不声明已经提交。
+
+已核实的官方快照生成时间：2026-10-29T02:18:04.537Z。
+该快照 publication.projects 没有 mp2；评审尚未开放。不要把准备标为评审完成。
+入口：https://xudongwu-0.github.io/courses/dase7506/mp2/
+状态源：https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/main/courses/dase7506/data/leaderboard.json
+网站源码：https://github.com/xudongwu-0/xudongwu-0.github.io/tree/main/courses/dase7506
+
+之后可以直接发送：
+“请继续 DASE7506 MP2 阶段 12。先读 PROJECT_STATE.md、BLOCKERS.md、submission/SUBMISSION_RECORD.md、submission/PEER_REVIEW_CHECKLIST.md 和 peer_review/。核实当前 Asia/Shanghai 时间与官方 publication.projects.mp2 的 published_at、review_ends_at，保存真实快照。未开放就保持等待；开放后选一份他人的正式有效冻结提交，在无个人凭据、无个人文件、评估断网的隔离环境先人工审查安装脚本/依赖/序列化格式，再按其精确 commit 和 checkpoint 复现。用官方完整 evaluator，不重训，不用其他版本替代。记录全部命令、环境、哈希、日志、退出状态和真实分数。无有效分数就只报告阻塞；有真实分数后用官方 Peer Review Report 表单生成并实际创建 Issue，保留 URL、作者和时间。不得擅自发邮件，不捏造已评审或奖励。”
+
+工具入口：python peer_review/run_reproduction.py --help
+默认只准备。先把审查后的目标绝对路径等写成 JSON config，再 --config PATH；运行时须额外 --execute --human-review PATH，且实际处于隔离环境。脚本不会自行建立隔离环境。
+
+七天从教师实际发布开始，不预设为11月1日至7日。若 published_at + 7天 与 review_ends_at 不一致，保留证据并按实时明确课程说明处理，不能猜测。
+没有创建自动调度；需要用户之后恢复本任务。
