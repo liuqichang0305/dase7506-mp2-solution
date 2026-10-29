@@ -1,0 +1,208 @@
+{
+  "schema": "dase7506-mp2-research-freeze-v2",
+  "frozen": true,
+  "created_at_utc": "2026-10-29T09:49:04.823788+00:00",
+  "source_commit": "36f9617175321a2861e78bb2f4ffcde643c4fc03",
+  "upstream_commit": "bb801f4f2e7629d270df765ab12c333b2dc616bb",
+  "selected_experiment_id": "deepsets_regularized_s0",
+  "method": "code/solution_v2.py",
+  "checkpoint": "artifacts/research_v2/final_deepsets",
+  "source_files": {
+    "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "code/configs/research_v2/deepsets_regularized_s0.json": "095c0ce37a96eaced83d66ba8b17a8b1a505250fb48fb375cdc86c7075956a48",
+    "code/mp2/__init__.py": "853575bfe208eeb5d5b8e0507c8c76d7841986e53225f8c2d8c95d7788d7e334",
+    "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+    "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+    "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+    "code/mp2/training_v2.py": "351dbaf1db673c86862958fd38d5f0fbab8630ac5ff36c30a0e7c1bdf6bea9ec",
+    "code/predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+    "code/run_research_v2.py": "a5622c3c984eba383e71800b0365afc37d3fa98d2f1b5cad46e7072d33ad2a0b",
+    "code/score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+    "code/solution_v2.py": "ef495ae4a06ada90aa26302d9c6c5d614ab0bda8aa33bda14e656e7808b549f9",
+    "code/tools/check_contract_v2.py": "55880695c601f0b4d6fd1f405fc13ce84a3ca96a62d68160596cd67b322d0c25",
+    "code/tools/check_export_v2.py": "dde6430dab85979dc238573e640ff1f577ad9366e52f32ec9fa9e5b88a31b183",
+    "code/tools/confirm_validation_v2.py": "0af32fb00e571708e97fb5d69d1dbc83d961a9c37264969f8317e7f36f0a4965",
+    "code/tools/fetch_development_v2.py": "a18be4c335aea7e0d80993fbfdc9995944d01e0bfe21917c7547a8cfd44bd8e6",
+    "code/tools/freeze_v2.py": "61f4b2058f31d009edd96503cadcccca59ba5201ce8c47490d9820c44bdccad6",
+    "code/tools/lock_finalists_v2.py": "ddb1ec87728921623d228456501d87af4b97772a595bd4e1c049d845ad62039a",
+    "code/train_v2.py": "8ff18468f24457f2e11da013f0460a156c2bbd6d330269037aef6570690437bc"
+  },
+  "assets": {
+    "artifacts/research_v2/final_deepsets/config.json": "e2c210a3717c5b48ee312226491b4b9c444cb6642d94fb3afd1fa39226bd89cf",
+    "artifacts/research_v2/final_deepsets/weights.npz": "2bb9002701b0bcb6105b30f88863db20d7fd7267bc530ce85048168d47a60ab1"
+  },
+  "config_sha256": "095c0ce37a96eaced83d66ba8b17a8b1a505250fb48fb375cdc86c7075956a48",
+  "validation": {
+    "correct": 740,
+    "n": 798,
+    "accuracy": 92.73182957393483,
+    "hard_correct": 297,
+    "hard_n": 355,
+    "hard_accuracy": 83.66197183098592,
+    "single_positive_correct": 68,
+    "single_positive_n": 117,
+    "single_positive_accuracy": 58.119658119658126
+  },
+  "resource": {
+    "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\final_deepsets",
+    "files": [
+      {
+        "path": "config.json",
+        "sha256": "e2c210a3717c5b48ee312226491b4b9c444cb6642d94fb3afd1fa39226bd89cf",
+        "disk_bytes": 382,
+        "uncompressed_bytes": 382
+      },
+      {
+        "path": "weights.npz",
+        "sha256": "2bb9002701b0bcb6105b30f88863db20d7fd7267bc530ce85048168d47a60ab1",
+        "disk_bytes": 963288,
+        "uncompressed_bytes": 963288,
+        "members": [
+          {
+            "name": "mean.npy",
+            "uncompressed_bytes": 16640
+          },
+          {
+            "name": "scale.npy",
+            "uncompressed_bytes": 16640
+          },
+          {
+            "name": "phi1.weight.npy",
+            "uncompressed_bytes": 524416
+          },
+          {
+            "name": "phi1.bias.npy",
+            "uncompressed_bytes": 640
+          },
+          {
+            "name": "phi2.weight.npy",
+            "uncompressed_bytes": 65664
+          },
+          {
+            "name": "phi2.bias.npy",
+            "uncompressed_bytes": 640
+          },
+          {
+            "name": "rho.weight.npy",
+            "uncompressed_bytes": 336000
+          },
+          {
+            "name": "rho.bias.npy",
+            "uncompressed_bytes": 640
+          },
+          {
+            "name": "head.weight.npy",
+            "uncompressed_bytes": 640
+          },
+          {
+            "name": "head.bias.npy",
+            "uncompressed_bytes": 132
+          }
+        ],
+        "arrays": [
+          {
+            "name": "mean",
+            "shape": [
+              2064
+            ],
+            "dtype": "float64",
+            "array_bytes": 16512
+          },
+          {
+            "name": "scale",
+            "shape": [
+              2064
+            ],
+            "dtype": "float64",
+            "array_bytes": 16512
+          },
+          {
+            "name": "phi1.weight",
+            "shape": [
+              128,
+              1024
+            ],
+            "dtype": "float32",
+            "array_bytes": 524288
+          },
+          {
+            "name": "phi1.bias",
+            "shape": [
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 512
+          },
+          {
+            "name": "phi2.weight",
+            "shape": [
+              128,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 65536
+          },
+          {
+            "name": "phi2.bias",
+            "shape": [
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 512
+          },
+          {
+            "name": "rho.weight",
+            "shape": [
+              128,
+              656
+            ],
+            "dtype": "float32",
+            "array_bytes": 335872
+          },
+          {
+            "name": "rho.bias",
+            "shape": [
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 512
+          },
+          {
+            "name": "head.weight",
+            "shape": [
+              1,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 512
+          },
+          {
+            "name": "head.bias",
+            "shape": [
+              1
+            ],
+            "dtype": "float32",
+            "array_bytes": 4
+          }
+        ]
+      }
+    ],
+    "uncompressed_bytes": 963670,
+    "limit_bytes": 16777216,
+    "within_limit": true,
+    "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+    "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+  },
+  "selection_reason": "Among the prelocked at-most-two candidates: hard correct, full correct, smaller assets",
+  "finalists_lock_sha256": "3368b33df5123a66180a80044011c5fc7284ce059f9b02e9dffc76d6d005ac68",
+  "common_folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+  "known_old_test_aggregate": {
+    "correct": 348,
+    "n": 467,
+    "known_before_v2_development": true
+  },
+  "new_test_evaluated": false,
+  "formal_test_allowed": false,
+  "allowed_evaluation_state": "Frozen validation reproduction and audit only; course-specific new test/score update process pending confirmation",
+  "old_submission_preserved": "https://github.com/xudongwu-0/xudongwu-0.github.io/issues/294"
+}

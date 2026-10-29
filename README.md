@@ -2,6 +2,29 @@
 
 Student 3036900957. Individual coursework with disclosed AI assistance. A small CPU verifier selects one of the four supplied candidate solutions. It does not generate answers or call an external model.
 
+## Performance research v2 — development verified, formal re-evaluation pending
+
+The independent `research/performance-v2` branch implements valid-answer masking,
+answer-group objectives, MLP/ResMLP, Deep Sets and four-token attention. Nineteen
+configuration/seed runs share the same nested train-only three folds. Two
+prelocked finalists were confirmed on validation; the selected Deep Sets
+checkpoint scores **740/798**, hard **297/355**, compared with frozen v1's
+724/798 and282/355. Its assets total963,670bytes and the original local complete
+prediction-plus-scoring measurement is1.7397seconds. These are development and
+local resource results; **no new test score or ranking was obtained**.
+
+See the [complete experiment table](results/research_v2/EXPERIMENT_TABLE.md),
+[v2 report](reports/research_v2/report_v2.pdf),
+[reproduction commands](docs/research_v2/REPRODUCTION.md),
+[Chinese explanation](docs/research_v2/UNDERSTAND_ZH.md),
+[freeze](results/research_v2/V2_FREEZE.json), and
+[independent implementation review](docs/research_v2/INDEPENDENT_REVIEW.md).
+Frozen v2 code/assets: `36f9617175321a2861e78bb2f4ffcde643c4fc03`.
+The single equal-weight mixture was evaluated and rejected; unsupported pooling
+and loss claims are reported as negative results. V2 did not alter the old course
+Issue, frozen assets, original logs or old search guard. The sections below
+document the **original submitted v1** and its historical formal test result.
+
 Formal submission: [course Issue #294](https://github.com/xudongwu-0/xudongwu-0.github.io/issues/294), created 29 October 2026 at 15:04:45 UTC+8. The course snapshot recognizes the score as self-reported and artifact links as received; this is not instructor verification. Submitted immutable code/checkpoint commit: `419e1158ba2f83b8c08796429e635f1bf8ab2977`. Subsequent commits append evidence only. See `submission/SUBMISSION_RECORD.md`.
 
 Official benchmark: https://github.com/xudongwu-0/DASE7506-MP2/tree/bb801f4f2e7629d270df765ab12c333b2dc616bb

@@ -186,6 +186,12 @@ def build(summary_path, output):
     environment = read(RESULTS / 'environment.json')
     by_id = {row['experiment_id']: row for row in experiments}
     analysis = read(ROOT / final['analysis_path']) if final.get('analysis_path') else None
+    event_path = RESULTS / 'events.jsonl'
+    event_bytes = event_path.read_bytes()
+    SOURCE_RECORDS[event_path.relative_to(ROOT).as_posix()] = hashlib.sha256(event_bytes).hexdigest()
+    final_fits = {event['experiment_id']: event for event in
+                  (json.loads(line) for line in event_bytes.decode('utf-8').splitlines() if line.strip())
+                  if event.get('status') == 'final_train_complete'}
     report = Report()
     W = A4[0] - 84
     report.text('Reliable answer selection\nPerformance research v2'.replace('\n', '<br/>'), 'ReportTitle')
@@ -399,11 +405,12 @@ def build(summary_path, output):
         report.text('Reported deployment costs include every selected model and preprocessing artifact. Training cost appears separately in the common-fold table. The official constraints are at most 16 MiB of uncompressed extra assets and at most 30 seconds for complete CPU prediction plus independent scoring, with no more than four total compute threads.')
         table_rows = []
         for row in finalists:
-            table_rows.append([label(row['experiment_id']), f"{row['resource']['uncompressed_bytes'] / 2**20:.3f}",
+            table_rows.append([label(row['experiment_id']), final_fits.get(row['experiment_id'], {}).get('epochs_run', 'Not recorded'),
+                               f"{row['resource']['uncompressed_bytes'] / 2**20:.3f}",
                                fmt(row['prediction_plus_scoring_seconds'], 3), fmt(row['reliability']['brier'], 4),
                                fmt(row['reliability']['ece'], 4)])
-        report.table(['Finalist', 'All assets MiB', 'Fresh predict + score seconds', 'Brier', 'ECE'],
-                     table_rows, [180, 75, 125, 65, W - 445])
+        report.table(['Finalist', 'Final epochs', 'All assets MiB', 'Fresh predict + score seconds', 'Brier', 'ECE'],
+                     table_rows, [170, 50, 65, 105, 60, W - 450])
         report.text('Assets count every deployed file using uncompressed container sizes. Time encloses fresh CPU prediction and a separate official scoring process, including imports, loading and preprocessing. Brier/ECE concern the actual selected group; probabilities are uncalibrated and the old calibrator is not reused. This is local measurement, not reference-Xeon certification.', 'ReportSmall')
         figure = confidence_figure(finalists)
         report.story.append(Image(str(figure), width=430, height=165.4, hAlign='LEFT'))
