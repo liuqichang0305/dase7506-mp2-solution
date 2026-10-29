@@ -1,0 +1,23 @@
+The submitted v1 ranks candidates with one linear score and can select an unparseable answer. This independent research branch adds valid-answer masking, answer-group decoding/losses, MLP/ResMLP, Deep Sets and four-token attention. The selected frozen Deep Sets improves observed validation from **724/798 to 740/798**; this PR does not change the original course submission or claim a new test score/rank.
+
+| Frozen method | Full validation | Hard | Single-positive | Fresh prediction + scorer | Uncompressed assets |
+|---|---:|---:|---:|---:|---:|
+| Submitted v1 | 724/798 | 282/355 | 59/117 | A0 replay recorded | 51,923B |
+| Attention finalist | 738/798 | 295/355 | 70/117 | 1.7623s | 1,130,539B |
+| Selected Deep Sets | 740/798 | 297/355 | 68/117 | 1.7397s | 963,670B |
+
+Nineteen configuration/seed runs use the same nested train-only three folds, fold-local scalers and inner stopping. The two strongest nonlinear families retain all three fixed seeds; deployment seed 3036900957 was specified in advance. At most two new finalists were locked before validation. Attention has the stronger seed-averaged OOF result; Deep Sets wins this confirmation by only two questions, which does not establish stable family superiority. The selected model's +16-question gain over v1 has a question-paired bootstrap 95% interval of [0.376, 3.512] percentage points; selection bias still applies.
+
+The research retains negative results: MLP group loss, hard normalization and Deep Sets learned pooling did not demonstrate their hypothesized gains. Complementary OOF errors allowed exactly one equal-probability mixture; it lost 13 hard questions versus Attention and was rejected. TabM was not run. A 15-minute batch exceeded its wall budget; the actual 1124.38 seconds and recovery of only unfinished registered runs are preserved in the budget-deviation record.
+
+Validation and reproducibility:
+
+- 30 unit tests pass; gradients, official parsing, multi-positive labels, masking, ties, permutation behavior and inference isolation are covered.
+- Both finalists' Torch/NumPy exports preserve all 798 validation choices. The inference path imports no Torch and reads no references.
+- A fresh public clone at `36f9617175321a2861e78bb2f4ffcde643c4fc03`, a new NumPy-only environment and independently downloaded official validation data reproduce 740/798 with all 798 indices identical, without retraining. Fresh prediction plus separate scoring takes 0.7323 seconds; all local timings are explicitly not reference-Xeon certification.
+- `results/research_v2/V2_FREEZE.json` binds 18 source files and 2 assets to that immutable source commit. Original checkpoints, logs, report, search guard and Issue #294 remain traceable and unchanged.
+- A separate AI agent reviewed data isolation, evidence, frozen hashes and reproduction. This is not instructor verification or the post-deadline course peer review.
+
+Review entry points: [complete table](https://github.com/liuqichang0305/dase7506-mp2-solution/blob/research/performance-v2/results/research_v2/EXPERIMENT_TABLE.md), [v2 report](https://github.com/liuqichang0305/dase7506-mp2-solution/blob/research/performance-v2/reports/research_v2/report_v2.pdf), [research plan](https://github.com/liuqichang0305/dase7506-mp2-solution/blob/research/performance-v2/docs/research_v2/SEARCH_PLAN_V2.md), [reproduction](https://github.com/liuqichang0305/dase7506-mp2-solution/blob/research/performance-v2/docs/research_v2/REPRODUCTION.md), and [independent review](https://github.com/liuqichang0305/dase7506-mp2-solution/blob/research/performance-v2/docs/research_v2/INDEPENDENT_REVIEW.md). AI and architecture-source reuse are disclosed; no extra data, pretrained weights or external LLM labels were used.
+
+**Formal new test and course score updates remain disabled**: the latest checked rules do not specify an applicable post-evaluation redevelopment/re-evaluation procedure. The old 348/467 aggregate was known before v2 research. The original submission remains Issue #294; instructor-opened peer review remains a separate pending stage. This PR is reviewable research, not a formal replacement submission.

@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-29T09:48:51.770585+00:00",
-  "phase": "validation-complete-freezing",
+  "updated_utc": "2026-10-29T16:05:17.673644+00:00",
+  "phase": "reproduced-report-and-pr",
   "completed_cv_experiments": [
     "attention_group_s0",
     "attention_hard_ablation",
@@ -22,7 +22,7 @@
     "mlp_listwise_s0",
     "resmlp_group_s0"
   ],
-  "next_action": "Commit and freeze selected Deep Sets; independently reproduce frozen validation; complete report and review PR",
+  "next_action": "Finish rendered PDF QA and independent review, then publish the reviewable PR; no training or new test",
   "branch": "research/performance-v2",
   "new_test_enabled": false,
   "course_score_updated": false,
@@ -30,5 +30,5 @@
   "old_official_submission": "https://github.com/xudongwu-0/xudongwu-0.github.io/issues/294",
   "finalists_locked": true,
   "validation_confirmed": true,
-  "freeze_exists": false
+  "freeze_exists": true
 }

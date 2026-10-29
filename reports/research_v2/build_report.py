@@ -183,6 +183,9 @@ def build(summary_path, output):
     if final.get('status') in (None, 'running', 'pending'):
         raise ValueError('A completed development/finalist summary is required before PDF authoring')
     experiments = load_experiments()
+    script_path = Path(__file__).resolve()
+    SOURCE_RECORDS[script_path.relative_to(ROOT).as_posix()] = hashlib.sha256(script_path.read_bytes()).hexdigest()
+    freeze = read(ROOT / final['freeze_path']) if final.get('freeze_path') else None
     environment = read(RESULTS / 'environment.json')
     by_id = {row['experiment_id']: row for row in experiments}
     analysis = read(ROOT / final['analysis_path']) if final.get('analysis_path') else None
@@ -201,7 +204,12 @@ def build(summary_path, output):
     report.heading('Scope and status', 2)
     report.text('The original submitted release and frozen checkpoint remain intact. Its previously observed test total, 348/467 (74.5182%), was already known when this work began. The present study is subsequent development, not an untouched independent experiment. No new test score or rank is reported. New formal test scoring and score updates remain closed unless an explicit applicable course process permits them.')
     for paragraph in final.get('narrative', []):
-        report.text(escape(str(paragraph)))
+        wording = str(paragraph)
+        for compact, spaced in (('from724', 'from 724'), ('to740', 'to 740'), ('hard282', 'hard 282'),
+                                ('to297', 'to 297'), ('single-positive59', 'single-positive 59'),
+                                ('to68', 'to 68'), ('Issue294', 'Issue #294')):
+            wording = wording.replace(compact, spaced)
+        report.text(escape(wording))
     report.heading('Original model and motivation', 2)
     report.text('The original 2064-dimensional representation combines each 1024-dimensional embedding, its absolute deviation from the same-question mean, and 16 cosine/parse/vote/text statistics. A standardized linear scorer uses a multi-positive listwise objective but selects the highest-scoring individual candidate. Thus it already has engineered relations, while lacking learned multilayer interactions. Shared scalar features cancel in linear within-question ranking; the absolute deviation features do not.')
     report.table(['Known original validation', 'Correct / questions', 'Interpretation'], [
@@ -419,7 +427,10 @@ def build(summary_path, output):
         reproduction = final.get('reproduction', {})
         if reproduction:
             report.heading('Independent environment reproduction', 2)
-            if isinstance(reproduction, dict):
+            if isinstance(reproduction, dict) and 'matching_choices' in reproduction:
+                report.text(f"A fresh public clone at frozen commit {escape(reproduction['source_commit'])} and a new NumPy-only environment independently downloaded official validation inputs/references. The preserved checkpoint reproduced {reproduction['correct']}/{reproduction['n']}; all {reproduction['matching_choices']} selected indices matched the original confirmation. All {reproduction['source_and_asset_hashes_verified']} frozen source/asset hashes matched. Complete fresh prediction plus separate scoring took {reproduction['prediction_plus_scoring_seconds']:.4f} seconds. The checkpoint was not retrained; no train or test data were present.", 'ReportSmall')
+                report.text('Reproduction dependencies: ' + escape(', '.join(reproduction['packages'])) + '. The different local timing is retained alongside the original confirmation timing, rather than replacing it. Evidence: ' + escape(reproduction['evidence']) + '.', 'ReportSmall')
+            elif isinstance(reproduction, dict):
                 for key in ('status', 'environment', 'python', 'checkpoint', 'prediction_plus_scoring_seconds', 'choices_equal', 'note'):
                     if key in reproduction:
                         report.text(escape(f'{key}: {reproduction[key]}'), 'ReportSmall')
@@ -444,6 +455,9 @@ def build(summary_path, output):
 
     report.page()
     report.heading('Reproducibility, limits and disclosure')
+    if freeze:
+        commit = freeze['source_commit']
+        report.text(f'Frozen v2 inference source: <link href="https://github.com/liuqichang0305/dase7506-mp2-solution/tree/{commit}">{commit}</link><br/>Checkpoint: {escape(freeze["checkpoint"])}<br/>Evaluation state: {escape(freeze["allowed_evaluation_state"])}', 'ReportSmall')
     report.text('Every completed experiment retains its ID, configuration, seed, source/data hashes, fold membership, OOF scores, fitting logs, failure information and numeric model assets. Existing search guards and v1 assets are preserved. Research entry points reject test evaluation. The independent v2 interface loads only supplied inputs and numeric checkpoint arrays; no reference file, ID lookup, online model or new generation is needed.')
     report.text('Training uses PyTorch on the local CPU. Inference is NumPy-only. Export verification compares complete finalist validation input scores and actual choices against the reconstructed Torch model, without reading reference answers. Fresh-process inference plus a separate official scoring process includes startup, imports, asset loading and features. All deployed members and preprocessing statistics count toward the 16 MiB uncompressed asset limit.')
     report.text(f"Recorded host: {escape(environment['processor'])}; {escape(environment['platform'])}; {environment['ram_bytes'] / 2**30:.2f} GiB RAM. Training/inference use CPU with one configured compute thread. Python 3.12; PyTorch {escape(environment['packages']['torch'])}; NumPy {escape(environment['packages']['numpy'])}. Local timing does not certify performance on the course reference Xeon Platinum 8457C.")
