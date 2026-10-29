@@ -1,0 +1,14 @@
+Continue the authorized DASE7506 MP2 autonomous V3 research.
+Read PROJECT_STATE.md, docs/research_v3/SEARCH_PLAN_V3.md and RESUME.txt,
+results/research_v3/campaign_budget.json, campaign_queue.json (if present),
+experiment_registry.jsonl, DECISIONS.md and BLOCKERS.md.
+Inspect actual UTC time, git status and recorded process PID/create time.
+Do not reset the 2026-10-29T16:22:42Z research clock or rerun successful fits.
+Preserve all V1/V2 freezes, old logs and guards. Development uses official train
+and the common three outer folds; no test/leaderboard-driven decisions.
+Run scripts/run_campaign_v3.py status then run to resume registered pending work.
+Do not create another trainer if the recorded/project trainer remains alive.
+After the documented stop condition: lock at most two new validation finalists,
+audit and reproduce the unique selected candidate, freeze, then perform the
+authorized one final official test and actual course submission without retuning.
+Keep final issue creation idempotent. Peer review awaits actual instructor release.

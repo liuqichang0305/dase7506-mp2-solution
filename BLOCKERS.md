@@ -1,5 +1,14 @@
 # Blockers and resolved incidents
 
+- V3 current: no missing student identity, account authorization, dependencies or
+  data blocks train-only research. First complete-CV run awaits local recovery
+  integration checks, which are being implemented and tested, not user permission.
+- V3 final test/submission requires the specified development, review, fresh
+  reproduction and freeze prerequisites; lack of a separate teacher email is not
+  an additional gate under the new explicit user instruction.
+- V3 peer review is still pending actual instructor release; preparation can
+  proceed now. Historical incidents below are retained for traceability.
+
 - Resolved: initial sandboxed git clone proxy failure. Authorized escalated git clone succeeded.
 - Resolved: WMI/CIM query denied; registry/platform/psutil recorded CPU, OS and physical RAM without changing system permissions.
 - Browser UI blocker: web text tool returned Internal Error; Computer Use ended because it could not confidently determine the browser URL. No further UI input issued. Official current website source and public key were downloaded with exact commit/hashes. A local adapter will execute the unchanged official form handler if verified; it will not claim a browser click occurred.

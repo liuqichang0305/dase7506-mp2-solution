@@ -1,0 +1,108 @@
+{
+  "round": "r04_attention_optimizer_capacity",
+  "hypothesis": "Re-establish the strongest historical interaction family with V3 AdamW, then independently test EMA, Muon at hidden LR0.01, and width64. The fixed control prevents attributing trainer/decay differences to the new optimizer.",
+  "configs": [
+    {
+      "family": "attention",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_attention_adamw_s0",
+      "heads": 4
+    },
+    {
+      "family": "attention",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_attention_ema_s0",
+      "heads": 4,
+      "ema_decay": 0.99
+    },
+    {
+      "family": "attention",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "muon",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_attention_muon_s0",
+      "heads": 4,
+      "muon_lr": 0.01
+    },
+    {
+      "family": "attention",
+      "width": 64,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_attention_small_s0",
+      "heads": 4
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "code/tests/test_scheduler_v3.py"
+  ],
+  "returncode": 1,
+  "wall_seconds": 1.3897713999976986,
+  "test_sha256": "abccdcc7bc2987e95e539ad2ed71d0fc593d31356bb1a063431dd52684db0d0a",
+  "scheduler_sha256_before": "b8b66cb767b2a31727017c22d2373af65d0aa2d927ea1c313a824741b9f53d1e",
+  "scheduler_sha256_after": "b8b66cb767b2a31727017c22d2373af65d0aa2d927ea1c313a824741b9f53d1e",
+  "log": "results\\research_v3\\audit_scheduler_tests_after_first_repairs.log",
+  "synthetic_only": true
+}

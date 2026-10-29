@@ -6,3 +6,13 @@ artifacts/** -text
 submission/PRE_TEST_FREEZE.json -text
 code/configs/research_v2/** -text
 results/research_v2/** -text
+code/configs/research_v3/** -text
+results/research_v3/** -text
+submission/v3/** -text
+code/mp2/research_v3/** -text
+code/train_v3.py -text
+code/solution_v3.py -text
+code/tools/*_v3.py -text
+code/tests/test_*_v3.py -text
+scripts/*_v3.py -text
+docs/research_v3/** -text

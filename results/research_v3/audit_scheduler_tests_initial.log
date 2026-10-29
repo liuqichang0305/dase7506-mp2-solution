@@ -1,0 +1,67 @@
+test_absolute_expiry_prunes_pending_without_spawning (__main__.SchedulerV3Tests.test_absolute_expiry_prunes_pending_without_spawning) ... ok
+test_active_lock_refuses_and_stale_lock_is_preserved (__main__.SchedulerV3Tests.test_active_lock_refuses_and_stale_lock_is_preserved) ... ok
+test_budget_uses_original_absolute_anchor_and_delivery_buffer (__main__.SchedulerV3Tests.test_budget_uses_original_absolute_anchor_and_delivery_buffer) ... ok
+test_changed_registered_source_or_data_rejects_launch (__main__.SchedulerV3Tests.test_changed_registered_source_or_data_rejects_launch) ... ok
+test_identity_requires_pid_creation_and_command (__main__.SchedulerV3Tests.test_identity_requires_pid_creation_and_command) ... ok
+test_incomplete_three_fold_summary_never_completes (__main__.SchedulerV3Tests.test_incomplete_three_fold_summary_never_completes) ... ok
+test_joint_queue_and_config_mutation_cannot_bypass_registered_digest (__main__.SchedulerV3Tests.test_joint_queue_and_config_mutation_cannot_bypass_registered_digest) ... FAIL
+test_monitor_enforces_real_attempt_and_absolute_wall_budgets (__main__.SchedulerV3Tests.test_monitor_enforces_real_attempt_and_absolute_wall_budgets) ... ok
+test_previous_log_is_never_overwritten (__main__.SchedulerV3Tests.test_previous_log_is_never_overwritten) ... ok
+test_registration_is_immutable_and_rejects_holdout_background_paths (__main__.SchedulerV3Tests.test_registration_is_immutable_and_rejects_holdout_background_paths) ... ok
+test_registration_rejects_closed_expired_and_over_capacity (__main__.SchedulerV3Tests.test_registration_rejects_closed_expired_and_over_capacity) ... ok
+test_retry_cap_reason_data_guard_and_failure_log_preservation (__main__.SchedulerV3Tests.test_retry_cap_reason_data_guard_and_failure_log_preservation) ... ok
+test_summary_from_changed_source_or_data_is_rejected (__main__.SchedulerV3Tests.test_summary_from_changed_source_or_data_is_rejected) ... FAIL
+test_unrecorded_live_project_trainer_prevents_duplicate_spawn (__main__.SchedulerV3Tests.test_unrecorded_live_project_trainer_prevents_duplicate_spawn) ... FAIL
+
+======================================================================
+FAIL: test_joint_queue_and_config_mutation_cannot_bypass_registered_digest (__main__.SchedulerV3Tests.test_joint_queue_and_config_mutation_cannot_bypass_registered_digest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_scheduler_v3.py", line 204, in test_joint_queue_and_config_mutation_cannot_bypass_registered_digest
+    scheduler.run()
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\scripts\run_campaign_v3.py", line 300, in run
+    process = subprocess.Popen(command, cwd=ROOT, env=env, stdout=stream, stderr=subprocess.STDOUT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\unittest\mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\unittest\mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\unittest\mock.py", line 1193, in _execute_mock_call
+    raise effect
+AssertionError: Mutated config reached trainer spawn
+
+======================================================================
+FAIL: test_summary_from_changed_source_or_data_is_rejected (__main__.SchedulerV3Tests.test_summary_from_changed_source_or_data_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_scheduler_v3.py", line 194, in test_summary_from_changed_source_or_data_is_rejected
+    self.assert_rejected_summary(job)
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_scheduler_v3.py", line 108, in assert_rejected_summary
+    self.assertIsNone(value, 'Invalid or stale summary was accepted as completion evidence')
+AssertionError: {'summary_path': 'results/research_v3/mlp_a/summary.json', 'summary_sha256': '61ce60de21a3701415646e21080c734b0ba8a1afd5819f64aab1af0d9d78041d', 'oof_sha256': '9d8e5fbc00639b220c502e8b11a6aa4ae51db1efba12db11609ab42c831662e0', 'hard_accuracy': 50.0, 'accuracy': 70.0} is not None : Invalid or stale summary was accepted as completion evidence
+
+======================================================================
+FAIL: test_unrecorded_live_project_trainer_prevents_duplicate_spawn (__main__.SchedulerV3Tests.test_unrecorded_live_project_trainer_prevents_duplicate_spawn)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_scheduler_v3.py", line 212, in test_unrecorded_live_project_trainer_prevents_duplicate_spawn
+    scheduler.run()
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\scripts\run_campaign_v3.py", line 300, in run
+    process = subprocess.Popen(command, cwd=ROOT, env=env, stdout=stream, stderr=subprocess.STDOUT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\unittest\mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\unittest\mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\unittest\mock.py", line 1193, in _execute_mock_call
+    raise effect
+AssertionError: Existing trainer was duplicated
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.373s
+
+FAILED (failures=3)

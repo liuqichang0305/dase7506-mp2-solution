@@ -1,0 +1,191 @@
+{
+  "status": "passed",
+  "timestamp_utc": "2026-10-29T17:07:01.990988+00:00",
+  "input_source": "synthetic",
+  "purpose": "Full selected-input numerical export check only; no references, accuracy or model selection",
+  "questions": 137,
+  "kind": "ensemble",
+  "members": [
+    {
+      "version": "v3",
+      "architecture": {
+        "blocks": 1,
+        "context": true,
+        "dropout": 0.1,
+        "expansion": 2,
+        "family": "mlp",
+        "heads": 4,
+        "hidden": 64,
+        "layer_norm_eps": 1e-05,
+        "width": 128
+      },
+      "decoder": {
+        "alpha": 0.0,
+        "mask": true,
+        "mode": "group_lse",
+        "tau": 1.0
+      },
+      "dtype": "float32",
+      "score_shape": [
+        137,
+        4
+      ],
+      "torch_forward_seconds": 0.030408799997530878,
+      "status": "passed",
+      "absolute_tolerance": 3e-06,
+      "relative_tolerance": 3e-05,
+      "maximum_absolute_error": 1.2665987014770508e-07,
+      "mean_absolute_error": 2.8313565863309984e-08,
+      "scores_outside_tolerance": 0,
+      "raw_argmax_difference_count": 0
+    },
+    {
+      "version": "v3",
+      "architecture": {
+        "activation": "relu",
+        "depth": 3,
+        "dropout": 0.1,
+        "family": "tabm",
+        "input_features": "relation",
+        "k": 4,
+        "start_scaling_init": "random-signs",
+        "width": 128
+      },
+      "decoder": {
+        "alpha": 0.0,
+        "mask": true,
+        "mode": "group_lse",
+        "tau": 1.0
+      },
+      "dtype": "float32",
+      "score_shape": [
+        137,
+        4,
+        4
+      ],
+      "torch_forward_seconds": 0.07465870000305586,
+      "status": "passed",
+      "absolute_tolerance": 3e-06,
+      "relative_tolerance": 3e-05,
+      "maximum_absolute_error": 6.705522537231445e-08,
+      "mean_absolute_error": 1.3965589884858931e-08,
+      "scores_outside_tolerance": 0,
+      "raw_argmax_difference_count": 0
+    },
+    {
+      "version": "v2",
+      "architecture": {
+        "blocks": 1,
+        "context": true,
+        "dropout": 0.1,
+        "expansion": 2,
+        "family": "linear",
+        "heads": 4,
+        "hidden": 64,
+        "layer_norm_eps": 1e-05,
+        "width": 128
+      },
+      "decoder": {
+        "alpha": 0.0,
+        "mask": true,
+        "mode": "group_lse",
+        "tau": 1.0
+      },
+      "dtype": "float64",
+      "score_shape": [
+        137,
+        4
+      ],
+      "torch_forward_seconds": 0.019562900000892114,
+      "status": "passed",
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 1e-10,
+      "maximum_absolute_error": 2.842170943040401e-14,
+      "mean_absolute_error": 3.4609379433707208e-15,
+      "scores_outside_tolerance": 0,
+      "raw_argmax_difference_count": 0
+    }
+  ],
+  "candidate_scores": 3288,
+  "reference_files_read": false,
+  "rejected_input_reads": [],
+  "checkpoint": "C:\\Users\\Liuye\\AppData\\Local\\Temp\\mp2-v3-synthetic-assets-j0m2b08z\\ensemble3",
+  "assets_sha256": {
+    "config.json": "440274b1cc1b4dda5ae96a459859297e4d7e2ae8ba85f623a4069adf3323a495",
+    "member0\\config.json": "072fda7b60e51b84d2cd783cb44b81c73e6bf13bee26b8043c2537033488a47c",
+    "member0\\weights.npz": "5b80d392edd7d74f1d1c1881b4dc95b1504ac6ae30b5a462654a8b74a1c100aa",
+    "member1\\config.json": "d8ac9e7c01cee9f0bd687a325469efee07d37ee1b0276fe98e3e9b2ec43982b7",
+    "member1\\weights.npz": "36553242a8f95b5f0e2bc74ceb239d1de4af64428b7ba5730badd8f5e485f49f",
+    "member2\\config.json": "174fc5e77ba80b9538078117c1df4ba30f5b749aadfe03f7fc4b7b14f71ec30d",
+    "member2\\weights.npz": "c25a8b2f050fa6b01795d6f6f368cb83ff426b17f54c2facf1b2fef76259934a"
+  },
+  "torch_version": "2.15.0+cpu",
+  "numpy_version": "2.5.3",
+  "device": "cpu",
+  "threads": {
+    "torch_intraop": 1,
+    "torch_interop": 1,
+    "environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "OMP_THREAD_LIMIT": "1"
+    }
+  },
+  "maximum_absolute_error": 1.2665987014770508e-07,
+  "maximum_group_probability_error": 9.112388954513051e-09,
+  "group_probabilities_within_tolerance": true,
+  "choice_agreement": {
+    "equal": 137,
+    "n": 137
+  },
+  "differing_row_indices": [],
+  "differing_torch_choices": [],
+  "differing_numpy_choices": [],
+  "top_group_probability_margin_minimum": 0.0,
+  "top_group_probability_margin_below_1e_5_count": 1,
+  "numpy_features_and_forward_seconds": 0.537440100000822,
+  "audit_total_seconds": 0.8162200000006123,
+  "timing_note": "In-process diagnostics only; not official fresh-process inference-plus-scoring timing",
+  "threadpool_info": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+      "version": "0.3.34.106.0",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libiomp",
+      "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\torch\\lib\\libiomp5md.dll",
+      "version": null
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libiomp",
+      "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\torch\\lib\\libiompstubs5md.dll",
+      "version": null
+    }
+  ],
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\code\\tools\\check_export_v3.py",
+    "--checkpoint",
+    "C:\\Users\\Liuye\\AppData\\Local\\Temp\\mp2-v3-synthetic-assets-j0m2b08z\\ensemble3",
+    "--input-source",
+    "synthetic",
+    "--output",
+    "results\\research_v3\\inference-synthetic-audit\\ensemble3-check_export_v3.json"
+  ]
+}

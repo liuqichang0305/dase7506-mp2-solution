@@ -1,0 +1,31 @@
+V3 research resume (PowerShell, repository root):
+
+  git status --short
+  .venv\Scripts\python.exe scripts\run_campaign_v3.py status
+  .venv\Scripts\python.exe scripts\run_campaign_v3.py run
+
+The scheduler reattaches only to the recorded PID with matching creation time
+and command. It never resets the 2026-10-29T16:22:42Z campaign startup clock.
+Only pending/interrupted work resumes; successful full-CV results are preserved.
+Each failed/pruned experiment needs a concrete documented repair and at most
+two repair retries. Never retry a successful experiment for a better result.
+
+Read results/research_v3/campaign_queue.json, scheduler_heartbeat.json and
+experiment_registry.jsonl. Each attempt has its own scheduler_logs/*.log.
+Training checkpoints live under tmp/research_v3/training_states; retain them.
+Final export assets, fold scores, reports and source hashes are versioned.
+
+Before adding a round, inspect completed TRAIN OOF only, write a registration
+JSON with round/hypothesis/configs (2--4 configurations), and execute:
+  .venv\Scripts\python.exe scripts\run_campaign_v3.py register <registration.json>
+
+Observe SEARCH_PLAN_V3.md and campaign_budget.json. No validation/test or class
+leaderboard access in research workers. If SEARCH_CLOSED.json exists, research
+cannot resume. Continue only locked finalist confirmation, audit, reproduction,
+unique final freeze/test, report and course submission according to state.
+
+Historical v1/v2 logs, freezes, assets, tests, reports and guards are immutable.
+The historical v2 separate-permission gate is superseded for this new campaign
+by the user's explicit V3 final-test/submission authorization, subject to any
+concrete current course restriction. Never use test results to reopen research.
+Peer review remains pending actual instructor release; no guessed opening date.

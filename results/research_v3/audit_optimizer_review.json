@@ -1,0 +1,21 @@
+{
+  "checked_at_utc": "2026-10-29T16:50:09.414404+00:00",
+  "component": "V3 optimizer and EMA module",
+  "read_full_source_and_tests": true,
+  "existing_test_log": "8 tests passed in 0.864 seconds; one scalar-conversion test warning scheduled for cleanup",
+  "checks": [
+    "Hidden 2D matrices only use Muon; aliases/norm/embedding/output heads excluded.",
+    "Every trainable parameter assigned exactly once; explicit auxiliary AdamW learning rate.",
+    "Nonfinite gradients reject before either optimizer updates.",
+    "EMA first update copies post-step model; later same-trajectory average; integer buffers copy.",
+    "BatchNorm rejected pending explicit train-only statistics recalibration.",
+    "Optimizer exact CPU resume and EMA equivalence to PyTorch AveragedModel tested."
+  ],
+  "outcome": "No blocking module issue found; trainer integration and full resume/RNG/scheduler handling still pending.",
+  "hashes": {
+    "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+    "code/tests/test_optimizers_v3.py": "33b203fd29435c049ef0c2dde12b9457555b40a559e9c3866bdff6d72226b2cc",
+    "results/research_v3/optimizer-synthetic-tests.log": "71c6225c5823f1a6d54ea8daad53a7cfb9a1d6a1a132e31e29e3d0faaa6e9d8c"
+  },
+  "test_data_read": false
+}

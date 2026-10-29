@@ -1,5 +1,33 @@
 # Project state
 
+## Active V3 research — 2026-10-30 UTC+8
+
+The user adopted `docs/research_v3/AUTONOMOUS_RESEARCH_SPEC.txt` and explicitly
+authorized a new bounded train/CV campaign, review, reproduction and one uniquely
+frozen final test/submission. This new authority supersedes the historical stop
+instructions below for V3; all historical method/assets/logs remain preserved.
+
+- Branch: `research/autonomous-v3`, based on V2 `cb27a2c2ebce501c7266ea894a2187fa128d0102`.
+- Budget: original start `2026-10-29T16:22:42Z`, absolute research end
+  `2026-10-30T16:22:42Z`, <=96 configurations, <=2 justified repair retries each.
+- Actual timing pilot completed: 26.866 seconds, one outer fold only,
+  hard530/705. No new validation/test evaluation has occurred.
+- V3 TabM/RealMLP/preprocessing and AdamW/Muon/EMA modules passed synthetic
+  tests. NumPy-only inference/contract checks passed; train-only resume and
+  scheduler integration checks are being completed before the first full round.
+- Train-only table recomputed all19 historical full-CV configurations with
+  source/data/common-fold verification. No leaderboard feedback enters selection.
+- Current queue/state is authoritative in `results/research_v3/campaign_queue.json`
+  (created when the first round is registered), registry and heartbeat files.
+- Next: run four registered MLP optimizer controls, then TabM, RealMLP and
+  interaction controls. Read `docs/research_v3/SEARCH_PLAN_V3.md` and `RESUME.txt`.
+- At most two NEW validation finalists, fixed deployment seed3036900957. New
+  selection must satisfy the exact historical-fallback criterion in the plan.
+- Final submission and actual peer review are not completed for V3. Peer review
+  awaits the instructor's actual MP2 release. Historical Issue#294 remains valid.
+
+## Historical V1 state (preserved)
+
 Updated: 2026-10-29 (Asia/Shanghai). Student: 3036900957. GitHub: liuqichang0305.
 
 - Status: **submitted_waiting_peer_release**. Stages 0-11 completed. Stage 12 preparation complete; actual peer review NOT completed because the instructor has not released MP2 links.
