@@ -12,3 +12,5 @@ tmp/
 *.pem
 *.key
 .publication_session/
+**/.matplotlib/
+publish_repository.py
