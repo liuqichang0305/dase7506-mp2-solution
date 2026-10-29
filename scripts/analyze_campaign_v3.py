@@ -63,6 +63,20 @@ def main():
                 for relative, expected in {**registration['source_files'], **registration['data_files']}.items():
                     if sha(ROOT / relative) != expected:
                         raise ValueError(f'Historical input changed: {relative}')
+            else:
+                if registration['folds_sha256'] != sha(fold_path):
+                    raise ValueError('V3 fold hash mismatch')
+                for relative, expected in {**registration['source_files'], **registration['data_files']}.items():
+                    if sha(ROOT / relative) != expected:
+                        raise ValueError(f'Registered V3 training input changed: {relative}')
+                if summary.get('oof_sha256') != sha(path.with_name('oof.npz')):
+                    raise ValueError('V3 OOF hash mismatch')
+                for fold_report in summary['folds']:
+                    if fold_report['status'] != 'complete' or fold_report['n'] != 1585:
+                        raise ValueError('V3 fold is incomplete')
+                    for relative, expected in fold_report['output_sha256'].items():
+                        if sha(path.parent / relative) != expected:
+                            raise ValueError('V3 completed-fold prediction changed')
             data = np.load(path.with_name('oof.npz'), allow_pickle=False)
             scores, labels, groups, folds = [data[k] for k in ('scores', 'labels', 'groups', 'fold')]
             if not np.array_equal(folds, fold_vector):

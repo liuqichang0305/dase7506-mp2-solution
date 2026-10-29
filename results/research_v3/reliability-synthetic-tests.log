@@ -1,0 +1,13 @@
+test_actual_chosen_group_not_maximum_and_all_none (test_reliability_v3.ReliabilityTests.test_actual_chosen_group_not_maximum_and_all_none) ... ok
+test_bins_brier_and_risk_coverage_exact (test_reliability_v3.ReliabilityTests.test_bins_brier_and_risk_coverage_exact) ... ok
+test_external_events_synthetic_roundtrip_and_validation_lock (test_reliability_v3.ReliabilityTests.test_external_events_synthetic_roundtrip_and_validation_lock) ... ok
+test_fixed_equal_probability_oof_and_selected_confidence_check (test_reliability_v3.ReliabilityTests.test_fixed_equal_probability_oof_and_selected_confidence_check) ... ok
+test_mapping_fixed_penalty_finite_endpoints_and_no_choices_changed (test_reliability_v3.ReliabilityTests.test_mapping_fixed_penalty_finite_endpoints_and_no_choices_changed) ... ok
+test_npz_events_hash_choice_alias_and_actual_confidence (test_reliability_v3.ReliabilityTests.test_npz_events_hash_choice_alias_and_actual_confidence) ... ok
+test_oof_tamper_and_incomplete_folds_rejected (test_reliability_v3.ReliabilityTests.test_oof_tamper_and_incomplete_folds_rejected) ... ok
+test_tabm_oof_uses_actual_member_probabilities_and_preserves_input (test_reliability_v3.ReliabilityTests.test_tabm_oof_uses_actual_member_probabilities_and_preserves_input) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 2.347s
+
+OK

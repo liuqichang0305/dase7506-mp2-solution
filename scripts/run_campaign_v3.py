@@ -246,12 +246,29 @@ def summary_valid(job):
 def terminate_owned(identity):
     process = same_process(identity)
     if process:
-        process.terminate()
-        try:
-            process.wait(timeout=5)
-        except psutil.TimeoutExpired:
-            process.kill()
-            process.wait(timeout=5)
+        # Windows venv python.exe is a redirector. Terminating only that PID can
+        # leave the real interpreter training past its budget. Snapshot and stop
+        # the descendants of this verified owned process before its launcher.
+        children = process.children(recursive=True)
+        owned = list(reversed(children)) + [process]
+        evidence = []
+        for item in owned:
+            try:
+                evidence.append({'pid': item.pid, 'create_time': item.create_time()})
+                item.terminate()
+            except psutil.NoSuchProcess:
+                continue
+        _, alive = psutil.wait_procs(owned, timeout=5)
+        for item in alive:
+            try:
+                item.kill()
+            except psutil.NoSuchProcess:
+                pass
+        _, remaining = psutil.wait_procs(alive, timeout=5)
+        event('owned_process_tree_terminated', processes=evidence,
+              remaining_pids=[item.pid for item in remaining])
+        if remaining:
+            raise RuntimeError('Could not stop the entire owned training process tree')
 
 
 def complete(job, attempt, returncode, reason=None):
@@ -280,10 +297,22 @@ def monitor(job, queue, popen=None):
             save_queue(queue)
             return
         if now >= next_heartbeat:
+            owned = same_process(attempt)
+            resources = []
+            if owned:
+                for item in [owned] + owned.children(recursive=True):
+                    try:
+                        resources.append({'pid': item.pid, 'create_time': item.create_time(),
+                            'rss_bytes': item.memory_info().rss, 'cpu_seconds': sum(item.cpu_times()[:2]),
+                            'os_thread_count': item.num_threads()})
+                    except psutil.NoSuchProcess:
+                        continue
             atomic(OUT / 'scheduler_heartbeat.json', {'utc': utc(), 'scheduler_pid': os.getpid(),
                 'experiment_id': job['experiment_id'], 'training_pid': attempt['pid'],
                 'attempt_elapsed_seconds': now - attempt['started_timestamp'],
                 'campaign_remaining_seconds': max(0, research_end - now),
+                'resource_sample': resources,
+                'resource_note': 'Point samples include Windows venv launcher descendants; OS threads are not active compute threads.',
                 'resume_command': '.venv\\Scripts\\python.exe scripts\\run_campaign_v3.py run'})
             next_heartbeat = now + 30
         time.sleep(1)

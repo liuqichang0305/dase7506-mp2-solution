@@ -1,0 +1,120 @@
+{
+  "checked_at_utc": "2026-10-29T17:14:54.251874+00:00",
+  "review": "Full solution_v3 and contract/export code read. Actual mean group probabilities, first-model/first-member representative, masked None/fallback, decision-aware ties, isolated input-only subprocess and no-Torch inference verified in synthetic evidence. No blocking issue found; actual selected finalist full validation export/contract/resource checks still required.",
+  "checks": [
+    {
+      "fixture": "mlp",
+      "tool": "check_export_v3.py",
+      "status": "passed",
+      "reference_files_read": false,
+      "sha256": "0d11c7ef01a13c50ac4a6afff78d7a65db1ce2f8b3751053b6b09a72db88d118",
+      "maximum_absolute_error": 1.2665987014770508e-07,
+      "threadpool_total": null
+    },
+    {
+      "fixture": "mlp",
+      "tool": "check_contract_v3.py",
+      "status": "passed",
+      "reference_files_read": false,
+      "sha256": "6557b120a167f43dccd1baccd7fbdfbb0126288ff8c0f292977e9bb22b386f96",
+      "maximum_absolute_error": null,
+      "threadpool_total": 1
+    },
+    {
+      "fixture": "tabm",
+      "tool": "check_export_v3.py",
+      "status": "passed",
+      "reference_files_read": false,
+      "sha256": "f375d0f84a496b4036209ea60653750eb3e0717415b17812adb77900530b22aa",
+      "maximum_absolute_error": 6.705522537231445e-08,
+      "threadpool_total": null
+    },
+    {
+      "fixture": "tabm",
+      "tool": "check_contract_v3.py",
+      "status": "passed",
+      "reference_files_read": false,
+      "sha256": "92a3e61cbb1957980962de15f9231a56590ba7e2513a9cfa9780baa7d870bee6",
+      "maximum_absolute_error": null,
+      "threadpool_total": 1
+    },
+    {
+      "fixture": "realmlp",
+      "tool": "check_export_v3.py",
+      "status": "passed",
+      "reference_files_read": false,
+      "sha256": "81af769deb890bc8947c53fc808c9a4336a8ed2e6572c1c6603756c28435a2a0",
+      "maximum_absolute_error": 4.917383193969727e-07,
+      "threadpool_total": null
+    },
+    {
+      "fixture": "realmlp",
+      "tool": "check_contract_v3.py",
+      "status": "passed",
+      "reference_files_read": false,
+      "sha256": "3c825de55e0b110ef32ff1286a132dfd281e8265eaea15a9c7ed04a84c48ae9d",
+      "maximum_absolute_error": null,
+      "threadpool_total": 1
+    },
+    {
+      "fixture": "v2_linear",
+      "tool": "check_export_v3.py",
+      "status": "passed",
+      "reference_files_read": false,
+      "sha256": "4cb4ff32ffd0097a7e02f44059db497bcb81dde8f8ed780f23fc1882b37e36d0",
+      "maximum_absolute_error": 2.842170943040401e-14,
+      "threadpool_total": null
+    },
+    {
+      "fixture": "v2_linear",
+      "tool": "check_contract_v3.py",
+      "status": "passed",
+      "reference_files_read": false,
+      "sha256": "3d90532431a13cd65a4bb079dc10bf034ff6ec14d294d152e4ea6b05642d09da",
+      "maximum_absolute_error": null,
+      "threadpool_total": 1
+    },
+    {
+      "fixture": "ensemble2",
+      "tool": "check_export_v3.py",
+      "status": "passed",
+      "reference_files_read": false,
+      "sha256": "fe297dc18c77cb1bd2bc0a460b225da161cb7c311b7a99b057553480a7aec69c",
+      "maximum_absolute_error": 4.917383193969727e-07,
+      "threadpool_total": null
+    },
+    {
+      "fixture": "ensemble2",
+      "tool": "check_contract_v3.py",
+      "status": "passed",
+      "reference_files_read": false,
+      "sha256": "555db48dae953893be43c4ad597d7387bc15eee0056455d44691dc29a675f1e5",
+      "maximum_absolute_error": null,
+      "threadpool_total": 1
+    },
+    {
+      "fixture": "ensemble3",
+      "tool": "check_export_v3.py",
+      "status": "passed",
+      "reference_files_read": false,
+      "sha256": "7dab7dd9737f094b84c76ed382a9b423f3633f5c6cb0d8646ff257a8bbabc59a",
+      "maximum_absolute_error": 1.2665987014770508e-07,
+      "threadpool_total": null
+    },
+    {
+      "fixture": "ensemble3",
+      "tool": "check_contract_v3.py",
+      "status": "passed",
+      "reference_files_read": false,
+      "sha256": "87450a3e22201a795b766475e12aa0cf31ef304474f4a00e1640eeef2570f470",
+      "maximum_absolute_error": null,
+      "threadpool_total": 1
+    }
+  ],
+  "source_hashes": {
+    "code/solution_v3.py": "141e9616628503b6f19865799e1c393f6e7bed279dbb6115aeb5240f4f5da113",
+    "code/tools/check_contract_v3.py": "11671821386158242c4098984db3e7da5500e624deb1565fa153f2b13360bd3e",
+    "code/tools/check_export_v3.py": "8c633fc10154d68a58a8b664c891d7cbd4d4948abfa894f390b971ad6fbba40e"
+  },
+  "test_inputs_or_references_read": false
+}

@@ -13,13 +13,15 @@ instructions below for V3; all historical method/assets/logs remain preserved.
 - Actual timing pilot completed: 26.866 seconds, one outer fold only,
   hard530/705. No new validation/test evaluation has occurred.
 - V3 TabM/RealMLP/preprocessing and AdamW/Muon/EMA modules passed synthetic
-  tests. NumPy-only inference/contract checks passed; train-only resume and
-  scheduler integration checks are being completed before the first full round.
+  tests. NumPy-only inference/contract, exact epoch resume and scheduler
+  integration checks passed. First three full-CV results: AdamW MLP1592/2114
+  hard, EMA1601/2114, Muon LR0.01 1598/2114. Second Muon setting is running.
 - Train-only table recomputed all19 historical full-CV configurations with
   source/data/common-fold verification. No leaderboard feedback enters selection.
-- Current queue/state is authoritative in `results/research_v3/campaign_queue.json`
-  (created when the first round is registered), registry and heartbeat files.
-- Next: run four registered MLP optimizer controls, then TabM, RealMLP and
+- Current queue/state is authoritative in `results/research_v3/campaign_queue.json`,
+  registry and heartbeat files. Scheduler restart retained the live trainer;
+  Windows venv child-tree timeout cleanup passed a real no-data process test.
+- Next: complete four registered MLP optimizer controls, then TabM, RealMLP and
   interaction controls. Read `docs/research_v3/SEARCH_PLAN_V3.md` and `RESUME.txt`.
 - At most two NEW validation finalists, fixed deployment seed3036900957. New
   selection must satisfy the exact historical-fallback criterion in the plan.

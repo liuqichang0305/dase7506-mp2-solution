@@ -33,4 +33,6 @@ Optimizer and EMA checkpoint schemas record configuration, named groups and coun
 
 `code/tests/test_optimizers_v3.py` initially passed **8/8** synthetic tests in **0.864 seconds** on one CPU compute thread. Evidence: `results/research_v3/optimizer-synthetic-tests.log`. Checks cover disjoint grouping, tied heads, TabM adapters, explicit RealMLP rates, exact direct-AdamW parity, finite native-Muon updates, exact next-step optimizer resume, EMA agreement with `AveragedModel`, EMA resume, and rejection of nonfinite gradients before either optimizer mutates weights. These synthetic checks establish implementation behavior, not improved task accuracy.
 
+A scalar-conversion warning in the test was removed by detaching the inspected tensor; no optimizer code changed. The clean rerun passed **8/8 in 1.116 seconds**, recorded in `optimizer-synthetic-tests-clean.log`; the initial log remains preserved.
+
 No official train experiment, validation bank or test bank was opened for this optimizer subtask. Actual research performance belongs to the separately scheduled common-fold experiments. AI wrote the project wrapper/tests and performed this source review; this is internal AI verification, not teacher or independent human certification.

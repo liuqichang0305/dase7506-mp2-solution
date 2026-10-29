@@ -1,0 +1,434 @@
+{
+  "schema": "mp2-campaign-queue-v3",
+  "jobs": [
+    {
+      "experiment_id": "v3_mlp_adamw_s0",
+      "round": "r01_mlp_optimizer",
+      "hypothesis": "Hold MLP architecture, objective and preprocessing fixed; compare AdamW, same-trajectory EMA, and two preregistered Muon hidden-matrix learning rates. This V3 AdamW excludes bias/norm from decay, so the V2 historical recipe is a comparator, not a bitwise control.",
+      "config": {
+        "family": "mlp",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "optimizer": "adamw",
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 10,
+        "seed": 3036900957,
+        "preprocess": "standard",
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "experiment_id": "v3_mlp_adamw_s0"
+      },
+      "config_path": "code/configs/research_v3/v3_mlp_adamw_s0.json",
+      "config_sha256": "f841c79db2fcf00a8ae8298829619e5c98f3666bae8f1f1782144b1bccfc6752",
+      "registered_at_utc": "2026-10-29T17:13:48.553378+00:00",
+      "registered_provenance": {
+        "source_files": {
+          "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+          "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+          "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+          "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+          "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+          "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+          "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+          "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+          "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+          "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+          "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+        },
+        "train_and_fold_files": {
+          "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+          "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+          "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+          "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2",
+          "results/research_v3/common_folds.json": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9"
+        },
+        "git_commit": "904fab422ff6543b7ce75a496719645433856824"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "pid": 25080,
+          "create_time": 1793294039.5304031,
+          "command_fragment": "code/configs/research_v3/v3_mlp_adamw_s0.json",
+          "command": [
+            "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+            "code/train_v3.py",
+            "--config",
+            "code/configs/research_v3/v3_mlp_adamw_s0.json"
+          ],
+          "started_at_utc": "2026-10-29T17:13:59.532454+00:00",
+          "started_timestamp": 1793294039.5274355,
+          "log": "results/research_v3/scheduler_logs/v3_mlp_adamw_s0.attempt1.log",
+          "provenance": {
+            "source_files": {
+              "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+              "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+              "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+              "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+              "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+              "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+              "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+              "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+              "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+              "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+              "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+            },
+            "train_and_fold_files": {
+              "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+              "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+              "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+              "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2",
+              "results/research_v3/common_folds.json": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9"
+            },
+            "git_commit": "904fab422ff6543b7ce75a496719645433856824"
+          },
+          "scheduler_source_sha256": "b791dcaabe7b21109e8e5961a1bc394dbd55d6f39efd43c8b47e8f8f07e63260",
+          "ended_at_utc": "2026-10-29T17:15:02.615057+00:00",
+          "returncode": 0,
+          "stop_reason": null,
+          "observed_wall_seconds": 63.08762240409851
+        }
+      ],
+      "repair_retries": 0,
+      "maximum_attempt_wall_seconds": 1800,
+      "result": {
+        "summary_path": "results/research_v3/v3_mlp_adamw_s0/summary.json",
+        "summary_sha256": "aff3e3af6a62b8ef126a8c4eb7281e29e902b351d017c24a3e08379600886030",
+        "oof_sha256": "943fa7317056fac8ac2bf6672ee95f8b0b9a544567e531ac46ba039d3ab9605f",
+        "hard_accuracy": 75.30747398297068,
+        "accuracy": 89.02208201892743
+      }
+    },
+    {
+      "experiment_id": "v3_mlp_ema_s0",
+      "round": "r01_mlp_optimizer",
+      "hypothesis": "Hold MLP architecture, objective and preprocessing fixed; compare AdamW, same-trajectory EMA, and two preregistered Muon hidden-matrix learning rates. This V3 AdamW excludes bias/norm from decay, so the V2 historical recipe is a comparator, not a bitwise control.",
+      "config": {
+        "family": "mlp",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "optimizer": "adamw",
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 10,
+        "seed": 3036900957,
+        "preprocess": "standard",
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "experiment_id": "v3_mlp_ema_s0",
+        "ema_decay": 0.99
+      },
+      "config_path": "code/configs/research_v3/v3_mlp_ema_s0.json",
+      "config_sha256": "faf96c7ae475e0187ed0279bd8afeab965468db02ec250e53b5365fad428b1aa",
+      "registered_at_utc": "2026-10-29T17:13:48.560449+00:00",
+      "registered_provenance": {
+        "source_files": {
+          "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+          "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+          "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+          "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+          "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+          "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+          "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+          "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+          "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+          "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+          "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+        },
+        "train_and_fold_files": {
+          "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+          "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+          "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+          "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2",
+          "results/research_v3/common_folds.json": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9"
+        },
+        "git_commit": "904fab422ff6543b7ce75a496719645433856824"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "pid": 13092,
+          "create_time": 1793294102.9765527,
+          "command_fragment": "code/configs/research_v3/v3_mlp_ema_s0.json",
+          "command": [
+            "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+            "code/train_v3.py",
+            "--config",
+            "code/configs/research_v3/v3_mlp_ema_s0.json"
+          ],
+          "started_at_utc": "2026-10-29T17:15:02.978516+00:00",
+          "started_timestamp": 1793294102.9733293,
+          "log": "results/research_v3/scheduler_logs/v3_mlp_ema_s0.attempt1.log",
+          "provenance": {
+            "source_files": {
+              "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+              "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+              "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+              "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+              "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+              "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+              "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+              "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+              "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+              "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+              "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+            },
+            "train_and_fold_files": {
+              "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+              "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+              "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+              "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2",
+              "results/research_v3/common_folds.json": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9"
+            },
+            "git_commit": "904fab422ff6543b7ce75a496719645433856824"
+          },
+          "scheduler_source_sha256": "b791dcaabe7b21109e8e5961a1bc394dbd55d6f39efd43c8b47e8f8f07e63260",
+          "ended_at_utc": "2026-10-29T17:16:30.077230+00:00",
+          "returncode": 0,
+          "stop_reason": null,
+          "observed_wall_seconds": 87.10390138626099
+        }
+      ],
+      "repair_retries": 0,
+      "maximum_attempt_wall_seconds": 1800,
+      "result": {
+        "summary_path": "results/research_v3/v3_mlp_ema_s0/summary.json",
+        "summary_sha256": "1c9fe76e3a445049395c5893199a8f1b6945a732f73059af44e8b4c1188b8b90",
+        "oof_sha256": "473c880ed7cbc09ee59f1f53eac42b41993f12804225b536246f81943f867fc0",
+        "hard_accuracy": 75.73320719016084,
+        "accuracy": 89.21135646687696
+      }
+    },
+    {
+      "experiment_id": "v3_mlp_muon001_s0",
+      "round": "r01_mlp_optimizer",
+      "hypothesis": "Hold MLP architecture, objective and preprocessing fixed; compare AdamW, same-trajectory EMA, and two preregistered Muon hidden-matrix learning rates. This V3 AdamW excludes bias/norm from decay, so the V2 historical recipe is a comparator, not a bitwise control.",
+      "config": {
+        "family": "mlp",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "optimizer": "muon",
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 10,
+        "seed": 3036900957,
+        "preprocess": "standard",
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "experiment_id": "v3_mlp_muon001_s0",
+        "muon_lr": 0.01
+      },
+      "config_path": "code/configs/research_v3/v3_mlp_muon001_s0.json",
+      "config_sha256": "ce79cd820181a3a57a78abcf407cf5cf823792a562f0a21bd775f86d44b7253a",
+      "registered_at_utc": "2026-10-29T17:13:48.564675+00:00",
+      "registered_provenance": {
+        "source_files": {
+          "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+          "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+          "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+          "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+          "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+          "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+          "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+          "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+          "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+          "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+          "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+        },
+        "train_and_fold_files": {
+          "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+          "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+          "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+          "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2",
+          "results/research_v3/common_folds.json": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9"
+        },
+        "git_commit": "904fab422ff6543b7ce75a496719645433856824"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "pid": 6452,
+          "create_time": 1793294190.4489405,
+          "command_fragment": "code/configs/research_v3/v3_mlp_muon001_s0.json",
+          "command": [
+            "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+            "code/train_v3.py",
+            "--config",
+            "code/configs/research_v3/v3_mlp_muon001_s0.json"
+          ],
+          "started_at_utc": "2026-10-29T17:16:30.453155+00:00",
+          "started_timestamp": 1793294190.4428232,
+          "log": "results/research_v3/scheduler_logs/v3_mlp_muon001_s0.attempt1.log",
+          "provenance": {
+            "source_files": {
+              "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+              "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+              "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+              "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+              "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+              "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+              "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+              "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+              "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+              "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+              "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+            },
+            "train_and_fold_files": {
+              "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+              "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+              "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+              "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2",
+              "results/research_v3/common_folds.json": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9"
+            },
+            "git_commit": "904fab422ff6543b7ce75a496719645433856824"
+          },
+          "scheduler_source_sha256": "b791dcaabe7b21109e8e5961a1bc394dbd55d6f39efd43c8b47e8f8f07e63260",
+          "ended_at_utc": "2026-10-29T17:34:43.631248+00:00",
+          "returncode": null,
+          "stop_reason": null,
+          "observed_wall_seconds": 1093.188425540924
+        }
+      ],
+      "repair_retries": 0,
+      "maximum_attempt_wall_seconds": 1800,
+      "result": {
+        "summary_path": "results/research_v3/v3_mlp_muon001_s0/summary.json",
+        "summary_sha256": "99a78dd9d01098ed80aba3e243652eb26e9da02d1c15421e55eaffe749b1efef",
+        "oof_sha256": "bc8d3671425d8f03f293abb840e5119ffae2012d5b89b280dea7498e9931ce01",
+        "hard_accuracy": 75.59129612109746,
+        "accuracy": 89.14826498422713
+      }
+    },
+    {
+      "experiment_id": "v3_mlp_muon002_s0",
+      "round": "r01_mlp_optimizer",
+      "hypothesis": "Hold MLP architecture, objective and preprocessing fixed; compare AdamW, same-trajectory EMA, and two preregistered Muon hidden-matrix learning rates. This V3 AdamW excludes bias/norm from decay, so the V2 historical recipe is a comparator, not a bitwise control.",
+      "config": {
+        "family": "mlp",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "optimizer": "muon",
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 10,
+        "seed": 3036900957,
+        "preprocess": "standard",
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "experiment_id": "v3_mlp_muon002_s0",
+        "muon_lr": 0.02
+      },
+      "config_path": "code/configs/research_v3/v3_mlp_muon002_s0.json",
+      "config_sha256": "71a2dd9e567c78b60a9951095e36f66d0cc0124e17198fcbdf3798324c13fe3a",
+      "registered_at_utc": "2026-10-29T17:13:48.568292+00:00",
+      "registered_provenance": {
+        "source_files": {
+          "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+          "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+          "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+          "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+          "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+          "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+          "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+          "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+          "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+          "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+          "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+        },
+        "train_and_fold_files": {
+          "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+          "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+          "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+          "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2",
+          "results/research_v3/common_folds.json": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9"
+        },
+        "git_commit": "904fab422ff6543b7ce75a496719645433856824"
+      },
+      "status": "running",
+      "attempts": [
+        {
+          "pid": 13596,
+          "create_time": 1793295285.4109488,
+          "command_fragment": "code/configs/research_v3/v3_mlp_muon002_s0.json",
+          "command": [
+            "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+            "code/train_v3.py",
+            "--config",
+            "code/configs/research_v3/v3_mlp_muon002_s0.json"
+          ],
+          "started_at_utc": "2026-10-29T17:34:45.413492+00:00",
+          "started_timestamp": 1793295285.408538,
+          "log": "results/research_v3/scheduler_logs/v3_mlp_muon002_s0.attempt1.log",
+          "provenance": {
+            "source_files": {
+              "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+              "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+              "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+              "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+              "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+              "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+              "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+              "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+              "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+              "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+              "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+            },
+            "train_and_fold_files": {
+              "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+              "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+              "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+              "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2",
+              "results/research_v3/common_folds.json": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9"
+            },
+            "git_commit": "904fab422ff6543b7ce75a496719645433856824"
+          },
+          "scheduler_source_sha256": "6f1392b9be5f40cf8985f3f3bc5bb9566da3c75db8939fbc096c6669878dea28"
+        }
+      ],
+      "repair_retries": 0,
+      "maximum_attempt_wall_seconds": 1800
+    }
+  ],
+  "updated_at_utc": "2026-10-29T17:34:45.414547+00:00"
+}
