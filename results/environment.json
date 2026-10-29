@@ -1,0 +1,23 @@
+{
+  "captured_at": "2026-10-29T06:19:50.568573+00:00",
+  "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+  "executable": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+  "os": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i9-12900H (Windows registry)",
+  "logical_cpus": 20,
+  "physical_cpus": 14,
+  "ram_bytes": 16823717888,
+  "disk": {
+    "total": 998827692032,
+    "used": 847541608448,
+    "free": 151286083584,
+    "percent": 84.9
+  },
+  "training_device": "CPU",
+  "inference_device": "CPU",
+  "thread_policy": "one BLAS/OpenMP thread; sequential child processes",
+  "reference_machine": false,
+  "gpu_detected": "NVIDIA GeForce RTX 3070 Ti Laptop GPU, 8192 MiB; not used",
+  "upstream_commit": "bb801f4f2e7629d270df765ab12c333b2dc616bb"
+}

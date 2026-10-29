@@ -1,0 +1,14 @@
+.venv/
+.venv-repro/
+upstream/
+__pycache__/
+*.pyc
+code/data/*
+!code/data/LICENSE.txt
+!code/data/NOTICE.txt
+!code/data/manifest.json
+tmp/
+.env
+*.pem
+*.key
+.publication_session/

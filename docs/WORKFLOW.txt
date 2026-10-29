@@ -1,0 +1,398 @@
+DASE7506 Mini-project 2 — Codex 完整执行提示词
+任务：Selecting Reliable LLM Reasoning
+核对日期：2026-10-29，Asia/Shanghai（UTC+8）
+用途：把本文件完整上传或粘贴给能够访问终端与 GitHub 的 Codex，要求它实际执行。
+本文件是执行规范，不是已训练模型、实验结果或已完成的课程提交。
+
+==================== 从这里开始执行 ====================
+
+你现在是我的机器学习研究工程师、实验复现工程师、代码审查员和课程项目协作助手。请实际完成 DASE7506 Mini-project 2: Selecting Reliable LLM Reasoning，从读取官方规则开始，持续推进到可复现的代码、模型资产、报告、GitHub 仓库、正式提交与可执行的同行评审流程。
+
+不要只给建议、伪代码或项目目录。你应真实创建文件、运行命令、训练和评估、依据证据修改、修复错误并检查结果。不得捏造实验、分数、引用、日志、运行时、公开链接、提交状态或评审结论。不得保证某个准确率、排名、成绩或奖励。
+
+本项目为个人作业。允许 AI 辅助，但最终材料要能让我理解、解释与复现。研究交流和进度汇报使用中文，最终课程报告和项目 README 默认使用清楚的英文，另给中文理解指南。所有 AI 实质帮助和代码复用都要披露。
+
+一、任务输入、权限边界与先行工作
+
+官方来源：
+1. Guide：https://github.com/xudongwu-0/DASE7506-MP2/blob/main/guide/GUIDE.md
+2. Code/data：https://github.com/xudongwu-0/DASE7506-MP2
+3. 安装和评估：https://github.com/xudongwu-0/DASE7506-MP2/blob/main/code/README.md
+4. 提交和榜单：https://xudongwu-0.github.io/courses/dase7506/mp2/
+5. 课程问题联系邮箱：wu.xudong@connect.hku.hk（不要擅自发邮件）。
+
+本提示词整理时读取的上游 commit：bb801f4f2e7629d270df765ab12c333b2dc616bb。
+启动时重新读取官方材料与最新通知，记录实际使用的 commit；若规则更新，以最新明确课程规则为准，在 requirements_matrix.md 记录差异。不要把 Git tree/blob SHA 误记为 commit SHA。
+
+用户参数：
+- STUDENT_ID：待我提供或在本次明确确认。不要从历史其他作业自动套用学号。
+- GITHUB_ACCOUNT：优先读取已授权的 GitHub 个人账号；身份不清楚时再询问。
+- PROJECT_REPO：优先使用我明确指定的本项目仓库；未指定则在我的个人账号下创建独立的 dase7506-mp2-solution 仓库，先检查同名仓库，不能覆盖不明已有项目。
+- WORKSPACE：在当前已授权工作区下建立独立项目目录，不覆盖其他课程或个人文件。
+- 计算预算：默认 CPU；只有发现已授权且符合要求的 GPU 才使用。默认不使用付费服务，不调用外部教师模型 API，不租 GPU。
+- 正式截止：2026-10-31 23:59，香港/北京时间 UTC+8。先读取真实当前时间，安排剩余时间；若已逾期，继续整理可复现成果并如实说明，不能绕过截止或回填时间。
+
+执行本提示词时，授权你在本项目范围内进行依赖安装、训练、测试、创建/修改代码、commit、push、建立自己仓库的 PR，以及按下述条件发布课程作业仓库/模型资产并实际创建课程提交 Issue。发布范围限本作业必要文件。不要改写上游教学仓库、force-push 他人提交、删除无关文件、公开密钥或上传整个个人目录。学号和提交账号必须先明确；缺失只阻塞身份相关提交，不阻塞研究和实现。
+
+如需要登录，由我在官方登录流程完成，不要求我发送密码、token、验证码或私钥。遇到工具权限、网络、身份或将来才开放的环节，完成所有不依赖它的工作，记录准确阻塞、证据和最少下一步。不要反复询问已经明确的权限，也不要把阻塞步骤标为完成。
+
+若支持多代理，可并行安排：规则/文献、方法实现、独立审查/复现。按文件分工；任何代理都不能读取测试参考作开发、向外部模型发送评测题目求解，或私自运行额外测试试验。所有代理共享下面的数据隔离规则，最后由主代理集成验收。AI 子代理审查必须标注为 AI 内部审查，不得假冒人类同行或教师认证。
+
+二、必须遵守的官方约束
+
+1. 数据：train 4,755 题、validation 798 题、test 467 题，每题四个候选。每题至少一个最终答案正确，可能多个正确。训练和验证包含容易题；test 至少包含两个不同的可解析答案。
+2. 接口：实现 predict(bank, arrays, checkpoint)，输入题目、候选文本、arrays['embeddings']，后者形状为 [N, 4, 1024]、float32；checkpoint 为 pathlib.Path 或 None。返回与 bank 同顺序、长度 N 的 list，每项为真正的 Python int，取值 0、1、2、3，不能返回 np.int64、bool、分数数组或新答案。
+3. 数据评估协议：dase7506-mp2-open-hard-verifier-v5。文件落盘的原始 embeddings 为 [4*N, 1024]，官方 load_inputs 会重排为接口形状，不要重复错误 reshape 或打乱对齐。
+4. 只用官方训练输入和训练参考拟合参数。训练集内增强允许。验证集只用于开发与模型选择；测试参考只用于最终评分和复现。
+5. 禁止外部数据集、额外预训练权重、样本答案查表、缓存预测充当推理、使用 ID 或固定题目数量识别测试集。不能下载完整 GSM8K、原始网页答案、其他同学解答/预测用来提升分数。
+6. 不能改官方数据、数值解析器或评分器。将 predict.py、score_predictions.py、common.py、check_data.py、data/ 与许可证作为只读基准；自己的方法使用独立文件，不依赖修改官方工具。
+7. 评估必须离线，只能选择已有候选；不得新增 LLM 生成、API 请求或模型下载。必须支持未来 audit bank 和不同 N，无需重训，不假设 ID 格式。
+8. 完整 CPU 评估不超过 30 秒：参考机器 Xeon Platinum 8457C；所有库、线程池和进程合计最多四线程。测量全新预测进程加独立评分进程，包括启动、import、输入/资产加载、预处理和所有 ensemble 成员。不能只报 predict() 内部时间。
+9. 所有额外推理资产未压缩总量不超过 16 MiB = 16,777,216 bytes。权重、标准化统计、PCA、词表/IDF、配置、索引、校准器、融合器和 ensemble 都计入。普通源代码和官方提供数据不计入；把数值数组写进源码、压缩/重建资产不能规避限额。
+10. 训练用 CPU 或最多一张性能不高于 RTX 4090 的 GPU；推理始终 CPU。记录训练/搜索预算、seed、依赖与硬件。
+11. 官方指标是完整 test 的 selection accuracy（0–100 的百分比）。评分只判断最终数字答案，不代表推理链每一步都正确。使用官方 parse_answer 处理等价分数/小数等，不自行改正确判定标准。
+12. 最终公开代码仓库需要：不超过 10 页报告、精确安装/训练/评估指令、官方评估 JSON、实验和资源记录、seed、资产哈希、AI 和复用披露、匹配的代码版本和 checkpoint/configuration。别人必须能不重新训练就复现提交分数。
+
+先建立 requirements_matrix.md，逐条列出：规则、官方出处、实现位置、验收方式、当前状态。区分“课程硬要求”和“本工作流增加的工程检查”，不能把建议说成官方要求。
+
+三、阶段 0：环境检查、规则快照、数据完整性
+
+目标：拿到能够完整运行的官方工程和可追踪环境。
+
+执行：
+1. 查看当前目录、系统、Python、CPU、内存、磁盘、Git、GitHub 授权与仓库状态。不要把当前 Linux/云端环境误说成我的 Windows 主机。
+2. 使用 Python 3.12 和独立虚拟环境。没有时在允许环境中安装或给出具体阻塞；不要悄悄使用其他版本然后宣称符合说明。
+3. clone 官方仓库到独立目录或下载官方 ZIP；记录来源 commit、获取日期、原始文件哈希，保留 LICENSE 和 NOTICE。
+4. 完整阅读 guide/GUIDE.md、code/README.md、code/submission.py、code/predict.py、code/score_predictions.py、code/common.py、code/check_data.py、code/data/manifest.json 和实际存在的 PACKAGE_MANIFEST.json。
+5. 在 code/ 下安装官方依赖，运行 python check_data.py，保存完整 stdout、stderr、exit code。官方 checker 可能读取各 split 的参考做校验，这是允许的完整性验证；不能把读到的 test 内容、标签、统计转供开发流程。
+6. 数据校验失败时定位下载不全、Git LFS/路径或版本问题，从官方来源重取对应文件；不要修改 manifest/数据以“让校验通过”。代码清单路径以真实仓库为准，不照抄文档中可能不同的路径。
+7. 追加自己的版本固定依赖文件，不无意义安装大型框架。优先 NumPy/scikit-learn；需要训练 MLP 时才引入必要训练依赖。训练依赖可与轻量推理依赖分开。
+8. 建立 PROJECT_STATE.md、EXPERIMENT_LOG.jsonl、DECISIONS.md、BLOCKERS.md、requirements_matrix.md。每阶段更新：真实完成项、执行命令、结果路径、尚未完成项、下一步。
+
+示例官方起点（根据系统真实适配后执行）：
+git clone https://github.com/xudongwu-0/DASE7506-MP2.git
+cd DASE7506-MP2/code
+python -m venv .venv
+# Linux/macOS: source .venv/bin/activate
+# Windows PowerShell: .venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python check_data.py
+
+验收：Python/依赖版本可记录，官方完整性校验通过，基准文件有原始哈希，未读取 test 参考做方法开发。
+
+四、阶段 1：任务分析与无泄漏标签构造
+
+目标：明确学习目标、划分、易错点和研究假设。
+
+只在 train 与 validation 上开展数据探索：
+- 题目、候选、embedding、参考逐题对齐；ID 仅作对齐与记录，不作模型特征。
+- train 候选标签 y[i,j] = 1，当且仅当该候选由官方 parse_answer 得到的答案非 None 且等于同题训练参考解析值。
+- 不假设每组仅一个正确标签；保留所有正例。不能对四个候选随意选一个正例然后把其他正确候选标为负例。
+- 报告正确候选数分布、答案可解析率、答案一致性、文本长度等；validation 只作开发诊断，不参与统计量拟合。
+- 基准随机选择的理论期望是 mean(每题正确候选数/4)，不一定是 25%。该统计只在允许分析的 train/validation 上计算。
+- 预先定义 validation-hard：四个候选中至少两个不同的非 None 官方解析答案。完整 validation 仍为主要开发指标，同时报告 hard 子集，解释它与公开 test 构造条件的差异；不要根据 test 内容调整子集规则。
+- 所有拆分、交叉验证与 bootstrap 按“题”分组，不能把同题四条候选拆到训练/验证两侧。PCA、标准化、TF-IDF/词表、特征筛选都只能在对应训练折 fit。
+- 若做训练候选置换增强，文本、embedding、label 必须同步置换。改写推理文本后不能把原 whole-trace embedding 冒充新文本的对应表征；默认采用无需重新编码且语义保持的增强。
+
+给出研究假设，例如：
+H1：固定 embedding 的轻量 verifier 比答案多数投票在分歧题上更有效。
+H2：加入候选间比较与答案一致性特征，有助于识别独立打分遗漏的信息。
+H3：较高的模型分数是否对应较高的“所选最终答案正确率”，需要校准与风险分析验证。
+
+输出 task_analysis.md：输入输出、标签、loss 候选、split 使用权限、主要指标、可检验假设、如何避免数据泄漏。不要先写好“实验将证明……”的结论。
+
+五、阶段 2：真实文献查找与可行方法选择
+
+目标：让文献服务于可执行设计，不照搬超出资源限制的模型。
+
+优先核实以下原始论文，至少精读与实际方法相关的部分：
+1. Cobbe et al., Training Verifiers to Solve Math Word Problems (2021).
+   https://arxiv.org/abs/2110.14168
+   可借鉴：对已有候选作正确性判别/排序。不能下载其额外训练集或 verifier 权重。
+2. Wang et al., Self-Consistency Improves Chain of Thought Reasoning in Language Models (ICLR 2023).
+   https://arxiv.org/abs/2203.11171
+   可借鉴：在提供的四个候选中对规范化最终答案做投票/分组。这里不生成额外推理轨迹；它只是受论文启发的有限候选改写。
+3. Guo et al., On Calibration of Modern Neural Networks (ICML 2017).
+   https://proceedings.mlr.press/v70/guo17a.html
+   可借鉴：检查置信度是否与实际正确率一致。多正例选择不同于互斥多分类，不能直接把四路 softmax 最大值当正确概率。
+
+时间允许，再查小样本 learning-to-rank、组内比较、selective prediction/risk–coverage 的原始来源。用 arXiv、会议论文集、作者官方仓库核实；不要把搜索摘要当已完整阅读，不编 DOI/作者/年份，也不把论文其他数据集的提升作为本项目预期提升。
+
+输出 literature_review.md 和 references.bib：每篇记录来源、实际阅读范围、核心思想、本项目可用改写、限制、计划检验假设。原则上 3–5 篇足够，不为凑数量拖延提交。
+
+六、阶段 3：代码结构与“模型调用”的合规实现
+
+默认开发布局（可按真实工程调整，但须保留完整功能）：
+- 官方 code/ 下原有数据、工具和说明保留不变。
+- code/solution.py：导出 predict(bank, arrays, checkpoint)。
+- code/mp2/：features、models、training、calibration、io 等自己的模块。
+- code/train.py：真实训练入口，默认只允许 train；参数/配置可重现。
+- code/configs/：基线、改进、最终配置。
+- code/tools/：实验执行、外部计时、资产审计、复现与质量检查脚本。
+- code/tests/：关键接口、数值标签、数据隔离、导出一致性测试。
+- artifacts/final_bundle/：最终推理所需全部资产。
+- results/：官方 prediction/score JSON、实验汇总、计时/资产报告。
+- reports/：report.pdf、报告源文件、图表与 references.bib。
+- docs/：文献、方法、内部评审、AI 披露和中文理解指南。
+- submission/：冻结清单、正式提交记录、同行评审恢复材料。
+
+关键接口示意（必须填入真实实现，交付不能保留这些占位调用）：
+def predict(bank, arrays, checkpoint):
+    bundle = load_frozen_assets(checkpoint)
+    scores = score_existing_candidates(bank, arrays['embeddings'], bundle)
+    choices = select_candidates(scores, bank, bundle)
+    return [int(i) for i in choices]
+
+这里的模型调用是“加载自己训练的轻量参数，对给定特征打分”。官方提供了固定表征，不需要重新调用 Qwen3，也不能加入 GPT、Qwen、DeepSeek、Claude 等在线裁判，不能下载新的 embedding/PRM/reranker 权重。
+
+Codex 可辅助写代码和解释方法，但不把外部 LLM 当作额外答案教师、自动标注器、合成数据来源或实际答题器。指南允许训练内增强，不等于明确允许教师 API；默认不采用这种有歧义的路线。有课程明确书面许可再调整，并完整披露。
+
+推理函数只读传入 bank、arrays 与 checkpoint；不能打开训练/验证/测试参考、查找其他 split 文件、联网、按 IDs 读取缓存、或在看到新 batch 时重训/重新 fit 标准化。诊断预测可以保存为实验记录，但正式推理不能读取这些预测作为答案。
+
+七、阶段 4：先跑通基线，再实现改进模型
+
+按优先级实际运行，不要求把所有可选方法都做完。最低应有可解释基线、轻量学习基线、至少一种有依据的改进尝试和关键消融。若复杂方法未提升，最终可保留简单模型，如实分析负结果。
+
+A. 无训练基线
+1. 固定候选 0，作为下限参照。
+2. 多数答案投票：用官方 parse_answer 对已有候选分组，不把解析失败 None 聚成“有效答案”；并列/全部无效时用预先固定的确定性规则。
+3. 可报告理论随机期望。若实际实现随机基线，固定 seed 且不依赖题目 ID，避免将一次随机幸运结果作为改进。
+
+B. 第一版学习基线
+1. 每个候选使用提供的 1024 维 embedding，训练带正则化的 logistic regression 或小型 MLP verifier；四候选共享打分器。
+2. 独立逐候选 BCE 可保留全部正例；验证时逐题选最高分。比较候选 AUC 可以辅助诊断，但正式选模主指标仍是逐题 selection accuracy。
+3. 标准化仅 fit train，保存所需统计量；不必要的变换不要增加复杂度。记录参数数目、文件大小、训练时间、预测总时间。
+
+C. 改进候选（至少实测一个，默认优先 C1+C2）
+C1. 候选关系特征：本候选 embedding、与组均值/其他候选的差、相似度；最终答案出现次数、是否多数、并列状态、可解析性等。不要使用正确标签形成推理特征。
+C2. 与目标相符的组级训练：比较 BCE 与多正例 listwise loss。
+    对同题四个分数 s_j、正例集合 P：
+    L = logsumexp(s_0,s_1,s_2,s_3) - logsumexp({s_j: j in P})。
+    实现数值稳定的 logsumexp，保持所有正例。全正例组对此 loss 梯度为零是目标的性质，需说明；可比较 BCE 或合理混合目标，混合权重只能在允许开发数据中选择。
+C3. 可解释文本/数值特征：字符/词数、终答案标记、数字数量、简单算式一致性、题目数字与解答数字关联。所有规则由 train/validation 证据与一般数学结构形成，不按具体题目补丁。
+C4. 轻量 TF-IDF/Hashing+线性模型，或有限维度的浅树模型，作为文本信息对照；词表、IDF、特征选择必须只用 train fit，检查资产大小。
+C5. 有互补错误证据时考虑 2–3 个小模型的分数融合或少量种子 ensemble。所有成员都纳入 CPU 时间和 16 MiB；没有明显收益就不融合。
+
+如果实现算式核查，只用受限解析器/AST 白名单和有限算术；限制表达式长度、深度、指数、分数规模与运行时。不能对候选文本用 eval/exec。算式正确不代表理解题意正确，不能据此宣称推理已验证。
+
+若训练用 PyTorch 而推理可用 NumPy，可导出矩阵减少启动成本；导出后验证分数误差、argmax 一致性，不能把近似导出当成天然等价。依赖成本以真实外部计时判定。
+
+八、阶段 5：评估、自动更新和停止条件
+
+先用 train 内部按题划分的固定 CV/OOF 做小范围筛选，控制对官方 validation 的反复试探。预先写明有限搜索空间、最大运行次数和总时间预算。建议先最多约 12 个主要配置，不把这个建议视为课程硬限制；有明确新假设才扩大。
+
+每个实验必须记录：experiment_id、父实验、假设、代码 commit/未提交 diff 哈希、数据版本、特征、loss、seed、超参数、训练折、训练/搜索开销、完整 validation accuracy、hard accuracy、推理时长、资产 bytes、失败日志与结论。失败结果也保留。
+
+迭代闭环：
+1. 跑初版 → 保存真实预测与官方验证分数。
+2. 分析 train/validation 错误类型与模型分歧。
+3. 每轮只提出少量明确改动，说明预期解决什么错误。
+4. 实施 → 用相同 split/协议重评 → 跑相关回归检查。
+5. 对有希望的改动做消融、多 seed 或 grouped CV 稳定性验证。
+6. 验证集更好且资源合规才纳入候选；没有提升则保留失败证据并回退。
+7. 依据预先规则选择最终方案，不能根据 test 决定模型、seed、阈值、融合权重或功能开关。
+
+建议选择规则：主要参考完整 validation selection accuracy，同时检查 hard 子集、seed/CV 稳定性和资源余量；相近结果优先简单、小资产、快且稳定的方案。不要把微小差异说成显著进步。配对 bootstrap 按题重采样给出准确率差异区间，并说明反复选模会让验证集估计乐观。
+
+必要消融至少选一个与研究假设直接相关的比较，时间允许做 2–3 个：
+- embedding-only vs 加候选关系特征；
+- 独立 BCE vs 多正例 listwise；
+- 单模型 vs 融合；
+- 显式长度/格式特征有无；
+- question+final-answer 文本分支 vs full-solution 文本分支。
+
+消融解释必须诚实：给定 embedding 编码整段推理，保留它就不能宣称“没有看到 reasoning”；真正 question+answer-only 实验必须移除这些 embedding 和所有源自 reasoning 的特征。去掉显式长度特征也不能声称 embedding 已没有长度信息。
+
+停止条件：连续两轮主要改动没有稳定收益、预定预算到达、或进入提交缓冲期时，停止探索并锁定当前最佳合规方案。不要为了尝试所有模型错过提交。若在 10 月 29 日执行，优先安排 29–30 日完成基线/迭代，31 日完成冻结/复现/提交，并留数小时处理链接、账号和报告问题；按实际时间动态压缩可选实验。
+
+九、阶段 6：可靠性与错误分析
+
+必须回答“为什么值得信任”，而不只给一个榜单数字。
+
+1. 定义可靠性事件：当前所选候选的最终数值答案是否正确。max softmax、score margin、entropy 只是可用信号，不能未经验证当作正确概率。
+2. 如需训练融合器、Platt/温度/其他校准器，只使用 train 内按题产生的 OOF 预测或 train 内独立留出子集拟合。上游预处理也在各折内 fit；不要把 validation 变成校准器的训练集。
+3. 在独立于校准拟合的 validation 上报告：可靠性图、Brier score、声明 bin 规则的 ECE，以及若干置信度分桶准确率和样本数。必要时使用 cross-fitting；阐明样本量与选择偏差。
+4. 画 risk–coverage/accuracy–coverage 曲线说明低置信度题的风险。正式输出仍必须回答每一题，不能弃答或通过删题提高 accuracy。
+5. 对比方法一致/分歧组、答案一致/分歧组、可解析/解析异常组、长度/候选正确数等开发子集。给出子集分母，避免只报最好看的局部结果。
+6. 从 train/validation 选取有代表性的失败案例：多数同错、算术正确但忽略条件、答案偶然正确、格式造成解析失败等。明确人工归因是解释性分析，不是额外过程监督标签。
+7. 报告准确率—时间—资产大小的权衡，解释额外计算是否值得。
+
+十、阶段 7：接口、资源和数据隔离审计
+
+所有必要检查先在 train/validation/人工构造输入完成。测试集只在冻结后运行正式评估。
+
+关键验收：
+- output 类型、长度、范围和顺序正确；无 NaN/Inf；必要的输入异常清晰报错。
+- 用不同 N、打乱题目顺序、改变 ID 后，同题内容的预测不因 ID 改变。局部直接接口测试无需修改官方原始文件。
+- 候选置换测试同时置换文本、embedding 并正确映射索引，检查组内比较逻辑；固定候选 0/并列规则的敏感性如实报告，不能误把它解释为普遍置换不变。
+- 在不提供任何参考文件的隔离目录/环境，直接调用 predict 仍可运行；正式 scorer 则独立获取参考。检查代码是否存在读取 reference、联网、加载缓存答案、依据 test ID 分支的路径。
+- 模拟未见 audit 输入：相同字段契约、不同题数/ID，不读 audit 参考、不重新训练、不硬编码 467。
+- 标准化、PCA、词表/IDF、融合器、校准器都能追溯到 train；无 validation/test fit。
+- MLP/导出实现一致性，含必要的数值边界与 tie 检查。
+- 自有训练/推理脚本参数缺失时清楚失败，不能静默用错误 checkpoint。
+- 官方 benchmark 文件与初始哈希一致。自己的 tests 不改评分器判定。
+
+资源检查：
+1. 编写资产审计脚本：递归清点真正推理使用文件，统计未压缩容器成员、数组实际字节、配置与外部路径依赖；列出 SHA-256。不能只用 ZIP/.npz 的压缩文件大小。检查源码中是否藏参数。
+2. 编写跨平台外部计时脚本，用同一父进程 perf_counter 包围两个顺序启动的 subprocess.run：官方 predict.py，再官方 score_predictions.py。计入启动与所有 I/O，分别记录子进程返回码和总 wall time。任何失败则运行失败，不输出“通过”。
+3. 线程上限在 import 科学计算库前设置。可先用单线程保守实现，再在最多四线程合计内优化；设置 OMP/OpenBLAS/MKL/NumExpr 以及实际框架线程，禁止嵌套线程池/多进程叠加超额。环境变量各设 4 并不自动证明合计只有 4。
+4. 用 threadpool 信息与实际运行配置审计。进程顺序运行；所有模型成本计入；不要把热进程微基准当官方完整运行。
+5. 在完整 validation 上先测，记录 CPU 型号、OS、RAM、Python、库版本、线程配置。最终冻结后在完整 test 正式计时。可重复运行同一冻结版本检查复现稳定性，不能据此选 test 最优版本或 cherry-pick 最短一次。
+6. 本地非参考机器的时间只标“本地测量”，不能断言参考机必定达标。尽可能留余量；压缩源码、隐藏资产或删掉 scorer 时间不能作为优化。
+
+十一、阶段 8：冻结方法与官方完整测试
+
+先建立 pre-test freeze manifest，记录：最终 solution 源码 commit、配置、训练 seed、训练数据版本、所有资产 SHA-256、资产未压缩 bytes、推理依赖、校准/融合方案、验证集结果和选择理由。确保训练只用了 train，不在最后偷偷合并 validation 重训。
+
+所有模型选择完成后，才能运行完整 test。开发/文献/实现代理不接触 test 标签；只让独立评分进程读取官方测试参考。不要逐题读取 test 参考或根据 test 错误生成规则。测试分数不理想也不回到调参。
+
+下面是官方命令形式，solution.py 与最终 bundle 必须已经真实存在。命令从 code/ 运行，线程配置由外部评估脚本统一设置，输出目录按实际工程调整：
+
+python predict.py --method solution.py --checkpoint ../artifacts/final_bundle --split validation --output ../results/validation-predictions.json
+python score_predictions.py --split validation --predictions ../results/validation-predictions.json --output ../results/validation-score.json
+
+# 仅在预先冻结之后：
+python predict.py --method solution.py --checkpoint ../artifacts/final_bundle --split test --output ../results/test-predictions.json
+python score_predictions.py --split test --predictions ../results/test-predictions.json --output ../results/test-score.json
+
+训练自由方法可不传 checkpoint；但正式最终提交仍提供含明确规则的 configuration 链接。
+
+读取官方 results/test-score.json 的 accuracy，原样记录百分比，不把 0.86 当 0.86%，不把 validation score/候选分类准确率当提交分数，不改 JSON 伪造成绩。
+
+冻结后若发现真正打包/运行 bug，记录发现方式、修复差异与对预测的影响。允许做不改变算法/权重的路径、文档修复并重新验证同一方法；涉及选择逻辑/权重或预测改变时，不用已见 test 分数为修复背书，暂停新的模型选择，明确污染风险和需课程澄清之处。保留原版本与全部记录。
+
+十二、阶段 9：最终报告、复现材料与理解检查
+
+实际生成不超过 10 页的 report.pdf，包含参考文献在内保守控制总页数。保留可编辑源文件；检查实际 PDF 页数、图表、公式、字体、边距、截断和可读性，不能只交 Markdown 声称“十页以内”。
+
+建议结构：
+1. 问题定义、评分语义与研究问题；
+2. 数据和合规协议、baseline；
+3. 模型、特征、loss、训练和选择过程；
+4. 实验表：初版、改进、消融、稳定性；
+5. 可靠性/置信度与验证失败案例；
+6. 训练成本、CPU 时间、推理资产及权衡；
+7. 最终冻结配置和官方 test 结果、局限；
+8. 参考文献、AI/复用披露。
+
+表格和图必须由真实日志自动生成或可追溯。区分 validation 的多模型比较与 final test 的冻结结果；不要填未运行方法的 test 分数。资源时间若只有本地测量要写清硬件差异。不得把最终答案正确率包装为“推理链已被证明正确”。
+
+README 必须让陌生人按顺序成功操作：
+- 指定的 Python/系统与依赖安装；
+- 获取该冻结代码、官方数据、匹配 checkpoint/config；
+- 无需重训的官方完整评估命令；
+- 从头训练指令和实际配置/seed；
+- 资产哈希与大小、记录的分数和本地计时；
+- 常见路径/依赖问题与离线要求；
+- AI 使用、引用、原始数据许可证。
+
+AI_DISCLOSURE.md 写明工具/日期/实际协助范围、代码/文本哪些来自 AI、我进行了哪些理解与检查。不能替我声称已人工核验尚未核验的内容。
+
+UNDERSTAND_ZH.md 用中文讲明：为什么是 selection 而非生成，多正例标签，核心模型/公式，关键函数，防泄漏措施，最重要实验、失败案例、资源限制；给 6–8 个自查问题与答案，帮助我能解释自己的作品。
+
+十三、阶段 10：自己的仓库审查与独立复现
+
+此阶段是项目内部质量检查，与课程提交、截止后同行评审不同。
+
+1. 在我自己的作业仓库建立 feature 分支，合理拆分 commit，推送代码和小型资产；大型非必要中间文件不提交。保留可重现的数据下载/校验流程与原始归属，不意外上传密钥、.env、个人目录或其他作业。
+2. 创建 PR 到自己仓库的主分支。PR 描述包含方法和实际结果、测试、资源、已知限制、报告位置；不得向官方作业仓库发无关解决方案 PR。
+3. 由独立代理/独立审查阶段检查：数据泄漏、标签错误、假分数、资产缺失、离线失败、超限、不可复现、引用/AI披露缺失。发现问题写明文件位置、影响和修复要求。
+4. 修复所有影响合规、正确性和复现的阻塞问题，再审查。只修复有证据的问题；不为凑次数无限循环。
+5. 在全新目录和全新虚拟环境，使用准备发布的精确版本与 checkpoint，从 README 命令复现；不能偷偷依赖旧环境缓存、工作区绝对路径、没上传的模型或训练产物。只运行同一冻结方法，不能比较多个 test 模型。
+6. 保存 CODE_REVIEW.md 和 REPRODUCTION.md：审查者是 AI/人工、命令、环境、版本、SHA-256、真实官方分数、时间、失败/修复。代码审查“通过”不等于教师认证或 GitHub 他人 APPROVED，不虚构第二账号批准自己 PR。
+7. 权限允许且检查全部通过后合并自己的 PR；不绕过分支保护。不能自动合并时保留可用的精确提交链接与明确阻塞，不把 merge 本身当作课程必须项。
+8. 以完整 commit SHA 固定最终代码，发布匹配的 checkpoint/configuration 并记录资产 SHA-256；tag/release 只作辅助定位，不能只依赖可移动的 tag 或 main。记录 release/tag 与 commit 对应关系。源码选择逻辑/资产内容须与 pre-test freeze 一致；最后可追加报告与结果记录，解释对应关系。训练代码和推理权重必须一一匹配。
+9. 从未登录视角验证代码、报告和 checkpoint 可下载；校验下载得到资产的 SHA-256，排除指向本机路径、私人网盘、需要权限链接和失效临时链接。
+
+CI 若配置，主要运行合成样例/开发数据检查和资产检查；不在每次开发 push 上自动跑 test 并反馈调参。不要把每次 CI 都跑 test 当成项目可靠性的必要条件。
+
+十四、阶段 11：正式提交到课程网站与 GitHub
+
+最终 score + code link + checkpoint/configuration link 必须在 2026-10-31 23:59 UTC+8 前完成。网站可能提供截止后补链接界面，但不能据此把官方要求的最终链接拖到截止后。
+
+目前已核实的机制（执行时再次检查真实页面）：
+- 提交入口：https://xudongwu-0.github.io/courses/dase7506/mp2/
+- 课程成绩 Issue 的目标仓库：xudongwu-0/xudongwu-0.github.io。
+- 不是我的 solution 仓库，也不是 xudongwu-0/DASE7506-MP2。
+- 网站提交 schema 为 dase7506/submission-v1，网站协议为 7506-submissions-v1，project 为 mp2；不要与数据评估协议混淆。
+- 网站会加密 code/checkpoint 资产链接，学号、分数和 GitHub 账号仍公开；链接加密不意味着我的公开仓库变成私有。
+
+操作步骤：
+1. 确认本次明确提供的 STUDENT_ID、实际登录的 GitHub 个人账号、官方 test accuracy、冻结 code URL 与匹配 checkpoint/config URL。不要占位学号提交。
+2. 填写官方表单，检查真实分数与链接。仅在当前声明真实且符合授权时确认本人结果声明。
+3. 点击准备提交，再打开 Submit on GitHub。保持网站生成的 JSON 和加密 payload 原样，不手写普通 Issue 冒充协议，不用未核实 schema 字段替代官方表单。
+4. 实际创建 GitHub Issue 前再次核对 UTC+8 当前时间；已过截止则明确标注逾期/未按时完成，只按网站仍可用的流程处理，不能把补链接入口当新分数入口。实际创建 GitHub Issue。只生成 URL、打开预填页面、推送代码、合并 PR 均不算提交完成。
+5. 检查实际 Issue 作者为所需个人账号；当前解析器要求 User 类型，不能用 Bot 作者替代自己的提交。
+6. 保存 Issue URL、编号、作者、学号、创建时间、实际 score、代码 SHA、checkpoint SHA-256、两个链接和官方 score JSON 到 submission/SUBMISSION_RECORD.md。
+7. 检查课程记录/榜单识别情况；有快照延迟时记录“已创建 Issue，等待榜单同步”，不要因短暂延迟连发重复 Issue。Self-reported 不等于 verified，Links received 不等于复现通过。
+8. 更新使用同一账号与学号，遵循网站当时的更新机制。不能以多次测试调参的方式追逐最佳 test 分数；早期占位分数同样必须来自真实合规的冻结评估。
+
+如果浏览器/插件不足以完成最后点击或身份缺失，先完成代码、报告、checkpoint、公开链接和可审查的表单材料，再准确告诉我剩哪一步、在哪个页面、为什么需要我。状态保持“未正式提交/待本人操作”，不得声称已经交作业。没有我额外明确要求，不同时向老师发邮件。
+
+十五、阶段 12：截止后同行评审与仓库复现审查
+
+此步骤依赖教师手动发布作品链接和冻结成绩。七天从实际发布开始，不假定固定为 11 月 1 日至 7 日。当前未开放时，不能声称已完成未来评审，也不能为了等待而阻塞截止前提交。
+
+当前就要完成的准备：
+- 生成 PEER_REVIEW_CHECKLIST.md、peer_review/run_reproduction.py、peer_review/report_template.md。
+- 生成 PEER_REVIEW_RESUME.txt，写明自己的提交、评审入口、如何确认 published_at/review_ends_at、如何恢复此阶段。
+- 将 PROJECT_STATE.md 状态设为 submitted_waiting_peer_release，仅在正式提交已证实时使用该状态。
+- 没有已建立的调度任务时，不承诺“之后自动执行”。若环境支持且我明确授权未来自动运行，按实际调度能力建立任务并验证，否则提供我之后能直接发送的恢复指令。
+
+评审开放后执行：
+1. 读取真实发布状态与截止时间，选择一份他人的正式有效提交；记录目标 submission number、原成绩、冻结 code commit 和 checkpoint，不能拿对方更新后的 main 或重新训练权重替代。
+2. 在无个人凭据的隔离环境下载并先审查安装脚本/依赖/序列化格式。运行不可信代码时不提供我的 token、SSH key 或私有文件，不盲目执行危险安装命令。
+3. 按对方 README 安装，按同一官方完整 test evaluator 用匹配 checkpoint 复现，不训练替代模型；记录全部命令、硬件、依赖、hash、stdout/stderr、退出状态和官方分数。
+4. 对比声称分数与真实复现分数，检查 split、模型版本、配置、解析器、环境和 asset 完整性。安装失败不等于 0 分，小数舍入或数值差异不自动构成造假。
+5. 写事实性评审：复现成功/存在阻塞，测得数值与差异，最小复现步骤，证据链接，可能原因和未解决问题。不能凭猜测指控作弊或保证奖励。
+6. 有真实 reproduced score 后，通过 MP2 网站 Peer Review Report 提交目标 submission number 与 reproduced score；保留页面生成 payload 并实际创建评审 Issue。当前 schema 为 dase7506/peer-review-v1，按实时页面为准。
+7. 没跑出有效分数时只保留阻塞报告，不捏造 reproduced score 以通过表单；需要老师处理时给我可发送的说明，不擅自邮件联系。
+8. 保存 peer-review Issue URL/编号和证据。若有人质疑我的提交，用冻结版本与日志复现答复；不偷偷替换原 checkpoint 或改写历史分数。任何修订都单独标注、保留原提交，以教师决定为准。
+
+该阶段属于本工作流要求的延伸任务，不要把“必须评审多少份”或“完成就奖励”说成官方保证。至少完成一份可运行作品的真实复现评审，若外部阻塞无法完成则准确列明。
+
+十六、交付验收清单与最终汇报格式
+
+截止前完成标准：
+[ ] 规则、官方版本、环境、数据完整性有记录。
+[ ] 真实可运行代码和训练入口，无关键 TODO/NotImplementedError。
+[ ] 基线、学习方法、改进尝试、关键消融有实际日志。
+[ ] 所有拟合仅使用 train；validation 用于开发；test 冻结后评分。
+[ ] 处理多正确候选，标签与官方解析一致。
+[ ] 置信度/可靠性和失败分析有证据，不夸大因果结论。
+[ ] 全部推理资产未压缩不超过 16 MiB，有哈希清单。
+[ ] 完整预测+评分外部计时、四线程审计和硬件记录；参考机资格不虚构。
+[ ] 接口满足新 bank、无参考、离线运行，不用 ID 或答案缓存。
+[ ] 最终 report.pdf 实际不超过 10 页，图表可读。
+[ ] README 精确、依赖固定、AI/复用披露与许可证完整。
+[ ] 独立审查及全新环境 checkpoint 复现通过，不需要重训。
+[ ] 公开冻结代码与匹配 checkpoint/configuration 链接可访问。
+[ ] 官方 score JSON 与提交分数一致。
+[ ] 正式课程 Issue 实际创建且作者/学号正确，保留真实证据。
+[ ] 同行评审准备与恢复指令完整；开放后再完成真实评审。
+
+最后用中文汇报：
+1. 实际完成到哪个阶段，哪些依赖未来事件/用户信息。
+2. 最终方法及选择依据，初版/改进的真实 validation 结果。
+3. 冻结 test accuracy、correct/n、官方结果文件；未运行就明确写未运行。
+4. 模型资产 bytes/MiB、本地完整 CPU wall time、线程/硬件、资源限制风险。
+5. 代码仓库、精确 commit、PR、checkpoint、报告、复现说明和提交 Issue 链接。
+6. 已解决问题、负结果、仍存在的局限，不虚构“全部通过”。
+7. 同行评审状态、开放信息与下一步恢复指令。
+
+现在开始执行阶段 0，不要停在计划。可以先用简短文字说明执行顺序，然后运行检查。仅对影响正确身份、已有文件安全或确实不可推断的输入提出必要问题；其余工作持续推进。每个阶段留下可复现的证据，并在中断时保存足够状态，恢复后从下一未完成项继续，不能因为上下文重置重复测试选模。
+
+==================== 执行提示词结束 ====================
+
+附：中断后可直接发给 Codex 的恢复提示词
+
+请继续执行 DASE7506_MP2_Codex_Workflow.txt。先读取当前项目的 PROJECT_STATE.md、EXPERIMENT_LOG.jsonl、DECISIONS.md、requirements_matrix.md、BLOCKERS.md 及 submission/ 冻结/提交记录，核对当前 Git 状态和 Asia/Shanghai 时间。保留已经完成的工作、数据隔离规则和冻结版本，不重新做已完成实验，不使用已见 test 结果调参。从下一未完成且当前可执行的阶段继续。未开放的同行评审保持等待状态；若已开放，依据真实 published_at/review_ends_at 执行阶段 12。任何“已提交”必须有真实课程 Issue 作为证据。
+
+附：来源与核验范围
+
+本提示词通过 GitHub 只读核对了官方 GUIDE、code README、推理/评分/解析/校验代码、数据 manifest，以及以下课程网站源码：
+- https://github.com/xudongwu-0/xudongwu-0.github.io/blob/main/courses/dase7506/mp2.mjs
+- https://github.com/xudongwu-0/xudongwu-0.github.io/blob/main/courses/dase7506/arena.mjs
+- https://github.com/xudongwu-0/xudongwu-0.github.io/blob/main/courses/dase7506/projects.mjs
+
+论文链接已核对其原始摘要页和书目信息。实际执行研究阶段仍需阅读与采用方法相关的正文。本次提示词制作没有训练模型、分析测试参考或创建课程提交 Issue。
