@@ -1,0 +1,11 @@
+{
+  "method": "POST",
+  "path": "/repos/liuqichang0305/dase7506-mp2-solution/pulls",
+  "data": {
+    "base": "main",
+    "head": "feature/reliable-verifier",
+    "draft": true,
+    "title": "Add frozen MP2 verifier, experiments and seven-page report",
+    "body": "Implements a CPU-only candidate selector using train-fitted relation features and multi-positive listwise loss. A prespecified train-only screen selected family candidates; the final method scored 724/798 (90.7268%) on validation and, after source/asset freeze, 348/467 (74.51820128479658%) on the official complete test. No test-driven tuning was performed.\n\nInference assets total 51,923 bytes. Initial local fresh prediction plus independent scoring took 0.705959 seconds on an i9-12900H; reference-machine eligibility is not claimed. Eight numerical/boundary tests, isolated synthetic/validation contract checks, and unchanged official hashes passed. Train-only OOF calibration and negative/nonconverged experiment outcomes are documented.\n\nThe report is reports/report.pdf (7 pages), with editable source and rendering evidence. docs/CODE_REVIEW.md records AI internal review, not human approval. A clean public-checkout reproduction is in progress and must finish before merge. Subsequent publication records preserve frozen source commit 8602992842d444524ab4148991da2f1dc88f316f and matching assets."
+  }
+}

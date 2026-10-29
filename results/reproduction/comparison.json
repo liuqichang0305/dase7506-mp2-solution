@@ -1,0 +1,26 @@
+{
+  "published_commit": "92c7240c5a4710054de1363d23e2f11f81d33b72",
+  "source_commit": "8602992842d444524ab4148991da2f1dc88f316f",
+  "identical_ids": true,
+  "identical_choices": true,
+  "choice_mismatches": 0,
+  "original_score": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 348,
+    "n": 467,
+    "accuracy": 74.51820128479658
+  },
+  "reproduced_score": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 348,
+    "n": 467,
+    "accuracy": 74.51820128479658
+  },
+  "identical_score": true,
+  "tracked_files_unchanged": true,
+  "test_reproduction_runs": 1,
+  "training_runs": 0,
+  "status": "passed"
+}

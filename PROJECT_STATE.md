@@ -2,7 +2,7 @@
 
 Updated: 2026-10-29 (Asia/Shanghai). Student: 3036900957. GitHub: liuqichang0305.
 
-- Active: Stages 9-11, final report, clean reproduction and publication. Stages 0-8 complete.
+- Active: Stage 11, formal submission. Stages 0-10 complete except PR merge in progress.
 - Upstream main commit verified through GitHub API: bb801f4f2e7629d270df765ab12c333b2dc616bb (unchanged from supplied workflow).
 - Workspace: C:/AAmy work information/7503vision/dase7506-mp2-solution. Isolated under the granted writable root.
 - Python 3.12.0 virtual environment created at .venv.
@@ -16,6 +16,10 @@ Updated: 2026-10-29 (Asia/Shanghai). Student: 3036900957. GitHub: liuqichang0305
 
 Completed: official checker passed; 6 inner-train screens, 3 full fits, 3 train-only OOF fits; validation comparisons and calibration; independent AI internal review, 8 unit tests, isolated synthetic/validation interfaces, original official hashes, 51,923-byte asset audit.
 
-Next: finalize/render PDF, publish exact prepared commit, clone it into new directory/environment for independent checkpoint reproduction, finalize PR and anonymous links, run official form generator and create course Issue. Peer review preparation exists; actual release still absent. No automatic future task established.
+Report complete: reports/report.pdf, 7 pages, all rendered and AI visually checked. Independent anonymous public clone at 92c7240c5a4710054de1363d23e2f11f81d33b72 into a new Python 3.12 NumPy-only environment reproduced 348/467 with all 467 choices identical, no retraining, 1.1398808s local wall time. Code, PDF and both model assets were anonymously downloaded and hash-verified. See docs/REPRODUCTION.md.
+
+PR: https://github.com/liuqichang0305/dase7506-mp2-solution/pull/1 (personal account; internal AI review only).
+
+Next: merge reviewed PR, verify final commit source/assets match the reproduced version, run unchanged official form handler locally and create actual course Issue using generated payload. Peer review preparation exists; actual release still absent. No automatic future task established.
 
 Resume: read this file, DECISIONS.md, BLOCKERS.md, EXPERIMENT_LOG.jsonl, requirements_matrix.md and submission/ before running anything. Never repeat model selection after test is frozen/evaluated.

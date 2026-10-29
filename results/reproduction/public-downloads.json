@@ -1,0 +1,38 @@
+[
+  {
+    "path": "code/solution.py",
+    "url": "https://raw.githubusercontent.com/liuqichang0305/dase7506-mp2-solution/92c7240c5a4710054de1363d23e2f11f81d33b72/code/solution.py",
+    "http_status": 200,
+    "bytes": 652,
+    "sha256": "cb40cd5a2912343dfa5eab8e9865b37c0032e1520d5a2d036d415b9821cbb2a6",
+    "matches_public_clone": true,
+    "authentication": "No Authorization header, cookies, or credential helper"
+  },
+  {
+    "path": "reports/report.pdf",
+    "url": "https://raw.githubusercontent.com/liuqichang0305/dase7506-mp2-solution/92c7240c5a4710054de1363d23e2f11f81d33b72/reports/report.pdf",
+    "http_status": 200,
+    "bytes": 126314,
+    "sha256": "fb4a0253f227a944363bf84609c95479d5f64d85911d0236d5c5435f0227cf88",
+    "matches_public_clone": true,
+    "authentication": "No Authorization header, cookies, or credential helper"
+  },
+  {
+    "path": "artifacts/final_bundle/config.json",
+    "url": "https://raw.githubusercontent.com/liuqichang0305/dase7506-mp2-solution/92c7240c5a4710054de1363d23e2f11f81d33b72/artifacts/final_bundle/config.json",
+    "http_status": 200,
+    "bytes": 249,
+    "sha256": "24473c3b95b9472b5d844b795edf86c7902d21fe7351604cc680d93d7ead0703",
+    "matches_public_clone": true,
+    "authentication": "No Authorization header, cookies, or credential helper"
+  },
+  {
+    "path": "artifacts/final_bundle/weights.npz",
+    "url": "https://raw.githubusercontent.com/liuqichang0305/dase7506-mp2-solution/92c7240c5a4710054de1363d23e2f11f81d33b72/artifacts/final_bundle/weights.npz",
+    "http_status": 200,
+    "bytes": 51674,
+    "sha256": "a785f4a48e2d5708aec9fec29c776e9ce1b7fea1832d064e95b25c926626d462",
+    "matches_public_clone": true,
+    "authentication": "No Authorization header, cookies, or credential helper"
+  }
+]

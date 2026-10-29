@@ -1,0 +1,9 @@
+{
+  "command": [
+    "git",
+    "checkout",
+    "--detach",
+    "92c7240c5a4710054de1363d23e2f11f81d33b72"
+  ],
+  "returncode": 0
+}
