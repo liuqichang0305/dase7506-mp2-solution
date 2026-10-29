@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "predict.py",
+    "--method",
+    "solution.py",
+    "--checkpoint",
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\experiments\\relation-bce-l2-0.1",
+    "--split",
+    "validation",
+    "--output",
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\development\\relation-bce-l2-0.1\\predictions.json"
+  ],
+  "returncode": 0
+}

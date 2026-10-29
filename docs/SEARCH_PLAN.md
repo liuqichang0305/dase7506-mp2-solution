@@ -1,0 +1,11 @@
+# Prespecified development plan
+
+Written before loading development outcomes on 2026-10-29. No test inputs or references are opened by this work.
+
+Use seed 3036900957 for a single random, question-grouped 80/20 split of official training questions. All four candidates remain together. Fit every standardizer on the fitting part only. Screen exactly six linear models: embedding-only BCE, embedding plus candidate-relative absolute deviations / agreement / format features BCE, and the same enriched features with multi-positive listwise loss; each with L2 coefficient 0.01 or 0.1. Optimize with deterministic L-BFGS, maximum 200 iterations. No candidate order or question ID features.
+
+Select the best L2 per family using inner-holdout selection accuracy; ties favor larger regularization. Fit those three families on all train and evaluate official validation, plus fixed candidate 0 and majority parsed answer. Validation-hard is defined in advance as at least two distinct non-None official parsed candidate answers. The full validation result is primary. Select highest validation accuracy; ties favor fewer feature dimensions, then BCE, then larger regularization. Report paired question bootstrap intervals, avoiding claims of significance from small differences.
+
+Run three question-grouped folds for the selected family to measure train-only stability and obtain out-of-fold correctness/confidence signals. Fit a small logistic calibrator on these OOF signals only. Calibration never changes the chosen candidate. Final selector fits all and only official train; official validation never fits weights/statistics/calibration. Preserve all configuration outcomes, including failures. Maximum six screen fits + three full fits + three OOF fits; 12 main selector fits, no ensemble, two-hour hard training budget. Stop at that budget and report incomplete work. Do not expand search based on validation or test.
+
+Inference assets contain uncompressed NumPy arrays and JSON configuration only. Runtime uses NumPy and the unchanged official parser. Baseline ties select the first candidate; learned ties also select the first maximum. Scores are not assumed to be correctness probabilities. Calibration targets whether the selected final answer is correct, not a mutually exclusive four-class event.

@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "score_predictions.py",
+    "--split",
+    "validation",
+    "--predictions",
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\development\\embedding-bce-l2-0.01\\predictions.json",
+    "--output",
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\development\\embedding-bce-l2-0.01\\score.json"
+  ],
+  "returncode": 0
+}

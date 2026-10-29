@@ -1,0 +1,37 @@
+{
+  "isolation": "Copied method/package/parser/checkpoint only; no official data or references; Python audit hook rejects external file access, networking, subprocesses, writes.",
+  "checks": {
+    "types_length_range": true,
+    "different_n_and_batch_independence": true,
+    "id_independence": true,
+    "question_order": true,
+    "determinism": true,
+    "reject_nonfinite": true,
+    "reject_wrong_shape": true,
+    "reject_missing_bundle": true,
+    "no_forbidden_access": true
+  },
+  "candidate_permutation": {
+    "n": 37,
+    "mapped_choice_mismatches": 0,
+    "score_equivariance": true,
+    "tie_rows": 0,
+    "note": "Lowest-index tie breaking can change selected content under a candidate permutation."
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+      "version": "0.3.34.106.0",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ],
+  "configured_pool_threads_total": 1,
+  "status": "passed",
+  "input_source": "validation",
+  "reference_files_read": false
+}

@@ -2,3 +2,4 @@
 *.npz binary
 *.pdf binary
 *.png binary
+artifacts/** -text

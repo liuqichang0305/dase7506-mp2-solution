@@ -1,0 +1,50 @@
+[
+  {
+    "name": "embedding-bce-l2-0.01",
+    "features": "embedding",
+    "loss": "bce",
+    "l2": 0.01,
+    "maxiter": 200,
+    "seed": 3036900957
+  },
+  {
+    "name": "embedding-bce-l2-0.1",
+    "features": "embedding",
+    "loss": "bce",
+    "l2": 0.1,
+    "maxiter": 200,
+    "seed": 3036900957
+  },
+  {
+    "name": "relation-bce-l2-0.01",
+    "features": "relation",
+    "loss": "bce",
+    "l2": 0.01,
+    "maxiter": 200,
+    "seed": 3036900957
+  },
+  {
+    "name": "relation-bce-l2-0.1",
+    "features": "relation",
+    "loss": "bce",
+    "l2": 0.1,
+    "maxiter": 200,
+    "seed": 3036900957
+  },
+  {
+    "name": "relation-listwise-l2-0.01",
+    "features": "relation",
+    "loss": "listwise",
+    "l2": 0.01,
+    "maxiter": 200,
+    "seed": 3036900957
+  },
+  {
+    "name": "relation-listwise-l2-0.1",
+    "features": "relation",
+    "loss": "listwise",
+    "l2": 0.1,
+    "maxiter": 200,
+    "seed": 3036900957
+  }
+]

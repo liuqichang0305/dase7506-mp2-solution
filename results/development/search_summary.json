@@ -1,0 +1,422 @@
+{
+  "screens": [
+    {
+      "experiment_id": "embedding-bce-l2-0.01",
+      "parent_experiment": null,
+      "phase": "train_inner_screen",
+      "config": {
+        "name": "embedding-bce-l2-0.01",
+        "features": "embedding",
+        "loss": "bce",
+        "l2": 0.01,
+        "maxiter": 200,
+        "seed": 3036900957
+      },
+      "hypothesis": "H1 shared verifier",
+      "fitting_split": "train 80 percent grouped",
+      "selection_split": "train 20 percent grouped",
+      "training_seconds": 2.821168399999806,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 111,
+      "objective": 0.3909215404401503,
+      "max_gradient": 2.120770045465725e-05,
+      "train_questions": 3804,
+      "parameters": 1025,
+      "correct": 855,
+      "n": 951,
+      "accuracy": 89.90536277602523,
+      "hard_correct": 336,
+      "hard_n": 430,
+      "hard_accuracy": 78.13953488372093
+    },
+    {
+      "experiment_id": "embedding-bce-l2-0.1",
+      "parent_experiment": null,
+      "phase": "train_inner_screen",
+      "config": {
+        "name": "embedding-bce-l2-0.1",
+        "features": "embedding",
+        "loss": "bce",
+        "l2": 0.1,
+        "maxiter": 200,
+        "seed": 3036900957
+      },
+      "hypothesis": "H1 shared verifier",
+      "fitting_split": "train 80 percent grouped",
+      "selection_split": "train 20 percent grouped",
+      "training_seconds": 1.4034206000001177,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 46,
+      "objective": 0.43951502881911286,
+      "max_gradient": 4.130568212269855e-06,
+      "train_questions": 3804,
+      "parameters": 1025,
+      "correct": 847,
+      "n": 951,
+      "accuracy": 89.06414300736067,
+      "hard_correct": 328,
+      "hard_n": 430,
+      "hard_accuracy": 76.27906976744187
+    },
+    {
+      "experiment_id": "relation-bce-l2-0.01",
+      "parent_experiment": null,
+      "phase": "train_inner_screen",
+      "config": {
+        "name": "relation-bce-l2-0.01",
+        "features": "relation",
+        "loss": "bce",
+        "l2": 0.01,
+        "maxiter": 200,
+        "seed": 3036900957
+      },
+      "hypothesis": "H2/H3 relative evidence and objective",
+      "fitting_split": "train 80 percent grouped",
+      "selection_split": "train 20 percent grouped",
+      "training_seconds": 5.468573500000275,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 107,
+      "objective": 0.19672489058595838,
+      "max_gradient": 9.46620268174169e-06,
+      "train_questions": 3804,
+      "parameters": 2065,
+      "correct": 834,
+      "n": 951,
+      "accuracy": 87.69716088328076,
+      "hard_correct": 313,
+      "hard_n": 430,
+      "hard_accuracy": 72.79069767441861
+    },
+    {
+      "experiment_id": "relation-bce-l2-0.1",
+      "parent_experiment": null,
+      "phase": "train_inner_screen",
+      "config": {
+        "name": "relation-bce-l2-0.1",
+        "features": "relation",
+        "loss": "bce",
+        "l2": 0.1,
+        "maxiter": 200,
+        "seed": 3036900957
+      },
+      "hypothesis": "H2/H3 relative evidence and objective",
+      "fitting_split": "train 80 percent grouped",
+      "selection_split": "train 20 percent grouped",
+      "training_seconds": 2.9211471000003257,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 49,
+      "objective": 0.2833774820410768,
+      "max_gradient": 5.216259565283057e-06,
+      "train_questions": 3804,
+      "parameters": 2065,
+      "correct": 837,
+      "n": 951,
+      "accuracy": 88.01261829652996,
+      "hard_correct": 316,
+      "hard_n": 430,
+      "hard_accuracy": 73.48837209302326
+    },
+    {
+      "experiment_id": "relation-listwise-l2-0.01",
+      "parent_experiment": null,
+      "phase": "train_inner_screen",
+      "config": {
+        "name": "relation-listwise-l2-0.01",
+        "features": "relation",
+        "loss": "listwise",
+        "l2": 0.01,
+        "maxiter": 200,
+        "seed": 3036900957
+      },
+      "hypothesis": "H2/H3 relative evidence and objective",
+      "fitting_split": "train 80 percent grouped",
+      "selection_split": "train 20 percent grouped",
+      "training_seconds": 10.561511800000062,
+      "optimizer_success": false,
+      "optimizer_message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "iterations": 200,
+      "objective": 0.09628092542298791,
+      "max_gradient": 1.8890983687524588e-05,
+      "train_questions": 3804,
+      "parameters": 2065,
+      "correct": 818,
+      "n": 951,
+      "accuracy": 86.01472134595163,
+      "hard_correct": 299,
+      "hard_n": 430,
+      "hard_accuracy": 69.53488372093022
+    },
+    {
+      "experiment_id": "relation-listwise-l2-0.1",
+      "parent_experiment": null,
+      "phase": "train_inner_screen",
+      "config": {
+        "name": "relation-listwise-l2-0.1",
+        "features": "relation",
+        "loss": "listwise",
+        "l2": 0.1,
+        "maxiter": 200,
+        "seed": 3036900957
+      },
+      "hypothesis": "H2/H3 relative evidence and objective",
+      "fitting_split": "train 80 percent grouped",
+      "selection_split": "train 20 percent grouped",
+      "training_seconds": 2.529939800000193,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 38,
+      "objective": 0.19999649045518358,
+      "max_gradient": 5.041102321021998e-06,
+      "train_questions": 3804,
+      "parameters": 2065,
+      "correct": 835,
+      "n": 951,
+      "accuracy": 87.80231335436383,
+      "hard_correct": 314,
+      "hard_n": 430,
+      "hard_accuracy": 73.0232558139535
+    }
+  ],
+  "validation": [
+    {
+      "experiment_id": "fixed0",
+      "phase": "validation_baseline",
+      "correct": 624,
+      "n": 798,
+      "accuracy": 78.19548872180451,
+      "hard_correct": 195,
+      "hard_n": 355,
+      "hard_accuracy": 54.929577464788736
+    },
+    {
+      "experiment_id": "majority",
+      "phase": "validation_baseline",
+      "correct": 688,
+      "n": 798,
+      "accuracy": 86.21553884711778,
+      "hard_correct": 245,
+      "hard_n": 355,
+      "hard_accuracy": 69.01408450704226
+    },
+    {
+      "experiment_id": "embedding-bce-l2-0.01",
+      "phase": "full_train_validation",
+      "config": {
+        "name": "embedding-bce-l2-0.01",
+        "features": "embedding",
+        "loss": "bce",
+        "l2": 0.01,
+        "maxiter": 200,
+        "seed": 3036900957
+      },
+      "training_seconds": 3.335432100000162,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 113,
+      "objective": 0.39899499830216173,
+      "max_gradient": 5.020051863132606e-06,
+      "train_questions": 4755,
+      "parameters": 1025,
+      "correct": 715,
+      "n": 798,
+      "accuracy": 89.59899749373433,
+      "hard_correct": 274,
+      "hard_n": 355,
+      "hard_accuracy": 77.1830985915493,
+      "official_score": {
+        "protocol": "dase7506-mp2-open-hard-verifier-v5",
+        "split": "validation",
+        "correct": 715,
+        "n": 798,
+        "accuracy": 89.59899749373433,
+        "scoring_seconds": 0.09366339999996853
+      },
+      "full_local_wall_seconds": 1.126858600000105,
+      "asset_file_bytes": 25791
+    },
+    {
+      "experiment_id": "relation-bce-l2-0.1",
+      "phase": "full_train_validation",
+      "config": {
+        "name": "relation-bce-l2-0.1",
+        "features": "relation",
+        "loss": "bce",
+        "l2": 0.1,
+        "maxiter": 200,
+        "seed": 3036900957
+      },
+      "training_seconds": 3.4249902000001384,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 47,
+      "objective": 0.2881162402293077,
+      "max_gradient": 1.0653055502236387e-05,
+      "train_questions": 4755,
+      "parameters": 2065,
+      "correct": 704,
+      "n": 798,
+      "accuracy": 88.22055137844612,
+      "hard_correct": 261,
+      "hard_n": 355,
+      "hard_accuracy": 73.52112676056338,
+      "official_score": {
+        "protocol": "dase7506-mp2-open-hard-verifier-v5",
+        "split": "validation",
+        "correct": 704,
+        "n": 798,
+        "accuracy": 88.22055137844612,
+        "scoring_seconds": 0.12698589999990872
+      },
+      "full_local_wall_seconds": 1.5051923999999417,
+      "asset_file_bytes": 50749
+    },
+    {
+      "experiment_id": "relation-listwise-l2-0.1",
+      "phase": "full_train_validation",
+      "config": {
+        "name": "relation-listwise-l2-0.1",
+        "features": "relation",
+        "loss": "listwise",
+        "l2": 0.1,
+        "maxiter": 200,
+        "seed": 3036900957
+      },
+      "training_seconds": 2.9714020000001256,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 37,
+      "objective": 0.2119161048320327,
+      "max_gradient": 7.378868233499686e-06,
+      "train_questions": 4755,
+      "parameters": 2065,
+      "correct": 724,
+      "n": 798,
+      "accuracy": 90.72681704260651,
+      "hard_correct": 282,
+      "hard_n": 355,
+      "hard_accuracy": 79.43661971830987,
+      "official_score": {
+        "protocol": "dase7506-mp2-open-hard-verifier-v5",
+        "split": "validation",
+        "correct": 724,
+        "n": 798,
+        "accuracy": 90.72681704260651,
+        "scoring_seconds": 0.09205470000006244
+      },
+      "full_local_wall_seconds": 1.4970785000000433,
+      "asset_file_bytes": 50754
+    }
+  ],
+  "recommended_learned": "relation-listwise-l2-0.1",
+  "recommended_checkpoint": "artifacts/experiments/recommended_bundle",
+  "recommended_config": {
+    "name": "relation-listwise-l2-0.1",
+    "features": "relation",
+    "loss": "listwise",
+    "l2": 0.1,
+    "maxiter": 200,
+    "seed": 3036900957
+  },
+  "recommended_asset_file_bytes": 51923,
+  "selected_train_only_oof": [
+    {
+      "training_seconds": 2.594662000000426,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 52,
+      "objective": 0.1997522897046286,
+      "max_gradient": 7.672273580649688e-06,
+      "train_questions": 3170,
+      "parameters": 2065,
+      "fold": 0,
+      "holdout_questions": 1585,
+      "correct": 1418,
+      "n": 1585,
+      "accuracy": 89.46372239747635,
+      "hard_correct": 510,
+      "hard_n": 675,
+      "hard_accuracy": 75.55555555555556
+    },
+    {
+      "training_seconds": 2.0206341000002794,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 42,
+      "objective": 0.19080692804017008,
+      "max_gradient": 2.607489974174688e-06,
+      "train_questions": 3170,
+      "parameters": 2065,
+      "fold": 1,
+      "holdout_questions": 1585,
+      "correct": 1402,
+      "n": 1585,
+      "accuracy": 88.45425867507886,
+      "hard_correct": 544,
+      "hard_n": 727,
+      "hard_accuracy": 74.82806052269602
+    },
+    {
+      "training_seconds": 1.9653791000000638,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 37,
+      "objective": 0.19643891623607823,
+      "max_gradient": 8.479622601757298e-06,
+      "train_questions": 3170,
+      "parameters": 2065,
+      "fold": 2,
+      "holdout_questions": 1585,
+      "correct": 1405,
+      "n": 1585,
+      "accuracy": 88.64353312302839,
+      "hard_correct": 533,
+      "hard_n": 712,
+      "hard_accuracy": 74.85955056179775
+    }
+  ],
+  "paired_bootstrap": {
+    "fixed0": {
+      "difference_percentage_points": 12.531328320802004,
+      "paired_bootstrap_95_interval": [
+        9.649122807017543,
+        15.162907268170425
+      ]
+    },
+    "majority": {
+      "difference_percentage_points": 4.511278195488721,
+      "paired_bootstrap_95_interval": [
+        2.380952380952381,
+        6.641604010025063
+      ]
+    },
+    "embedding-bce-l2-0.01": {
+      "difference_percentage_points": 1.1278195488721803,
+      "paired_bootstrap_95_interval": [
+        -0.7518796992481203,
+        3.132832080200501
+      ]
+    },
+    "relation-bce-l2-0.1": {
+      "difference_percentage_points": 2.506265664160401,
+      "paired_bootstrap_95_interval": [
+        0.99937343358396,
+        4.135338345864661
+      ]
+    },
+    "relation-listwise-l2-0.1": {
+      "difference_percentage_points": 0.0,
+      "paired_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 3036900959,
+  "wall_seconds": 56.06893229999969,
+  "note": "Recommended learned method must still be compared with majority baseline before final freeze. No test access."
+}
