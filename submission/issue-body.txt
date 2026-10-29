@@ -1,0 +1,20 @@
+Self-reported score. The leaderboard displays student IDs and scores. Artifact links are sealed for the instructor until release. GitHub records retain the submitting account.
+
+Keep the JSON unchanged. Submit improvements as new issues before the score deadline.
+
+```json
+{
+  "schema": "dase7506/submission-v1",
+  "protocol": "7506-submissions-v1",
+  "project": "mp2",
+  "score": 74.51820128479658,
+  "student_id": "3036900957",
+  "artifacts": {
+    "algorithm": "RSA-OAEP-256+AES-256-GCM",
+    "key_id": "7506-2026-v1",
+    "wrapped_key": "pNk2iXIl3iH9S1CT2GbJPe4/nKQXY/f0n+NkJ1vA3vBGjXVHsilZap8r2qhl268NnP30U7anfk7vNoxAYrniqKG3Q+sZoQXItvKv0lor0HZANYRO8xqnmq5joHHOF6GOiwGGDs9Yir4q9Tkknrqgvm/XpKVOto3QxJNtNlKQVTgSU7PWdkKaZxUowzREGq2l+AxWsT7Q5BaZj4AhvKlo0v+zRB/2z+rkN9Ejy5cH7WOLKBdL6ipgIaP7xWEXANKfF5BQSo6fQBGJB4+A88rpE27CBfthfKKRnanqEFWkxC2DhYOTZf9XXnMPxVb7STsR30HpyEGtCQo2EPSBHicFrvK/lEh3T3Z6VZyT8h9sEuxMlFRvti2hxV/FivexkjpIPjODJIHrkAL19fTdxj0p7vuE+y9igBkjvf4sTzixkD9sAjSJjxhMoL++lpMSezTzgrfrNYLYnzsTFnYy6X3uFRCBYUSokW4BaMxhUJXCUtcq1765p40U2vbQQMpQfWRN",
+    "iv": "c7N4dY5Ty9ftuyfZ",
+    "ciphertext": "V6hdrQUZrRZ9MmRgF894D1e6TYcsUuH5PftxQGGmDJDRF5qODUiIwl50LBnSOO1E8wvXy79inoXnHjkH6KrrpfVkQ3b8fHG/XxTmNkrOM6FmMMoNjHyU+Eq+KZ8VyRSlYQ8MGkNBIFVCb+gVxz50fbC00aES7lfCyclt4XEjhQOLucpg9eRQjbuTtCZh98WaXgGYAw49ZfrJbBr5nPuvpH1q+w/PaPnLkQp2gOBZHPxYuTb4SI/z+2XXbb58F1wUMQaynR6yDiNJ/+7ZxCywrFRiMyWSpId34j6A0Tg5G0vO+QiR1EELjeJVAGev6OdR8+VIP2nZmY95oe/tKOccgS7C91+Xl153+DlGb0t8vqJVldZBLJ+ttBbRMabPjQsQt4al5bE9JSfE+qQZoDnurXyhL5rKQpYfhb5wiTrG8ZeO7Ntmwql2/m5yepS5ouWzE4misWAr/rQRX3m4"
+  }
+}
+```

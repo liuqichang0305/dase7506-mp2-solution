@@ -1,0 +1,44 @@
+{
+  "checked_at_utc": "2026-10-29T07:02:39.436072+00:00",
+  "code_commit": "419e1158ba2f83b8c08796429e635f1bf8ab2977",
+  "reproduced_commit": "92c7240c5a4710054de1363d23e2f11f81d33b72",
+  "all_13_frozen_sources_and_2_assets_byte_identical": true,
+  "anonymous_downloads": [
+    {
+      "url": "https://raw.githubusercontent.com/liuqichang0305/dase7506-mp2-solution/419e1158ba2f83b8c08796429e635f1bf8ab2977/code/solution.py",
+      "http_status": 200,
+      "bytes": 652,
+      "sha256": "cb40cd5a2912343dfa5eab8e9865b37c0032e1520d5a2d036d415b9821cbb2a6",
+      "matches_committed_bytes": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/liuqichang0305/dase7506-mp2-solution/419e1158ba2f83b8c08796429e635f1bf8ab2977/README.md",
+      "http_status": 200,
+      "bytes": 9569,
+      "sha256": "9f79b1b2a92fbf8670f0e604155e8691344c0430a5947faeb761f64d2d2abce8",
+      "matches_committed_bytes": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/liuqichang0305/dase7506-mp2-solution/419e1158ba2f83b8c08796429e635f1bf8ab2977/reports/report.pdf",
+      "http_status": 200,
+      "bytes": 126314,
+      "sha256": "fb4a0253f227a944363bf84609c95479d5f64d85911d0236d5c5435f0227cf88",
+      "matches_committed_bytes": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/liuqichang0305/dase7506-mp2-solution/419e1158ba2f83b8c08796429e635f1bf8ab2977/artifacts/final_bundle/config.json",
+      "http_status": 200,
+      "bytes": 249,
+      "sha256": "24473c3b95b9472b5d844b795edf86c7902d21fe7351604cc680d93d7ead0703",
+      "matches_committed_bytes": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/liuqichang0305/dase7506-mp2-solution/419e1158ba2f83b8c08796429e635f1bf8ab2977/artifacts/final_bundle/weights.npz",
+      "http_status": 200,
+      "bytes": 51674,
+      "sha256": "a785f4a48e2d5708aec9fec29c776e9ce1b7fea1832d064e95b25c926626d462",
+      "matches_committed_bytes": true
+    }
+  ],
+  "status": "passed"
+}

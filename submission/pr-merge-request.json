@@ -1,0 +1,10 @@
+{
+  "method": "PUT",
+  "path": "/repos/liuqichang0305/dase7506-mp2-solution/pulls/1/merge",
+  "data": {
+    "sha": "ac9f952f90d11d2d28bf4c011c42872d5d70b3fd",
+    "merge_method": "merge",
+    "commit_title": "Merge reproducible frozen DASE7506 MP2 solution",
+    "commit_message": "Preserve exact frozen source and checkpoint. Independent AI review and clean public-checkout reproduction passed; no test-driven tuning."
+  }
+}

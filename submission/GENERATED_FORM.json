@@ -1,0 +1,141 @@
+{
+  "status": "prepared_not_submitted",
+  "started_at_utc": "2026-10-29T07:02:24.473Z",
+  "generated_at_utc": "2026-10-29T07:02:25.806Z",
+  "student_id": "3036900957",
+  "intended_github_account": "liuqichang0305",
+  "expected_issue_author_type": "User",
+  "score_file": "results/test-score.json",
+  "score_file_sha256": "3f1fbee15f87a30cff42d1cd6aaea9ccb91008c55e2e8bb18915f7795c36e45a",
+  "official_score": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 348,
+    "n": 467,
+    "accuracy": 74.51820128479658,
+    "scoring_seconds": 0.03939590000027238
+  },
+  "freeze_file_sha256": "bf8ece6e5a7ab1ed7f6803eec3c48e28fef0d6566ceddb65edd8965414a9e572",
+  "freeze_source_commit": "8602992842d444524ab4148991da2f1dc88f316f",
+  "final_code_commit": "419e1158ba2f83b8c08796429e635f1bf8ab2977",
+  "code_url": "https://github.com/liuqichang0305/dase7506-mp2-solution/tree/419e1158ba2f83b8c08796429e635f1bf8ab2977",
+  "checkpoint_url": "https://github.com/liuqichang0305/dase7506-mp2-solution/tree/419e1158ba2f83b8c08796429e635f1bf8ab2977/artifacts/final_bundle",
+  "official_source_commit": "bbec4921a0646abe127588cb121b4aba48c8fd3b",
+  "official_source_snapshot_sha256": "6210e31d5d0d509e0c205907fbc65d2b361d52e00e91302d2164ed09d9adf1a2",
+  "official_executed_entry": "courses/dase7506/assets/mp2.834d33d4aea3.mjs",
+  "official_source_files": [
+    {
+      "path": "courses/dase7506/mp2.mjs",
+      "sha256": "9df158a63bfbeb3e18e5517079b78833ccde07aca17c41d4a71d744eea980be1",
+      "bytes": 15117,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/mp2.mjs"
+    },
+    {
+      "path": "courses/dase7506/arena.mjs",
+      "sha256": "a68a92d9deccdd605b02cdf30127417501c4981a8a5c00543472283701503343",
+      "bytes": 23816,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/arena.mjs"
+    },
+    {
+      "path": "courses/dase7506/projects.mjs",
+      "sha256": "ae4b9dc4b02cffa072a725441720d47eb81d496a89a9264a9bb4fd85390471fc",
+      "bytes": 751,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/projects.mjs"
+    },
+    {
+      "path": "courses/dase7506/data/student-id-public.pem",
+      "sha256": "f5c3fc9dd9d2eb758ff3f223466b2a17cf121a765a5ff28ed1260d32f4f0fe26",
+      "bytes": 625,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/data/student-id-public.pem"
+    },
+    {
+      "path": "courses/dase7506/data/leaderboard.json",
+      "sha256": "3ce312400a90a1fc284e0bfe3f69d7b4c5c1f6b39bba8e1c1193b29fd8d48411",
+      "bytes": 446620,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/data/leaderboard.json"
+    },
+    {
+      "path": "courses/dase7506/mp2/index.html",
+      "sha256": "e21b138e29bf17e325ed2a925d28ba355e006d713fe0c62efd7f83db8f9ba7fa",
+      "bytes": 6684,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/mp2/index.html"
+    },
+    {
+      "path": "courses/dase7506/assets/mp2.834d33d4aea3.mjs",
+      "local_path": "served/courses/dase7506/assets/mp2.834d33d4aea3.mjs",
+      "sha256": "834d33d4aea371af1760c2346dc6099af48a6e2d3a0087ee676cbd0dcfcdf7e4",
+      "bytes": 15130,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/assets/mp2.834d33d4aea3.mjs"
+    },
+    {
+      "path": "courses/dase7506/assets/arena.16ac78fce8b4.mjs",
+      "local_path": "served/courses/dase7506/assets/arena.16ac78fce8b4.mjs",
+      "sha256": "16ac78fce8b4b736fb9ce19f274573c778aa9f389047aecb2f01783d3dcd70d5",
+      "bytes": 23829,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/assets/arena.16ac78fce8b4.mjs"
+    },
+    {
+      "path": "courses/dase7506/assets/projects.ae4b9dc4b02c.mjs",
+      "local_path": "served/courses/dase7506/assets/projects.ae4b9dc4b02c.mjs",
+      "sha256": "ae4b9dc4b02cffa072a725441720d47eb81d496a89a9264a9bb4fd85390471fc",
+      "bytes": 751,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/assets/projects.ae4b9dc4b02c.mjs"
+    }
+  ],
+  "declaration_text": "I understand and confirm that this is my result.",
+  "declaration_checked": true,
+  "declaration_basis": "The user authorized formal submission of this user-owned coursework result. AI assistance is disclosed in the repository; this record does not claim a separate human understanding or manual verification exercise occurred.",
+  "phase": "scores",
+  "official_phase_badge": "Score submissions open",
+  "official_sync_status": "Updated: 29/10/2026, 14:25:49. Auto-refresh every 30 seconds. Allow a few minutes for new submissions to appear.",
+  "captured_board_generated_at": "2026-10-29T06:25:49.820Z",
+  "captured_board_publication": {
+    "schema": "dase7506/publication-v1",
+    "projects": {
+      "mp1": {
+        "published_at": "2026-10-01T16:09:01.046Z",
+        "review_ends_at": "2026-10-08T16:09:01.046Z"
+      }
+    }
+  },
+  "adapter_scope": "Minimal local DOM adapter; unchanged actually published handler and dependencies. No browser-control API. window.isSecureContext is emulated only to permit local WebCrypto. All fetch calls served fixed official snapshots; no network or issue creation.",
+  "fetch_log": [
+    {
+      "requested_url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/main/courses/dase7506/data/leaderboard.json?v=1793257345585",
+      "served_snapshot_path": "courses/dase7506/data/leaderboard.json",
+      "sha256": "3ce312400a90a1fc284e0bfe3f69d7b4c5c1f6b39bba8e1c1193b29fd8d48411",
+      "network_used": false
+    },
+    {
+      "requested_url": "../data/student-id-public.pem",
+      "served_snapshot_path": "courses/dase7506/data/student-id-public.pem",
+      "sha256": "f5c3fc9dd9d2eb758ff3f223466b2a17cf121a765a5ff28ed1260d32f4f0fe26",
+      "network_used": false
+    }
+  ],
+  "intervals_suppressed": [
+    30000
+  ],
+  "official_payload_json_text": "{\n  \"schema\": \"dase7506/submission-v1\",\n  \"protocol\": \"7506-submissions-v1\",\n  \"project\": \"mp2\",\n  \"score\": 74.51820128479658,\n  \"student_id\": \"3036900957\",\n  \"artifacts\": {\n    \"algorithm\": \"RSA-OAEP-256+AES-256-GCM\",\n    \"key_id\": \"7506-2026-v1\",\n    \"wrapped_key\": \"pNk2iXIl3iH9S1CT2GbJPe4/nKQXY/f0n+NkJ1vA3vBGjXVHsilZap8r2qhl268NnP30U7anfk7vNoxAYrniqKG3Q+sZoQXItvKv0lor0HZANYRO8xqnmq5joHHOF6GOiwGGDs9Yir4q9Tkknrqgvm/XpKVOto3QxJNtNlKQVTgSU7PWdkKaZxUowzREGq2l+AxWsT7Q5BaZj4AhvKlo0v+zRB/2z+rkN9Ejy5cH7WOLKBdL6ipgIaP7xWEXANKfF5BQSo6fQBGJB4+A88rpE27CBfthfKKRnanqEFWkxC2DhYOTZf9XXnMPxVb7STsR30HpyEGtCQo2EPSBHicFrvK/lEh3T3Z6VZyT8h9sEuxMlFRvti2hxV/FivexkjpIPjODJIHrkAL19fTdxj0p7vuE+y9igBkjvf4sTzixkD9sAjSJjxhMoL++lpMSezTzgrfrNYLYnzsTFnYy6X3uFRCBYUSokW4BaMxhUJXCUtcq1765p40U2vbQQMpQfWRN\",\n    \"iv\": \"c7N4dY5Ty9ftuyfZ\",\n    \"ciphertext\": \"V6hdrQUZrRZ9MmRgF894D1e6TYcsUuH5PftxQGGmDJDRF5qODUiIwl50LBnSOO1E8wvXy79inoXnHjkH6KrrpfVkQ3b8fHG/XxTmNkrOM6FmMMoNjHyU+Eq+KZ8VyRSlYQ8MGkNBIFVCb+gVxz50fbC00aES7lfCyclt4XEjhQOLucpg9eRQjbuTtCZh98WaXgGYAw49ZfrJbBr5nPuvpH1q+w/PaPnLkQp2gOBZHPxYuTb4SI/z+2XXbb58F1wUMQaynR6yDiNJ/+7ZxCywrFRiMyWSpId34j6A0Tg5G0vO+QiR1EELjeJVAGev6OdR8+VIP2nZmY95oe/tKOccgS7C91+Xl153+DlGb0t8vqJVldZBLJ+ttBbRMabPjQsQt4al5bE9JSfE+qQZoDnurXyhL5rKQpYfhb5wiTrG8ZeO7Ntmwql2/m5yepS5ouWzE4misWAr/rQRX3m4\"\n  }\n}",
+  "official_payload": {
+    "schema": "dase7506/submission-v1",
+    "protocol": "7506-submissions-v1",
+    "project": "mp2",
+    "score": 74.51820128479658,
+    "student_id": "3036900957",
+    "artifacts": {
+      "algorithm": "RSA-OAEP-256+AES-256-GCM",
+      "key_id": "7506-2026-v1",
+      "wrapped_key": "pNk2iXIl3iH9S1CT2GbJPe4/nKQXY/f0n+NkJ1vA3vBGjXVHsilZap8r2qhl268NnP30U7anfk7vNoxAYrniqKG3Q+sZoQXItvKv0lor0HZANYRO8xqnmq5joHHOF6GOiwGGDs9Yir4q9Tkknrqgvm/XpKVOto3QxJNtNlKQVTgSU7PWdkKaZxUowzREGq2l+AxWsT7Q5BaZj4AhvKlo0v+zRB/2z+rkN9Ejy5cH7WOLKBdL6ipgIaP7xWEXANKfF5BQSo6fQBGJB4+A88rpE27CBfthfKKRnanqEFWkxC2DhYOTZf9XXnMPxVb7STsR30HpyEGtCQo2EPSBHicFrvK/lEh3T3Z6VZyT8h9sEuxMlFRvti2hxV/FivexkjpIPjODJIHrkAL19fTdxj0p7vuE+y9igBkjvf4sTzixkD9sAjSJjxhMoL++lpMSezTzgrfrNYLYnzsTFnYy6X3uFRCBYUSokW4BaMxhUJXCUtcq1765p40U2vbQQMpQfWRN",
+      "iv": "c7N4dY5Ty9ftuyfZ",
+      "ciphertext": "V6hdrQUZrRZ9MmRgF894D1e6TYcsUuH5PftxQGGmDJDRF5qODUiIwl50LBnSOO1E8wvXy79inoXnHjkH6KrrpfVkQ3b8fHG/XxTmNkrOM6FmMMoNjHyU+Eq+KZ8VyRSlYQ8MGkNBIFVCb+gVxz50fbC00aES7lfCyclt4XEjhQOLucpg9eRQjbuTtCZh98WaXgGYAw49ZfrJbBr5nPuvpH1q+w/PaPnLkQp2gOBZHPxYuTb4SI/z+2XXbb58F1wUMQaynR6yDiNJ/+7ZxCywrFRiMyWSpId34j6A0Tg5G0vO+QiR1EELjeJVAGev6OdR8+VIP2nZmY95oe/tKOccgS7C91+Xl153+DlGb0t8vqJVldZBLJ+ttBbRMabPjQsQt4al5bE9JSfE+qQZoDnurXyhL5rKQpYfhb5wiTrG8ZeO7Ntmwql2/m5yepS5ouWzE4misWAr/rQRX3m4"
+    }
+  },
+  "issue_title": "[DASE7506] MP2 · 74.51820128479658 %",
+  "issue_body": "Self-reported score. The leaderboard displays student IDs and scores. Artifact links are sealed for the instructor until release. GitHub records retain the submitting account.\n\nKeep the JSON unchanged. Submit improvements as new issues before the score deadline.\n\n```json\n{\n  \"schema\": \"dase7506/submission-v1\",\n  \"protocol\": \"7506-submissions-v1\",\n  \"project\": \"mp2\",\n  \"score\": 74.51820128479658,\n  \"student_id\": \"3036900957\",\n  \"artifacts\": {\n    \"algorithm\": \"RSA-OAEP-256+AES-256-GCM\",\n    \"key_id\": \"7506-2026-v1\",\n    \"wrapped_key\": \"pNk2iXIl3iH9S1CT2GbJPe4/nKQXY/f0n+NkJ1vA3vBGjXVHsilZap8r2qhl268NnP30U7anfk7vNoxAYrniqKG3Q+sZoQXItvKv0lor0HZANYRO8xqnmq5joHHOF6GOiwGGDs9Yir4q9Tkknrqgvm/XpKVOto3QxJNtNlKQVTgSU7PWdkKaZxUowzREGq2l+AxWsT7Q5BaZj4AhvKlo0v+zRB/2z+rkN9Ejy5cH7WOLKBdL6ipgIaP7xWEXANKfF5BQSo6fQBGJB4+A88rpE27CBfthfKKRnanqEFWkxC2DhYOTZf9XXnMPxVb7STsR30HpyEGtCQo2EPSBHicFrvK/lEh3T3Z6VZyT8h9sEuxMlFRvti2hxV/FivexkjpIPjODJIHrkAL19fTdxj0p7vuE+y9igBkjvf4sTzixkD9sAjSJjxhMoL++lpMSezTzgrfrNYLYnzsTFnYy6X3uFRCBYUSokW4BaMxhUJXCUtcq1765p40U2vbQQMpQfWRN\",\n    \"iv\": \"c7N4dY5Ty9ftuyfZ\",\n    \"ciphertext\": \"V6hdrQUZrRZ9MmRgF894D1e6TYcsUuH5PftxQGGmDJDRF5qODUiIwl50LBnSOO1E8wvXy79inoXnHjkH6KrrpfVkQ3b8fHG/XxTmNkrOM6FmMMoNjHyU+Eq+KZ8VyRSlYQ8MGkNBIFVCb+gVxz50fbC00aES7lfCyclt4XEjhQOLucpg9eRQjbuTtCZh98WaXgGYAw49ZfrJbBr5nPuvpH1q+w/PaPnLkQp2gOBZHPxYuTb4SI/z+2XXbb58F1wUMQaynR6yDiNJ/+7ZxCywrFRiMyWSpId34j6A0Tg5G0vO+QiR1EELjeJVAGev6OdR8+VIP2nZmY95oe/tKOccgS7C91+Xl153+DlGb0t8vqJVldZBLJ+ttBbRMabPjQsQt4al5bE9JSfE+qQZoDnurXyhL5rKQpYfhb5wiTrG8ZeO7Ntmwql2/m5yepS5ouWzE4misWAr/rQRX3m4\"\n  }\n}\n```",
+  "issue_url": "https://github.com/xudongwu-0/xudongwu-0.github.io/issues/new?title=%5BDASE7506%5D+MP2+%C2%B7+74.51820128479658+%25&body=Self-reported+score.+The+leaderboard+displays+student+IDs+and+scores.+Artifact+links+are+sealed+for+the+instructor+until+release.+GitHub+records+retain+the+submitting+account.%0A%0AKeep+the+JSON+unchanged.+Submit+improvements+as+new+issues+before+the+score+deadline.%0A%0A%60%60%60json%0A%7B%0A++%22schema%22%3A+%22dase7506%2Fsubmission-v1%22%2C%0A++%22protocol%22%3A+%227506-submissions-v1%22%2C%0A++%22project%22%3A+%22mp2%22%2C%0A++%22score%22%3A+74.51820128479658%2C%0A++%22student_id%22%3A+%223036900957%22%2C%0A++%22artifacts%22%3A+%7B%0A++++%22algorithm%22%3A+%22RSA-OAEP-256%2BAES-256-GCM%22%2C%0A++++%22key_id%22%3A+%227506-2026-v1%22%2C%0A++++%22wrapped_key%22%3A+%22pNk2iXIl3iH9S1CT2GbJPe4%2FnKQXY%2Ff0n%2BNkJ1vA3vBGjXVHsilZap8r2qhl268NnP30U7anfk7vNoxAYrniqKG3Q%2BsZoQXItvKv0lor0HZANYRO8xqnmq5joHHOF6GOiwGGDs9Yir4q9Tkknrqgvm%2FXpKVOto3QxJNtNlKQVTgSU7PWdkKaZxUowzREGq2l%2BAxWsT7Q5BaZj4AhvKlo0v%2BzRB%2F2z%2BrkN9Ejy5cH7WOLKBdL6ipgIaP7xWEXANKfF5BQSo6fQBGJB4%2BA88rpE27CBfthfKKRnanqEFWkxC2DhYOTZf9XXnMPxVb7STsR30HpyEGtCQo2EPSBHicFrvK%2FlEh3T3Z6VZyT8h9sEuxMlFRvti2hxV%2FFivexkjpIPjODJIHrkAL19fTdxj0p7vuE%2By9igBkjvf4sTzixkD9sAjSJjxhMoL%2B%2BlpMSezTzgrfrNYLYnzsTFnYy6X3uFRCBYUSokW4BaMxhUJXCUtcq1765p40U2vbQQMpQfWRN%22%2C%0A++++%22iv%22%3A+%22c7N4dY5Ty9ftuyfZ%22%2C%0A++++%22ciphertext%22%3A+%22V6hdrQUZrRZ9MmRgF894D1e6TYcsUuH5PftxQGGmDJDRF5qODUiIwl50LBnSOO1E8wvXy79inoXnHjkH6KrrpfVkQ3b8fHG%2FXxTmNkrOM6FmMMoNjHyU%2BEq%2BKZ8VyRSlYQ8MGkNBIFVCb%2BgVxz50fbC00aES7lfCyclt4XEjhQOLucpg9eRQjbuTtCZh98WaXgGYAw49ZfrJbBr5nPuvpH1q%2Bw%2FPaPnLkQp2gOBZHPxYuTb4SI%2Fz%2B2XXbb58F1wUMQaynR6yDiNJ%2F%2B7ZxCywrFRiMyWSpId34j6A0Tg5G0vO%2BQiR1EELjeJVAGev6OdR8%2BVIP2nZmY95oe%2FtKOccgS7C91%2BXl153%2BDlGb0t8vqJVldZBLJ%2BttBbRMabPjQsQt4al5bE9JSfE%2BqQZoDnurXyhL5rKQpYfhb5wiTrG8ZeO7Ntmwql2%2Fm5yepS5ouWzE4misWAr%2FrQRX3m4%22%0A++%7D%0A%7D%0A%60%60%60",
+  "issue_title_sha256": "460e10ae32237a3d646bbe0ebc06367346e12320461744afac49b591eea8b577",
+  "issue_body_sha256": "747600f8fd2c8a6b453e3158a842549bb46fc4245a77c4a96296baa36b32fae9",
+  "issue_url_sha256": "a7986c24027009218cd1b20f899a5916a7857ea1580d5e4652874563c14c5b8c",
+  "publication_complete": false
+}

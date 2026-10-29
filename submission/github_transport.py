@@ -3,7 +3,8 @@
 Explicit --request JSON supplies method/path/data; writes a sanitized GitHub response.
 Only this coursework repository and the official course issue collection are allowed.
 """
-import argparse, subprocess, os, json, urllib.request, re
+import argparse, subprocess, os, json, urllib.request, re, hashlib
+from datetime import datetime,timezone
 from pathlib import Path
 p=argparse.ArgumentParser()
 p.add_argument('--request',type=Path,required=True)
@@ -28,6 +29,14 @@ def call(path,method='GET',data=None):
     with urllib.request.urlopen(q,timeout=60) as response:return json.load(response)
 identity=call('/user')
 if identity.get('login')!='liuqichang0305' or identity.get('type')!='User':raise SystemExit('Personal GitHub identity mismatch')
+if path=='/repos/xudongwu-0/xudongwu-0.github.io/issues' and method=='POST':
+    folder=Path(__file__).resolve().parent
+    body=(folder/'issue-body.txt').read_text(encoding='utf-8')
+    title=(folder/'issue-title.txt').read_text(encoding='utf-8')
+    if request.get('data',{}).get('body')!=body or request.get('data',{}).get('title')!=title:raise SystemExit('Course issue must preserve exact official generated title and body')
+    instant=datetime.now(timezone.utc)
+    if instant>=datetime(2026,10,31,16,tzinfo=timezone.utc):raise SystemExit('New-score deadline has passed; no issue sent')
+    (folder/'SUBMISSION_ACTION_TIME.json').write_text(json.dumps({'before_post_utc':instant.isoformat(),'author':identity['login'],'author_type':identity['type'],'body_sha256':hashlib.sha256(body.encode()).hexdigest(),'destination':path},indent=2),encoding='utf-8')
 result=call(path,method,request.get('data'))
 if result.get('errors'):raise SystemExit('GitHub GraphQL request failed: '+json.dumps(result['errors']))
 a.output.parent.mkdir(parents=True,exist_ok=True)

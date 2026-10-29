@@ -12,8 +12,8 @@ Source commit: bb801f4f2e7629d270df765ab12c333b2dc616bb. No difference from work
 | Course | CPU or <=RTX4090 single GPU training | Guide sec 3 | results/environment.json and development logs | CPU only |
 | Course | Final score from complete official test | Guide sec 2 | results/test-score.json; freeze source 8602992842d444524ab4148991da2f1dc88f316f | 348/467, 74.51820128479658% |
 | Course | Report <=10 pages; initial/improved and ablation evidence | Guide sec 2,4 | reports/report.pdf, VISUAL_QA.md and development results | 7 pages; all rendered/AI visually checked |
-| Course | Public code and matching checkpoint before deadline | Guide sec 4 | Frozen commit URLs and results/reproduction/public-downloads.json | Public prepared commit 92c7240c5a4710054de1363d23e2f11f81d33b72 verified; final submission links pending |
-| Course | Finish generated GitHub submission issue | Guide sec 4 | Actual issue author/time/payload evidence | NOT SUBMITTED |
+| Course | Public code and matching checkpoint before deadline | Guide sec 4 | submission/FINAL_PUBLICATION_VERIFICATION.json | Final commit 419e1158ba2f83b8c08796429e635f1bf8ab2977; code/PDF/config/weights anonymously downloaded and hash-matched |
+| Course | Finish generated GitHub submission issue | Guide sec 4 | submission/SUBMISSION_RECORD.md and SUBMISSION_VERIFICATION.json | Issue #294 actually created 2026-10-29 15:04:45 UTC+8 by liuqichang0305/User; board self-reported, links received; not instructor verified |
 | Course | Disclose AI and reuse; retain licenses | Guide sec 3, attribution | docs/AI_DISCLOSURE.md, code/data/LICENSE.txt and NOTICE.txt | Complete; human understanding checks not claimed |
 | Course + workflow | Python 3.12, isolated environment | code/README.md sec 1; workflow stage 0 | .venv Python version | Python 3.12.0 created and dependencies installed |
 | Workflow | Train-only calibration, reliability and risk curves | Workflow stage 6 | Train OOF + results/reliability | Complete: validation Brier 0.067713, 10-bin ECE 0.021821 |

@@ -2,6 +2,8 @@
 
 Student 3036900957. Individual coursework with disclosed AI assistance. A small CPU verifier selects one of the four supplied candidate solutions. It does not generate answers or call an external model.
 
+Formal submission: [course Issue #294](https://github.com/xudongwu-0/xudongwu-0.github.io/issues/294), created 29 October 2026 at 15:04:45 UTC+8. The course snapshot recognizes the score as self-reported and artifact links as received; this is not instructor verification. Submitted immutable code/checkpoint commit: `419e1158ba2f83b8c08796429e635f1bf8ab2977`. Subsequent commits append evidence only. See `submission/SUBMISSION_RECORD.md`.
+
 Official benchmark: https://github.com/xudongwu-0/DASE7506-MP2/tree/bb801f4f2e7629d270df765ab12c333b2dc616bb
 
 The official data, numeric parser, prediction runner and scorer are preserved byte for byte. Development fits only training data; validation selects the method. The complete test was scored only after the pre-test freeze.
