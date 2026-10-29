@@ -1,0 +1,1 @@
+Requirement already satisfied: numpy==2.5.3 in c:\aamy work information\7503vision\dase7506-mp2-solution\tmp\reproduction\venv\lib\site-packages (from -r requirements-inference.txt (line 1)) (2.5.3)

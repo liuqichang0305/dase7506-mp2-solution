@@ -1,0 +1,10 @@
+{
+  "data": {
+    "markPullRequestReadyForReview": {
+      "pullRequest": {
+        "url": "https://github.com/liuqichang0305/dase7506-mp2-solution/pull/1",
+        "isDraft": false
+      }
+    }
+  }
+}

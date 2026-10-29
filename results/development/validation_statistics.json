@@ -1,0 +1,25 @@
+{
+  "questions": 798,
+  "correct_candidates_histogram": {
+    "1": 117,
+    "2": 123,
+    "3": 179,
+    "4": 379
+  },
+  "parseable_candidate_fraction": 0.9508145363408521,
+  "distinct_valid_answer_histogram": {
+    "0": 0,
+    "1": 443,
+    "2": 227,
+    "3": 108,
+    "4": 20
+  },
+  "candidate_characters_quantiles": [
+    130.0,
+    322.75,
+    441.0,
+    596.0,
+    1402.0
+  ],
+  "random_selection_expected_accuracy": 75.6892230576441
+}

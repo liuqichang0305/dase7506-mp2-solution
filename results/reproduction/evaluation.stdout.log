@@ -1,0 +1,75 @@
+{
+  "started_at_utc": "2026-10-29T06:51:39.465543+00:00",
+  "split": "test",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduction\\venv\\Scripts\\python.exe",
+  "parent_python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+  "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "logical_cpus": 20,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "OMP_THREAD_LIMIT": "1"
+  },
+  "processes": [
+    {
+      "command": [
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduction\\venv\\Scripts\\python.exe",
+        "predict.py",
+        "--method",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduction\\repo\\code\\solution.py",
+        "--checkpoint",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduction\\repo\\artifacts\\final_bundle",
+        "--split",
+        "test",
+        "--output",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduction\\repo\\results\\reproduced\\test-predictions.json"
+      ],
+      "cwd": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduction\\repo\\code",
+      "returncode": 0,
+      "wall_seconds": 0.7725343000001885,
+      "stdout": "test-prediction.stdout.log",
+      "stderr": "test-prediction.stderr.log"
+    },
+    {
+      "command": [
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduction\\venv\\Scripts\\python.exe",
+        "score_predictions.py",
+        "--split",
+        "test",
+        "--predictions",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduction\\repo\\results\\reproduced\\test-predictions.json",
+        "--output",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduction\\repo\\results\\reproduced\\test-score.json"
+      ],
+      "cwd": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduction\\repo\\code",
+      "returncode": 0,
+      "wall_seconds": 0.36406970000007277,
+      "stdout": "test-scoring.stdout.log",
+      "stderr": "test-scoring.stderr.log"
+    }
+  ],
+  "freeze": {
+    "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduction\\repo\\submission\\PRE_TEST_FREEZE.json",
+    "sha256": "bf8ece6e5a7ab1ed7f6803eec3c48e28fef0d6566ceddb65edd8965414a9e572",
+    "source_commit": "8602992842d444524ab4148991da2f1dc88f316f",
+    "verified_source_files": 13,
+    "verified_assets": 2
+  },
+  "measurement": "Local fresh prediction process + independent scoring process; sequential; includes startup, imports, inputs, assets and I/O. Not a reference-machine eligibility certification.",
+  "total_wall_seconds": 1.139880799999446,
+  "status": "passed",
+  "local_under_30_seconds": true,
+  "official_score": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 348,
+    "n": 467,
+    "accuracy": 74.51820128479658,
+    "scoring_seconds": 0.06071259999953327
+  }
+}

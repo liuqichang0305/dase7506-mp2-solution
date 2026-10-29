@@ -1,0 +1,92 @@
+{
+  "retrieved_at_utc": "2026-10-29T06:41:54.736238+00:00",
+  "official_site_commit": "bbec4921a0646abe127588cb121b4aba48c8fd3b",
+  "files": [
+    {
+      "path": "courses/dase7506/mp2.mjs",
+      "sha256": "9df158a63bfbeb3e18e5517079b78833ccde07aca17c41d4a71d744eea980be1",
+      "bytes": 15117,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/mp2.mjs"
+    },
+    {
+      "path": "courses/dase7506/arena.mjs",
+      "sha256": "a68a92d9deccdd605b02cdf30127417501c4981a8a5c00543472283701503343",
+      "bytes": 23816,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/arena.mjs"
+    },
+    {
+      "path": "courses/dase7506/projects.mjs",
+      "sha256": "ae4b9dc4b02cffa072a725441720d47eb81d496a89a9264a9bb4fd85390471fc",
+      "bytes": 751,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/projects.mjs"
+    },
+    {
+      "path": "courses/dase7506/data/student-id-public.pem",
+      "sha256": "f5c3fc9dd9d2eb758ff3f223466b2a17cf121a765a5ff28ed1260d32f4f0fe26",
+      "bytes": 625,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/data/student-id-public.pem"
+    },
+    {
+      "path": "courses/dase7506/data/leaderboard.json",
+      "sha256": "3ce312400a90a1fc284e0bfe3f69d7b4c5c1f6b39bba8e1c1193b29fd8d48411",
+      "bytes": 446620,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/data/leaderboard.json"
+    },
+    {
+      "path": "courses/dase7506/mp2/index.html",
+      "sha256": "e21b138e29bf17e325ed2a925d28ba355e006d713fe0c62efd7f83db8f9ba7fa",
+      "bytes": 6684,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/mp2/index.html"
+    },
+    {
+      "path": "courses/dase7506/assets/mp2.834d33d4aea3.mjs",
+      "local_path": "served/courses/dase7506/assets/mp2.834d33d4aea3.mjs",
+      "sha256": "834d33d4aea371af1760c2346dc6099af48a6e2d3a0087ee676cbd0dcfcdf7e4",
+      "bytes": 15130,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/assets/mp2.834d33d4aea3.mjs"
+    },
+    {
+      "path": "courses/dase7506/assets/arena.16ac78fce8b4.mjs",
+      "local_path": "served/courses/dase7506/assets/arena.16ac78fce8b4.mjs",
+      "sha256": "16ac78fce8b4b736fb9ce19f274573c778aa9f389047aecb2f01783d3dcd70d5",
+      "bytes": 23829,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/assets/arena.16ac78fce8b4.mjs"
+    },
+    {
+      "path": "courses/dase7506/assets/projects.ae4b9dc4b02c.mjs",
+      "local_path": "served/courses/dase7506/assets/projects.ae4b9dc4b02c.mjs",
+      "sha256": "ae4b9dc4b02cffa072a725441720d47eb81d496a89a9264a9bb4fd85390471fc",
+      "bytes": 751,
+      "url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/bbec4921a0646abe127588cb121b4aba48c8fd3b/courses/dase7506/assets/projects.ae4b9dc4b02c.mjs"
+    }
+  ],
+  "purpose": "Run unchanged official submission-form handler locally because browser automation cannot establish URL. No hand-written replacement submission schema. No issue created by this script.",
+  "published_entry_path": "courses/dase7506/assets/mp2.834d33d4aea3.mjs",
+  "published_module_graph": {
+    "courses/dase7506/assets/mp2.834d33d4aea3.mjs": [
+      "courses/dase7506/assets/arena.16ac78fce8b4.mjs"
+    ],
+    "courses/dase7506/assets/arena.16ac78fce8b4.mjs": [
+      "courses/dase7506/assets/projects.ae4b9dc4b02c.mjs"
+    ],
+    "courses/dase7506/assets/projects.ae4b9dc4b02c.mjs": []
+  },
+  "published_graph_retrieved_at_utc": "2026-10-29T06:47:12.247929+00:00",
+  "authored_published_comparison": [
+    {
+      "authored": "arena.mjs",
+      "published": "courses/dase7506/assets/arena.16ac78fce8b4.mjs",
+      "equal_except_relative_import_paths": true
+    },
+    {
+      "authored": "mp2.mjs",
+      "published": "courses/dase7506/assets/mp2.834d33d4aea3.mjs",
+      "equal_except_relative_import_paths": true
+    },
+    {
+      "authored": "projects.mjs",
+      "published": "courses/dase7506/assets/projects.ae4b9dc4b02c.mjs",
+      "equal_except_relative_import_paths": true
+    }
+  ]
+}

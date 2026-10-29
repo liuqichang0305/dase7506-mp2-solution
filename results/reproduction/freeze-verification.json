@@ -1,0 +1,15 @@
+{
+  "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduction\\repo\\submission\\PRE_TEST_FREEZE.json",
+  "sha256": "bf8ece6e5a7ab1ed7f6803eec3c48e28fef0d6566ceddb65edd8965414a9e572",
+  "source_commit": "8602992842d444524ab4148991da2f1dc88f316f",
+  "verified_source_files": 13,
+  "verified_assets": 2,
+  "original_evaluation_freeze_sha256": "2734218beef0a53d63015e7483d374772c9fcebe99c1226785f40cd0cf792899",
+  "manifest_bytes_same_as_original_evaluation": false,
+  "published_commit": "92c7240c5a4710054de1363d23e2f11f81d33b72",
+  "workspace_manifest_sha256": "2734218beef0a53d63015e7483d374772c9fcebe99c1226785f40cd0cf792899",
+  "parsed_manifest_equal": true,
+  "line_ending_normalized_bytes_equal": true,
+  "published_lf_as_crlf_sha256": "2734218beef0a53d63015e7483d374772c9fcebe99c1226785f40cd0cf792899",
+  "difference_is_only_line_endings": true
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "mp2-linear-v1",
+  "features": "relation",
+  "loss": "bce",
+  "l2": 0.1,
+  "maxiter": 200,
+  "seed": 3036900957,
+  "fit_split": "train",
+  "tie_rule": "first maximum",
+  "calibration": null
+}

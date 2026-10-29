@@ -1,0 +1,118 @@
+{
+  "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\experiments\\recommended_bundle",
+  "files": [
+    {
+      "path": "config.json",
+      "sha256": "24473c3b95b9472b5d844b795edf86c7902d21fe7351604cc680d93d7ead0703",
+      "disk_bytes": 249,
+      "uncompressed_bytes": 249
+    },
+    {
+      "path": "weights.npz",
+      "sha256": "a785f4a48e2d5708aec9fec29c776e9ce1b7fea1832d064e95b25c926626d462",
+      "disk_bytes": 51674,
+      "uncompressed_bytes": 51674,
+      "members": [
+        {
+          "name": "mean.npy",
+          "uncompressed_bytes": 16640
+        },
+        {
+          "name": "scale.npy",
+          "uncompressed_bytes": 16640
+        },
+        {
+          "name": "weight.npy",
+          "uncompressed_bytes": 16640
+        },
+        {
+          "name": "bias.npy",
+          "uncompressed_bytes": 136
+        },
+        {
+          "name": "calibration_mean.npy",
+          "uncompressed_bytes": 152
+        },
+        {
+          "name": "calibration_scale.npy",
+          "uncompressed_bytes": 152
+        },
+        {
+          "name": "calibration_weight.npy",
+          "uncompressed_bytes": 152
+        },
+        {
+          "name": "calibration_bias.npy",
+          "uncompressed_bytes": 136
+        }
+      ],
+      "arrays": [
+        {
+          "name": "mean",
+          "shape": [
+            2064
+          ],
+          "dtype": "float64",
+          "array_bytes": 16512
+        },
+        {
+          "name": "scale",
+          "shape": [
+            2064
+          ],
+          "dtype": "float64",
+          "array_bytes": 16512
+        },
+        {
+          "name": "weight",
+          "shape": [
+            2064
+          ],
+          "dtype": "float64",
+          "array_bytes": 16512
+        },
+        {
+          "name": "bias",
+          "shape": [],
+          "dtype": "float64",
+          "array_bytes": 8
+        },
+        {
+          "name": "calibration_mean",
+          "shape": [
+            3
+          ],
+          "dtype": "float64",
+          "array_bytes": 24
+        },
+        {
+          "name": "calibration_scale",
+          "shape": [
+            3
+          ],
+          "dtype": "float64",
+          "array_bytes": 24
+        },
+        {
+          "name": "calibration_weight",
+          "shape": [
+            3
+          ],
+          "dtype": "float64",
+          "array_bytes": 24
+        },
+        {
+          "name": "calibration_bias",
+          "shape": [],
+          "dtype": "float64",
+          "array_bytes": 8
+        }
+      ]
+    }
+  ],
+  "uncompressed_bytes": 51923,
+  "limit_bytes": 16777216,
+  "within_limit": true,
+  "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+  "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+}

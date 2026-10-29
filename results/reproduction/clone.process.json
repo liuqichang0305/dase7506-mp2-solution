@@ -1,0 +1,17 @@
+{
+  "command": [
+    "git",
+    "-c",
+    "credential.helper=",
+    "-c",
+    "core.askPass=",
+    "-c",
+    "http.extraHeader=",
+    "clone",
+    "https://github.com/liuqichang0305/dase7506-mp2-solution.git",
+    "tmp\\reproduction\\repo"
+  ],
+  "returncode": 0,
+  "wall_seconds": 2.281183599999167,
+  "authentication": "credential helpers/askpass/extraheaders disabled; prompt disabled"
+}

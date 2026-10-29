@@ -1,0 +1,8 @@
+{
+  "name": "relation-listwise-l2-0.1",
+  "features": "relation",
+  "loss": "listwise",
+  "l2": 0.1,
+  "maxiter": 200,
+  "seed": 3036900957
+}

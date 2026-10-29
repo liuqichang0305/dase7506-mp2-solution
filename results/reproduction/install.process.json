@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduction\\venv\\Scripts\\python.exe",
+    "-m",
+    "pip",
+    "install",
+    "--no-cache-dir",
+    "--disable-pip-version-check",
+    "-r",
+    "requirements-inference.txt"
+  ],
+  "returncode": 0,
+  "wall_seconds": 15.327457500000492
+}

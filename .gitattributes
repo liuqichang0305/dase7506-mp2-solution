@@ -2,3 +2,5 @@
 *.npz binary
 *.pdf binary
 *.png binary
+artifacts/** -text
+submission/PRE_TEST_FREEZE.json -text
