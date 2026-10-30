@@ -1,0 +1,29 @@
+{
+  "schema": "mp2-fixed-fusion-registration-v3",
+  "experiment_id": "v3_fusion_attention_realmlp_s0",
+  "round": "r08_fixed_heterogeneous_fusion",
+  "status": "registered",
+  "registered_at_utc": "2026-10-30T02:45:35.258947+00:00",
+  "purpose": "single_fixed_equal_probability_oof",
+  "hypothesis": "Prior matched train-OOF errors demonstrate reciprocal corrections; evaluate exactly this two-member equal answer-group-probability mean. No learned weights, temperatures, seed selection or label-aware routing. Oracle gain is not an expected fusion gain.",
+  "methods": [
+    "v3:v3_attention_adamw_s0",
+    "v3:v3_realmlp_robust_all_s0"
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "representative": "first_model_first_member",
+  "oof_sha256": {
+    "v3:v3_attention_adamw_s0": "943633c9ea8f4d8dae0373e8b1b9f96313b3ca015ff5f44ac00b87b82aaaf3e3",
+    "v3:v3_realmlp_robust_all_s0": "6426fc2c1ccba48a4a2fc92e64df2064ce3a3586b79666d7fff366db652622a6"
+  },
+  "gate_evidence": {
+    "path": "results/research_v3/diagnostic-r03-attention/diagnostic.json",
+    "sha256": "de8799f1a0d030dcef062e2d2d6c44f431406b7bcf6024dfe5a1dd1e6baefd9c"
+  },
+  "source_commit": "7481c4d697e5f5c219b720ba1686fe2d53687f31",
+  "new_member_training_fits": 0,
+  "budget_note": "Counts as one unique configuration in the same fixed24h/96-config budget; all members reuse verified common-fold OOF."
+}

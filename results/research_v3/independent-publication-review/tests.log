@@ -1,0 +1,17 @@
+test_actual_score_path_is_never_opened (test_verify_publication_v3.PublicationTests.test_actual_score_path_is_never_opened) ... ok
+test_anonymous_transport_scope_no_auth_and_no_redirect (test_verify_publication_v3.PublicationTests.test_anonymous_transport_scope_no_auth_and_no_redirect) ... ok
+test_attempt_and_artifact_paths_cannot_escape (test_verify_publication_v3.PublicationTests.test_attempt_and_artifact_paths_cannot_escape) ... ok
+test_changed_form_repo_commit_or_completion_rejected_before_http (test_verify_publication_v3.PublicationTests.test_changed_form_repo_commit_or_completion_rejected_before_http) ... ok
+test_changed_source_or_asset_bytes_rejected_before_http (test_verify_publication_v3.PublicationTests.test_changed_source_or_asset_bytes_rejected_before_http) ... ok
+test_corrupt_hash_size_or_redirect_never_marks_passed (test_verify_publication_v3.PublicationTests.test_corrupt_hash_size_or_redirect_never_marks_passed) ... ok
+test_git_verifies_ancestor_and_both_freeze_final_blobs_and_report (test_verify_publication_v3.PublicationTests.test_git_verifies_ancestor_and_both_freeze_final_blobs_and_report) ... ok
+test_http_404_keeps_failed_attempt_and_explicit_retry_succeeds (test_verify_publication_v3.PublicationTests.test_http_404_keeps_failed_attempt_and_explicit_retry_succeeds) ... ok
+test_missing_prerequisite_never_constructs_or_calls_http (test_verify_publication_v3.PublicationTests.test_missing_prerequisite_never_constructs_or_calls_http) ... ok
+test_report_page_count_is_measured_and_eleven_pages_fail (test_verify_publication_v3.PublicationTests.test_report_page_count_is_measured_and_eleven_pages_fail) ... ok
+test_success_exact_schema_maps_anonymous_urls_cache_and_real_pdf_pages (test_verify_publication_v3.PublicationTests.test_success_exact_schema_maps_anonymous_urls_cache_and_real_pdf_pages) ... ok
+test_timeout_and_local_git_failure_are_retained_without_false_success (test_verify_publication_v3.PublicationTests.test_timeout_and_local_git_failure_are_retained_without_false_success) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.285s
+
+OK

@@ -1,0 +1,19 @@
+test_changed_calibration_after_validation_is_rejected (test_report_inputs_v3.ReportInputTests.test_changed_calibration_after_validation_is_rejected) ... ok
+test_confidence_selector_changed_or_claimed_out_of_sample_rejected (test_report_inputs_v3.ReportInputTests.test_confidence_selector_changed_or_claimed_out_of_sample_rejected) ... ok
+test_figures_must_bind_same_inputs_and_saved_image_bytes (test_report_inputs_v3.ReportInputTests.test_figures_must_bind_same_inputs_and_saved_image_bytes) ... ok
+test_legacy_round_omitted_hash_and_aliased_fields_are_disclosed_without_rewrite (test_report_inputs_v3.ReportInputTests.test_legacy_round_omitted_hash_and_aliased_fields_are_disclosed_without_rewrite) ... ok
+test_missing_final_evidence_fails_before_aggregate_read (test_report_inputs_v3.ReportInputTests.test_missing_final_evidence_fails_before_aggregate_read) ... ok
+test_no_raw_bank_prediction_or_background_json_read (test_report_inputs_v3.ReportInputTests.test_no_raw_bank_prediction_or_background_json_read) ... ok
+test_outputs_refuse_overwrite_and_do_not_create_pdf (test_report_inputs_v3.ReportInputTests.test_outputs_refuse_overwrite_and_do_not_create_pdf) ... ok
+test_paired_validation_must_describe_same_selected_counts (test_report_inputs_v3.ReportInputTests.test_paired_validation_must_describe_same_selected_counts) ... ok
+test_pending_queue_and_missing_round_rejected (test_report_inputs_v3.ReportInputTests.test_pending_queue_and_missing_round_rejected) ... ok
+test_secondary_analysis_cost_must_match_original_summary (test_report_inputs_v3.ReportInputTests.test_secondary_analysis_cost_must_match_original_summary) ... ok
+test_seed_summary_is_descriptive_and_never_selects_better_seed (test_report_inputs_v3.ReportInputTests.test_seed_summary_is_descriptive_and_never_selects_better_seed) ... ok
+test_ten_pages_real_aggregate_contract_and_fallback (test_report_inputs_v3.ReportInputTests.test_ten_pages_real_aggregate_contract_and_fallback) ... ok
+test_typed_figure_receipt_cannot_claim_another_scope_or_source (test_report_inputs_v3.ReportInputTests.test_typed_figure_receipt_cannot_claim_another_scope_or_source) ... ok
+test_unfinished_test_and_changed_output_rejected (test_report_inputs_v3.ReportInputTests.test_unfinished_test_and_changed_output_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 2.917s
+
+OK

@@ -1,0 +1,26 @@
+{
+  "family": "tabm",
+  "width": 128,
+  "hidden": 64,
+  "dropout": 0.3,
+  "objective": "group",
+  "alpha": 0,
+  "reduction": "full",
+  "optimizer": "adamw",
+  "lr": 0.001,
+  "weight_decay": 0.001,
+  "batch_size": 128,
+  "max_epochs": 60,
+  "patience": 10,
+  "seed": 3036900957,
+  "preprocess": "standard",
+  "decoder": {
+    "mode": "group_lse",
+    "alpha": 0,
+    "tau": 1,
+    "mask": true
+  },
+  "experiment_id": "v3_tabm_k4_drop03_s0",
+  "k": 4,
+  "depth": 3
+}

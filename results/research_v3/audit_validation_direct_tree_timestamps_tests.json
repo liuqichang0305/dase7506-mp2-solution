@@ -1,0 +1,19 @@
+{
+  "returncode": 0,
+  "seconds": 18.10246680000273,
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_confirm_validation_v3.py",
+    "-v"
+  ],
+  "source_sha256_before": "bfa27aecc287989a7e05c62db47f826afdfd839f7733981ce2aca15af187b669",
+  "source_sha256_after": "bfa27aecc287989a7e05c62db47f826afdfd839f7733981ce2aca15af187b669",
+  "scope": "Direct-base process tree matching official runner; start/end UTC plus PID-bound orphan discovery, no official validation/test",
+  "limitation": "Sampling cannot reconstruct an arbitrary chain whose intermediate processes all exit before first observation; official phase workers use direct base Python and prohibit spawning."
+}

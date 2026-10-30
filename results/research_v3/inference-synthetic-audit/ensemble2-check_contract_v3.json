@@ -1,0 +1,71 @@
+{
+  "n": 137,
+  "kind": "ensemble",
+  "checks": {
+    "python_int_length_range": true,
+    "arbitrary_n_batch_independence": true,
+    "id_independence": true,
+    "question_order": true,
+    "determinism": true,
+    "member_probability_average_and_actual_chosen_confidence": true,
+    "parseability_mask_and_all_none_fallback": true,
+    "reject_nonfinite": true,
+    "reject_wrong_shape": true,
+    "reject_misaligned": true,
+    "missing_bundle_rejected": true,
+    "offline_no_references_or_forbidden_access": true,
+    "numpy_only_no_torch_import": true
+  },
+  "isolation": "Separate process containing copied code, frozen numeric assets and candidate inputs only; no official data/references. Audit hook denies external reads, writes, network and subprocesses.",
+  "all_unparseable_rows": [
+    0
+  ],
+  "candidate_permutation": {
+    "raw_score_equivariance": true,
+    "mapped_choice_mismatches": 2,
+    "tie_rows": 2,
+    "all_mismatches_tie_explained": true,
+    "note": "Ties use actual averaged group probabilities and first-model/first-member representative scores; positional all-None fallback is exempt.",
+    "rtol": 2e-05,
+    "atol": 2e-06
+  },
+  "rejected_operations": [],
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+      "version": "0.3.34.106.0",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ],
+  "configured_pool_threads_total": 1,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "OMP_THREAD_LIMIT": "1"
+  },
+  "status": "passed",
+  "input_source": "synthetic",
+  "reference_files_read": false,
+  "timestamp_utc": "2026-10-29T17:06:54.516932+00:00",
+  "rejected_input_reads": [],
+  "checkpoint": "C:\\Users\\Liuye\\AppData\\Local\\Temp\\mp2-v3-synthetic-assets-j0m2b08z\\ensemble2",
+  "assets_sha256": {
+    "config.json": "650bed51b47ec3fefcb4db4fdf2aea79219bcc535bc04ff7ce97af1885b238b9",
+    "member0\\config.json": "d8ac9e7c01cee9f0bd687a325469efee07d37ee1b0276fe98e3e9b2ec43982b7",
+    "member0\\weights.npz": "36553242a8f95b5f0e2bc74ceb239d1de4af64428b7ba5730badd8f5e485f49f",
+    "member1\\config.json": "fb87c2077abb6c56ded52ef29dcbb981da5ce80d3e9f7ab60b545bc08f862cd5",
+    "member1\\weights.npz": "29e102b2cfa78fae88705ac97e4e26d6e09d7ce7de531d18e0c55efd704fed2a"
+  },
+  "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+  "method_sha256": "141e9616628503b6f19865799e1c393f6e7bed279dbb6115aeb5240f4f5da113",
+  "command": "\"C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe\" \"C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\code\\tools\\check_contract_v3.py\" --checkpoint C:\\Users\\Liuye\\AppData\\Local\\Temp\\mp2-v3-synthetic-assets-j0m2b08z\\ensemble2 --input-source synthetic --output results\\research_v3\\inference-synthetic-audit\\ensemble2-check_contract_v3.json"
+}

@@ -1,0 +1,9 @@
+{
+  "method": "PATCH",
+  "path": "/repos/liuqichang0305/dase7506-mp2-solution/pulls/3",
+  "data": {
+    "base": "main",
+    "title": "Add bounded V3 research with TabM, RealMLP and resumable train-only evaluation",
+    "body": "This draft extends the reviewed V2 work, now merged through #2, with a bounded train-only research campaign. It adds compact TabM and RealMLP-inspired models, AdamW/Muon/EMA controls, exact epoch recovery, immutable provenance and Windows process-tree budget enforcement. Original methods, frozen assets, logs and submission history are preserved.\n\nTen new configurations have completed the same nested three question folds. Best new TabM k8 scores 1619/2114 hard and 4260/4755 overall; robust-all RealMLP scores 1611/2114 and 4252/4755. Both remain below the verified historical Attention reference, 1687/2114 hard. The complete R03 table records all 29 historical/new configurations, actual costs, assets, fold variation and paired intervals. Attention optimizer/capacity controls and registered follow-up hypotheses remain ongoing. No new validation or test score, or improved rank, is claimed.\n\nActual full-train-input Torch/NumPy export checks preserve all 4755 choices for TabM k8 and robust-all RealMLP. The TabM inference contract passed arbitrary-N/order/ID and offline-reference-isolation checks. Synthetic model/loss/optimizer/resume/scheduler tests and independent boundary reviews retain both failures and repairs.\n\nAt most two new validation finalists will be locked after search closure. The uniquely selected candidate must then pass full resource checks, independent internal AI review and fresh public-checkout/new-environment reproduction before one final official test and authorized course submission. The fixed 24-hour research clock is not reset on resume. Final results, report, immutable source/assets and review evidence will replace this progress description before the draft is marked ready."
+  }
+}

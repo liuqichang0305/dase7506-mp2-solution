@@ -1,0 +1,1538 @@
+{
+  "utc": "2026-10-29T18:05:43.189738+00:00",
+  "source_sha256": "48ef920df75ef04f201a65652ed1dacc61f5d4da1f33a429f9e8de549fb19a92",
+  "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+  "rows": [
+    {
+      "version": "research_v2",
+      "experiment_id": "attention_regularized_s0",
+      "family": "attention",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4328,
+      "n": 4755,
+      "accuracy": 91.01997896950579,
+      "hard_correct": 1687,
+      "hard_n": 2114,
+      "hard_accuracy": 79.80132450331125,
+      "hard_fold_mean": 79.80140500752204,
+      "hard_fold_sd": 0.724372306222754,
+      "hard_fold_accuracies": [
+        80.42553191489363,
+        79.00709219858156,
+        79.9715909090909
+      ],
+      "single_correct": 387,
+      "single_n": 711,
+      "training_seconds": 133.29731520000132,
+      "numeric_asset_bytes": 1125124,
+      "parameters": 273025,
+      "summary_sha256": "822bba4dcdd4253744303ea650551fcd80780aeacce1f3b8a8bca475c612f497",
+      "oof_sha256": "ae5737496f46d725181382ec3c2019d483a559e25b004f9546fbe8fc5d416263",
+      "config": {
+        "experiment_id": "attention_regularized_s0",
+        "family": "attention",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 8,
+        "seed": 3036900957,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "heads": 4
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "attention_hard_ablation",
+      "family": "attention",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4321,
+      "n": 4755,
+      "accuracy": 90.87276550998948,
+      "hard_correct": 1680,
+      "hard_n": 2114,
+      "hard_accuracy": 79.47019867549669,
+      "hard_fold_mean": 79.47043574038256,
+      "hard_fold_sd": 0.8927422215050524,
+      "hard_fold_accuracies": [
+        80.0,
+        78.43971631205675,
+        79.9715909090909
+      ],
+      "single_correct": 386,
+      "single_n": 711,
+      "training_seconds": 133.29358649999813,
+      "numeric_asset_bytes": 1125124,
+      "parameters": 273025,
+      "summary_sha256": "3d1183e6c4d9c5b8038c2df585c2d26f87cebf56563dbbcd03c6c80f1fb7de31",
+      "oof_sha256": "f99a23f3026d239cde966cdf9b83c26af10bd8ab9c6ee3c5da7608ce0ab07740",
+      "config": {
+        "experiment_id": "attention_hard_ablation",
+        "family": "attention",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "hard",
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 8,
+        "seed": 3036900957,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "heads": 4,
+        "scale_regularization": true
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "attention_regularized_s1",
+      "family": "attention",
+      "seed": 3036900958,
+      "status": "completed",
+      "correct": 4319,
+      "n": 4755,
+      "accuracy": 90.83070452155626,
+      "hard_correct": 1678,
+      "hard_n": 2114,
+      "hard_accuracy": 79.3755912961211,
+      "hard_fold_mean": 79.37587309262842,
+      "hard_fold_sd": 0.715979233754394,
+      "hard_fold_accuracies": [
+        79.57446808510639,
+        78.58156028368795,
+        79.9715909090909
+      ],
+      "single_correct": 371,
+      "single_n": 711,
+      "training_seconds": 1098.3893508,
+      "numeric_asset_bytes": 1125124,
+      "parameters": 273025,
+      "summary_sha256": "df71e375b693dad0c5b038ad17a68739741d10a25188dc85cceff8b175c8da1b",
+      "oof_sha256": "af9478f0864d71e4ec89381dba2a047630d546e8f4f83a83a8ec96894ac07b1d",
+      "config": {
+        "experiment_id": "attention_regularized_s1",
+        "family": "attention",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 8,
+        "seed": 3036900958,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "heads": 4
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "deepsets_regularized_s1",
+      "family": "deepsets",
+      "seed": 3036900958,
+      "status": "completed",
+      "correct": 4313,
+      "n": 4755,
+      "accuracy": 90.70452155625657,
+      "hard_correct": 1672,
+      "hard_n": 2114,
+      "hard_accuracy": 79.09176915799432,
+      "hard_fold_mean": 79.09151353965184,
+      "hard_fold_sd": 1.0339552521466688,
+      "hard_fold_accuracies": [
+        80.28368794326242,
+        78.43971631205675,
+        78.55113636363636
+      ],
+      "single_correct": 372,
+      "single_n": 711,
+      "training_seconds": 59.90083009999944,
+      "numeric_asset_bytes": 960772,
+      "parameters": 231937,
+      "summary_sha256": "a35acf7d0924c8884a7b22c6ca1b1531ee0744b058cc0917ef57a712be91e88c",
+      "oof_sha256": "c788ca3c801d2efa72a35c52736db70c308f7eab9cd323dfa64d4f0d4ca40e97",
+      "config": {
+        "experiment_id": "deepsets_regularized_s1",
+        "family": "deepsets",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 8,
+        "seed": 3036900958,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        }
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "attention_regularized_s2",
+      "family": "attention",
+      "seed": 3036900959,
+      "status": "completed",
+      "correct": 4312,
+      "n": 4755,
+      "accuracy": 90.68349106203996,
+      "hard_correct": 1671,
+      "hard_n": 2114,
+      "hard_accuracy": 79.04446546830653,
+      "hard_fold_mean": 79.04490382548893,
+      "hard_fold_sd": 1.389864489662699,
+      "hard_fold_accuracies": [
+        79.71631205673759,
+        77.4468085106383,
+        79.9715909090909
+      ],
+      "single_correct": 372,
+      "single_n": 711,
+      "training_seconds": 60.207461500000136,
+      "numeric_asset_bytes": 1125124,
+      "parameters": 273025,
+      "summary_sha256": "f5eb0ffaa01236e875d0bd74bc9f77d31337460af57868c232e36d6073569b14",
+      "oof_sha256": "66c73785f4f863755f574e23511fdf7766030ac1405b278fcb10dc4502afe56f",
+      "config": {
+        "experiment_id": "attention_regularized_s2",
+        "family": "attention",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 8,
+        "seed": 3036900959,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "heads": 4
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "attention_group_s0",
+      "family": "attention",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4309,
+      "n": 4755,
+      "accuracy": 90.62039957939012,
+      "hard_correct": 1668,
+      "hard_n": 2114,
+      "hard_accuracy": 78.90255439924314,
+      "hard_fold_mean": 78.90245540511496,
+      "hard_fold_sd": 1.8528567004310386,
+      "hard_fold_accuracies": [
+        80.85106382978722,
+        77.16312056737588,
+        78.69318181818183
+      ],
+      "single_correct": 382,
+      "single_n": 711,
+      "training_seconds": 41.68935790000069,
+      "numeric_asset_bytes": 1125124,
+      "parameters": 273025,
+      "summary_sha256": "04c33294e762ffdb486f07ce8adbf0b09e06cb6ebd4ee160eafd1d0141275c2c",
+      "oof_sha256": "4a117f8843e7d336b36fc027b3363d7fc31fe8ab65a472bade0dcf3414c331d0",
+      "config": {
+        "experiment_id": "attention_group_s0",
+        "family": "attention",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.1,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 8,
+        "seed": 3036900957,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "heads": 4
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "deepsets_regularized_s2",
+      "family": "deepsets",
+      "seed": 3036900959,
+      "status": "completed",
+      "correct": 4308,
+      "n": 4755,
+      "accuracy": 90.59936908517349,
+      "hard_correct": 1667,
+      "hard_n": 2114,
+      "hard_accuracy": 78.85525070955535,
+      "hard_fold_mean": 78.85477111540942,
+      "hard_fold_sd": 1.0855235268649088,
+      "hard_fold_accuracies": [
+        80.0,
+        78.72340425531915,
+        77.8409090909091
+      ],
+      "single_correct": 375,
+      "single_n": 711,
+      "training_seconds": 59.6540313000005,
+      "numeric_asset_bytes": 960772,
+      "parameters": 231937,
+      "summary_sha256": "ba4f6e2255c3268cdfb49083b36e6046f9f305cc95e93bf9c160f695b2569116",
+      "oof_sha256": "8f646e8dea58ff4e5c73c609a4cf213f931ae216de1d718c2f28415fa6122b86",
+      "config": {
+        "experiment_id": "deepsets_regularized_s2",
+        "family": "deepsets",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 8,
+        "seed": 3036900959,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        }
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "deepsets_no_context",
+      "family": "deepsets",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4296,
+      "n": 4755,
+      "accuracy": 90.34700315457414,
+      "hard_correct": 1655,
+      "hard_n": 2114,
+      "hard_accuracy": 78.28760643330179,
+      "hard_fold_mean": 78.28732806791318,
+      "hard_fold_sd": 0.8733330393395493,
+      "hard_fold_accuracies": [
+        79.29078014184398,
+        77.87234042553192,
+        77.69886363636364
+      ],
+      "single_correct": 373,
+      "single_n": 711,
+      "training_seconds": 86.94164140000248,
+      "numeric_asset_bytes": 698628,
+      "parameters": 166401,
+      "summary_sha256": "2cbf40795a12b38848d37b53040651bb23e79a7635decaf0e8407c3988cceeae",
+      "oof_sha256": "0042683b2e56dad9f4269ab11d05531e52ce71a8536ff535e7de32c34d542bd7",
+      "config": {
+        "experiment_id": "deepsets_no_context",
+        "family": "deepsets",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 8,
+        "seed": 3036900957,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "context": false
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "deepsets_regularized_s0",
+      "family": "deepsets",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4295,
+      "n": 4755,
+      "accuracy": 90.32597266035752,
+      "hard_correct": 1654,
+      "hard_n": 2114,
+      "hard_accuracy": 78.240302743614,
+      "hard_fold_mean": 78.23991242209327,
+      "hard_fold_sd": 0.9581575083516943,
+      "hard_fold_accuracies": [
+        79.29078014184398,
+        78.01418439716312,
+        77.41477272727273
+      ],
+      "single_correct": 360,
+      "single_n": 711,
+      "training_seconds": 117.76401540000006,
+      "numeric_asset_bytes": 960772,
+      "parameters": 231937,
+      "summary_sha256": "a961c3df4dd3a8a549cfc578ad4f23c90f592d31f77aa225dc65ee9293b64b6b",
+      "oof_sha256": "81b290b538d261e30f267c1b0c2c7e5487c4248e93b8a94bd902678a106d4b99",
+      "config": {
+        "experiment_id": "deepsets_regularized_s0",
+        "family": "deepsets",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 8,
+        "seed": 3036900957,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        }
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "deepsets_group_s0",
+      "family": "deepsets",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4289,
+      "n": 4755,
+      "accuracy": 90.19978969505783,
+      "hard_correct": 1648,
+      "hard_n": 2114,
+      "hard_accuracy": 77.95648060548723,
+      "hard_fold_mean": 77.95642596174511,
+      "hard_fold_sd": 1.1391530612806684,
+      "hard_fold_accuracies": [
+        79.14893617021276,
+        76.87943262411348,
+        77.8409090909091
+      ],
+      "single_correct": 362,
+      "single_n": 711,
+      "training_seconds": 34.265074100001584,
+      "numeric_asset_bytes": 960772,
+      "parameters": 231937,
+      "summary_sha256": "b88ef44a8446a3212914b50701836a0652261c6eacbc6f8694e5349c6bce6941",
+      "oof_sha256": "7a66639c9e8a72915fe7f5edfe331bf33b2a9824a9dc1364dc894f36f25e98ef",
+      "config": {
+        "experiment_id": "deepsets_group_s0",
+        "family": "deepsets",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.1,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 8,
+        "seed": 3036900957,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        }
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_tabm_k8_s0",
+      "family": "tabm",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4260,
+      "n": 4755,
+      "accuracy": 89.58990536277602,
+      "hard_correct": 1619,
+      "hard_n": 2114,
+      "hard_accuracy": 76.58467360454115,
+      "hard_fold_mean": 76.58486460348162,
+      "hard_fold_sd": 0.7278034759178822,
+      "hard_fold_accuracies": [
+        75.74468085106383,
+        77.02127659574468,
+        76.98863636363636
+      ],
+      "single_correct": 319,
+      "single_n": 711,
+      "training_seconds": 321.9080899999972,
+      "numeric_asset_bytes": 1327936,
+      "parameters": 322696,
+      "summary_sha256": "221dc465e5c0f845b370676865029e0e4459e885cca7a0ebfb265eb24cfca4c3",
+      "oof_sha256": "45a291502dde5cdf678c2274eb66da62ad355e637f3b3c2633308ccb8f770232",
+      "config": {
+        "family": "tabm",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.1,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "optimizer": "adamw",
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 10,
+        "seed": 3036900957,
+        "preprocess": "standard",
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "experiment_id": "v3_tabm_k8_s0",
+        "k": 8,
+        "depth": 3
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0.0,
+        "tau": 1.0,
+        "mask": true
+      },
+      "paired_vs_v2_attention": {
+        "hard_delta_pp": -3.216650898770104,
+        "hard_bootstrap_95pct": [
+          -4.588457899716178,
+          -1.7975402081362346
+        ],
+        "full_delta_pp": -1.4300736067297581,
+        "full_bootstrap_95pct": [
+          -2.0399579390115665,
+          -0.7991587802313355
+        ]
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "mlp_listwise_s0",
+      "family": "mlp",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4253,
+      "n": 4755,
+      "accuracy": 89.44269190325973,
+      "hard_correct": 1612,
+      "hard_n": 2114,
+      "hard_accuracy": 76.25354777672658,
+      "hard_fold_mean": 76.25423114119923,
+      "hard_fold_sd": 1.2530970483708581,
+      "hard_fold_accuracies": [
+        75.46099290780141,
+        75.60283687943262,
+        77.69886363636364
+      ],
+      "single_correct": 333,
+      "single_n": 711,
+      "training_seconds": 25.850140100003046,
+      "numeric_asset_bytes": 1123588,
+      "parameters": 272641,
+      "summary_sha256": "52b0437fb41bac3dda5909e48bd3e6d8f70e1244a1b6097f6a03f7a6162b08df",
+      "oof_sha256": "30cdc4f6b1e474d4d070d9c3bdc578f19557279e164aaf0be2fc1261b961a3cd",
+      "config": {
+        "experiment_id": "mlp_listwise_s0",
+        "family": "mlp",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.1,
+        "objective": "listwise",
+        "alpha": 0,
+        "reduction": "full",
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 8,
+        "seed": 3036900957,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        }
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_tabm_k4_s0",
+      "family": "tabm",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4247,
+      "n": 4755,
+      "accuracy": 89.31650893796004,
+      "hard_correct": 1606,
+      "hard_n": 2114,
+      "hard_accuracy": 75.96972563859981,
+      "hard_fold_mean": 75.97000591016548,
+      "hard_fold_sd": 0.9337602645122972,
+      "hard_fold_accuracies": [
+        74.8936170212766,
+        76.45390070921985,
+        76.5625
+      ],
+      "single_correct": 322,
+      "single_n": 711,
+      "training_seconds": 156.9972017000182,
+      "numeric_asset_bytes": 1276464,
+      "parameters": 309828,
+      "summary_sha256": "44970107d673e0d26e9855b66871360947521f5dad307c4e57d4c1d50b7e534c",
+      "oof_sha256": "32e428cbda1b57c79b8bb75cf58d13940280c70d50c3f7ec740939a54d3c99a4",
+      "config": {
+        "family": "tabm",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.1,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "optimizer": "adamw",
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 10,
+        "seed": 3036900957,
+        "preprocess": "standard",
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "experiment_id": "v3_tabm_k4_s0",
+        "k": 4,
+        "depth": 3
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0.0,
+        "tau": 1.0,
+        "mask": true
+      },
+      "paired_vs_v2_attention": {
+        "hard_delta_pp": -3.8315988647114474,
+        "hard_bootstrap_95pct": [
+          -5.298013245033113,
+          -2.3178807947019866
+        ],
+        "full_delta_pp": -1.7034700315457414,
+        "full_bootstrap_95pct": [
+          -2.355415352260778,
+          -1.0304942166140905
+        ]
+      }
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_tabm_k4_drop03_s0",
+      "family": "tabm",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4246,
+      "n": 4755,
+      "accuracy": 89.29547844374342,
+      "hard_correct": 1605,
+      "hard_n": 2114,
+      "hard_accuracy": 75.92242194891202,
+      "hard_fold_mean": 75.92232162045991,
+      "hard_fold_sd": 0.7326191483014667,
+      "hard_fold_accuracies": [
+        75.31914893617021,
+        76.73758865248227,
+        75.71022727272727
+      ],
+      "single_correct": 324,
+      "single_n": 711,
+      "training_seconds": 184.95588179999322,
+      "numeric_asset_bytes": 1276464,
+      "parameters": 309828,
+      "summary_sha256": "1fe37967cf24b17a29349e7b2fbfebafe6770298c41a68a5dab29ad8d64c7dbc",
+      "oof_sha256": "f6efcaa39ed811743c8e6ca18ca54884e8534fd69792c961222baecfeaf6b502",
+      "config": {
+        "family": "tabm",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "optimizer": "adamw",
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 10,
+        "seed": 3036900957,
+        "preprocess": "standard",
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "experiment_id": "v3_tabm_k4_drop03_s0",
+        "k": 4,
+        "depth": 3
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0.0,
+        "tau": 1.0,
+        "mask": true
+      },
+      "paired_vs_v2_attention": {
+        "hard_delta_pp": -3.878902554399243,
+        "hard_bootstrap_95pct": [
+          -5.298013245033113,
+          -2.3651844843897827
+        ],
+        "full_delta_pp": -1.7245005257623556,
+        "full_bootstrap_95pct": [
+          -2.376445846477392,
+          -1.0725552050473186
+        ]
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "mlp_capacity_s0",
+      "family": "mlp",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4244,
+      "n": 4755,
+      "accuracy": 89.2534174553102,
+      "hard_correct": 1603,
+      "hard_n": 2114,
+      "hard_accuracy": 75.82781456953643,
+      "hard_fold_mean": 75.82822909950569,
+      "hard_fold_sd": 0.8376729477447271,
+      "hard_fold_accuracies": [
+        75.0354609929078,
+        75.74468085106383,
+        76.70454545454545
+      ],
+      "single_correct": 330,
+      "single_n": 711,
+      "training_seconds": 42.775077899999815,
+      "numeric_asset_bytes": 961784,
+      "parameters": 232190,
+      "summary_sha256": "e7a0d3fa2a118dfc01d769ad18247d8647ba08f35aa15fa1dab9da4ce6b39125",
+      "oof_sha256": "c8efc14ba19f53254ae6ab7a7125ac10403a8d88d259ae80d8a1d23993a490d0",
+      "config": {
+        "experiment_id": "mlp_capacity_s0",
+        "family": "mlp",
+        "width": 109,
+        "hidden": 64,
+        "dropout": 0.1,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 8,
+        "seed": 3036900957,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        }
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "linear_group_a0",
+      "family": "linear",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4242,
+      "n": 4755,
+      "accuracy": 89.21135646687696,
+      "hard_correct": 1601,
+      "hard_n": 2114,
+      "hard_accuracy": 75.73320719016084,
+      "hard_fold_mean": 75.73326348592308,
+      "hard_fold_sd": 1.210070912162273,
+      "hard_fold_accuracies": [
+        74.46808510638297,
+        76.87943262411348,
+        75.85227272727273
+      ],
+      "single_correct": 312,
+      "single_n": 711,
+      "training_seconds": 14.332354699998177,
+      "numeric_asset_bytes": 49544,
+      "parameters": 2065,
+      "summary_sha256": "493bfb8833ebf12c1860df5b93802ea0e0befbe0f55e6df3c0038ad826efc3bb",
+      "oof_sha256": "8b0f75cf341e594f05e89c49e3107fa7ceebca4f8f07097aa2cf762557c5cef6",
+      "config": {
+        "experiment_id": "linear_group_a0",
+        "family": "linear",
+        "objective": "group",
+        "reduction": "full",
+        "l2": 0.1,
+        "seed": 3036900957,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "alpha": 0
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "linear_group_hard",
+      "family": "linear",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4242,
+      "n": 4755,
+      "accuracy": 89.21135646687696,
+      "hard_correct": 1601,
+      "hard_n": 2114,
+      "hard_accuracy": 75.73320719016084,
+      "hard_fold_mean": 75.73326348592308,
+      "hard_fold_sd": 1.210070912162273,
+      "hard_fold_accuracies": [
+        74.46808510638297,
+        76.87943262411348,
+        75.85227272727273
+      ],
+      "single_correct": 312,
+      "single_n": 711,
+      "training_seconds": 12.990395599999829,
+      "numeric_asset_bytes": 49544,
+      "parameters": 2065,
+      "summary_sha256": "0b6be27102e5000e78780eb0903aade72698a7bec72a6183ec348ee0a38d3c77",
+      "oof_sha256": "999a5c1f0de98d85de8fd6e7e7fae531a1b734bd1fa5743e8439f3a896b4e205",
+      "config": {
+        "experiment_id": "linear_group_hard",
+        "family": "linear",
+        "objective": "group",
+        "reduction": "hard",
+        "l2": 0.1,
+        "seed": 3036900957,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "alpha": 0,
+        "scale_regularization": true
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_mlp_ema_s0",
+      "family": "mlp",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4242,
+      "n": 4755,
+      "accuracy": 89.21135646687696,
+      "hard_correct": 1601,
+      "hard_n": 2114,
+      "hard_accuracy": 75.73320719016084,
+      "hard_fold_mean": 75.73265903718031,
+      "hard_fold_sd": 1.1528315064766572,
+      "hard_fold_accuracies": [
+        75.74468085106383,
+        76.87943262411348,
+        74.57386363636364
+      ],
+      "single_correct": 316,
+      "single_n": 711,
+      "training_seconds": 73.267196899993,
+      "numeric_asset_bytes": 1127716,
+      "parameters": 272641,
+      "summary_sha256": "1c9fe76e3a445049395c5893199a8f1b6945a732f73059af44e8b4c1188b8b90",
+      "oof_sha256": "473c880ed7cbc09ee59f1f53eac42b41993f12804225b536246f81943f867fc0",
+      "config": {
+        "family": "mlp",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "optimizer": "adamw",
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 10,
+        "seed": 3036900957,
+        "preprocess": "standard",
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "experiment_id": "v3_mlp_ema_s0",
+        "ema_decay": 0.99
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "paired_vs_v2_attention": {
+        "hard_delta_pp": -4.068117313150426,
+        "hard_bootstrap_95pct": [
+          -5.581835383159887,
+          -2.554399243140965
+        ],
+        "full_delta_pp": -1.8086225026288119,
+        "full_bootstrap_95pct": [
+          -2.481598317560463,
+          -1.135646687697161
+        ]
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "resmlp_group_s0",
+      "family": "resmlp",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4241,
+      "n": 4755,
+      "accuracy": 89.19032597266036,
+      "hard_correct": 1600,
+      "hard_n": 2114,
+      "hard_accuracy": 75.68590350047305,
+      "hard_fold_mean": 75.68604932301741,
+      "hard_fold_sd": 0.6918789206313901,
+      "hard_fold_accuracies": [
+        76.17021276595744,
+        74.8936170212766,
+        75.99431818181817
+      ],
+      "single_correct": 319,
+      "single_n": 711,
+      "training_seconds": 27.359151000002385,
+      "numeric_asset_bytes": 1355524,
+      "parameters": 330625,
+      "summary_sha256": "02c12649b1a88cea02a59bb11ccb0f41e08c0f0a9c6b2723eccbb117a91f603f",
+      "oof_sha256": "08557cdc51f4457406aa0759cb208a7d3fc129da5116c31545f12fec7515c651",
+      "config": {
+        "experiment_id": "resmlp_group_s0",
+        "family": "resmlp",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.1,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 8,
+        "seed": 3036900957,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "blocks": 1
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "mlp_group_s0",
+      "family": "mlp",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4240,
+      "n": 4755,
+      "accuracy": 89.16929547844374,
+      "hard_correct": 1599,
+      "hard_n": 2114,
+      "hard_accuracy": 75.63859981078525,
+      "hard_fold_mean": 75.63836503331184,
+      "hard_fold_sd": 0.5150035847958633,
+      "hard_fold_accuracies": [
+        75.60283687943262,
+        76.17021276595744,
+        75.14204545454545
+      ],
+      "single_correct": 342,
+      "single_n": 711,
+      "training_seconds": 32.1143697000025,
+      "numeric_asset_bytes": 1123588,
+      "parameters": 272641,
+      "summary_sha256": "707e00af10e7247e41ad245fca9996d240e8789072cfdb80a14702a6a4d0b5eb",
+      "oof_sha256": "fb8e6c38705072cb91ac93d7f753e7971cd2bb2d792c4ab13799ce779524cef6",
+      "config": {
+        "experiment_id": "mlp_group_s0",
+        "family": "mlp",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.1,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 8,
+        "seed": 3036900957,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        }
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_mlp_muon001_s0",
+      "family": "mlp",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4239,
+      "n": 4755,
+      "accuracy": 89.14826498422713,
+      "hard_correct": 1598,
+      "hard_n": 2114,
+      "hard_accuracy": 75.59129612109746,
+      "hard_fold_mean": 75.59141951429187,
+      "hard_fold_sd": 0.48177869362899844,
+      "hard_fold_accuracies": [
+        75.0354609929078,
+        75.88652482269504,
+        75.85227272727273
+      ],
+      "single_correct": 310,
+      "single_n": 711,
+      "training_seconds": 1078.9769142000005,
+      "numeric_asset_bytes": 1127716,
+      "parameters": 272641,
+      "summary_sha256": "99a78dd9d01098ed80aba3e243652eb26e9da02d1c15421e55eaffe749b1efef",
+      "oof_sha256": "bc8d3671425d8f03f293abb840e5119ffae2012d5b89b280dea7498e9931ce01",
+      "config": {
+        "family": "mlp",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "optimizer": "muon",
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 10,
+        "seed": 3036900957,
+        "preprocess": "standard",
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "experiment_id": "v3_mlp_muon001_s0",
+        "muon_lr": 0.01
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "paired_vs_v2_attention": {
+        "hard_delta_pp": -4.210028382213812,
+        "hard_bootstrap_95pct": [
+          -5.676442762535478,
+          -2.7424314096499702
+        ],
+        "full_delta_pp": -1.871713985278654,
+        "full_bootstrap_95pct": [
+          -2.544689800210305,
+          -1.2197686645636172
+        ]
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "linear_group_a0p5",
+      "family": "linear",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4236,
+      "n": 4755,
+      "accuracy": 89.08517350157729,
+      "hard_correct": 1595,
+      "hard_n": 2114,
+      "hard_accuracy": 75.44938505203406,
+      "hard_fold_mean": 75.44957554266067,
+      "hard_fold_sd": 0.606704411060503,
+      "hard_fold_accuracies": [
+        74.7517730496454,
+        75.74468085106383,
+        75.85227272727273
+      ],
+      "single_correct": 322,
+      "single_n": 711,
+      "training_seconds": 14.54017279999971,
+      "numeric_asset_bytes": 49544,
+      "parameters": 2065,
+      "summary_sha256": "33b2f7857edce01cdef0bb6bcb4bd71b6fc426f94ffed2440581fe6578c22a4e",
+      "oof_sha256": "ee222848f3acb37db9fd585d4ba4ee23b992ea60d4d41a6895be22aa21f8dc9e",
+      "config": {
+        "experiment_id": "linear_group_a0p5",
+        "family": "linear",
+        "objective": "group",
+        "reduction": "full",
+        "l2": 0.1,
+        "seed": 3036900957,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0.5,
+          "tau": 1,
+          "mask": true
+        },
+        "alpha": 0.5
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0.5,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_mlp_adamw_s0",
+      "family": "mlp",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4233,
+      "n": 4755,
+      "accuracy": 89.02208201892743,
+      "hard_correct": 1592,
+      "hard_n": 2114,
+      "hard_accuracy": 75.30747398297068,
+      "hard_fold_mean": 75.30705996131529,
+      "hard_fold_sd": 1.0380409127947672,
+      "hard_fold_accuracies": [
+        75.0354609929078,
+        76.45390070921985,
+        74.43181818181817
+      ],
+      "single_correct": 317,
+      "single_n": 711,
+      "training_seconds": 49.46507669998391,
+      "numeric_asset_bytes": 1127716,
+      "parameters": 272641,
+      "summary_sha256": "aff3e3af6a62b8ef126a8c4eb7281e29e902b351d017c24a3e08379600886030",
+      "oof_sha256": "943fa7317056fac8ac2bf6672ee95f8b0b9a544567e531ac46ba039d3ab9605f",
+      "config": {
+        "family": "mlp",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "optimizer": "adamw",
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 10,
+        "seed": 3036900957,
+        "preprocess": "standard",
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "experiment_id": "v3_mlp_adamw_s0"
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "paired_vs_v2_attention": {
+        "hard_delta_pp": -4.493850520340587,
+        "hard_bootstrap_95pct": [
+          -6.007568590350047,
+          -2.980132450331126
+        ],
+        "full_delta_pp": -1.9978969505783386,
+        "full_bootstrap_95pct": [
+          -2.671398527865405,
+          -1.3459516298633016
+        ]
+      }
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_mlp_muon002_s0",
+      "family": "mlp",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4230,
+      "n": 4755,
+      "accuracy": 88.95899053627761,
+      "hard_correct": 1589,
+      "hard_n": 2114,
+      "hard_accuracy": 75.16556291390728,
+      "hard_fold_mean": 75.16555179454116,
+      "hard_fold_sd": 0.1432973248288635,
+      "hard_fold_accuracies": [
+        75.31914893617021,
+        75.0354609929078,
+        75.14204545454545
+      ],
+      "single_correct": 304,
+      "single_n": 711,
+      "training_seconds": 789.9752761999989,
+      "numeric_asset_bytes": 1127716,
+      "parameters": 272641,
+      "summary_sha256": "62ddfa4ea47c53a81f1508376fa10cef075b9ee3a31bcb064317b8997bd783b6",
+      "oof_sha256": "382d81537ab886a6daed051a6139426c13ca88339f17a97af1d6f5e7021f9718",
+      "config": {
+        "family": "mlp",
+        "width": 128,
+        "hidden": 64,
+        "dropout": 0.3,
+        "objective": "group",
+        "alpha": 0,
+        "reduction": "full",
+        "optimizer": "muon",
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "max_epochs": 60,
+        "patience": 10,
+        "seed": 3036900957,
+        "preprocess": "standard",
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "experiment_id": "v3_mlp_muon002_s0",
+        "muon_lr": 0.02
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "paired_vs_v2_attention": {
+        "hard_delta_pp": -4.635761589403973,
+        "hard_bootstrap_95pct": [
+          -6.19678334910123,
+          -3.0274361400189216
+        ],
+        "full_delta_pp": -2.060988433228181,
+        "full_bootstrap_95pct": [
+          -2.797055730809674,
+          -1.3459516298633016
+        ]
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "linear_group_a1",
+      "family": "linear",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4229,
+      "n": 4755,
+      "accuracy": 88.937960042061,
+      "hard_correct": 1588,
+      "hard_n": 2114,
+      "hard_accuracy": 75.11825922421949,
+      "hard_fold_mean": 75.11847195357832,
+      "hard_fold_sd": 0.48182784362646247,
+      "hard_fold_accuracies": [
+        74.60992907801418,
+        75.177304964539,
+        75.56818181818183
+      ],
+      "single_correct": 327,
+      "single_n": 711,
+      "training_seconds": 13.01044759999968,
+      "numeric_asset_bytes": 49544,
+      "parameters": 2065,
+      "summary_sha256": "5d7abf9c438ab36eaeff0a4d5d30b91a7f7e44f8832fa8f8cf165f89e3b4410d",
+      "oof_sha256": "19902c26e92155eb54ce329fff48a9d15226c4135e46a4bb86e7dd50b3f40644",
+      "config": {
+        "experiment_id": "linear_group_a1",
+        "family": "linear",
+        "objective": "group",
+        "reduction": "full",
+        "l2": 0.1,
+        "seed": 3036900957,
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 1,
+          "tau": 1,
+          "mask": true
+        },
+        "alpha": 1
+      },
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 1,
+        "tau": 1,
+        "mask": true
+      }
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "linear_original",
+      "family": "linear",
+      "seed": 3036900957,
+      "status": "completed",
+      "correct": 4213,
+      "n": 4755,
+      "accuracy": 88.60147213459516,
+      "hard_correct": 1576,
+      "hard_n": 2114,
+      "hard_accuracy": 74.55061494796594,
+      "hard_fold_mean": 74.55096174511068,
+      "hard_fold_sd": 0.650560136034229,
+      "hard_fold_accuracies": [
+        74.32624113475177,
+        74.04255319148936,
+        75.2840909090909
+      ],
+      "single_correct": 350,
+      "single_n": 711,
+      "training_seconds": 11.718261099998927,
+      "numeric_asset_bytes": 49544,
+      "parameters": 2065,
+      "summary_sha256": "d13a5451e2f637f028abc48a3019e7d75ce8d5feb3286b067316ce03ed9b8aa7",
+      "oof_sha256": "fc4d464d9103b437980eb645261e3e25a774376abb9ad3bea7f4125749d010f8",
+      "config": {
+        "experiment_id": "linear_original",
+        "family": "linear",
+        "objective": "listwise",
+        "reduction": "full",
+        "l2": 0.1,
+        "seed": 3036900957,
+        "decoder": {
+          "mode": "candidate_max",
+          "alpha": 0,
+          "tau": 1,
+          "mask": false
+        }
+      },
+      "decoder": {
+        "mode": "candidate_max",
+        "alpha": 0,
+        "tau": 1,
+        "mask": false
+      }
+    }
+  ],
+  "noncomplete_jobs": [
+    {
+      "experiment_id": "v3_realmlp_standard_s0",
+      "round": "r03_realmlp_preprocess",
+      "status": "pending",
+      "repair_retries": 0
+    },
+    {
+      "experiment_id": "v3_realmlp_robust_stats_s0",
+      "round": "r03_realmlp_preprocess",
+      "status": "pending",
+      "repair_retries": 0
+    },
+    {
+      "experiment_id": "v3_realmlp_robust_all_s0",
+      "round": "r03_realmlp_preprocess",
+      "status": "pending",
+      "repair_retries": 0
+    }
+  ],
+  "limitations": "Train OOF is used for selection. Intervals are paired descriptive uncertainty, not selection-unbiased claims. No validation or test inputs read."
+}

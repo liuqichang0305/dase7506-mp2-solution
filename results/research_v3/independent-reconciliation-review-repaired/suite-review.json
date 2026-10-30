@@ -1,0 +1,18 @@
+{
+  "scope": "Independent generated fixtures, native local synthetic official-module stand-in and fake transport only; no official data/testscore/credential/HTTP",
+  "source_sha256_before": "8b024476d3450b5828d987a3f0d1856d3d7c008813efe98001ebcc3ecca708b7",
+  "source_sha256_after": "8b024476d3450b5828d987a3f0d1856d3d7c008813efe98001ebcc3ecca708b7",
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_submit_final_v3.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "seconds": 6.121128599988879
+}

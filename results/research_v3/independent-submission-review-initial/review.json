@@ -1,0 +1,47 @@
+{
+  "scope": "Local code/form-source review and made-up temporary aggregate fixtures only; no real score artifacts, network, credentials or submission calls",
+  "reviewed_source_sha256": "d3db132668a0d834d4fab397895776200c3179a20a7cb483b621b2abede6bb8c",
+  "official_snapshot_commit": "bbec4921a0646abe127588cb121b4aba48c8fd3b",
+  "source_files": {
+    "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "submission/v3/prepare_official_form.mjs": "629d83e135ea268729fdd1f54dacffd45bdf9a13937ba55598b7fd75332c9d28",
+    "tmp/form-source/served/courses/dase7506/assets/arena.16ac78fce8b4.mjs": "16ac78fce8b4b736fb9ce19f274573c778aa9f389047aecb2f01783d3dcd70d5",
+    "tmp/form-source/served/courses/dase7506/assets/mp2.834d33d4aea3.mjs": "834d33d4aea371af1760c2346dc6099af48a6e2d3a0087ee676cbd0dcfcdf7e4",
+    "tmp/form-source/served/courses/dase7506/assets/projects.ae4b9dc4b02c.mjs": "ae4b9dc4b02cffa072a725441720d47eb81d496a89a9264a9bb4fd85390471fc"
+  },
+  "official_scoring_protocol": "dase7506-mp2-open-hard-verifier-v5",
+  "official_form_protocol": "7506-submissions-v1",
+  "official_artifacts_fields": [
+    "algorithm",
+    "key_id",
+    "wrapped_key",
+    "iv",
+    "ciphertext"
+  ],
+  "local_official_validator_synthetic_probe": {
+    "invalid_artifacts_object_accepted": false,
+    "well_shaped_fake_envelope_accepted": true,
+    "note": "Only format validation; fake encrypted bytes do not prove plaintext links"
+  },
+  "cases": [
+    {
+      "case": "invalid_artifacts_synthetic_object",
+      "accepted_by_reviewed_submitter": true,
+      "reason": null,
+      "network_or_credentials_used": false
+    },
+    {
+      "case": "missing_sealed_artifacts",
+      "accepted_by_reviewed_submitter": true,
+      "reason": null,
+      "network_or_credentials_used": false
+    },
+    {
+      "case": "correct_distinct_official_score_and_form_protocols",
+      "accepted_by_reviewed_submitter": false,
+      "reason": "Frozen aggregate score differs from official generated form",
+      "network_or_credentials_used": false
+    }
+  ],
+  "status": "blocking_protocol_and_payload_binding_findings"
+}

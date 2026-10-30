@@ -1,0 +1,13 @@
+test_changed_choices_preserve_partial_output_and_restore_global (test_prepare_selected_confidence_v3.SelectedConfidenceTests.test_changed_choices_preserve_partial_output_and_restore_global) ... ok
+test_existing_evidence_never_overwritten (test_prepare_selected_confidence_v3.SelectedConfidenceTests.test_existing_evidence_never_overwritten) ... ok
+test_freeze_or_test_guard_runs_inside_resource_lock (test_prepare_selected_confidence_v3.SelectedConfidenceTests.test_freeze_or_test_guard_runs_inside_resource_lock) ... ok
+test_historical_fallback_copies_saved_outputs_and_rechecks_identity (test_prepare_selected_confidence_v3.SelectedConfidenceTests.test_historical_fallback_copies_saved_outputs_and_rechecks_identity) ... ok
+test_invalid_selection_never_opens_validation (test_prepare_selected_confidence_v3.SelectedConfidenceTests.test_invalid_selection_never_opens_validation) ... ok
+test_new_selected_candidate_uses_saved_v3_outputs (test_prepare_selected_confidence_v3.SelectedConfidenceTests.test_new_selected_candidate_uses_saved_v3_outputs) ... ok
+test_post_diagnostic_asset_change_rejected (test_prepare_selected_confidence_v3.SelectedConfidenceTests.test_post_diagnostic_asset_change_rejected) ... ok
+test_post_diagnostic_source_or_selected_byte_change_rejected (test_prepare_selected_confidence_v3.SelectedConfidenceTests.test_post_diagnostic_source_or_selected_byte_change_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.233s
+
+OK

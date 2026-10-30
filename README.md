@@ -2,6 +2,42 @@
 
 Student 3036900957. Individual coursework with disclosed AI assistance. A small CPU verifier selects one of the four supplied candidate solutions. It does not generate answers or call an external model.
 
+## Autonomous research v3 - active train-only study
+
+The current `research/autonomous-v3` branch preserves every historical frozen
+method and adds a bounded, resumable campaign. [Draft PR #3](https://github.com/liuqichang0305/dase7506-mp2-solution/pull/3)
+contains the implementation and actual evidence. As of 30 October 2026 02:40 UTC,
+MLP optimizer controls, small TabM and RealMLP-inspired preprocessing controls
+have completed ten shared three-fold configurations. New Attention controls are
+running. The [verified R03 table](results/research_v3/analysis/r03_complete/EXPERIMENT_TABLE.md)
+includes all completed V2/V3 comparisons, with counts, seed/fold variation,
+training costs, asset sizes and question-paired intervals.
+
+The research clock ends at **2026-10-30 16:22:42 UTC** and is not reset on resume.
+See the [execution specification](docs/research_v3/AUTONOMOUS_RESEARCH_SPEC.txt),
+[search and selection protocol](docs/research_v3/SEARCH_PLAN_V3.md),
+[model sources](docs/research_v3/MODELS_SOURCES.md),
+[optimizer sources](docs/research_v3/OPTIMIZER_SOURCES.md), and
+[current project state](PROJECT_STATE.md).
+No new V3 validation or test score has been obtained at this checkpoint.
+At most two locked finalists will receive validation confirmation; only the
+uniquely selected, reviewed and freshly reproduced bundle can reach final test.
+Historical validation use and the known V1 test total are explicitly disclosed.
+
+Resume from the project root with the existing research environment:
+
+```powershell
+.venv\Scripts\python.exe scripts/run_campaign_v3.py status
+.venv\Scripts\python.exe scripts/run_campaign_v3.py run
+```
+
+The scheduler verifies hashes, refuses concurrent trainers, and resumes atomic
+epoch checkpoints or reuses completed folds. Read
+[the recovery instructions](docs/research_v3/RESUME.txt) before registering
+another round. Research commands do not automatically invoke final testing.
+Final inference is NumPy-only; pinned development and inference dependencies are
+in `code/requirements-training-v3.txt` and `code/requirements-inference-v3.txt`.
+
 ## Performance research v2 — development verified, formal re-evaluation pending
 
 The independent `research/performance-v2` branch implements valid-answer masking,

@@ -1,0 +1,31 @@
+{
+  "checked_at_utc": "2026-10-29T17:14:54.243563+00:00",
+  "source_file_sets_match": true,
+  "source_file_count": 11,
+  "training_review": "Full trainer/entry read, nested scaler+fresh outer refit+EMA evaluation reviewed; exact epoch resume with NumPy/Torch RNG, optimizer+EMA and permutation tested. Safe experiment IDs, bundle semantic verification and function-level CLOSED/finalist/FREEZE guards confirmed. No blocking training integration issue found.",
+  "synthetic_training_tests": {
+    "count": 7,
+    "seconds": 8.569,
+    "log": "results/research_v3/training-synthetic-tests-final.log"
+  },
+  "scheduler_tests": {
+    "count": 18,
+    "seconds": 0.865,
+    "log": "results/research_v3/audit_scheduler_tests_passed.log"
+  },
+  "resolved_scheduler_findings": [
+    "Queue/config hash binding",
+    "Orphan trainer scan plus exclusive training lock",
+    "Summary source/data/fold/output/asset identity checks",
+    "Each completed outer fold must have complete status and 1585 questions"
+  ],
+  "source_hashes": {
+    "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+    "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+    "scripts/run_campaign_v3.py": "b791dcaabe7b21109e8e5961a1bc394dbd55d6f39efd43c8b47e8f8f07e63260",
+    "code/tests/test_training_v3.py": "122e30112d0aea86513accdc8eac539c1a8b6eadd1d439140b433a3745522936",
+    "code/tests/test_scheduler_v3.py": "3dd24e6cfb65176ef08ef4679c01e6fcf57a5c20c0792451d32f28d30d6027ba"
+  },
+  "prior_failure_logs_preserved": true,
+  "official_data_used_by_auditor": false
+}

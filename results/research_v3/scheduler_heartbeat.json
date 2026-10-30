@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-30T04:24:12.632741+00:00",
+  "scheduler_pid": 44908,
+  "experiment_id": "v3_tabm_embedding_stats_k8_s0",
+  "training_pid": 36196,
+  "attempt_elapsed_seconds": 120.2462990283966,
+  "campaign_remaining_seconds": 43109.40744638443,
+  "resource_sample": [
+    {
+      "pid": 36196,
+      "create_time": 1793334132.3485742,
+      "rss_bytes": 4440064,
+      "cpu_seconds": 0.015625,
+      "os_thread_count": 1
+    },
+    {
+      "pid": 35644,
+      "create_time": 1793334132.3631067,
+      "rss_bytes": 807940096,
+      "cpu_seconds": 117.625,
+      "os_thread_count": 4
+    }
+  ],
+  "resource_note": "Point samples include Windows venv launcher descendants; OS threads are not active compute threads.",
+  "resume_command": ".venv\\Scripts\\python.exe scripts\\run_campaign_v3.py run"
+}

@@ -1,0 +1,23 @@
+{
+  "scope": "Generated fixtures and fake transport only; no official data/score, credentials, HTTP or submission",
+  "source_sha256_before": "8b024476d3450b5828d987a3f0d1856d3d7c008813efe98001ebcc3ecca708b7",
+  "source_sha256_after": "8b024476d3450b5828d987a3f0d1856d3d7c008813efe98001ebcc3ecca708b7",
+  "cases": [
+    {
+      "case": "wrong_form_protocol",
+      "fake_network_calls": 0,
+      "post_calls": 0,
+      "unexpectedly_accepted": false,
+      "exception": "ValueError",
+      "message": "Official payload/envelope validation or issue URL round-trip failed"
+    },
+    {
+      "case": "wrong_envelope_algorithm",
+      "fake_network_calls": 0,
+      "post_calls": 0,
+      "unexpectedly_accepted": false,
+      "exception": "ValueError",
+      "message": "Official payload/envelope validation or issue URL round-trip failed"
+    }
+  ]
+}

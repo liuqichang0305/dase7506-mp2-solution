@@ -1,0 +1,16 @@
+test_adamw_matches_direct_torch_with_identical_groups (test_optimizers_v3.OptimizersV3Tests.test_adamw_matches_direct_torch_with_identical_groups) ... ok
+test_both_optimizers_update_and_exactly_resume (test_optimizers_v3.OptimizersV3Tests.test_both_optimizers_update_and_exactly_resume) ... ok
+test_ema_matches_pytorch_averagedmodel_and_resumes (test_optimizers_v3.OptimizersV3Tests.test_ema_matches_pytorch_averagedmodel_and_resumes) ... ok
+test_ema_update_order_buffers_and_same_trajectory (test_optimizers_v3.OptimizersV3Tests.test_ema_update_order_buffers_and_same_trajectory) ... C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_optimizers_v3.py:155: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  self.assertEqual(float(model.weight[0, 0]), 4.)
+ok
+test_explicit_realmlp_learning_rate_multipliers (test_optimizers_v3.OptimizersV3Tests.test_explicit_realmlp_learning_rate_multipliers) ... ok
+test_fail_fast_and_checkpoint_guards (test_optimizers_v3.OptimizersV3Tests.test_fail_fast_and_checkpoint_guards) ... ok
+test_hidden_matrix_partition_head_norm_and_tabm_adapters (test_optimizers_v3.OptimizersV3Tests.test_hidden_matrix_partition_head_norm_and_tabm_adapters) ... ok
+test_tied_head_weight_is_excluded_from_muon (test_optimizers_v3.OptimizersV3Tests.test_tied_head_weight_is_excluded_from_muon) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.864s
+
+OK

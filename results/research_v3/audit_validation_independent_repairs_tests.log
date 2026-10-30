@@ -1,0 +1,161 @@
+test_actual_source_inventory_exists (test_confirm_validation_v3.ConfirmationTests.test_actual_source_inventory_exists) ... ERROR
+test_asset_source_and_fallback_changes_rejected (test_confirm_validation_v3.ConfirmationTests.test_asset_source_and_fallback_changes_rejected) ... ERROR
+test_completed_result_hash_resume_and_partial_preservation (test_confirm_validation_v3.ConfirmationTests.test_completed_result_hash_resume_and_partial_preservation) ... ERROR
+test_confirmation_resume_no_second_evaluation_and_no_changed_lock (test_confirm_validation_v3.ConfirmationTests.test_confirmation_resume_no_second_evaluation_and_no_changed_lock) ... ERROR
+test_exclusive_resource_lock_and_pid_creation_identity (test_confirm_validation_v3.ConfirmationTests.test_exclusive_resource_lock_and_pid_creation_identity) ... ERROR
+test_improvement_rule_pareto_baseline_and_resource_gate (test_confirm_validation_v3.ConfirmationTests.test_improvement_rule_pareto_baseline_and_resource_gate) ... ERROR
+test_independent_preopen_counterexamples_are_rejected (test_confirm_validation_v3.ConfirmationTests.test_independent_preopen_counterexamples_are_rejected) ... ERROR
+test_lock_positive_never_needs_validation_or_test_files (test_confirm_validation_v3.ConfirmationTests.test_lock_positive_never_needs_validation_or_test_files) ... ERROR
+test_prediction_then_independent_scoring_complete_timing (test_confirm_validation_v3.ConfirmationTests.test_prediction_then_independent_scoring_complete_timing) ... ERROR
+test_prelock_integrity_rejects_mutations_and_third_candidate (test_confirm_validation_v3.ConfirmationTests.test_prelock_integrity_rejects_mutations_and_third_candidate) ... ERROR
+test_read_guard_in_fresh_process (test_confirm_validation_v3.ConfirmationTests.test_read_guard_in_fresh_process) ... ERROR
+test_real_tree_wait_and_timeout_no_orphan (test_confirm_validation_v3.ConfirmationTests.test_real_tree_wait_and_timeout_no_orphan) ... ERROR
+
+======================================================================
+ERROR: test_actual_source_inventory_exists (test_confirm_validation_v3.ConfirmationTests.test_actual_source_inventory_exists)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_confirm_validation_v3.py", line 47, in setUp
+    save_bundle(self.root / 'artifacts/research_v3/final_synthetic', {'family': 'linear'},
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 238, in save_bundle
+    validate_state(cfg, state)
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 193, in validate_state
+    raise ValueError(f'Invalid v3 parameter: {name}')
+ValueError: Invalid v3 parameter: bias
+
+======================================================================
+ERROR: test_asset_source_and_fallback_changes_rejected (test_confirm_validation_v3.ConfirmationTests.test_asset_source_and_fallback_changes_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_confirm_validation_v3.py", line 47, in setUp
+    save_bundle(self.root / 'artifacts/research_v3/final_synthetic', {'family': 'linear'},
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 238, in save_bundle
+    validate_state(cfg, state)
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 193, in validate_state
+    raise ValueError(f'Invalid v3 parameter: {name}')
+ValueError: Invalid v3 parameter: bias
+
+======================================================================
+ERROR: test_completed_result_hash_resume_and_partial_preservation (test_confirm_validation_v3.ConfirmationTests.test_completed_result_hash_resume_and_partial_preservation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_confirm_validation_v3.py", line 47, in setUp
+    save_bundle(self.root / 'artifacts/research_v3/final_synthetic', {'family': 'linear'},
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 238, in save_bundle
+    validate_state(cfg, state)
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 193, in validate_state
+    raise ValueError(f'Invalid v3 parameter: {name}')
+ValueError: Invalid v3 parameter: bias
+
+======================================================================
+ERROR: test_confirmation_resume_no_second_evaluation_and_no_changed_lock (test_confirm_validation_v3.ConfirmationTests.test_confirmation_resume_no_second_evaluation_and_no_changed_lock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_confirm_validation_v3.py", line 47, in setUp
+    save_bundle(self.root / 'artifacts/research_v3/final_synthetic', {'family': 'linear'},
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 238, in save_bundle
+    validate_state(cfg, state)
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 193, in validate_state
+    raise ValueError(f'Invalid v3 parameter: {name}')
+ValueError: Invalid v3 parameter: bias
+
+======================================================================
+ERROR: test_exclusive_resource_lock_and_pid_creation_identity (test_confirm_validation_v3.ConfirmationTests.test_exclusive_resource_lock_and_pid_creation_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_confirm_validation_v3.py", line 47, in setUp
+    save_bundle(self.root / 'artifacts/research_v3/final_synthetic', {'family': 'linear'},
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 238, in save_bundle
+    validate_state(cfg, state)
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 193, in validate_state
+    raise ValueError(f'Invalid v3 parameter: {name}')
+ValueError: Invalid v3 parameter: bias
+
+======================================================================
+ERROR: test_improvement_rule_pareto_baseline_and_resource_gate (test_confirm_validation_v3.ConfirmationTests.test_improvement_rule_pareto_baseline_and_resource_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_confirm_validation_v3.py", line 47, in setUp
+    save_bundle(self.root / 'artifacts/research_v3/final_synthetic', {'family': 'linear'},
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 238, in save_bundle
+    validate_state(cfg, state)
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 193, in validate_state
+    raise ValueError(f'Invalid v3 parameter: {name}')
+ValueError: Invalid v3 parameter: bias
+
+======================================================================
+ERROR: test_independent_preopen_counterexamples_are_rejected (test_confirm_validation_v3.ConfirmationTests.test_independent_preopen_counterexamples_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_confirm_validation_v3.py", line 47, in setUp
+    save_bundle(self.root / 'artifacts/research_v3/final_synthetic', {'family': 'linear'},
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 238, in save_bundle
+    validate_state(cfg, state)
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 193, in validate_state
+    raise ValueError(f'Invalid v3 parameter: {name}')
+ValueError: Invalid v3 parameter: bias
+
+======================================================================
+ERROR: test_lock_positive_never_needs_validation_or_test_files (test_confirm_validation_v3.ConfirmationTests.test_lock_positive_never_needs_validation_or_test_files)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_confirm_validation_v3.py", line 47, in setUp
+    save_bundle(self.root / 'artifacts/research_v3/final_synthetic', {'family': 'linear'},
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 238, in save_bundle
+    validate_state(cfg, state)
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 193, in validate_state
+    raise ValueError(f'Invalid v3 parameter: {name}')
+ValueError: Invalid v3 parameter: bias
+
+======================================================================
+ERROR: test_prediction_then_independent_scoring_complete_timing (test_confirm_validation_v3.ConfirmationTests.test_prediction_then_independent_scoring_complete_timing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_confirm_validation_v3.py", line 47, in setUp
+    save_bundle(self.root / 'artifacts/research_v3/final_synthetic', {'family': 'linear'},
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 238, in save_bundle
+    validate_state(cfg, state)
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 193, in validate_state
+    raise ValueError(f'Invalid v3 parameter: {name}')
+ValueError: Invalid v3 parameter: bias
+
+======================================================================
+ERROR: test_prelock_integrity_rejects_mutations_and_third_candidate (test_confirm_validation_v3.ConfirmationTests.test_prelock_integrity_rejects_mutations_and_third_candidate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_confirm_validation_v3.py", line 47, in setUp
+    save_bundle(self.root / 'artifacts/research_v3/final_synthetic', {'family': 'linear'},
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 238, in save_bundle
+    validate_state(cfg, state)
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 193, in validate_state
+    raise ValueError(f'Invalid v3 parameter: {name}')
+ValueError: Invalid v3 parameter: bias
+
+======================================================================
+ERROR: test_read_guard_in_fresh_process (test_confirm_validation_v3.ConfirmationTests.test_read_guard_in_fresh_process)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_confirm_validation_v3.py", line 47, in setUp
+    save_bundle(self.root / 'artifacts/research_v3/final_synthetic', {'family': 'linear'},
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 238, in save_bundle
+    validate_state(cfg, state)
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 193, in validate_state
+    raise ValueError(f'Invalid v3 parameter: {name}')
+ValueError: Invalid v3 parameter: bias
+
+======================================================================
+ERROR: test_real_tree_wait_and_timeout_no_orphan (test_confirm_validation_v3.ConfirmationTests.test_real_tree_wait_and_timeout_no_orphan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_confirm_validation_v3.py", line 47, in setUp
+    save_bundle(self.root / 'artifacts/research_v3/final_synthetic', {'family': 'linear'},
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 238, in save_bundle
+    validate_state(cfg, state)
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\mp2\research_v3\models.py", line 193, in validate_state
+    raise ValueError(f'Invalid v3 parameter: {name}')
+ValueError: Invalid v3 parameter: bias
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.522s
+
+FAILED (errors=12)

@@ -1,0 +1,94 @@
+{
+  "round": "r10_realmlp_resolution",
+  "hypothesis": "Robust-all RealMLP improved by14 hard questions over its standard control (1611 versus1597), although it remains behind Attention. Test whether step size, capacity or relation-feature complexity limits the adapted recipe: independently lower LR0.01 to0.003, increase width128 to256, or remove absolute-deviation features. Keep robust preprocessing, NTP/SELU, optimizer multipliers, folds and seed fixed.",
+  "evidence": [
+    "results/research_v3/analysis/r03_complete/analysis.json"
+  ],
+  "configs": [
+    {
+      "family": "realmlp",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.003,
+      "weight_decay": 0.001,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "robust_all",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_realmlp_robust_lr0003_s0",
+      "depth": 3,
+      "beta2": 0.95,
+      "input_scale_lr_multiplier": 6,
+      "bias_lr_multiplier": 0.1
+    },
+    {
+      "family": "realmlp",
+      "width": 256,
+      "hidden": 64,
+      "dropout": 0,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.01,
+      "weight_decay": 0.001,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "robust_all",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_realmlp_robust_width256_s0",
+      "depth": 3,
+      "beta2": 0.95,
+      "input_scale_lr_multiplier": 6,
+      "bias_lr_multiplier": 0.1
+    },
+    {
+      "family": "realmlp",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.01,
+      "weight_decay": 0.001,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "robust_all",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_realmlp_robust_embedding_stats_s0",
+      "depth": 3,
+      "beta2": 0.95,
+      "input_scale_lr_multiplier": 6,
+      "bias_lr_multiplier": 0.1,
+      "input_features": "embedding_stats"
+    }
+  ]
+}

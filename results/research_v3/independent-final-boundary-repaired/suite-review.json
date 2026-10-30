@@ -1,0 +1,47 @@
+{
+  "scope": "Independent generated-fixture tests only; no true validation/test, credential/HTTP/submit",
+  "source_sha256_before": {
+    "code/tools/freeze_v3.py": "a97c7f69feda83f3d84bf6cab03ce41413a430af68fe917699f110647757ec24",
+    "submission/v3/evaluate_final.py": "fc94ad71a8be7805c97f3c2887869d2f89300a4966dc4c72e935434b84186655",
+    "submission/v3/submit_final.py": "58ef1084a8afc6f70359649c8cc84bac75d1086be34d21d5d9e815e1c2fbeec1"
+  },
+  "source_sha256_after": {
+    "code/tools/freeze_v3.py": "a97c7f69feda83f3d84bf6cab03ce41413a430af68fe917699f110647757ec24",
+    "submission/v3/evaluate_final.py": "fc94ad71a8be7805c97f3c2887869d2f89300a4966dc4c72e935434b84186655",
+    "submission/v3/submit_final.py": "58ef1084a8afc6f70359649c8cc84bac75d1086be34d21d5d9e815e1c2fbeec1"
+  },
+  "runs": [
+    {
+      "test_module": "test_final_freeze_v3.py",
+      "returncode": 0,
+      "seconds": 10.932231300001149,
+      "command": [
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "code/tests",
+        "-p",
+        "test_final_freeze_v3.py",
+        "-v"
+      ]
+    },
+    {
+      "test_module": "test_submit_final_v3.py",
+      "returncode": 0,
+      "seconds": 1.8880550999892876,
+      "command": [
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "code/tests",
+        "-p",
+        "test_submit_final_v3.py",
+        "-v"
+      ]
+    }
+  ]
+}

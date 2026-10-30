@@ -1,0 +1,221 @@
+{"utc": "2026-10-29T17:14:08.162104+00:00", "pid": 37112, "experiment_id": "v3_mlp_adamw_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T17:14:27.786951+00:00", "pid": 37112, "experiment_id": "v3_mlp_adamw_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.0354609929078, "accuracy": 88.89589905362776, "seconds": 18.439223199995467}
+{"utc": "2026-10-29T17:14:27.790060+00:00", "pid": 37112, "experiment_id": "v3_mlp_adamw_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T17:14:44.571690+00:00", "pid": 37112, "experiment_id": "v3_mlp_adamw_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.45390070921985, "accuracy": 89.52681388012618, "seconds": 15.586644599992724}
+{"utc": "2026-10-29T17:14:44.575762+00:00", "pid": 37112, "experiment_id": "v3_mlp_adamw_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T17:15:01.247824+00:00", "pid": 37112, "experiment_id": "v3_mlp_adamw_s0", "fold": 2, "status": "completed", "hard_accuracy": 74.43181818181817, "accuracy": 88.64353312302839, "seconds": 15.43920889999572}
+{"utc": "2026-10-29T17:15:01.302950+00:00", "pid": 37112, "experiment_id": "v3_mlp_adamw_s0", "status": "cv_completed", "accuracy": 89.02208201892743, "hard_accuracy": 75.30747398297068, "training_seconds": 49.46507669998391}
+{"utc": "2026-10-29T17:15:11.549058+00:00", "pid": 39468, "experiment_id": "v3_mlp_ema_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T17:15:39.094040+00:00", "pid": 39468, "experiment_id": "v3_mlp_ema_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.74468085106383, "accuracy": 89.21135646687696, "seconds": 26.346919899995555}
+{"utc": "2026-10-29T17:15:39.098199+00:00", "pid": 39468, "experiment_id": "v3_mlp_ema_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T17:16:03.110897+00:00", "pid": 39468, "experiment_id": "v3_mlp_ema_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.87943262411348, "accuracy": 89.7160883280757, "seconds": 22.804474600001413}
+{"utc": "2026-10-29T17:16:03.113886+00:00", "pid": 39468, "experiment_id": "v3_mlp_ema_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T17:16:28.418223+00:00", "pid": 39468, "experiment_id": "v3_mlp_ema_s0", "fold": 2, "status": "completed", "hard_accuracy": 74.57386363636364, "accuracy": 88.70662460567823, "seconds": 24.115802399996028}
+{"utc": "2026-10-29T17:16:28.476807+00:00", "pid": 39468, "experiment_id": "v3_mlp_ema_s0", "status": "cv_completed", "accuracy": 89.21135646687696, "hard_accuracy": 75.73320719016084, "training_seconds": 73.267196899993}
+{"utc": "2026-10-29T17:16:39.061412+00:00", "pid": 42980, "experiment_id": "v3_mlp_muon001_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T17:22:51.950412+00:00", "pid": 42980, "experiment_id": "v3_mlp_muon001_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.0354609929078, "accuracy": 88.89589905362776, "seconds": 371.6827195000078}
+{"utc": "2026-10-29T17:22:51.955474+00:00", "pid": 42980, "experiment_id": "v3_mlp_muon001_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T17:28:31.072292+00:00", "pid": 42980, "experiment_id": "v3_mlp_muon001_s0", "fold": 1, "status": "completed", "hard_accuracy": 75.88652482269504, "accuracy": 89.27444794952682, "seconds": 337.9172699999981}
+{"utc": "2026-10-29T17:28:31.075866+00:00", "pid": 42980, "experiment_id": "v3_mlp_muon001_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T17:34:41.652527+00:00", "pid": 42980, "experiment_id": "v3_mlp_muon001_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.85227272727273, "accuracy": 89.27444794952682, "seconds": 369.37692469999456}
+{"utc": "2026-10-29T17:34:41.710088+00:00", "pid": 42980, "experiment_id": "v3_mlp_muon001_s0", "status": "cv_completed", "accuracy": 89.14826498422713, "hard_accuracy": 75.59129612109746, "training_seconds": 1078.9769142000005}
+{"utc": "2026-10-29T17:34:54.102911+00:00", "pid": 30484, "experiment_id": "v3_mlp_muon002_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T17:38:58.900496+00:00", "pid": 30484, "experiment_id": "v3_mlp_muon002_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.31914893617021, "accuracy": 89.02208201892743, "seconds": 243.61582069999713}
+{"utc": "2026-10-29T17:38:58.904078+00:00", "pid": 30484, "experiment_id": "v3_mlp_muon002_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T17:43:32.038420+00:00", "pid": 30484, "experiment_id": "v3_mlp_muon002_s0", "fold": 1, "status": "completed", "hard_accuracy": 75.0354609929078, "accuracy": 88.89589905362776, "seconds": 271.9663780999981}
+{"utc": "2026-10-29T17:43:32.042502+00:00", "pid": 30484, "experiment_id": "v3_mlp_muon002_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T17:48:07.645994+00:00", "pid": 30484, "experiment_id": "v3_mlp_muon002_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.14204545454545, "accuracy": 88.95899053627761, "seconds": 274.3930774000037}
+{"utc": "2026-10-29T17:48:07.704419+00:00", "pid": 30484, "experiment_id": "v3_mlp_muon002_s0", "status": "cv_completed", "accuracy": 88.95899053627761, "hard_accuracy": 75.16556291390728, "training_seconds": 789.9752761999989}
+{"utc": "2026-10-29T17:51:27.304419+00:00", "pid": 32600, "experiment_id": "v3_tabm_k4_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T17:52:25.019759+00:00", "pid": 32600, "experiment_id": "v3_tabm_k4_s0", "fold": 0, "status": "completed", "hard_accuracy": 74.8936170212766, "accuracy": 88.83280757097792, "seconds": 54.05057540000416}
+{"utc": "2026-10-29T17:52:25.023210+00:00", "pid": 32600, "experiment_id": "v3_tabm_k4_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T17:53:20.279597+00:00", "pid": 32600, "experiment_id": "v3_tabm_k4_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.45390070921985, "accuracy": 89.52681388012618, "seconds": 51.630155800005014}
+{"utc": "2026-10-29T17:53:20.284177+00:00", "pid": 32600, "experiment_id": "v3_tabm_k4_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T17:54:15.250331+00:00", "pid": 32600, "experiment_id": "v3_tabm_k4_s0", "fold": 2, "status": "completed", "hard_accuracy": 76.5625, "accuracy": 89.58990536277602, "seconds": 51.31647050000902}
+{"utc": "2026-10-29T17:54:15.306291+00:00", "pid": 32600, "experiment_id": "v3_tabm_k4_s0", "status": "cv_completed", "accuracy": 89.31650893796004, "hard_accuracy": 75.96972563859981, "training_seconds": 156.9972017000182}
+{"utc": "2026-10-29T17:54:26.096055+00:00", "pid": 3668, "experiment_id": "v3_tabm_k4_drop03_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T17:55:30.939333+00:00", "pid": 3668, "experiment_id": "v3_tabm_k4_drop03_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.31914893617021, "accuracy": 89.02208201892743, "seconds": 61.19373390000692}
+{"utc": "2026-10-29T17:55:30.943410+00:00", "pid": 3668, "experiment_id": "v3_tabm_k4_drop03_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T17:56:39.952151+00:00", "pid": 3668, "experiment_id": "v3_tabm_k4_drop03_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.73758865248227, "accuracy": 89.65299684542587, "seconds": 65.30714209999132}
+{"utc": "2026-10-29T17:56:39.956278+00:00", "pid": 3668, "experiment_id": "v3_tabm_k4_drop03_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T17:57:42.134683+00:00", "pid": 3668, "experiment_id": "v3_tabm_k4_drop03_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.71022727272727, "accuracy": 89.21135646687696, "seconds": 58.45500579999498}
+{"utc": "2026-10-29T17:57:42.191845+00:00", "pid": 3668, "experiment_id": "v3_tabm_k4_drop03_s0", "status": "cv_completed", "accuracy": 89.29547844374342, "hard_accuracy": 75.92242194891202, "training_seconds": 184.95588179999322}
+{"utc": "2026-10-29T17:57:52.846218+00:00", "pid": 34108, "experiment_id": "v3_tabm_k8_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T17:59:41.658301+00:00", "pid": 34108, "experiment_id": "v3_tabm_k8_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.74468085106383, "accuracy": 89.21135646687696, "seconds": 103.7337542000023}
+{"utc": "2026-10-29T17:59:41.661378+00:00", "pid": 34108, "experiment_id": "v3_tabm_k8_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T18:01:28.931035+00:00", "pid": 34108, "experiment_id": "v3_tabm_k8_s0", "fold": 1, "status": "completed", "hard_accuracy": 77.02127659574468, "accuracy": 89.77917981072555, "seconds": 102.22131539999828}
+{"utc": "2026-10-29T18:01:28.934139+00:00", "pid": 34108, "experiment_id": "v3_tabm_k8_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T18:03:29.925222+00:00", "pid": 34108, "experiment_id": "v3_tabm_k8_s0", "fold": 2, "status": "completed", "hard_accuracy": 76.98863636363636, "accuracy": 89.77917981072555, "seconds": 115.9530203999966}
+{"utc": "2026-10-29T18:03:29.981585+00:00", "pid": 34108, "experiment_id": "v3_tabm_k8_s0", "status": "cv_completed", "accuracy": 89.58990536277602, "hard_accuracy": 76.58467360454115, "training_seconds": 321.9080899999972}
+{"utc": "2026-10-29T18:08:29.991762+00:00", "pid": 37176, "experiment_id": "v3_realmlp_standard_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T18:08:50.334957+00:00", "pid": 37176, "experiment_id": "v3_realmlp_standard_s0", "fold": 0, "status": "completed", "hard_accuracy": 74.18439716312056, "accuracy": 88.5173501577287, "seconds": 18.91103280000243}
+{"utc": "2026-10-29T18:08:50.339171+00:00", "pid": 37176, "experiment_id": "v3_realmlp_standard_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T18:09:07.335374+00:00", "pid": 37176, "experiment_id": "v3_realmlp_standard_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.87943262411348, "accuracy": 89.7160883280757, "seconds": 15.58569400000124}
+{"utc": "2026-10-29T18:09:07.338602+00:00", "pid": 37176, "experiment_id": "v3_realmlp_standard_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T18:09:24.456915+00:00", "pid": 37176, "experiment_id": "v3_realmlp_standard_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.56818181818183, "accuracy": 89.14826498422713, "seconds": 15.689379600000393}
+{"utc": "2026-10-29T18:09:24.516786+00:00", "pid": 37176, "experiment_id": "v3_realmlp_standard_s0", "status": "cv_completed", "accuracy": 89.12723449001052, "hard_accuracy": 75.54399243140965, "training_seconds": 50.186106400004064}
+{"utc": "2026-10-29T18:09:34.466719+00:00", "pid": 32408, "experiment_id": "v3_realmlp_robust_stats_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T18:09:54.553398+00:00", "pid": 32408, "experiment_id": "v3_realmlp_robust_stats_s0", "fold": 0, "status": "completed", "hard_accuracy": 74.46808510638297, "accuracy": 88.64353312302839, "seconds": 18.70096660000854}
+{"utc": "2026-10-29T18:09:54.556817+00:00", "pid": 32408, "experiment_id": "v3_realmlp_robust_stats_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T18:10:11.655297+00:00", "pid": 32408, "experiment_id": "v3_realmlp_robust_stats_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.73758865248227, "accuracy": 89.65299684542587, "seconds": 15.653221499997017}
+{"utc": "2026-10-29T18:10:11.659876+00:00", "pid": 32408, "experiment_id": "v3_realmlp_robust_stats_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T18:10:28.868048+00:00", "pid": 32408, "experiment_id": "v3_realmlp_robust_stats_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.71022727272727, "accuracy": 89.21135646687696, "seconds": 15.765664200000174}
+{"utc": "2026-10-29T18:10:28.926933+00:00", "pid": 32408, "experiment_id": "v3_realmlp_robust_stats_s0", "status": "cv_completed", "accuracy": 89.16929547844374, "hard_accuracy": 75.63859981078525, "training_seconds": 50.11985230000573}
+{"utc": "2026-10-29T18:10:39.158403+00:00", "pid": 38624, "experiment_id": "v3_realmlp_robust_all_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T18:11:07.958389+00:00", "pid": 38624, "experiment_id": "v3_realmlp_robust_all_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.46099290780141, "accuracy": 89.08517350157729, "seconds": 26.945414699999674}
+{"utc": "2026-10-29T18:11:07.961083+00:00", "pid": 38624, "experiment_id": "v3_realmlp_robust_all_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T18:11:33.360052+00:00", "pid": 38624, "experiment_id": "v3_realmlp_robust_all_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.87943262411348, "accuracy": 89.7160883280757, "seconds": 23.543033399997512}
+{"utc": "2026-10-29T18:11:33.363328+00:00", "pid": 38624, "experiment_id": "v3_realmlp_robust_all_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T18:11:58.674503+00:00", "pid": 38624, "experiment_id": "v3_realmlp_robust_all_s0", "fold": 2, "status": "completed", "hard_accuracy": 76.2784090909091, "accuracy": 89.46372239747635, "seconds": 23.445089900007588}
+{"utc": "2026-10-29T18:11:58.726980+00:00", "pid": 38624, "experiment_id": "v3_realmlp_robust_all_s0", "status": "cv_completed", "accuracy": 89.42166140904311, "hard_accuracy": 76.20624408703878, "training_seconds": 73.93353800000477}
+{"utc": "2026-10-30T02:31:17.999088+00:00", "pid": 28068, "experiment_id": "v3_attention_adamw_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T02:32:27.727126+00:00", "pid": 28068, "experiment_id": "v3_attention_adamw_s0", "fold": 0, "status": "completed", "hard_accuracy": 80.1418439716312, "accuracy": 91.16719242902208, "seconds": 67.20562440001231}
+{"utc": "2026-10-30T02:32:27.737663+00:00", "pid": 28068, "experiment_id": "v3_attention_adamw_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T02:33:16.119843+00:00", "pid": 28068, "experiment_id": "v3_attention_adamw_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.72340425531915, "accuracy": 90.53627760252367, "seconds": 46.21032669999113}
+{"utc": "2026-10-30T02:33:16.134361+00:00", "pid": 28068, "experiment_id": "v3_attention_adamw_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T02:34:26.244550+00:00", "pid": 28068, "experiment_id": "v3_attention_adamw_s0", "fold": 2, "status": "completed", "hard_accuracy": 79.82954545454545, "accuracy": 91.0410094637224, "seconds": 68.23518409999087}
+{"utc": "2026-10-30T02:34:26.364668+00:00", "pid": 28068, "experiment_id": "v3_attention_adamw_s0", "status": "cv_completed", "accuracy": 90.91482649842271, "hard_accuracy": 79.56480605487228, "training_seconds": 181.65113519999431}
+{"utc": "2026-10-30T02:34:43.069711+00:00", "pid": 42776, "experiment_id": "v3_attention_ema_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T02:36:18.933687+00:00", "pid": 42776, "experiment_id": "v3_attention_ema_s0", "fold": 0, "status": "completed", "hard_accuracy": 81.13475177304964, "accuracy": 91.60883280757098, "seconds": 93.81149880000157}
+{"utc": "2026-10-30T02:36:18.942539+00:00", "pid": 42776, "experiment_id": "v3_attention_ema_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T02:37:47.550481+00:00", "pid": 42776, "experiment_id": "v3_attention_ema_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.72340425531915, "accuracy": 90.53627760252367, "seconds": 86.48281339999812}
+{"utc": "2026-10-30T02:37:47.560874+00:00", "pid": 42776, "experiment_id": "v3_attention_ema_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T02:39:15.322460+00:00", "pid": 42776, "experiment_id": "v3_attention_ema_s0", "fold": 2, "status": "completed", "hard_accuracy": 79.26136363636364, "accuracy": 90.78864353312302, "seconds": 85.95648660000006}
+{"utc": "2026-10-30T02:39:15.438154+00:00", "pid": 42776, "experiment_id": "v3_attention_ema_s0", "status": "cv_completed", "accuracy": 90.97791798107255, "hard_accuracy": 79.70671712393566, "training_seconds": 266.25079879999976}
+{"utc": "2026-10-30T02:39:31.174981+00:00", "pid": 44400, "experiment_id": "v3_attention_muon_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T02:52:43.241518+00:00", "pid": 44400, "experiment_id": "v3_attention_muon_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.43262411347519, "accuracy": 90.85173501577287, "seconds": 790.0727539999934}
+{"utc": "2026-10-30T02:52:43.248984+00:00", "pid": 44400, "experiment_id": "v3_attention_muon_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:05:44.033486+00:00", "pid": 44400, "experiment_id": "v3_attention_muon_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.43971631205675, "accuracy": 90.41009463722396, "seconds": 778.9603872000007}
+{"utc": "2026-10-30T03:05:44.047233+00:00", "pid": 44400, "experiment_id": "v3_attention_muon_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:09:32.314639+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:10:14.233351+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.57446808510639, "accuracy": 90.91482649842271, "seconds": 40.418447100004414}
+{"utc": "2026-10-30T03:10:14.240626+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:10:49.592699+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.29787234042553, "accuracy": 90.34700315457414, "seconds": 34.09647920000134}
+{"utc": "2026-10-30T03:10:49.601259+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:11:27.493847+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "fold": 2, "status": "completed", "hard_accuracy": 79.11931818181817, "accuracy": 90.7255520504732, "seconds": 36.566608100009034}
+{"utc": "2026-10-30T03:11:27.641606+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "status": "cv_completed", "accuracy": 90.66246056782335, "hard_accuracy": 78.99716177861873, "training_seconds": 111.08153440001479}
+{"utc": "2026-10-30T03:13:24.641744+00:00", "pid": 27824, "experiment_id": "v3_attention_muon_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:21:54.080750+00:00", "pid": 27824, "experiment_id": "v3_attention_muon_s0", "fold": 2, "status": "completed", "hard_accuracy": 78.55113636363636, "accuracy": 90.47318611987382, "seconds": 719.7974522000004}
+{"utc": "2026-10-30T03:21:54.201080+00:00", "pid": 27824, "experiment_id": "v3_attention_muon_s0", "status": "cv_completed", "accuracy": 90.57833859095689, "hard_accuracy": 78.80794701986756, "training_seconds": 2288.8305933999945}
+{"utc": "2026-10-30T03:22:08.072667+00:00", "pid": 36516, "experiment_id": "v3_tabm_k4_lr0003_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:24:47.931711+00:00", "pid": 36516, "experiment_id": "v3_tabm_k4_lr0003_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.60283687943262, "accuracy": 89.14826498422713, "seconds": 154.52351330000965}
+{"utc": "2026-10-30T03:24:47.941337+00:00", "pid": 36516, "experiment_id": "v3_tabm_k4_lr0003_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:27:32.401682+00:00", "pid": 36516, "experiment_id": "v3_tabm_k4_lr0003_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.73758865248227, "accuracy": 89.65299684542587, "seconds": 159.0930733999994}
+{"utc": "2026-10-30T03:27:32.410458+00:00", "pid": 36516, "experiment_id": "v3_tabm_k4_lr0003_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:30:16.061965+00:00", "pid": 36516, "experiment_id": "v3_tabm_k4_lr0003_s0", "fold": 2, "status": "completed", "hard_accuracy": 76.13636363636364, "accuracy": 89.4006309148265, "seconds": 158.1731454999972}
+{"utc": "2026-10-30T03:30:16.177660+00:00", "pid": 36516, "experiment_id": "v3_tabm_k4_lr0003_s0", "status": "cv_completed", "accuracy": 89.4006309148265, "hard_accuracy": 76.15894039735099, "training_seconds": 471.78973220000626}
+{"utc": "2026-10-30T03:30:30.588698+00:00", "pid": 36432, "experiment_id": "v3_tabm_k4_ema_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:33:41.870244+00:00", "pid": 36432, "experiment_id": "v3_tabm_k4_ema_s0", "fold": 0, "status": "completed", "hard_accuracy": 76.31205673758865, "accuracy": 89.46372239747635, "seconds": 185.57683489999908}
+{"utc": "2026-10-30T03:33:41.896924+00:00", "pid": 36432, "experiment_id": "v3_tabm_k4_ema_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:37:03.999290+00:00", "pid": 36432, "experiment_id": "v3_tabm_k4_ema_s0", "fold": 1, "status": "completed", "hard_accuracy": 77.4468085106383, "accuracy": 89.96845425867508, "seconds": 196.65665530000115}
+{"utc": "2026-10-30T03:37:04.006518+00:00", "pid": 36432, "experiment_id": "v3_tabm_k4_ema_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:40:26.522035+00:00", "pid": 36432, "experiment_id": "v3_tabm_k4_ema_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.99431818181817, "accuracy": 89.33753943217665, "seconds": 197.05503540000063}
+{"utc": "2026-10-30T03:40:26.641832+00:00", "pid": 36432, "experiment_id": "v3_tabm_k4_ema_s0", "status": "cv_completed", "accuracy": 89.58990536277602, "hard_accuracy": 76.58467360454115, "training_seconds": 579.2885256000009}
+{"utc": "2026-10-30T03:40:40.308399+00:00", "pid": 39784, "experiment_id": "v3_tabm_k4_embedding_stats_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:42:24.107096+00:00", "pid": 39784, "experiment_id": "v3_tabm_k4_embedding_stats_s0", "fold": 0, "status": "completed", "hard_accuracy": 81.27659574468085, "accuracy": 91.67192429022082, "seconds": 100.36135059999651}
+{"utc": "2026-10-30T03:42:24.115344+00:00", "pid": 39784, "experiment_id": "v3_tabm_k4_embedding_stats_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:43:51.731666+00:00", "pid": 39784, "experiment_id": "v3_tabm_k4_embedding_stats_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.01418439716312, "accuracy": 90.22082018927445, "seconds": 84.15417969999544}
+{"utc": "2026-10-30T03:43:51.741629+00:00", "pid": 39784, "experiment_id": "v3_tabm_k4_embedding_stats_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:45:29.865991+00:00", "pid": 39784, "experiment_id": "v3_tabm_k4_embedding_stats_s0", "fold": 2, "status": "completed", "hard_accuracy": 77.41477272727273, "accuracy": 89.96845425867508, "seconds": 94.71462670000619}
+{"utc": "2026-10-30T03:45:30.037967+00:00", "pid": 39784, "experiment_id": "v3_tabm_k4_embedding_stats_s0", "status": "cv_completed", "accuracy": 90.62039957939012, "hard_accuracy": 78.90255439924314, "training_seconds": 279.23015699999814}
+{"utc": "2026-10-30T03:45:44.619367+00:00", "pid": 19236, "experiment_id": "v3_attention_listwise_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:47:01.711720+00:00", "pid": 19236, "experiment_id": "v3_attention_listwise_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.57446808510639, "accuracy": 90.91482649842271, "seconds": 75.16597040001943}
+{"utc": "2026-10-30T03:47:01.721557+00:00", "pid": 19236, "experiment_id": "v3_attention_listwise_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:47:55.538939+00:00", "pid": 19236, "experiment_id": "v3_attention_listwise_s0", "fold": 1, "status": "completed", "hard_accuracy": 77.58865248226951, "accuracy": 90.03154574132492, "seconds": 51.90466890000971}
+{"utc": "2026-10-30T03:47:55.547823+00:00", "pid": 19236, "experiment_id": "v3_attention_listwise_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:48:40.625548+00:00", "pid": 19236, "experiment_id": "v3_attention_listwise_s0", "fold": 2, "status": "completed", "hard_accuracy": 80.11363636363636, "accuracy": 91.16719242902208, "seconds": 43.765934400013066}
+{"utc": "2026-10-30T03:48:40.684651+00:00", "pid": 19236, "experiment_id": "v3_attention_listwise_s0", "status": "cv_completed", "accuracy": 90.70452155625657, "hard_accuracy": 79.09176915799432, "training_seconds": 170.8365737000422}
+{"utc": "2026-10-30T03:48:53.172342+00:00", "pid": 26080, "experiment_id": "v3_attention_bce_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:50:01.135250+00:00", "pid": 26080, "experiment_id": "v3_attention_bce_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.71631205673759, "accuracy": 90.97791798107255, "seconds": 66.14379780000309}
+{"utc": "2026-10-30T03:50:01.143542+00:00", "pid": 26080, "experiment_id": "v3_attention_bce_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:51:28.486367+00:00", "pid": 26080, "experiment_id": "v3_attention_bce_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.01418439716312, "accuracy": 90.22082018927445, "seconds": 85.48190999998769}
+{"utc": "2026-10-30T03:51:28.493889+00:00", "pid": 26080, "experiment_id": "v3_attention_bce_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:52:56.620150+00:00", "pid": 26080, "experiment_id": "v3_attention_bce_s0", "fold": 2, "status": "completed", "hard_accuracy": 78.97727272727273, "accuracy": 90.66246056782335, "seconds": 86.34667479999189}
+{"utc": "2026-10-30T03:52:56.735676+00:00", "pid": 26080, "experiment_id": "v3_attention_bce_s0", "status": "cv_completed", "accuracy": 90.62039957939012, "hard_accuracy": 78.90255439924314, "training_seconds": 237.97238259998267}
+{"utc": "2026-10-30T03:53:11.547875+00:00", "pid": 41168, "experiment_id": "v3_attention_pairwise_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:54:28.716816+00:00", "pid": 41168, "experiment_id": "v3_attention_pairwise_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.43262411347519, "accuracy": 90.85173501577287, "seconds": 75.43384729999525}
+{"utc": "2026-10-30T03:54:28.728542+00:00", "pid": 41168, "experiment_id": "v3_attention_pairwise_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:55:44.241665+00:00", "pid": 41168, "experiment_id": "v3_attention_pairwise_s0", "fold": 1, "status": "completed", "hard_accuracy": 79.14893617021276, "accuracy": 90.7255520504732, "seconds": 73.63096800001222}
+{"utc": "2026-10-30T03:55:44.248466+00:00", "pid": 41168, "experiment_id": "v3_attention_pairwise_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:56:47.415919+00:00", "pid": 41168, "experiment_id": "v3_attention_pairwise_s0", "fold": 2, "status": "completed", "hard_accuracy": 80.39772727272727, "accuracy": 91.29337539432176, "seconds": 61.43945879999956}
+{"utc": "2026-10-30T03:56:47.535464+00:00", "pid": 41168, "experiment_id": "v3_attention_pairwise_s0", "status": "cv_completed", "accuracy": 90.95688748685595, "hard_accuracy": 79.65941343424787, "training_seconds": 210.50427410000702}
+{"utc": "2026-10-30T03:57:02.517445+00:00", "pid": 43244, "experiment_id": "v3_attention_group_alpha05_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:58:08.162890+00:00", "pid": 43244, "experiment_id": "v3_attention_group_alpha05_s0", "fold": 0, "status": "completed", "hard_accuracy": 78.72340425531915, "accuracy": 90.53627760252367, "seconds": 63.89803650000249}
+{"utc": "2026-10-30T03:58:08.170001+00:00", "pid": 43244, "experiment_id": "v3_attention_group_alpha05_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:59:03.540825+00:00", "pid": 43244, "experiment_id": "v3_attention_group_alpha05_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.15602836879432, "accuracy": 90.28391167192429, "seconds": 53.62239430000773}
+{"utc": "2026-10-30T03:59:03.549402+00:00", "pid": 43244, "experiment_id": "v3_attention_group_alpha05_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:00:08.328973+00:00", "pid": 43244, "experiment_id": "v3_attention_group_alpha05_s0", "fold": 2, "status": "completed", "hard_accuracy": 79.11931818181817, "accuracy": 90.7255520504732, "seconds": 62.98612420000427}
+{"utc": "2026-10-30T04:00:08.452632+00:00", "pid": 43244, "experiment_id": "v3_attention_group_alpha05_s0", "status": "cv_completed", "accuracy": 90.51524710830704, "hard_accuracy": 78.66603595080416, "training_seconds": 180.5065550000145}
+{"utc": "2026-10-30T04:00:22.780585+00:00", "pid": 26400, "experiment_id": "v3_deepsets_adamw_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:01:20.824020+00:00", "pid": 26400, "experiment_id": "v3_deepsets_adamw_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.8581560283688, "accuracy": 91.0410094637224, "seconds": 56.23356509998848}
+{"utc": "2026-10-30T04:01:20.830633+00:00", "pid": 26400, "experiment_id": "v3_deepsets_adamw_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:02:02.941649+00:00", "pid": 26400, "experiment_id": "v3_deepsets_adamw_s0", "fold": 1, "status": "completed", "hard_accuracy": 77.30496453900709, "accuracy": 89.90536277602523, "seconds": 40.53816790001292}
+{"utc": "2026-10-30T04:02:02.950633+00:00", "pid": 26400, "experiment_id": "v3_deepsets_adamw_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:02:52.135064+00:00", "pid": 26400, "experiment_id": "v3_deepsets_adamw_s0", "fold": 2, "status": "completed", "hard_accuracy": 77.98295454545455, "accuracy": 90.22082018927445, "seconds": 47.51529379999556}
+{"utc": "2026-10-30T04:02:52.264286+00:00", "pid": 26400, "experiment_id": "v3_deepsets_adamw_s0", "status": "cv_completed", "accuracy": 90.38906414300736, "hard_accuracy": 78.38221381267739, "training_seconds": 144.28702679999697}
+{"utc": "2026-10-30T04:03:07.362080+00:00", "pid": 42220, "experiment_id": "v3_deepsets_ema_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:04:03.373503+00:00", "pid": 42220, "experiment_id": "v3_deepsets_ema_s0", "fold": 0, "status": "completed", "hard_accuracy": 80.28368794326242, "accuracy": 91.23028391167193, "seconds": 54.87731710000662}
+{"utc": "2026-10-30T04:04:03.377367+00:00", "pid": 42220, "experiment_id": "v3_deepsets_ema_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:04:37.275656+00:00", "pid": 42220, "experiment_id": "v3_deepsets_ema_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.58156028368795, "accuracy": 90.47318611987382, "seconds": 32.75842610000109}
+{"utc": "2026-10-30T04:04:37.280227+00:00", "pid": 42220, "experiment_id": "v3_deepsets_ema_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:05:14.490364+00:00", "pid": 42220, "experiment_id": "v3_deepsets_ema_s0", "fold": 2, "status": "completed", "hard_accuracy": 77.41477272727273, "accuracy": 89.96845425867508, "seconds": 36.08894709999731}
+{"utc": "2026-10-30T04:05:14.543240+00:00", "pid": 42220, "experiment_id": "v3_deepsets_ema_s0", "status": "cv_completed", "accuracy": 90.55730809674027, "hard_accuracy": 78.76064333017976, "training_seconds": 123.72469030000502}
+{"utc": "2026-10-30T04:05:25.255455+00:00", "pid": 18528, "experiment_id": "v3_resmlp_adamw_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:05:42.431683+00:00", "pid": 18528, "experiment_id": "v3_resmlp_adamw_s0", "fold": 0, "status": "completed", "hard_accuracy": 77.16312056737588, "accuracy": 89.8422712933754, "seconds": 15.86630479998712}
+{"utc": "2026-10-30T04:05:42.434907+00:00", "pid": 18528, "experiment_id": "v3_resmlp_adamw_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:05:56.632052+00:00", "pid": 18528, "experiment_id": "v3_resmlp_adamw_s0", "fold": 1, "status": "completed", "hard_accuracy": 77.02127659574468, "accuracy": 89.77917981072555, "seconds": 12.844779999999446}
+{"utc": "2026-10-30T04:05:56.635352+00:00", "pid": 18528, "experiment_id": "v3_resmlp_adamw_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:06:16.708011+00:00", "pid": 18528, "experiment_id": "v3_resmlp_adamw_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.85227272727273, "accuracy": 89.27444794952682, "seconds": 18.67915899999207}
+{"utc": "2026-10-30T04:06:16.768830+00:00", "pid": 18528, "experiment_id": "v3_resmlp_adamw_s0", "status": "cv_completed", "accuracy": 89.63196635120926, "hard_accuracy": 76.67928098391674, "training_seconds": 47.390243799978634}
+{"utc": "2026-10-30T04:06:26.803614+00:00", "pid": 45464, "experiment_id": "v3_resmlp_ema_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:06:51.473972+00:00", "pid": 45464, "experiment_id": "v3_resmlp_ema_s0", "fold": 0, "status": "completed", "hard_accuracy": 77.4468085106383, "accuracy": 89.96845425867508, "seconds": 23.32478880000417}
+{"utc": "2026-10-30T04:06:51.478695+00:00", "pid": 45464, "experiment_id": "v3_resmlp_ema_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:07:14.558462+00:00", "pid": 45464, "experiment_id": "v3_resmlp_ema_s0", "fold": 1, "status": "completed", "hard_accuracy": 77.4468085106383, "accuracy": 89.96845425867508, "seconds": 21.761866600005305}
+{"utc": "2026-10-30T04:07:14.562294+00:00", "pid": 45464, "experiment_id": "v3_resmlp_ema_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:07:38.490019+00:00", "pid": 45464, "experiment_id": "v3_resmlp_ema_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.71022727272727, "accuracy": 89.21135646687696, "seconds": 22.509254699994926}
+{"utc": "2026-10-30T04:07:38.544371+00:00", "pid": 45464, "experiment_id": "v3_resmlp_ema_s0", "status": "cv_completed", "accuracy": 89.7160883280757, "hard_accuracy": 76.86849574266793, "training_seconds": 67.5959101000044}
+{"utc": "2026-10-30T04:07:49.247158+00:00", "pid": 45108, "experiment_id": "v3_attention_wd01_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:08:19.887760+00:00", "pid": 45108, "experiment_id": "v3_attention_wd01_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.8581560283688, "accuracy": 91.0410094637224, "seconds": 29.33528230000229}
+{"utc": "2026-10-30T04:08:19.891747+00:00", "pid": 45108, "experiment_id": "v3_attention_wd01_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:08:43.999103+00:00", "pid": 45108, "experiment_id": "v3_attention_wd01_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.72340425531915, "accuracy": 90.53627760252367, "seconds": 22.886905600011232}
+{"utc": "2026-10-30T04:08:44.002481+00:00", "pid": 45108, "experiment_id": "v3_attention_wd01_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:09:13.411900+00:00", "pid": 45108, "experiment_id": "v3_attention_wd01_s0", "fold": 2, "status": "completed", "hard_accuracy": 80.25568181818183, "accuracy": 91.23028391167193, "seconds": 28.19615759998851}
+{"utc": "2026-10-30T04:09:13.465570+00:00", "pid": 45108, "experiment_id": "v3_attention_wd01_s0", "status": "cv_completed", "accuracy": 90.93585699263933, "hard_accuracy": 79.61210974456007, "training_seconds": 80.41834550000203}
+{"utc": "2026-10-30T04:09:24.011608+00:00", "pid": 27664, "experiment_id": "v3_attention_drop05_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:10:04.319416+00:00", "pid": 27664, "experiment_id": "v3_attention_drop05_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.71631205673759, "accuracy": 90.97791798107255, "seconds": 39.10478409999632}
+{"utc": "2026-10-30T04:10:04.323854+00:00", "pid": 27664, "experiment_id": "v3_attention_drop05_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:10:36.270909+00:00", "pid": 27664, "experiment_id": "v3_attention_drop05_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.58156028368795, "accuracy": 90.47318611987382, "seconds": 30.60560959999566}
+{"utc": "2026-10-30T04:10:36.275125+00:00", "pid": 27664, "experiment_id": "v3_attention_drop05_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:11:24.434165+00:00", "pid": 27664, "experiment_id": "v3_attention_drop05_s0", "fold": 2, "status": "completed", "hard_accuracy": 79.11931818181817, "accuracy": 90.7255520504732, "seconds": 46.909726899990346}
+{"utc": "2026-10-30T04:11:24.515727+00:00", "pid": 27664, "experiment_id": "v3_attention_drop05_s0", "status": "cv_completed", "accuracy": 90.7255520504732, "hard_accuracy": 79.13907284768213, "training_seconds": 116.62012059998233}
+{"utc": "2026-10-30T04:11:35.250057+00:00", "pid": 40360, "experiment_id": "v3_attention_width256_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:12:49.575493+00:00", "pid": 40360, "experiment_id": "v3_attention_width256_s0", "fold": 0, "status": "completed", "hard_accuracy": 80.56737588652483, "accuracy": 91.35646687697161, "seconds": 71.74078880000161}
+{"utc": "2026-10-30T04:12:49.578788+00:00", "pid": 40360, "experiment_id": "v3_attention_width256_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:13:52.928217+00:00", "pid": 40360, "experiment_id": "v3_attention_width256_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.58156028368795, "accuracy": 90.47318611987382, "seconds": 60.77458660000411}
+{"utc": "2026-10-30T04:13:52.932594+00:00", "pid": 40360, "experiment_id": "v3_attention_width256_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:14:49.639847+00:00", "pid": 40360, "experiment_id": "v3_attention_width256_s0", "fold": 2, "status": "completed", "hard_accuracy": 78.83522727272727, "accuracy": 90.59936908517349, "seconds": 54.14786359999562}
+{"utc": "2026-10-30T04:14:49.696967+00:00", "pid": 40360, "experiment_id": "v3_attention_width256_s0", "status": "cv_completed", "accuracy": 90.80967402733964, "hard_accuracy": 79.3282876064333, "training_seconds": 186.66323900000134}
+{"utc": "2026-10-30T04:15:00.812062+00:00", "pid": 17260, "experiment_id": "v3_realmlp_robust_lr0003_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:15:38.809421+00:00", "pid": 17260, "experiment_id": "v3_realmlp_robust_lr0003_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.31914893617021, "accuracy": 89.02208201892743, "seconds": 35.847761000011815}
+{"utc": "2026-10-30T04:15:38.812643+00:00", "pid": 17260, "experiment_id": "v3_realmlp_robust_lr0003_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:16:10.007114+00:00", "pid": 17260, "experiment_id": "v3_realmlp_robust_lr0003_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.59574468085107, "accuracy": 89.58990536277602, "seconds": 29.33494349999819}
+{"utc": "2026-10-30T04:16:10.009926+00:00", "pid": 17260, "experiment_id": "v3_realmlp_robust_lr0003_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:16:42.065742+00:00", "pid": 17260, "experiment_id": "v3_realmlp_robust_lr0003_s0", "fold": 2, "status": "completed", "hard_accuracy": 76.5625, "accuracy": 89.58990536277602, "seconds": 30.21526630000153}
+{"utc": "2026-10-30T04:16:42.120937+00:00", "pid": 17260, "experiment_id": "v3_realmlp_robust_lr0003_s0", "status": "cv_completed", "accuracy": 89.4006309148265, "hard_accuracy": 76.15894039735099, "training_seconds": 95.39797080001154}
+{"utc": "2026-10-30T04:16:52.158833+00:00", "pid": 39996, "experiment_id": "v3_realmlp_robust_width256_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:17:33.372132+00:00", "pid": 39996, "experiment_id": "v3_realmlp_robust_width256_s0", "fold": 0, "status": "completed", "hard_accuracy": 77.16312056737588, "accuracy": 89.8422712933754, "seconds": 38.508977299992694}
+{"utc": "2026-10-30T04:17:33.381815+00:00", "pid": 39996, "experiment_id": "v3_realmlp_robust_width256_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:18:12.048681+00:00", "pid": 39996, "experiment_id": "v3_realmlp_robust_width256_s0", "fold": 1, "status": "completed", "hard_accuracy": 75.177304964539, "accuracy": 88.95899053627761, "seconds": 35.798851400002604}
+{"utc": "2026-10-30T04:18:12.052668+00:00", "pid": 39996, "experiment_id": "v3_realmlp_robust_width256_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:18:52.000675+00:00", "pid": 39996, "experiment_id": "v3_realmlp_robust_width256_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.71022727272727, "accuracy": 89.21135646687696, "seconds": 37.10986270000285}
+{"utc": "2026-10-30T04:18:52.068968+00:00", "pid": 39996, "experiment_id": "v3_realmlp_robust_width256_s0", "status": "cv_completed", "accuracy": 89.33753943217665, "hard_accuracy": 76.0170293282876, "training_seconds": 111.41769139999815}
+{"utc": "2026-10-30T04:19:03.464974+00:00", "pid": 41520, "experiment_id": "v3_realmlp_robust_embedding_stats_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:19:30.750621+00:00", "pid": 41520, "experiment_id": "v3_realmlp_robust_embedding_stats_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.8581560283688, "accuracy": 91.0410094637224, "seconds": 25.671258099988336}
+{"utc": "2026-10-30T04:19:30.756091+00:00", "pid": 41520, "experiment_id": "v3_realmlp_robust_embedding_stats_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:19:55.636947+00:00", "pid": 41520, "experiment_id": "v3_realmlp_robust_embedding_stats_s0", "fold": 1, "status": "completed", "hard_accuracy": 77.58865248226951, "accuracy": 90.03154574132492, "seconds": 23.17044750000059}
+{"utc": "2026-10-30T04:19:55.641838+00:00", "pid": 41520, "experiment_id": "v3_realmlp_robust_embedding_stats_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:20:20.142104+00:00", "pid": 41520, "experiment_id": "v3_realmlp_robust_embedding_stats_s0", "fold": 2, "status": "completed", "hard_accuracy": 78.83522727272727, "accuracy": 90.59936908517349, "seconds": 22.788249999997788}
+{"utc": "2026-10-30T04:20:20.199976+00:00", "pid": 41520, "experiment_id": "v3_realmlp_robust_embedding_stats_s0", "status": "cv_completed", "accuracy": 90.55730809674027, "hard_accuracy": 78.76064333017976, "training_seconds": 71.62995559998672}
+{"utc": "2026-10-30T04:22:21.621917+00:00", "pid": 35644, "experiment_id": "v3_tabm_embedding_stats_k8_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:23:55.684821+00:00", "pid": 35644, "experiment_id": "v3_tabm_embedding_stats_k8_s0", "fold": 0, "status": "completed", "hard_accuracy": 80.42553191489363, "accuracy": 91.29337539432176, "seconds": 91.01977059998899}
+{"utc": "2026-10-30T04:23:55.688909+00:00", "pid": 35644, "experiment_id": "v3_tabm_embedding_stats_k8_s0", "fold": 1, "status": "running", "seed": 3036900958}

@@ -1,0 +1,23 @@
+{
+  "checked_at_utc": "2026-10-29T16:53:39.425513+00:00",
+  "component": "V3 compact TabM/RealMLP adaptations and preprocessing",
+  "read_full_source_and_tests": true,
+  "existing_test_log": "6 tests passed in 2.177 seconds; PowerShell formatted unittest stderr as NativeCommandError, all tests OK; model author recorded exit 0",
+  "maximum_logged_synthetic_export_error": 5.960464477539062e-07,
+  "checks": [
+    "TabM first member R differs before shared feature mixing; per-member heads and gradients checked.",
+    "RealMLP zero-initialized head is made nonzero for meaningful export-parity test.",
+    "Robust preprocessing median/IQR, half-range fallback and training-constant masking are partition-fitted.",
+    "NumPy forward supports candidate and question permutations, feature subsets, zero N and chunked 137-row input.",
+    "Linear float64 preservation and NumPy-only import tested.",
+    "Bundle schema, shape, finite-array and preprocessing-mask validation are explicit."
+  ],
+  "outcome": "No blocking architecture/export module issue found. Trainer must handle incomplete two-file bundle export on interrupted checkpoint restoration; full selected-model validation parity and independent contract remain required.",
+  "hashes": {
+    "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+    "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+    "code/tests/test_models_v3.py": "38ba0d09e6937036ea3230e1ef69e4382fe65c7eec0919113823440683b40cf0",
+    "results/research_v3/model-synthetic-tests.log": "ace525523e2adb4b4ed0f04c06735567ec4930fef4681e3a77a36cebae8795a7"
+  },
+  "test_data_read": false
+}

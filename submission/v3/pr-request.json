@@ -1,0 +1,11 @@
+{
+  "method": "POST",
+  "path": "/repos/liuqichang0305/dase7506-mp2-solution/pulls",
+  "data": {
+    "base": "research/performance-v2",
+    "head": "research/autonomous-v3",
+    "draft": true,
+    "title": "Add bounded V3 research with TabM, RealMLP and resumable train-only evaluation",
+    "body": "This draft continues the preserved V2 work in #2 with a bounded, train-only research campaign. It adds compact TabM and RealMLP adaptations, AdamW/Muon/EMA controls, common nested three-fold evaluation, exact epoch recovery, immutable experiment provenance and Windows process-tree budget enforcement.\n\nActual evidence so far includes the timing pilot and three complete MLP configurations: hard correct counts 1592, 1601 and 1598 out of 2114. The second Muon setting and remaining registered architecture rounds are ongoing. Historical OOF is hash-verified; no new validation or test score is claimed.\n\nModel/export, loss, optimizer, checkpoint-resume and scheduler checks passed, including real harmless Windows child-process cleanup and full-train input export parity. Original failing audit logs and all V1/V2 frozen assets are retained. At most two new validation finalists will be locked after research; the unique selected candidate must then pass resource review and fresh reproduction before final test/submission. The final report and results will be added before this draft is marked ready."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "source": "synthetic only; no official data files",
+  "isolated_checks": [
+    {
+      "fixture": "mlp",
+      "tool": "check_export_v3.py",
+      "status": "passed",
+      "evidence": "mlp-check_export_v3.json"
+    },
+    {
+      "fixture": "mlp",
+      "tool": "check_contract_v3.py",
+      "status": "passed",
+      "evidence": "mlp-check_contract_v3.json"
+    },
+    {
+      "fixture": "tabm",
+      "tool": "check_export_v3.py",
+      "status": "passed",
+      "evidence": "tabm-check_export_v3.json"
+    },
+    {
+      "fixture": "tabm",
+      "tool": "check_contract_v3.py",
+      "status": "passed",
+      "evidence": "tabm-check_contract_v3.json"
+    },
+    {
+      "fixture": "realmlp",
+      "tool": "check_export_v3.py",
+      "status": "passed",
+      "evidence": "realmlp-check_export_v3.json"
+    },
+    {
+      "fixture": "realmlp",
+      "tool": "check_contract_v3.py",
+      "status": "passed",
+      "evidence": "realmlp-check_contract_v3.json"
+    },
+    {
+      "fixture": "v2_linear",
+      "tool": "check_export_v3.py",
+      "status": "passed",
+      "evidence": "v2_linear-check_export_v3.json"
+    },
+    {
+      "fixture": "v2_linear",
+      "tool": "check_contract_v3.py",
+      "status": "passed",
+      "evidence": "v2_linear-check_contract_v3.json"
+    },
+    {
+      "fixture": "ensemble2",
+      "tool": "check_export_v3.py",
+      "status": "passed",
+      "evidence": "ensemble2-check_export_v3.json"
+    },
+    {
+      "fixture": "ensemble2",
+      "tool": "check_contract_v3.py",
+      "status": "passed",
+      "evidence": "ensemble2-check_contract_v3.json"
+    },
+    {
+      "fixture": "ensemble3",
+      "tool": "check_export_v3.py",
+      "status": "passed",
+      "evidence": "ensemble3-check_export_v3.json"
+    },
+    {
+      "fixture": "ensemble3",
+      "tool": "check_contract_v3.py",
+      "status": "passed",
+      "evidence": "ensemble3-check_contract_v3.json"
+    }
+  ],
+  "exact_ties": "passed",
+  "manifest_rejections": "passed",
+  "seconds": 68.50767669999914,
+  "temporary_assets": "Deterministically generated synthetic weights removed with TemporaryDirectory; no deployable ensemble was selected."
+}

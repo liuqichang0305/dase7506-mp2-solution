@@ -1,0 +1,235 @@
+{
+  "schema": "mp2-v3-deterministic-train-references-v1",
+  "status": "complete",
+  "created_at_utc": "2026-10-30T04:09:27.782287+00:00",
+  "split": "train",
+  "n": 4755,
+  "source_label_archive": "v3:v3_mlp_adamw_s0",
+  "train_ids_sha256": "4088e71dd796b3828383bb90de9c26cf0bd783114d54675760d6f3a06bd1a3d5",
+  "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+  "source_sha256": {
+    "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+    "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+    "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+    "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+    "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+    "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307",
+    "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+    "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+    "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+    "code/tools/analyze_oof_v2.py": "0423bcf6668a783e66051e6b0132a5262ce03b31c9032e80b3ca491537a0c812",
+    "code/tools/audit_assets.py": "7f099f89d9cf8b97e569e8d13c07bc1f942855c8131cb4b2f350836c7a2a9b33",
+    "code/tools/deterministic_train_references_v3.py": "b90cadba041c9adf8af9214c2aeea36cf37e14e0fb361a7044df91753156e50b",
+    "code/tools/diagnose_oof_v3.py": "4674d685cba6c8d211bbb37b22e12a064cf9c4bfb9db9af4bbfb3621244afa1d",
+    "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f"
+  },
+  "input_sha256": {
+    "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+    "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+    "results/research_v3/common_folds.json": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+    "results/research_v3/v3_mlp_adamw_s0/fold0-raw-scores.npy": "7f4122cc4efa839320e7fd1567a056bb4d279089a02068d3dcd9fda0a77ee171",
+    "results/research_v3/v3_mlp_adamw_s0/fold0-scores.npy": "7f4122cc4efa839320e7fd1567a056bb4d279089a02068d3dcd9fda0a77ee171",
+    "results/research_v3/v3_mlp_adamw_s0/fold1-raw-scores.npy": "95d73b12df05bf5f76905bad939d5210ab77383968e096ddb78288980fab83ed",
+    "results/research_v3/v3_mlp_adamw_s0/fold1-scores.npy": "95d73b12df05bf5f76905bad939d5210ab77383968e096ddb78288980fab83ed",
+    "results/research_v3/v3_mlp_adamw_s0/fold2-raw-scores.npy": "b8c569b9f4750ee6d7800ca1d775aab37ba3bbb25dc89570b6c4e599daaebf02",
+    "results/research_v3/v3_mlp_adamw_s0/fold2-scores.npy": "b8c569b9f4750ee6d7800ca1d775aab37ba3bbb25dc89570b6c4e599daaebf02",
+    "results/research_v3/v3_mlp_adamw_s0/oof.npz": "943fa7317056fac8ac2bf6672ee95f8b0b9a544567e531ac46ba039d3ab9605f",
+    "results/research_v3/v3_mlp_adamw_s0/registration.json": "b40a3ec29d840ab72ea93ac0f268a32eb28798c08c9ce7c5b68f90228c217d5d",
+    "results/research_v3/v3_mlp_adamw_s0/summary.json": "aff3e3af6a62b8ef126a8c4eb7281e29e902b351d017c24a3e08379600886030"
+  },
+  "official_training_data_sha256": {
+    "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+    "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+    "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+    "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2"
+  },
+  "selections": {
+    "path": "results/research_v3/deterministic_train_references/selections.npz",
+    "sha256": "4d68871ec432e617144b8346f4156ac706955a1fa5b67c77f8a71f780c3f02c4"
+  },
+  "rules": {
+    "fixed0": "Always original candidate index 0, including when unparseable; an unconditional reference.",
+    "valid_answer_majority": "Use existing mp2.features.majority_choices: None has zero votes; count equal official parsed answers; tie chooses the earliest original candidate index; all-None returns index 0."
+  },
+  "majority_independent_group_count_choices_equal": true,
+  "all_unparseable_questions": 0,
+  "results": {
+    "fixed0": {
+      "overall": {
+        "correct": 3584,
+        "n": 4755,
+        "pooled_accuracy": 75.3732912723449,
+        "fold_mean": 75.3732912723449,
+        "fold_sd": 1.0601121481496147,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 1191,
+            "n": 1585,
+            "accuracy": 75.14195583596215
+          },
+          {
+            "fold": 1,
+            "correct": 1213,
+            "n": 1585,
+            "accuracy": 76.52996845425868
+          },
+          {
+            "fold": 2,
+            "correct": 1180,
+            "n": 1585,
+            "accuracy": 74.44794952681389
+          }
+        ]
+      },
+      "hard": {
+        "correct": 1078,
+        "n": 2114,
+        "pooled_accuracy": 50.993377483443716,
+        "fold_mean": 50.99237051364711,
+        "fold_sd": 2.164784838616942,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 359,
+            "n": 705,
+            "accuracy": 50.92198581560283
+          },
+          {
+            "fold": 1,
+            "correct": 375,
+            "n": 705,
+            "accuracy": 53.191489361702125
+          },
+          {
+            "fold": 2,
+            "correct": 344,
+            "n": 704,
+            "accuracy": 48.86363636363637
+          }
+        ]
+      },
+      "single_positive": {
+        "correct": 177,
+        "n": 711,
+        "pooled_accuracy": 24.894514767932492,
+        "fold_mean": 24.894514767932492,
+        "fold_sd": 3.1855841499032693,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 52,
+            "n": 237,
+            "accuracy": 21.940928270042196
+          },
+          {
+            "fold": 1,
+            "correct": 67,
+            "n": 237,
+            "accuracy": 28.270042194092827
+          },
+          {
+            "fold": 2,
+            "correct": 58,
+            "n": 237,
+            "accuracy": 24.47257383966245
+          }
+        ]
+      }
+    },
+    "valid_answer_majority": {
+      "overall": {
+        "correct": 4054,
+        "n": 4755,
+        "pooled_accuracy": 85.25762355415353,
+        "fold_mean": 85.25762355415353,
+        "fold_sd": 0.2914070759316705,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 1346,
+            "n": 1585,
+            "accuracy": 84.9211356466877
+          },
+          {
+            "fold": 1,
+            "correct": 1354,
+            "n": 1585,
+            "accuracy": 85.42586750788644
+          },
+          {
+            "fold": 2,
+            "correct": 1354,
+            "n": 1585,
+            "accuracy": 85.42586750788644
+          }
+        ]
+      },
+      "hard": {
+        "correct": 1413,
+        "n": 2114,
+        "pooled_accuracy": 66.84011352885526,
+        "fold_mean": 66.84027777777777,
+        "fold_sd": 0.6421353831658336,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 466,
+            "n": 705,
+            "accuracy": 66.09929078014184
+          },
+          {
+            "fold": 1,
+            "correct": 474,
+            "n": 705,
+            "accuracy": 67.23404255319149
+          },
+          {
+            "fold": 2,
+            "correct": 473,
+            "n": 704,
+            "accuracy": 67.1875
+          }
+        ]
+      },
+      "single_positive": {
+        "correct": 121,
+        "n": 711,
+        "pooled_accuracy": 17.018284106891702,
+        "fold_mean": 17.018284106891702,
+        "fold_sd": 1.061861383301089,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 38,
+            "n": 237,
+            "accuracy": 16.033755274261605
+          },
+          {
+            "fold": 1,
+            "correct": 43,
+            "n": 237,
+            "accuracy": 18.143459915611814
+          },
+          {
+            "fold": 2,
+            "correct": 40,
+            "n": 237,
+            "accuracy": 16.877637130801688
+          }
+        ]
+      }
+    }
+  },
+  "new_fitting_runs": 0,
+  "model_hyperparameter_configurations_created": 0,
+  "raw_reference_or_embeddings_read": false,
+  "validation_test_ranking_read": false,
+  "guard_denied_accesses": [],
+  "numpy_version": "2.5.3",
+  "computation_wall_seconds": 0.8714085999963572,
+  "cost_scope": "This process internal elapsed includes guard, hash/source/OOF verification, train text parsing, rules and output; not formal fresh inference/scorer latency. Training continued independently; no resource certification is claimed.",
+  "report_integration_note": "Add these two label-independent reference rows to the train common-fold mechanism table. Report pooled full/hard/single counts and fold mean/sample SD from results. They have zero fitted parameters and no seed tuning; partitioning by common held-out folds is descriptive, not three trained fits. Do not mix their computation cost with fitted model cost or send them to test.",
+  "command": ".venv/Scripts/python.exe code/tools/deterministic_train_references_v3.py"
+}

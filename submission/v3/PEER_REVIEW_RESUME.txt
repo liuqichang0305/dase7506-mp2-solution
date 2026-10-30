@@ -1,0 +1,42 @@
+DASE7506 MP2 V3 - resume the separately released course peer review
+
+Status: preparation only. No other student's work has been reproduced and no
+Peer Review Report has been submitted by this V3 workflow. The startup rules
+snapshot did not show an instructor-opened MP2 peer-review period. Recheck the
+actual release when resuming; do not infer seven days from the submission deadline.
+
+1. Read submission/v3/SUBMISSION_RECORD.json (or its final Markdown receipt),
+   FREEZE.json and TEST_COMPLETE.json. Verify the user's current official Issue
+   and the matching immutable method/checkpoint URLs. Do not restart research,
+   change the frozen model, or repeat a score-update Issue.
+2. Visit https://xudongwu-0.github.io/courses/dase7506/mp2/ and the official course
+   notices. Save timestamp, exact instructor release and applicable closing time.
+   If MP2 peer review is not actually available, retain pending status and stop
+   this separate stage without marking it complete.
+3. Select one eligible public submission under the instructor's rules. Record
+   its submission number, author, exact code commit and matching checkpoint URL.
+   Review source before execution. Do not substitute the author's later main
+   branch, a different checkpoint, or weights retrained by this project.
+4. Use a new isolated checkout/environment under this project's tmp directory.
+   Install the declared dependencies, retain actual install logs and differences,
+   and fetch only official evaluation data allowed for reproduction. Keep the
+   other work separate from this frozen research and never use it to tune ours.
+5. Run the unchanged official prediction and separate scoring commands, offline,
+   on the exact submitted assets. Save hardware, full commands, all raw JSON,
+   elapsed times and hashes. An installation failure has no reproduced score;
+   never enter zero as a stand-in and never infer misconduct from a failure.
+6. Compare only observed evidence. Explain numerical, package, hardware and
+   timing differences. Use the current official Peer Review Report form/handler;
+   preserve its actual schema, encryption and submission number requirements.
+7. Before posting, check for an existing receipt and matching course Issue to
+   prevent duplicate reports. The user's adopted research specification already
+   authorizes one such course peer-review report when genuinely open. Any actual
+   platform approval/identity block must be stated precisely, without requesting
+   credentials in chat.
+8. Only actual creation of the official report Issue counts as submission.
+   Record URL, number, author, creation time, exact reproduced score and processing
+   status. An opened prefilled URL, local draft or report PDF is not submission.
+
+Prepared review template: submission/v3/PEER_REVIEW_TEMPLATE.md
+Source authority: docs/research_v3/AUTONOMOUS_RESEARCH_SPEC.txt, sections12--14.
+Do not overwrite any original V1/V2 submission or peer-review preparation.
