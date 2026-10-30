@@ -1,0 +1,163 @@
+{
+  "checked_at_utc": "2026-10-30T03:37:19.403624+00:00",
+  "scope": "Correction to auditor-produced historical row inventory only; no experiment, training, holdout or ranking changes.",
+  "superseded_field": "audit_research_coverage_20261030.json historical_common_fold_methods",
+  "reason": "The audited analysis labels its version research_v2; the initial reader used v2 and therefore emitted an empty list. The human-readable review had already correctly identified19 historical rows from direct inspection.",
+  "analysis_path": "results/research_v3/analysis/r03_complete/analysis.json",
+  "analysis_sha256": "195fca47a5bf39b452699af08ea1f6e4c42e71313a8c70fc89f6a8072a7ca195",
+  "historical_row_count": 19,
+  "historical_common_fold_methods": [
+    {
+      "id": "attention_regularized_s0",
+      "seed": 3036900957,
+      "hard_correct": 1687,
+      "hard_fold_mean": 79.80140500752204,
+      "summary_sha256": "822bba4dcdd4253744303ea650551fcd80780aeacce1f3b8a8bca475c612f497",
+      "oof_sha256": "ae5737496f46d725181382ec3c2019d483a559e25b004f9546fbe8fc5d416263"
+    },
+    {
+      "id": "attention_hard_ablation",
+      "seed": 3036900957,
+      "hard_correct": 1680,
+      "hard_fold_mean": 79.47043574038256,
+      "summary_sha256": "3d1183e6c4d9c5b8038c2df585c2d26f87cebf56563dbbcd03c6c80f1fb7de31",
+      "oof_sha256": "f99a23f3026d239cde966cdf9b83c26af10bd8ab9c6ee3c5da7608ce0ab07740"
+    },
+    {
+      "id": "attention_regularized_s1",
+      "seed": 3036900958,
+      "hard_correct": 1678,
+      "hard_fold_mean": 79.37587309262842,
+      "summary_sha256": "df71e375b693dad0c5b038ad17a68739741d10a25188dc85cceff8b175c8da1b",
+      "oof_sha256": "af9478f0864d71e4ec89381dba2a047630d546e8f4f83a83a8ec96894ac07b1d"
+    },
+    {
+      "id": "deepsets_regularized_s1",
+      "seed": 3036900958,
+      "hard_correct": 1672,
+      "hard_fold_mean": 79.09151353965184,
+      "summary_sha256": "a35acf7d0924c8884a7b22c6ca1b1531ee0744b058cc0917ef57a712be91e88c",
+      "oof_sha256": "c788ca3c801d2efa72a35c52736db70c308f7eab9cd323dfa64d4f0d4ca40e97"
+    },
+    {
+      "id": "attention_regularized_s2",
+      "seed": 3036900959,
+      "hard_correct": 1671,
+      "hard_fold_mean": 79.04490382548893,
+      "summary_sha256": "f5eb0ffaa01236e875d0bd74bc9f77d31337460af57868c232e36d6073569b14",
+      "oof_sha256": "66c73785f4f863755f574e23511fdf7766030ac1405b278fcb10dc4502afe56f"
+    },
+    {
+      "id": "attention_group_s0",
+      "seed": 3036900957,
+      "hard_correct": 1668,
+      "hard_fold_mean": 78.90245540511496,
+      "summary_sha256": "04c33294e762ffdb486f07ce8adbf0b09e06cb6ebd4ee160eafd1d0141275c2c",
+      "oof_sha256": "4a117f8843e7d336b36fc027b3363d7fc31fe8ab65a472bade0dcf3414c331d0"
+    },
+    {
+      "id": "deepsets_regularized_s2",
+      "seed": 3036900959,
+      "hard_correct": 1667,
+      "hard_fold_mean": 78.85477111540942,
+      "summary_sha256": "ba4f6e2255c3268cdfb49083b36e6046f9f305cc95e93bf9c160f695b2569116",
+      "oof_sha256": "8f646e8dea58ff4e5c73c609a4cf213f931ae216de1d718c2f28415fa6122b86"
+    },
+    {
+      "id": "deepsets_no_context",
+      "seed": 3036900957,
+      "hard_correct": 1655,
+      "hard_fold_mean": 78.28732806791318,
+      "summary_sha256": "2cbf40795a12b38848d37b53040651bb23e79a7635decaf0e8407c3988cceeae",
+      "oof_sha256": "0042683b2e56dad9f4269ab11d05531e52ce71a8536ff535e7de32c34d542bd7"
+    },
+    {
+      "id": "deepsets_regularized_s0",
+      "seed": 3036900957,
+      "hard_correct": 1654,
+      "hard_fold_mean": 78.23991242209327,
+      "summary_sha256": "a961c3df4dd3a8a549cfc578ad4f23c90f592d31f77aa225dc65ee9293b64b6b",
+      "oof_sha256": "81b290b538d261e30f267c1b0c2c7e5487c4248e93b8a94bd902678a106d4b99"
+    },
+    {
+      "id": "deepsets_group_s0",
+      "seed": 3036900957,
+      "hard_correct": 1648,
+      "hard_fold_mean": 77.95642596174511,
+      "summary_sha256": "b88ef44a8446a3212914b50701836a0652261c6eacbc6f8694e5349c6bce6941",
+      "oof_sha256": "7a66639c9e8a72915fe7f5edfe331bf33b2a9824a9dc1364dc894f36f25e98ef"
+    },
+    {
+      "id": "mlp_listwise_s0",
+      "seed": 3036900957,
+      "hard_correct": 1612,
+      "hard_fold_mean": 76.25423114119923,
+      "summary_sha256": "52b0437fb41bac3dda5909e48bd3e6d8f70e1244a1b6097f6a03f7a6162b08df",
+      "oof_sha256": "30cdc4f6b1e474d4d070d9c3bdc578f19557279e164aaf0be2fc1261b961a3cd"
+    },
+    {
+      "id": "mlp_capacity_s0",
+      "seed": 3036900957,
+      "hard_correct": 1603,
+      "hard_fold_mean": 75.82822909950569,
+      "summary_sha256": "e7a0d3fa2a118dfc01d769ad18247d8647ba08f35aa15fa1dab9da4ce6b39125",
+      "oof_sha256": "c8efc14ba19f53254ae6ab7a7125ac10403a8d88d259ae80d8a1d23993a490d0"
+    },
+    {
+      "id": "linear_group_a0",
+      "seed": 3036900957,
+      "hard_correct": 1601,
+      "hard_fold_mean": 75.73326348592308,
+      "summary_sha256": "493bfb8833ebf12c1860df5b93802ea0e0befbe0f55e6df3c0038ad826efc3bb",
+      "oof_sha256": "8b0f75cf341e594f05e89c49e3107fa7ceebca4f8f07097aa2cf762557c5cef6"
+    },
+    {
+      "id": "linear_group_hard",
+      "seed": 3036900957,
+      "hard_correct": 1601,
+      "hard_fold_mean": 75.73326348592308,
+      "summary_sha256": "0b6be27102e5000e78780eb0903aade72698a7bec72a6183ec348ee0a38d3c77",
+      "oof_sha256": "999a5c1f0de98d85de8fd6e7e7fae531a1b734bd1fa5743e8439f3a896b4e205"
+    },
+    {
+      "id": "resmlp_group_s0",
+      "seed": 3036900957,
+      "hard_correct": 1600,
+      "hard_fold_mean": 75.68604932301741,
+      "summary_sha256": "02c12649b1a88cea02a59bb11ccb0f41e08c0f0a9c6b2723eccbb117a91f603f",
+      "oof_sha256": "08557cdc51f4457406aa0759cb208a7d3fc129da5116c31545f12fec7515c651"
+    },
+    {
+      "id": "mlp_group_s0",
+      "seed": 3036900957,
+      "hard_correct": 1599,
+      "hard_fold_mean": 75.63836503331184,
+      "summary_sha256": "707e00af10e7247e41ad245fca9996d240e8789072cfdb80a14702a6a4d0b5eb",
+      "oof_sha256": "fb8e6c38705072cb91ac93d7f753e7971cd2bb2d792c4ab13799ce779524cef6"
+    },
+    {
+      "id": "linear_group_a0p5",
+      "seed": 3036900957,
+      "hard_correct": 1595,
+      "hard_fold_mean": 75.44957554266067,
+      "summary_sha256": "33b2f7857edce01cdef0bb6bcb4bd71b6fc426f94ffed2440581fe6578c22a4e",
+      "oof_sha256": "ee222848f3acb37db9fd585d4ba4ee23b992ea60d4d41a6895be22aa21f8dc9e"
+    },
+    {
+      "id": "linear_group_a1",
+      "seed": 3036900957,
+      "hard_correct": 1588,
+      "hard_fold_mean": 75.11847195357832,
+      "summary_sha256": "5d7abf9c438ab36eaeff0a4d5d30b91a7f7e44f8832fa8f8cf165f89e3b4410d",
+      "oof_sha256": "19902c26e92155eb54ce329fff48a9d15226c4135e46a4bb86e7dd50b3f40644"
+    },
+    {
+      "id": "linear_original",
+      "seed": 3036900957,
+      "hard_correct": 1576,
+      "hard_fold_mean": 74.55096174511068,
+      "summary_sha256": "d13a5451e2f637f028abc48a3019e7d75ce8d5feb3286b067316ce03ed9b8aa7",
+      "oof_sha256": "fc4d464d9103b437980eb645261e3e25a774376abb9ad3bea7f4125749d010f8"
+    }
+  ]
+}

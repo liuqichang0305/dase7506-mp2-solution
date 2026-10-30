@@ -1,0 +1,173 @@
+{
+  "status": "complete",
+  "output": "results/research_v3/deterministic_train_references",
+  "wall_seconds": 0.8714085999963572,
+  "results": {
+    "fixed0": {
+      "overall": {
+        "correct": 3584,
+        "n": 4755,
+        "pooled_accuracy": 75.3732912723449,
+        "fold_mean": 75.3732912723449,
+        "fold_sd": 1.0601121481496147,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 1191,
+            "n": 1585,
+            "accuracy": 75.14195583596215
+          },
+          {
+            "fold": 1,
+            "correct": 1213,
+            "n": 1585,
+            "accuracy": 76.52996845425868
+          },
+          {
+            "fold": 2,
+            "correct": 1180,
+            "n": 1585,
+            "accuracy": 74.44794952681389
+          }
+        ]
+      },
+      "hard": {
+        "correct": 1078,
+        "n": 2114,
+        "pooled_accuracy": 50.993377483443716,
+        "fold_mean": 50.99237051364711,
+        "fold_sd": 2.164784838616942,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 359,
+            "n": 705,
+            "accuracy": 50.92198581560283
+          },
+          {
+            "fold": 1,
+            "correct": 375,
+            "n": 705,
+            "accuracy": 53.191489361702125
+          },
+          {
+            "fold": 2,
+            "correct": 344,
+            "n": 704,
+            "accuracy": 48.86363636363637
+          }
+        ]
+      },
+      "single_positive": {
+        "correct": 177,
+        "n": 711,
+        "pooled_accuracy": 24.894514767932492,
+        "fold_mean": 24.894514767932492,
+        "fold_sd": 3.1855841499032693,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 52,
+            "n": 237,
+            "accuracy": 21.940928270042196
+          },
+          {
+            "fold": 1,
+            "correct": 67,
+            "n": 237,
+            "accuracy": 28.270042194092827
+          },
+          {
+            "fold": 2,
+            "correct": 58,
+            "n": 237,
+            "accuracy": 24.47257383966245
+          }
+        ]
+      }
+    },
+    "valid_answer_majority": {
+      "overall": {
+        "correct": 4054,
+        "n": 4755,
+        "pooled_accuracy": 85.25762355415353,
+        "fold_mean": 85.25762355415353,
+        "fold_sd": 0.2914070759316705,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 1346,
+            "n": 1585,
+            "accuracy": 84.9211356466877
+          },
+          {
+            "fold": 1,
+            "correct": 1354,
+            "n": 1585,
+            "accuracy": 85.42586750788644
+          },
+          {
+            "fold": 2,
+            "correct": 1354,
+            "n": 1585,
+            "accuracy": 85.42586750788644
+          }
+        ]
+      },
+      "hard": {
+        "correct": 1413,
+        "n": 2114,
+        "pooled_accuracy": 66.84011352885526,
+        "fold_mean": 66.84027777777777,
+        "fold_sd": 0.6421353831658336,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 466,
+            "n": 705,
+            "accuracy": 66.09929078014184
+          },
+          {
+            "fold": 1,
+            "correct": 474,
+            "n": 705,
+            "accuracy": 67.23404255319149
+          },
+          {
+            "fold": 2,
+            "correct": 473,
+            "n": 704,
+            "accuracy": 67.1875
+          }
+        ]
+      },
+      "single_positive": {
+        "correct": 121,
+        "n": 711,
+        "pooled_accuracy": 17.018284106891702,
+        "fold_mean": 17.018284106891702,
+        "fold_sd": 1.061861383301089,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 38,
+            "n": 237,
+            "accuracy": 16.033755274261605
+          },
+          {
+            "fold": 1,
+            "correct": 43,
+            "n": 237,
+            "accuracy": 18.143459915611814
+          },
+          {
+            "fold": 2,
+            "correct": 40,
+            "n": 237,
+            "accuracy": 16.877637130801688
+          }
+        ]
+      }
+    }
+  }
+}

@@ -95,3 +95,127 @@
 {"utc": "2026-10-30T03:11:27.493847+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "fold": 2, "status": "completed", "hard_accuracy": 79.11931818181817, "accuracy": 90.7255520504732, "seconds": 36.566608100009034}
 {"utc": "2026-10-30T03:11:27.641606+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "status": "cv_completed", "accuracy": 90.66246056782335, "hard_accuracy": 78.99716177861873, "training_seconds": 111.08153440001479}
 {"utc": "2026-10-30T03:13:24.641744+00:00", "pid": 27824, "experiment_id": "v3_attention_muon_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:21:54.080750+00:00", "pid": 27824, "experiment_id": "v3_attention_muon_s0", "fold": 2, "status": "completed", "hard_accuracy": 78.55113636363636, "accuracy": 90.47318611987382, "seconds": 719.7974522000004}
+{"utc": "2026-10-30T03:21:54.201080+00:00", "pid": 27824, "experiment_id": "v3_attention_muon_s0", "status": "cv_completed", "accuracy": 90.57833859095689, "hard_accuracy": 78.80794701986756, "training_seconds": 2288.8305933999945}
+{"utc": "2026-10-30T03:22:08.072667+00:00", "pid": 36516, "experiment_id": "v3_tabm_k4_lr0003_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:24:47.931711+00:00", "pid": 36516, "experiment_id": "v3_tabm_k4_lr0003_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.60283687943262, "accuracy": 89.14826498422713, "seconds": 154.52351330000965}
+{"utc": "2026-10-30T03:24:47.941337+00:00", "pid": 36516, "experiment_id": "v3_tabm_k4_lr0003_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:27:32.401682+00:00", "pid": 36516, "experiment_id": "v3_tabm_k4_lr0003_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.73758865248227, "accuracy": 89.65299684542587, "seconds": 159.0930733999994}
+{"utc": "2026-10-30T03:27:32.410458+00:00", "pid": 36516, "experiment_id": "v3_tabm_k4_lr0003_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:30:16.061965+00:00", "pid": 36516, "experiment_id": "v3_tabm_k4_lr0003_s0", "fold": 2, "status": "completed", "hard_accuracy": 76.13636363636364, "accuracy": 89.4006309148265, "seconds": 158.1731454999972}
+{"utc": "2026-10-30T03:30:16.177660+00:00", "pid": 36516, "experiment_id": "v3_tabm_k4_lr0003_s0", "status": "cv_completed", "accuracy": 89.4006309148265, "hard_accuracy": 76.15894039735099, "training_seconds": 471.78973220000626}
+{"utc": "2026-10-30T03:30:30.588698+00:00", "pid": 36432, "experiment_id": "v3_tabm_k4_ema_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:33:41.870244+00:00", "pid": 36432, "experiment_id": "v3_tabm_k4_ema_s0", "fold": 0, "status": "completed", "hard_accuracy": 76.31205673758865, "accuracy": 89.46372239747635, "seconds": 185.57683489999908}
+{"utc": "2026-10-30T03:33:41.896924+00:00", "pid": 36432, "experiment_id": "v3_tabm_k4_ema_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:37:03.999290+00:00", "pid": 36432, "experiment_id": "v3_tabm_k4_ema_s0", "fold": 1, "status": "completed", "hard_accuracy": 77.4468085106383, "accuracy": 89.96845425867508, "seconds": 196.65665530000115}
+{"utc": "2026-10-30T03:37:04.006518+00:00", "pid": 36432, "experiment_id": "v3_tabm_k4_ema_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:40:26.522035+00:00", "pid": 36432, "experiment_id": "v3_tabm_k4_ema_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.99431818181817, "accuracy": 89.33753943217665, "seconds": 197.05503540000063}
+{"utc": "2026-10-30T03:40:26.641832+00:00", "pid": 36432, "experiment_id": "v3_tabm_k4_ema_s0", "status": "cv_completed", "accuracy": 89.58990536277602, "hard_accuracy": 76.58467360454115, "training_seconds": 579.2885256000009}
+{"utc": "2026-10-30T03:40:40.308399+00:00", "pid": 39784, "experiment_id": "v3_tabm_k4_embedding_stats_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:42:24.107096+00:00", "pid": 39784, "experiment_id": "v3_tabm_k4_embedding_stats_s0", "fold": 0, "status": "completed", "hard_accuracy": 81.27659574468085, "accuracy": 91.67192429022082, "seconds": 100.36135059999651}
+{"utc": "2026-10-30T03:42:24.115344+00:00", "pid": 39784, "experiment_id": "v3_tabm_k4_embedding_stats_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:43:51.731666+00:00", "pid": 39784, "experiment_id": "v3_tabm_k4_embedding_stats_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.01418439716312, "accuracy": 90.22082018927445, "seconds": 84.15417969999544}
+{"utc": "2026-10-30T03:43:51.741629+00:00", "pid": 39784, "experiment_id": "v3_tabm_k4_embedding_stats_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:45:29.865991+00:00", "pid": 39784, "experiment_id": "v3_tabm_k4_embedding_stats_s0", "fold": 2, "status": "completed", "hard_accuracy": 77.41477272727273, "accuracy": 89.96845425867508, "seconds": 94.71462670000619}
+{"utc": "2026-10-30T03:45:30.037967+00:00", "pid": 39784, "experiment_id": "v3_tabm_k4_embedding_stats_s0", "status": "cv_completed", "accuracy": 90.62039957939012, "hard_accuracy": 78.90255439924314, "training_seconds": 279.23015699999814}
+{"utc": "2026-10-30T03:45:44.619367+00:00", "pid": 19236, "experiment_id": "v3_attention_listwise_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:47:01.711720+00:00", "pid": 19236, "experiment_id": "v3_attention_listwise_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.57446808510639, "accuracy": 90.91482649842271, "seconds": 75.16597040001943}
+{"utc": "2026-10-30T03:47:01.721557+00:00", "pid": 19236, "experiment_id": "v3_attention_listwise_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:47:55.538939+00:00", "pid": 19236, "experiment_id": "v3_attention_listwise_s0", "fold": 1, "status": "completed", "hard_accuracy": 77.58865248226951, "accuracy": 90.03154574132492, "seconds": 51.90466890000971}
+{"utc": "2026-10-30T03:47:55.547823+00:00", "pid": 19236, "experiment_id": "v3_attention_listwise_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:48:40.625548+00:00", "pid": 19236, "experiment_id": "v3_attention_listwise_s0", "fold": 2, "status": "completed", "hard_accuracy": 80.11363636363636, "accuracy": 91.16719242902208, "seconds": 43.765934400013066}
+{"utc": "2026-10-30T03:48:40.684651+00:00", "pid": 19236, "experiment_id": "v3_attention_listwise_s0", "status": "cv_completed", "accuracy": 90.70452155625657, "hard_accuracy": 79.09176915799432, "training_seconds": 170.8365737000422}
+{"utc": "2026-10-30T03:48:53.172342+00:00", "pid": 26080, "experiment_id": "v3_attention_bce_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:50:01.135250+00:00", "pid": 26080, "experiment_id": "v3_attention_bce_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.71631205673759, "accuracy": 90.97791798107255, "seconds": 66.14379780000309}
+{"utc": "2026-10-30T03:50:01.143542+00:00", "pid": 26080, "experiment_id": "v3_attention_bce_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:51:28.486367+00:00", "pid": 26080, "experiment_id": "v3_attention_bce_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.01418439716312, "accuracy": 90.22082018927445, "seconds": 85.48190999998769}
+{"utc": "2026-10-30T03:51:28.493889+00:00", "pid": 26080, "experiment_id": "v3_attention_bce_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:52:56.620150+00:00", "pid": 26080, "experiment_id": "v3_attention_bce_s0", "fold": 2, "status": "completed", "hard_accuracy": 78.97727272727273, "accuracy": 90.66246056782335, "seconds": 86.34667479999189}
+{"utc": "2026-10-30T03:52:56.735676+00:00", "pid": 26080, "experiment_id": "v3_attention_bce_s0", "status": "cv_completed", "accuracy": 90.62039957939012, "hard_accuracy": 78.90255439924314, "training_seconds": 237.97238259998267}
+{"utc": "2026-10-30T03:53:11.547875+00:00", "pid": 41168, "experiment_id": "v3_attention_pairwise_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:54:28.716816+00:00", "pid": 41168, "experiment_id": "v3_attention_pairwise_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.43262411347519, "accuracy": 90.85173501577287, "seconds": 75.43384729999525}
+{"utc": "2026-10-30T03:54:28.728542+00:00", "pid": 41168, "experiment_id": "v3_attention_pairwise_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:55:44.241665+00:00", "pid": 41168, "experiment_id": "v3_attention_pairwise_s0", "fold": 1, "status": "completed", "hard_accuracy": 79.14893617021276, "accuracy": 90.7255520504732, "seconds": 73.63096800001222}
+{"utc": "2026-10-30T03:55:44.248466+00:00", "pid": 41168, "experiment_id": "v3_attention_pairwise_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:56:47.415919+00:00", "pid": 41168, "experiment_id": "v3_attention_pairwise_s0", "fold": 2, "status": "completed", "hard_accuracy": 80.39772727272727, "accuracy": 91.29337539432176, "seconds": 61.43945879999956}
+{"utc": "2026-10-30T03:56:47.535464+00:00", "pid": 41168, "experiment_id": "v3_attention_pairwise_s0", "status": "cv_completed", "accuracy": 90.95688748685595, "hard_accuracy": 79.65941343424787, "training_seconds": 210.50427410000702}
+{"utc": "2026-10-30T03:57:02.517445+00:00", "pid": 43244, "experiment_id": "v3_attention_group_alpha05_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:58:08.162890+00:00", "pid": 43244, "experiment_id": "v3_attention_group_alpha05_s0", "fold": 0, "status": "completed", "hard_accuracy": 78.72340425531915, "accuracy": 90.53627760252367, "seconds": 63.89803650000249}
+{"utc": "2026-10-30T03:58:08.170001+00:00", "pid": 43244, "experiment_id": "v3_attention_group_alpha05_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:59:03.540825+00:00", "pid": 43244, "experiment_id": "v3_attention_group_alpha05_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.15602836879432, "accuracy": 90.28391167192429, "seconds": 53.62239430000773}
+{"utc": "2026-10-30T03:59:03.549402+00:00", "pid": 43244, "experiment_id": "v3_attention_group_alpha05_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:00:08.328973+00:00", "pid": 43244, "experiment_id": "v3_attention_group_alpha05_s0", "fold": 2, "status": "completed", "hard_accuracy": 79.11931818181817, "accuracy": 90.7255520504732, "seconds": 62.98612420000427}
+{"utc": "2026-10-30T04:00:08.452632+00:00", "pid": 43244, "experiment_id": "v3_attention_group_alpha05_s0", "status": "cv_completed", "accuracy": 90.51524710830704, "hard_accuracy": 78.66603595080416, "training_seconds": 180.5065550000145}
+{"utc": "2026-10-30T04:00:22.780585+00:00", "pid": 26400, "experiment_id": "v3_deepsets_adamw_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:01:20.824020+00:00", "pid": 26400, "experiment_id": "v3_deepsets_adamw_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.8581560283688, "accuracy": 91.0410094637224, "seconds": 56.23356509998848}
+{"utc": "2026-10-30T04:01:20.830633+00:00", "pid": 26400, "experiment_id": "v3_deepsets_adamw_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:02:02.941649+00:00", "pid": 26400, "experiment_id": "v3_deepsets_adamw_s0", "fold": 1, "status": "completed", "hard_accuracy": 77.30496453900709, "accuracy": 89.90536277602523, "seconds": 40.53816790001292}
+{"utc": "2026-10-30T04:02:02.950633+00:00", "pid": 26400, "experiment_id": "v3_deepsets_adamw_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:02:52.135064+00:00", "pid": 26400, "experiment_id": "v3_deepsets_adamw_s0", "fold": 2, "status": "completed", "hard_accuracy": 77.98295454545455, "accuracy": 90.22082018927445, "seconds": 47.51529379999556}
+{"utc": "2026-10-30T04:02:52.264286+00:00", "pid": 26400, "experiment_id": "v3_deepsets_adamw_s0", "status": "cv_completed", "accuracy": 90.38906414300736, "hard_accuracy": 78.38221381267739, "training_seconds": 144.28702679999697}
+{"utc": "2026-10-30T04:03:07.362080+00:00", "pid": 42220, "experiment_id": "v3_deepsets_ema_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:04:03.373503+00:00", "pid": 42220, "experiment_id": "v3_deepsets_ema_s0", "fold": 0, "status": "completed", "hard_accuracy": 80.28368794326242, "accuracy": 91.23028391167193, "seconds": 54.87731710000662}
+{"utc": "2026-10-30T04:04:03.377367+00:00", "pid": 42220, "experiment_id": "v3_deepsets_ema_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:04:37.275656+00:00", "pid": 42220, "experiment_id": "v3_deepsets_ema_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.58156028368795, "accuracy": 90.47318611987382, "seconds": 32.75842610000109}
+{"utc": "2026-10-30T04:04:37.280227+00:00", "pid": 42220, "experiment_id": "v3_deepsets_ema_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:05:14.490364+00:00", "pid": 42220, "experiment_id": "v3_deepsets_ema_s0", "fold": 2, "status": "completed", "hard_accuracy": 77.41477272727273, "accuracy": 89.96845425867508, "seconds": 36.08894709999731}
+{"utc": "2026-10-30T04:05:14.543240+00:00", "pid": 42220, "experiment_id": "v3_deepsets_ema_s0", "status": "cv_completed", "accuracy": 90.55730809674027, "hard_accuracy": 78.76064333017976, "training_seconds": 123.72469030000502}
+{"utc": "2026-10-30T04:05:25.255455+00:00", "pid": 18528, "experiment_id": "v3_resmlp_adamw_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:05:42.431683+00:00", "pid": 18528, "experiment_id": "v3_resmlp_adamw_s0", "fold": 0, "status": "completed", "hard_accuracy": 77.16312056737588, "accuracy": 89.8422712933754, "seconds": 15.86630479998712}
+{"utc": "2026-10-30T04:05:42.434907+00:00", "pid": 18528, "experiment_id": "v3_resmlp_adamw_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:05:56.632052+00:00", "pid": 18528, "experiment_id": "v3_resmlp_adamw_s0", "fold": 1, "status": "completed", "hard_accuracy": 77.02127659574468, "accuracy": 89.77917981072555, "seconds": 12.844779999999446}
+{"utc": "2026-10-30T04:05:56.635352+00:00", "pid": 18528, "experiment_id": "v3_resmlp_adamw_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:06:16.708011+00:00", "pid": 18528, "experiment_id": "v3_resmlp_adamw_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.85227272727273, "accuracy": 89.27444794952682, "seconds": 18.67915899999207}
+{"utc": "2026-10-30T04:06:16.768830+00:00", "pid": 18528, "experiment_id": "v3_resmlp_adamw_s0", "status": "cv_completed", "accuracy": 89.63196635120926, "hard_accuracy": 76.67928098391674, "training_seconds": 47.390243799978634}
+{"utc": "2026-10-30T04:06:26.803614+00:00", "pid": 45464, "experiment_id": "v3_resmlp_ema_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:06:51.473972+00:00", "pid": 45464, "experiment_id": "v3_resmlp_ema_s0", "fold": 0, "status": "completed", "hard_accuracy": 77.4468085106383, "accuracy": 89.96845425867508, "seconds": 23.32478880000417}
+{"utc": "2026-10-30T04:06:51.478695+00:00", "pid": 45464, "experiment_id": "v3_resmlp_ema_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:07:14.558462+00:00", "pid": 45464, "experiment_id": "v3_resmlp_ema_s0", "fold": 1, "status": "completed", "hard_accuracy": 77.4468085106383, "accuracy": 89.96845425867508, "seconds": 21.761866600005305}
+{"utc": "2026-10-30T04:07:14.562294+00:00", "pid": 45464, "experiment_id": "v3_resmlp_ema_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:07:38.490019+00:00", "pid": 45464, "experiment_id": "v3_resmlp_ema_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.71022727272727, "accuracy": 89.21135646687696, "seconds": 22.509254699994926}
+{"utc": "2026-10-30T04:07:38.544371+00:00", "pid": 45464, "experiment_id": "v3_resmlp_ema_s0", "status": "cv_completed", "accuracy": 89.7160883280757, "hard_accuracy": 76.86849574266793, "training_seconds": 67.5959101000044}
+{"utc": "2026-10-30T04:07:49.247158+00:00", "pid": 45108, "experiment_id": "v3_attention_wd01_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:08:19.887760+00:00", "pid": 45108, "experiment_id": "v3_attention_wd01_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.8581560283688, "accuracy": 91.0410094637224, "seconds": 29.33528230000229}
+{"utc": "2026-10-30T04:08:19.891747+00:00", "pid": 45108, "experiment_id": "v3_attention_wd01_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:08:43.999103+00:00", "pid": 45108, "experiment_id": "v3_attention_wd01_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.72340425531915, "accuracy": 90.53627760252367, "seconds": 22.886905600011232}
+{"utc": "2026-10-30T04:08:44.002481+00:00", "pid": 45108, "experiment_id": "v3_attention_wd01_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:09:13.411900+00:00", "pid": 45108, "experiment_id": "v3_attention_wd01_s0", "fold": 2, "status": "completed", "hard_accuracy": 80.25568181818183, "accuracy": 91.23028391167193, "seconds": 28.19615759998851}
+{"utc": "2026-10-30T04:09:13.465570+00:00", "pid": 45108, "experiment_id": "v3_attention_wd01_s0", "status": "cv_completed", "accuracy": 90.93585699263933, "hard_accuracy": 79.61210974456007, "training_seconds": 80.41834550000203}
+{"utc": "2026-10-30T04:09:24.011608+00:00", "pid": 27664, "experiment_id": "v3_attention_drop05_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:10:04.319416+00:00", "pid": 27664, "experiment_id": "v3_attention_drop05_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.71631205673759, "accuracy": 90.97791798107255, "seconds": 39.10478409999632}
+{"utc": "2026-10-30T04:10:04.323854+00:00", "pid": 27664, "experiment_id": "v3_attention_drop05_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:10:36.270909+00:00", "pid": 27664, "experiment_id": "v3_attention_drop05_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.58156028368795, "accuracy": 90.47318611987382, "seconds": 30.60560959999566}
+{"utc": "2026-10-30T04:10:36.275125+00:00", "pid": 27664, "experiment_id": "v3_attention_drop05_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:11:24.434165+00:00", "pid": 27664, "experiment_id": "v3_attention_drop05_s0", "fold": 2, "status": "completed", "hard_accuracy": 79.11931818181817, "accuracy": 90.7255520504732, "seconds": 46.909726899990346}
+{"utc": "2026-10-30T04:11:24.515727+00:00", "pid": 27664, "experiment_id": "v3_attention_drop05_s0", "status": "cv_completed", "accuracy": 90.7255520504732, "hard_accuracy": 79.13907284768213, "training_seconds": 116.62012059998233}
+{"utc": "2026-10-30T04:11:35.250057+00:00", "pid": 40360, "experiment_id": "v3_attention_width256_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:12:49.575493+00:00", "pid": 40360, "experiment_id": "v3_attention_width256_s0", "fold": 0, "status": "completed", "hard_accuracy": 80.56737588652483, "accuracy": 91.35646687697161, "seconds": 71.74078880000161}
+{"utc": "2026-10-30T04:12:49.578788+00:00", "pid": 40360, "experiment_id": "v3_attention_width256_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:13:52.928217+00:00", "pid": 40360, "experiment_id": "v3_attention_width256_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.58156028368795, "accuracy": 90.47318611987382, "seconds": 60.77458660000411}
+{"utc": "2026-10-30T04:13:52.932594+00:00", "pid": 40360, "experiment_id": "v3_attention_width256_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:14:49.639847+00:00", "pid": 40360, "experiment_id": "v3_attention_width256_s0", "fold": 2, "status": "completed", "hard_accuracy": 78.83522727272727, "accuracy": 90.59936908517349, "seconds": 54.14786359999562}
+{"utc": "2026-10-30T04:14:49.696967+00:00", "pid": 40360, "experiment_id": "v3_attention_width256_s0", "status": "cv_completed", "accuracy": 90.80967402733964, "hard_accuracy": 79.3282876064333, "training_seconds": 186.66323900000134}
+{"utc": "2026-10-30T04:15:00.812062+00:00", "pid": 17260, "experiment_id": "v3_realmlp_robust_lr0003_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:15:38.809421+00:00", "pid": 17260, "experiment_id": "v3_realmlp_robust_lr0003_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.31914893617021, "accuracy": 89.02208201892743, "seconds": 35.847761000011815}
+{"utc": "2026-10-30T04:15:38.812643+00:00", "pid": 17260, "experiment_id": "v3_realmlp_robust_lr0003_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:16:10.007114+00:00", "pid": 17260, "experiment_id": "v3_realmlp_robust_lr0003_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.59574468085107, "accuracy": 89.58990536277602, "seconds": 29.33494349999819}
+{"utc": "2026-10-30T04:16:10.009926+00:00", "pid": 17260, "experiment_id": "v3_realmlp_robust_lr0003_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:16:42.065742+00:00", "pid": 17260, "experiment_id": "v3_realmlp_robust_lr0003_s0", "fold": 2, "status": "completed", "hard_accuracy": 76.5625, "accuracy": 89.58990536277602, "seconds": 30.21526630000153}
+{"utc": "2026-10-30T04:16:42.120937+00:00", "pid": 17260, "experiment_id": "v3_realmlp_robust_lr0003_s0", "status": "cv_completed", "accuracy": 89.4006309148265, "hard_accuracy": 76.15894039735099, "training_seconds": 95.39797080001154}
+{"utc": "2026-10-30T04:16:52.158833+00:00", "pid": 39996, "experiment_id": "v3_realmlp_robust_width256_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:17:33.372132+00:00", "pid": 39996, "experiment_id": "v3_realmlp_robust_width256_s0", "fold": 0, "status": "completed", "hard_accuracy": 77.16312056737588, "accuracy": 89.8422712933754, "seconds": 38.508977299992694}
+{"utc": "2026-10-30T04:17:33.381815+00:00", "pid": 39996, "experiment_id": "v3_realmlp_robust_width256_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:18:12.048681+00:00", "pid": 39996, "experiment_id": "v3_realmlp_robust_width256_s0", "fold": 1, "status": "completed", "hard_accuracy": 75.177304964539, "accuracy": 88.95899053627761, "seconds": 35.798851400002604}
+{"utc": "2026-10-30T04:18:12.052668+00:00", "pid": 39996, "experiment_id": "v3_realmlp_robust_width256_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:18:52.000675+00:00", "pid": 39996, "experiment_id": "v3_realmlp_robust_width256_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.71022727272727, "accuracy": 89.21135646687696, "seconds": 37.10986270000285}
+{"utc": "2026-10-30T04:18:52.068968+00:00", "pid": 39996, "experiment_id": "v3_realmlp_robust_width256_s0", "status": "cv_completed", "accuracy": 89.33753943217665, "hard_accuracy": 76.0170293282876, "training_seconds": 111.41769139999815}
+{"utc": "2026-10-30T04:19:03.464974+00:00", "pid": 41520, "experiment_id": "v3_realmlp_robust_embedding_stats_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:19:30.750621+00:00", "pid": 41520, "experiment_id": "v3_realmlp_robust_embedding_stats_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.8581560283688, "accuracy": 91.0410094637224, "seconds": 25.671258099988336}
+{"utc": "2026-10-30T04:19:30.756091+00:00", "pid": 41520, "experiment_id": "v3_realmlp_robust_embedding_stats_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T04:19:55.636947+00:00", "pid": 41520, "experiment_id": "v3_realmlp_robust_embedding_stats_s0", "fold": 1, "status": "completed", "hard_accuracy": 77.58865248226951, "accuracy": 90.03154574132492, "seconds": 23.17044750000059}
+{"utc": "2026-10-30T04:19:55.641838+00:00", "pid": 41520, "experiment_id": "v3_realmlp_robust_embedding_stats_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T04:20:20.142104+00:00", "pid": 41520, "experiment_id": "v3_realmlp_robust_embedding_stats_s0", "fold": 2, "status": "completed", "hard_accuracy": 78.83522727272727, "accuracy": 90.59936908517349, "seconds": 22.788249999997788}
+{"utc": "2026-10-30T04:20:20.199976+00:00", "pid": 41520, "experiment_id": "v3_realmlp_robust_embedding_stats_s0", "status": "cv_completed", "accuracy": 90.55730809674027, "hard_accuracy": 78.76064333017976, "training_seconds": 71.62995559998672}
+{"utc": "2026-10-30T04:22:21.621917+00:00", "pid": 35644, "experiment_id": "v3_tabm_embedding_stats_k8_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T04:23:55.684821+00:00", "pid": 35644, "experiment_id": "v3_tabm_embedding_stats_k8_s0", "fold": 0, "status": "completed", "hard_accuracy": 80.42553191489363, "accuracy": 91.29337539432176, "seconds": 91.01977059998899}
+{"utc": "2026-10-30T04:23:55.688909+00:00", "pid": 35644, "experiment_id": "v3_tabm_embedding_stats_k8_s0", "fold": 1, "status": "running", "seed": 3036900958}

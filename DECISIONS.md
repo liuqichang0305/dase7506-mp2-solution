@@ -11,6 +11,17 @@
 - V3 scheduler review found three recovery/identity defects before any full run:
   changed configuration identity, orphan trainer duplication, stale source result
   reuse. Fixes and both failing/passing test evidence are retained.
+- 2026-10-30 V3 research checkpoint: R05 reduced TabM improves by62 hard
+  questions over its full-input control, but the gain is concentrated in one
+  fold and also changes first-layer capacity/initialization. Register only two
+  targeted transfers (k8 or EMA) and one evidence-gated fixed equal mixture.
+  R06 objectives, R07 Deep Sets/ResMLP and R09 Attention capacity/regularization
+  do not improve the historical common-CV best. Preserve every row and cost;
+  no broader grid or validation feedback is justified by these outcomes.
+- Fixed0 and original valid-answer majority were actually evaluated once on
+  all4755 train questions without fitting. They are descriptive common-fold
+  references, not additional learned CV runs or test results. Final reporting
+  binds their completion receipt and exact saved choice/source hashes.
 
 - 2026-10-29: Adopt user-supplied docs/WORKFLOW.txt as execution specification; official latest rules prevail on course constraints.
 - Work within the granted workspace, in an isolated subdirectory. Preserve unrelated files.

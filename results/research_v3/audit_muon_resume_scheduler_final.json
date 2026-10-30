@@ -1,0 +1,186 @@
+{
+  "checked_at_utc": "2026-10-30T03:29:40.094776+00:00",
+  "scope": "Read-only actual train-resume/log/source/asset/output hashes and process metadata. No training, tests, checkpoint deserialization or validation/test/ranking inputs.",
+  "passed": true,
+  "checks": {
+    "eleven_training_sources_same_between_attempts_and_repair": true,
+    "train_and_folds_same_between_attempts_and_repair": true,
+    "actual_source_hashes_match": true,
+    "actual_train_manifest_and_fold_hashes_match": true,
+    "summary_and_trainer_registration_sources_match": true,
+    "summary_and_registration_data_match": true,
+    "summary_and_registration_folds_match": true,
+    "config_exact": true,
+    "canonical_config_hash_matches": true,
+    "input_configuration_object_hash_matches_registration": true,
+    "complete_three_folds": true,
+    "one_documented_repair": true,
+    "first_attempt_cap_then_second_success": true,
+    "summary_hash_matches_scheduler": true,
+    "oof_hash_matches_summary_and_scheduler": true,
+    "all_fold_output_asset_checkpoint_hashes_match": true,
+    "second_attempt_only_trains_fold2": true,
+    "exact_epoch_boundary_in_logged_history": true,
+    "optimizer_steps_continue_140_to_160": true,
+    "completed_fold0_fold1_reused": true,
+    "inner_history_keeps_all_epochs_once": true,
+    "fold0_fold1_running_and_completed_once": true,
+    "scheduler_hash_matches_new_process_logged_attempts": true,
+    "scheduler_edit_and_new_process_follow_old_queue_finish": true,
+    "old_scheduler_pid_not_alive": true,
+    "saved_scheduler_suite_reports_20_passes": true,
+    "two_unique_bound_fusions_counted": true,
+    "absolute_clock_unchanged": true,
+    "cumulative_training_seconds_match": true,
+    "new_validation_and_test_not_opened": true
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "output_hashes": {
+        "fold0-scores.npy": true,
+        "fold0-raw-scores.npy": true
+      },
+      "asset_hashes": {
+        "config.json": true,
+        "weights.npz": true
+      },
+      "checkpoint_file_hashes": {
+        "inner_stopping": true,
+        "fit": true
+      },
+      "inner_resumed_from_epoch": 0,
+      "inner_epochs": 17,
+      "outer_epochs": 7,
+      "fold_record_equal_summary": true,
+      "record_modified_at_utc": "2026-10-30T02:52:43.239348+00:00",
+      "record_predates_second_attempt": true
+    },
+    {
+      "fold": 1,
+      "output_hashes": {
+        "fold1-scores.npy": true,
+        "fold1-raw-scores.npy": true
+      },
+      "asset_hashes": {
+        "config.json": true,
+        "weights.npz": true
+      },
+      "checkpoint_file_hashes": {
+        "inner_stopping": true,
+        "fit": true
+      },
+      "inner_resumed_from_epoch": 0,
+      "inner_epochs": 17,
+      "outer_epochs": 7,
+      "fold_record_equal_summary": true,
+      "record_modified_at_utc": "2026-10-30T03:05:44.030937+00:00",
+      "record_predates_second_attempt": true
+    },
+    {
+      "fold": 2,
+      "output_hashes": {
+        "fold2-scores.npy": true,
+        "fold2-raw-scores.npy": true
+      },
+      "asset_hashes": {
+        "config.json": true,
+        "weights.npz": true
+      },
+      "checkpoint_file_hashes": {
+        "inner_stopping": true,
+        "fit": true
+      },
+      "inner_resumed_from_epoch": 7,
+      "inner_epochs": 16,
+      "outer_epochs": 6,
+      "fold_record_equal_summary": true,
+      "record_modified_at_utc": "2026-10-30T03:21:54.078448+00:00",
+      "record_predates_second_attempt": false
+    }
+  ],
+  "attempts": [
+    {
+      "started_at_utc": "2026-10-30T02:39:17.969890+00:00",
+      "ended_at_utc": "2026-10-30T03:09:18.306451+00:00",
+      "returncode": 15,
+      "stop_reason": "attempt_wall_budget",
+      "observed_wall_seconds": 1800.343005180359,
+      "scheduler_source_sha256": "6f1392b9be5f40cf8985f3f3bc5bb9566da3c75db8939fbc096c6669878dea28",
+      "log": "results/research_v3/scheduler_logs/v3_attention_muon_s0.attempt1.log"
+    },
+    {
+      "started_at_utc": "2026-10-30T03:13:12.377294+00:00",
+      "ended_at_utc": "2026-10-30T03:21:55.726109+00:00",
+      "returncode": 0,
+      "stop_reason": null,
+      "observed_wall_seconds": 523.3528552055359,
+      "scheduler_source_sha256": "bf2bac3264db9ca7d8cad4a48bbe30fdceb3b2ee17e5f9eec9b14fd45ae23daa",
+      "log": "results/research_v3/scheduler_logs/v3_attention_muon_s0.attempt2.log"
+    }
+  ],
+  "repair_reason": "Native CPU Muon reached the fixed1800-second attempt cap after completing folds0/1 and checkpointing fold2. Continue the unchanged configuration, data, source and seed from atomic epoch state; preserve attempt1 and count all elapsed cost. No hyperparameter or prediction behavior changes.",
+  "process_wall_seconds_all_attempts": 2323.695860385895,
+  "cumulative_training_seconds": 2288.8305933999945,
+  "process_minus_recorded_training_seconds": 34.865266985900234,
+  "cost_note": "All attempt process wall time remains counted, including capped/interrupted work and startup/teardown; cumulative trainer timings are a different narrower measurement. The absolute campaign clock was never restarted.",
+  "metrics": {
+    "hard_correct": 1666,
+    "hard_n": 2114,
+    "correct": 4307,
+    "n": 4755
+  },
+  "logged_resume_boundary": {
+    "prior_epoch": 7,
+    "next_epoch": 8,
+    "prior_optimizer_steps": 140,
+    "next_optimizer_steps": 160
+  },
+  "scheduler": {
+    "source_sha256": "bf2bac3264db9ca7d8cad4a48bbe30fdceb3b2ee17e5f9eec9b14fd45ae23daa",
+    "source_modified_at_utc": "2026-10-30T03:12:30.589135+00:00",
+    "old_queue_finish": {
+      "utc": "2026-10-30T03:11:29.399265+00:00",
+      "event": "queue_run_finished",
+      "scheduler_pid": 45096,
+      "statuses": {
+        "pending": 0,
+        "running": 0,
+        "completed": 13,
+        "failed": 0,
+        "pruned": 1
+      }
+    },
+    "new_process_pid": 25488,
+    "new_process_created_at_utc": "2026-10-30T03:13:10.418978+00:00",
+    "new_process_command": [
+      "C:\\Program Files\\Python312\\python.exe",
+      "scripts/run_campaign_v3.py",
+      "run"
+    ],
+    "first_new_attempt_utc": "2026-10-30T03:13:12.387857+00:00",
+    "logged_source_hash": "bf2bac3264db9ca7d8cad4a48bbe30fdceb3b2ee17e5f9eec9b14fd45ae23daa",
+    "unique_configurations": 34,
+    "cap": 96,
+    "test_execution": "Read original 20-test passing log; no test rerun by auditor."
+  },
+  "closed_markers": {
+    "results\\research_v3\\VALIDATION_OPENED.json": false,
+    "submission\\v3\\TEST_OPENED.json": false,
+    "submission\\v3\\TEST_COMPLETE.json": false
+  },
+  "evidence_sha256": {
+    "results\\research_v3\\scheduler_logs\\v3_attention_muon_s0.attempt1.log": "ef5b5f59d31fd3a2656cb80a82fa3128731515775a243748ee9700ea9a1fdd79",
+    "results\\research_v3\\scheduler_logs\\v3_attention_muon_s0.attempt2.log": "d54b518c768aeb5200c772f4a1639cf076626fa7566cbf9c52f88a3f9aad3e2d",
+    "results\\research_v3\\v3_attention_muon_s0\\summary.json": "9d0696a3209a0b57998347afcefd0d1396ed5bc35835dc6d27ec75d8d1868b94",
+    "results\\research_v3\\v3_attention_muon_s0\\registration.json": "f59a6b203ec5b468879432bc1e45199e2a2e0d54db0008c6b8da98a979811ff4",
+    "results\\research_v3\\v3_attention_muon_s0\\fold2-inner-epochs.json": "acfe3b025b6888f80dcf9fc877a9c3932abca520b82c11093d8a9ef5c3ba1a0b",
+    "results\\research_v3\\scheduler-fusion-budget-tests.log": "6732661a29db7f9338303003969c71c5e6e2d9077f1898f19e058a259e968708",
+    "code\\tests\\test_scheduler_v3.py": "60a05ef1bf38f9d2228bdc85a77874ec9b084908b44e639f2aba0cc475ec61e8",
+    "scripts\\run_campaign_v3.py": "bf2bac3264db9ca7d8cad4a48bbe30fdceb3b2ee17e5f9eec9b14fd45ae23daa",
+    "results\\research_v3\\campaign_budget.json": "69f7963cef8f28e24da0cb6b7a4de104ad72d1634896a85b38f90bbccd9bc802"
+  },
+  "limitations": "Epoch/RNG/optimizer exact restoration implementation was covered by prior synthetic tests. This lightweight actual audit verifies recorded continuation/state-file hashes and unchanged trajectory identity without deserializing or rerunning the completed training.",
+  "config_hash_semantics": "Trainer input_config_sha256 is the canonical parsed configuration object hash, not raw JSON bytes. The initial audit wrongly compared raw bytes and its failed assertion is preserved in audit_muon_resume_scheduler_verified.json. Current parsed input, registered configuration and summary are exactly equal; raw-file hash is also retained separately.",
+  "raw_config_file_sha256": "05230e076b2137a2b254958a81acdc1eab45fb426251efb773a3578c95c7f833"
+}

@@ -1,0 +1,208 @@
+{
+  "scope": "Read-only compatibility against existing train-only R04 common-CV aggregate summaries; no final prepare call, no predictions/arrays/raw data/validation/test loaded.",
+  "utc": "2026-10-30T03:47:22.527178+00:00",
+  "source_sha256": "9c204f2ba91e2a7433b7c23cf73facbe16039caa93ad48a6b6a9d2af7f64c725",
+  "analysis_path": "results/research_v3/analysis/r04_complete/analysis.json",
+  "analysis_sha256": "38e9c40f040ab4a2bb9a6e4f61741e434105c8b27690fa3399ba5da441514d3d",
+  "rows": [
+    {
+      "version": "research_v2",
+      "experiment_id": "attention_regularized_s0",
+      "summary_sha256": "822bba4dcdd4253744303ea650551fcd80780aeacce1f3b8a8bca475c612f497",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_attention_ema_s0",
+      "summary_sha256": "0b6e265b3d47cc37ab6d8dabb1e8de0f28238702d8045afd58c15abecbea1e24",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_attention_adamw_s0",
+      "summary_sha256": "82f7e741131a00a12b80222646e0bacef6b8b760229482850a6abcb965911228",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "attention_hard_ablation",
+      "summary_sha256": "3d1183e6c4d9c5b8038c2df585c2d26f87cebf56563dbbcd03c6c80f1fb7de31",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "attention_regularized_s1",
+      "summary_sha256": "df71e375b693dad0c5b038ad17a68739741d10a25188dc85cceff8b175c8da1b",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "deepsets_regularized_s1",
+      "summary_sha256": "a35acf7d0924c8884a7b22c6ca1b1531ee0744b058cc0917ef57a712be91e88c",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "attention_regularized_s2",
+      "summary_sha256": "f5eb0ffaa01236e875d0bd74bc9f77d31337460af57868c232e36d6073569b14",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_attention_small_s0",
+      "summary_sha256": "6d33e1345ab8213d961ebeb9f3d8b2f9af7b5652837b80f0d0bb14439899c98c",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "attention_group_s0",
+      "summary_sha256": "04c33294e762ffdb486f07ce8adbf0b09e06cb6ebd4ee160eafd1d0141275c2c",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "deepsets_regularized_s2",
+      "summary_sha256": "ba4f6e2255c3268cdfb49083b36e6046f9f305cc95e93bf9c160f695b2569116",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_attention_muon_s0",
+      "summary_sha256": "9d0696a3209a0b57998347afcefd0d1396ed5bc35835dc6d27ec75d8d1868b94",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "deepsets_no_context",
+      "summary_sha256": "2cbf40795a12b38848d37b53040651bb23e79a7635decaf0e8407c3988cceeae",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "deepsets_regularized_s0",
+      "summary_sha256": "a961c3df4dd3a8a549cfc578ad4f23c90f592d31f77aa225dc65ee9293b64b6b",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "deepsets_group_s0",
+      "summary_sha256": "b88ef44a8446a3212914b50701836a0652261c6eacbc6f8694e5349c6bce6941",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_tabm_k8_s0",
+      "summary_sha256": "221dc465e5c0f845b370676865029e0e4459e885cca7a0ebfb265eb24cfca4c3",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "mlp_listwise_s0",
+      "summary_sha256": "52b0437fb41bac3dda5909e48bd3e6d8f70e1244a1b6097f6a03f7a6162b08df",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_realmlp_robust_all_s0",
+      "summary_sha256": "208723bd91f4a758659bee40779c87157c441cac056ecf4b9ad3d359e94692ee",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_tabm_k4_s0",
+      "summary_sha256": "44970107d673e0d26e9855b66871360947521f5dad307c4e57d4c1d50b7e534c",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_tabm_k4_drop03_s0",
+      "summary_sha256": "1fe37967cf24b17a29349e7b2fbfebafe6770298c41a68a5dab29ad8d64c7dbc",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "mlp_capacity_s0",
+      "summary_sha256": "e7a0d3fa2a118dfc01d769ad18247d8647ba08f35aa15fa1dab9da4ce6b39125",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "linear_group_a0",
+      "summary_sha256": "493bfb8833ebf12c1860df5b93802ea0e0befbe0f55e6df3c0038ad826efc3bb",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "linear_group_hard",
+      "summary_sha256": "0b6be27102e5000e78780eb0903aade72698a7bec72a6183ec348ee0a38d3c77",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_mlp_ema_s0",
+      "summary_sha256": "1c9fe76e3a445049395c5893199a8f1b6945a732f73059af44e8b4c1188b8b90",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "resmlp_group_s0",
+      "summary_sha256": "02c12649b1a88cea02a59bb11ccb0f41e08c0f0a9c6b2723eccbb117a91f603f",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_realmlp_robust_stats_s0",
+      "summary_sha256": "028c8bec24785fc050156ed5e77847588f94a834f1aa2aa039586315e99cf57e",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "mlp_group_s0",
+      "summary_sha256": "707e00af10e7247e41ad245fca9996d240e8789072cfdb80a14702a6a4d0b5eb",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_mlp_muon001_s0",
+      "summary_sha256": "99a78dd9d01098ed80aba3e243652eb26e9da02d1c15421e55eaffe749b1efef",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_realmlp_standard_s0",
+      "summary_sha256": "3832f2ae2dde827a860abf4786662397cb3bea396d3901cfa4c15074bd97c8bd",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "linear_group_a0p5",
+      "summary_sha256": "33b2f7857edce01cdef0bb6bcb4bd71b6fc426f94ffed2440581fe6578c22a4e",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_mlp_adamw_s0",
+      "summary_sha256": "aff3e3af6a62b8ef126a8c4eb7281e29e902b351d017c24a3e08379600886030",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v3",
+      "experiment_id": "v3_mlp_muon002_s0",
+      "summary_sha256": "62ddfa4ea47c53a81f1508376fa10cef075b9ee3a31bcb064317b8997bd783b6",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "linear_group_a1",
+      "summary_sha256": "5d7abf9c438ab36eaeff0a4d5d30b91a7f7e44f8832fa8f8cf165f89e3b4410d",
+      "aggregate_schema_verified": true
+    },
+    {
+      "version": "research_v2",
+      "experiment_id": "linear_original",
+      "summary_sha256": "d13a5451e2f637f028abc48a3019e7d75ce8d5feb3286b067316ce03ed9b8aa7",
+      "aggregate_schema_verified": true
+    }
+  ],
+  "passed": true
+}

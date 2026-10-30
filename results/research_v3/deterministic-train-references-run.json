@@ -1,0 +1,17 @@
+{
+  "scope": "One train-only deterministic-reference computation; no fitting or official holdout scoring.",
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "code/tools/deterministic_train_references_v3.py"
+  ],
+  "started_at_utc": "2026-10-30T04:09:26.627864+00:00",
+  "completed_at_utc": "2026-10-30T04:09:27.854660+00:00",
+  "process_wall_seconds": 1.2250338000012562,
+  "exit_code": 0,
+  "source_sha256_before": "b90cadba041c9adf8af9214c2aeea36cf37e14e0fb361a7044df91753156e50b",
+  "source_sha256_after": "b90cadba041c9adf8af9214c2aeea36cf37e14e0fb361a7044df91753156e50b",
+  "logs": {
+    "results/research_v3/deterministic-train-references-run.stdout.log": "c8353f0455ed49cc506d645e1dda02bad339e26c58005dd71a45b83a7159660a",
+    "results/research_v3/deterministic-train-references-run.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -222,9 +222,65 @@
       "optimizer_steps": 180,
       "ema_updates": null,
       "inner_stop_loss": 0.23767073452472687
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.14268368661215627,
+      "elapsed_seconds": 309.3481305000023,
+      "optimizer_steps": 200,
+      "ema_updates": null,
+      "inner_stop_loss": 0.26069384813308716
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.12182439041062484,
+      "elapsed_seconds": 339.3971689000027,
+      "optimizer_steps": 220,
+      "ema_updates": null,
+      "inner_stop_loss": 0.27411457896232605
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.11143150568384477,
+      "elapsed_seconds": 371.2216914000019,
+      "optimizer_steps": 240,
+      "ema_updates": null,
+      "inner_stop_loss": 0.26028111577033997
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.09721786225631786,
+      "elapsed_seconds": 401.1832308000012,
+      "optimizer_steps": 260,
+      "ema_updates": null,
+      "inner_stop_loss": 0.27580833435058594
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.09351003517863879,
+      "elapsed_seconds": 431.3228216999996,
+      "optimizer_steps": 280,
+      "ema_updates": null,
+      "inner_stop_loss": 0.2909271717071533
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.08288663390683075,
+      "elapsed_seconds": 461.6828957000107,
+      "optimizer_steps": 300,
+      "ema_updates": null,
+      "inner_stop_loss": 0.3104880452156067
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.06695652880033108,
+      "elapsed_seconds": 491.6104486000113,
+      "optimizer_steps": 320,
+      "ema_updates": null,
+      "inner_stop_loss": 0.3071783781051636
     }
   ],
   "best_epoch": 6,
-  "complete": false,
+  "complete": true,
   "checkpoint": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\research_v3\\training_states\\v3_attention_muon_s0\\fold2\\inner\\current.pt"
 }

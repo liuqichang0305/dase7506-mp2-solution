@@ -1,0 +1,7 @@
+{
+  "scope": "Auditor read-only evidence-parser failure, not a training failure",
+  "error": "KeyError: event",
+  "cause": "The immutable registry includes a metadata row without event; initial audit reader indexed every row as an event.",
+  "repair": "Use row.get for event filtering; no experiment/model/evidence modified.",
+  "training_or_tests_run": false
+}

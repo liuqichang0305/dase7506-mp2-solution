@@ -1,0 +1,67 @@
+{
+  "round": "r11_tabm_reduced_features_variance",
+  "hypothesis": "R05 reduced-feature TabM k4 reached1668/2114 hard, versus1606 for its matched full-relation control, a62-question gain. The representation still retains16 relation/statistic features; this removes only the1024 absolute-deviation coordinates. Independently transfer the two previously measured variance treatments: k8 members, or EMA0.99. Each changes one setting from the new reduced-feature control. No learning-rate/weight sweep or validation feedback.",
+  "evidence": [
+    "results/research_v3/v3_tabm_k4_embedding_stats_s0/summary.json",
+    "results/research_v3/v3_tabm_k4_s0/summary.json",
+    "results/research_v3/v3_tabm_k8_s0/summary.json",
+    "results/research_v3/v3_tabm_k4_ema_s0/summary.json"
+  ],
+  "configs": [
+    {
+      "family": "tabm",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.1,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_tabm_embedding_stats_k8_s0",
+      "k": 8,
+      "depth": 3,
+      "input_features": "embedding_stats"
+    },
+    {
+      "family": "tabm",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.1,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_tabm_embedding_stats_ema_s0",
+      "k": 4,
+      "depth": 3,
+      "input_features": "embedding_stats",
+      "ema_decay": 0.99
+    }
+  ]
+}

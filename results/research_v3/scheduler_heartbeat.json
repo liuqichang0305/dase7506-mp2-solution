@@ -1,23 +1,23 @@
 {
-  "utc": "2026-10-30T03:14:42.696475+00:00",
-  "scheduler_pid": 25488,
-  "experiment_id": "v3_attention_muon_s0",
-  "training_pid": 37604,
-  "attempt_elapsed_seconds": 90.27292346954346,
-  "campaign_remaining_seconds": 47279.35382246971,
+  "utc": "2026-10-30T04:24:12.632741+00:00",
+  "scheduler_pid": 44908,
+  "experiment_id": "v3_tabm_embedding_stats_k8_s0",
+  "training_pid": 36196,
+  "attempt_elapsed_seconds": 120.2462990283966,
+  "campaign_remaining_seconds": 43109.40744638443,
   "resource_sample": [
     {
-      "pid": 37604,
-      "create_time": 1793329992.3754623,
+      "pid": 36196,
+      "create_time": 1793334132.3485742,
       "rss_bytes": 4440064,
       "cpu_seconds": 0.015625,
       "os_thread_count": 1
     },
     {
-      "pid": 27824,
-      "create_time": 1793329992.3869169,
-      "rss_bytes": 760594432,
-      "cpu_seconds": 83.015625,
+      "pid": 35644,
+      "create_time": 1793334132.3631067,
+      "rss_bytes": 807940096,
+      "cpu_seconds": 117.625,
       "os_thread_count": 4
     }
   ],

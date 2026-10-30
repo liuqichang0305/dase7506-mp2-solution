@@ -1,0 +1,67 @@
+{
+  "scope": "Independent source-only diff review plus arithmetic/hash compatibility of existing train-only deterministic aggregate. No actual final prepare/report, no deterministic recomputation, no holdout/data-bank reads, no test rerun.",
+  "created_at_utc": "2026-10-30T04:16:25.595148+00:00",
+  "source_sha256": "f61def1c863957838ec8eb964fea364d033d6ee13e96b0e636fcf05beb1e4689",
+  "original_reviewed_source_sha256": "9c204f2ba91e2a7433b7c23cf73facbe16039caa93ad48a6b6a9d2af7f64c725",
+  "reviewed_repairs": [
+    "exact COMPLETION output inventory and hashes",
+    "source/input equality with summary",
+    "raw-bank avoidance with metadata-only train provenance",
+    "commonfold/full/hard/single populations",
+    "printed fold mean and sample SD recomputed from original fold counts",
+    "zero-fitting and tie/None semantics in report"
+  ],
+  "actual_aggregate_compatibility": [
+    {
+      "reference": "fixed0",
+      "subset": "overall",
+      "correct": 3584,
+      "n": 4755,
+      "fold_mean": 75.3732912723449,
+      "fold_sd": 1.0601121481496147
+    },
+    {
+      "reference": "fixed0",
+      "subset": "hard",
+      "correct": 1078,
+      "n": 2114,
+      "fold_mean": 50.99237051364711,
+      "fold_sd": 2.164784838616942
+    },
+    {
+      "reference": "fixed0",
+      "subset": "single_positive",
+      "correct": 177,
+      "n": 711,
+      "fold_mean": 24.894514767932492,
+      "fold_sd": 3.1855841499032693
+    },
+    {
+      "reference": "valid_answer_majority",
+      "subset": "overall",
+      "correct": 4054,
+      "n": 4755,
+      "fold_mean": 85.25762355415353,
+      "fold_sd": 0.2914070759316705
+    },
+    {
+      "reference": "valid_answer_majority",
+      "subset": "hard",
+      "correct": 1413,
+      "n": 2114,
+      "fold_mean": 66.84027777777777,
+      "fold_sd": 0.6421353831658336
+    },
+    {
+      "reference": "valid_answer_majority",
+      "subset": "single_positive",
+      "correct": 121,
+      "n": 711,
+      "fold_mean": 17.018284106891702,
+      "fold_sd": 1.061861383301089
+    }
+  ],
+  "author_test_log": "results/research_v3/report-inputs-deterministic-final-tests.log",
+  "author_test_result": "15/15 passed in 4.278 seconds; inspected, not rerun",
+  "passed": true
+}

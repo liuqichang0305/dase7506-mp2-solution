@@ -14,22 +14,45 @@ instructions below for V3; all historical method/assets/logs remain preserved.
   hard530/705. No new validation/test evaluation has occurred.
 - V3 TabM/RealMLP/preprocessing and AdamW/Muon/EMA modules passed synthetic
   tests. NumPy-only inference/contract, exact epoch resume and scheduler
-  integration checks passed. R01--R03 completed10 configurations/30 outer fits.
+  integration checks passed. The original nine training rounds completed31
+  configurations/93 outer fits at2026-10-30T04:20Z (R08 is separate fusion).
   Best new TabM k8:1619/2114 hard; robust-all RealMLP:1611/2114. Both remain
-  below historical Attention1687/2114. Complete evidence: analysis/r03_complete.
-  Resume checked2026-10-30T02:31Z; R04 Attention four-config round is running.
+  below historical Attention1687/2114. V3 Attention AdamW1682, EMA1685,
+  Muon1666 and width64 1670. Evidence: analysis/r04_complete.
+  Muon attempt1 hit1800s; attempt2 resumed only fold2 from epoch8 and completed.
+  Reduced-feature TabM k4 reached1668 hard (+62 over full-input k4), with gains
+  +45/+11/+6 by fold. This changes input width and first-layer capacity, so it
+  does not isolate a causal feature effect. R06 pairwise1684, listwise1672,
+  BCE1668 and group/decoder alpha0.5 1663 do not beat historical Attention.
+  R07 Deep Sets AdamW1657 / EMA1665 and ResMLP AdamW1621 / EMA1625 are
+  complete; neither exceeds the existing Attention controls. All four rows
+  remain in the main table, with actual costs and common-fold evidence.
+  R09 stronger weight decay1683/dropout1673/width256 1677 did not improve
+  Attention. R10 RealMLP reduced input1665 (+54 versus matched full-input1611)
+  warrants two bounded variance controls; lower LR1610/width256 1607 did not help.
+  R11 TabM k8/EMA and R14 RealMLP dropout0.1/EMA on reduced input were registered
+  at04:22Z and are running sequentially under scheduler PID44908 (verify current
+  PID/create-time before use). The previous PID25488 completed and exited.
+  Two separately registered equal-probability fusions are complete and rejected:
+  Attention+TabM1667 hard; Attention+RealMLP1670, both below their Attention member.
 - Train-only table recomputed all19 historical full-CV configurations with
   source/data/common-fold verification. No leaderboard feedback enters selection.
 - Current queue/state is authoritative in `results/research_v3/campaign_queue.json`,
   registry and heartbeat files. Scheduler restart retained the live trainer;
   Windows venv child-tree timeout cleanup passed a real no-data process test.
-- Next: finish R04 interaction controls, then evidence-based TabM optimization,
-  feature/objective controls and fixed-seed confirmation. Read
+- Next: finish the four queued reduced-input follow-ups. A fresh
+  train-only reciprocal-error gate supports one separately preregistered
+  equal-probability reduced-TabM/Attention-EMA mix (not yet evaluated).
+  Then choose the most promising1--2 recipes for the two fixed extra seeds. Read
   `docs/research_v3/SEARCH_PLAN_V3.md` and `RESUME.txt`.
 - At most two NEW validation finalists, fixed deployment seed3036900957. New
   selection must satisfy the exact historical-fallback criterion in the plan.
 - Final submission and actual peer review are not completed for V3. Peer review
   awaits the instructor's actual MP2 release. Historical Issue#294 remains valid.
+- V2 PR#2 was actually merged2026-10-30T02:50:29Z (merge fafa742443926920298b82c2fbe022cef6d29632).
+  V3 PR#3 now targets main and remains a draft. Reviewed delivery-boundary,
+  clean-reproduction and anonymous-publication tools are implemented; their
+  synthetic tests are not actual final-model reproduction or submission.
 
 ## Historical V1 state (preserved)
 

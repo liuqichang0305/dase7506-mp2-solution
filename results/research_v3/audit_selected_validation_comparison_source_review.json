@@ -1,0 +1,32 @@
+{
+  "checked_at_utc": "2026-10-30T03:38:27.192239+00:00",
+  "scope": "Source-only independent review. No helper invocation, real validation/test/reference read, training or test rerun.",
+  "status": "No remaining obvious input-alignment/event-binding issue after the targeted repair.",
+  "initial_findings": [
+    "Selected events lacked canonical path/schema/selector/source/selection-lock binding.",
+    "Event IDs and choices were not compared to the official bank and unique saved selected prediction.",
+    "Hard subset was trusted from the NPZ rather than reconstructed."
+  ],
+  "verified_repairs": [
+    "Canonical selected-model JSON/NPZ paths; schema validation; exact selector, full source inventory and lock binding.",
+    "IDs equal all798 bank IDs in order; choices integer shape798 and0..3; choices equal unique saved official predictions.",
+    "Original prediction/score hashes match preparation and event prediction hash; counts and actual parsed correctness match saved official aggregate.",
+    "Answer groups rederived from the official parser; hard mask rederived and compared to saved values; correctness converted to boolean for paired overlap math.",
+    "Shared resource lock, closed/unique selection verification, pre-freeze/test guard, validation opened only after selection; data guard never allows test.",
+    "Post-analysis unique selection/source/asset/summary/lock checks; immutable result."
+  ],
+  "bootstrap": {
+    "source": "Preserved analyze_oof_v2.paired_comparison, read in full",
+    "repetitions": 5000,
+    "overall_seed": 3036901059,
+    "hard_seed": 3036901060,
+    "resampling_unit": "whole question",
+    "caveat": "Previously used post-selection validation; descriptive paired interval does not undo model-selection optimism."
+  },
+  "source_sha256": {
+    "code/tools/analyze_selected_validation_v3.py": "026f12bedd6b8f388b98bde35a4fe7d27774f807e59481f3b871597863b44736",
+    "code/tools/analyze_oof_v2.py": "0423bcf6668a783e66051e6b0132a5262ce03b31c9032e80b3ca491537a0c812",
+    "code/tools/prepare_selected_confidence_v3.py": "a07702f2b9afb964f5f5fc831a3cbe23382dc85aa754bc61e443de1531cb8696"
+  },
+  "actual_final_analysis_pending": true
+}

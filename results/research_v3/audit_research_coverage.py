@@ -74,7 +74,7 @@ def main():
     historical=read('results/research_v3/analysis/r03_complete/analysis.json')
     reused=[{'id':r['experiment_id'],'seed':r['seed'],'hard_correct':r['hard_correct'],
              'hard_fold_mean':r['hard_fold_mean'],'source_summary_sha256':r['summary_sha256']}
-            for r in historical['rows'] if r['version']=='v2']
+            for r in historical['rows'] if r['version']=='research_v2']
     fusion=read('results/research_v3/fixed_fusion_analysis.json')
     record={'checked_at_utc':datetime.now(timezone.utc).isoformat(),
         'scope':'Read-only train-CV configurations and existing aggregate/OOF hashes; no validation/test/ranking reads or training.',

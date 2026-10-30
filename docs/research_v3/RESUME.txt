@@ -15,6 +15,21 @@ experiment_registry.jsonl. Each attempt has its own scheduler_logs/*.log.
 Training checkpoints live under tmp/research_v3/training_states; retain them.
 Final export assets, fold scores, reports and source hashes are versioned.
 
+At the 2026-10-30T04:23Z checkpoint,31 new recipes are complete;
+R11/R14 are running sequentially in the existing scheduler PID44908. Verify
+the current heartbeat/process identity, do not start a second scheduler.
+R11 and R14 are already registered; do not register them twice. The original
+scheduler PID25488 completed its queue and exited at04:20Z. R10 reduced
+RealMLP gained54 hard questions over its full-input control; the R14 controls
+independently add dropout0.1 or EMA0.99 on that exact reduced representation.
+The R05 gain is62 hard questions over matched full-input TabM k4, concentrated
+in fold0; capacity and initialization also change. One independently justified
+equal-probability reduced-TabM/Attention-EMA mixture is being prepared from
+the saved reciprocal-error gate. Do not confuse prepared files with execution.
+After all current hypotheses finish, prepare the original two extra seeds
+for one or two actual completed recipes using prepare_stability_round_v3.py.
+Deployment remains base seed3036900957 regardless of repeat results.
+
 Before adding a round, inspect completed TRAIN OOF only, write a registration
 JSON with round/hypothesis/configs (2--4 configurations), and execute:
   .venv\Scripts\python.exe scripts\run_campaign_v3.py register <registration.json>

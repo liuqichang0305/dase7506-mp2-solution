@@ -1,5 +1,14 @@
 # Final V3 submission transport
 
+Read-only reconciliation now also invokes the hash-verified official payload,
+sealed-envelope and issue-URL formatter checks before credentials or HTTP.
+Only the current score phase/deadline gate is conditional on creating a new
+issue. Thus a post-deadline readback can verify a legitimate old success, while
+a self-consistent malformed form cannot acquire a success receipt. Public raw
+file paths are URL-encoded, retaining `/` separators. The synthetic regression
+suite passed 17/17 in 5.670 seconds; evidence is
+`results/research_v3/submission-reconciliation-tests.log`.
+
 `submission/v3/submit_final.py` prepares no model, reads no test questions or
 references, and is not imported by research. Importing it performs no I/O. Its
 only live CLI action is:
