@@ -1,0 +1,17 @@
+{
+  "returncode": 1,
+  "seconds": 2.8953484000012395,
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_confirm_validation_v3.py",
+    "-v"
+  ],
+  "source_sha256": "99c9c6c3ab52d07d22e958f97938858ca2278f06b2673e687a211340afe00034",
+  "scope": "Synthetic isolated files and harmless sleep processes only; no official validation or test data"
+}

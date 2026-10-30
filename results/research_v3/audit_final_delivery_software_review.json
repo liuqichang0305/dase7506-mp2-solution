@@ -1,0 +1,32 @@
+{
+  "checked_at_utc": "2026-10-30T03:08:05.053702+00:00",
+  "scope": "Independent source review and generated-fixture software tests only. No actual new validation/test/clone/install/score/credential/HTTP/submission.",
+  "software_status": "No remaining blocking issue in reviewed source revisions; actual final model/export/contract/reproduction/freeze/publication/rule gate remains required.",
+  "source_sha256": {
+    "code/tools/confirm_validation_v3.py": "a3928fdd9b58bfd5d3036f51510a866516d5aab8a8289892212769aecf558aff",
+    "code/tools/freeze_v3.py": "a97c7f69feda83f3d84bf6cab03ce41413a430af68fe917699f110647757ec24",
+    "submission/v3/evaluate_final.py": "fc94ad71a8be7805c97f3c2887869d2f89300a4966dc4c72e935434b84186655",
+    "submission/v3/submit_final.py": "8b024476d3450b5828d987a3f0d1856d3d7c008813efe98001ebcc3ecca708b7",
+    "submission/v3/artifact_binding.mjs": "18bf530727e9c43971d828c6c5aa562f94fdb78bce2052d07d2ca41a40095599",
+    "submission/v3/prepare_official_form.mjs": "afa14f54ecc13b062853642d669997654419aefeba283b244c17635fa1b5b012",
+    "scripts/reproduce_selected_v3.py": "f4bf15bbe3bde42d8ad86b26b0f0c1e2971d69c5c8819a9bca5ff802fddb9acb"
+  },
+  "evidence_sha256": {
+    "results/research_v3/independent-final-boundary-repaired/counterexamples.json": "133013aacc19033ab23121468490f4bc80b94ea33ebbac61faa8d94b1c50a1c2",
+    "results/research_v3/independent-final-boundary-repaired/suite-review.json": "b28fc97889e67551fc2ce3abd1a032214346d2333f7a9eaa0ab4c718c353beca",
+    "results/research_v3/independent-final-worker-smoke/review.json": "e3a09a670d0d640c94268c371161b037abcff73d7fdb13e95d27086188a3d8fb",
+    "results/research_v3/independent-artifact-binding-review-utf8/review.json": "09cc78ece5e9d7a1f589e8cd1d3d90011d3fbbd96224575fec69a573de6ea7dc",
+    "results/research_v3/independent-clean-reproduction-review/review.json": "1bfaa08f14a88b4fe13a254a245566de510468c73939d1192480e9deadae9f9f",
+    "results/research_v3/independent-reconciliation-review-repaired/review.json": "f920f2a0bb12eb10e3c9fe54276e8240f4b248617ed19b728c7d9a440edaae77",
+    "results/research_v3/independent-reconciliation-review-repaired/suite-review.json": "dd4378eef9f6273b2b9649c5eff45237d75e8d5c5024fb8a71c336455f0724b0"
+  },
+  "tests": {
+    "freeze": 12,
+    "submit_final_after_reconciliation_repair": 17,
+    "native_crypto_observer": 11,
+    "clean_reproducer": 13,
+    "confirmation_helper": 13
+  },
+  "known_process_limit": "Sampling cannot reconstruct unobserved detached ancestry. Formal workers use direct base Python and deny spawning; measured task OS threads remain <=4. No reference-Xeon certification.",
+  "final_test_evaluated_by_reviewer": false
+}

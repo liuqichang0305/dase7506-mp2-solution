@@ -1,0 +1,89 @@
+{
+  "scope": "Generated synthetic scripts/data only, actual direct-base NumPy process integration and guards. No official validation/test or HTTP/network packet",
+  "checked_at_utc": "2026-10-30T02:52:18.481661+00:00",
+  "status": "passed",
+  "processes": [
+    {
+      "command": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-S",
+        "-c",
+        "import os,sys,json\nfrom pathlib import Path\n_scope=json.loads('{\"data\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\code\\\\\\\\data\", \"allowed\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\code\\\\\\\\data\\\\\\\\manifest.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\code\\\\\\\\data\\\\\\\\candidates\\\\\\\\gsm8k_test.jsonl\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\code\\\\\\\\data\\\\\\\\candidates\\\\\\\\gsm8k_test.npz\"], \"result_roots\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\results\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\submission\"], \"assets\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\artifacts\\\\\\\\research_v3\\\\\\\\final_selected\", \"outputs\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\submission\\\\\\\\v3\\\\\\\\test-predictions.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\submission\\\\\\\\v3\\\\\\\\test-prediction-thread-pools.json\"], \"prediction\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\submission\\\\\\\\v3\\\\\\\\test-predictions.json\", \"phase\": \"prediction\"}')\ndef _phase_guard(event,args):\n    if event.startswith('socket.') or event in ('subprocess.Popen','os.system','os.spawn','os.posix_spawn','os.fork','os.forkpty','os.exec'):\n        raise PermissionError('Official evaluation is offline and cannot spawn processes')\n    if event!='open' or isinstance(args[0],int):return\n    p=Path(os.fsdecode(args[0])).resolve()\n    mode,flags=args[1],args[2]\n    writing=(isinstance(mode,str) and any(c in mode for c in 'wax+')) or flags & (os.O_WRONLY|os.O_RDWR|os.O_CREAT|os.O_TRUNC)\n    if p.is_relative_to(Path(_scope['data'])):\n        if str(p) not in _scope['allowed'] or writing:\n            raise PermissionError('Data access forbidden in this official phase')\n    if p.is_relative_to(Path(_scope['assets'])) and writing:\n        raise PermissionError('Frozen inference assets are read-only')\n    if any(p.is_relative_to(Path(base)) for base in _scope['result_roots']):\n        allowed_output=str(p) in _scope['outputs']\n        allowed_prediction=_scope['phase']=='scoring' and str(p)==_scope['prediction'] and not writing\n        if not allowed_output and not allowed_prediction:\n            raise PermissionError('Prior outcomes/research evidence are unavailable to official workers')\nsys.addaudithook(_phase_guard)\nimport json,os,runpy,sys\nfrom pathlib import Path\nfrom threadpoolctl import threadpool_info\nscript,report=sys.argv[1:3]\nsys.argv=[script]+sys.argv[3:]\nsys.path.insert(0,str(Path(script).resolve().parent))\ntry:\n    runpy.run_path(script,run_name='__main__')\nfinally:\n    record={'script':script,'executable':sys.executable,'pythonpath':os.environ.get('PYTHONPATH'),\n            'thread_pools':threadpool_info(),'numpy_version':getattr(sys.modules.get('numpy'),'__version__',None),\n            'torch_imported':'torch' in sys.modules,\n            'thread_environment':{k:os.environ.get(k) for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS','OMP_THREAD_LIMIT')}}\n    with open(report,'x',encoding='utf-8') as f:\n        json.dump(record,f,indent=2);f.write('\\n')\n",
+        "code/predict.py",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\independent-worker-synthetic-5ryv0vtp\\submission\\v3\\test-prediction-thread-pools.json",
+        "--output",
+        "submission/v3/test-predictions.json"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "started_at_utc": "2026-10-30T02:52:17.591196+00:00",
+      "completed_at_utc": "2026-10-30T02:52:18.040689+00:00",
+      "wall_seconds": 0.4510071000113385,
+      "process_tree": [
+        {
+          "pid": 33560,
+          "create_time": 1793328737.5939348
+        }
+      ],
+      "sampled_peak_tree_threads": 4,
+      "sampled_peak_tree_rss_bytes": 27062272,
+      "sampled_peak_tree_plus_coordinator_threads": 8,
+      "sampled_cpu_seconds": 0.421875,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      },
+      "sampling_note": "Nominal 10 ms delay between process-tree samples, plus snapshot overhead. Observed children retain PID/creation identities after parent exit. Unobserved detached ancestry is not recoverable; formal workers use direct Python and deny spawning. CPU/RSS/threads are samples, not exact integrals."
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-S",
+        "-c",
+        "import os,sys,json\nfrom pathlib import Path\n_scope=json.loads('{\"data\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\code\\\\\\\\data\", \"allowed\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\code\\\\\\\\data\\\\\\\\manifest.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\code\\\\\\\\data\\\\\\\\candidates\\\\\\\\gsm8k_test.jsonl\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\code\\\\\\\\data\\\\\\\\candidates\\\\\\\\gsm8k_test.npz\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\code\\\\\\\\data\\\\\\\\gsm8k_test.jsonl\"], \"result_roots\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\results\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\submission\"], \"assets\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\artifacts\\\\\\\\research_v3\\\\\\\\final_selected\", \"outputs\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\submission\\\\\\\\v3\\\\\\\\test-score.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\submission\\\\\\\\v3\\\\\\\\test-scoring-thread-pools.json\"], \"prediction\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\independent-worker-synthetic-5ryv0vtp\\\\\\\\submission\\\\\\\\v3\\\\\\\\test-predictions.json\", \"phase\": \"scoring\"}')\ndef _phase_guard(event,args):\n    if event.startswith('socket.') or event in ('subprocess.Popen','os.system','os.spawn','os.posix_spawn','os.fork','os.forkpty','os.exec'):\n        raise PermissionError('Official evaluation is offline and cannot spawn processes')\n    if event!='open' or isinstance(args[0],int):return\n    p=Path(os.fsdecode(args[0])).resolve()\n    mode,flags=args[1],args[2]\n    writing=(isinstance(mode,str) and any(c in mode for c in 'wax+')) or flags & (os.O_WRONLY|os.O_RDWR|os.O_CREAT|os.O_TRUNC)\n    if p.is_relative_to(Path(_scope['data'])):\n        if str(p) not in _scope['allowed'] or writing:\n            raise PermissionError('Data access forbidden in this official phase')\n    if p.is_relative_to(Path(_scope['assets'])) and writing:\n        raise PermissionError('Frozen inference assets are read-only')\n    if any(p.is_relative_to(Path(base)) for base in _scope['result_roots']):\n        allowed_output=str(p) in _scope['outputs']\n        allowed_prediction=_scope['phase']=='scoring' and str(p)==_scope['prediction'] and not writing\n        if not allowed_output and not allowed_prediction:\n            raise PermissionError('Prior outcomes/research evidence are unavailable to official workers')\nsys.addaudithook(_phase_guard)\nimport json,os,runpy,sys\nfrom pathlib import Path\nfrom threadpoolctl import threadpool_info\nscript,report=sys.argv[1:3]\nsys.argv=[script]+sys.argv[3:]\nsys.path.insert(0,str(Path(script).resolve().parent))\ntry:\n    runpy.run_path(script,run_name='__main__')\nfinally:\n    record={'script':script,'executable':sys.executable,'pythonpath':os.environ.get('PYTHONPATH'),\n            'thread_pools':threadpool_info(),'numpy_version':getattr(sys.modules.get('numpy'),'__version__',None),\n            'torch_imported':'torch' in sys.modules,\n            'thread_environment':{k:os.environ.get(k) for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS','OMP_THREAD_LIMIT')}}\n    with open(report,'x',encoding='utf-8') as f:\n        json.dump(record,f,indent=2);f.write('\\n')\n",
+        "code/score_predictions.py",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\independent-worker-synthetic-5ryv0vtp\\submission\\v3\\test-scoring-thread-pools.json",
+        "--predictions",
+        "submission/v3/test-predictions.json",
+        "--output",
+        "submission/v3/test-score.json"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "started_at_utc": "2026-10-30T02:52:18.046176+00:00",
+      "completed_at_utc": "2026-10-30T02:52:18.457893+00:00",
+      "wall_seconds": 0.41378449999319855,
+      "process_tree": [
+        {
+          "pid": 36140,
+          "create_time": 1793328738.0485835
+        }
+      ],
+      "sampled_peak_tree_threads": 4,
+      "sampled_peak_tree_rss_bytes": 27533312,
+      "sampled_peak_tree_plus_coordinator_threads": 8,
+      "sampled_cpu_seconds": 0.34375,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      },
+      "sampling_note": "Nominal 10 ms delay between process-tree samples, plus snapshot overhead. Observed children retain PID/creation identities after parent exit. Unobserved detached ancestry is not recoverable; formal workers use direct Python and deny spawning. CPU/RSS/threads are samples, not exact integrals."
+    }
+  ],
+  "combined_seconds": 0.8732182999956422,
+  "task_peak_threads": 4,
+  "source_sha256": {
+    "code/tools/confirm_validation_v3.py": "a3928fdd9b58bfd5d3036f51510a866516d5aab8a8289892212769aecf558aff",
+    "submission/v3/evaluate_final.py": "fc94ad71a8be7805c97f3c2887869d2f89300a4966dc4c72e935434b84186655"
+  }
+}

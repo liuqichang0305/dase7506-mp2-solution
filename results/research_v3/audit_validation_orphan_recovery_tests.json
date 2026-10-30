@@ -1,0 +1,18 @@
+{
+  "returncode": 1,
+  "seconds": 19.535146800000803,
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_confirm_validation_v3.py",
+    "-v"
+  ],
+  "source_sha256_before": "c09b11a2c4dd49463bf087daaafcb3826df08ea7e66c70326c678a5283071dc9",
+  "source_sha256_after": "c09b11a2c4dd49463bf087daaafcb3826df08ea7e66c70326c678a5283071dc9",
+  "scope": "Synthetic process-tree discovery includes live Windows orphans of exited captured parents; no official validation/test"
+}

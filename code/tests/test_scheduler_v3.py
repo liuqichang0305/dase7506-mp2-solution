@@ -154,6 +154,38 @@ class SchedulerV3Tests(unittest.TestCase):
             self.register('round_b', ('mlp_c', 'mlp_d'))
         self.assertEqual(scheduler.QUEUE.read_bytes(), before)
 
+    def test_fixed_fusions_and_pilot_share_the_unique_configuration_cap(self):
+        registration = self.write(self.root / 'docs/research_v3/rounds/fusion_a.json',
+            {'experiment_id': 'fusion_a', 'status': 'registered',
+             'purpose': 'single_fixed_equal_probability_oof'})
+        entry = {'experiment_id': 'fusion_a', 'registration': registration.relative_to(self.root).as_posix(),
+                 'registration_sha256': scheduler.sha(registration)}
+        registry = self.out / 'fusion_registry.jsonl'
+        registry.write_text(json.dumps(entry) + '\n', encoding='utf-8')
+        self.plan['maximum_unique_configurations'] = 3  # Fusion + pilot leave only one slot.
+        self.write(self.out / 'campaign_budget.json', self.plan)
+        with self.assertRaisesRegex(ValueError, 'configuration budget'):
+            self.register()
+        self.assertFalse(scheduler.QUEUE.exists())
+        self.plan['maximum_unique_configurations'] = 4
+        self.write(self.out / 'campaign_budget.json', self.plan)
+        self.assertEqual(len(self.register()['jobs']), 2)
+        self.assertEqual(scheduler.external_configuration_ids(), {'fusion_a'})
+        registration.write_text('{}', encoding='utf-8')
+        with self.assertRaisesRegex(ValueError, 'identity/hash'):
+            scheduler.external_configuration_ids()
+
+    def test_external_fusion_cannot_reuse_a_training_identity(self):
+        registration = self.write(self.root / 'docs/research_v3/rounds/mlp_a.json',
+            {'experiment_id': 'mlp_a', 'status': 'registered',
+             'purpose': 'single_fixed_equal_probability_oof'})
+        entry = {'experiment_id': 'mlp_a', 'registration': registration.relative_to(self.root).as_posix(),
+                 'registration_sha256': scheduler.sha(registration)}
+        (self.out / 'fusion_registry.jsonl').write_text(json.dumps(entry) + '\n', encoding='utf-8')
+        with self.assertRaisesRegex(ValueError, 'distinct identities'):
+            self.register()
+        self.assertFalse(scheduler.QUEUE.exists())
+
     def test_registration_is_immutable_and_rejects_holdout_background_paths(self):
         queue = self.register()
         before = scheduler.QUEUE.read_bytes()

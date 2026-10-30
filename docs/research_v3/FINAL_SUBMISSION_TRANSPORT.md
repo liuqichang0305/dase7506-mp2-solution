@@ -32,6 +32,28 @@ hash/count/percentage, frozen source commit, local source/asset hashes and
 published-commit bytes are checked. The script uses only the aggregate score
 JSON; no score information is sent into a research process.
 
+The official scoring protocol is `dase7506-mp2-open-hard-verifier-v5`; the form's
+submission protocol is separately validated by the current official module
+(currently `7506-submissions-v1`). They are intentionally not compared for
+equality. Before POST, the unchanged official `validateSubmission`,
+`validSealedArtifacts` and `makeIssueURL` must accept the exact payload and
+reproduce the exact generated URL.
+
+The V3 local adapter additionally observes, without modifying, the official
+WebCrypto encryption calls. `ARTIFACT_BINDING.json` and the matching embedded
+`GENERATED_FORM.artifact_binding` bind the exact public-link plaintext, IV,
+ciphertext and wrapped-key output hashes to the adapter, observer helper and
+official entry-source hashes. The submitter checks plaintext links against the
+publicly verified immutable URLs and hashes the decoded envelope bytes. No AES
+key or RSA input key material is inspected, copied or saved by the observer.
+This V3 observer is a substantive reviewed local-adapter addition; the earlier
+path-only comparison is retained as historical evidence, and V1 is unchanged.
+
+`TEST_COMPLETE.json` must record a passing, resource-eligible once-only evaluation
+of the same freeze, method/checkpoint and all 467 examples. Every listed output
+hash is rechecked, including the exact aggregate score being submitted. See
+`FINAL_FREEZE_AND_TEST.md` for the evaluation workflow.
+
 `results/research_v3/SEARCH_CLOSED.json` must exist. The freeze requires
 `frozen: true`, `test_evaluated_before_freeze: false`, `created_at_utc`, full
 40-character `source_commit`, and nonempty distinct `source_files` and `assets`

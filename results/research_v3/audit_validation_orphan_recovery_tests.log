@@ -1,0 +1,76 @@
+test_actual_source_inventory_exists (test_confirm_validation_v3.ConfirmationTests.test_actual_source_inventory_exists) ... ok
+test_asset_source_and_fallback_changes_rejected (test_confirm_validation_v3.ConfirmationTests.test_asset_source_and_fallback_changes_rejected) ... ok
+test_completed_result_hash_resume_and_partial_preservation (test_confirm_validation_v3.ConfirmationTests.test_completed_result_hash_resume_and_partial_preservation) ... ok
+test_confirmation_resume_no_second_evaluation_and_no_changed_lock (test_confirm_validation_v3.ConfirmationTests.test_confirmation_resume_no_second_evaluation_and_no_changed_lock) ... ok
+test_exclusive_resource_lock_and_pid_creation_identity (test_confirm_validation_v3.ConfirmationTests.test_exclusive_resource_lock_and_pid_creation_identity) ... ok
+test_fusion_identity_requires_actual_registered_complete_ordered_mixture (test_confirm_validation_v3.ConfirmationTests.test_fusion_identity_requires_actual_registered_complete_ordered_mixture) ... ok
+test_improvement_rule_pareto_baseline_and_resource_gate (test_confirm_validation_v3.ConfirmationTests.test_improvement_rule_pareto_baseline_and_resource_gate) ... ok
+test_independent_preopen_counterexamples_are_rejected (test_confirm_validation_v3.ConfirmationTests.test_independent_preopen_counterexamples_are_rejected) ... ok
+test_lock_positive_never_needs_validation_or_test_files (test_confirm_validation_v3.ConfirmationTests.test_lock_positive_never_needs_validation_or_test_files) ... ok
+test_prediction_then_independent_scoring_complete_timing (test_confirm_validation_v3.ConfirmationTests.test_prediction_then_independent_scoring_complete_timing) ... ok
+test_prelock_integrity_rejects_mutations_and_third_candidate (test_confirm_validation_v3.ConfirmationTests.test_prelock_integrity_rejects_mutations_and_third_candidate) ... ok
+test_read_guard_in_fresh_process (test_confirm_validation_v3.ConfirmationTests.test_read_guard_in_fresh_process) ... ok
+test_real_tree_wait_and_timeout_no_orphan (test_confirm_validation_v3.ConfirmationTests.test_real_tree_wait_and_timeout_no_orphan) ... FAIL
+test_real_tree_wait_and_timeout_no_orphan (test_confirm_validation_v3.ConfirmationTests.test_real_tree_wait_and_timeout_no_orphan) ... ERROR
+
+======================================================================
+ERROR: test_real_tree_wait_and_timeout_no_orphan (test_confirm_validation_v3.ConfirmationTests.test_real_tree_wait_and_timeout_no_orphan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\shutil.py", line 634, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\Liuye\\AppData\\Local\\Temp\\mp2-v3-validation-synthetic-a3o9xdaw\\results\\research_v3\\process-tree\\complete.stderr.log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\tempfile.py", line 891, in onexc
+    _os.unlink(path)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\Liuye\\AppData\\Local\\Temp\\mp2-v3-validation-synthetic-a3o9xdaw\\results\\research_v3\\process-tree\\complete.stderr.log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_confirm_validation_v3.py", line 91, in tearDown
+    self.tmp.cleanup()
+  File "C:\Program Files\Python312\Lib\tempfile.py", line 923, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Program Files\Python312\Lib\tempfile.py", line 903, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Program Files\Python312\Lib\shutil.py", line 796, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\shutil.py", line 631, in _rmtree_unsafe
+    _rmtree_unsafe(fullname, onexc)
+  File "C:\Program Files\Python312\Lib\shutil.py", line 631, in _rmtree_unsafe
+    _rmtree_unsafe(fullname, onexc)
+  File "C:\Program Files\Python312\Lib\shutil.py", line 631, in _rmtree_unsafe
+    _rmtree_unsafe(fullname, onexc)
+  File "C:\Program Files\Python312\Lib\shutil.py", line 636, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+  File "C:\Program Files\Python312\Lib\tempfile.py", line 894, in onexc
+    cls._rmtree(path, ignore_errors=ignore_errors)
+  File "C:\Program Files\Python312\Lib\tempfile.py", line 903, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Program Files\Python312\Lib\shutil.py", line 796, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\shutil.py", line 612, in _rmtree_unsafe
+    onexc(os.scandir, path, err)
+  File "C:\Program Files\Python312\Lib\shutil.py", line 609, in _rmtree_unsafe
+    with os.scandir(path) as scandir_it:
+         ^^^^^^^^^^^^^^^^
+NotADirectoryError: [WinError 267] 目录名称无效。: 'C:\\Users\\Liuye\\AppData\\Local\\Temp\\mp2-v3-validation-synthetic-a3o9xdaw\\results\\research_v3\\process-tree\\complete.stderr.log'
+
+======================================================================
+FAIL: test_real_tree_wait_and_timeout_no_orphan (test_confirm_validation_v3.ConfirmationTests.test_real_tree_wait_and_timeout_no_orphan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_confirm_validation_v3.py", line 380, in test_real_tree_wait_and_timeout_no_orphan
+    self.assertGreaterEqual(result['wall_seconds'], .45)
+AssertionError: 0.3090424999973038 not greater than or equal to 0.45
+
+----------------------------------------------------------------------
+Ran 13 tests in 19.055s
+
+FAILED (failures=1, errors=1)

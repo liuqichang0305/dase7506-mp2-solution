@@ -79,6 +79,28 @@ def budget():
     return value, actual_end
 
 
+def external_configuration_ids():
+    """Fixed OOF mixtures consume the same cap as trained configurations."""
+    registry = OUT / 'fusion_registry.jsonl'
+    if not registry.exists():
+        return set()
+    identities = set()
+    for line in registry.read_text(encoding='utf-8').splitlines():
+        row = json.loads(line)
+        name = row['experiment_id']
+        path = (ROOT / row['registration']).resolve()
+        if (not re.fullmatch(r'[a-z0-9_]+', name) or name in identities
+                or not path.is_relative_to((ROOT / 'docs/research_v3/rounds').resolve())
+                or sha(path) != row['registration_sha256']):
+            raise ValueError('External fusion registration identity/hash is invalid')
+        specification = read(path)
+        if (specification.get('experiment_id') != name or specification.get('status') != 'registered'
+                or specification.get('purpose') != 'single_fixed_equal_probability_oof'):
+            raise ValueError('External fusion registration has the wrong scope')
+        identities.add(name)
+    return identities
+
+
 def provenance():
     return {'source_files': {p: sha(ROOT / p) for p in CORE},
             'train_and_fold_files': {p: sha(ROOT / p) for p in TRAIN},
@@ -158,8 +180,12 @@ def register(registration):
         raise RuntimeError('Research is closed; no further configurations')
     queue = load_queue()
     identifiers = {job['experiment_id'] for job in queue['jobs']}
-    # The timing pilot is an actual distinct configuration and consumes one slot.
-    if len(identifiers | {c['experiment_id'] for c in configs}) + 1 > plan['maximum_unique_configurations']:
+    external = external_configuration_ids()
+    new_identifiers = {c['experiment_id'] for c in configs}
+    if external & (identifiers | new_identifiers):
+        raise ValueError('Trained and fixed-fusion configurations must have distinct identities')
+    # Include the actual timing pilot and fixed OOF fusions in the shared cap.
+    if len(identifiers | new_identifiers | external) + 1 > plan['maximum_unique_configurations']:
         raise ValueError('Unique configuration budget exceeded')
     source = provenance()
     if any(job['round'] == value['round'] for job in queue['jobs']):
@@ -425,6 +451,7 @@ def main():
         plan, end = budget()
         queue = load_queue()
         print(json.dumps({'utc': utc(), 'budget': plan, 'remaining_seconds': max(0, end - time.time()),
+            'unique_configurations_including_pilot_and_fusion': len(queue['jobs']) + len(external_configuration_ids()) + 1,
             'jobs': [{k: j.get(k) for k in ('experiment_id', 'round', 'status', 'result', 'repair_retries')}
                      for j in queue['jobs']]}, indent=2))
         return

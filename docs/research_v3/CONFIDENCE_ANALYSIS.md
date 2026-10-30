@@ -9,6 +9,14 @@ Run `fit` only once the final selected method is unique. It reads complete train
 OOF evidence, not official data files. No real OOF calibration has been run as part
 of implementing this tool. All initial tests use generated arrays.
 
+For OOF folders under the real repository's `results/research_v2` or
+`results/research_v3`, `fit` enforces `submission/v3/SELECTED_MODEL.json`. Its
+locked validation-summary hash, unique selected name, exact OOF directory and
+structured selector must match. Those selection hashes are saved with the map.
+The low-level reader remains available for reading a chosen fusion's components;
+it does not independently fit component calibrators. Temporary synthetic test
+fixtures are outside these production-results roots.
+
 ```powershell
 .venv\Scripts\python.exe code/tools/reliability_v3.py fit --oof-dir results/research_v3/SELECTED_ID --output results/research_v3/SELECTED_ID_confidence_fit
 .venv\Scripts\python.exe code/tools/reliability_v3.py evaluate --predictions PATH_TO_VALIDATION_EVENTS_MANIFEST.json --calibration results/research_v3/SELECTED_ID_confidence_fit --output results/research_v3/SELECTED_ID_confidence_validation
@@ -70,6 +78,14 @@ summary and train-OOF registration, and the common fold manifest. Its immutable
 archive hash, equal two- or three-member weights, registered split and held-out
 memberships are checked. Saved correctness and selected probability must match
 the actual recorded candidate. This tool does not search pairs or weights.
+
+The V3 diagnostic format is also supported through `reliability_fusion_v3.py`:
+`diagnostic.json` must contain a completed fusion, with `fusion-oof.npz` and an
+exact copied `fusion-registration.json`. The loader verifies member OOF/source
+hashes, common labels/groups/folds, the earlier complementarity gate, the fixed
+equal-weight average, representative choice and actual chosen confidence.
+`not_run` fusion results are rejected. The complete copied registration is the
+selector's `specification`; it must not be abbreviated in the finalist lock.
 
 ## Validation event schema
 

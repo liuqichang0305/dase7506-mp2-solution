@@ -223,6 +223,30 @@ class ReliabilityTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'actual chosen group'):
             r.load_prediction_events(prediction)
 
+    def test_real_results_require_unique_selected_model_and_matching_selector(self):
+        path, *_ = self.oof('mlp')
+        events = r.load_train_oof(path)
+        target = self.folder / 'results/research_v3/mlp'
+        target.mkdir(parents=True)
+        events['oof_directory'] = str(target)
+        with patch.object(r, 'ROOT', self.folder):
+            with self.assertRaises(FileNotFoundError):
+                r.selected_fit_guard(events)
+            summary = target.parent / 'validation_summary.json'
+            r.write_new(summary, {'schema': 'mp2-validation-confirmation-v3', 'selected': {'name': 'mlp'}})
+            selected = self.folder / 'submission/v3/SELECTED_MODEL.json'
+            selected.parent.mkdir(parents=True)
+            record = {'schema': 'mp2-selected-model-v3', 'name': 'mlp',
+                      'validation_summary_sha256': r.digest(summary),
+                      'oof_directory': 'results/research_v3/mlp', 'selector': events['selector']}
+            r.write_new(selected, record)
+            r.selected_fit_guard(events)
+            self.assertEqual(events['source_sha256']['selected_model_json'], r.digest(selected))
+            record['selector'] = {'kind': 'different_model'}
+            selected.write_text(json.dumps(record))
+            with self.assertRaisesRegex(ValueError, 'unique selected method'):
+                r.selected_fit_guard(events)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -118,6 +118,9 @@ def _validate_folds(fold, manifest):
 def load_train_oof(folder):
     """Read immutable complete single-model or fixed equal-probability OOF only."""
     folder = Path(folder).resolve()
+    if (folder / 'diagnostic.json').is_file():
+        from reliability_fusion_v3 import load_fusion_oof
+        return load_fusion_oof(folder)
     if folder.is_relative_to((ROOT / 'code/data').resolve()):
         raise ValueError('OOF folder cannot be official data')
     summary, registration = (read_json(folder / name) for name in ('summary.json', 'registration.json'))
@@ -247,10 +250,28 @@ def _write_analysis(output, events, calibration, interpretation):
     return report
 
 
+def selected_fit_guard(events):
+    """Real repository OOF can fit a map only for its unique locked selection."""
+    directory = Path(events['oof_directory']).resolve()
+    if not any(directory.is_relative_to((ROOT / part).resolve()) for part in ('results/research_v2', 'results/research_v3')):
+        return  # Temporary generated test fixtures are outside production results.
+    selected_path = ROOT / 'submission/v3/SELECTED_MODEL.json'
+    summary_path = ROOT / 'results/research_v3/validation_summary.json'
+    selected, summary = read_json(selected_path), read_json(summary_path)
+    if selected.get('schema') != 'mp2-selected-model-v3' or selected.get('validation_summary_sha256') != digest(summary_path):
+        raise ValueError('Confidence fit requires the immutable unique selected-model record')
+    if summary.get('schema') != 'mp2-validation-confirmation-v3' or selected.get('name') != summary.get('selected', {}).get('name'):
+        raise ValueError('Confidence fit model differs from the unique validation choice')
+    if (ROOT / selected['oof_directory']).resolve() != directory or selected.get('selector') != events['selector']:
+        raise ValueError('Confidence fit OOF/selector differs from the unique selected method')
+    events['source_sha256'].update({'selected_model_json': digest(selected_path), 'validation_summary_json': digest(summary_path)})
+
+
 def fit(oof_dir, output):
     if Path(output).exists():
         raise FileExistsError('Refusing to overwrite calibration evidence')
     events = load_train_oof(oof_dir)
+    selected_fit_guard(events)
     calibration = fit_mapping(events['correct'], events['confidence'])
     calibration.update({'source_split': 'train_oof', 'selector': events['selector'], 'source_sha256': events['source_sha256'],
                         'folds_sha256': events['folds_sha256'], 'oof_directory': events['oof_directory'],

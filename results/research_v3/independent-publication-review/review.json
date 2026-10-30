@@ -1,0 +1,18 @@
+{
+  "scope": "Independent synthetic fixtures, real temporary PDF page parsing, fake HTTP only. No real form/testscore/data/credential/network/issue.",
+  "source_sha256_before": "d2cb34ac2083beb35e623a54b8bfda4c848d9a121519a1061d9149e45e75af66",
+  "source_sha256_after": "d2cb34ac2083beb35e623a54b8bfda4c848d9a121519a1061d9149e45e75af66",
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_verify_publication_v3.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "seconds": 1.6406084000045666
+}

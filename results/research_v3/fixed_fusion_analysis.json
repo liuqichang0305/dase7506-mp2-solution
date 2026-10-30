@@ -1,0 +1,223 @@
+{
+  "schema": "mp2-fixed-fusion-analysis-v3",
+  "created_at_utc": "2026-10-30T02:47:41.855880+00:00",
+  "round": "r08_fixed_heterogeneous_fusion",
+  "round_type": "hypothesis",
+  "status": "completed",
+  "configurations": 2,
+  "new_training_fits": 0,
+  "results": [
+    {
+      "experiment_id": "v3_fusion_attention_tabm_s0",
+      "methods": [
+        "v3:v3_attention_adamw_s0",
+        "v3:v3_tabm_k8_s0"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "metrics": {
+        "overall": {
+          "correct": 4308,
+          "n": 4755,
+          "pooled_accuracy": 90.59936908517349,
+          "fold_mean": 90.5993690851735,
+          "fold_sd": 0.33384874587566143,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 1438,
+              "n": 1585,
+              "accuracy": 90.7255520504732
+            },
+            {
+              "fold": 1,
+              "correct": 1430,
+              "n": 1585,
+              "accuracy": 90.22082018927445
+            },
+            {
+              "fold": 2,
+              "correct": 1440,
+              "n": 1585,
+              "accuracy": 90.85173501577287
+            }
+          ]
+        },
+        "hard": {
+          "correct": 1667,
+          "n": 2114,
+          "pooled_accuracy": 78.85525070955535,
+          "fold_mean": 78.85550988609499,
+          "fold_sd": 0.7396354173420648,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 558,
+              "n": 705,
+              "accuracy": 79.14893617021276
+            },
+            {
+              "fold": 1,
+              "correct": 550,
+              "n": 705,
+              "accuracy": 78.01418439716312
+            },
+            {
+              "fold": 2,
+              "correct": 559,
+              "n": 704,
+              "accuracy": 79.4034090909091
+            }
+          ]
+        },
+        "single_positive": {
+          "correct": 362,
+          "n": 711,
+          "pooled_accuracy": 50.91420534458509,
+          "fold_mean": 50.91420534458509,
+          "fold_sd": 4.64773885846928,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 128,
+              "n": 237,
+              "accuracy": 54.008438818565395
+            },
+            {
+              "fold": 1,
+              "correct": 108,
+              "n": 237,
+              "accuracy": 45.56962025316456
+            },
+            {
+              "fold": 2,
+              "correct": 126,
+              "n": 237,
+              "accuracy": 53.16455696202531
+            }
+          ]
+        }
+      },
+      "hard_delta_questions_vs_attention_control": -15,
+      "hard_delta_questions_vs_historical_best": -20,
+      "maximum_member_asset_bytes": 2468358,
+      "new_training_fits": 0,
+      "decision": "Reject: fewer hard and overall correct than the matched Attention member; do not tune weights after this outcome.",
+      "diagnostic_path": "results/research_v3/v3_fusion_attention_tabm_s0/diagnostic.json",
+      "diagnostic_sha256": "4053c1b7a8ff7e7cb013818746d63580a9281433302003e85dd4aabc409747cd"
+    },
+    {
+      "experiment_id": "v3_fusion_attention_realmlp_s0",
+      "methods": [
+        "v3:v3_attention_adamw_s0",
+        "v3:v3_realmlp_robust_all_s0"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "metrics": {
+        "overall": {
+          "correct": 4311,
+          "n": 4755,
+          "pooled_accuracy": 90.66246056782335,
+          "fold_mean": 90.66246056782335,
+          "fold_sd": 0.0,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 1437,
+              "n": 1585,
+              "accuracy": 90.66246056782335
+            },
+            {
+              "fold": 1,
+              "correct": 1437,
+              "n": 1585,
+              "accuracy": 90.66246056782335
+            },
+            {
+              "fold": 2,
+              "correct": 1437,
+              "n": 1585,
+              "accuracy": 90.66246056782335
+            }
+          ]
+        },
+        "hard": {
+          "correct": 1670,
+          "n": 2114,
+          "pooled_accuracy": 78.99716177861873,
+          "fold_mean": 78.99715237481195,
+          "fold_sd": 0.017216279787243275,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 557,
+              "n": 705,
+              "accuracy": 79.00709219858156
+            },
+            {
+              "fold": 1,
+              "correct": 557,
+              "n": 705,
+              "accuracy": 79.00709219858156
+            },
+            {
+              "fold": 2,
+              "correct": 556,
+              "n": 704,
+              "accuracy": 78.97727272727273
+            }
+          ]
+        },
+        "single_positive": {
+          "correct": 370,
+          "n": 711,
+          "pooled_accuracy": 52.03938115330521,
+          "fold_mean": 52.03938115330519,
+          "fold_sd": 3.5885656321161954,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 132,
+              "n": 237,
+              "accuracy": 55.69620253164557
+            },
+            {
+              "fold": 1,
+              "correct": 115,
+              "n": 237,
+              "accuracy": 48.52320675105485
+            },
+            {
+              "fold": 2,
+              "correct": 123,
+              "n": 237,
+              "accuracy": 51.89873417721519
+            }
+          ]
+        }
+      },
+      "hard_delta_questions_vs_attention_control": -12,
+      "hard_delta_questions_vs_historical_best": -17,
+      "maximum_member_asset_bytes": 2374462,
+      "new_training_fits": 0,
+      "decision": "Reject: fewer hard and overall correct than the matched Attention member; do not tune weights after this outcome.",
+      "diagnostic_path": "results/research_v3/v3_fusion_attention_realmlp_s0/diagnostic.json",
+      "diagnostic_sha256": "e6e5c0185f6c7b5eb33833c727b6140e6d62d4df342ee54e2b54eeba0ceaac1a"
+    }
+  ],
+  "exceeds_registered_half_point": false,
+  "global_reference": "research_v2:attention_regularized_s0",
+  "decision": "Reciprocal-error oracle potential did not translate to either real equal-probability mixture. Both are rejected. No learned weighting or further combination sweep is justified by these outcomes.",
+  "cost_note": "Member training costs are counted once in the campaign. OOF mixing is a deterministic diagnostic, with no new optimization. Formal fresh-process latency was not measured for rejected mixtures.",
+  "terminal_observed_wall_seconds": {
+    "v3_fusion_attention_tabm_s0": 1.9131238000000002,
+    "v3_fusion_attention_realmlp_s0": 1.7272821999999999
+  },
+  "wall_measurement_source": "Actual exec_command completion receipts for the two fixed diagnostic invocations; includes Python startup and diagnostic output generation.",
+  "registry_sha256": "1ed4cd3fe8a6a6d235aa465dfd9a65c67cbee513b5414d45938a42c5fdf7f07d"
+}

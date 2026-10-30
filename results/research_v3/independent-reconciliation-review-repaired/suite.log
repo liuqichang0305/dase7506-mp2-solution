@@ -1,0 +1,22 @@
+test_ambiguous_post_then_remote_reconciliation_without_second_post (test_submit_final_v3.SubmissionTests.test_ambiguous_post_then_remote_reconciliation_without_second_post) ... ok
+test_ambiguous_post_unresolved_blocks_blind_repost (test_submit_final_v3.SubmissionTests.test_ambiguous_post_unresolved_blocks_blind_repost) ... ok
+test_changed_asset_text_report_or_rules_rejected (test_submit_final_v3.SubmissionTests.test_changed_asset_text_report_or_rules_rejected) ... ok
+test_changed_official_title_fails_before_any_network (test_submit_final_v3.SubmissionTests.test_changed_official_title_fails_before_any_network) ... ok
+test_completion_subset_cannot_authorize_submission (test_submit_final_v3.SubmissionTests.test_completion_subset_cannot_authorize_submission) ... ok
+test_form_and_score_protocols_are_distinct_and_official_payload_must_validate (test_submit_final_v3.SubmissionTests.test_form_and_score_protocols_are_distinct_and_official_payload_must_validate) ... ok
+test_freshness_and_public_commit_mismatch_rejected (test_submit_final_v3.SubmissionTests.test_freshness_and_public_commit_mismatch_rejected) ... ok
+test_git_verifier_checks_ancestor_and_committed_bytes (test_submit_final_v3.SubmissionTests.test_git_verifier_checks_ancestor_and_committed_bytes) ... ok
+test_identity_deadline_and_official_phase_block_post (test_submit_final_v3.SubmissionTests.test_identity_deadline_and_official_phase_block_post) ... ok
+test_live_submission_lock_blocks_second_process (test_submit_final_v3.SubmissionTests.test_live_submission_lock_blocks_second_process) ... ok
+test_new_issue_exact_post_readback_and_local_success_retry (test_submit_final_v3.SubmissionTests.test_new_issue_exact_post_readback_and_local_success_retry) ... ok
+test_observed_encryption_binding_must_match_public_links_and_envelope (test_submit_final_v3.SubmissionTests.test_observed_encryption_binding_must_match_public_links_and_envelope) ... ok
+test_official_phase_wrapper_checks_phase_deadline_repository (test_submit_final_v3.SubmissionTests.test_official_phase_wrapper_checks_phase_deadline_repository) ... ok
+test_paginated_duplicate_found_before_post (test_submit_final_v3.SubmissionTests.test_paginated_duplicate_found_before_post) ... ok
+test_public_file_paths_are_url_encoded (test_submit_final_v3.SubmissionTests.test_public_file_paths_are_url_encoded) ... ok
+test_reconciliation_rejects_malformed_protocol_and_envelope_before_network (test_submit_final_v3.SubmissionTests.test_reconciliation_rejects_malformed_protocol_and_envelope_before_network) ... ok
+test_transport_allowlist_and_credential_errors_do_not_expose_secret (test_submit_final_v3.SubmissionTests.test_transport_allowlist_and_credential_errors_do_not_expose_secret) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 5.791s
+
+OK

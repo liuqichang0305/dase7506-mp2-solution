@@ -1,0 +1,22 @@
+{
+    "schema":  "mp2-v3-clean-reproduction-synthetic-review-v1",
+    "recorded_at_utc":  "2026-10-30T02:58:57.1986950Z",
+    "status":  "synthetic_passed_pending_independent_review",
+    "tests":  13,
+    "passed":  13,
+    "duration_seconds":  1.494,
+    "command_exit_code":  0,
+    "coordinator_test":  "fake clone/install/process outputs, all 798 synthetic choices compared",
+    "guard_tests":  "real isolated Python processes using temporary synthetic files",
+    "actual_clone":  false,
+    "actual_install":  false,
+    "actual_validation":  false,
+    "actual_test":  false,
+    "network_used":  false,
+    "source_and_log_sha256":  {
+                                  "scripts/reproduce_selected_v3.py":  "f4bf15bbe3bde42d8ad86b26b0f0c1e2971d69c5c8819a9bca5ff802fddb9acb",
+                                  "code/tests/test_reproduce_selected_v3.py":  "dd8c0ba3c607958e6bda2ade92e929ced121b30c2fb92e88316a28f8481ce714",
+                                  "docs/research_v3/CLEAN_REPRODUCTION.md":  "4fab22173619edadcaeedd08164714e16fc4ef3d929ff42f07cf3295b1aa44ff",
+                                  "results/research_v3/clean-reproduction-synthetic-tests-final.log":  "ce7fde16a79033f3fa85754c156027802334fa8840bbc21fe0cacc57a1998854"
+                              }
+}

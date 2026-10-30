@@ -1,0 +1,21 @@
+{
+    "schema":  "mp2-v3-publication-verification-synthetic-review-v1",
+    "recorded_at_utc":  "2026-10-30T03:10:01.7935922Z",
+    "status":  "synthetic_passed_pending_independent_review",
+    "tests":  12,
+    "passed":  12,
+    "duration_seconds":  1.485,
+    "command_exit_code":  0,
+    "http":  "mocked only",
+    "pdf_checks":  "real pypdf on temporary synthetic two-page/eleven-page documents",
+    "actual_network":  false,
+    "actual_score_file_read":  false,
+    "actual_holdout":  false,
+    "issue_or_upload_operation":  false,
+    "source_and_log_sha256":  {
+                                  "submission/v3/verify_publication.py":  "d2cb34ac2083beb35e623a54b8bfda4c848d9a121519a1061d9149e45e75af66",
+                                  "code/tests/test_verify_publication_v3.py":  "0f351d9f733045cc1cab25500ed01cddbc6ff460f3839612cc91adb7be9950ea",
+                                  "docs/research_v3/PUBLICATION_VERIFICATION.md":  "0b4c8eb1421e7ae8b2e12f9216d33e5c8f6e5aad1c4dc253447797fd3b0c6861",
+                                  "results/research_v3/publication-verification-synthetic-tests.log":  "1558fdf86b11c1c91f42b16b5e0dbc64510bdb2850984e3296f9fde8bba8ba42"
+                              }
+}

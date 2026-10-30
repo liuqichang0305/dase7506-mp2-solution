@@ -1,0 +1,24 @@
+{
+  "scope": "Generated temporary saved-output fixtures, mocked diagnostics/selection/resource lock. No real holdout, official process or network.",
+  "source_sha256_before": {
+    "code/tools/prepare_selected_confidence_v3.py": "a07702f2b9afb964f5f5fc831a3cbe23382dc85aa754bc61e443de1531cb8696",
+    "code/tools/freeze_v3.py": "d162e6baa95a24c8968f1cc9f84a2ed8566ac4657f492ec534f9a2ec185bd1ea"
+  },
+  "source_sha256_after": {
+    "code/tools/prepare_selected_confidence_v3.py": "a07702f2b9afb964f5f5fc831a3cbe23382dc85aa754bc61e443de1531cb8696",
+    "code/tools/freeze_v3.py": "d162e6baa95a24c8968f1cc9f84a2ed8566ac4657f492ec534f9a2ec185bd1ea"
+  },
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_prepare_selected_confidence_v3.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "seconds": 0.5779353999969317
+}

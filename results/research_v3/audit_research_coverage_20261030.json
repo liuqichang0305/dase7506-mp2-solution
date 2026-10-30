@@ -1,0 +1,504 @@
+{
+  "checked_at_utc": "2026-10-30T03:06:00.422316+00:00",
+  "scope": "Read-only train-CV configurations and existing aggregate/OOF hashes; no validation/test/ranking reads or training.",
+  "planned_rounds": [
+    {
+      "round": "r05_tabm_optimization_features",
+      "file": "docs/research_v3/rounds/r05_tabm_optimization_features.json",
+      "sha256": "7d819b0a379f9a5bca79cc2a867a879a91b9639251fcabd50982a2c87b5b2603",
+      "configuration_count": 3,
+      "two_to_four": true,
+      "all_fixed_seed": true,
+      "variants": [
+        {
+          "experiment_id": "v3_tabm_k4_lr0003_s0",
+          "control": "v3_tabm_k4_s0",
+          "seed": 3036900957,
+          "changes": [
+            {
+              "field": "lr",
+              "control": 0.001,
+              "variant": 0.0003
+            }
+          ],
+          "interpretation": "one registered factor; coupled loss and decoder alpha form the explicit alignment factor"
+        },
+        {
+          "experiment_id": "v3_tabm_k4_ema_s0",
+          "control": "v3_tabm_k4_s0",
+          "seed": 3036900957,
+          "changes": [
+            {
+              "field": "ema_decay",
+              "control": null,
+              "variant": 0.99
+            }
+          ],
+          "interpretation": "one registered factor; coupled loss and decoder alpha form the explicit alignment factor"
+        },
+        {
+          "experiment_id": "v3_tabm_k4_embedding_stats_s0",
+          "control": "v3_tabm_k4_s0",
+          "seed": 3036900957,
+          "changes": [
+            {
+              "field": "input_features",
+              "control": null,
+              "variant": "embedding_stats"
+            }
+          ],
+          "interpretation": "one registered factor; coupled loss and decoder alpha form the explicit alignment factor"
+        }
+      ]
+    },
+    {
+      "round": "r06_attention_objectives",
+      "file": "docs/research_v3/rounds/r06_attention_objectives.json",
+      "sha256": "ec12449534fe337c2433b1967bb3650b37072c57c5c914a9cd549786d2541f0c",
+      "configuration_count": 4,
+      "two_to_four": true,
+      "all_fixed_seed": true,
+      "variants": [
+        {
+          "experiment_id": "v3_attention_listwise_s0",
+          "control": "v3_attention_adamw_s0",
+          "seed": 3036900957,
+          "changes": [
+            {
+              "field": "objective",
+              "control": "group",
+              "variant": "listwise"
+            }
+          ],
+          "interpretation": "one registered factor; coupled loss and decoder alpha form the explicit alignment factor"
+        },
+        {
+          "experiment_id": "v3_attention_bce_s0",
+          "control": "v3_attention_adamw_s0",
+          "seed": 3036900957,
+          "changes": [
+            {
+              "field": "objective",
+              "control": "group",
+              "variant": "bce"
+            }
+          ],
+          "interpretation": "one registered factor; coupled loss and decoder alpha form the explicit alignment factor"
+        },
+        {
+          "experiment_id": "v3_attention_pairwise_s0",
+          "control": "v3_attention_adamw_s0",
+          "seed": 3036900957,
+          "changes": [
+            {
+              "field": "objective",
+              "control": "group",
+              "variant": "pairwise"
+            }
+          ],
+          "interpretation": "one registered factor; coupled loss and decoder alpha form the explicit alignment factor"
+        },
+        {
+          "experiment_id": "v3_attention_group_alpha05_s0",
+          "control": "v3_attention_adamw_s0",
+          "seed": 3036900957,
+          "changes": [
+            {
+              "field": "alpha",
+              "control": 0,
+              "variant": 0.5
+            },
+            {
+              "field": "decoder.alpha",
+              "control": 0,
+              "variant": 0.5
+            }
+          ],
+          "interpretation": "one registered factor; coupled loss and decoder alpha form the explicit alignment factor"
+        }
+      ]
+    },
+    {
+      "round": "r07_regularized_interactions",
+      "file": "docs/research_v3/rounds/r07_regularized_interactions.json",
+      "sha256": "a85c9b54a144a2cddd351a8c890579eeb589a87ec21fead406a2b216c10d7e38",
+      "configuration_count": 4,
+      "two_to_four": true,
+      "all_fixed_seed": true,
+      "variants": [
+        {
+          "experiment_id": "v3_deepsets_adamw_s0",
+          "control": "v3_deepsets_adamw_s0",
+          "seed": 3036900957,
+          "changes": [],
+          "interpretation": "within-family EMA contrast; baseline family transfer is not a capacity-matched architecture causal comparison"
+        },
+        {
+          "experiment_id": "v3_deepsets_ema_s0",
+          "control": "v3_deepsets_adamw_s0",
+          "seed": 3036900957,
+          "changes": [
+            {
+              "field": "ema_decay",
+              "control": null,
+              "variant": 0.99
+            }
+          ],
+          "interpretation": "within-family EMA contrast; baseline family transfer is not a capacity-matched architecture causal comparison"
+        },
+        {
+          "experiment_id": "v3_resmlp_adamw_s0",
+          "control": "v3_resmlp_adamw_s0",
+          "seed": 3036900957,
+          "changes": [],
+          "interpretation": "within-family EMA contrast; baseline family transfer is not a capacity-matched architecture causal comparison"
+        },
+        {
+          "experiment_id": "v3_resmlp_ema_s0",
+          "control": "v3_resmlp_adamw_s0",
+          "seed": 3036900957,
+          "changes": [
+            {
+              "field": "ema_decay",
+              "control": null,
+              "variant": 0.99
+            }
+          ],
+          "interpretation": "within-family EMA contrast; baseline family transfer is not a capacity-matched architecture causal comparison"
+        }
+      ]
+    },
+    {
+      "round": "r09_attention_regularization_capacity",
+      "file": "docs/research_v3/rounds/r09_attention_regularization_capacity.json",
+      "sha256": "613cd27eadf5c448141151c0b04da39f631fa5267b07df6a5791ff2aa5e881e2",
+      "configuration_count": 3,
+      "two_to_four": true,
+      "all_fixed_seed": true,
+      "variants": [
+        {
+          "experiment_id": "v3_attention_wd01_s0",
+          "control": "v3_attention_adamw_s0",
+          "seed": 3036900957,
+          "changes": [
+            {
+              "field": "weight_decay",
+              "control": 0.01,
+              "variant": 0.1
+            }
+          ],
+          "interpretation": "one registered factor; coupled loss and decoder alpha form the explicit alignment factor"
+        },
+        {
+          "experiment_id": "v3_attention_drop05_s0",
+          "control": "v3_attention_adamw_s0",
+          "seed": 3036900957,
+          "changes": [
+            {
+              "field": "dropout",
+              "control": 0.3,
+              "variant": 0.5
+            }
+          ],
+          "interpretation": "one registered factor; coupled loss and decoder alpha form the explicit alignment factor"
+        },
+        {
+          "experiment_id": "v3_attention_width256_s0",
+          "control": "v3_attention_adamw_s0",
+          "seed": 3036900957,
+          "changes": [
+            {
+              "field": "width",
+              "control": 128,
+              "variant": 256
+            }
+          ],
+          "interpretation": "one registered factor; coupled loss and decoder alpha form the explicit alignment factor"
+        }
+      ]
+    },
+    {
+      "round": "r10_realmlp_resolution",
+      "file": "docs/research_v3/rounds/r10_realmlp_resolution.json",
+      "sha256": "d7e8c2bf88c6a8bbb588d5a70b971e6f3b3438450a22c2b6af9c47b456aa9141",
+      "configuration_count": 3,
+      "two_to_four": true,
+      "all_fixed_seed": true,
+      "variants": [
+        {
+          "experiment_id": "v3_realmlp_robust_lr0003_s0",
+          "control": "v3_realmlp_robust_all_s0",
+          "seed": 3036900957,
+          "changes": [
+            {
+              "field": "lr",
+              "control": 0.01,
+              "variant": 0.003
+            }
+          ],
+          "interpretation": "one registered factor; coupled loss and decoder alpha form the explicit alignment factor"
+        },
+        {
+          "experiment_id": "v3_realmlp_robust_width256_s0",
+          "control": "v3_realmlp_robust_all_s0",
+          "seed": 3036900957,
+          "changes": [
+            {
+              "field": "width",
+              "control": 128,
+              "variant": 256
+            }
+          ],
+          "interpretation": "one registered factor; coupled loss and decoder alpha form the explicit alignment factor"
+        },
+        {
+          "experiment_id": "v3_realmlp_robust_embedding_stats_s0",
+          "control": "v3_realmlp_robust_all_s0",
+          "seed": 3036900957,
+          "changes": [
+            {
+              "field": "input_features",
+              "control": null,
+              "variant": "embedding_stats"
+            }
+          ],
+          "interpretation": "one registered factor; coupled loss and decoder alpha form the explicit alignment factor"
+        }
+      ]
+    }
+  ],
+  "queue_snapshot_updated_at": "2026-10-30T02:39:17.977590+00:00",
+  "registered_jobs": [
+    {
+      "experiment_id": "v3_mlp_adamw_s0",
+      "round": "r01_mlp_optimizer",
+      "status": "completed",
+      "seed": 3036900957,
+      "repair_retries": 0,
+      "summary_sha256": "aff3e3af6a62b8ef126a8c4eb7281e29e902b351d017c24a3e08379600886030",
+      "complete_three_folds": true,
+      "config_matches_registration": true,
+      "oof_hash_matches": true,
+      "hard_correct": 1592,
+      "hard_n": 2114,
+      "hard_fold_mean": 75.30705996131529,
+      "correct": 4233,
+      "n": 4755
+    },
+    {
+      "experiment_id": "v3_mlp_ema_s0",
+      "round": "r01_mlp_optimizer",
+      "status": "completed",
+      "seed": 3036900957,
+      "repair_retries": 0,
+      "summary_sha256": "1c9fe76e3a445049395c5893199a8f1b6945a732f73059af44e8b4c1188b8b90",
+      "complete_three_folds": true,
+      "config_matches_registration": true,
+      "oof_hash_matches": true,
+      "hard_correct": 1601,
+      "hard_n": 2114,
+      "hard_fold_mean": 75.73265903718031,
+      "correct": 4242,
+      "n": 4755
+    },
+    {
+      "experiment_id": "v3_mlp_muon001_s0",
+      "round": "r01_mlp_optimizer",
+      "status": "completed",
+      "seed": 3036900957,
+      "repair_retries": 0,
+      "summary_sha256": "99a78dd9d01098ed80aba3e243652eb26e9da02d1c15421e55eaffe749b1efef",
+      "complete_three_folds": true,
+      "config_matches_registration": true,
+      "oof_hash_matches": true,
+      "hard_correct": 1598,
+      "hard_n": 2114,
+      "hard_fold_mean": 75.59141951429187,
+      "correct": 4239,
+      "n": 4755
+    },
+    {
+      "experiment_id": "v3_mlp_muon002_s0",
+      "round": "r01_mlp_optimizer",
+      "status": "completed",
+      "seed": 3036900957,
+      "repair_retries": 0,
+      "summary_sha256": "62ddfa4ea47c53a81f1508376fa10cef075b9ee3a31bcb064317b8997bd783b6",
+      "complete_three_folds": true,
+      "config_matches_registration": true,
+      "oof_hash_matches": true,
+      "hard_correct": 1589,
+      "hard_n": 2114,
+      "hard_fold_mean": 75.16555179454116,
+      "correct": 4230,
+      "n": 4755
+    },
+    {
+      "experiment_id": "v3_tabm_k4_s0",
+      "round": "r02_tabm",
+      "status": "completed",
+      "seed": 3036900957,
+      "repair_retries": 0,
+      "summary_sha256": "44970107d673e0d26e9855b66871360947521f5dad307c4e57d4c1d50b7e534c",
+      "complete_three_folds": true,
+      "config_matches_registration": true,
+      "oof_hash_matches": true,
+      "hard_correct": 1606,
+      "hard_n": 2114,
+      "hard_fold_mean": 75.97000591016548,
+      "correct": 4247,
+      "n": 4755
+    },
+    {
+      "experiment_id": "v3_tabm_k4_drop03_s0",
+      "round": "r02_tabm",
+      "status": "completed",
+      "seed": 3036900957,
+      "repair_retries": 0,
+      "summary_sha256": "1fe37967cf24b17a29349e7b2fbfebafe6770298c41a68a5dab29ad8d64c7dbc",
+      "complete_three_folds": true,
+      "config_matches_registration": true,
+      "oof_hash_matches": true,
+      "hard_correct": 1605,
+      "hard_n": 2114,
+      "hard_fold_mean": 75.92232162045991,
+      "correct": 4246,
+      "n": 4755
+    },
+    {
+      "experiment_id": "v3_tabm_k8_s0",
+      "round": "r02_tabm",
+      "status": "completed",
+      "seed": 3036900957,
+      "repair_retries": 0,
+      "summary_sha256": "221dc465e5c0f845b370676865029e0e4459e885cca7a0ebfb265eb24cfca4c3",
+      "complete_three_folds": true,
+      "config_matches_registration": true,
+      "oof_hash_matches": true,
+      "hard_correct": 1619,
+      "hard_n": 2114,
+      "hard_fold_mean": 76.58486460348162,
+      "correct": 4260,
+      "n": 4755
+    },
+    {
+      "experiment_id": "v3_realmlp_standard_s0",
+      "round": "r03_realmlp_preprocess",
+      "status": "completed",
+      "seed": 3036900957,
+      "repair_retries": 0,
+      "summary_sha256": "3832f2ae2dde827a860abf4786662397cb3bea396d3901cfa4c15074bd97c8bd",
+      "complete_three_folds": true,
+      "config_matches_registration": true,
+      "oof_hash_matches": true,
+      "hard_correct": 1597,
+      "hard_n": 2114,
+      "hard_fold_mean": 75.54400386847196,
+      "correct": 4238,
+      "n": 4755
+    },
+    {
+      "experiment_id": "v3_realmlp_robust_stats_s0",
+      "round": "r03_realmlp_preprocess",
+      "status": "completed",
+      "seed": 3036900957,
+      "repair_retries": 0,
+      "summary_sha256": "028c8bec24785fc050156ed5e77847588f94a834f1aa2aa039586315e99cf57e",
+      "complete_three_folds": true,
+      "config_matches_registration": true,
+      "oof_hash_matches": true,
+      "hard_correct": 1599,
+      "hard_n": 2114,
+      "hard_fold_mean": 75.6386336771975,
+      "correct": 4240,
+      "n": 4755
+    },
+    {
+      "experiment_id": "v3_realmlp_robust_all_s0",
+      "round": "r03_realmlp_preprocess",
+      "status": "completed",
+      "seed": 3036900957,
+      "repair_retries": 0,
+      "summary_sha256": "208723bd91f4a758659bee40779c87157c441cac056ecf4b9ad3d359e94692ee",
+      "complete_three_folds": true,
+      "config_matches_registration": true,
+      "oof_hash_matches": true,
+      "hard_correct": 1611,
+      "hard_n": 2114,
+      "hard_fold_mean": 76.206278207608,
+      "correct": 4252,
+      "n": 4755
+    },
+    {
+      "experiment_id": "v3_attention_adamw_s0",
+      "round": "r04_attention_optimizer_capacity",
+      "status": "completed",
+      "seed": 3036900957,
+      "repair_retries": 0,
+      "summary_sha256": "82f7e741131a00a12b80222646e0bacef6b8b760229482850a6abcb965911228",
+      "complete_three_folds": true,
+      "config_matches_registration": true,
+      "oof_hash_matches": true,
+      "hard_correct": 1682,
+      "hard_n": 2114,
+      "hard_fold_mean": 79.56493122716527,
+      "correct": 4323,
+      "n": 4755
+    },
+    {
+      "experiment_id": "v3_attention_ema_s0",
+      "round": "r04_attention_optimizer_capacity",
+      "status": "completed",
+      "seed": 3036900957,
+      "repair_retries": 0,
+      "summary_sha256": "0b6e265b3d47cc37ab6d8dabb1e8de0f28238702d8045afd58c15abecbea1e24",
+      "complete_three_folds": true,
+      "config_matches_registration": true,
+      "oof_hash_matches": true,
+      "hard_correct": 1685,
+      "hard_n": 2114,
+      "hard_fold_mean": 79.7065065549108,
+      "correct": 4326,
+      "n": 4755
+    },
+    {
+      "experiment_id": "v3_attention_muon_s0",
+      "round": "r04_attention_optimizer_capacity",
+      "status": "running",
+      "seed": 3036900957,
+      "repair_retries": 0
+    },
+    {
+      "experiment_id": "v3_attention_small_s0",
+      "round": "r04_attention_optimizer_capacity",
+      "status": "pending",
+      "seed": 3036900957,
+      "repair_retries": 0
+    }
+  ],
+  "historical_common_fold_methods": [],
+  "fusion": {
+    "status": "completed",
+    "configurations": 2,
+    "sha256": "60ba0cee81c11039cae3c871d302f60049390ab523dc11eafa140a5c297639c0",
+    "hard_correct": [
+      1667,
+      1670
+    ]
+  },
+  "counter_total_if_all_current_and_planned_complete": 34,
+  "counter_note": "Includes one timing pilot and two fixed fusion configurations; excludes already completed historical V2 comparisons.",
+  "saturation_currently_justified": false,
+  "reason": "R04 remains incomplete at review and five documented feasible follow-up hypotheses exist. A zero-gain sequence alone does not meet no-feasible-hypothesis condition.",
+  "minimum_stability_recommendation": {
+    "seeds": [
+      3036900958,
+      3036900959
+    ],
+    "configurations": "2 for one prospective V3 finalist; 4 for two distinct prospective V3 finalists, after broad follow-up results.",
+    "deployment_seed": 3036900957,
+    "reuse": "Do not rerun historical same-recipe complete seeds; do not use extra seeds as alternate deployment candidates."
+  },
+  "stopping_rule": "After mandatory mechanism/optimizer/interaction/TabM-or-RealMLP coverage, three consecutive completed, distinct hypothesis rounds each fail to exceed the fixed prior incumbent by 0.5 common-fold hard percentage points AND no feasible evidence-backed hypothesis remains; otherwise stop only for absolute budget/cap/buffer/real constraint. Stability replications and retries do not manufacture distinct hypotheses.",
+  "precision": "Use the preregistered fold-mean metric, not pooled accuracy; about 11 hard questions is only an approximation, not the exact threshold. Chronology uses actual completed-round timestamps, not numeric round labels."
+}

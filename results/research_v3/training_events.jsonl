@@ -1,0 +1,97 @@
+{"utc": "2026-10-29T17:14:08.162104+00:00", "pid": 37112, "experiment_id": "v3_mlp_adamw_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T17:14:27.786951+00:00", "pid": 37112, "experiment_id": "v3_mlp_adamw_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.0354609929078, "accuracy": 88.89589905362776, "seconds": 18.439223199995467}
+{"utc": "2026-10-29T17:14:27.790060+00:00", "pid": 37112, "experiment_id": "v3_mlp_adamw_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T17:14:44.571690+00:00", "pid": 37112, "experiment_id": "v3_mlp_adamw_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.45390070921985, "accuracy": 89.52681388012618, "seconds": 15.586644599992724}
+{"utc": "2026-10-29T17:14:44.575762+00:00", "pid": 37112, "experiment_id": "v3_mlp_adamw_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T17:15:01.247824+00:00", "pid": 37112, "experiment_id": "v3_mlp_adamw_s0", "fold": 2, "status": "completed", "hard_accuracy": 74.43181818181817, "accuracy": 88.64353312302839, "seconds": 15.43920889999572}
+{"utc": "2026-10-29T17:15:01.302950+00:00", "pid": 37112, "experiment_id": "v3_mlp_adamw_s0", "status": "cv_completed", "accuracy": 89.02208201892743, "hard_accuracy": 75.30747398297068, "training_seconds": 49.46507669998391}
+{"utc": "2026-10-29T17:15:11.549058+00:00", "pid": 39468, "experiment_id": "v3_mlp_ema_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T17:15:39.094040+00:00", "pid": 39468, "experiment_id": "v3_mlp_ema_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.74468085106383, "accuracy": 89.21135646687696, "seconds": 26.346919899995555}
+{"utc": "2026-10-29T17:15:39.098199+00:00", "pid": 39468, "experiment_id": "v3_mlp_ema_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T17:16:03.110897+00:00", "pid": 39468, "experiment_id": "v3_mlp_ema_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.87943262411348, "accuracy": 89.7160883280757, "seconds": 22.804474600001413}
+{"utc": "2026-10-29T17:16:03.113886+00:00", "pid": 39468, "experiment_id": "v3_mlp_ema_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T17:16:28.418223+00:00", "pid": 39468, "experiment_id": "v3_mlp_ema_s0", "fold": 2, "status": "completed", "hard_accuracy": 74.57386363636364, "accuracy": 88.70662460567823, "seconds": 24.115802399996028}
+{"utc": "2026-10-29T17:16:28.476807+00:00", "pid": 39468, "experiment_id": "v3_mlp_ema_s0", "status": "cv_completed", "accuracy": 89.21135646687696, "hard_accuracy": 75.73320719016084, "training_seconds": 73.267196899993}
+{"utc": "2026-10-29T17:16:39.061412+00:00", "pid": 42980, "experiment_id": "v3_mlp_muon001_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T17:22:51.950412+00:00", "pid": 42980, "experiment_id": "v3_mlp_muon001_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.0354609929078, "accuracy": 88.89589905362776, "seconds": 371.6827195000078}
+{"utc": "2026-10-29T17:22:51.955474+00:00", "pid": 42980, "experiment_id": "v3_mlp_muon001_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T17:28:31.072292+00:00", "pid": 42980, "experiment_id": "v3_mlp_muon001_s0", "fold": 1, "status": "completed", "hard_accuracy": 75.88652482269504, "accuracy": 89.27444794952682, "seconds": 337.9172699999981}
+{"utc": "2026-10-29T17:28:31.075866+00:00", "pid": 42980, "experiment_id": "v3_mlp_muon001_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T17:34:41.652527+00:00", "pid": 42980, "experiment_id": "v3_mlp_muon001_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.85227272727273, "accuracy": 89.27444794952682, "seconds": 369.37692469999456}
+{"utc": "2026-10-29T17:34:41.710088+00:00", "pid": 42980, "experiment_id": "v3_mlp_muon001_s0", "status": "cv_completed", "accuracy": 89.14826498422713, "hard_accuracy": 75.59129612109746, "training_seconds": 1078.9769142000005}
+{"utc": "2026-10-29T17:34:54.102911+00:00", "pid": 30484, "experiment_id": "v3_mlp_muon002_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T17:38:58.900496+00:00", "pid": 30484, "experiment_id": "v3_mlp_muon002_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.31914893617021, "accuracy": 89.02208201892743, "seconds": 243.61582069999713}
+{"utc": "2026-10-29T17:38:58.904078+00:00", "pid": 30484, "experiment_id": "v3_mlp_muon002_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T17:43:32.038420+00:00", "pid": 30484, "experiment_id": "v3_mlp_muon002_s0", "fold": 1, "status": "completed", "hard_accuracy": 75.0354609929078, "accuracy": 88.89589905362776, "seconds": 271.9663780999981}
+{"utc": "2026-10-29T17:43:32.042502+00:00", "pid": 30484, "experiment_id": "v3_mlp_muon002_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T17:48:07.645994+00:00", "pid": 30484, "experiment_id": "v3_mlp_muon002_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.14204545454545, "accuracy": 88.95899053627761, "seconds": 274.3930774000037}
+{"utc": "2026-10-29T17:48:07.704419+00:00", "pid": 30484, "experiment_id": "v3_mlp_muon002_s0", "status": "cv_completed", "accuracy": 88.95899053627761, "hard_accuracy": 75.16556291390728, "training_seconds": 789.9752761999989}
+{"utc": "2026-10-29T17:51:27.304419+00:00", "pid": 32600, "experiment_id": "v3_tabm_k4_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T17:52:25.019759+00:00", "pid": 32600, "experiment_id": "v3_tabm_k4_s0", "fold": 0, "status": "completed", "hard_accuracy": 74.8936170212766, "accuracy": 88.83280757097792, "seconds": 54.05057540000416}
+{"utc": "2026-10-29T17:52:25.023210+00:00", "pid": 32600, "experiment_id": "v3_tabm_k4_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T17:53:20.279597+00:00", "pid": 32600, "experiment_id": "v3_tabm_k4_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.45390070921985, "accuracy": 89.52681388012618, "seconds": 51.630155800005014}
+{"utc": "2026-10-29T17:53:20.284177+00:00", "pid": 32600, "experiment_id": "v3_tabm_k4_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T17:54:15.250331+00:00", "pid": 32600, "experiment_id": "v3_tabm_k4_s0", "fold": 2, "status": "completed", "hard_accuracy": 76.5625, "accuracy": 89.58990536277602, "seconds": 51.31647050000902}
+{"utc": "2026-10-29T17:54:15.306291+00:00", "pid": 32600, "experiment_id": "v3_tabm_k4_s0", "status": "cv_completed", "accuracy": 89.31650893796004, "hard_accuracy": 75.96972563859981, "training_seconds": 156.9972017000182}
+{"utc": "2026-10-29T17:54:26.096055+00:00", "pid": 3668, "experiment_id": "v3_tabm_k4_drop03_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T17:55:30.939333+00:00", "pid": 3668, "experiment_id": "v3_tabm_k4_drop03_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.31914893617021, "accuracy": 89.02208201892743, "seconds": 61.19373390000692}
+{"utc": "2026-10-29T17:55:30.943410+00:00", "pid": 3668, "experiment_id": "v3_tabm_k4_drop03_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T17:56:39.952151+00:00", "pid": 3668, "experiment_id": "v3_tabm_k4_drop03_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.73758865248227, "accuracy": 89.65299684542587, "seconds": 65.30714209999132}
+{"utc": "2026-10-29T17:56:39.956278+00:00", "pid": 3668, "experiment_id": "v3_tabm_k4_drop03_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T17:57:42.134683+00:00", "pid": 3668, "experiment_id": "v3_tabm_k4_drop03_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.71022727272727, "accuracy": 89.21135646687696, "seconds": 58.45500579999498}
+{"utc": "2026-10-29T17:57:42.191845+00:00", "pid": 3668, "experiment_id": "v3_tabm_k4_drop03_s0", "status": "cv_completed", "accuracy": 89.29547844374342, "hard_accuracy": 75.92242194891202, "training_seconds": 184.95588179999322}
+{"utc": "2026-10-29T17:57:52.846218+00:00", "pid": 34108, "experiment_id": "v3_tabm_k8_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T17:59:41.658301+00:00", "pid": 34108, "experiment_id": "v3_tabm_k8_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.74468085106383, "accuracy": 89.21135646687696, "seconds": 103.7337542000023}
+{"utc": "2026-10-29T17:59:41.661378+00:00", "pid": 34108, "experiment_id": "v3_tabm_k8_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T18:01:28.931035+00:00", "pid": 34108, "experiment_id": "v3_tabm_k8_s0", "fold": 1, "status": "completed", "hard_accuracy": 77.02127659574468, "accuracy": 89.77917981072555, "seconds": 102.22131539999828}
+{"utc": "2026-10-29T18:01:28.934139+00:00", "pid": 34108, "experiment_id": "v3_tabm_k8_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T18:03:29.925222+00:00", "pid": 34108, "experiment_id": "v3_tabm_k8_s0", "fold": 2, "status": "completed", "hard_accuracy": 76.98863636363636, "accuracy": 89.77917981072555, "seconds": 115.9530203999966}
+{"utc": "2026-10-29T18:03:29.981585+00:00", "pid": 34108, "experiment_id": "v3_tabm_k8_s0", "status": "cv_completed", "accuracy": 89.58990536277602, "hard_accuracy": 76.58467360454115, "training_seconds": 321.9080899999972}
+{"utc": "2026-10-29T18:08:29.991762+00:00", "pid": 37176, "experiment_id": "v3_realmlp_standard_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T18:08:50.334957+00:00", "pid": 37176, "experiment_id": "v3_realmlp_standard_s0", "fold": 0, "status": "completed", "hard_accuracy": 74.18439716312056, "accuracy": 88.5173501577287, "seconds": 18.91103280000243}
+{"utc": "2026-10-29T18:08:50.339171+00:00", "pid": 37176, "experiment_id": "v3_realmlp_standard_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T18:09:07.335374+00:00", "pid": 37176, "experiment_id": "v3_realmlp_standard_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.87943262411348, "accuracy": 89.7160883280757, "seconds": 15.58569400000124}
+{"utc": "2026-10-29T18:09:07.338602+00:00", "pid": 37176, "experiment_id": "v3_realmlp_standard_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T18:09:24.456915+00:00", "pid": 37176, "experiment_id": "v3_realmlp_standard_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.56818181818183, "accuracy": 89.14826498422713, "seconds": 15.689379600000393}
+{"utc": "2026-10-29T18:09:24.516786+00:00", "pid": 37176, "experiment_id": "v3_realmlp_standard_s0", "status": "cv_completed", "accuracy": 89.12723449001052, "hard_accuracy": 75.54399243140965, "training_seconds": 50.186106400004064}
+{"utc": "2026-10-29T18:09:34.466719+00:00", "pid": 32408, "experiment_id": "v3_realmlp_robust_stats_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T18:09:54.553398+00:00", "pid": 32408, "experiment_id": "v3_realmlp_robust_stats_s0", "fold": 0, "status": "completed", "hard_accuracy": 74.46808510638297, "accuracy": 88.64353312302839, "seconds": 18.70096660000854}
+{"utc": "2026-10-29T18:09:54.556817+00:00", "pid": 32408, "experiment_id": "v3_realmlp_robust_stats_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T18:10:11.655297+00:00", "pid": 32408, "experiment_id": "v3_realmlp_robust_stats_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.73758865248227, "accuracy": 89.65299684542587, "seconds": 15.653221499997017}
+{"utc": "2026-10-29T18:10:11.659876+00:00", "pid": 32408, "experiment_id": "v3_realmlp_robust_stats_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T18:10:28.868048+00:00", "pid": 32408, "experiment_id": "v3_realmlp_robust_stats_s0", "fold": 2, "status": "completed", "hard_accuracy": 75.71022727272727, "accuracy": 89.21135646687696, "seconds": 15.765664200000174}
+{"utc": "2026-10-29T18:10:28.926933+00:00", "pid": 32408, "experiment_id": "v3_realmlp_robust_stats_s0", "status": "cv_completed", "accuracy": 89.16929547844374, "hard_accuracy": 75.63859981078525, "training_seconds": 50.11985230000573}
+{"utc": "2026-10-29T18:10:39.158403+00:00", "pid": 38624, "experiment_id": "v3_realmlp_robust_all_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-29T18:11:07.958389+00:00", "pid": 38624, "experiment_id": "v3_realmlp_robust_all_s0", "fold": 0, "status": "completed", "hard_accuracy": 75.46099290780141, "accuracy": 89.08517350157729, "seconds": 26.945414699999674}
+{"utc": "2026-10-29T18:11:07.961083+00:00", "pid": 38624, "experiment_id": "v3_realmlp_robust_all_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-29T18:11:33.360052+00:00", "pid": 38624, "experiment_id": "v3_realmlp_robust_all_s0", "fold": 1, "status": "completed", "hard_accuracy": 76.87943262411348, "accuracy": 89.7160883280757, "seconds": 23.543033399997512}
+{"utc": "2026-10-29T18:11:33.363328+00:00", "pid": 38624, "experiment_id": "v3_realmlp_robust_all_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-29T18:11:58.674503+00:00", "pid": 38624, "experiment_id": "v3_realmlp_robust_all_s0", "fold": 2, "status": "completed", "hard_accuracy": 76.2784090909091, "accuracy": 89.46372239747635, "seconds": 23.445089900007588}
+{"utc": "2026-10-29T18:11:58.726980+00:00", "pid": 38624, "experiment_id": "v3_realmlp_robust_all_s0", "status": "cv_completed", "accuracy": 89.42166140904311, "hard_accuracy": 76.20624408703878, "training_seconds": 73.93353800000477}
+{"utc": "2026-10-30T02:31:17.999088+00:00", "pid": 28068, "experiment_id": "v3_attention_adamw_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T02:32:27.727126+00:00", "pid": 28068, "experiment_id": "v3_attention_adamw_s0", "fold": 0, "status": "completed", "hard_accuracy": 80.1418439716312, "accuracy": 91.16719242902208, "seconds": 67.20562440001231}
+{"utc": "2026-10-30T02:32:27.737663+00:00", "pid": 28068, "experiment_id": "v3_attention_adamw_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T02:33:16.119843+00:00", "pid": 28068, "experiment_id": "v3_attention_adamw_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.72340425531915, "accuracy": 90.53627760252367, "seconds": 46.21032669999113}
+{"utc": "2026-10-30T02:33:16.134361+00:00", "pid": 28068, "experiment_id": "v3_attention_adamw_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T02:34:26.244550+00:00", "pid": 28068, "experiment_id": "v3_attention_adamw_s0", "fold": 2, "status": "completed", "hard_accuracy": 79.82954545454545, "accuracy": 91.0410094637224, "seconds": 68.23518409999087}
+{"utc": "2026-10-30T02:34:26.364668+00:00", "pid": 28068, "experiment_id": "v3_attention_adamw_s0", "status": "cv_completed", "accuracy": 90.91482649842271, "hard_accuracy": 79.56480605487228, "training_seconds": 181.65113519999431}
+{"utc": "2026-10-30T02:34:43.069711+00:00", "pid": 42776, "experiment_id": "v3_attention_ema_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T02:36:18.933687+00:00", "pid": 42776, "experiment_id": "v3_attention_ema_s0", "fold": 0, "status": "completed", "hard_accuracy": 81.13475177304964, "accuracy": 91.60883280757098, "seconds": 93.81149880000157}
+{"utc": "2026-10-30T02:36:18.942539+00:00", "pid": 42776, "experiment_id": "v3_attention_ema_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T02:37:47.550481+00:00", "pid": 42776, "experiment_id": "v3_attention_ema_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.72340425531915, "accuracy": 90.53627760252367, "seconds": 86.48281339999812}
+{"utc": "2026-10-30T02:37:47.560874+00:00", "pid": 42776, "experiment_id": "v3_attention_ema_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T02:39:15.322460+00:00", "pid": 42776, "experiment_id": "v3_attention_ema_s0", "fold": 2, "status": "completed", "hard_accuracy": 79.26136363636364, "accuracy": 90.78864353312302, "seconds": 85.95648660000006}
+{"utc": "2026-10-30T02:39:15.438154+00:00", "pid": 42776, "experiment_id": "v3_attention_ema_s0", "status": "cv_completed", "accuracy": 90.97791798107255, "hard_accuracy": 79.70671712393566, "training_seconds": 266.25079879999976}
+{"utc": "2026-10-30T02:39:31.174981+00:00", "pid": 44400, "experiment_id": "v3_attention_muon_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T02:52:43.241518+00:00", "pid": 44400, "experiment_id": "v3_attention_muon_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.43262411347519, "accuracy": 90.85173501577287, "seconds": 790.0727539999934}
+{"utc": "2026-10-30T02:52:43.248984+00:00", "pid": 44400, "experiment_id": "v3_attention_muon_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:05:44.033486+00:00", "pid": 44400, "experiment_id": "v3_attention_muon_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.43971631205675, "accuracy": 90.41009463722396, "seconds": 778.9603872000007}
+{"utc": "2026-10-30T03:05:44.047233+00:00", "pid": 44400, "experiment_id": "v3_attention_muon_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:09:32.314639+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "fold": 0, "status": "running", "seed": 3036900957}
+{"utc": "2026-10-30T03:10:14.233351+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "fold": 0, "status": "completed", "hard_accuracy": 79.57446808510639, "accuracy": 90.91482649842271, "seconds": 40.418447100004414}
+{"utc": "2026-10-30T03:10:14.240626+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "fold": 1, "status": "running", "seed": 3036900958}
+{"utc": "2026-10-30T03:10:49.592699+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "fold": 1, "status": "completed", "hard_accuracy": 78.29787234042553, "accuracy": 90.34700315457414, "seconds": 34.09647920000134}
+{"utc": "2026-10-30T03:10:49.601259+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "fold": 2, "status": "running", "seed": 3036900959}
+{"utc": "2026-10-30T03:11:27.493847+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "fold": 2, "status": "completed", "hard_accuracy": 79.11931818181817, "accuracy": 90.7255520504732, "seconds": 36.566608100009034}
+{"utc": "2026-10-30T03:11:27.641606+00:00", "pid": 27052, "experiment_id": "v3_attention_small_s0", "status": "cv_completed", "accuracy": 90.66246056782335, "hard_accuracy": 78.99716177861873, "training_seconds": 111.08153440001479}
+{"utc": "2026-10-30T03:13:24.641744+00:00", "pid": 27824, "experiment_id": "v3_attention_muon_s0", "fold": 2, "status": "running", "seed": 3036900959}

@@ -238,6 +238,8 @@ def evaluate_registered_fusion(path, records, hard, output):
         raise ValueError('Previously documented reciprocal/oracle gate is not satisfied')
     # Write the verified gate before forming any equal-probability mixture.
     write_new(output / 'fusion-gate.json', {'gate': gate, 'registration_sha256': digest(path)})
+    with (output / 'fusion-registration.json').open('xb') as stream:
+        stream.write(Path(path).read_bytes())
     probabilities = [member_probabilities(member['raw_scores'], member['groups'], member['config']['decoder']) for member in members]
     probability = np.mean(probabilities, axis=0)
     groups, labels, fold = (members[0][name] for name in ('groups', 'labels', 'fold'))
@@ -254,9 +256,12 @@ def evaluate_registered_fusion(path, records, hard, output):
         children = [audit(ROOT / next(row for row in member['summary']['folds'] if row['fold'] == number)['checkpoint']) for member in members]
         assets.append({'fold': number, 'member_uncompressed_bytes': [row['uncompressed_bytes'] for row in children],
                        'total_member_uncompressed_bytes': sum(row['uncompressed_bytes'] for row in children)})
-    np.savez(output / 'fusion-oof.npz', probabilities=probability, choices=choices, correct=correct, fold=fold)
+    np.savez(output / 'fusion-oof.npz', probabilities=probability, choices=choices, correct=correct,
+             fold=fold, groups=groups, labels=labels)
     return {'status': 'complete', 'methods': keys, 'weights': registration['weights'], 'gate': gate,
             'metrics': measure(correct, labels, groups, fold), 'assets_per_fold': assets,
+            'oof_sha256': digest(output / 'fusion-oof.npz'),
+            'registration_file': 'fusion-registration.json', 'registration_sha256': digest(path),
             'note': 'Only the separately registered mixture; no pair/weight sweep. Wrapper bytes still count at final deployment. OOF selection optimism remains.'}
 
 

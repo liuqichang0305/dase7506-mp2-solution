@@ -1,0 +1,19 @@
+✔ real native AES-GCM/RSA-OAEP encrypt/decrypt and exact public binding (702.1887ms)
+✔ all native arguments and output identities pass through; RSA input is opaque (1.3219ms)
+✔ wrong public plaintext is rejected before native encryption and cannot finish (1.3799ms)
+✔ ArrayBuffer view offset is respected for plaintext and IV (0.7078ms)
+✔ changed ciphertext, IV or wrapped output is rejected (0.9707ms)
+✔ missing RSA wrapping and extra AES/RSA calls are rejected (1.0433ms)
+✔ RSA before AES and unexpected encryption algorithms fail closed (0.4991ms)
+✔ noncanonical base64, extra fields, wrong key ID and missing source hash rejected (1.0924ms)
+✔ native encryption errors are preserved and make observation unusable (0.6377ms)
+✔ finished observation cannot encrypt again or generate a second binding (0.7759ms)
+✔ temporary global override restores original descriptor after exception (0.6335ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 722.512

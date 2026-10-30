@@ -1,0 +1,9 @@
+{
+  "method": "PUT",
+  "path": "/repos/liuqichang0305/dase7506-mp2-solution/pulls/2/merge",
+  "data": {
+    "sha": "cb27a2c2ebce501c7266ea894a2187fa128d0102",
+    "merge_method": "merge",
+    "commit_title": "Merge reviewed V2 performance research and preserved validation freeze"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "returncode": 1,
+  "seconds": 7.579188999996404,
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_confirm_validation_v3.py",
+    "-v"
+  ],
+  "source_sha256_before": "6e14e18f1f2ac5c67249fe1bd63118f572a6af780290d4a8d3f0cab76d01c802",
+  "source_sha256_after": "6e14e18f1f2ac5c67249fe1bd63118f572a6af780290d4a8d3f0cab76d01c802",
+  "scope": "Only start/end UTC observation fields added to previously reviewed process helper; no official validation/test; monotonic deadline and eligibility unchanged"
+}
