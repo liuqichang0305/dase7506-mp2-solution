@@ -1,0 +1,30 @@
+{
+  "delivered_at_utc": "2026-10-29T16:12:23.129601+00:00",
+  "pr_url": "https://github.com/liuqichang0305/dase7506-mp2-solution/pull/2",
+  "pr_number": 2,
+  "pr_state": "open",
+  "draft": false,
+  "pr_head_at_creation": "9907876301dc7b730c448c78c785352dc9c332a4",
+  "source_commit": "36f9617175321a2861e78bb2f4ffcde643c4fc03",
+  "report": "reports/research_v2/report_v2.pdf",
+  "report_pages": 8,
+  "report_sha256": "7b61985f935d81af85674b1ba5efce0078a3774f2dd30a3898b8f733fbd8252b",
+  "selected_checkpoint": "artifacts/research_v2/final_deepsets",
+  "validation": {
+    "correct": 740,
+    "n": 798,
+    "accuracy": 92.73182957393483,
+    "hard_correct": 297,
+    "hard_n": 355,
+    "hard_accuracy": 83.66197183098592,
+    "single_positive_correct": 68,
+    "single_positive_n": 117,
+    "single_positive_accuracy": 58.119658119658126
+  },
+  "fresh_reproduction": "passed; all 798 selections identical; no retraining",
+  "research_complete": true,
+  "new_test_evaluated": false,
+  "course_score_updated": false,
+  "peer_review_released": false,
+  "remaining": "New formal reevaluation/score update requires explicit applicable course process; peer review waits for instructor release"
+}

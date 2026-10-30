@@ -1,0 +1,16 @@
+{
+  "experiment_id": "linear_group_hard",
+  "family": "linear",
+  "objective": "group",
+  "reduction": "hard",
+  "l2": 0.1,
+  "seed": 3036900957,
+  "decoder": {
+    "mode": "group_lse",
+    "alpha": 0,
+    "tau": 1,
+    "mask": true
+  },
+  "alpha": 0,
+  "scale_regularization": true
+}

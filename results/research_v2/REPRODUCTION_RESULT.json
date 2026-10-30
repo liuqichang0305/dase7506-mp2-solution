@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "completed_at_utc": "2026-10-29T11:34:23.681798+00:00",
+  "source": "Fresh public GitHub clone, exact frozen commit; independently downloaded official validation only",
+  "source_commit": "36f9617175321a2861e78bb2f4ffcde643c4fc03",
+  "source_and_asset_hashes_verified": 20,
+  "all_predictions_identical": true,
+  "matching_choices": 798,
+  "correct": 740,
+  "n": 798,
+  "prediction_plus_scoring_seconds": 0.7323424999995041,
+  "packages": [
+    "numpy==2.5.3"
+  ],
+  "numpy_only": true,
+  "checkpoint_retrained": false,
+  "no_train_or_test_data_present": true,
+  "isolated_inference_passed": true,
+  "threadpool_introspection": "Not installed in NumPy-only environment; all thread environment settings are1. Original environment actual pool count1.",
+  "evidence": "results/research_v2/clean-reproduction",
+  "new_test_evaluated": false
+}

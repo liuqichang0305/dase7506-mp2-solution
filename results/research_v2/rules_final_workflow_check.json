@@ -1,0 +1,42 @@
+{
+  "checked_at_utc": "2026-10-29 16:08:19 UTC",
+  "initial_website_commit": "692eb414d868720f68b54843c50f0b889541c5b0",
+  "current_website_commit": "63ee1cb984b9d3229196a14fc0d2312ba7704dd6",
+  "workflow_files": [
+    {
+      "path": "courses/dase7506/mp2/index.html",
+      "old_blob_sha": "d08606fef97c6ad27f16437811fd689c8dee86c3",
+      "current_blob_sha": "d08606fef97c6ad27f16437811fd689c8dee86c3",
+      "unchanged": true
+    },
+    {
+      "path": "courses/dase7506/projects.mjs",
+      "old_blob_sha": "bc0ea31136171598c902c7ad30c84636b162ead2",
+      "current_blob_sha": "bc0ea31136171598c902c7ad30c84636b162ead2",
+      "unchanged": true
+    },
+    {
+      "path": "courses/dase7506/mp2.mjs",
+      "old_blob_sha": "681238abc53d023e1ac049a9ea086c7d12aee478",
+      "current_blob_sha": "681238abc53d023e1ac049a9ea086c7d12aee478",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/dase7506/README.md",
+      "old_blob_sha": "1093195b296f56ed8771b93494556b831a96620b",
+      "current_blob_sha": "1093195b296f56ed8771b93494556b831a96620b",
+      "unchanged": true
+    },
+    {
+      "path": "courses/dase7506/data/publication.json",
+      "old_blob_sha": "26bb40ff785d455a9ed6282348f5ddd5ba5fc1c5",
+      "current_blob_sha": "26bb40ff785d455a9ed6282348f5ddd5ba5fc1c5",
+      "unchanged": true,
+      "publication_projects": [
+        "mp1"
+      ]
+    }
+  ],
+  "conclusion": "Website HEAD changed with a leaderboard snapshot; all five checked submission/workflow/publication files are byte-identical. No new applicable formal-test process or MP2 peer-review release identified.",
+  "leaderboard_used_for_research": false
+}

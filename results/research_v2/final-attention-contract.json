@@ -1,0 +1,48 @@
+{
+  "isolation": "Copied v2 method/package/parser/assets and input arrays only; no official data/references. Python audit hook rejects external reads, writes, network and subprocesses.",
+  "checks": {
+    "python_int_length_range": true,
+    "arbitrary_n_batch_independence": true,
+    "id_independence": true,
+    "question_order": true,
+    "determinism": true,
+    "confidence_actual_chosen_group": true,
+    "parseability_mask_and_all_none_fallback": true,
+    "reject_nonfinite": true,
+    "reject_wrong_shape": true,
+    "missing_bundle_rejected": true,
+    "offline_no_references_or_forbidden_access": true,
+    "numpy_only_no_torch_import": true
+  },
+  "candidate_permutation": {
+    "score_equivariance": true,
+    "mapped_choice_mismatches": 2,
+    "decision_tie_rows": 4,
+    "all_mismatches_tie_explained": true,
+    "note": "Ties are checked using the actual group decoder and within-group maximum; fixed positional all-None fallback is explicitly exempt from content equivariance.",
+    "rtol": 2e-05,
+    "atol": 2e-06
+  },
+  "n": 798,
+  "all_unparseable_rows": [],
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+      "version": "0.3.34.106.0",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ],
+  "configured_pool_threads_total": 1,
+  "status": "passed",
+  "input_source": "validation",
+  "reference_files_read": false,
+  "checkpoint": "artifacts\\research_v2\\final_attention",
+  "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+  "method_sha256": "ef495ae4a06ada90aa26302d9c6c5d614ab0bda8aa33bda14e656e7808b549f9",
+  "command": "\"C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe\" code\\tools\\check_contract_v2.py --checkpoint artifacts\\research_v2\\final_attention --input-source validation --output results\\research_v2\\final-attention-contract.json"
+}

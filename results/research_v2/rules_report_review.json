@@ -1,0 +1,23 @@
+{
+  "checked_at_utc": "2026-10-29T16:06:59.139658+00:00",
+  "reviewer": "Independent AI audit agent",
+  "status": "passed",
+  "report": "reports/research_v2/report_v2.pdf",
+  "sha256": "7b61985f935d81af85674b1ba5efce0078a3774f2dd30a3898b8f733fbd8252b",
+  "pages": 8,
+  "within_ten_page_limit": true,
+  "source_artifact_hashes_verified": 29,
+  "visual_pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "visual_findings": "All eight rendered pages inspected: no clipped text, overlap, broken tables, missing glyphs, or illegible chart/footers observed.",
+  "numeric_findings": "Full/hard/single-positive validation counts, paired intervals, seed stability, decoder controls, rejected mixture, resource costs and fresh reproduction agree with preserved logs. Known-v1-test exposure and no new test/rank claims are explicit.",
+  "reference_machine_certified": false
+}

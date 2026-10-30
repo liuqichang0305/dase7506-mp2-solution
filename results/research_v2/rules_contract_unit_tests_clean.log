@@ -1,0 +1,9 @@
+test_all_none_has_documented_positional_exception (test_contract_v2.GroupDecisionAuditTests.test_all_none_has_documented_positional_exception) ... ok
+test_group_and_within_group_ties (test_contract_v2.GroupDecisionAuditTests.test_group_and_within_group_ties) ... ok
+test_group_winner_can_differ_from_raw_maximum (test_contract_v2.GroupDecisionAuditTests.test_group_winner_can_differ_from_raw_maximum) ... ok
+test_invalid_high_score_does_not_create_tie (test_contract_v2.GroupDecisionAuditTests.test_invalid_high_score_does_not_create_tie) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.009s
+
+OK

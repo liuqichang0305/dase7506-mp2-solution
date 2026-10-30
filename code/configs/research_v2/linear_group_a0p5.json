@@ -1,0 +1,15 @@
+{
+  "experiment_id": "linear_group_a0p5",
+  "family": "linear",
+  "objective": "group",
+  "reduction": "full",
+  "l2": 0.1,
+  "seed": 3036900957,
+  "decoder": {
+    "mode": "group_lse",
+    "alpha": 0.5,
+    "tau": 1,
+    "mask": true
+  },
+  "alpha": 0.5
+}

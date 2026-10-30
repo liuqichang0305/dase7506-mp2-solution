@@ -1,0 +1,21 @@
+{
+  "architecture": {
+    "blocks": 1,
+    "context": true,
+    "dropout": 0.3,
+    "expansion": 2,
+    "family": "deepsets",
+    "heads": 4,
+    "hidden": 64,
+    "layer_norm_eps": 1e-05,
+    "width": 128
+  },
+  "decoder": {
+    "alpha": 0,
+    "mask": true,
+    "mode": "group_lse",
+    "tau": 1
+  },
+  "features": "relation",
+  "schema": "mp2-research-v2"
+}

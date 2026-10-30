@@ -1,0 +1,13 @@
+test_extreme_scores_and_input_guards (test_selection_v2.SelectionV2Tests.test_extreme_scores_and_input_guards) ... ok
+test_group_max_equivalence_including_ties (test_selection_v2.SelectionV2Tests.test_group_max_equivalence_including_ties) ... ok
+test_lse_formula_and_normalization (test_selection_v2.SelectionV2Tests.test_lse_formula_and_normalization) ... ok
+test_numpy_gradient_finite_differences_and_normalization (test_selection_v2.SelectionV2Tests.test_numpy_gradient_finite_differences_and_normalization) ... ok
+test_official_parser_equivalence_and_none (test_selection_v2.SelectionV2Tests.test_official_parser_equivalence_and_none) ... ok
+test_one_to_four_positives_and_objective_equivalence (test_selection_v2.SelectionV2Tests.test_one_to_four_positives_and_objective_equivalence) ... ok
+test_permutation_question_order_ids_and_n (test_selection_v2.SelectionV2Tests.test_permutation_question_order_ids_and_n) ... ok
+test_torch_loss_and_autograd_match_independent_numpy (test_selection_v2.SelectionV2Tests.test_torch_loss_and_autograd_match_independent_numpy) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.155s
+
+OK

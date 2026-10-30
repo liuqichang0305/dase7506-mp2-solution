@@ -1,0 +1,49 @@
+{
+  "full_experiment": "linear_group_a0",
+  "hard_experiment": "linear_group_hard",
+  "max_abs_score_difference": 0.001832212555227919,
+  "mean_abs_score_difference": 0.00017244521752460572,
+  "different_selected_indices": 2,
+  "different_selected_answer_groups": 0,
+  "different_correctness_events": 0,
+  "n": 4755,
+  "folds": [
+    {
+      "fold": 0,
+      "full_effective_l2": 0.1,
+      "hard_fraction": 0.4444794952681388,
+      "expected_hard_effective_l2": 0.22498225691980128,
+      "actual_hard_effective_l2": 0.22498225691980128,
+      "regularization_scale_matches": true,
+      "max_abs_score_difference": 0.001832212555227919,
+      "different_selected_indices": 1,
+      "different_selected_answer_groups": 0,
+      "different_correctness_events": 0
+    },
+    {
+      "fold": 1,
+      "full_effective_l2": 0.1,
+      "hard_fraction": 0.4444794952681388,
+      "expected_hard_effective_l2": 0.22498225691980128,
+      "actual_hard_effective_l2": 0.22498225691980128,
+      "regularization_scale_matches": true,
+      "max_abs_score_difference": 0.0004912483151433555,
+      "different_selected_indices": 0,
+      "different_selected_answer_groups": 0,
+      "different_correctness_events": 0
+    },
+    {
+      "fold": 2,
+      "full_effective_l2": 0.1,
+      "hard_fraction": 0.444794952681388,
+      "expected_hard_effective_l2": 0.224822695035461,
+      "actual_hard_effective_l2": 0.224822695035461,
+      "regularization_scale_matches": true,
+      "max_abs_score_difference": 0.000700548429223069,
+      "different_selected_indices": 1,
+      "different_selected_answer_groups": 0,
+      "different_correctness_events": 0
+    }
+  ],
+  "interpretation": "If L_hard=L_full/hard_fraction and L2 is scaled identically, exact optima coincide; finite optimizer tolerances can leave small numeric score differences."
+}

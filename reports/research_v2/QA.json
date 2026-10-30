@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-29T16:08:06.773286+00:00",
+  "pdf": "reports/research_v2/report_v2.pdf",
+  "pdf_sha256": "7b61985f935d81af85674b1ba5efce0078a3774f2dd30a3898b8f733fbd8252b",
+  "pages": 8,
+  "page_limit": 10,
+  "render_command": "pdftoppm -r 110 -png reports/research_v2/report_v2.pdf reports/research_v2/rendered/page",
+  "rendered_page_sha256": {
+    "rendered/page-1.png": "eac518a044b52b5278273590e3f2db673526e9c7bd3fc01ce140d28b18ae7e92",
+    "rendered/page-2.png": "cdf12a94f11b479e731b42a41bd4bf58dbcd2761e618936a12d396c4e65ca1c8",
+    "rendered/page-3.png": "3502b10daa8a3efab869261dbc9018b2875ab4c018ee4a6ac4af65a747297869",
+    "rendered/page-4.png": "2b506fb11221d38e3f993c1956f4b7b026d918cd7b76f764bfe09f381ccb327f",
+    "rendered/page-5.png": "bc0195366d121107ad6355035b1048af10ab17f1c59b4944d8774ed7a4eb2837",
+    "rendered/page-6.png": "77f5f51b11862ab827d17f178809776c70e4deefe66a32a55aba9679e5041e62",
+    "rendered/page-7.png": "2d534cd1a7a0f19764830e7d4cab041d274f9774f70b983e4d8a41c0f716c7e0",
+    "rendered/page-8.png": "decce85ca76a5d7e7e70992c44bcef790c63795d2de80c37961c21ac4ab40752"
+  },
+  "visual_inspection": {
+    "reviewer": "Codex agent /root/v2_models",
+    "all_eight_pages_visually_inspected": true,
+    "clipping": false,
+    "overlap": false,
+    "missing_glyphs": false,
+    "header_footer_page_numbering": "consistent",
+    "tables": "legible and within margins",
+    "plot": "axes, legend and data visible"
+  },
+  "content_checks": [
+    "Validation counts and paired intervals read from actual saved summary",
+    "No new test score or rank claimed",
+    "Original test aggregate knowledge disclosed",
+    "OOF/validation family ranking distinction and single-positive tradeoff retained",
+    "Pooling, objective, mixture and timing negative results retained",
+    "Fresh public clone, NumPy-only environment,740/798,798 identical choices,20 matching hashes and no retraining documented"
+  ],
+  "scope": "Report QA only. No model, checkpoint, experiment or frozen asset changes."
+}

@@ -1,0 +1,3262 @@
+{
+  "created_at_utc": "2026-10-29T08:44:48.069287+00:00",
+  "split": "train OOF only",
+  "rows": [
+    {
+      "row_id": "linear_original",
+      "experiment_id": "linear_original",
+      "variant": "registered",
+      "family": "linear",
+      "seed": 3036900957,
+      "decoder": {
+        "mode": "candidate_max",
+        "alpha": 0,
+        "tau": 1,
+        "mask": false
+      },
+      "status": "complete",
+      "metrics": {
+        "overall": {
+          "correct": 4213,
+          "n": 4755,
+          "pooled_accuracy": 88.60147213459516,
+          "fold_mean": 88.60147213459516,
+          "fold_sd": 0.323760343182778,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 1403,
+              "n": 1585,
+              "accuracy": 88.5173501577287
+            },
+            {
+              "fold": 1,
+              "correct": 1400,
+              "n": 1585,
+              "accuracy": 88.32807570977917
+            },
+            {
+              "fold": 2,
+              "correct": 1410,
+              "n": 1585,
+              "accuracy": 88.95899053627761
+            }
+          ]
+        },
+        "hard": {
+          "correct": 1576,
+          "n": 2114,
+          "pooled_accuracy": 74.55061494796594,
+          "fold_mean": 74.55096174511068,
+          "fold_sd": 0.650560136034229,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 524,
+              "n": 705,
+              "accuracy": 74.32624113475177
+            },
+            {
+              "fold": 1,
+              "correct": 522,
+              "n": 705,
+              "accuracy": 74.04255319148936
+            },
+            {
+              "fold": 2,
+              "correct": 530,
+              "n": 704,
+              "accuracy": 75.2840909090909
+            }
+          ]
+        },
+        "single_positive": {
+          "correct": 350,
+          "n": 711,
+          "pooled_accuracy": 49.226441631504926,
+          "fold_mean": 49.22644163150492,
+          "fold_sd": 2.4360770851882965,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 120,
+              "n": 237,
+              "accuracy": 50.63291139240506
+            },
+            {
+              "fold": 1,
+              "correct": 110,
+              "n": 237,
+              "accuracy": 46.41350210970464
+            },
+            {
+              "fold": 2,
+              "correct": 120,
+              "n": 237,
+              "accuracy": 50.63291139240506
+            }
+          ]
+        }
+      },
+      "reliability": {
+        "n": 4755,
+        "brier": 0.06708944984854794,
+        "ece_10_equal_width": 0.007189438799453135,
+        "bins": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "n": 8,
+            "mean_confidence": 0.0,
+            "accuracy_fraction": 0.0
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "n": 9,
+            "mean_confidence": 0.2928906504868137,
+            "accuracy_fraction": 0.3333333333333333
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "n": 106,
+            "mean_confidence": 0.3601928972874494,
+            "accuracy_fraction": 0.37735849056603776
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "n": 160,
+            "mean_confidence": 0.4527374513067331,
+            "accuracy_fraction": 0.3875
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "n": 201,
+            "mean_confidence": 0.5508882117198204,
+            "accuracy_fraction": 0.5522388059701493
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "n": 273,
+            "mean_confidence": 0.6519278957694248,
+            "accuracy_fraction": 0.652014652014652
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "n": 284,
+            "mean_confidence": 0.7506026182857887,
+            "accuracy_fraction": 0.6901408450704225
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "n": 380,
+            "mean_confidence": 0.8541552994399096,
+            "accuracy_fraction": 0.85
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "n": 3334,
+            "mean_confidence": 0.9905575707767188,
+            "accuracy_fraction": 0.9898020395920816
+          }
+        ],
+        "confidence_event": "Actual selected numeric answer group is correct; not maximum candidate softmax.",
+        "calibration": "Uncalibrated group probability; OOF descriptive diagnostic only."
+      },
+      "parameters_per_fold": [
+        2065,
+        2065,
+        2065
+      ],
+      "numeric_asset_bytes_per_fold": [
+        49544,
+        49544,
+        49544
+      ],
+      "audited_uncompressed_bytes_per_fold": [
+        50917,
+        50917,
+        50917
+      ],
+      "audited_uncompressed_mib_max": 0.04855823516845703,
+      "training_seconds": 11.718261099998927,
+      "cost_note": "Actual three outer fits plus inner stopping fits when present.",
+      "validation": "按协议未评估（此工具只读取 train OOF）",
+      "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "oof_sha256": "fc4d464d9103b437980eb645261e3e25a774376abb9ad3bea7f4125749d010f8"
+    },
+    {
+      "row_id": "linear_original::mask_max",
+      "experiment_id": "linear_original",
+      "variant": "mask_max",
+      "family": "linear",
+      "seed": 3036900957,
+      "decoder": {
+        "mode": "candidate_max",
+        "mask": true
+      },
+      "status": "complete",
+      "metrics": {
+        "overall": {
+          "correct": 4219,
+          "n": 4755,
+          "pooled_accuracy": 88.72765509989485,
+          "fold_mean": 88.72765509989485,
+          "fold_sd": 0.3696823518663904,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 1404,
+              "n": 1585,
+              "accuracy": 88.58044164037855
+            },
+            {
+              "fold": 1,
+              "correct": 1402,
+              "n": 1585,
+              "accuracy": 88.45425867507886
+            },
+            {
+              "fold": 2,
+              "correct": 1413,
+              "n": 1585,
+              "accuracy": 89.14826498422713
+            }
+          ]
+        },
+        "hard": {
+          "correct": 1578,
+          "n": 2114,
+          "pooled_accuracy": 74.64522232734153,
+          "fold_mean": 74.64565871480765,
+          "fold_sd": 0.811422435900347,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 524,
+              "n": 705,
+              "accuracy": 74.32624113475177
+            },
+            {
+              "fold": 1,
+              "correct": 522,
+              "n": 705,
+              "accuracy": 74.04255319148936
+            },
+            {
+              "fold": 2,
+              "correct": 532,
+              "n": 704,
+              "accuracy": 75.56818181818183
+            }
+          ]
+        },
+        "single_positive": {
+          "correct": 354,
+          "n": 711,
+          "pooled_accuracy": 49.789029535864984,
+          "fold_mean": 49.78902953586498,
+          "fold_sd": 2.1924693766694645,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 121,
+              "n": 237,
+              "accuracy": 51.0548523206751
+            },
+            {
+              "fold": 1,
+              "correct": 112,
+              "n": 237,
+              "accuracy": 47.257383966244724
+            },
+            {
+              "fold": 2,
+              "correct": 121,
+              "n": 237,
+              "accuracy": 51.0548523206751
+            }
+          ]
+        }
+      },
+      "reliability": {
+        "n": 4755,
+        "brier": 0.0672278615906173,
+        "ece_10_equal_width": 0.007257718439376707,
+        "bins": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "n": 9,
+            "mean_confidence": 0.2928906504868137,
+            "accuracy_fraction": 0.3333333333333333
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "n": 106,
+            "mean_confidence": 0.3601928972874494,
+            "accuracy_fraction": 0.37735849056603776
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "n": 160,
+            "mean_confidence": 0.4527374513067331,
+            "accuracy_fraction": 0.3875
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "n": 202,
+            "mean_confidence": 0.5506410654967482,
+            "accuracy_fraction": 0.5495049504950495
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "n": 274,
+            "mean_confidence": 0.6518111781519852,
+            "accuracy_fraction": 0.6496350364963503
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "n": 284,
+            "mean_confidence": 0.7506026182857887,
+            "accuracy_fraction": 0.6901408450704225
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "n": 381,
+            "mean_confidence": 0.8541926082911642,
+            "accuracy_fraction": 0.8503937007874016
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "n": 3339,
+            "mean_confidence": 0.9905494568855722,
+            "accuracy_fraction": 0.9898173105720276
+          }
+        ],
+        "confidence_event": "Actual selected numeric answer group is correct; not maximum candidate softmax.",
+        "calibration": "Uncalibrated group probability; OOF descriptive diagnostic only."
+      },
+      "parameters_per_fold": [
+        2065,
+        2065,
+        2065
+      ],
+      "numeric_asset_bytes_per_fold": [
+        49544,
+        49544,
+        49544
+      ],
+      "audited_uncompressed_bytes_per_fold": [
+        50917,
+        50917,
+        50917
+      ],
+      "audited_uncompressed_mib_max": 0.04855823516845703,
+      "training_seconds": 11.718261099998927,
+      "cost_note": "Reuses the same fitted OOF models; no additional training.",
+      "validation": "按协议未评估（此工具只读取 train OOF）",
+      "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "oof_sha256": "fc4d464d9103b437980eb645261e3e25a774376abb9ad3bea7f4125749d010f8"
+    },
+    {
+      "row_id": "linear_original::group_max",
+      "experiment_id": "linear_original",
+      "variant": "group_max",
+      "family": "linear",
+      "seed": 3036900957,
+      "decoder": {
+        "mode": "group_max",
+        "mask": true
+      },
+      "status": "complete",
+      "metrics": {
+        "overall": {
+          "correct": 4219,
+          "n": 4755,
+          "pooled_accuracy": 88.72765509989485,
+          "fold_mean": 88.72765509989485,
+          "fold_sd": 0.3696823518663904,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 1404,
+              "n": 1585,
+              "accuracy": 88.58044164037855
+            },
+            {
+              "fold": 1,
+              "correct": 1402,
+              "n": 1585,
+              "accuracy": 88.45425867507886
+            },
+            {
+              "fold": 2,
+              "correct": 1413,
+              "n": 1585,
+              "accuracy": 89.14826498422713
+            }
+          ]
+        },
+        "hard": {
+          "correct": 1578,
+          "n": 2114,
+          "pooled_accuracy": 74.64522232734153,
+          "fold_mean": 74.64565871480765,
+          "fold_sd": 0.811422435900347,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 524,
+              "n": 705,
+              "accuracy": 74.32624113475177
+            },
+            {
+              "fold": 1,
+              "correct": 522,
+              "n": 705,
+              "accuracy": 74.04255319148936
+            },
+            {
+              "fold": 2,
+              "correct": 532,
+              "n": 704,
+              "accuracy": 75.56818181818183
+            }
+          ]
+        },
+        "single_positive": {
+          "correct": 354,
+          "n": 711,
+          "pooled_accuracy": 49.789029535864984,
+          "fold_mean": 49.78902953586498,
+          "fold_sd": 2.1924693766694645,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 121,
+              "n": 237,
+              "accuracy": 51.0548523206751
+            },
+            {
+              "fold": 1,
+              "correct": 112,
+              "n": 237,
+              "accuracy": 47.257383966244724
+            },
+            {
+              "fold": 2,
+              "correct": 121,
+              "n": 237,
+              "accuracy": 51.0548523206751
+            }
+          ]
+        }
+      },
+      "reliability": {
+        "n": 4755,
+        "brier": 0.0672278615906173,
+        "ece_10_equal_width": 0.007257718439376707,
+        "bins": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "n": 9,
+            "mean_confidence": 0.2928906504868137,
+            "accuracy_fraction": 0.3333333333333333
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "n": 106,
+            "mean_confidence": 0.3601928972874494,
+            "accuracy_fraction": 0.37735849056603776
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "n": 160,
+            "mean_confidence": 0.4527374513067331,
+            "accuracy_fraction": 0.3875
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "n": 202,
+            "mean_confidence": 0.5506410654967482,
+            "accuracy_fraction": 0.5495049504950495
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "n": 274,
+            "mean_confidence": 0.6518111781519852,
+            "accuracy_fraction": 0.6496350364963503
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "n": 284,
+            "mean_confidence": 0.7506026182857887,
+            "accuracy_fraction": 0.6901408450704225
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "n": 381,
+            "mean_confidence": 0.8541926082911642,
+            "accuracy_fraction": 0.8503937007874016
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "n": 3339,
+            "mean_confidence": 0.9905494568855722,
+            "accuracy_fraction": 0.9898173105720276
+          }
+        ],
+        "confidence_event": "Actual selected numeric answer group is correct; not maximum candidate softmax.",
+        "calibration": "Uncalibrated group probability; OOF descriptive diagnostic only."
+      },
+      "parameters_per_fold": [
+        2065,
+        2065,
+        2065
+      ],
+      "numeric_asset_bytes_per_fold": [
+        49544,
+        49544,
+        49544
+      ],
+      "audited_uncompressed_bytes_per_fold": [
+        50917,
+        50917,
+        50917
+      ],
+      "audited_uncompressed_mib_max": 0.04855823516845703,
+      "training_seconds": 11.718261099998927,
+      "cost_note": "Reuses the same fitted OOF models; no additional training.",
+      "validation": "按协议未评估（此工具只读取 train OOF）",
+      "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "oof_sha256": "fc4d464d9103b437980eb645261e3e25a774376abb9ad3bea7f4125749d010f8"
+    },
+    {
+      "row_id": "linear_original::group_lse_a0",
+      "experiment_id": "linear_original",
+      "variant": "group_lse_a0",
+      "family": "linear",
+      "seed": 3036900957,
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0.0,
+        "tau": 1.0,
+        "mask": true
+      },
+      "status": "complete",
+      "metrics": {
+        "overall": {
+          "correct": 4245,
+          "n": 4755,
+          "pooled_accuracy": 89.27444794952682,
+          "fold_mean": 89.2744479495268,
+          "fold_sd": 0.16692437293782666,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 1412,
+              "n": 1585,
+              "accuracy": 89.08517350157729
+            },
+            {
+              "fold": 1,
+              "correct": 1417,
+              "n": 1585,
+              "accuracy": 89.4006309148265
+            },
+            {
+              "fold": 2,
+              "correct": 1416,
+              "n": 1585,
+              "accuracy": 89.33753943217665
+            }
+          ]
+        },
+        "hard": {
+          "correct": 1604,
+          "n": 2114,
+          "pooled_accuracy": 75.87511825922422,
+          "fold_mean": 75.87517461852569,
+          "fold_sd": 0.36931638645779113,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 532,
+              "n": 705,
+              "accuracy": 75.46099290780141
+            },
+            {
+              "fold": 1,
+              "correct": 537,
+              "n": 705,
+              "accuracy": 76.17021276595744
+            },
+            {
+              "fold": 2,
+              "correct": 535,
+              "n": 704,
+              "accuracy": 75.99431818181817
+            }
+          ]
+        },
+        "single_positive": {
+          "correct": 305,
+          "n": 711,
+          "pooled_accuracy": 42.897327707454295,
+          "fold_mean": 42.89732770745429,
+          "fold_sd": 2.399257680623345,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 108,
+              "n": 237,
+              "accuracy": 45.56962025316456
+            },
+            {
+              "fold": 1,
+              "correct": 97,
+              "n": 237,
+              "accuracy": 40.92827004219409
+            },
+            {
+              "fold": 2,
+              "correct": 100,
+              "n": 237,
+              "accuracy": 42.19409282700422
+            }
+          ]
+        }
+      },
+      "reliability": {
+        "n": 4755,
+        "brier": 0.06751513182942798,
+        "ece_10_equal_width": 0.007044095125313343,
+        "bins": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "n": 1,
+            "mean_confidence": 0.29744953916254313,
+            "accuracy_fraction": 0.0
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "n": 44,
+            "mean_confidence": 0.3716630758861008,
+            "accuracy_fraction": 0.45454545454545453
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "n": 120,
+            "mean_confidence": 0.45761785016782,
+            "accuracy_fraction": 0.4
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "n": 274,
+            "mean_confidence": 0.5495783106676074,
+            "accuracy_fraction": 0.5437956204379562
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "n": 310,
+            "mean_confidence": 0.6502549607305743,
+            "accuracy_fraction": 0.6483870967741936
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "n": 286,
+            "mean_confidence": 0.7502823106688501,
+            "accuracy_fraction": 0.6923076923076923
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "n": 381,
+            "mean_confidence": 0.8541926082911642,
+            "accuracy_fraction": 0.8503937007874016
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "n": 3339,
+            "mean_confidence": 0.9905494568855722,
+            "accuracy_fraction": 0.9898173105720276
+          }
+        ],
+        "confidence_event": "Actual selected numeric answer group is correct; not maximum candidate softmax.",
+        "calibration": "Uncalibrated group probability; OOF descriptive diagnostic only."
+      },
+      "parameters_per_fold": [
+        2065,
+        2065,
+        2065
+      ],
+      "numeric_asset_bytes_per_fold": [
+        49544,
+        49544,
+        49544
+      ],
+      "audited_uncompressed_bytes_per_fold": [
+        50917,
+        50917,
+        50917
+      ],
+      "audited_uncompressed_mib_max": 0.04855823516845703,
+      "training_seconds": 11.718261099998927,
+      "cost_note": "Reuses the same fitted OOF models; no additional training.",
+      "validation": "按协议未评估（此工具只读取 train OOF）",
+      "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "oof_sha256": "fc4d464d9103b437980eb645261e3e25a774376abb9ad3bea7f4125749d010f8"
+    },
+    {
+      "row_id": "linear_original::group_lse_a0.5",
+      "experiment_id": "linear_original",
+      "variant": "group_lse_a0.5",
+      "family": "linear",
+      "seed": 3036900957,
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0.5,
+        "tau": 1.0,
+        "mask": true
+      },
+      "status": "complete",
+      "metrics": {
+        "overall": {
+          "correct": 4236,
+          "n": 4755,
+          "pooled_accuracy": 89.08517350157729,
+          "fold_mean": 89.08517350157729,
+          "fold_sd": 0.5007731188134935,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 1406,
+              "n": 1585,
+              "accuracy": 88.70662460567823
+            },
+            {
+              "fold": 1,
+              "correct": 1409,
+              "n": 1585,
+              "accuracy": 88.89589905362776
+            },
+            {
+              "fold": 2,
+              "correct": 1421,
+              "n": 1585,
+              "accuracy": 89.65299684542587
+            }
+          ]
+        },
+        "hard": {
+          "correct": 1595,
+          "n": 2114,
+          "pooled_accuracy": 75.44938505203406,
+          "fold_mean": 75.44997850848914,
+          "fold_sd": 1.1071237596813877,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 526,
+              "n": 705,
+              "accuracy": 74.60992907801418
+            },
+            {
+              "fold": 1,
+              "correct": 529,
+              "n": 705,
+              "accuracy": 75.0354609929078
+            },
+            {
+              "fold": 2,
+              "correct": 540,
+              "n": 704,
+              "accuracy": 76.70454545454545
+            }
+          ]
+        },
+        "single_positive": {
+          "correct": 342,
+          "n": 711,
+          "pooled_accuracy": 48.10126582278481,
+          "fold_mean": 48.10126582278482,
+          "fold_sd": 1.9335762425974032,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 115,
+              "n": 237,
+              "accuracy": 48.52320675105485
+            },
+            {
+              "fold": 1,
+              "correct": 109,
+              "n": 237,
+              "accuracy": 45.9915611814346
+            },
+            {
+              "fold": 2,
+              "correct": 118,
+              "n": 237,
+              "accuracy": 49.789029535864984
+            }
+          ]
+        }
+      },
+      "reliability": {
+        "n": 4755,
+        "brier": 0.06873574163627516,
+        "ece_10_equal_width": 0.011811624420280118,
+        "bins": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "n": 1,
+            "mean_confidence": 0.29744953916254313,
+            "accuracy_fraction": 0.0
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "n": 51,
+            "mean_confidence": 0.37048179103087897,
+            "accuracy_fraction": 0.5490196078431373
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "n": 139,
+            "mean_confidence": 0.4569811391302696,
+            "accuracy_fraction": 0.4028776978417266
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "n": 336,
+            "mean_confidence": 0.5516266217706065,
+            "accuracy_fraction": 0.5565476190476191
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "n": 345,
+            "mean_confidence": 0.6501856591851966,
+            "accuracy_fraction": 0.6260869565217392
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "n": 310,
+            "mean_confidence": 0.7517928841166528,
+            "accuracy_fraction": 0.7903225806451613
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "n": 409,
+            "mean_confidence": 0.852029487211975,
+            "accuracy_fraction": 0.8850855745721271
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "n": 3164,
+            "mean_confidence": 0.9918428051755285,
+            "accuracy_fraction": 0.993046776232617
+          }
+        ],
+        "confidence_event": "Actual selected numeric answer group is correct; not maximum candidate softmax.",
+        "calibration": "Uncalibrated group probability; OOF descriptive diagnostic only."
+      },
+      "parameters_per_fold": [
+        2065,
+        2065,
+        2065
+      ],
+      "numeric_asset_bytes_per_fold": [
+        49544,
+        49544,
+        49544
+      ],
+      "audited_uncompressed_bytes_per_fold": [
+        50917,
+        50917,
+        50917
+      ],
+      "audited_uncompressed_mib_max": 0.04855823516845703,
+      "training_seconds": 11.718261099998927,
+      "cost_note": "Reuses the same fitted OOF models; no additional training.",
+      "validation": "按协议未评估（此工具只读取 train OOF）",
+      "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "oof_sha256": "fc4d464d9103b437980eb645261e3e25a774376abb9ad3bea7f4125749d010f8"
+    },
+    {
+      "row_id": "linear_original::group_lse_a1",
+      "experiment_id": "linear_original",
+      "variant": "group_lse_a1",
+      "family": "linear",
+      "seed": 3036900957,
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 1.0,
+        "tau": 1.0,
+        "mask": true
+      },
+      "status": "complete",
+      "metrics": {
+        "overall": {
+          "correct": 4193,
+          "n": 4755,
+          "pooled_accuracy": 88.18086225026288,
+          "fold_mean": 88.18086225026288,
+          "fold_sd": 0.2844952525440276,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 1398,
+              "n": 1585,
+              "accuracy": 88.2018927444795
+            },
+            {
+              "fold": 1,
+              "correct": 1393,
+              "n": 1585,
+              "accuracy": 87.88643533123029
+            },
+            {
+              "fold": 2,
+              "correct": 1402,
+              "n": 1585,
+              "accuracy": 88.45425867507886
+            }
+          ]
+        },
+        "hard": {
+          "correct": 1552,
+          "n": 2114,
+          "pooled_accuracy": 73.41532639545885,
+          "fold_mean": 73.41560552331829,
+          "fold_sd": 0.6220054076297246,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 518,
+              "n": 705,
+              "accuracy": 73.47517730496453
+            },
+            {
+              "fold": 1,
+              "correct": 513,
+              "n": 705,
+              "accuracy": 72.76595744680851
+            },
+            {
+              "fold": 2,
+              "correct": 521,
+              "n": 704,
+              "accuracy": 74.00568181818183
+            }
+          ]
+        },
+        "single_positive": {
+          "correct": 389,
+          "n": 711,
+          "pooled_accuracy": 54.71167369901547,
+          "fold_mean": 54.71167369901548,
+          "fold_sd": 2.472348218178192,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 134,
+              "n": 237,
+              "accuracy": 56.540084388185655
+            },
+            {
+              "fold": 1,
+              "correct": 123,
+              "n": 237,
+              "accuracy": 51.89873417721519
+            },
+            {
+              "fold": 2,
+              "correct": 132,
+              "n": 237,
+              "accuracy": 55.69620253164557
+            }
+          ]
+        }
+      },
+      "reliability": {
+        "n": 4755,
+        "brier": 0.07308320464239296,
+        "ece_10_equal_width": 0.011349402410153045,
+        "bins": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "n": 1,
+            "mean_confidence": 0.29744953916254313,
+            "accuracy_fraction": 0.0
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "n": 53,
+            "mean_confidence": 0.3714378888565151,
+            "accuracy_fraction": 0.5094339622641509
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "n": 158,
+            "mean_confidence": 0.4591882004477396,
+            "accuracy_fraction": 0.4050632911392405
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "n": 394,
+            "mean_confidence": 0.5499988834146342,
+            "accuracy_fraction": 0.5482233502538071
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "n": 372,
+            "mean_confidence": 0.6505981661359806,
+            "accuracy_fraction": 0.6532258064516129
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "n": 369,
+            "mean_confidence": 0.7506533675433789,
+            "accuracy_fraction": 0.7804878048780488
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "n": 387,
+            "mean_confidence": 0.8500207882122139,
+            "accuracy_fraction": 0.896640826873385
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "n": 3021,
+            "mean_confidence": 0.9933546750219728,
+            "accuracy_fraction": 0.995696789142668
+          }
+        ],
+        "confidence_event": "Actual selected numeric answer group is correct; not maximum candidate softmax.",
+        "calibration": "Uncalibrated group probability; OOF descriptive diagnostic only."
+      },
+      "parameters_per_fold": [
+        2065,
+        2065,
+        2065
+      ],
+      "numeric_asset_bytes_per_fold": [
+        49544,
+        49544,
+        49544
+      ],
+      "audited_uncompressed_bytes_per_fold": [
+        50917,
+        50917,
+        50917
+      ],
+      "audited_uncompressed_mib_max": 0.04855823516845703,
+      "training_seconds": 11.718261099998927,
+      "cost_note": "Reuses the same fitted OOF models; no additional training.",
+      "validation": "按协议未评估（此工具只读取 train OOF）",
+      "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "oof_sha256": "fc4d464d9103b437980eb645261e3e25a774376abb9ad3bea7f4125749d010f8"
+    },
+    {
+      "row_id": "linear_group_a0",
+      "experiment_id": "linear_group_a0",
+      "variant": "registered",
+      "family": "linear",
+      "seed": 3036900957,
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "status": "complete",
+      "metrics": {
+        "overall": {
+          "correct": 4242,
+          "n": 4755,
+          "pooled_accuracy": 89.21135646687696,
+          "fold_mean": 89.21135646687696,
+          "fold_sd": 0.5390538640578838,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 1405,
+              "n": 1585,
+              "accuracy": 88.64353312302839
+            },
+            {
+              "fold": 1,
+              "correct": 1422,
+              "n": 1585,
+              "accuracy": 89.7160883280757
+            },
+            {
+              "fold": 2,
+              "correct": 1415,
+              "n": 1585,
+              "accuracy": 89.27444794952682
+            }
+          ]
+        },
+        "hard": {
+          "correct": 1601,
+          "n": 2114,
+          "pooled_accuracy": 75.73320719016084,
+          "fold_mean": 75.73326348592308,
+          "fold_sd": 1.210070912162273,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 525,
+              "n": 705,
+              "accuracy": 74.46808510638297
+            },
+            {
+              "fold": 1,
+              "correct": 542,
+              "n": 705,
+              "accuracy": 76.87943262411348
+            },
+            {
+              "fold": 2,
+              "correct": 534,
+              "n": 704,
+              "accuracy": 75.85227272727273
+            }
+          ]
+        },
+        "single_positive": {
+          "correct": 312,
+          "n": 711,
+          "pooled_accuracy": 43.88185654008439,
+          "fold_mean": 43.881856540084385,
+          "fold_sd": 0.730823125556484,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 105,
+              "n": 237,
+              "accuracy": 44.303797468354425
+            },
+            {
+              "fold": 1,
+              "correct": 105,
+              "n": 237,
+              "accuracy": 44.303797468354425
+            },
+            {
+              "fold": 2,
+              "correct": 102,
+              "n": 237,
+              "accuracy": 43.037974683544306
+            }
+          ]
+        }
+      },
+      "reliability": {
+        "n": 4755,
+        "brier": 0.0674042279168494,
+        "ece_10_equal_width": 0.009584122576924477,
+        "bins": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "n": 36,
+            "mean_confidence": 0.36384188285906904,
+            "accuracy_fraction": 0.3888888888888889
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "n": 143,
+            "mean_confidence": 0.4568560657542778,
+            "accuracy_fraction": 0.46153846153846156
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "n": 282,
+            "mean_confidence": 0.5495388425523463,
+            "accuracy_fraction": 0.5070921985815603
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "n": 327,
+            "mean_confidence": 0.6498645894257793,
+            "accuracy_fraction": 0.6758409785932722
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "n": 289,
+            "mean_confidence": 0.750795963693571,
+            "accuracy_fraction": 0.6920415224913494
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "n": 379,
+            "mean_confidence": 0.8513714607858623,
+            "accuracy_fraction": 0.8680738786279684
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "n": 3299,
+            "mean_confidence": 0.9908376037247857,
+            "accuracy_fraction": 0.990906335253107
+          }
+        ],
+        "confidence_event": "Actual selected numeric answer group is correct; not maximum candidate softmax.",
+        "calibration": "Uncalibrated group probability; OOF descriptive diagnostic only."
+      },
+      "parameters_per_fold": [
+        2065,
+        2065,
+        2065
+      ],
+      "numeric_asset_bytes_per_fold": [
+        49544,
+        49544,
+        49544
+      ],
+      "audited_uncompressed_bytes_per_fold": [
+        50912,
+        50912,
+        50912
+      ],
+      "audited_uncompressed_mib_max": 0.048553466796875,
+      "training_seconds": 14.332354699998177,
+      "cost_note": "Actual three outer fits plus inner stopping fits when present.",
+      "validation": "按协议未评估（此工具只读取 train OOF）",
+      "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "oof_sha256": "8b0f75cf341e594f05e89c49e3107fa7ceebca4f8f07097aa2cf762557c5cef6"
+    },
+    {
+      "row_id": "linear_group_a0p5",
+      "experiment_id": "linear_group_a0p5",
+      "variant": "registered",
+      "family": "linear",
+      "seed": 3036900957,
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0.5,
+        "tau": 1,
+        "mask": true
+      },
+      "status": "complete",
+      "metrics": {
+        "overall": {
+          "correct": 4236,
+          "n": 4755,
+          "pooled_accuracy": 89.08517350157729,
+          "fold_mean": 89.08517350157729,
+          "fold_sd": 0.27500939706880806,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 1407,
+              "n": 1585,
+              "accuracy": 88.76971608832808
+            },
+            {
+              "fold": 1,
+              "correct": 1414,
+              "n": 1585,
+              "accuracy": 89.21135646687696
+            },
+            {
+              "fold": 2,
+              "correct": 1415,
+              "n": 1585,
+              "accuracy": 89.27444794952682
+            }
+          ]
+        },
+        "hard": {
+          "correct": 1595,
+          "n": 2114,
+          "pooled_accuracy": 75.44938505203406,
+          "fold_mean": 75.44957554266067,
+          "fold_sd": 0.606704411060503,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 527,
+              "n": 705,
+              "accuracy": 74.7517730496454
+            },
+            {
+              "fold": 1,
+              "correct": 534,
+              "n": 705,
+              "accuracy": 75.74468085106383
+            },
+            {
+              "fold": 2,
+              "correct": 534,
+              "n": 704,
+              "accuracy": 75.85227272727273
+            }
+          ]
+        },
+        "single_positive": {
+          "correct": 322,
+          "n": 711,
+          "pooled_accuracy": 45.28832630098453,
+          "fold_mean": 45.28832630098452,
+          "fold_sd": 1.0618613833010906,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 110,
+              "n": 237,
+              "accuracy": 46.41350210970464
+            },
+            {
+              "fold": 1,
+              "correct": 105,
+              "n": 237,
+              "accuracy": 44.303797468354425
+            },
+            {
+              "fold": 2,
+              "correct": 107,
+              "n": 237,
+              "accuracy": 45.14767932489451
+            }
+          ]
+        }
+      },
+      "reliability": {
+        "n": 4755,
+        "brier": 0.06770522484582966,
+        "ece_10_equal_width": 0.007974639871493171,
+        "bins": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "n": 37,
+            "mean_confidence": 0.3648701159452933,
+            "accuracy_fraction": 0.43243243243243246
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "n": 141,
+            "mean_confidence": 0.4557944367785939,
+            "accuracy_fraction": 0.46808510638297873
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "n": 310,
+            "mean_confidence": 0.5495382196308762,
+            "accuracy_fraction": 0.5129032258064516
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "n": 324,
+            "mean_confidence": 0.6508048738668041,
+            "accuracy_fraction": 0.6574074074074074
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "n": 307,
+            "mean_confidence": 0.7504935933834777,
+            "accuracy_fraction": 0.7198697068403909
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "n": 381,
+            "mean_confidence": 0.8510134234187364,
+            "accuracy_fraction": 0.868766404199475
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "n": 3255,
+            "mean_confidence": 0.9910829079367768,
+            "accuracy_fraction": 0.9923195084485407
+          }
+        ],
+        "confidence_event": "Actual selected numeric answer group is correct; not maximum candidate softmax.",
+        "calibration": "Uncalibrated group probability; OOF descriptive diagnostic only."
+      },
+      "parameters_per_fold": [
+        2065,
+        2065,
+        2065
+      ],
+      "numeric_asset_bytes_per_fold": [
+        49544,
+        49544,
+        49544
+      ],
+      "audited_uncompressed_bytes_per_fold": [
+        50914,
+        50914,
+        50914
+      ],
+      "audited_uncompressed_mib_max": 0.04855537414550781,
+      "training_seconds": 14.54017279999971,
+      "cost_note": "Actual three outer fits plus inner stopping fits when present.",
+      "validation": "按协议未评估（此工具只读取 train OOF）",
+      "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "oof_sha256": "ee222848f3acb37db9fd585d4ba4ee23b992ea60d4d41a6895be22aa21f8dc9e"
+    },
+    {
+      "row_id": "linear_group_a1",
+      "experiment_id": "linear_group_a1",
+      "variant": "registered",
+      "family": "linear",
+      "seed": 3036900957,
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 1,
+        "tau": 1,
+        "mask": true
+      },
+      "status": "complete",
+      "metrics": {
+        "overall": {
+          "correct": 4229,
+          "n": 4755,
+          "pooled_accuracy": 88.937960042061,
+          "fold_mean": 88.937960042061,
+          "fold_sd": 0.22157000531761906,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 1406,
+              "n": 1585,
+              "accuracy": 88.70662460567823
+            },
+            {
+              "fold": 1,
+              "correct": 1410,
+              "n": 1585,
+              "accuracy": 88.95899053627761
+            },
+            {
+              "fold": 2,
+              "correct": 1413,
+              "n": 1585,
+              "accuracy": 89.14826498422713
+            }
+          ]
+        },
+        "hard": {
+          "correct": 1588,
+          "n": 2114,
+          "pooled_accuracy": 75.11825922421949,
+          "fold_mean": 75.11847195357832,
+          "fold_sd": 0.48182784362646247,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 526,
+              "n": 705,
+              "accuracy": 74.60992907801418
+            },
+            {
+              "fold": 1,
+              "correct": 530,
+              "n": 705,
+              "accuracy": 75.177304964539
+            },
+            {
+              "fold": 2,
+              "correct": 532,
+              "n": 704,
+              "accuracy": 75.56818181818183
+            }
+          ]
+        },
+        "single_positive": {
+          "correct": 327,
+          "n": 711,
+          "pooled_accuracy": 45.9915611814346,
+          "fold_mean": 45.9915611814346,
+          "fold_sd": 0.8438818565400865,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 111,
+              "n": 237,
+              "accuracy": 46.835443037974684
+            },
+            {
+              "fold": 1,
+              "correct": 107,
+              "n": 237,
+              "accuracy": 45.14767932489451
+            },
+            {
+              "fold": 2,
+              "correct": 109,
+              "n": 237,
+              "accuracy": 45.9915611814346
+            }
+          ]
+        }
+      },
+      "reliability": {
+        "n": 4755,
+        "brier": 0.06815430308578577,
+        "ece_10_equal_width": 0.006550026629630547,
+        "bins": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "n": 38,
+            "mean_confidence": 0.36810032305364837,
+            "accuracy_fraction": 0.42105263157894735
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "n": 145,
+            "mean_confidence": 0.4573466197955654,
+            "accuracy_fraction": 0.4206896551724138
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "n": 331,
+            "mean_confidence": 0.5514963240325184,
+            "accuracy_fraction": 0.5287009063444109
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "n": 319,
+            "mean_confidence": 0.6501579161636374,
+            "accuracy_fraction": 0.64576802507837
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "n": 323,
+            "mean_confidence": 0.7500647959923601,
+            "accuracy_fraction": 0.7585139318885449
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "n": 398,
+            "mean_confidence": 0.8523909205498369,
+            "accuracy_fraction": 0.8743718592964824
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "n": 3201,
+            "mean_confidence": 0.9917542061846365,
+            "accuracy_fraction": 0.9928147453920649
+          }
+        ],
+        "confidence_event": "Actual selected numeric answer group is correct; not maximum candidate softmax.",
+        "calibration": "Uncalibrated group probability; OOF descriptive diagnostic only."
+      },
+      "parameters_per_fold": [
+        2065,
+        2065,
+        2065
+      ],
+      "numeric_asset_bytes_per_fold": [
+        49544,
+        49544,
+        49544
+      ],
+      "audited_uncompressed_bytes_per_fold": [
+        50912,
+        50912,
+        50912
+      ],
+      "audited_uncompressed_mib_max": 0.048553466796875,
+      "training_seconds": 13.01044759999968,
+      "cost_note": "Actual three outer fits plus inner stopping fits when present.",
+      "validation": "按协议未评估（此工具只读取 train OOF）",
+      "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "oof_sha256": "19902c26e92155eb54ce329fff48a9d15226c4135e46a4bb86e7dd50b3f40644"
+    },
+    {
+      "row_id": "linear_group_hard",
+      "experiment_id": "linear_group_hard",
+      "variant": "registered",
+      "family": "linear",
+      "seed": 3036900957,
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "status": "complete",
+      "metrics": {
+        "overall": {
+          "correct": 4242,
+          "n": 4755,
+          "pooled_accuracy": 89.21135646687696,
+          "fold_mean": 89.21135646687696,
+          "fold_sd": 0.5390538640578838,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 1405,
+              "n": 1585,
+              "accuracy": 88.64353312302839
+            },
+            {
+              "fold": 1,
+              "correct": 1422,
+              "n": 1585,
+              "accuracy": 89.7160883280757
+            },
+            {
+              "fold": 2,
+              "correct": 1415,
+              "n": 1585,
+              "accuracy": 89.27444794952682
+            }
+          ]
+        },
+        "hard": {
+          "correct": 1601,
+          "n": 2114,
+          "pooled_accuracy": 75.73320719016084,
+          "fold_mean": 75.73326348592308,
+          "fold_sd": 1.210070912162273,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 525,
+              "n": 705,
+              "accuracy": 74.46808510638297
+            },
+            {
+              "fold": 1,
+              "correct": 542,
+              "n": 705,
+              "accuracy": 76.87943262411348
+            },
+            {
+              "fold": 2,
+              "correct": 534,
+              "n": 704,
+              "accuracy": 75.85227272727273
+            }
+          ]
+        },
+        "single_positive": {
+          "correct": 312,
+          "n": 711,
+          "pooled_accuracy": 43.88185654008439,
+          "fold_mean": 43.881856540084385,
+          "fold_sd": 0.730823125556484,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 105,
+              "n": 237,
+              "accuracy": 44.303797468354425
+            },
+            {
+              "fold": 1,
+              "correct": 105,
+              "n": 237,
+              "accuracy": 44.303797468354425
+            },
+            {
+              "fold": 2,
+              "correct": 102,
+              "n": 237,
+              "accuracy": 43.037974683544306
+            }
+          ]
+        }
+      },
+      "reliability": {
+        "n": 4755,
+        "brier": 0.0674036201042115,
+        "ece_10_equal_width": 0.009414926972183116,
+        "bins": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "n": 0,
+            "mean_confidence": null,
+            "accuracy_fraction": null
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "n": 36,
+            "mean_confidence": 0.3638319003427044,
+            "accuracy_fraction": 0.3888888888888889
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "n": 143,
+            "mean_confidence": 0.4568611335837849,
+            "accuracy_fraction": 0.46153846153846156
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "n": 283,
+            "mean_confidence": 0.549716530604426,
+            "accuracy_fraction": 0.508833922261484
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "n": 326,
+            "mean_confidence": 0.65002474551555,
+            "accuracy_fraction": 0.6748466257668712
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "n": 289,
+            "mean_confidence": 0.7508049052080431,
+            "accuracy_fraction": 0.6920415224913494
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "n": 379,
+            "mean_confidence": 0.8513782224769667,
+            "accuracy_fraction": 0.8680738786279684
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "n": 3299,
+            "mean_confidence": 0.9908381067419788,
+            "accuracy_fraction": 0.990906335253107
+          }
+        ],
+        "confidence_event": "Actual selected numeric answer group is correct; not maximum candidate softmax.",
+        "calibration": "Uncalibrated group probability; OOF descriptive diagnostic only."
+      },
+      "parameters_per_fold": [
+        2065,
+        2065,
+        2065
+      ],
+      "numeric_asset_bytes_per_fold": [
+        49544,
+        49544,
+        49544
+      ],
+      "audited_uncompressed_bytes_per_fold": [
+        50912,
+        50912,
+        50912
+      ],
+      "audited_uncompressed_mib_max": 0.048553466796875,
+      "training_seconds": 12.990395599999829,
+      "cost_note": "Actual three outer fits plus inner stopping fits when present.",
+      "validation": "按协议未评估（此工具只读取 train OOF）",
+      "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "oof_sha256": "999a5c1f0de98d85de8fd6e7e7fae531a1b734bd1fa5743e8439f3a896b4e205"
+    }
+  ],
+  "pending": [],
+  "paired_comparisons": [
+    {
+      "first": "linear_group_a0",
+      "second": "linear_original::group_lse_a0",
+      "overall": {
+        "n": 4755,
+        "first_correct": 4242,
+        "second_correct": 4245,
+        "correct_difference": -3,
+        "difference_percentage_points": -0.06309148264984228,
+        "paired_bootstrap_95_interval": [
+          -0.3364879074658254,
+          0.2103049421661409
+        ],
+        "first_only_correct": 20,
+        "second_only_correct": 23,
+        "both_wrong": 490,
+        "both_correct": 4222,
+        "bootstrap_seed": 3036901059
+      },
+      "hard": {
+        "n": 2114,
+        "first_correct": 1601,
+        "second_correct": 1604,
+        "correct_difference": -3,
+        "difference_percentage_points": -0.14191106906338694,
+        "paired_bootstrap_95_interval": [
+          -0.7568590350047304,
+          0.47303689687795647
+        ],
+        "first_only_correct": 20,
+        "second_only_correct": 23,
+        "both_wrong": 490,
+        "both_correct": 1581,
+        "bootstrap_seed": 3036901060
+      },
+      "error_overlap": {
+        "intersection": 490,
+        "union": 533,
+        "jaccard": 0.9193245778611632,
+        "oracle_correct_upper_bound": 4265,
+        "note": "Oracle is diagnostic only, not a realizable ensemble result."
+      },
+      "bootstrap_repetitions": 5000,
+      "interval_caveat": "Paired question bootstrap conditional on completed OOF predictions; model-selection optimism remains."
+    },
+    {
+      "first": "linear_group_a0p5",
+      "second": "linear_group_a0",
+      "overall": {
+        "n": 4755,
+        "first_correct": 4236,
+        "second_correct": 4242,
+        "correct_difference": -6,
+        "difference_percentage_points": -0.12618296529968456,
+        "paired_bootstrap_95_interval": [
+          -0.35751840168243953,
+          0.08412197686645635
+        ],
+        "first_only_correct": 12,
+        "second_only_correct": 18,
+        "both_wrong": 501,
+        "both_correct": 4224,
+        "bootstrap_seed": 3036901059
+      },
+      "hard": {
+        "n": 2114,
+        "first_correct": 1595,
+        "second_correct": 1601,
+        "correct_difference": -6,
+        "difference_percentage_points": -0.28382213812677387,
+        "paired_bootstrap_95_interval": [
+          -0.804162724692526,
+          0.23651844843897823
+        ],
+        "first_only_correct": 12,
+        "second_only_correct": 18,
+        "both_wrong": 501,
+        "both_correct": 1583,
+        "bootstrap_seed": 3036901060
+      },
+      "error_overlap": {
+        "intersection": 501,
+        "union": 531,
+        "jaccard": 0.943502824858757,
+        "oracle_correct_upper_bound": 4254,
+        "note": "Oracle is diagnostic only, not a realizable ensemble result."
+      },
+      "bootstrap_repetitions": 5000,
+      "interval_caveat": "Paired question bootstrap conditional on completed OOF predictions; model-selection optimism remains."
+    },
+    {
+      "first": "linear_group_a1",
+      "second": "linear_group_a0",
+      "overall": {
+        "n": 4755,
+        "first_correct": 4229,
+        "second_correct": 4242,
+        "correct_difference": -13,
+        "difference_percentage_points": -0.2733964248159832,
+        "paired_bootstrap_95_interval": [
+          -0.5888538380651945,
+          0.042060988433228176
+        ],
+        "first_only_correct": 25,
+        "second_only_correct": 38,
+        "both_wrong": 488,
+        "both_correct": 4204,
+        "bootstrap_seed": 3036901059
+      },
+      "hard": {
+        "n": 2114,
+        "first_correct": 1588,
+        "second_correct": 1601,
+        "correct_difference": -13,
+        "difference_percentage_points": -0.6149479659413435,
+        "paired_bootstrap_95_interval": [
+          -1.3245033112582782,
+          0.0946073793755913
+        ],
+        "first_only_correct": 25,
+        "second_only_correct": 38,
+        "both_wrong": 488,
+        "both_correct": 1563,
+        "bootstrap_seed": 3036901060
+      },
+      "error_overlap": {
+        "intersection": 488,
+        "union": 551,
+        "jaccard": 0.8856624319419237,
+        "oracle_correct_upper_bound": 4267,
+        "note": "Oracle is diagnostic only, not a realizable ensemble result."
+      },
+      "bootstrap_repetitions": 5000,
+      "interval_caveat": "Paired question bootstrap conditional on completed OOF predictions; model-selection optimism remains."
+    },
+    {
+      "first": "linear_group_hard",
+      "second": "linear_group_a0",
+      "overall": {
+        "n": 4755,
+        "first_correct": 4242,
+        "second_correct": 4242,
+        "correct_difference": 0,
+        "difference_percentage_points": 0.0,
+        "paired_bootstrap_95_interval": [
+          0.0,
+          0.0
+        ],
+        "first_only_correct": 0,
+        "second_only_correct": 0,
+        "both_wrong": 513,
+        "both_correct": 4242,
+        "bootstrap_seed": 3036901059
+      },
+      "hard": {
+        "n": 2114,
+        "first_correct": 1601,
+        "second_correct": 1601,
+        "correct_difference": 0,
+        "difference_percentage_points": 0.0,
+        "paired_bootstrap_95_interval": [
+          0.0,
+          0.0
+        ],
+        "first_only_correct": 0,
+        "second_only_correct": 0,
+        "both_wrong": 513,
+        "both_correct": 1601,
+        "bootstrap_seed": 3036901060
+      },
+      "error_overlap": {
+        "intersection": 513,
+        "union": 513,
+        "jaccard": 1.0,
+        "oracle_correct_upper_bound": 4242,
+        "note": "Oracle is diagnostic only, not a realizable ensemble result."
+      },
+      "bootstrap_repetitions": 5000,
+      "interval_caveat": "Paired question bootstrap conditional on completed OOF predictions; model-selection optimism remains."
+    }
+  ],
+  "seed_stability": [],
+  "input_sha256": {
+    "results\\research_v2\\linear_original\\registration.json": "0b7dd3e2a1ffc37d7ecb642ef0623fbd50331dbeb1d8121f5fe073b102ef4f1c",
+    "results\\research_v2\\linear_original\\summary.json": "d13a5451e2f637f028abc48a3019e7d75ce8d5feb3286b067316ce03ed9b8aa7",
+    "results\\research_v2\\linear_original\\oof.npz": "fc4d464d9103b437980eb645261e3e25a774376abb9ad3bea7f4125749d010f8",
+    "results\\research_v2\\linear_group_a0\\registration.json": "4b766332f5bed2e8cc2380fad48b717d6de1c317a990b6ee8ec818a7205c8b72",
+    "results\\research_v2\\linear_group_a0\\summary.json": "493bfb8833ebf12c1860df5b93802ea0e0befbe0f55e6df3c0038ad826efc3bb",
+    "results\\research_v2\\linear_group_a0\\oof.npz": "8b0f75cf341e594f05e89c49e3107fa7ceebca4f8f07097aa2cf762557c5cef6",
+    "results\\research_v2\\linear_group_a0p5\\registration.json": "4f7b3bfbca1531c079e8804577b5149a9f00974f28a866b1f38852d0bb19c62c",
+    "results\\research_v2\\linear_group_a0p5\\summary.json": "33b2f7857edce01cdef0bb6bcb4bd71b6fc426f94ffed2440581fe6578c22a4e",
+    "results\\research_v2\\linear_group_a0p5\\oof.npz": "ee222848f3acb37db9fd585d4ba4ee23b992ea60d4d41a6895be22aa21f8dc9e",
+    "results\\research_v2\\linear_group_a1\\registration.json": "cee51a939571d9bf814fbb2525d6db10ac0e6bd1c570f4e517091fa1835ee8a5",
+    "results\\research_v2\\linear_group_a1\\summary.json": "5d7abf9c438ab36eaeff0a4d5d30b91a7f7e44f8832fa8f8cf165f89e3b4410d",
+    "results\\research_v2\\linear_group_a1\\oof.npz": "19902c26e92155eb54ce329fff48a9d15226c4135e46a4bb86e7dd50b3f40644",
+    "results\\research_v2\\linear_group_hard\\registration.json": "df60de432337c40bfdf1cd54e0b43831969c91cb64fe5043ba2107aa5948f253",
+    "results\\research_v2\\linear_group_hard\\summary.json": "0b6be27102e5000e78780eb0903aade72698a7bec72a6183ec348ee0a38d3c77",
+    "results\\research_v2\\linear_group_hard\\oof.npz": "999a5c1f0de98d85de8fd6e7e7fae531a1b734bd1fa5743e8439f3a896b4e205"
+  },
+  "audits": {
+    "artifacts/research_v2/linear_original/fold0-attempt1": {
+      "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\linear_original\\fold0-attempt1",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "e938e9e17a3ce90943c26c30903fad583302220cd3e9af93a9ee116b040de2b1",
+          "disk_bytes": 385,
+          "uncompressed_bytes": 385
+        },
+        {
+          "path": "weights.npz",
+          "sha256": "5ebf622b3aed6d9821628b63a906be1f7bc7a866fe6da3e709b27e2902ece0fe",
+          "disk_bytes": 50532,
+          "uncompressed_bytes": 50532,
+          "members": [
+            {
+              "name": "mean.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "scale.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "weight.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "bias.npy",
+              "uncompressed_bytes": 136
+            }
+          ],
+          "arrays": [
+            {
+              "name": "mean",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "scale",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "weight",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "bias",
+              "shape": [],
+              "dtype": "float64",
+              "array_bytes": 8
+            }
+          ]
+        }
+      ],
+      "uncompressed_bytes": 50917,
+      "limit_bytes": 16777216,
+      "within_limit": true,
+      "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+      "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+    },
+    "artifacts/research_v2/linear_original/fold1-attempt1": {
+      "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\linear_original\\fold1-attempt1",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "e938e9e17a3ce90943c26c30903fad583302220cd3e9af93a9ee116b040de2b1",
+          "disk_bytes": 385,
+          "uncompressed_bytes": 385
+        },
+        {
+          "path": "weights.npz",
+          "sha256": "0f54acf146591eb22f009895212179fe2c5d6a321ff34f6340ff8110a67db60c",
+          "disk_bytes": 50532,
+          "uncompressed_bytes": 50532,
+          "members": [
+            {
+              "name": "mean.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "scale.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "weight.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "bias.npy",
+              "uncompressed_bytes": 136
+            }
+          ],
+          "arrays": [
+            {
+              "name": "mean",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "scale",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "weight",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "bias",
+              "shape": [],
+              "dtype": "float64",
+              "array_bytes": 8
+            }
+          ]
+        }
+      ],
+      "uncompressed_bytes": 50917,
+      "limit_bytes": 16777216,
+      "within_limit": true,
+      "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+      "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+    },
+    "artifacts/research_v2/linear_original/fold2-attempt1": {
+      "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\linear_original\\fold2-attempt1",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "e938e9e17a3ce90943c26c30903fad583302220cd3e9af93a9ee116b040de2b1",
+          "disk_bytes": 385,
+          "uncompressed_bytes": 385
+        },
+        {
+          "path": "weights.npz",
+          "sha256": "600f37673b6268d6ca9eb818b6d72ca6adf9e583ed227f54d4da81838acdd970",
+          "disk_bytes": 50532,
+          "uncompressed_bytes": 50532,
+          "members": [
+            {
+              "name": "mean.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "scale.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "weight.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "bias.npy",
+              "uncompressed_bytes": 136
+            }
+          ],
+          "arrays": [
+            {
+              "name": "mean",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "scale",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "weight",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "bias",
+              "shape": [],
+              "dtype": "float64",
+              "array_bytes": 8
+            }
+          ]
+        }
+      ],
+      "uncompressed_bytes": 50917,
+      "limit_bytes": 16777216,
+      "within_limit": true,
+      "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+      "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+    },
+    "artifacts/research_v2/linear_group_a0/fold0-attempt1": {
+      "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\linear_group_a0\\fold0-attempt1",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "9650b38236001db52cf5c96d8e56cdc025d68b7aacca49d8b054a8511583e07e",
+          "disk_bytes": 380,
+          "uncompressed_bytes": 380
+        },
+        {
+          "path": "weights.npz",
+          "sha256": "1d2ca20667a4a87d5d33cb8738caf728531e433ba6ccb207af9f7719aa053aef",
+          "disk_bytes": 50532,
+          "uncompressed_bytes": 50532,
+          "members": [
+            {
+              "name": "mean.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "scale.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "weight.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "bias.npy",
+              "uncompressed_bytes": 136
+            }
+          ],
+          "arrays": [
+            {
+              "name": "mean",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "scale",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "weight",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "bias",
+              "shape": [],
+              "dtype": "float64",
+              "array_bytes": 8
+            }
+          ]
+        }
+      ],
+      "uncompressed_bytes": 50912,
+      "limit_bytes": 16777216,
+      "within_limit": true,
+      "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+      "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+    },
+    "artifacts/research_v2/linear_group_a0/fold1-attempt1": {
+      "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\linear_group_a0\\fold1-attempt1",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "9650b38236001db52cf5c96d8e56cdc025d68b7aacca49d8b054a8511583e07e",
+          "disk_bytes": 380,
+          "uncompressed_bytes": 380
+        },
+        {
+          "path": "weights.npz",
+          "sha256": "3b43007f9bb3a1877444a57d96e531982520def29007e2e28f3d46bb5e60dbeb",
+          "disk_bytes": 50532,
+          "uncompressed_bytes": 50532,
+          "members": [
+            {
+              "name": "mean.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "scale.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "weight.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "bias.npy",
+              "uncompressed_bytes": 136
+            }
+          ],
+          "arrays": [
+            {
+              "name": "mean",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "scale",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "weight",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "bias",
+              "shape": [],
+              "dtype": "float64",
+              "array_bytes": 8
+            }
+          ]
+        }
+      ],
+      "uncompressed_bytes": 50912,
+      "limit_bytes": 16777216,
+      "within_limit": true,
+      "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+      "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+    },
+    "artifacts/research_v2/linear_group_a0/fold2-attempt1": {
+      "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\linear_group_a0\\fold2-attempt1",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "9650b38236001db52cf5c96d8e56cdc025d68b7aacca49d8b054a8511583e07e",
+          "disk_bytes": 380,
+          "uncompressed_bytes": 380
+        },
+        {
+          "path": "weights.npz",
+          "sha256": "6a6bd1cbb3f43ab1128bb15a1facf4926d269118df817b2b4487f4ee43561c4e",
+          "disk_bytes": 50532,
+          "uncompressed_bytes": 50532,
+          "members": [
+            {
+              "name": "mean.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "scale.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "weight.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "bias.npy",
+              "uncompressed_bytes": 136
+            }
+          ],
+          "arrays": [
+            {
+              "name": "mean",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "scale",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "weight",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "bias",
+              "shape": [],
+              "dtype": "float64",
+              "array_bytes": 8
+            }
+          ]
+        }
+      ],
+      "uncompressed_bytes": 50912,
+      "limit_bytes": 16777216,
+      "within_limit": true,
+      "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+      "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+    },
+    "artifacts/research_v2/linear_group_a0p5/fold0-attempt1": {
+      "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\linear_group_a0p5\\fold0-attempt1",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "93752e7228c76ac288e12889ede9e8c4dcd173f469f7853366d071505108ca0c",
+          "disk_bytes": 382,
+          "uncompressed_bytes": 382
+        },
+        {
+          "path": "weights.npz",
+          "sha256": "a14a32360eab7d78009d2fb9865d17ee0c8e61b8dd4d02191758f8b9c3f94bd5",
+          "disk_bytes": 50532,
+          "uncompressed_bytes": 50532,
+          "members": [
+            {
+              "name": "mean.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "scale.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "weight.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "bias.npy",
+              "uncompressed_bytes": 136
+            }
+          ],
+          "arrays": [
+            {
+              "name": "mean",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "scale",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "weight",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "bias",
+              "shape": [],
+              "dtype": "float64",
+              "array_bytes": 8
+            }
+          ]
+        }
+      ],
+      "uncompressed_bytes": 50914,
+      "limit_bytes": 16777216,
+      "within_limit": true,
+      "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+      "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+    },
+    "artifacts/research_v2/linear_group_a0p5/fold1-attempt1": {
+      "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\linear_group_a0p5\\fold1-attempt1",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "93752e7228c76ac288e12889ede9e8c4dcd173f469f7853366d071505108ca0c",
+          "disk_bytes": 382,
+          "uncompressed_bytes": 382
+        },
+        {
+          "path": "weights.npz",
+          "sha256": "54617638ecd775affb8ede15f5e4bfa754a5cac247b6678bf5880c45c841d6d6",
+          "disk_bytes": 50532,
+          "uncompressed_bytes": 50532,
+          "members": [
+            {
+              "name": "mean.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "scale.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "weight.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "bias.npy",
+              "uncompressed_bytes": 136
+            }
+          ],
+          "arrays": [
+            {
+              "name": "mean",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "scale",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "weight",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "bias",
+              "shape": [],
+              "dtype": "float64",
+              "array_bytes": 8
+            }
+          ]
+        }
+      ],
+      "uncompressed_bytes": 50914,
+      "limit_bytes": 16777216,
+      "within_limit": true,
+      "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+      "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+    },
+    "artifacts/research_v2/linear_group_a0p5/fold2-attempt1": {
+      "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\linear_group_a0p5\\fold2-attempt1",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "93752e7228c76ac288e12889ede9e8c4dcd173f469f7853366d071505108ca0c",
+          "disk_bytes": 382,
+          "uncompressed_bytes": 382
+        },
+        {
+          "path": "weights.npz",
+          "sha256": "95cf4275326b059911c1c6ea1139190f0d2169c2d5c9b9a75b0caa5742ec75b2",
+          "disk_bytes": 50532,
+          "uncompressed_bytes": 50532,
+          "members": [
+            {
+              "name": "mean.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "scale.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "weight.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "bias.npy",
+              "uncompressed_bytes": 136
+            }
+          ],
+          "arrays": [
+            {
+              "name": "mean",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "scale",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "weight",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "bias",
+              "shape": [],
+              "dtype": "float64",
+              "array_bytes": 8
+            }
+          ]
+        }
+      ],
+      "uncompressed_bytes": 50914,
+      "limit_bytes": 16777216,
+      "within_limit": true,
+      "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+      "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+    },
+    "artifacts/research_v2/linear_group_a1/fold0-attempt1": {
+      "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\linear_group_a1\\fold0-attempt1",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "e07ecb2322bab51fedab39541f9739b1d06a764c5cc5cf2e0425887f1fdcae56",
+          "disk_bytes": 380,
+          "uncompressed_bytes": 380
+        },
+        {
+          "path": "weights.npz",
+          "sha256": "1f559da033b8ffbb277f45b444447509d71526b40633d2a1bc6caa6d7fe936a3",
+          "disk_bytes": 50532,
+          "uncompressed_bytes": 50532,
+          "members": [
+            {
+              "name": "mean.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "scale.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "weight.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "bias.npy",
+              "uncompressed_bytes": 136
+            }
+          ],
+          "arrays": [
+            {
+              "name": "mean",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "scale",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "weight",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "bias",
+              "shape": [],
+              "dtype": "float64",
+              "array_bytes": 8
+            }
+          ]
+        }
+      ],
+      "uncompressed_bytes": 50912,
+      "limit_bytes": 16777216,
+      "within_limit": true,
+      "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+      "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+    },
+    "artifacts/research_v2/linear_group_a1/fold1-attempt1": {
+      "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\linear_group_a1\\fold1-attempt1",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "e07ecb2322bab51fedab39541f9739b1d06a764c5cc5cf2e0425887f1fdcae56",
+          "disk_bytes": 380,
+          "uncompressed_bytes": 380
+        },
+        {
+          "path": "weights.npz",
+          "sha256": "4c45c66674a6660df1a22fcad2362ec2750740e78bb8091aeb192083e50ee7c7",
+          "disk_bytes": 50532,
+          "uncompressed_bytes": 50532,
+          "members": [
+            {
+              "name": "mean.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "scale.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "weight.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "bias.npy",
+              "uncompressed_bytes": 136
+            }
+          ],
+          "arrays": [
+            {
+              "name": "mean",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "scale",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "weight",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "bias",
+              "shape": [],
+              "dtype": "float64",
+              "array_bytes": 8
+            }
+          ]
+        }
+      ],
+      "uncompressed_bytes": 50912,
+      "limit_bytes": 16777216,
+      "within_limit": true,
+      "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+      "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+    },
+    "artifacts/research_v2/linear_group_a1/fold2-attempt1": {
+      "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\linear_group_a1\\fold2-attempt1",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "e07ecb2322bab51fedab39541f9739b1d06a764c5cc5cf2e0425887f1fdcae56",
+          "disk_bytes": 380,
+          "uncompressed_bytes": 380
+        },
+        {
+          "path": "weights.npz",
+          "sha256": "f06a6e5c53e649f8e5883707c0451b13d8f21f126c47274258240b094a010cd6",
+          "disk_bytes": 50532,
+          "uncompressed_bytes": 50532,
+          "members": [
+            {
+              "name": "mean.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "scale.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "weight.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "bias.npy",
+              "uncompressed_bytes": 136
+            }
+          ],
+          "arrays": [
+            {
+              "name": "mean",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "scale",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "weight",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "bias",
+              "shape": [],
+              "dtype": "float64",
+              "array_bytes": 8
+            }
+          ]
+        }
+      ],
+      "uncompressed_bytes": 50912,
+      "limit_bytes": 16777216,
+      "within_limit": true,
+      "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+      "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+    },
+    "artifacts/research_v2/linear_group_hard/fold0-attempt1": {
+      "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\linear_group_hard\\fold0-attempt1",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "9650b38236001db52cf5c96d8e56cdc025d68b7aacca49d8b054a8511583e07e",
+          "disk_bytes": 380,
+          "uncompressed_bytes": 380
+        },
+        {
+          "path": "weights.npz",
+          "sha256": "e1e1420ba365b91805ee508d9647a1a34244ff42c85237439c9e01ea81699e81",
+          "disk_bytes": 50532,
+          "uncompressed_bytes": 50532,
+          "members": [
+            {
+              "name": "mean.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "scale.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "weight.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "bias.npy",
+              "uncompressed_bytes": 136
+            }
+          ],
+          "arrays": [
+            {
+              "name": "mean",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "scale",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "weight",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "bias",
+              "shape": [],
+              "dtype": "float64",
+              "array_bytes": 8
+            }
+          ]
+        }
+      ],
+      "uncompressed_bytes": 50912,
+      "limit_bytes": 16777216,
+      "within_limit": true,
+      "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+      "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+    },
+    "artifacts/research_v2/linear_group_hard/fold1-attempt1": {
+      "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\linear_group_hard\\fold1-attempt1",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "9650b38236001db52cf5c96d8e56cdc025d68b7aacca49d8b054a8511583e07e",
+          "disk_bytes": 380,
+          "uncompressed_bytes": 380
+        },
+        {
+          "path": "weights.npz",
+          "sha256": "f42d00fda9a90739342b38db6c88332b6ed6dc1d45ec71a603fbb35df707481f",
+          "disk_bytes": 50532,
+          "uncompressed_bytes": 50532,
+          "members": [
+            {
+              "name": "mean.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "scale.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "weight.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "bias.npy",
+              "uncompressed_bytes": 136
+            }
+          ],
+          "arrays": [
+            {
+              "name": "mean",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "scale",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "weight",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "bias",
+              "shape": [],
+              "dtype": "float64",
+              "array_bytes": 8
+            }
+          ]
+        }
+      ],
+      "uncompressed_bytes": 50912,
+      "limit_bytes": 16777216,
+      "within_limit": true,
+      "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+      "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+    },
+    "artifacts/research_v2/linear_group_hard/fold2-attempt1": {
+      "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\linear_group_hard\\fold2-attempt1",
+      "files": [
+        {
+          "path": "config.json",
+          "sha256": "9650b38236001db52cf5c96d8e56cdc025d68b7aacca49d8b054a8511583e07e",
+          "disk_bytes": 380,
+          "uncompressed_bytes": 380
+        },
+        {
+          "path": "weights.npz",
+          "sha256": "82210108fe73afd78c61c7bbe17d92ee489fa09d57ade56b7a45c22e64bdf08a",
+          "disk_bytes": 50532,
+          "uncompressed_bytes": 50532,
+          "members": [
+            {
+              "name": "mean.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "scale.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "weight.npy",
+              "uncompressed_bytes": 16640
+            },
+            {
+              "name": "bias.npy",
+              "uncompressed_bytes": 136
+            }
+          ],
+          "arrays": [
+            {
+              "name": "mean",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "scale",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "weight",
+              "shape": [
+                2064
+              ],
+              "dtype": "float64",
+              "array_bytes": 16512
+            },
+            {
+              "name": "bias",
+              "shape": [],
+              "dtype": "float64",
+              "array_bytes": 8
+            }
+          ]
+        }
+      ],
+      "uncompressed_bytes": 50912,
+      "limit_bytes": 16777216,
+      "within_limit": true,
+      "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+      "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+    }
+  },
+  "total_actual_training_seconds_distinct_experiments": 66.59163179999632,
+  "notes": [
+    "Every row uses shared question-level outer folds; fold SD is sample SD, not a confidence interval.",
+    "Training cost repeats on decoder-only rows because they reuse the same trained model.",
+    "Asset bytes cover one deployable fold bundle, not all research archives. Final selected bundle must be audited separately.",
+    "No new validation/test score is computed here. OOF hyperparameter selection still causes optimistic bias."
+  ]
+}

@@ -1,0 +1,1751 @@
+{
+  "status": "complete",
+  "ensemble_evaluated": true,
+  "first": "attention_regularized_s0",
+  "second": "deepsets_regularized_s0",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "gate": {
+    "passed": true,
+    "first_only_correct": 71,
+    "second_only_correct": 38,
+    "hard_n": 2114,
+    "stronger_member_hard_correct": 1687,
+    "hard_oracle_correct": 1725,
+    "hard_oracle_gain_over_stronger_percentage_points": 1.7975402081362346,
+    "requirements": {
+      "minimum_each_corrects_other": 10,
+      "minimum_hard_oracle_gain_percentage_points": 1.0
+    },
+    "interpretation": "Passing permits exactly one equal-weight probability mixture; oracle is not an achievable prediction."
+  },
+  "metrics": {
+    "overall": {
+      "correct": 4315,
+      "n": 4755,
+      "pooled_accuracy": 90.7465825446898,
+      "fold_mean": 90.74658254468982,
+      "fold_sd": 0.32376034318277014,
+      "folds": [
+        {
+          "fold": 0,
+          "correct": 1444,
+          "n": 1585,
+          "accuracy": 91.10410094637224
+        },
+        {
+          "fold": 1,
+          "correct": 1437,
+          "n": 1585,
+          "accuracy": 90.66246056782335
+        },
+        {
+          "fold": 2,
+          "correct": 1434,
+          "n": 1585,
+          "accuracy": 90.47318611987382
+        }
+      ]
+    },
+    "hard": {
+      "correct": 1674,
+      "n": 2114,
+      "pooled_accuracy": 79.18637653736992,
+      "fold_mean": 79.18607618740599,
+      "fold_sd": 0.7408292045983614,
+      "folds": [
+        {
+          "fold": 0,
+          "correct": 564,
+          "n": 705,
+          "accuracy": 80.0
+        },
+        {
+          "fold": 1,
+          "correct": 557,
+          "n": 705,
+          "accuracy": 79.00709219858156
+        },
+        {
+          "fold": 2,
+          "correct": 553,
+          "n": 704,
+          "accuracy": 78.55113636363636
+        }
+      ]
+    },
+    "single_positive": {
+      "correct": 374,
+      "n": 711,
+      "pooled_accuracy": 52.601969057665265,
+      "fold_mean": 52.60196905766526,
+      "fold_sd": 5.571111763808259,
+      "folds": [
+        {
+          "fold": 0,
+          "correct": 139,
+          "n": 237,
+          "accuracy": 58.64978902953587
+        },
+        {
+          "fold": 1,
+          "correct": 113,
+          "n": 237,
+          "accuracy": 47.67932489451477
+        },
+        {
+          "fold": 2,
+          "correct": 122,
+          "n": 237,
+          "accuracy": 51.47679324894515
+        }
+      ]
+    }
+  },
+  "reliability": {
+    "n": 4755,
+    "brier": 0.06061204803633838,
+    "ece_10_equal_width": 0.013528668814599618,
+    "bins": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "n": 0,
+        "mean_confidence": null,
+        "accuracy_fraction": null
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "n": 0,
+        "mean_confidence": null,
+        "accuracy_fraction": null
+      },
+      {
+        "low": 0.2,
+        "high": 0.3,
+        "n": 2,
+        "mean_confidence": 0.2961940406312226,
+        "accuracy_fraction": 0.0
+      },
+      {
+        "low": 0.3,
+        "high": 0.4,
+        "n": 26,
+        "mean_confidence": 0.37179912482335237,
+        "accuracy_fraction": 0.2692307692307692
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "n": 101,
+        "mean_confidence": 0.45365134334363055,
+        "accuracy_fraction": 0.5247524752475248
+      },
+      {
+        "low": 0.5,
+        "high": 0.6,
+        "n": 203,
+        "mean_confidence": 0.5526337324120587,
+        "accuracy_fraction": 0.5270935960591133
+      },
+      {
+        "low": 0.6,
+        "high": 0.7,
+        "n": 214,
+        "mean_confidence": 0.6486669693150031,
+        "accuracy_fraction": 0.6401869158878505
+      },
+      {
+        "low": 0.7,
+        "high": 0.8,
+        "n": 260,
+        "mean_confidence": 0.7541443863278573,
+        "accuracy_fraction": 0.7038461538461539
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "n": 375,
+        "mean_confidence": 0.853617544617519,
+        "accuracy_fraction": 0.808
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "n": 3574,
+        "mean_confidence": 0.9909638896963031,
+        "accuracy_fraction": 0.9862898712926693
+      }
+    ],
+    "confidence_event": "Actual selected numeric answer group is correct; not maximum candidate softmax.",
+    "calibration": "Uncalibrated group probability; OOF descriptive diagnostic only."
+  },
+  "member_metrics": {
+    "attention_regularized_s0": {
+      "overall": {
+        "correct": 4328,
+        "n": 4755,
+        "pooled_accuracy": 91.01997896950579,
+        "fold_mean": 91.01997896950577,
+        "fold_sd": 0.32376034318276414,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 1447,
+            "n": 1585,
+            "accuracy": 91.29337539432176
+          },
+          {
+            "fold": 1,
+            "correct": 1437,
+            "n": 1585,
+            "accuracy": 90.66246056782335
+          },
+          {
+            "fold": 2,
+            "correct": 1444,
+            "n": 1585,
+            "accuracy": 91.10410094637224
+          }
+        ]
+      },
+      "hard": {
+        "correct": 1687,
+        "n": 2114,
+        "pooled_accuracy": 79.80132450331125,
+        "fold_mean": 79.80140500752204,
+        "fold_sd": 0.724372306222754,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 567,
+            "n": 705,
+            "accuracy": 80.42553191489363
+          },
+          {
+            "fold": 1,
+            "correct": 557,
+            "n": 705,
+            "accuracy": 79.00709219858156
+          },
+          {
+            "fold": 2,
+            "correct": 563,
+            "n": 704,
+            "accuracy": 79.9715909090909
+          }
+        ]
+      },
+      "single_positive": {
+        "correct": 387,
+        "n": 711,
+        "pooled_accuracy": 54.43037974683544,
+        "fold_mean": 54.430379746835435,
+        "fold_sd": 4.866060166527759,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 141,
+            "n": 237,
+            "accuracy": 59.49367088607595
+          },
+          {
+            "fold": 1,
+            "correct": 118,
+            "n": 237,
+            "accuracy": 49.789029535864984
+          },
+          {
+            "fold": 2,
+            "correct": 128,
+            "n": 237,
+            "accuracy": 54.008438818565395
+          }
+        ]
+      }
+    },
+    "deepsets_regularized_s0": {
+      "overall": {
+        "correct": 4295,
+        "n": 4755,
+        "pooled_accuracy": 90.32597266035752,
+        "fold_mean": 90.32597266035752,
+        "fold_sd": 0.420083792963995,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 1439,
+            "n": 1585,
+            "accuracy": 90.78864353312302
+          },
+          {
+            "fold": 1,
+            "correct": 1430,
+            "n": 1585,
+            "accuracy": 90.22082018927445
+          },
+          {
+            "fold": 2,
+            "correct": 1426,
+            "n": 1585,
+            "accuracy": 89.96845425867508
+          }
+        ]
+      },
+      "hard": {
+        "correct": 1654,
+        "n": 2114,
+        "pooled_accuracy": 78.240302743614,
+        "fold_mean": 78.23991242209327,
+        "fold_sd": 0.9581575083516943,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 559,
+            "n": 705,
+            "accuracy": 79.29078014184398
+          },
+          {
+            "fold": 1,
+            "correct": 550,
+            "n": 705,
+            "accuracy": 78.01418439716312
+          },
+          {
+            "fold": 2,
+            "correct": 545,
+            "n": 704,
+            "accuracy": 77.41477272727273
+          }
+        ]
+      },
+      "single_positive": {
+        "correct": 360,
+        "n": 711,
+        "pooled_accuracy": 50.63291139240506,
+        "fold_mean": 50.63291139240507,
+        "fold_sd": 5.800728727792205,
+        "folds": [
+          {
+            "fold": 0,
+            "correct": 135,
+            "n": 237,
+            "accuracy": 56.9620253164557
+          },
+          {
+            "fold": 1,
+            "correct": 108,
+            "n": 237,
+            "accuracy": 45.56962025316456
+          },
+          {
+            "fold": 2,
+            "correct": 117,
+            "n": 237,
+            "accuracy": 49.36708860759494
+          }
+        ]
+      }
+    }
+  },
+  "paired_comparisons": [
+    {
+      "first": "equal_probability_ensemble",
+      "second": "attention_regularized_s0",
+      "overall": {
+        "n": 4755,
+        "first_correct": 4315,
+        "second_correct": 4328,
+        "correct_difference": -13,
+        "difference_percentage_points": -0.2733964248159832,
+        "paired_bootstrap_95_interval": [
+          -0.5678233438485805,
+          0.021030494216614088
+        ],
+        "first_only_correct": 19,
+        "second_only_correct": 32,
+        "both_wrong": 408,
+        "both_correct": 4296,
+        "bootstrap_seed": 3036901059
+      },
+      "hard": {
+        "n": 2114,
+        "first_correct": 1674,
+        "second_correct": 1687,
+        "correct_difference": -13,
+        "difference_percentage_points": -0.6149479659413435,
+        "paired_bootstrap_95_interval": [
+          -1.2771996215704824,
+          0.04730368968779565
+        ],
+        "first_only_correct": 19,
+        "second_only_correct": 32,
+        "both_wrong": 408,
+        "both_correct": 1655,
+        "bootstrap_seed": 3036901060
+      },
+      "error_overlap": {
+        "intersection": 408,
+        "union": 459,
+        "jaccard": 0.8888888888888888,
+        "oracle_correct_upper_bound": 4347,
+        "note": "Oracle is diagnostic only, not a realizable ensemble result."
+      },
+      "bootstrap_repetitions": 5000,
+      "interval_caveat": "Paired question bootstrap conditional on completed OOF predictions; model-selection optimism remains."
+    },
+    {
+      "first": "equal_probability_ensemble",
+      "second": "deepsets_regularized_s0",
+      "overall": {
+        "n": 4755,
+        "first_correct": 4315,
+        "second_correct": 4295,
+        "correct_difference": 20,
+        "difference_percentage_points": 0.4206098843322818,
+        "paired_bootstrap_95_interval": [
+          0.10515247108307045,
+          0.7365930599369008
+        ],
+        "first_only_correct": 39,
+        "second_only_correct": 19,
+        "both_wrong": 421,
+        "both_correct": 4276,
+        "bootstrap_seed": 3036901059
+      },
+      "hard": {
+        "n": 2114,
+        "first_correct": 1674,
+        "second_correct": 1654,
+        "correct_difference": 20,
+        "difference_percentage_points": 0.9460737937559129,
+        "paired_bootstrap_95_interval": [
+          0.23651844843897823,
+          1.6556291390728477
+        ],
+        "first_only_correct": 39,
+        "second_only_correct": 19,
+        "both_wrong": 421,
+        "both_correct": 1635,
+        "bootstrap_seed": 3036901060
+      },
+      "error_overlap": {
+        "intersection": 421,
+        "union": 479,
+        "jaccard": 0.8789144050104384,
+        "oracle_correct_upper_bound": 4334,
+        "note": "Oracle is diagnostic only, not a realizable ensemble result."
+      },
+      "bootstrap_repetitions": 5000,
+      "interval_caveat": "Paired question bootstrap conditional on completed OOF predictions; model-selection optimism remains."
+    }
+  ],
+  "assets_per_fold": [
+    {
+      "fold": 0,
+      "parameters": 504962,
+      "numeric_asset_bytes": 2085896,
+      "member_audited_uncompressed_bytes_sum": 2094209,
+      "member_audits": [
+        {
+          "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\attention_regularized_s0\\fold0-attempt1",
+          "files": [
+            {
+              "path": "config.json",
+              "sha256": "fc8a9c37dbff7afe86bd27aeb032bfd400c13411f7c7e08659ea197a6cce9317",
+              "disk_bytes": 383,
+              "uncompressed_bytes": 383
+            },
+            {
+              "path": "weights.npz",
+              "sha256": "ca2ec584e8d6e3aa687afdfa788758d250f9c8e51a0deca902cf223b35af25b1",
+              "disk_bytes": 1130156,
+              "uncompressed_bytes": 1130156,
+              "members": [
+                {
+                  "name": "mean.npy",
+                  "uncompressed_bytes": 16640
+                },
+                {
+                  "name": "scale.npy",
+                  "uncompressed_bytes": 16640
+                },
+                {
+                  "name": "input.weight.npy",
+                  "uncompressed_bytes": 524416
+                },
+                {
+                  "name": "input.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "norm1.weight.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "norm1.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "qkv.weight.npy",
+                  "uncompressed_bytes": 196736
+                },
+                {
+                  "name": "qkv.bias.npy",
+                  "uncompressed_bytes": 1664
+                },
+                {
+                  "name": "out.weight.npy",
+                  "uncompressed_bytes": 65664
+                },
+                {
+                  "name": "out.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "norm2.weight.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "norm2.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "ff1.weight.npy",
+                  "uncompressed_bytes": 131200
+                },
+                {
+                  "name": "ff1.bias.npy",
+                  "uncompressed_bytes": 1152
+                },
+                {
+                  "name": "ff2.weight.npy",
+                  "uncompressed_bytes": 131200
+                },
+                {
+                  "name": "ff2.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "rho.weight.npy",
+                  "uncompressed_bytes": 36992
+                },
+                {
+                  "name": "rho.bias.npy",
+                  "uncompressed_bytes": 384
+                },
+                {
+                  "name": "head.weight.npy",
+                  "uncompressed_bytes": 384
+                },
+                {
+                  "name": "head.bias.npy",
+                  "uncompressed_bytes": 132
+                }
+              ],
+              "arrays": [
+                {
+                  "name": "mean",
+                  "shape": [
+                    2064
+                  ],
+                  "dtype": "float64",
+                  "array_bytes": 16512
+                },
+                {
+                  "name": "scale",
+                  "shape": [
+                    2064
+                  ],
+                  "dtype": "float64",
+                  "array_bytes": 16512
+                },
+                {
+                  "name": "input.weight",
+                  "shape": [
+                    128,
+                    1024
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 524288
+                },
+                {
+                  "name": "input.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "norm1.weight",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "norm1.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "qkv.weight",
+                  "shape": [
+                    384,
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 196608
+                },
+                {
+                  "name": "qkv.bias",
+                  "shape": [
+                    384
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 1536
+                },
+                {
+                  "name": "out.weight",
+                  "shape": [
+                    128,
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 65536
+                },
+                {
+                  "name": "out.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "norm2.weight",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "norm2.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "ff1.weight",
+                  "shape": [
+                    256,
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 131072
+                },
+                {
+                  "name": "ff1.bias",
+                  "shape": [
+                    256
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 1024
+                },
+                {
+                  "name": "ff2.weight",
+                  "shape": [
+                    128,
+                    256
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 131072
+                },
+                {
+                  "name": "ff2.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "rho.weight",
+                  "shape": [
+                    64,
+                    144
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 36864
+                },
+                {
+                  "name": "rho.bias",
+                  "shape": [
+                    64
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 256
+                },
+                {
+                  "name": "head.weight",
+                  "shape": [
+                    1,
+                    64
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 256
+                },
+                {
+                  "name": "head.bias",
+                  "shape": [
+                    1
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 4
+                }
+              ]
+            }
+          ],
+          "uncompressed_bytes": 1130539,
+          "limit_bytes": 16777216,
+          "within_limit": true,
+          "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+          "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+        },
+        {
+          "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\deepsets_regularized_s0\\fold0-attempt1",
+          "files": [
+            {
+              "path": "config.json",
+              "sha256": "e2c210a3717c5b48ee312226491b4b9c444cb6642d94fb3afd1fa39226bd89cf",
+              "disk_bytes": 382,
+              "uncompressed_bytes": 382
+            },
+            {
+              "path": "weights.npz",
+              "sha256": "62818411ccc23c8ce5c4d9323d5e22c10772c3da5e6a250fb18e53876fc5ae7b",
+              "disk_bytes": 963288,
+              "uncompressed_bytes": 963288,
+              "members": [
+                {
+                  "name": "mean.npy",
+                  "uncompressed_bytes": 16640
+                },
+                {
+                  "name": "scale.npy",
+                  "uncompressed_bytes": 16640
+                },
+                {
+                  "name": "phi1.weight.npy",
+                  "uncompressed_bytes": 524416
+                },
+                {
+                  "name": "phi1.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "phi2.weight.npy",
+                  "uncompressed_bytes": 65664
+                },
+                {
+                  "name": "phi2.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "rho.weight.npy",
+                  "uncompressed_bytes": 336000
+                },
+                {
+                  "name": "rho.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "head.weight.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "head.bias.npy",
+                  "uncompressed_bytes": 132
+                }
+              ],
+              "arrays": [
+                {
+                  "name": "mean",
+                  "shape": [
+                    2064
+                  ],
+                  "dtype": "float64",
+                  "array_bytes": 16512
+                },
+                {
+                  "name": "scale",
+                  "shape": [
+                    2064
+                  ],
+                  "dtype": "float64",
+                  "array_bytes": 16512
+                },
+                {
+                  "name": "phi1.weight",
+                  "shape": [
+                    128,
+                    1024
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 524288
+                },
+                {
+                  "name": "phi1.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "phi2.weight",
+                  "shape": [
+                    128,
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 65536
+                },
+                {
+                  "name": "phi2.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "rho.weight",
+                  "shape": [
+                    128,
+                    656
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 335872
+                },
+                {
+                  "name": "rho.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "head.weight",
+                  "shape": [
+                    1,
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "head.bias",
+                  "shape": [
+                    1
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 4
+                }
+              ]
+            }
+          ],
+          "uncompressed_bytes": 963670,
+          "limit_bytes": 16777216,
+          "within_limit": true,
+          "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+          "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "parameters": 504962,
+      "numeric_asset_bytes": 2085896,
+      "member_audited_uncompressed_bytes_sum": 2094209,
+      "member_audits": [
+        {
+          "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\attention_regularized_s0\\fold1-attempt1",
+          "files": [
+            {
+              "path": "config.json",
+              "sha256": "fc8a9c37dbff7afe86bd27aeb032bfd400c13411f7c7e08659ea197a6cce9317",
+              "disk_bytes": 383,
+              "uncompressed_bytes": 383
+            },
+            {
+              "path": "weights.npz",
+              "sha256": "0262e2a4eeac9bdc9eaa2644e94a952566c1b815fcdc545f08461889d00d4edb",
+              "disk_bytes": 1130156,
+              "uncompressed_bytes": 1130156,
+              "members": [
+                {
+                  "name": "mean.npy",
+                  "uncompressed_bytes": 16640
+                },
+                {
+                  "name": "scale.npy",
+                  "uncompressed_bytes": 16640
+                },
+                {
+                  "name": "input.weight.npy",
+                  "uncompressed_bytes": 524416
+                },
+                {
+                  "name": "input.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "norm1.weight.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "norm1.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "qkv.weight.npy",
+                  "uncompressed_bytes": 196736
+                },
+                {
+                  "name": "qkv.bias.npy",
+                  "uncompressed_bytes": 1664
+                },
+                {
+                  "name": "out.weight.npy",
+                  "uncompressed_bytes": 65664
+                },
+                {
+                  "name": "out.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "norm2.weight.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "norm2.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "ff1.weight.npy",
+                  "uncompressed_bytes": 131200
+                },
+                {
+                  "name": "ff1.bias.npy",
+                  "uncompressed_bytes": 1152
+                },
+                {
+                  "name": "ff2.weight.npy",
+                  "uncompressed_bytes": 131200
+                },
+                {
+                  "name": "ff2.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "rho.weight.npy",
+                  "uncompressed_bytes": 36992
+                },
+                {
+                  "name": "rho.bias.npy",
+                  "uncompressed_bytes": 384
+                },
+                {
+                  "name": "head.weight.npy",
+                  "uncompressed_bytes": 384
+                },
+                {
+                  "name": "head.bias.npy",
+                  "uncompressed_bytes": 132
+                }
+              ],
+              "arrays": [
+                {
+                  "name": "mean",
+                  "shape": [
+                    2064
+                  ],
+                  "dtype": "float64",
+                  "array_bytes": 16512
+                },
+                {
+                  "name": "scale",
+                  "shape": [
+                    2064
+                  ],
+                  "dtype": "float64",
+                  "array_bytes": 16512
+                },
+                {
+                  "name": "input.weight",
+                  "shape": [
+                    128,
+                    1024
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 524288
+                },
+                {
+                  "name": "input.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "norm1.weight",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "norm1.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "qkv.weight",
+                  "shape": [
+                    384,
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 196608
+                },
+                {
+                  "name": "qkv.bias",
+                  "shape": [
+                    384
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 1536
+                },
+                {
+                  "name": "out.weight",
+                  "shape": [
+                    128,
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 65536
+                },
+                {
+                  "name": "out.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "norm2.weight",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "norm2.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "ff1.weight",
+                  "shape": [
+                    256,
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 131072
+                },
+                {
+                  "name": "ff1.bias",
+                  "shape": [
+                    256
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 1024
+                },
+                {
+                  "name": "ff2.weight",
+                  "shape": [
+                    128,
+                    256
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 131072
+                },
+                {
+                  "name": "ff2.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "rho.weight",
+                  "shape": [
+                    64,
+                    144
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 36864
+                },
+                {
+                  "name": "rho.bias",
+                  "shape": [
+                    64
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 256
+                },
+                {
+                  "name": "head.weight",
+                  "shape": [
+                    1,
+                    64
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 256
+                },
+                {
+                  "name": "head.bias",
+                  "shape": [
+                    1
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 4
+                }
+              ]
+            }
+          ],
+          "uncompressed_bytes": 1130539,
+          "limit_bytes": 16777216,
+          "within_limit": true,
+          "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+          "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+        },
+        {
+          "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\deepsets_regularized_s0\\fold1-attempt1",
+          "files": [
+            {
+              "path": "config.json",
+              "sha256": "e2c210a3717c5b48ee312226491b4b9c444cb6642d94fb3afd1fa39226bd89cf",
+              "disk_bytes": 382,
+              "uncompressed_bytes": 382
+            },
+            {
+              "path": "weights.npz",
+              "sha256": "9fef463bacee442a320b1ed19209daa5818364c795fe4137599b480a3f8448f9",
+              "disk_bytes": 963288,
+              "uncompressed_bytes": 963288,
+              "members": [
+                {
+                  "name": "mean.npy",
+                  "uncompressed_bytes": 16640
+                },
+                {
+                  "name": "scale.npy",
+                  "uncompressed_bytes": 16640
+                },
+                {
+                  "name": "phi1.weight.npy",
+                  "uncompressed_bytes": 524416
+                },
+                {
+                  "name": "phi1.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "phi2.weight.npy",
+                  "uncompressed_bytes": 65664
+                },
+                {
+                  "name": "phi2.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "rho.weight.npy",
+                  "uncompressed_bytes": 336000
+                },
+                {
+                  "name": "rho.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "head.weight.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "head.bias.npy",
+                  "uncompressed_bytes": 132
+                }
+              ],
+              "arrays": [
+                {
+                  "name": "mean",
+                  "shape": [
+                    2064
+                  ],
+                  "dtype": "float64",
+                  "array_bytes": 16512
+                },
+                {
+                  "name": "scale",
+                  "shape": [
+                    2064
+                  ],
+                  "dtype": "float64",
+                  "array_bytes": 16512
+                },
+                {
+                  "name": "phi1.weight",
+                  "shape": [
+                    128,
+                    1024
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 524288
+                },
+                {
+                  "name": "phi1.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "phi2.weight",
+                  "shape": [
+                    128,
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 65536
+                },
+                {
+                  "name": "phi2.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "rho.weight",
+                  "shape": [
+                    128,
+                    656
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 335872
+                },
+                {
+                  "name": "rho.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "head.weight",
+                  "shape": [
+                    1,
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "head.bias",
+                  "shape": [
+                    1
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 4
+                }
+              ]
+            }
+          ],
+          "uncompressed_bytes": 963670,
+          "limit_bytes": 16777216,
+          "within_limit": true,
+          "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+          "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "parameters": 504962,
+      "numeric_asset_bytes": 2085896,
+      "member_audited_uncompressed_bytes_sum": 2094209,
+      "member_audits": [
+        {
+          "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\attention_regularized_s0\\fold2-attempt1",
+          "files": [
+            {
+              "path": "config.json",
+              "sha256": "fc8a9c37dbff7afe86bd27aeb032bfd400c13411f7c7e08659ea197a6cce9317",
+              "disk_bytes": 383,
+              "uncompressed_bytes": 383
+            },
+            {
+              "path": "weights.npz",
+              "sha256": "c550a472ed61e57c870d75bd3db66fdb4bdf7e9b214ddc14308dda1aebbe9af0",
+              "disk_bytes": 1130156,
+              "uncompressed_bytes": 1130156,
+              "members": [
+                {
+                  "name": "mean.npy",
+                  "uncompressed_bytes": 16640
+                },
+                {
+                  "name": "scale.npy",
+                  "uncompressed_bytes": 16640
+                },
+                {
+                  "name": "input.weight.npy",
+                  "uncompressed_bytes": 524416
+                },
+                {
+                  "name": "input.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "norm1.weight.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "norm1.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "qkv.weight.npy",
+                  "uncompressed_bytes": 196736
+                },
+                {
+                  "name": "qkv.bias.npy",
+                  "uncompressed_bytes": 1664
+                },
+                {
+                  "name": "out.weight.npy",
+                  "uncompressed_bytes": 65664
+                },
+                {
+                  "name": "out.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "norm2.weight.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "norm2.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "ff1.weight.npy",
+                  "uncompressed_bytes": 131200
+                },
+                {
+                  "name": "ff1.bias.npy",
+                  "uncompressed_bytes": 1152
+                },
+                {
+                  "name": "ff2.weight.npy",
+                  "uncompressed_bytes": 131200
+                },
+                {
+                  "name": "ff2.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "rho.weight.npy",
+                  "uncompressed_bytes": 36992
+                },
+                {
+                  "name": "rho.bias.npy",
+                  "uncompressed_bytes": 384
+                },
+                {
+                  "name": "head.weight.npy",
+                  "uncompressed_bytes": 384
+                },
+                {
+                  "name": "head.bias.npy",
+                  "uncompressed_bytes": 132
+                }
+              ],
+              "arrays": [
+                {
+                  "name": "mean",
+                  "shape": [
+                    2064
+                  ],
+                  "dtype": "float64",
+                  "array_bytes": 16512
+                },
+                {
+                  "name": "scale",
+                  "shape": [
+                    2064
+                  ],
+                  "dtype": "float64",
+                  "array_bytes": 16512
+                },
+                {
+                  "name": "input.weight",
+                  "shape": [
+                    128,
+                    1024
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 524288
+                },
+                {
+                  "name": "input.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "norm1.weight",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "norm1.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "qkv.weight",
+                  "shape": [
+                    384,
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 196608
+                },
+                {
+                  "name": "qkv.bias",
+                  "shape": [
+                    384
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 1536
+                },
+                {
+                  "name": "out.weight",
+                  "shape": [
+                    128,
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 65536
+                },
+                {
+                  "name": "out.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "norm2.weight",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "norm2.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "ff1.weight",
+                  "shape": [
+                    256,
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 131072
+                },
+                {
+                  "name": "ff1.bias",
+                  "shape": [
+                    256
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 1024
+                },
+                {
+                  "name": "ff2.weight",
+                  "shape": [
+                    128,
+                    256
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 131072
+                },
+                {
+                  "name": "ff2.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "rho.weight",
+                  "shape": [
+                    64,
+                    144
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 36864
+                },
+                {
+                  "name": "rho.bias",
+                  "shape": [
+                    64
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 256
+                },
+                {
+                  "name": "head.weight",
+                  "shape": [
+                    1,
+                    64
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 256
+                },
+                {
+                  "name": "head.bias",
+                  "shape": [
+                    1
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 4
+                }
+              ]
+            }
+          ],
+          "uncompressed_bytes": 1130539,
+          "limit_bytes": 16777216,
+          "within_limit": true,
+          "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+          "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+        },
+        {
+          "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v2\\deepsets_regularized_s0\\fold2-attempt1",
+          "files": [
+            {
+              "path": "config.json",
+              "sha256": "e2c210a3717c5b48ee312226491b4b9c444cb6642d94fb3afd1fa39226bd89cf",
+              "disk_bytes": 382,
+              "uncompressed_bytes": 382
+            },
+            {
+              "path": "weights.npz",
+              "sha256": "719a14ea8f7ac6f34b31f84eeb8416febca7c83612afc761cadc2df27c710ab5",
+              "disk_bytes": 963288,
+              "uncompressed_bytes": 963288,
+              "members": [
+                {
+                  "name": "mean.npy",
+                  "uncompressed_bytes": 16640
+                },
+                {
+                  "name": "scale.npy",
+                  "uncompressed_bytes": 16640
+                },
+                {
+                  "name": "phi1.weight.npy",
+                  "uncompressed_bytes": 524416
+                },
+                {
+                  "name": "phi1.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "phi2.weight.npy",
+                  "uncompressed_bytes": 65664
+                },
+                {
+                  "name": "phi2.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "rho.weight.npy",
+                  "uncompressed_bytes": 336000
+                },
+                {
+                  "name": "rho.bias.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "head.weight.npy",
+                  "uncompressed_bytes": 640
+                },
+                {
+                  "name": "head.bias.npy",
+                  "uncompressed_bytes": 132
+                }
+              ],
+              "arrays": [
+                {
+                  "name": "mean",
+                  "shape": [
+                    2064
+                  ],
+                  "dtype": "float64",
+                  "array_bytes": 16512
+                },
+                {
+                  "name": "scale",
+                  "shape": [
+                    2064
+                  ],
+                  "dtype": "float64",
+                  "array_bytes": 16512
+                },
+                {
+                  "name": "phi1.weight",
+                  "shape": [
+                    128,
+                    1024
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 524288
+                },
+                {
+                  "name": "phi1.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "phi2.weight",
+                  "shape": [
+                    128,
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 65536
+                },
+                {
+                  "name": "phi2.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "rho.weight",
+                  "shape": [
+                    128,
+                    656
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 335872
+                },
+                {
+                  "name": "rho.bias",
+                  "shape": [
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "head.weight",
+                  "shape": [
+                    1,
+                    128
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 512
+                },
+                {
+                  "name": "head.bias",
+                  "shape": [
+                    1
+                  ],
+                  "dtype": "float32",
+                  "array_bytes": 4
+                }
+              ]
+            }
+          ],
+          "uncompressed_bytes": 963670,
+          "limit_bytes": 16777216,
+          "within_limit": true,
+          "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+          "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+        }
+      ]
+    }
+  ],
+  "asset_note": "Sum of actual member bundles; final deployment wrapper/config must also be counted and audited if selected.",
+  "existing_training_seconds_reused": 251.06133060000138,
+  "additional_training_seconds": 0.0,
+  "group_probability_combine_seconds": 0.023748199999317876,
+  "analysis_wall_seconds": 1.1967034000008425,
+  "cost_note": "Analysis timings are not official fresh-process prediction/scoring measurements.",
+  "oof_mixture_sha256": "1a0f9497b25d435f9732753e7851b63b6efa73f23f1ea78726f0e83e7d183d9f",
+  "validation": "Not evaluated by this train-only tool",
+  "test": "Disabled",
+  "caveat": "Pair selection used OOF results; bootstrap intervals do not remove model-selection optimism."
+}

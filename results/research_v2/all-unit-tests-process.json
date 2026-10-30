@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "wall_seconds": 7.453665300001376,
+  "reason": "Verify process exit status after PowerShell stderr redirection reported NativeCommandError despite unittest OK"
+}

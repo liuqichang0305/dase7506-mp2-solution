@@ -1,0 +1,34 @@
+{
+  "timestamp_utc": "2026-10-29T11:35:24.022144+00:00",
+  "status": "passed",
+  "clone_head": "36f9617175321a2861e78bb2f4ffcde643c4fc03",
+  "verified_source_and_asset_files": 20,
+  "numpy_only_packages": [
+    "numpy==2.5.3"
+  ],
+  "data_files_present": [
+    "gsm8k_validation.jsonl",
+    "LICENSE.txt",
+    "manifest.json",
+    "NOTICE.txt",
+    "candidates\\gsm8k_validation.jsonl",
+    "candidates\\gsm8k_validation.npz"
+  ],
+  "no_train_or_test_data_present": true,
+  "matching_choices": 798,
+  "correct": 740,
+  "n": 798,
+  "fresh_prediction_plus_scoring_seconds": 0.7323424999995041,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "OMP_THREAD_LIMIT": "1"
+  },
+  "isolated_contract_passed": true,
+  "checkpoint_retrained": false,
+  "note": "Read-only independent verification of the actual fresh checkout, environment inventory, immutable bytes and saved official outputs; no new model or scorer run."
+}

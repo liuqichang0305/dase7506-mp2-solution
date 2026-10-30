@@ -1,0 +1,262 @@
+{
+  "timestamp_utc": "2026-10-29T09:46:26.065710+00:00",
+  "status": "passed_development_pending_freeze_reproduction",
+  "completed_three_fold_experiments": 19,
+  "training_rows": [
+    {
+      "experiment_id": "attention_group_s0",
+      "seed": 3036900957,
+      "family": "attention",
+      "hard_correct": 1668,
+      "hard_n": 2114,
+      "correct": 4309,
+      "training_seconds": 41.68935790000069,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "attention_hard_ablation",
+      "seed": 3036900957,
+      "family": "attention",
+      "hard_correct": 1680,
+      "hard_n": 2114,
+      "correct": 4321,
+      "training_seconds": 133.29358649999813,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "attention_regularized_s0",
+      "seed": 3036900957,
+      "family": "attention",
+      "hard_correct": 1687,
+      "hard_n": 2114,
+      "correct": 4328,
+      "training_seconds": 133.29731520000132,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "attention_regularized_s1",
+      "seed": 3036900958,
+      "family": "attention",
+      "hard_correct": 1678,
+      "hard_n": 2114,
+      "correct": 4319,
+      "training_seconds": 1098.3893508,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "attention_regularized_s2",
+      "seed": 3036900959,
+      "family": "attention",
+      "hard_correct": 1671,
+      "hard_n": 2114,
+      "correct": 4312,
+      "training_seconds": 60.207461500000136,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "deepsets_group_s0",
+      "seed": 3036900957,
+      "family": "deepsets",
+      "hard_correct": 1648,
+      "hard_n": 2114,
+      "correct": 4289,
+      "training_seconds": 34.265074100001584,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "deepsets_no_context",
+      "seed": 3036900957,
+      "family": "deepsets",
+      "hard_correct": 1655,
+      "hard_n": 2114,
+      "correct": 4296,
+      "training_seconds": 86.94164140000248,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "deepsets_regularized_s0",
+      "seed": 3036900957,
+      "family": "deepsets",
+      "hard_correct": 1654,
+      "hard_n": 2114,
+      "correct": 4295,
+      "training_seconds": 117.76401540000006,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "deepsets_regularized_s1",
+      "seed": 3036900958,
+      "family": "deepsets",
+      "hard_correct": 1672,
+      "hard_n": 2114,
+      "correct": 4313,
+      "training_seconds": 59.90083009999944,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "deepsets_regularized_s2",
+      "seed": 3036900959,
+      "family": "deepsets",
+      "hard_correct": 1667,
+      "hard_n": 2114,
+      "correct": 4308,
+      "training_seconds": 59.6540313000005,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "linear_group_a0",
+      "seed": 3036900957,
+      "family": "linear",
+      "hard_correct": 1601,
+      "hard_n": 2114,
+      "correct": 4242,
+      "training_seconds": 14.332354699998177,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "linear_group_a0p5",
+      "seed": 3036900957,
+      "family": "linear",
+      "hard_correct": 1595,
+      "hard_n": 2114,
+      "correct": 4236,
+      "training_seconds": 14.54017279999971,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "linear_group_a1",
+      "seed": 3036900957,
+      "family": "linear",
+      "hard_correct": 1588,
+      "hard_n": 2114,
+      "correct": 4229,
+      "training_seconds": 13.01044759999968,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "linear_group_hard",
+      "seed": 3036900957,
+      "family": "linear",
+      "hard_correct": 1601,
+      "hard_n": 2114,
+      "correct": 4242,
+      "training_seconds": 12.990395599999829,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "linear_original",
+      "seed": 3036900957,
+      "family": "linear",
+      "hard_correct": 1576,
+      "hard_n": 2114,
+      "correct": 4213,
+      "training_seconds": 11.718261099998927,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "mlp_capacity_s0",
+      "seed": 3036900957,
+      "family": "mlp",
+      "hard_correct": 1603,
+      "hard_n": 2114,
+      "correct": 4244,
+      "training_seconds": 42.775077899999815,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "mlp_group_s0",
+      "seed": 3036900957,
+      "family": "mlp",
+      "hard_correct": 1599,
+      "hard_n": 2114,
+      "correct": 4240,
+      "training_seconds": 32.1143697000025,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "mlp_listwise_s0",
+      "seed": 3036900957,
+      "family": "mlp",
+      "hard_correct": 1612,
+      "hard_n": 2114,
+      "correct": 4253,
+      "training_seconds": 25.850140100003046,
+      "three_fold_hash_config_metrics_pass": true
+    },
+    {
+      "experiment_id": "resmlp_group_s0",
+      "seed": 3036900957,
+      "family": "resmlp",
+      "hard_correct": 1600,
+      "hard_n": 2114,
+      "correct": 4241,
+      "training_seconds": 27.359151000002385,
+      "three_fold_hash_config_metrics_pass": true
+    }
+  ],
+  "selection_time": "2026-10-29T09:32:41.286922+00:00",
+  "last_cv_completion": "2026-10-29T09:31:07.797814+00:00",
+  "final_training_completed": [
+    {
+      "id": "attention_regularized_s0",
+      "utc": "2026-10-29T09:33:47.942515+00:00"
+    },
+    {
+      "id": "deepsets_regularized_s0",
+      "utc": "2026-10-29T09:34:30.421836+00:00"
+    }
+  ],
+  "sealed_time": "2026-10-29T09:34:31.826350+00:00",
+  "validation_opened": "2026-10-29T09:35:57.841761+00:00",
+  "validation_completed": "2026-10-29T09:36:06.208803+00:00",
+  "finalists_count": 2,
+  "finalist_checks": [
+    {
+      "experiment_id": "attention_regularized_s0",
+      "counts": {
+        "correct": 738,
+        "n": 798,
+        "accuracy": 92.4812030075188,
+        "hard_correct": 295,
+        "hard_n": 355,
+        "hard_accuracy": 83.09859154929578,
+        "single_positive_correct": 70,
+        "single_positive_n": 117,
+        "single_positive_accuracy": 59.82905982905983
+      },
+      "full_validation_seconds": 1.7623151000007056,
+      "asset_bytes": 1130539,
+      "export_max_error": 1.9073486328125e-06,
+      "export_choice_equal": 798,
+      "contract_status": "passed",
+      "pool_threads": 1,
+      "all_research_training_completed_before_measurement": true
+    },
+    {
+      "experiment_id": "deepsets_regularized_s0",
+      "counts": {
+        "correct": 740,
+        "n": 798,
+        "accuracy": 92.73182957393483,
+        "hard_correct": 297,
+        "hard_n": 355,
+        "hard_accuracy": 83.66197183098592,
+        "single_positive_correct": 68,
+        "single_positive_n": 117,
+        "single_positive_accuracy": 58.119658119658126
+      },
+      "full_validation_seconds": 1.739727900001526,
+      "asset_bytes": 963670,
+      "export_max_error": 1.9073486328125e-06,
+      "export_choice_equal": 798,
+      "contract_status": "passed",
+      "pool_threads": 1,
+      "all_research_training_completed_before_measurement": true
+    }
+  ],
+  "selected": "deepsets_regularized_s0",
+  "old_preservation_checks_passed": 92,
+  "new_test_run": false,
+  "test_references_read": false,
+  "note": "Existing validation predictions independently checked against validation labels after the locked confirmation; no model execution or tuning in this audit. Training timeline is based on recorded project events, not an exhaustive OS process trace."
+}

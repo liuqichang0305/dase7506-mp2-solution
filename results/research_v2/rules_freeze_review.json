@@ -1,0 +1,132 @@
+{
+  "checked_utc": "2026-10-29T09:57:39.160574+00:00",
+  "status": "passed",
+  "source_commit": "36f9617175321a2861e78bb2f4ffcde643c4fc03",
+  "freeze_sha256": "beffa7b29472ba2da6fe639d8825ee29260fb201d6621b7e25f5294c77257a0c",
+  "checked_source_files": 18,
+  "checked_assets": 2,
+  "checks": [
+    {
+      "category": "source_files",
+      "path": "code/common.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/configs/research_v2/deepsets_regularized_s0.json",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/mp2/__init__.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/mp2/features.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/mp2/models_v2.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/mp2/selection_v2.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/mp2/training_v2.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/predict.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/run_research_v2.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/score_predictions.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/solution_v2.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/tools/check_contract_v2.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/tools/check_export_v2.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/tools/confirm_validation_v2.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/tools/fetch_development_v2.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/tools/freeze_v2.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/tools/lock_finalists_v2.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "source_files",
+      "path": "code/train_v2.py",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "assets",
+      "path": "artifacts/research_v2/final_deepsets/config.json",
+      "matches_local": true,
+      "matches_commit": true
+    },
+    {
+      "category": "assets",
+      "path": "artifacts/research_v2/final_deepsets/weights.npz",
+      "matches_local": true,
+      "matches_commit": true
+    }
+  ],
+  "new_test_allowed": false,
+  "selected_experiment_id": "deepsets_regularized_s0"
+}

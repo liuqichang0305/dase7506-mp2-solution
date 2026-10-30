@@ -1,0 +1,43 @@
+{
+  "experiment_id": "attention_group_s0",
+  "fold": 0,
+  "status": "complete",
+  "seed": 3036900957,
+  "fit": {
+    "seconds": 3.6941298000001552,
+    "epochs_run": 3,
+    "best_epoch": 3,
+    "inner_best_loss": null,
+    "numpy_max_abs_error": 1.9073486328125e-06,
+    "effective_weight_decay": 0.001,
+    "hard_fraction": 0.4444794952681388,
+    "torch_version": "2.15.0+cpu",
+    "device": "cpu",
+    "torch_threads": 1
+  },
+  "inner_stopping": {
+    "seconds": 12.223437000000558,
+    "epochs_run": 11,
+    "best_epoch": 3,
+    "inner_best_loss": 0.22712178528308868,
+    "numpy_max_abs_error": 3.814697265625e-06,
+    "effective_weight_decay": 0.001,
+    "hard_fraction": 0.444794952681388,
+    "torch_version": "2.15.0+cpu",
+    "device": "cpu",
+    "torch_threads": 1
+  },
+  "parameters": 273025,
+  "numeric_asset_bytes": 1125124,
+  "checkpoint": "artifacts/research_v2/attention_group_s0/fold0-attempt1",
+  "scores_sha256": "1ba9f3772c7fe6da96a779505d6a43b1ebb5483c55c3188d359a337786f828a1",
+  "correct": 1450,
+  "n": 1585,
+  "accuracy": 91.48264984227129,
+  "hard_correct": 570,
+  "hard_n": 705,
+  "hard_accuracy": 80.85106382978722,
+  "single_positive_correct": 144,
+  "single_positive_n": 237,
+  "single_positive_accuracy": 60.75949367088608
+}

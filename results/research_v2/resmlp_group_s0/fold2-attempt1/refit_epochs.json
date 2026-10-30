@@ -1,0 +1,13 @@
+{
+  "seed": 3036900959,
+  "effective_weight_decay": 0.001,
+  "hard_fraction": 0.444794952681388,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.27030222355755346,
+      "seconds": 1.0594051999996736
+    }
+  ],
+  "best_epoch": 1
+}
