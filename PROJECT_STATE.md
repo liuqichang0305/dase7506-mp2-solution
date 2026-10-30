@@ -14,15 +14,18 @@ instructions below for V3; all historical method/assets/logs remain preserved.
   hard530/705. No new validation/test evaluation has occurred.
 - V3 TabM/RealMLP/preprocessing and AdamW/Muon/EMA modules passed synthetic
   tests. NumPy-only inference/contract, exact epoch resume and scheduler
-  integration checks passed. First three full-CV results: AdamW MLP1592/2114
-  hard, EMA1601/2114, Muon LR0.01 1598/2114. Second Muon setting is running.
+  integration checks passed. R01--R03 completed10 configurations/30 outer fits.
+  Best new TabM k8:1619/2114 hard; robust-all RealMLP:1611/2114. Both remain
+  below historical Attention1687/2114. Complete evidence: analysis/r03_complete.
+  Resume checked2026-10-30T02:31Z; R04 Attention four-config round is running.
 - Train-only table recomputed all19 historical full-CV configurations with
   source/data/common-fold verification. No leaderboard feedback enters selection.
 - Current queue/state is authoritative in `results/research_v3/campaign_queue.json`,
   registry and heartbeat files. Scheduler restart retained the live trainer;
   Windows venv child-tree timeout cleanup passed a real no-data process test.
-- Next: complete four registered MLP optimizer controls, then TabM, RealMLP and
-  interaction controls. Read `docs/research_v3/SEARCH_PLAN_V3.md` and `RESUME.txt`.
+- Next: finish R04 interaction controls, then evidence-based TabM optimization,
+  feature/objective controls and fixed-seed confirmation. Read
+  `docs/research_v3/SEARCH_PLAN_V3.md` and `RESUME.txt`.
 - At most two NEW validation finalists, fixed deployment seed3036900957. New
   selection must satisfy the exact historical-fallback criterion in the plan.
 - Final submission and actual peer review are not completed for V3. Peer review
