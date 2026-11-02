@@ -40,8 +40,9 @@ The separate peer reproduction and official report are also complete:
 was created and publicly read back for submission #240. Its evidence did not
 feed into this closed research. The [10-page English report](reports/research_v3/research_closeout_delivered/research_closeout_v3.pdf)
 and [Chinese guide](reports/research_v3/closeout_zh_delivered.md) are complete,
-with rendered-page QA. Earlier report attempts remain archived. PR #3 merge
-is the remaining delivery action. The portable official validation commands
+with rendered-page QA. Earlier report attempts remain archived. [PR #3](https://github.com/liuqichang0305/dase7506-mp2-solution/pull/3)
+was merged on 2 November 2026; merge commit `697d83dd0352b1504b499844b139622a2435a0bb`.
+The portable official validation commands
 were separately checked in the preserved clean environment: all 798 choices
 and 740/798 match, without training data or local training states.
 
@@ -53,6 +54,7 @@ Evidence: [search closure](results/research_v3/SEARCH_CLOSED.json),
 [actual reproduction](submission/v3/REPRODUCTION_RESULT.json),
 [research freeze](submission/v3/FREEZE.json),
 [peer publication receipt](peer_review/submission_240/report_form/REPORT_SUCCESS.json),
+[final delivery receipt](submission/v3/DELIVERY_RECORD.json),
 [current state](PROJECT_STATE.md), and
 [recovery instructions](docs/research_v3/RESUME.txt).
 See [the verified reproduction procedure](docs/research_v3/REPRODUCTION.md)

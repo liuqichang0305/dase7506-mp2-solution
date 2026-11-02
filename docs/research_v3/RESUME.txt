@@ -39,7 +39,9 @@ Delivered PDF: reports/research_v3/research_closeout_delivered/research_closeout
 REPRODUCTION.md uses portable official commands; the completed coordinator is
 not a clean-clone entry point because it verifies original training states.
 The portable commands have passed without those states, with all798 choices equal.
-Remaining action: own archive PR#3 review/merge and final delivery receipt.
+PR#3 is merged at697d83dd0352b1504b499844b139622a2435a0bb.
+Final receipt: submission/v3/DELIVERY_RECORD.json. No archive or peer-posting
+action remains. Do not restart completed work; teacher adjudication is external.
 See docs/research_v3/RESEARCH_CLOSEOUT_REPORT.md for the separate report entry
 points. Old formal-report tools still require real TEST_COMPLETE and must not
 be weakened or fed a fabricated test record.

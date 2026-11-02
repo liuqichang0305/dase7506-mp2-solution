@@ -28,7 +28,10 @@
   The original coordinator's absolute training-state dependency is documented;
   portable official validation commands passed without those local states.
   Neither the frozen implementation nor its guards were weakened.
-- Remaining delivery action: PR #3 review/merge and its actual receipt.
+- Resolved: PR #3 merged at 697d83dd0352b1504b499844b139622a2435a0bb.
+  Archive delivery and the peer report are complete. The missed score deadline
+  and failure to reach the ranking target remain actual limitations; teacher
+  adjudication of the peer report is external and is not claimed complete.
 
 ## Historical pre-closure checkpoints and incidents
 

@@ -48,7 +48,10 @@
   Portable official validation commands were also checked in the existing clean
   environment without train data/states, retaining all 798 choices and 740/798.
   The original guarded 2.2803908-second result remains the freeze evidence.
-- Remaining: own PR #3 review/merge and final delivery receipt. Do not rerun
+- Own PR #3 is merged at 697d83dd0352b1504b499844b139622a2435a0bb
+  (2026-11-02T08:42:35Z). DELIVERY_RECORD.json records the final outcome.
+  No authorized archive or peer-posting work remains. Teacher adjudication is
+  external and is not claimed complete. Do not rerun
   completed selection, reproduction or peer evaluation. Original formal tools
   remain TEST_COMPLETE-gated; no V3 test result or score update is claimed.
 - The post-freeze ranking check is already saved in

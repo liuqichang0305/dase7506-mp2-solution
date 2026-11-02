@@ -1,0 +1,16 @@
+{
+  "schema": "mp2-v3-pr-merge-readback-v1",
+  "checked_at_utc": "2026-11-02T08:43:18.872Z",
+  "source": "GitHub connector get_pr_info",
+  "url": "https://github.com/liuqichang0305/dase7506-mp2-solution/pull/3",
+  "number": 3,
+  "state": "closed",
+  "merged": true,
+  "draft": false,
+  "head": "research/autonomous-v3",
+  "head_sha": "e9de87c2ea5e767f52459f6deecd1ba599c507d5",
+  "base": "main",
+  "merge_commit_sha": "697d83dd0352b1504b499844b139622a2435a0bb",
+  "merged_at": "2026-11-02T08:42:35Z",
+  "author": "liuqichang0305"
+}

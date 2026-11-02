@@ -1,0 +1,10 @@
+{
+  "method": "PUT",
+  "path": "/repos/liuqichang0305/dase7506-mp2-solution/pulls/3/merge",
+  "data": {
+    "sha": "e9de87c2ea5e767f52459f6deecd1ba599c507d5",
+    "merge_method": "merge",
+    "commit_title": "Merge V3 research closeout and verified peer review (#3)",
+    "commit_message": "Preserve all research history, frozen methods and original submissions. Archive the completed controlled comparisons and negative validation outcome, actual clean reproduction, 10-page report and separate peer Issue #383. No new V3 test or score update."
+  }
+}

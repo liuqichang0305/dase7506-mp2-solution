@@ -1,4 +1,4 @@
-Continue only the remaining DASE7506 MP2 post-deadline archive documentation and PR closure.
+DASE7506 MP2 post-deadline archive delivery is complete; verify records before any further action.
 CURRENT OVERRIDE (2026-11-02): research budget and score deadline have expired.
 SEARCH_CLOSED.json and FORMAL_SUBMISSION_BLOCKED.json exist. Do not resume
 the research scheduler, reset the clock, run V3 official test, update its score,
@@ -27,7 +27,10 @@ The 10-page PDF/Chinese guide and rendered-page QA are complete.
 Delivered PDF: reports/research_v3/research_closeout_delivered/research_closeout_v3.pdf.
 Portable official validation commands have passed a separate smoke check in the
 preserved clean environment, with no train/state dependency and all798 choices equal.
-Remaining action: PR#3 review/merge and final delivery receipt.
+PR#3 was merged at697d83dd0352b1504b499844b139622a2435a0bb.
+Read submission/v3/DELIVERY_RECORD.json and pr-final-readback.json.
+No research, new own-model test, score update, repeated peer evaluation or
+duplicate posting is pending. Teacher adjudication is external, not completed here.
 Read current PROJECT_STATE and RULES_RESUMPTION_20261101 before the historical
 instructions below. Saved ranking: results/leaderboard-review-2026-11-02-final/README.md;
 do not re-query it for research or reopen selection. Use the separate

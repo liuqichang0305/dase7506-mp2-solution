@@ -1,0 +1,10 @@
+{
+  "method": "POST",
+  "path": "/graphql",
+  "data": {
+    "query": "mutation($id:ID!){markPullRequestReadyForReview(input:{pullRequestId:$id}){pullRequest{url isDraft}}}",
+    "variables": {
+      "id": "PR_kwDOVbaOdM8AAAABLl549w"
+    }
+  }
+}

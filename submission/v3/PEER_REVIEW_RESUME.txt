@@ -19,7 +19,8 @@ Issue/readback, not on the calendar alone.
 Our own independent review, fresh validation reproduction and research-only
 freeze are also complete (submission/v3/REVIEW_RESULT.json,
 REPRODUCTION_RESULT.json, FREEZE.json). No new V3 test or score update is allowed.
-Archive report generation and rendered-page QA are complete; only PR#3 delivery remains.
+Archive report generation, rendered-page QA and PR#3 merge are complete.
+Merge:697d83dd0352b1504b499844b139622a2435a0bb; see DELIVERY_RECORD.json.
 Delivered report: reports/research_v3/research_closeout_delivered/research_closeout_v3.pdf.
 Do not duplicate this completed peer review while closing the archive PR.
 
