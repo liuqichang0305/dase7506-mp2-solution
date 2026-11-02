@@ -37,6 +37,8 @@ DEFAULTS = {
     'confidence_validation': BASE + 'confidence_validation/report.json',
     'figures': 'reports/research_v3/figures/figure_manifest.json',
 }
+REDUCED_TABM_DIRECTORY = BASE + 'diagnostic-r05-reduced-tabm-vs-attention/'
+REDUCED_TABM_METHODS = ('v3_tabm_k4_embedding_stats_s0', 'v3_tabm_k4_s0', 'v3_attention_ema_s0')
 
 
 class Evidence:
@@ -144,6 +146,115 @@ def validate_summary(row, summary):
     require(all(math.isclose(finite(a), b, abs_tol=1e-10) for a, b in zip(row['hard_fold_accuracies'], values)), 'Analysis fold scores differ from saved fold counts')
     require(row['parameters'] == max(item.get('parameters', 0) for item in folds)
             and row['numeric_asset_bytes'] == max(item.get('numeric_asset_bytes', item.get('uncompressed_bytes', 0)) for item in folds), 'Analysis parameter/byte count differs from saved folds')
+
+
+def reduced_tabm_evidence(e, index, summaries, folds_sha256, manifest_sha256):
+    """Read saved train aggregates; hash opaque arrays without decoding them."""
+    directory = REDUCED_TABM_DIRECTORY
+    report_path = directory + 'paired-and-slices.json'
+    report = e.read(report_path)
+    complete = e.read(directory + 'COMPLETION.json')
+    methods = ['v3:' + name for name in REDUCED_TABM_METHODS]
+    bootstrap = {'function': 'analyze_oof_v2.paired_comparison', 'repetitions': 5000,
+                 'base_seed': SEED + 102, 'actual_overall_seed': SEED + 102, 'actual_hard_seed': SEED + 103}
+    require(report.get('schema') == 'mp2-v3-reduced-tabm-diagnostic-v1' and report.get('status') == 'complete'
+            and complete.get('schema') == 'mp2-v3-train-oof-diagnostic-complete-v1'
+            and complete.get('status') == 'complete' and complete.get('command_exit_code') == 0
+            and report.get('methods') == methods and report.get('folds_sha256') == folds_sha256
+            and report.get('fusion', {}).get('status') == 'not_run' and complete.get('fusion_run') is False
+            and report.get('bootstrap') == complete.get('bootstrap') == bootstrap,
+            'Reduced-input diagnostic must be the completed fixed train-only comparison')
+    for key in ('calibration_fit', 'validation_test_ranking_read', 'question_text_or_answers_output'):
+        require(report.get(key) is False and complete.get(key) is False, 'Reduced-input diagnostic scope differs')
+    for key in ('source_sha256', 'input_sha256'):
+        require(report.get(key) and report[key] == complete.get(key), 'Reduced-input completion provenance differs')
+    snapshots = {f'code/tools/{name}.py': directory + name + '.source.py'
+                 for name in ('analyze_oof_v2', 'diagnose_oof_v3', 'diagnose_reduced_tabm_v3')}
+    expected_outputs = set(snapshots.values()) | {directory + name for name in
+        ('diagnostic.json', 'FIXED_SLICES.md', 'paired-and-slices.json', 'RESULTS.md', 'SUMMARY.md')}
+    expected_outputs.add(directory.rstrip('/') + '-run.log')
+    require(set(complete['output_sha256']) == expected_outputs, 'Reduced-input completion output inventory differs')
+    for name, digest in complete['output_sha256'].items():
+        e.bind(name, digest)
+    require(complete['output_sha256'][directory + 'diagnostic.json'] == report['diagnostic_sha256']
+            and set(snapshots).issubset(report['source_sha256']), 'Reduced-input original diagnostic/source receipt differs')
+    for name, digest in report['source_sha256'].items():
+        # Later diagnostic utilities may evolve; the exact historical snapshots remain authoritative.
+        e.bind(snapshots.get(name, name), digest)
+    inputs = report['input_sha256']
+    data_names = {'code/data/manifest.json', 'code/data/candidates/gsm8k_train.jsonl'}
+    required_inputs = data_names | {BASE + 'common_folds.json'}
+    for name in REDUCED_TABM_METHODS:
+        required_inputs.update(BASE + name + '/' + leaf for leaf in
+            ('registration.json', 'summary.json', 'oof.npz',
+             *(f'fold{i}{suffix}.npy' for i in range(3) for suffix in ('-scores', '-raw-scores'))))
+    require(set(inputs) == required_inputs and inputs['code/data/manifest.json'] == manifest_sha256
+            and inputs[BASE + 'common_folds.json'] == folds_sha256, 'Reduced-input saved input inventory differs')
+    for name, digest in inputs.items():
+        if name not in data_names:
+            e.bind(name, digest)
+    records = [index['research_v3', name] for name in REDUCED_TABM_METHODS]
+    for name, row in zip(REDUCED_TABM_METHODS, records):
+        prefix = BASE + name + '/'
+        registration = e.read(prefix + 'registration.json', inputs[prefix + 'registration.json'])
+        require(row['seed'] == SEED and registration['config'] == row['config']
+                and registration['folds_sha256'] == folds_sha256
+                and inputs[prefix + 'summary.json'] == row['summary_sha256']
+                and inputs[prefix + 'oof.npz'] == row['oof_sha256']
+                and all(registration['data_files'].get(key) == inputs[key] for key in data_names)
+                and registration['source_files']
+                and all(report['source_sha256'].get(key) == value for key, value in registration['source_files'].items()),
+                'Reduced-input registered config/data/source differs from the current completed rows')
+    reduced, full, _ = records
+    differences = {key: {'reduced': reduced['config'].get(key), 'full': full['config'].get(key)}
+                   for key in reduced['config'].keys() | full['config'].keys()
+                   if reduced['config'].get(key) != full['config'].get(key)}
+    matched = report['matched_feature_ablation']
+    dimensions = {'reduced': 1040, 'full': 2064}
+    require(matched['first'] == methods[0] and matched['second'] == methods[1]
+            and reduced['family'] == full['family'] == 'tabm'
+            and reduced['config'].get('input_features') == 'embedding_stats'
+            and full['config'].get('input_features', 'relation') == 'relation'
+            and set(differences) == {'experiment_id', 'input_features'}
+            and matched['configuration_differences'] == differences and matched['input_dimensions'] == dimensions,
+            'Reduced-input pair is not the matched registered TabM recipe')
+    paired = matched['paired_comparison']
+    require(paired['bootstrap_repetitions'] == bootstrap['repetitions'] and paired.get('interval_caveat'),
+            'Reduced-input paired-bootstrap definition is missing')
+    for subset, prefix, offset in (('overall', '', 0), ('hard', 'hard_', 1)):
+        value = paired[subset]
+        n, first, second = reduced[prefix + 'n'], reduced[prefix + 'correct'], full[prefix + 'correct']
+        require(n == full[prefix + 'n'] and (value['n'], value['first_correct'], value['second_correct']) == (n, first, second)
+                and value['correct_difference'] == first - second
+                and math.isclose(finite(value['difference_percentage_points']), 100 * (first - second) / n, abs_tol=1e-10)
+                and value['bootstrap_seed'] == SEED + 102 + offset, 'Reduced-input paired counts differ from completed summaries')
+        cells = [value[key] for key in ('first_only_correct', 'second_only_correct', 'both_wrong', 'both_correct')]
+        require(all(type(v) is int and v >= 0 for v in cells) and sum(cells) == n
+                and cells[0] + cells[3] == first and cells[1] + cells[3] == second,
+                'Reduced-input paired contingency counts do not pool')
+        interval = value['paired_bootstrap_95_interval']
+        require(len(interval) == 2 and -100 <= finite(interval[0]) <= finite(interval[1]) <= 100,
+                'Reduced-input saved paired interval is invalid')
+    folds = []
+    first_folds = sorted(summaries['research_v3', REDUCED_TABM_METHODS[0]]['folds'], key=lambda v: v['fold'])
+    second_folds = sorted(summaries['research_v3', REDUCED_TABM_METHODS[1]]['folds'], key=lambda v: v['fold'])
+    for first, second in zip(first_folds, second_folds):
+        require((first['fold'], first['n'], first['hard_n']) == (second['fold'], second['n'], second['hard_n']),
+                'Reduced-input folds have different populations')
+        folds.append({'fold': first['fold'], 'overall_difference': first['correct'] - second['correct'],
+                      'hard_difference': first['hard_correct'] - second['hard_correct']})
+    hard = paired['hard']
+    interval = hard['paired_bootstrap_95_interval']
+    paragraph = (f"R05 matched TabM recipe: embedding+statistics ({dimensions['reduced']} inputs) versus full relation "
+        f"({dimensions['full']}) scores {hard['first_correct']}/{hard['n']} versus {hard['second_correct']}/{hard['n']} hard questions: "
+        f"{hard['correct_difference']:+d} ({hard['difference_percentage_points']:+.2f} pp; saved paired 95% interval "
+        f"[{interval[0]:.2f}, {interval[1]:.2f}] pp), with fold 0/1/2 gains "
+        + '/'.join(f"{v['hard_difference']:+d}" for v in folds)
+        + f"; all-question gain {paired['overall']['correct_difference']:+d}. "
+        'This is not a pure feature-information effect: input width changes first-layer capacity and random initialization '
+        'even at the same fixed seed. The interval is conditional on selected OOF predictions and retains search optimism.')
+    return {'methods': methods[:2], 'paired_comparison': paired, 'fold_differences': folds,
+            'input_dimensions': dimensions, 'paragraph': paragraph}
 
 
 def stability_groups(rows):
@@ -267,6 +378,7 @@ def prepare(root=ROOT, **paths):
     rows = analysis['rows']
     require(rows and len({(r['version'], r['experiment_id']) for r in rows}) == len(rows), 'Complete aggregate table contains duplicates or no rows')
     index = {(r['version'], r['experiment_id']): r for r in rows}
+    summaries = {}
     for row in rows:
         require(row['status'] == 'completed' and row['n'] == 4755 and len(row['hard_fold_accuracies']) == 3, 'Only full three-fold train OOF may appear in the main table')
         count(row); count(row, 'hard_')
@@ -274,9 +386,11 @@ def prepare(root=ROOT, **paths):
         directory = f"results/{row['version']}/{row['experiment_id']}/"
         summary = e.read(directory + 'summary.json', row['summary_sha256'])
         validate_summary(row, summary)
+        summaries[row['version'], row['experiment_id']] = summary
         e.bind(directory + 'oof.npz', row['oof_sha256'])
     completed = {j['experiment_id'] for j in queue['jobs'] if j['status'] == 'completed'}
     require(completed == {r['experiment_id'] for r in rows if r['version'] == 'research_v3'}, 'Final analysis does not contain exactly the completed campaign jobs')
+    reduced_tabm = reduced_tabm_evidence(e, index, summaries, analysis['folds_sha256'], freeze['data_manifest_sha256'])
     references = e.read(BASE + 'deterministic_train_references/summary.json')
     reference_complete = e.read(BASE + 'deterministic_train_references/COMPLETION.json')
     require(reference_complete.get('schema') == 'mp2-v3-deterministic-train-references-complete-v1'
@@ -534,6 +648,7 @@ def prepare(root=ROOT, **paths):
             ['TabM', 'Shared matrices plus member adapters; average member losses, then average answer-group probabilities'],
             ['RealMLP-inspired', 'Learnable input scale, NTP / SELU, zero head, optional robust coordinate scaling'],
             ['Muon / EMA', 'Muon on hidden 2D weights; head/bias/norm/adapters use auxiliary AdamW. EMA updates after optimizer steps.']], [1.2, 3.8]),
+        block('small', reduced_tabm['paragraph']),
         block('heading', 'Final deployed recipe'),
         table(['Component', 'Family', 'Seed', 'Epochs', 'Preprocess', 'Weights'], recipe_table, [2, 1, 1.2, .6, 1.2, .7]),
         block('small', recipe_details),
@@ -619,6 +734,7 @@ def prepare(root=ROOT, **paths):
         'generator_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), 'pages': pages,
         'evidence_sha256': dict(sorted(e.hashes.items())),
         'derived_aggregates': {'seed_stability': stable, 'v3_completed_configurations': len(v3_rows),
+            'matched_reduced_input_tabm': reduced_tabm,
             'deterministic_train_references': references['results'],
             'historical_analysis_bindings': historical_bindings,
             'v3_fit_seconds': train_seconds, 'v2_historical_fit_seconds': v2_seconds,

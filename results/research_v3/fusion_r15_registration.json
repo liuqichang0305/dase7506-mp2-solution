@@ -1,0 +1,16 @@
+{
+  "schema": "mp2-v3-one-fusion-registration-receipt-v1",
+  "status": "registered",
+  "created_at_utc": "2026-10-30T04:47:39.354038+00:00",
+  "experiment_id": "v3_fusion_reduced_tabm_ema_attention_ema_s0",
+  "unique_configurations_including_pilot": 40,
+  "new_configurations": 1,
+  "new_training_fits": 0,
+  "preregistration_sha256": "0c1020136d94c1e46291d6427c35eccca4382148ed07309c550ba5aa07861234",
+  "queue_sha256_at_registration": "06745ad7e71638988a4e49aab9dbb3ceaf66a2c93ade4726906d831a5b1afeaf",
+  "prior_registry_sha256": "efe82ca459a52d48b8ba578c05ca44faa33179cc85e65f222bbbf2004ba904ee",
+  "output_sha256": {
+    "docs/research_v3/rounds/v3_fusion_reduced_tabm_ema_attention_ema_s0.json": "e86d32043ed58190db98eda944e14653dfe6ddbd3838bb92c35f3dac7ae007be",
+    "results/research_v3/fusion_registry.jsonl": "51184aa4b9e7721242e271659aa6ce05f0f100e9280e36a08ffa495c11bad6d0"
+  }
+}

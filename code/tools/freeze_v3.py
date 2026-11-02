@@ -316,11 +316,32 @@ def training_recipes(root, components):
     return recipes
 
 
+def research_archive_block(root, frozen_at):
+    """A documented deadline block can only restrict, never authorize, testing."""
+    root = Path(root)
+    path = root / 'submission/v3/FORMAL_SUBMISSION_BLOCKED.json'
+    deadline = datetime(2026, 10, 31, 16, tzinfo=timezone.utc)
+    if not path.exists():
+        if _instant(frozen_at) >= deadline:
+            raise ValueError('Post-deadline freeze requires an explicit research-only block record')
+        return None
+    value = read(path)
+    if (value.get('schema') != 'mp2-v3-post-deadline-block-v1'
+            or any(value.get(key) is not True for key in ('no_new_test', 'no_new_score_update',
+                    'no_automatic_artifact_replacement', 'research_only', 'missed_deadline'))
+            or not deadline <= _instant(value['created_at_utc']) <= _instant(frozen_at)):
+        raise ValueError('Invalid research-only deadline block')
+    check_hashes(root, {value['rules_audit_path']: value['rules_audit_sha256']})
+    if value['search_closed_sha256'] != sha(root / 'results/research_v3/SEARCH_CLOSED.json'):
+        raise ValueError('Deadline block does not bind the actual research closure')
+    return sha(path)
+
+
 def freeze(root=ROOT, *, verified=None, source_provider=source_hashes, git_check=commit_bytes, commit=None, now_fn=None):
     root, folder = Path(root).resolve(), Path(root).resolve() / 'submission/v3'
     target = folder / 'FREEZE.json'
     if target.exists():
-        return verify_freeze(root, git_check=git_check, source_provider=source_provider)
+        return verify_freeze(root, git_check=git_check, source_provider=source_provider, allow_research_archive=True)
     if (folder / 'TEST_OPENED.json').exists():
         raise ValueError('A new V3 test was already opened; cannot create another pre-test freeze')
     selected, summary, verified, assets, inventory = validate_selected(root, verified)
@@ -333,6 +354,7 @@ def freeze(root=ROOT, *, verified=None, source_provider=source_hashes, git_check
     git_check(root, commit, {**sources, **assets})
     selected_hash = sha(folder / 'SELECTED_MODEL.json')
     frozen_at = (now_fn() if now_fn else datetime.now(timezone.utc)).isoformat()
+    block_hash = research_archive_block(root, frozen_at)
     review, reproduction = _gates(root, selected_hash, sources, assets, commit, frozen_at)
     manifest = read(root / 'code/data/manifest.json')
     if manifest['protocol'] != timing.PROTOCOL or manifest['splits']['test'] != 467 or manifest['candidates_per_question'] != 4:
@@ -356,16 +378,28 @@ def freeze(root=ROOT, *, verified=None, source_provider=source_hashes, git_check
         'known_old_test_aggregate': {'correct': 348, 'n': 467, 'known_before_v3': True,
             'scope': 'Historical V1 aggregate already known; this flag refers only to the new V3 evaluation.'},
         'old_submission_preserved': 'https://github.com/xudongwu-0/xudongwu-0.github.io/issues/294',
-        'new_test_evaluated': False, 'formal_test_allowed': True,
+        'new_test_evaluated': False, 'formal_test_allowed': block_hash is None,
+        'research_only': block_hash is not None,
         'test_policy': 'One fixed final method, full 467 test questions; no test-driven research or tuning; partial runs are not automatically retried.'}
+    if block_hash is not None:
+        record.update(formal_submission_blocked_sha256=block_hash,
+            permission_basis='The user authorized continued research archive and released peer review. The course deadline/publication rules block late score updates and automatic artifact replacement. This project closes its V3 test path for the post-deadline archive; no general course ban on offline evaluation is asserted.',
+            test_policy='Research-only archive. Do not evaluate this V3 selection on official test or substitute it for the historical course submission; existing formal evaluator rejects this archive.')
     write_new(target, record)
     return record
 
 
-def verify_freeze(root=ROOT, *, git_check=commit_bytes, source_provider=source_hashes):
+def verify_freeze(root=ROOT, *, git_check=commit_bytes, source_provider=source_hashes, allow_research_archive=False):
     root, folder = Path(root).resolve(), Path(root).resolve() / 'submission/v3'
     record = read(folder / 'FREEZE.json')
-    if record.get('schema') != SCHEMA or record.get('frozen') is not True or record.get('test_evaluated_before_freeze') is not False or record.get('formal_test_allowed') is not True:
+    if record.get('schema') != SCHEMA or record.get('frozen') is not True or record.get('test_evaluated_before_freeze') is not False:
+        raise ValueError('Valid V3 pre-test freeze required')
+    if record.get('research_only') is True:
+        if not allow_research_archive or record.get('formal_test_allowed') is not False:
+            raise ValueError('Research-only archive cannot authorize official test evaluation')
+        if research_archive_block(root, record['created_at_utc']) != record.get('formal_submission_blocked_sha256'):
+            raise ValueError('Research archive deadline evidence changed')
+    elif record.get('formal_test_allowed') is not True:
         raise ValueError('Valid V3 pre-test freeze required')
     if record['method'] != METHOD or record['checkpoint'] != CHECKPOINT or record['test_n'] != 467 or record['protocol'] != timing.PROTOCOL:
         raise ValueError('Frozen method/checkpoint/full-test protocol differs')

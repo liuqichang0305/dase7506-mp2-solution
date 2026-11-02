@@ -3,6 +3,7 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import statistics
 import tempfile
 import unittest
 
@@ -97,6 +98,7 @@ class ReportInputTests(unittest.TestCase):
                 'oof_sha256': self.put(directory + 'oof.npz', 'synthetic opaque bytes'),
                 'config': config,
                 'paired_vs_v2_attention': {'hard_delta_pp': -.5, 'hard_bootstrap_95pct': [-1.0, .1]}})
+        self.reduced_tabm_fixture(rows, folds)
         analysis = {'rows': rows, 'folds_sha256': folds, 'noncomplete_jobs': [],
                     'source_sha256': self.put('scripts/analyze_campaign_v3.py', '# synthetic source')}
         analysis_hash = self.put(r.DEFAULTS['analysis'], analysis)
@@ -131,7 +133,7 @@ class ReportInputTests(unittest.TestCase):
         jobs = [{'experiment_id': row['experiment_id'], 'round': 'r01_optimizer', 'status': 'completed',
                  'attempts': [{'observed_wall_seconds': 3}]} for row in rows if row['version'] == 'research_v3']
         self.put(r.BASE + 'campaign_queue.json', {'jobs': jobs})
-        round_ = {'round': 'r01_optimizer', 'configurations': 2, 'completed_outer_fits': 6,
+        round_ = {'round': 'r01_optimizer', 'configurations': 5, 'completed_outer_fits': 15,
                   'results': rows[:2], 'exceeds_registered_half_point': False,
                   'analysis': r.DEFAULTS['analysis'], 'analysis_sha256': analysis_hash}
         self.put(r.BASE + 'round_decisions.jsonl', json.dumps(round_) + '\n')
@@ -212,14 +214,89 @@ class ReportInputTests(unittest.TestCase):
             'evidence_sha256': {path: hashlib.sha256((self.root / path).read_bytes()).hexdigest()
                 for path in (r.DEFAULTS['analysis'], r.BASE + 'campaign_queue.json', r.DEFAULTS['confidence_fit'], r.DEFAULTS['confidence_validation'], figure_generator)}})
 
+    def reduced_tabm_fixture(self, rows, folds_hash):
+        """Deliberately unlike observed gains: synthetic +9 with folds +2/+3/+4."""
+        directory = r.REDUCED_TABM_DIRECTORY
+        core = 'code/common.py'
+        core_hash = self.put(core, '# synthetic immutable core')
+        source = {core: core_hash}
+        outputs = {}
+        for name in ('analyze_oof_v2', 'diagnose_oof_v3', 'diagnose_reduced_tabm_v3'):
+            snapshot = directory + name + '.source.py'
+            digest = self.put(snapshot, '# synthetic historical ' + name)
+            source['code/tools/' + name + '.py'] = digest
+            outputs[snapshot] = digest
+        inputs = {'code/data/manifest.json': '1' * 64,
+                  'code/data/candidates/gsm8k_train.jsonl': '2' * 64,
+                  r.BASE + 'common_folds.json': folds_hash}
+        added = []
+        for offset, name in enumerate(r.REDUCED_TABM_METHODS):
+            path = r.BASE + name + '/'
+            config = {'experiment_id': name, 'seed': r.SEED, 'family': 'attention' if offset == 2 else 'tabm'}
+            if offset == 0:
+                config['input_features'] = 'embedding_stats'
+            summary = self.read('results/research_v3/primary_s0/summary.json')
+            summary.update(experiment_id=name, config=config)
+            for fold in summary['folds']:
+                gain = fold['fold'] + 2 if offset == 0 else 0
+                fold.update(correct=1380 + gain, hard_correct=490 + 7 * fold['fold'] + gain)
+            for key in ('correct', 'hard_correct'):
+                summary[key] = sum(fold[key] for fold in summary['folds'])
+            row = dict(rows[0], experiment_id=name, config=config, family=config['family'],
+                       correct=summary['correct'], hard_correct=summary['hard_correct'],
+                       accuracy=100 * summary['correct'] / summary['n'])
+            row['hard_fold_accuracies'] = [100 * fold['hard_correct'] / fold['hard_n'] for fold in summary['folds']]
+            row['hard_fold_mean'], row['hard_fold_sd'] = statistics.mean(row['hard_fold_accuracies']), statistics.stdev(row['hard_fold_accuracies'])
+            row['summary_sha256'] = inputs[path + 'summary.json'] = self.put(path + 'summary.json', summary)
+            row['oof_sha256'] = inputs[path + 'oof.npz'] = self.put(path + 'oof.npz', 'opaque synthetic OOF, not an array')
+            inputs[path + 'registration.json'] = self.put(path + 'registration.json', {
+                'config': config, 'folds_sha256': folds_hash, 'source_files': {core: core_hash},
+                'data_files': {key: inputs[key] for key in ('code/data/manifest.json', 'code/data/candidates/gsm8k_train.jsonl')}})
+            for i in range(3):
+                for suffix in ('-scores', '-raw-scores'):
+                    name_ = path + f'fold{i}{suffix}.npy'
+                    inputs[name_] = self.put(name_, 'opaque synthetic fold, not an array')
+            added.append(row)
+        rows[-1:-1] = added
+        first, second = added[:2]
+        paired = {'bootstrap_repetitions': 5000, 'interval_caveat': 'Conditional selected OOF; search optimism remains.'}
+        for subset, prefix, offset in (('overall', '', 0), ('hard', 'hard_', 1)):
+            n, a, b = first[prefix + 'n'], first[prefix + 'correct'], second[prefix + 'correct']
+            paired[subset] = {'n': n, 'first_correct': a, 'second_correct': b, 'correct_difference': a - b,
+                'difference_percentage_points': 100 * (a - b) / n, 'paired_bootstrap_95_interval': [-.2, .9],
+                'bootstrap_seed': r.SEED + 102 + offset, 'first_only_correct': a - b + 11,
+                'second_only_correct': 11, 'both_correct': b - 11, 'both_wrong': n - a - 11}
+        bootstrap = {'function': 'analyze_oof_v2.paired_comparison', 'repetitions': 5000,
+                     'base_seed': r.SEED + 102, 'actual_overall_seed': r.SEED + 102, 'actual_hard_seed': r.SEED + 103}
+        outputs[directory + 'diagnostic.json'] = self.put(directory + 'diagnostic.json', {'synthetic': True})
+        methods = ['v3:' + name for name in r.REDUCED_TABM_METHODS]
+        report_path = directory + 'paired-and-slices.json'
+        outputs[report_path] = self.put(report_path, {'schema': 'mp2-v3-reduced-tabm-diagnostic-v1',
+            'status': 'complete', 'methods': methods, 'folds_sha256': folds_hash, 'bootstrap': bootstrap,
+            'source_sha256': source, 'input_sha256': inputs, 'diagnostic_sha256': outputs[directory + 'diagnostic.json'],
+            'fusion': {'status': 'not_run'}, 'calibration_fit': False, 'validation_test_ranking_read': False,
+            'question_text_or_answers_output': False, 'matched_feature_ablation': {
+                'first': methods[0], 'second': methods[1], 'input_dimensions': {'reduced': 1040, 'full': 2064},
+                'configuration_differences': {'experiment_id': {'reduced': first['experiment_id'], 'full': second['experiment_id']},
+                                              'input_features': {'reduced': 'embedding_stats', 'full': None}},
+                'paired_comparison': paired}})
+        for leaf in ('FIXED_SLICES.md', 'RESULTS.md', 'SUMMARY.md'):
+            outputs[directory + leaf] = self.put(directory + leaf, 'Synthetic aggregate prose')
+        log = directory.rstrip('/') + '-run.log'
+        outputs[log] = self.put(log, 'Synthetic successful invocation')
+        self.put(directory + 'COMPLETION.json', {'schema': 'mp2-v3-train-oof-diagnostic-complete-v1',
+            'status': 'complete', 'command_exit_code': 0, 'source_sha256': source, 'input_sha256': inputs,
+            'output_sha256': outputs, 'bootstrap': bootstrap, 'fusion_run': False, 'calibration_fit': False,
+            'validation_test_ranking_read': False, 'question_text_or_answers_output': False})
+
     def test_ten_pages_real_aggregate_contract_and_fallback(self):
         record = r.prepare(self.root)
         self.assertEqual(record['schema'], 'mp2-v3-final-report-inputs-v1')
         self.assertEqual(len(record['pages']), 10)
         self.assertTrue(set(r.REQUIRED).issubset(record['evidence_sha256']))
-        self.assertEqual(record['derived_aggregates']['v3_completed_configurations'], 2)
-        self.assertEqual(record['derived_aggregates']['v3_fit_seconds'], 4.)
-        self.assertEqual(record['derived_aggregates']['v3_recorded_attempt_seconds'], 6.)
+        self.assertEqual(record['derived_aggregates']['v3_completed_configurations'], 5)
+        self.assertEqual(record['derived_aggregates']['v3_fit_seconds'], 10.)
+        self.assertEqual(record['derived_aggregates']['v3_recorded_attempt_seconds'], 15.)
         self.assertTrue(record['final_facts']['historical_fallback'])
         text = json.dumps(record, ensure_ascii=False)
         self.assertIn('IN-SAMPLE', text)
@@ -231,6 +308,58 @@ class ReportInputTests(unittest.TestCase):
         # Deliberately invalid validation JSON must not be parsed before readiness.
         self.put(r.BASE + 'validation_summary.json', 'not JSON')
         with self.assertRaisesRegex(ValueError, 'not ready'):
+            r.prepare(self.root)
+
+    def test_reduced_input_numbers_are_saved_counts_and_keep_capacity_caveat(self):
+        record = r.prepare(self.root)
+        evidence = record['derived_aggregates']['matched_reduced_input_tabm']
+        self.assertEqual(evidence['paired_comparison']['hard']['correct_difference'], 9)
+        self.assertEqual([v['hard_difference'] for v in evidence['fold_differences']], [2, 3, 4])
+        paragraph = evidence['paragraph']
+        self.assertIn('+9', paragraph)
+        self.assertIn('+2/+3/+4', paragraph)
+        self.assertIn('[-0.20, 0.90] pp', paragraph)
+        self.assertIn('capacity and random initialization', paragraph)
+        self.assertIn('search optimism', paragraph)
+        self.assertIn(r.REDUCED_TABM_DIRECTORY + 'COMPLETION.json', record['evidence_sha256'])
+        self.assertIn(r.REDUCED_TABM_DIRECTORY + 'diagnose_oof_v3.source.py', record['evidence_sha256'])
+        self.assertFalse((self.root / 'code/data').exists())
+        self.assertFalse(any(name.startswith('code/data/') for name in record['evidence_sha256']))
+
+    def test_reduced_input_self_consistent_hash_tamper_cannot_change_counts_or_scope(self):
+        path = r.REDUCED_TABM_DIRECTORY + 'paired-and-slices.json'
+        completion_path = r.REDUCED_TABM_DIRECTORY + 'COMPLETION.json'
+        original = self.read(path)
+        def bind_report(report):
+            completion = self.read(completion_path)
+            completion['output_sha256'][path] = self.put(path, report)
+            self.put(completion_path, completion)
+        changed = json.loads(json.dumps(original))
+        changed['matched_feature_ablation']['paired_comparison']['hard']['first_correct'] += 1
+        bind_report(changed)
+        with self.assertRaisesRegex(ValueError, 'paired counts differ'):
+            r.prepare(self.root)
+        changed = dict(original, validation_test_ranking_read=True)
+        bind_report(changed)
+        with self.assertRaisesRegex(ValueError, 'scope differs'):
+            r.prepare(self.root)
+        bind_report(original)
+        completion = self.read(completion_path)
+        del completion['output_sha256'][r.REDUCED_TABM_DIRECTORY + 'SUMMARY.md']
+        self.put(completion_path, completion)
+        with self.assertRaisesRegex(ValueError, 'output inventory differs'):
+            r.prepare(self.root)
+
+    def test_reduced_input_train_hash_cannot_be_rebound_without_registration(self):
+        path = r.REDUCED_TABM_DIRECTORY + 'paired-and-slices.json'
+        report = self.read(path)
+        report['input_sha256']['code/data/candidates/gsm8k_train.jsonl'] = '9' * 64
+        completion_path = r.REDUCED_TABM_DIRECTORY + 'COMPLETION.json'
+        completion = self.read(completion_path)
+        completion['input_sha256'] = report['input_sha256']
+        completion['output_sha256'][path] = self.put(path, report)
+        self.put(completion_path, completion)
+        with self.assertRaisesRegex(ValueError, 'registered config/data/source differs'):
             r.prepare(self.root)
 
     def test_deterministic_references_reject_wrong_scope_and_inconsistent_counts(self):

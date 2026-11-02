@@ -1,8 +1,35 @@
 # Blockers and resolved incidents
 
+- Current2026-11-02: the actual course deadline/review phase blocks a new score
+  update and automatic post-release artifact replacement. This project closes
+  V3 without a new formal test. No additional permission email is invented. Preserve historical
+  Issue294 and its exact submitted method/assets. Research-only archive work
+  and the now-open peer review continue independently.
+- The four extra-seed configurations did not complete before budget guards
+  pruned them. No retry or new search is permitted after SEARCH_CLOSED.
+- All35 base configurations and all four fixed fusions are complete; the
+  fusions were rejected. The two locked V3 validation candidates scored735/798
+  (hard292/355) and736/798 (hard293/355), below historical V2 Deep Sets740/798
+  (hard297/355). The historical byte-identical fallback is selected. Lack of
+  improvement is an actual research outcome, not a reason to reopen selection.
+- Export/contract checks have passed, but independent final review, clean
+  reproduction, research-only freeze, report/PDF QA and PR closure still require
+  their actual evidence. Do not label those stages complete from software tests.
+- MP2 peer review is now actually open under the recorded published window.
+  Its separate reproduction/report/Issue workflow remains in progress; no
+  completion or publication is asserted by this status update.
+
+## Historical pre-closure checkpoints and incidents
+
+The future actions and release-waiting statements below describe earlier
+checkpoints. They are preserved for traceability and are superseded by the
+current closure, validation and actual peer-release state above.
+
 - V3 current: no missing student identity, account authorization, dependencies or
-  data blocks train-only research. First complete-CV run awaits local recovery
-  integration checks, which are being implemented and tested, not user permission.
+  data blocks the work. All35 base configurations completed common three-fold
+  training. The current remaining research is one separately reviewed fixed
+  fusion and the four already prepared fixed-seed repeats; no new validation or
+  test has been opened. These are unfinished tasks, not permission blockers.
 - V3 final test/submission requires the specified development, review, fresh
   reproduction and freeze prerequisites; lack of a separate teacher email is not
   an additional gate under the new explicit user instruction.

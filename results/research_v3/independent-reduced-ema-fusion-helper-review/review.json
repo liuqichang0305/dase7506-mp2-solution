@@ -1,0 +1,46 @@
+{
+  "scope": "Independent source-diff review plus synthetic temporary train-OOF metadata and mocked diagnostic process. No production prepare/register/evaluate/summarize, raw arrays, training, holdout, leaderboard or network access.",
+  "started_at_utc": "2026-10-30T04:46:07.392568+00:00",
+  "completed_at_utc": "2026-10-30T04:46:10.437512+00:00",
+  "source_sha256_before": {
+    "scripts/register_reduced_tabm_ema_attention_fusion_v3.py": "563c4eb36c253892641b9744a394023631fea83b0a69d8f4a937a051259090b0",
+    "scripts/register_reduced_tabm_attention_fusion_v3.py": "ddf9af9bc8d4d1483ede52cb3e92f6b71e7bac73831d993686c509bb68bef504",
+    "code/tests/test_reduced_tabm_ema_fusion_registration_v3.py": "0ac180804509ac59580a1d2a515e946cfe2edd6124994b49fe4b471e30fde59e",
+    "code/tools/diagnose_oof_v3.py": "4674d685cba6c8d211bbb37b22e12a064cf9c4bfb9db9af4bbfb3621244afa1d",
+    "docs/research_v3/REDUCED_TABM_EMA_FIXED_FUSION.md": "df9134aa7d042a99b21356ae86a62379fa0ffb59aaa01fa99693caeefd43189a"
+  },
+  "source_sha256_after": {
+    "scripts/register_reduced_tabm_ema_attention_fusion_v3.py": "563c4eb36c253892641b9744a394023631fea83b0a69d8f4a937a051259090b0",
+    "scripts/register_reduced_tabm_attention_fusion_v3.py": "ddf9af9bc8d4d1483ede52cb3e92f6b71e7bac73831d993686c509bb68bef504",
+    "code/tests/test_reduced_tabm_ema_fusion_registration_v3.py": "0ac180804509ac59580a1d2a515e946cfe2edd6124994b49fe4b471e30fde59e",
+    "code/tools/diagnose_oof_v3.py": "4674d685cba6c8d211bbb37b22e12a064cf9c4bfb9db9af4bbfb3621244afa1d",
+    "docs/research_v3/REDUCED_TABM_EMA_FIXED_FUSION.md": "df9134aa7d042a99b21356ae86a62379fa0ffb59aaa01fa99693caeefd43189a"
+  },
+  "sources_unchanged": true,
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_reduced_tabm_ema_fusion_registration_v3.py",
+    "-v"
+  ],
+  "process_wall_seconds": 3.0356188000005204,
+  "exit_code": 0,
+  "log_sha256": {
+    "stderr.log": "9f6bb76c8080d56d1d01b80f1e868d2bd28f4ec1aa2aef1f5f523a7450dc77b4",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "passed": true,
+  "review": [
+    "R12 typed final and successful execution receipts, exact three-entry prior inventory and frozen R12 helper source are required before preparing R15.",
+    "Exact fixed improved reduced TabM EMA then Attention EMA order and equal model-level probabilities; TabM four-member averaging precedes the two-model mean.",
+    "Local retention compares to stronger improved TabM EMA; Attention-specific fields retain their own baseline. Current global BASE957 hard fold mean inventory includes actual R12.",
+    "New aggregate preserves all three prior objects and appends one measured fourth outcome; no prior source/registration/analysis rewrite.",
+    "Inherited idle ownership, absolute budget/configuration cap, direct-base guarded worker and partial-attempt preservation remain unchanged.",
+    "Immutable R15 ledger and record snapshots allow later stability append. Child execution was mocked, so this is software validation rather than measured fusion/resource evidence."
+  ]
+}

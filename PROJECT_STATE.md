@@ -1,6 +1,48 @@
 # Project state
 
-## Active V3 research — 2026-10-30 UTC+8
+## Current post-deadline research archive — 2026-11-02 UTC+8
+
+- Actual resumed time is November2. The original research budget and October31
+  score deadline have expired. SEARCH_CLOSED.json is now immutable; no search
+  retry or clock reset is permitted. Exact closure-time log snapshots are in
+  results/research_v3/closure_evidence/SNAPSHOTS.json.
+- 35 new base configurations/105 outer folds completed. Four extra-seed runs
+  were pruned, with no complete new seed result. Long monitor gaps and actual
+  wall-clock overshoots are preserved; continuous CPU work and a hard real-time
+  cutoff are not claimed. All four fixed mixtures were evaluated and rejected.
+- The two locked base957 final fits and research-only validation completed.
+  Reduced-input TabM EMA scored735/798, hard292/355; Attention EMA736/798,
+  hard293/355. Both failed the fixed replacement rule against historical V2
+  Deep Sets740/798, hard297/355. No new validation improvement is claimed.
+- The unique SELECTED_MODEL is historical deepsets_regularized_s0, copied
+  byte-for-byte to artifacts/research_v3/final_selected. Actual798-question
+  export agreement and contract checks passed in selected-export-validation.json
+  and selected-contract-validation.json. These checks do not by themselves mean
+  independent final review, fresh reproduction, freeze or report are complete.
+- FORMAL_SUBMISSION_BLOCKED.json records the actual deadline/review-phase rule.
+  No new V3 official test, score update, or replacement of historical submitted
+  assets will be made. The immutable V1 Issue294 and its348/467 assets remain.
+- Official MP2 peer review opened2026-11-01T04:42:52.971Z and closes
+  2026-11-09T00:00:00+08:00. The separate published-submission240 workflow
+  is in progress; completion and publication are not marked done here. It cannot influence our
+  closed research. See RULES_RESUMPTION_20261101.md for current public rules and
+  the recorded incidental public-score exposure during the rules audit.
+- Saved confidence and paired validation diagnostics are complete; choices are
+  unchanged and calibration worsened validation ECE. Their existence is not a
+  new model score or an unqualified confidence-improvement claim.
+- Continue: independent final review, fresh public-checkout
+  reproduction, research-only freeze and honest closeout PDF/Chinese guide,
+  own PR review/merge, then actual authorized peer-review form/Issue.
+  Verify the actual records at each step; do not fabricate completion markers or
+  rerun completed selection/validation. The archive FREEZE must state
+  research_only=true and formal_test_allowed=false. The separate closeout report
+  workflow preserves the original TEST_COMPLETE-gated formal-report tools.
+
+## V3 research history — 2026-10-30 UTC+8
+
+Historical checkpoint only. Earlier plans to continue research or perform a
+new formal test/submission are superseded by the expired budget, closed search
+and current post-deadline state above. Historical numbers and logs are retained.
 
 The user adopted `docs/research_v3/AUTONOMOUS_RESEARCH_SPEC.txt` and explicitly
 authorized a new bounded train/CV campaign, review, reproduction and one uniquely
@@ -30,9 +72,9 @@ instructions below for V3; all historical method/assets/logs remain preserved.
   R09 stronger weight decay1683/dropout1673/width256 1677 did not improve
   Attention. R10 RealMLP reduced input1665 (+54 versus matched full-input1611)
   warrants two bounded variance controls; lower LR1610/width256 1607 did not help.
-  R11 TabM k8/EMA and R14 RealMLP dropout0.1/EMA on reduced input were registered
-  at04:22Z and are running sequentially under scheduler PID44908 (verify current
-  PID/create-time before use). The previous PID25488 completed and exited.
+  R11 and R14 completed at04:37Z: reduced TabM k8=1663, EMA=1687;
+  reduced RealMLP dropout0.1=1682, EMA=1658 hard. All35 base recipes/105 outer
+  fits are complete. Scheduler PID44908 exited; no current trainer is active.
   Two separately registered equal-probability fusions are complete and rejected:
   Attention+TabM1667 hard; Attention+RealMLP1670, both below their Attention member.
 - Train-only table recomputed all19 historical full-CV configurations with
@@ -40,10 +82,14 @@ instructions below for V3; all historical method/assets/logs remain preserved.
 - Current queue/state is authoritative in `results/research_v3/campaign_queue.json`,
   registry and heartbeat files. Scheduler restart retained the live trainer;
   Windows venv child-tree timeout cleanup passed a real no-data process test.
-- Next: finish the four queued reduced-input follow-ups. A fresh
-  train-only reciprocal-error gate supports one separately preregistered
-  equal-probability reduced-TabM/Attention-EMA mix (not yet evaluated).
-  Then choose the most promising1--2 recipes for the two fixed extra seeds. Read
+- The R12 reduced-live TabM/Attention-EMA fixed mixture actually completed:
+  1680 hard/4321 full, rejected. Its new aggregate preserves both prior mixtures.
+  A separate fresh gate supports exactly one reduced-EMA TabM/Attention-EMA
+  equal mixture (R15 tool preparation/review; not yet evaluated).
+- Next: execute R15 after its immutable preparation/review. R13 stability
+  recipes are now explicitly prepared (not registered): reduced TabM EMA and
+  Attention EMA, each with the original fixed extra seeds958/959. Deployment
+  remains seed957. No extra-seed outcomes have been observed. Read
   `docs/research_v3/SEARCH_PLAN_V3.md` and `RESUME.txt`.
 - At most two NEW validation finalists, fixed deployment seed3036900957. New
   selection must satisfy the exact historical-fallback criterion in the plan.

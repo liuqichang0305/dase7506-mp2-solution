@@ -1,0 +1,419 @@
+{
+  "status": "passed",
+  "name": "v3_tabm_embedding_stats_ema_s0",
+  "lock_sha256": "4dfc67595cabf6e9f7dc0d0ef5460721e522e96c08dbd01ff0f87467e36ff9cf",
+  "completed_at_utc": "2026-11-02T07:26:19.434409+00:00",
+  "prediction_plus_scoring_seconds": 2.5644871999975294,
+  "processes": [
+    {
+      "command": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-S",
+        "-c",
+        "import json,os,runpy,sys\nfrom pathlib import Path\nfrom threadpoolctl import threadpool_info\nscript,report=sys.argv[1:3]\nsys.argv=[script]+sys.argv[3:]\nsys.path.insert(0,str(Path(script).resolve().parent))\ntry:\n    runpy.run_path(script,run_name='__main__')\nfinally:\n    record={'script':script,'executable':sys.executable,'pythonpath':os.environ.get('PYTHONPATH'),\n            'thread_pools':threadpool_info(),'numpy_version':getattr(sys.modules.get('numpy'),'__version__',None),\n            'torch_imported':'torch' in sys.modules,\n            'thread_environment':{k:os.environ.get(k) for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS','OMP_THREAD_LIMIT')}}\n    with open(report,'x',encoding='utf-8') as f:\n        json.dump(record,f,indent=2);f.write('\\n')\n",
+        "code/predict.py",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\validation\\v3_tabm_embedding_stats_ema_s0\\prediction-thread-pools.json",
+        "--method",
+        "code/solution_v3.py",
+        "--checkpoint",
+        "artifacts/research_v3/final_v3_tabm_embedding_stats_ema_s0",
+        "--split",
+        "validation",
+        "--output",
+        "results\\research_v3\\validation\\v3_tabm_embedding_stats_ema_s0\\validation-predictions.json"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "started_at_utc": "2026-11-02T07:26:16.871094+00:00",
+      "completed_at_utc": "2026-11-02T07:26:18.981287+00:00",
+      "wall_seconds": 2.1160877000074834,
+      "process_tree": [
+        {
+          "pid": 45384,
+          "create_time": 1793604376.873779
+        }
+      ],
+      "sampled_peak_tree_threads": 4,
+      "sampled_peak_tree_rss_bytes": 122613760,
+      "sampled_peak_tree_plus_coordinator_threads": 8,
+      "sampled_cpu_seconds": 2.03125,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      },
+      "sampling_note": "Nominal 10 ms delay between process-tree samples, plus snapshot overhead. Observed children retain PID/creation identities after parent exit. Unobserved detached ancestry is not recoverable; formal workers use direct Python and deny spawning. CPU/RSS/threads are samples, not exact integrals."
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-S",
+        "-c",
+        "import json,os,runpy,sys\nfrom pathlib import Path\nfrom threadpoolctl import threadpool_info\nscript,report=sys.argv[1:3]\nsys.argv=[script]+sys.argv[3:]\nsys.path.insert(0,str(Path(script).resolve().parent))\ntry:\n    runpy.run_path(script,run_name='__main__')\nfinally:\n    record={'script':script,'executable':sys.executable,'pythonpath':os.environ.get('PYTHONPATH'),\n            'thread_pools':threadpool_info(),'numpy_version':getattr(sys.modules.get('numpy'),'__version__',None),\n            'torch_imported':'torch' in sys.modules,\n            'thread_environment':{k:os.environ.get(k) for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS','OMP_THREAD_LIMIT')}}\n    with open(report,'x',encoding='utf-8') as f:\n        json.dump(record,f,indent=2);f.write('\\n')\n",
+        "code/score_predictions.py",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\validation\\v3_tabm_embedding_stats_ema_s0\\scoring-thread-pools.json",
+        "--split",
+        "validation",
+        "--predictions",
+        "results\\research_v3\\validation\\v3_tabm_embedding_stats_ema_s0\\validation-predictions.json",
+        "--output",
+        "results\\research_v3\\validation\\v3_tabm_embedding_stats_ema_s0\\validation-score.json"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "started_at_utc": "2026-11-02T07:26:18.993371+00:00",
+      "completed_at_utc": "2026-11-02T07:26:19.425859+00:00",
+      "wall_seconds": 0.4437414999702014,
+      "process_tree": [
+        {
+          "pid": 49732,
+          "create_time": 1793604378.9964764
+        }
+      ],
+      "sampled_peak_tree_threads": 4,
+      "sampled_peak_tree_rss_bytes": 34234368,
+      "sampled_peak_tree_plus_coordinator_threads": 8,
+      "sampled_cpu_seconds": 0.328125,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      },
+      "sampling_note": "Nominal 10 ms delay between process-tree samples, plus snapshot overhead. Observed children retain PID/creation identities after parent exit. Unobserved detached ancestry is not recoverable; formal workers use direct Python and deny spawning. CPU/RSS/threads are samples, not exact integrals."
+    }
+  ],
+  "local_resource_eligible": true,
+  "resource": {
+    "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v3\\final_v3_tabm_embedding_stats_ema_s0",
+    "files": [
+      {
+        "path": "config.json",
+        "sha256": "8bbd5349ade14b3ad316738f035882fcd394e39b4691283def9d50c78d900cd8",
+        "disk_bytes": 513,
+        "uncompressed_bytes": 513
+      },
+      {
+        "path": "weights.npz",
+        "sha256": "4a9f070f02ef0a0df246bfb241476914c1c4390b7581bd42ef0f7637ef733e10",
+        "disk_bytes": 740400,
+        "uncompressed_bytes": 740400,
+        "members": [
+          {
+            "name": "mean.npy",
+            "uncompressed_bytes": 16640
+          },
+          {
+            "name": "scale.npy",
+            "uncompressed_bytes": 16640
+          },
+          {
+            "name": "prep_clip_mask.npy",
+            "uncompressed_bytes": 2192
+          },
+          {
+            "name": "prep_constant_mask.npy",
+            "uncompressed_bytes": 2192
+          },
+          {
+            "name": "blocks.0.weight.npy",
+            "uncompressed_bytes": 532608
+          },
+          {
+            "name": "blocks.0.r.npy",
+            "uncompressed_bytes": 16768
+          },
+          {
+            "name": "blocks.0.s.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "blocks.0.bias.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "blocks.1.weight.npy",
+            "uncompressed_bytes": 65664
+          },
+          {
+            "name": "blocks.1.r.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "blocks.1.s.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "blocks.1.bias.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "blocks.2.weight.npy",
+            "uncompressed_bytes": 65664
+          },
+          {
+            "name": "blocks.2.r.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "blocks.2.s.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "blocks.2.bias.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "head.weight.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "head.bias.npy",
+            "uncompressed_bytes": 144
+          }
+        ],
+        "arrays": [
+          {
+            "name": "mean",
+            "shape": [
+              2064
+            ],
+            "dtype": "float64",
+            "array_bytes": 16512
+          },
+          {
+            "name": "scale",
+            "shape": [
+              2064
+            ],
+            "dtype": "float64",
+            "array_bytes": 16512
+          },
+          {
+            "name": "prep_clip_mask",
+            "shape": [
+              2064
+            ],
+            "dtype": "uint8",
+            "array_bytes": 2064
+          },
+          {
+            "name": "prep_constant_mask",
+            "shape": [
+              2064
+            ],
+            "dtype": "uint8",
+            "array_bytes": 2064
+          },
+          {
+            "name": "blocks.0.weight",
+            "shape": [
+              128,
+              1040
+            ],
+            "dtype": "float32",
+            "array_bytes": 532480
+          },
+          {
+            "name": "blocks.0.r",
+            "shape": [
+              4,
+              1040
+            ],
+            "dtype": "float32",
+            "array_bytes": 16640
+          },
+          {
+            "name": "blocks.0.s",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "blocks.0.bias",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "blocks.1.weight",
+            "shape": [
+              128,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 65536
+          },
+          {
+            "name": "blocks.1.r",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "blocks.1.s",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "blocks.1.bias",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "blocks.2.weight",
+            "shape": [
+              128,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 65536
+          },
+          {
+            "name": "blocks.2.r",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "blocks.2.s",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "blocks.2.bias",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "head.weight",
+            "shape": [
+              4,
+              1,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "head.bias",
+            "shape": [
+              4,
+              1
+            ],
+            "dtype": "float32",
+            "array_bytes": 16
+          }
+        ]
+      }
+    ],
+    "uncompressed_bytes": 740913,
+    "limit_bytes": 16777216,
+    "within_limit": true,
+    "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+    "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+  },
+  "sampled_peak_task_process_tree_threads": 4,
+  "sampled_peak_worker_tree_plus_coordinator_threads": 8,
+  "scientific_library_observations": [
+    {
+      "script": "code/predict.py",
+      "executable": "C:\\Program Files\\Python312\\python.exe",
+      "pythonpath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages",
+      "thread_pools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "version": "0.3.34.106.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ],
+      "numpy_version": "2.5.3",
+      "torch_imported": false,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      }
+    },
+    {
+      "script": "code/score_predictions.py",
+      "executable": "C:\\Program Files\\Python312\\python.exe",
+      "pythonpath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages",
+      "thread_pools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "version": "0.3.34.106.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ],
+      "numpy_version": "2.5.3",
+      "torch_imported": false,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      }
+    }
+  ],
+  "scientific_library_thread_cap_passed": true,
+  "process_schedule": "Prediction exits completely before independent scoring begins",
+  "coordinator_scope": "External measurement monitor is disclosed separately; it is not submitted prediction/scoring code.",
+  "hardware": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "logical_cpu_count": 20,
+    "physical_cpu_count": 14,
+    "memory_bytes": 16823717888,
+    "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]"
+  },
+  "limitation": "Local measured eligibility only; not certification on the reference Xeon Platinum 8457C."
+}

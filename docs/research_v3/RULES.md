@@ -1,5 +1,7 @@
 # V3 rules and authority audit
 
+**Current status update (2026-11-01):** the score deadline has passed and official MP2 peer review has been released. See [the resumption audit](RULES_RESUMPTION_20261101.md) for exact current dates, the post-release artifact boundary, and saved source evidence. The startup findings below are retained as historical records and do not reopen score submission or the research budget.
+
 Checked on 2026-10-30 at 00:28 UTC+8 (2026-10-29 16:28 UTC). This is an independent AI audit, not instructor approval. Complete retrieved source evidence is in `results/research_v3/audit_rules_startup.json`.
 
 ## Applicable authority and the final-test gate

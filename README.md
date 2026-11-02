@@ -2,7 +2,58 @@
 
 Student 3036900957. Individual coursework with disclosed AI assistance. A small CPU verifier selects one of the four supplied candidate solutions. It does not generate answers or call an external model.
 
-## Autonomous research v3 - active train-only study
+## Autonomous research v3 - closed, research archive only
+
+The research clock and formal score deadline have expired. **No V3 formal test
+or score update will be performed.** The original [course Issue #294](https://github.com/xudongwu-0/xudongwu-0.github.io/issues/294)
+and its submitted V1 result, **348/467**, remain unchanged. That historical score
+does not measure the V3 archive model.
+
+As recorded after locked validation on 2 November 2026, **35 V3 base
+configurations / 105 outer folds** completed on the common training folds,
+alongside 19 preserved V2 configurations. Four extra-seed jobs were pruned;
+their partial results do not establish completed V3 seed stability. All four
+fixed probability mixtures were evaluated and rejected. Monitoring gaps and
+actual elapsed-time overshoots are retained; continuous CPU execution or an
+uninterrupted 24-hour campaign is not claimed.
+
+| Locked research-only validation candidate | All correct | Hard correct |
+|---|---:|---:|
+| Reduced-input TabM EMA | 735/798 | 292/355 |
+| Attention EMA | 736/798 | 293/355 |
+| Historical V2 Deep Sets fallback | **740/798** | **297/355** |
+
+Neither new candidate met the fixed replacement rule. The selected research
+checkpoint is the byte-identical historical `deepsets_regularized_s0`, copied
+to `artifacts/research_v3/final_selected`. **No new validation improvement is
+claimed.** Saved 798-question export/contract checks passed. Confidence and
+paired validation diagnostics are recorded and change no selections; calibration
+did not improve validation ECE. Independent final
+review, clean reproduction, research-only freeze, closeout report and PR closure
+must each be completed and evidenced separately before being marked done.
+
+Evidence: [search closure](results/research_v3/SEARCH_CLOSED.json),
+[formal update block](submission/v3/FORMAL_SUBMISSION_BLOCKED.json),
+[locked validation](results/research_v3/validation_summary.json),
+[unique selection](submission/v3/SELECTED_MODEL.json),
+[current state](PROJECT_STATE.md), and
+[recovery instructions](docs/research_v3/RESUME.txt).
+The independent [V3 PR #3](https://github.com/liuqichang0305/dase7506-mp2-solution/pull/3)
+preserves source, old assets and actual logs. The separate
+[post-deadline report workflow](docs/research_v3/RESEARCH_CLOSEOUT_REPORT.md)
+requires actual archive evidence and never fabricates `TEST_COMPLETE`.
+
+Do not restart the research scheduler, register new experiments, retry pruned
+seeds, tune on validation/test, or replace the old submitted artifacts. Current
+peer review is a separate instructor-released task; its completion/publication
+requires its own real evidence and cannot feed back into this closed research.
+
+<details>
+<summary>Historical V3 checkpoint from 30 October (superseded; not current resume instructions)</summary>
+
+The following retained checkpoint describes earlier work. Its future-tense
+training/test/submission commands are no longer authorized actions after the
+closure and deadline above.
 
 The current `research/autonomous-v3` branch preserves every historical frozen
 method and adds a bounded, resumable campaign. [Draft PR #3](https://github.com/liuqichang0305/dase7506-mp2-solution/pull/3)
@@ -38,7 +89,9 @@ another round. Research commands do not automatically invoke final testing.
 Final inference is NumPy-only; pinned development and inference dependencies are
 in `code/requirements-training-v3.txt` and `code/requirements-inference-v3.txt`.
 
-## Performance research v2 — development verified, formal re-evaluation pending
+</details>
+
+## Performance research v2 — preserved development result
 
 The independent `research/performance-v2` branch implements valid-answer masking,
 answer-group objectives, MLP/ResMLP, Deep Sets and four-token attention. Nineteen

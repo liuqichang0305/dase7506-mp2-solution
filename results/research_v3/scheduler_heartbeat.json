@@ -1,23 +1,23 @@
 {
-  "utc": "2026-10-30T04:24:12.632741+00:00",
-  "scheduler_pid": 44908,
-  "experiment_id": "v3_tabm_embedding_stats_k8_s0",
-  "training_pid": 36196,
-  "attempt_elapsed_seconds": 120.2462990283966,
-  "campaign_remaining_seconds": 43109.40744638443,
+  "utc": "2026-10-30T08:12:26.455082+00:00",
+  "scheduler_pid": 27568,
+  "experiment_id": "v3_attention_ema_s1",
+  "training_pid": 49812,
+  "attempt_elapsed_seconds": 0.17333197593688965,
+  "campaign_remaining_seconds": 29415.632801532745,
   "resource_sample": [
     {
-      "pid": 36196,
-      "create_time": 1793334132.3485742,
-      "rss_bytes": 4440064,
+      "pid": 49812,
+      "create_time": 1793347946.1975248,
+      "rss_bytes": 4464640,
       "cpu_seconds": 0.015625,
-      "os_thread_count": 1
+      "os_thread_count": 3
     },
     {
-      "pid": 35644,
-      "create_time": 1793334132.3631067,
-      "rss_bytes": 807940096,
-      "cpu_seconds": 117.625,
+      "pid": 49944,
+      "create_time": 1793347946.3580325,
+      "rss_bytes": 17022976,
+      "cpu_seconds": 0.0625,
       "os_thread_count": 4
     }
   ],

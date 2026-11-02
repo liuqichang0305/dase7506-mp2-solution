@@ -1,0 +1,43 @@
+{
+  "scope": "Independent source review plus synthetic temporary train-OOF metadata and mocked diagnostic process. No production prepare/register/evaluate/summarize, training, holdout, leaderboard or network access.",
+  "started_at_utc": "2026-10-30T04:27:28.351987+00:00",
+  "completed_at_utc": "2026-10-30T04:27:30.944183+00:00",
+  "source_sha256_before": {
+    "scripts/register_reduced_tabm_attention_fusion_v3.py": "ddf9af9bc8d4d1483ede52cb3e92f6b71e7bac73831d993686c509bb68bef504",
+    "code/tests/test_reduced_tabm_fusion_registration_v3.py": "69b918fc0b0046a75096d1868c816c38347856e23db73d30ef0ddb716061ad54",
+    "code/tools/diagnose_oof_v3.py": "4674d685cba6c8d211bbb37b22e12a064cf9c4bfb9db9af4bbfb3621244afa1d",
+    "docs/research_v3/REDUCED_TABM_FIXED_FUSION.md": "71b79ab72f3305cfb79302945b670ff495292a3cb7bf924d44a5fb7cbff962c9"
+  },
+  "source_sha256_after": {
+    "scripts/register_reduced_tabm_attention_fusion_v3.py": "ddf9af9bc8d4d1483ede52cb3e92f6b71e7bac73831d993686c509bb68bef504",
+    "code/tests/test_reduced_tabm_fusion_registration_v3.py": "69b918fc0b0046a75096d1868c816c38347856e23db73d30ef0ddb716061ad54",
+    "code/tools/diagnose_oof_v3.py": "4674d685cba6c8d211bbb37b22e12a064cf9c4bfb9db9af4bbfb3621244afa1d",
+    "docs/research_v3/REDUCED_TABM_FIXED_FUSION.md": "71b79ab72f3305cfb79302945b670ff495292a3cb7bf924d44a5fb7cbff962c9"
+  },
+  "sources_unchanged": true,
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_reduced_tabm_fusion_registration_v3.py",
+    "-v"
+  ],
+  "process_wall_seconds": 2.5900105000037,
+  "exit_code": 0,
+  "log_sha256": {
+    "stderr.log": "eec6a7a8a285cf69adf024af85516532a350b0f95b07e2c50a20efa62ec90c8d",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "passed": true,
+  "review": [
+    "Exact fixed two-member order/equal weights and prior reciprocal-error gate retained.",
+    "Pre-evaluation registration binds current completed BASE957 common-fold summaries, preserved V2 and earlier registered fusions; strict half-point continuation uses actual hard fold mean against the frozen maximum.",
+    "Direct base Python -S and fixed venv site-packages avoid the Windows launcher timeout boundary; existing diagnostic guard forbids worker spawning. Synthetic execution is mocked, not a fresh measured resource qualification.",
+    "Shared scheduler lock, terminal queue, absolute deadline and configuration cap are enforced; original registry/analysis are preserved and failed execution cannot silently rerun.",
+    "Final receipt binds immutable ledger snapshot plus exact R12 record, allowing later stability records on the live ledger."
+  ]
+}

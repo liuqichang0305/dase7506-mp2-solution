@@ -1,4 +1,28 @@
-Continue the authorized DASE7506 MP2 autonomous V3 research.
+Continue only the DASE7506 MP2 post-deadline research archive and actual peer review.
+CURRENT OVERRIDE (2026-11-02): research budget and score deadline have expired.
+SEARCH_CLOSED.json and FORMAL_SUBMISSION_BLOCKED.json exist. Do not resume
+the research scheduler, reset the clock, run V3 official test, update its score,
+or replace the old submitted assets. All35 base configurations and four fixed
+fusions are complete; four extra-seed jobs are pruned. Final fits and the two
+locked research-only validations are already complete: reduced TabM EMA735/798
+hard292/355; Attention EMA736/798 hard293/355. Both fail the fixed replacement
+rule. SELECTED_MODEL is byte-identical historical deepsets_regularized_s0
+(740/798, hard297/355), copied to artifacts/research_v3/final_selected.
+Actual798-question export/contract checks passed. Do not rerun or retune these.
+Saved confidence and paired validation diagnostics are complete and change no
+choices; calibration did not improve validation ECE. Finish only outstanding
+independent final review, clean
+reproduction, research-only freeze/report/own-PR archive and the actually
+open peer review (release Nov1; closes Nov9 00:00UTC8). Read current PROJECT_STATE
+and RULES_RESUMPTION_20261101 before the historical general instructions below.
+Do not mark fresh reproduction, final review, freeze, report/PDF QA, PR merge or
+peer publication complete until the actual records prove it. The archive freeze
+must have research_only=true/formal_test_allowed=false. Use the separate
+prepare_closeout_inputs.py/build_closeout.py workflow after genuine closeout
+evidence exists, never manufacture TEST_COMPLETE. Retain all logs, partial runs,
+monitoring gaps and historical Issue294/348467. No continuous24h CPU claim.
+
+ARCHIVED PRE-CLOSURE INSTRUCTIONS BELOW -- NOT CURRENT EXECUTION INSTRUCTIONS:
 Read PROJECT_STATE.md, docs/research_v3/SEARCH_PLAN_V3.md and RESUME.txt,
 results/research_v3/campaign_budget.json, campaign_queue.json (if present),
 experiment_registry.jsonl, DECISIONS.md and BLOCKERS.md.

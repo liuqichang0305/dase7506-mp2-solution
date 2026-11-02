@@ -200,6 +200,52 @@ class FinalFreezeTests(unittest.TestCase):
         self.assertEqual(self.freeze(), record)
         self.assertEqual(f.sha(self.folder / 'FREEZE.json'), before)
 
+    def archive_block(self):
+        self.now = datetime(2026, 11, 2, 8, tzinfo=timezone.utc)
+        audit = 'docs/research_v3/synthetic-deadline-audit.md'
+        self.put(audit, b'Synthetic official-rule evidence; no network or course submission.')
+        value = {'schema': 'mp2-v3-post-deadline-block-v1',
+            'created_at_utc': (self.now - timedelta(seconds=1)).isoformat(),
+            'no_new_test': True, 'no_new_score_update': True,
+            'no_automatic_artifact_replacement': True, 'research_only': True, 'missed_deadline': True,
+            'rules_audit_path': audit, 'rules_audit_sha256': f.sha(self.root / audit),
+            'search_closed_sha256': f.sha(self.root / 'results/research_v3/SEARCH_CLOSED.json')}
+        self.save('submission/v3/FORMAL_SUBMISSION_BLOCKED.json', value)
+        return value
+
+    def test_post_deadline_archive_preserves_gates_but_never_authorizes_test(self):
+        self.archive_block()
+        record = self.freeze()
+        self.assertTrue(record['research_only'])
+        self.assertFalse(record['formal_test_allowed'])
+        self.assertEqual(self.freeze(), record)
+        verified = f.verify_freeze(self.root, source_provider=self.source_provider,
+                                   git_check=lambda *args: None, allow_research_archive=True)
+        self.assertEqual(verified, record)
+        with self.assertRaisesRegex(ValueError, 'cannot authorize'):
+            self.verify(self.root)
+        with self.assertRaisesRegex(ValueError, 'cannot authorize'):
+            e.evaluate(self.root, verify=self.verify,
+                       process_runner=lambda *args, **kwargs: self.fail('No archive test worker may run'))
+        self.assertFalse((self.folder / 'TEST_OPENED.json').exists())
+
+    def test_archive_needs_real_restrictive_block_and_immutable_evidence(self):
+        self.now = datetime(2026, 11, 2, 8, tzinfo=timezone.utc)
+        with self.assertRaisesRegex(ValueError, 'explicit research-only'):
+            self.freeze()
+        value = self.archive_block()
+        value['no_new_test'] = False
+        self.save('submission/v3/FORMAL_SUBMISSION_BLOCKED.json', value)
+        with self.assertRaisesRegex(ValueError, 'Invalid research-only'):
+            self.freeze()
+        value['no_new_test'] = True
+        self.save('submission/v3/FORMAL_SUBMISSION_BLOCKED.json', value)
+        self.freeze()
+        self.put(value['rules_audit_path'], b'changed synthetic rule evidence')
+        with self.assertRaisesRegex(ValueError, 'evidence bytes changed'):
+            f.verify_freeze(self.root, source_provider=self.source_provider,
+                            git_check=lambda *args: None, allow_research_archive=True)
+
     def test_changed_selection_copy_or_gate_cannot_freeze(self):
         self.put(f.CHECKPOINT + '/numeric.bin', b'changed copy')
         with self.assertRaisesRegex(ValueError, 'Deployment copy differs'):

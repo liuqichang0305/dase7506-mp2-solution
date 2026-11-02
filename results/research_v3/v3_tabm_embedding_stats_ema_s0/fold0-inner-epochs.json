@@ -1,0 +1,292 @@
+{
+  "identity": {
+    "config_sha256": "f74b165d7f4dbb7e2f978ccb69fc4433311bde1ca8dd7d08a6e1183a39425a28",
+    "context": {
+      "source_files": {
+        "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+        "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+        "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+        "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+        "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+        "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+        "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+        "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+        "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+        "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+        "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+      },
+      "data_files": {
+        "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+        "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+        "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+        "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2"
+      },
+      "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+      "fold": 0,
+      "phase": "inner"
+    },
+    "seed": 3036900957,
+    "fitting_rows_sha256": "842ec7651bb8da6f0e28ae19408cc4b6ff558327b65a7d96af21e8b2528df747",
+    "stopping_rows_sha256": "f3061e561a2518e6f9cb702ab24923acfff0e4468702eee09b9686d4efeba13b",
+    "maximum_epochs": 60,
+    "stopping": true,
+    "preprocess_hashes": {
+      "mode": "standard",
+      "mean": "ef24615fd76840bf79ea07fdc32d93dfacbcbeed47e29ad4fbf638bbe009d6ad",
+      "scale": "053e232ea52f620eb6752876b0dd3fe56b9f44e2fabed1262aca333d03d4b373",
+      "clip_mask": "35e1ee8fe0f302844f0236cb941727bffc24e5a8f9f57e778bb7b63b645cee0f",
+      "constant_mask": "35e1ee8fe0f302844f0236cb941727bffc24e5a8f9f57e778bb7b63b645cee0f"
+    }
+  },
+  "optimizer_groups": [
+    {
+      "role": "adamw",
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "param_names": [
+        "blocks.0.weight",
+        "blocks.0.r",
+        "blocks.0.s",
+        "blocks.1.weight",
+        "blocks.1.r",
+        "blocks.1.s",
+        "blocks.2.weight",
+        "blocks.2.r",
+        "blocks.2.s",
+        "head.weight"
+      ],
+      "shapes": [
+        [
+          128,
+          1040
+        ],
+        [
+          4,
+          1040
+        ],
+        [
+          4,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          4,
+          128
+        ],
+        [
+          4,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          4,
+          128
+        ],
+        [
+          4,
+          128
+        ],
+        [
+          4,
+          1,
+          128
+        ]
+      ],
+      "parameter_count": 173120
+    },
+    {
+      "role": "adamw",
+      "lr": 0.001,
+      "weight_decay": 0.0,
+      "param_names": [
+        "blocks.0.bias",
+        "blocks.1.bias",
+        "blocks.2.bias",
+        "head.bias"
+      ],
+      "shapes": [
+        [
+          4,
+          128
+        ],
+        [
+          4,
+          128
+        ],
+        [
+          4,
+          128
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "parameter_count": 1540
+    }
+  ],
+  "evaluation_weights": "ema",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.31172456754494915,
+      "elapsed_seconds": 6.352392000000691,
+      "optimizer_steps": 20,
+      "ema_updates": 20,
+      "inner_stop_loss": 0.3160599172115326
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.26021416593425284,
+      "elapsed_seconds": 8.738962700008415,
+      "optimizer_steps": 40,
+      "ema_updates": 40,
+      "inner_stop_loss": 0.31072598695755005
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.21616590986680534,
+      "elapsed_seconds": 11.270250800007489,
+      "optimizer_steps": 60,
+      "ema_updates": 60,
+      "inner_stop_loss": 0.2998354434967041
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.17628231936072702,
+      "elapsed_seconds": 13.759797300008358,
+      "optimizer_steps": 80,
+      "ema_updates": 80,
+      "inner_stop_loss": 0.28516507148742676
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.14296240477061797,
+      "elapsed_seconds": 16.161990499997046,
+      "optimizer_steps": 100,
+      "ema_updates": 100,
+      "inner_stop_loss": 0.2664151191711426
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.11705676012610787,
+      "elapsed_seconds": 18.575975600004313,
+      "optimizer_steps": 120,
+      "ema_updates": 120,
+      "inner_stop_loss": 0.24897116422653198
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.09772203935527651,
+      "elapsed_seconds": 21.02126190000854,
+      "optimizer_steps": 140,
+      "ema_updates": 140,
+      "inner_stop_loss": 0.23498040437698364
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.07867594158470818,
+      "elapsed_seconds": 23.75415960000828,
+      "optimizer_steps": 160,
+      "ema_updates": 160,
+      "inner_stop_loss": 0.22577433288097382
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.06787539299354192,
+      "elapsed_seconds": 26.23019660000864,
+      "optimizer_steps": 180,
+      "ema_updates": 180,
+      "inner_stop_loss": 0.2230880707502365
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.059850127021973065,
+      "elapsed_seconds": 28.715084800001932,
+      "optimizer_steps": 200,
+      "ema_updates": 200,
+      "inner_stop_loss": 0.225726917386055
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.05235049784277516,
+      "elapsed_seconds": 31.240839799997048,
+      "optimizer_steps": 220,
+      "ema_updates": 220,
+      "inner_stop_loss": 0.23236405849456787
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.04624783143119105,
+      "elapsed_seconds": 33.817356200001086,
+      "optimizer_steps": 240,
+      "ema_updates": 240,
+      "inner_stop_loss": 0.2423035353422165
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.04707054490640712,
+      "elapsed_seconds": 36.30143740000494,
+      "optimizer_steps": 260,
+      "ema_updates": 260,
+      "inner_stop_loss": 0.25437918305397034
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.046383952986366744,
+      "elapsed_seconds": 38.77284240000881,
+      "optimizer_steps": 280,
+      "ema_updates": 280,
+      "inner_stop_loss": 0.26706671714782715
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.03808527695432258,
+      "elapsed_seconds": 41.28448750000098,
+      "optimizer_steps": 300,
+      "ema_updates": 300,
+      "inner_stop_loss": 0.2798745632171631
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.03859312995704191,
+      "elapsed_seconds": 43.81151100000716,
+      "optimizer_steps": 320,
+      "ema_updates": 320,
+      "inner_stop_loss": 0.2923431098461151
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.02965277426344363,
+      "elapsed_seconds": 46.356156900001224,
+      "optimizer_steps": 340,
+      "ema_updates": 340,
+      "inner_stop_loss": 0.30588439106941223
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.02676885556253349,
+      "elapsed_seconds": 48.81534580000152,
+      "optimizer_steps": 360,
+      "ema_updates": 360,
+      "inner_stop_loss": 0.3210018575191498
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.02537903345369202,
+      "elapsed_seconds": 51.32233680000354,
+      "optimizer_steps": 380,
+      "ema_updates": 380,
+      "inner_stop_loss": 0.3371041417121887
+    }
+  ],
+  "best_epoch": 9,
+  "complete": true,
+  "checkpoint": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\research_v3\\training_states\\v3_tabm_embedding_stats_ema_s0\\fold0\\inner\\current.pt"
+}

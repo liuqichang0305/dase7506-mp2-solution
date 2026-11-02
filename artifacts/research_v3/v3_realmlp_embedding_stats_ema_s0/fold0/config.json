@@ -1,0 +1,25 @@
+{
+  "architecture": {
+    "activation": "selu",
+    "depth": 3,
+    "dropout": 0.0,
+    "family": "realmlp",
+    "input_features": "embedding_stats",
+    "k": 4,
+    "start_scaling_init": "random-signs",
+    "width": 128
+  },
+  "decoder": {
+    "alpha": 0,
+    "mask": true,
+    "mode": "group_lse",
+    "tau": 1
+  },
+  "features": "relation",
+  "output": "candidate_scores",
+  "preprocess": {
+    "mode": "robust_all",
+    "smooth_clip_bound": 3.0
+  },
+  "schema": "mp2-research-v3"
+}

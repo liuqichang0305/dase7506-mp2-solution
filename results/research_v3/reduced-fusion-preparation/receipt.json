@@ -1,0 +1,28 @@
+{
+  "schema": "mp2-v3-fixed-fusion-preparation-receipt-v1",
+  "status": "prepared_not_registered",
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "scripts/register_reduced_tabm_attention_fusion_v3.py",
+    "prepare"
+  ],
+  "started_at_utc": "2026-10-30T04:28:19.271046+00:00",
+  "completed_at_utc": "2026-10-30T04:28:19.715980+00:00",
+  "process_wall_seconds": 0.44484720000764355,
+  "returncode": 0,
+  "registry_sha256_before": "1ed4cd3fe8a6a6d235aa465dfd9a65c67cbee513b5414d45938a42c5fdf7f07d",
+  "registry_sha256_after": "1ed4cd3fe8a6a6d235aa465dfd9a65c67cbee513b5414d45938a42c5fdf7f07d",
+  "registry_unchanged": true,
+  "formal_registration_exists": false,
+  "fusion_output_exists": false,
+  "source_sha256": {
+    "scripts/register_reduced_tabm_attention_fusion_v3.py": "ddf9af9bc8d4d1483ede52cb3e92f6b71e7bac73831d993686c509bb68bef504"
+  },
+  "preparation_sha256": "e1333071650a3a8914d9f1f509fab209df53eb019bd42ab528921dba290ebf66",
+  "fusion_evaluated": false,
+  "validation_test_ranking_read": false,
+  "outputs": {
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "5cd11de36a37cec9891a220dd90da0b4d3a6238165b24b774f6c350d7a841f07"
+  }
+}

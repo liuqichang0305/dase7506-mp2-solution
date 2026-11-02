@@ -1,0 +1,7 @@
+test_post_deadline_archive_preserves_gates_but_never_authorizes_test (__main__.FinalFreezeTests.test_post_deadline_archive_preserves_gates_but_never_authorizes_test) ... ok
+test_archive_needs_real_restrictive_block_and_immutable_evidence (__main__.FinalFreezeTests.test_archive_needs_real_restrictive_block_and_immutable_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.959s
+
+OK

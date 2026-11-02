@@ -1,0 +1,41 @@
+{
+  "schema": "mp2-selected-model-v3",
+  "created_at_utc": "2026-11-02T07:28:22.732179+00:00",
+  "name": "deepsets_regularized_s0",
+  "method": "code/solution_v3.py",
+  "checkpoint": "artifacts/research_v3/final_selected",
+  "origin_checkpoint": "artifacts/research_v2/final_deepsets",
+  "historical_fallback": true,
+  "deployment_seed": 3036900957,
+  "selector": {
+    "kind": "single_model",
+    "experiment_id": "deepsets_regularized_s0",
+    "family": "deepsets",
+    "decoder": {
+      "mode": "group_lse",
+      "alpha": 0,
+      "tau": 1,
+      "mask": true
+    },
+    "member_probability_average": false
+  },
+  "components": [
+    {
+      "kind": "historical_v2",
+      "experiment_id": "deepsets_regularized_s0",
+      "bundle_subdir": ".",
+      "freeze_path": "results/research_v2/V2_FREEZE.json",
+      "freeze_sha256": "beffa7b29472ba2da6fe639d8825ee29260fb201d6621b7e25f5294c77257a0c"
+    }
+  ],
+  "oof_directory": "results/research_v2/deepsets_regularized_s0",
+  "validation_summary_sha256": "a5254acf03acdc4996733db4484adae90508e61dfc0fdd8e4b56b7870e423322",
+  "origin_asset_sha256": {
+    "config.json": "e2c210a3717c5b48ee312226491b4b9c444cb6642d94fb3afd1fa39226bd89cf",
+    "weights.npz": "2bb9002701b0bcb6105b30f88863db20d7fd7267bc530ce85048168d47a60ab1"
+  },
+  "producer": {
+    "path": "scripts/prepare_finalists_v3.py",
+    "sha256": "618af933fce8c07a8f97dbc1682122b08a5790d62c92f09b7dd496b46f4e107c"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "round": "r13_fixed_seed_stability",
+  "round_type": "stability",
+  "hypothesis": "Assess seed variation for the explicitly chosen completed recipes without changing any hyperparameter. Base seeds3036900958 and3036900959 are fixed in the original search plan; seed3036900957 remains the only deployment seed. This is stability confirmation, not a new hypothesis or a way to count saturation rounds.",
+  "selection_rationale": "After all35 base-seed neural configurations completed, reduced TabM EMA is the strongest new recipe with1687/2114 hard4328/4755 full; Attention EMA is next with1685/4326 and a distinct contextual architecture. Their reciprocal errors51/49 pass the fixed fusion gate; the older reduced-live mixture was actually rejected at1680. RealMLP dropout1682 and all remaining new recipes are lower. Lock these two base recipes before observing any extra-seed result; repeats use only957+1 and957+2, never choose their deployment weights. R15 equal-mixture confirmation is separate and may combine these same fixed recipes, not alter this seed selection.",
+  "base_recipes": [
+    "v3_tabm_embedding_stats_ema_s0",
+    "v3_attention_ema_s0"
+  ],
+  "evidence_sha256": {
+    "results/research_v3/v3_tabm_embedding_stats_ema_s0/summary.json": "8f92c54587fc3f758939b3eb3ed51a5c2b0cb073305ffbd5fda93c83b8a17c28",
+    "results/research_v3/v3_tabm_embedding_stats_ema_s0/oof.npz": "057e4c65a0c7d975f7a6fca32e94d73bad619b6fe20cd61b25b8dca62a53a874",
+    "code/configs/research_v3/v3_tabm_embedding_stats_ema_s0.json": "8a63933475d8624faa25781d5620355aea5c00c98e7656b0cc4329f8dcf0e4d2",
+    "results/research_v3/v3_attention_ema_s0/summary.json": "0b6e265b3d47cc37ab6d8dabb1e8de0f28238702d8045afd58c15abecbea1e24",
+    "results/research_v3/v3_attention_ema_s0/oof.npz": "2c6153a24cffcbedf0dd58e2da162dcc7ab63a44e6e16b83c06a203d588d70d3",
+    "code/configs/research_v3/v3_attention_ema_s0.json": "536041c7cf0fbde33cae539e138967fda7c3a5abed5f78bb8390e06dc70e8bbc"
+  },
+  "producer_sha256": "f9937daeed428d9709163eb7a9a2e00b594e6dc1e352c726e580658cd56215ef",
+  "configs": [
+    {
+      "family": "tabm",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.1,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900958,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_tabm_embedding_stats_ema_s1",
+      "k": 4,
+      "depth": 3,
+      "input_features": "embedding_stats",
+      "ema_decay": 0.99
+    },
+    {
+      "family": "tabm",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.1,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900959,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_tabm_embedding_stats_ema_s2",
+      "k": 4,
+      "depth": 3,
+      "input_features": "embedding_stats",
+      "ema_decay": 0.99
+    },
+    {
+      "family": "attention",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900958,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_attention_ema_s1",
+      "heads": 4,
+      "ema_decay": 0.99
+    },
+    {
+      "family": "attention",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900959,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_attention_ema_s2",
+      "heads": 4,
+      "ema_decay": 0.99
+    }
+  ]
+}

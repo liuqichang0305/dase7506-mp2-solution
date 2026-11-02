@@ -1,0 +1,56 @@
+{
+  "schema": "mp2-v3-one-fusion-final-ledger-v1",
+  "status": "complete",
+  "created_at_utc": "2026-10-30T04:38:36.974340+00:00",
+  "experiment_id": "v3_fusion_reduced_tabm_attention_ema_s0",
+  "new_configurations": 1,
+  "new_training_fits": 0,
+  "completed_outer_fits": 0,
+  "decision_policy": {
+    "matched_control": "v3:v3_attention_ema_s0",
+    "retain_for_final_comparison_only_if": "hard_correct > control.hard_correct AND overall_correct >= control.overall_correct",
+    "otherwise": "Reject this fixed mixture; no post-result weight, temperature, seed, member or routing changes.",
+    "single_positive": "Disclose its exact change; it is not a post-hoc tuning criterion.",
+    "final_selection": "A local pass is not automatic deployment. The unchanged campaign finalist/resource rules still apply.",
+    "historical_reference": "research_v2:attention_regularized_s0",
+    "historical_hard_correct": 1687,
+    "continuation_reference": "At registration lock the highest complete BASE957 common-three-fold hard mean across current V3, preserved V2 and prior registered fusions. Do not replace it after evaluating this mixture.",
+    "campaign_threshold_pp_strictly_greater_than": 0.5
+  },
+  "decision": "Reject this fixed mixture; no post-result weight, temperature, seed, member or routing changes.",
+  "child_wall_seconds": 1.4882142999995267,
+  "total_observed_wall_seconds": 1.60946179999155,
+  "started_at_utc": "2026-10-30T04:37:44.044269+00:00",
+  "completed_at_utc": "2026-10-30T04:37:45.656480+00:00",
+  "input_sha256": {
+    "results/research_v3/fixed_fusion_analysis.json": "60ba0cee81c11039cae3c871d302f60049390ab523dc11eafa140a5c297639c0",
+    "results/research_v3/fusion_registry.jsonl": "efe82ca459a52d48b8ba578c05ca44faa33179cc85e65f222bbbf2004ba904ee",
+    "docs/research_v3/rounds/r12_reduced_tabm_attention_equal_fusion_preregistration.json": "e1333071650a3a8914d9f1f509fab209df53eb019bd42ab528921dba290ebf66",
+    "docs/research_v3/rounds/v3_fusion_reduced_tabm_attention_ema_s0.json": "7ed9c7b8cdbb553537cb7397b00e5561654ff3cd4d0c970581e7075a5684fd3f",
+    "results/research_v3/fusion_r12_execution/execution.json": "82c4cf1dde9f5f38feed931b536039bcec3679d9b3273424f31a16cdd53e4910"
+  },
+  "source_sha256": {
+    "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+    "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+    "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+    "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+    "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+    "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307",
+    "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+    "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+    "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+    "code/tools/analyze_oof_v2.py": "0423bcf6668a783e66051e6b0132a5262ce03b31c9032e80b3ca491537a0c812",
+    "code/tools/audit_assets.py": "7f099f89d9cf8b97e569e8d13c07bc1f942855c8131cb4b2f350836c7a2a9b33",
+    "code/tools/diagnose_oof_v3.py": "4674d685cba6c8d211bbb37b22e12a064cf9c4bfb9db9af4bbfb3621244afa1d",
+    "code/tools/diagnose_reduced_tabm_v3.py": "eeee482e8d3b3032727e0e8e9c5ed85ac39631fb822820d3833408e37b1f813b",
+    "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+    "scripts/register_reduced_tabm_attention_fusion_v3.py": "ddf9af9bc8d4d1483ede52cb3e92f6b71e7bac73831d993686c509bb68bef504"
+  },
+  "output_sha256": {
+    "results/research_v3/fixed_fusion_analysis_final.json": "5eb0817cbb855a4a665bd40d5ef47678655018c487efd1d09e204570ce196bbc",
+    "results/research_v3/fusion_r12_round_decisions.snapshot.jsonl": "7481c32b96573d807c62481cc9492f00306bb686fe046ad8a8a050253fd0034a",
+    "results/research_v3/fusion_r12_round_record.json": "bbeb3c2a2ee515bb9fac608181f019d89844bbd4d0835bc564eae960739b8d72"
+  },
+  "validation_test_ranking_read": false
+}

@@ -1,0 +1,11 @@
+The first R14 ledger append was attempted while the separate r14_complete
+analysis process was still running and returned exit code1. No R14 record was
+present afterward. The append was deferred until the analysis process completed
+successfully and its analysis.json existed, then succeeded without rerunning
+any training. No missing aggregate was invented.
+
+R14 training completed before the R12 deterministic fusion, but its analysis
+and narrative ledger entry were finalized afterward. Use the saved scheduler
+attempt completion timestamps for experimental chronology, not the order of
+round numbers or the time a narrative entry was appended. All these rounds
+remain below the unchanged global continuation threshold.

@@ -1,0 +1,185 @@
+{
+  "schema": "mp2-v3-expired-search-closure-v1",
+  "search_closed": true,
+  "created_at_utc": "2026-11-02T07:13:47.639076+00:00",
+  "reason": "absolute_research_budget_and_course_score_deadline_expired",
+  "research_end_utc": "2026-10-30T16:22:42Z",
+  "course_deadline_utc": "2026-10-31T15:59:00Z",
+  "completed_configurations": 35,
+  "completed_outer_fits": 105,
+  "registered_training_configurations": 39,
+  "fixed_fusion_configurations": 4,
+  "pilot_configurations": 1,
+  "unique_configurations_including_pilot_and_fusion": 44,
+  "incomplete": [
+    {
+      "experiment_id": "v3_tabm_embedding_stats_ema_s1",
+      "status": "pruned",
+      "stop_reason": null,
+      "attempts": [
+        {
+          "pid": 14276,
+          "create_time": 1793335703.2295785,
+          "command_fragment": "code/configs/research_v3/v3_tabm_embedding_stats_ema_s1.json",
+          "command": [
+            "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+            "code/train_v3.py",
+            "--config",
+            "code/configs/research_v3/v3_tabm_embedding_stats_ema_s1.json"
+          ],
+          "started_at_utc": "2026-10-30T04:48:23.231849+00:00",
+          "started_timestamp": 1793335703.2272284,
+          "log": "results/research_v3/scheduler_logs/v3_tabm_embedding_stats_ema_s1.attempt1.log",
+          "provenance": {
+            "source_files": {
+              "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+              "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+              "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+              "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+              "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+              "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+              "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+              "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+              "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+              "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+              "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+            },
+            "train_and_fold_files": {
+              "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+              "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+              "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+              "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2",
+              "results/research_v3/common_folds.json": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9"
+            },
+            "git_commit": "4adcad21f25bf3c57a9b8b67dbd26b0b1ca200b9"
+          },
+          "scheduler_source_sha256": "bf2bac3264db9ca7d8cad4a48bbe30fdceb3b2ee17e5f9eec9b14fd45ae23daa",
+          "ended_at_utc": "2026-10-30T06:13:32.799444+00:00",
+          "returncode": 15,
+          "stop_reason": "attempt_wall_budget",
+          "observed_wall_seconds": 5109.572216033936
+        }
+      ]
+    },
+    {
+      "experiment_id": "v3_tabm_embedding_stats_ema_s2",
+      "status": "pruned",
+      "stop_reason": null,
+      "attempts": [
+        {
+          "pid": 46172,
+          "create_time": 1793340817.8062482,
+          "command_fragment": "code/configs/research_v3/v3_tabm_embedding_stats_ema_s2.json",
+          "command": [
+            "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+            "code/train_v3.py",
+            "--config",
+            "code/configs/research_v3/v3_tabm_embedding_stats_ema_s2.json"
+          ],
+          "started_at_utc": "2026-10-30T08:12:21.724502+00:00",
+          "started_timestamp": 1793340817.7998888,
+          "log": "results/research_v3/scheduler_logs/v3_tabm_embedding_stats_ema_s2.attempt1.log",
+          "provenance": {
+            "source_files": {
+              "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+              "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+              "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+              "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+              "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+              "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+              "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+              "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+              "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+              "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+              "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+            },
+            "train_and_fold_files": {
+              "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+              "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+              "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+              "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2",
+              "results/research_v3/common_folds.json": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9"
+            },
+            "git_commit": "4adcad21f25bf3c57a9b8b67dbd26b0b1ca200b9"
+          },
+          "scheduler_source_sha256": "bf2bac3264db9ca7d8cad4a48bbe30fdceb3b2ee17e5f9eec9b14fd45ae23daa",
+          "ended_at_utc": "2026-10-30T08:12:21.811715+00:00",
+          "returncode": 15,
+          "stop_reason": "attempt_wall_budget",
+          "observed_wall_seconds": 7124.011826276779
+        }
+      ]
+    },
+    {
+      "experiment_id": "v3_attention_ema_s1",
+      "status": "pruned",
+      "stop_reason": null,
+      "attempts": [
+        {
+          "pid": 49812,
+          "create_time": 1793347946.1975248,
+          "command_fragment": "code/configs/research_v3/v3_attention_ema_s1.json",
+          "command": [
+            "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+            "code/train_v3.py",
+            "--config",
+            "code/configs/research_v3/v3_attention_ema_s1.json"
+          ],
+          "started_at_utc": "2026-10-30T08:12:26.349061+00:00",
+          "started_timestamp": 1793347946.1938665,
+          "log": "results/research_v3/scheduler_logs/v3_attention_ema_s1.attempt1.log",
+          "provenance": {
+            "source_files": {
+              "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+              "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+              "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+              "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+              "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+              "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+              "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+              "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+              "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+              "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+              "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+            },
+            "train_and_fold_files": {
+              "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+              "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+              "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+              "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2",
+              "results/research_v3/common_folds.json": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9"
+            },
+            "git_commit": "4adcad21f25bf3c57a9b8b67dbd26b0b1ca200b9"
+          },
+          "scheduler_source_sha256": "bf2bac3264db9ca7d8cad4a48bbe30fdceb3b2ee17e5f9eec9b14fd45ae23daa",
+          "ended_at_utc": "2026-11-01T11:59:07.943533+00:00",
+          "returncode": 15,
+          "stop_reason": "absolute_campaign_budget",
+          "observed_wall_seconds": 186401.74966692924
+        }
+      ]
+    },
+    {
+      "experiment_id": "v3_attention_ema_s2",
+      "status": "pruned",
+      "stop_reason": "absolute_campaign_budget",
+      "attempts": []
+    }
+  ],
+  "stability_complete": false,
+  "new_validation_opened": false,
+  "new_test_opened": false,
+  "no_further_search_or_repair_retries": true,
+  "allowed_remaining_scope": "At most two existing base957 recipes may receive locked final-all-train fitting and bounded validation solely for an explicitly post-deadline research archive. No new model search, official V3 test, score update or replacement of historical submitted assets. Complete research review/report/PR and separately authorized released peer review.",
+  "monitor_gap_disclosure": "Recorded attempts span long wall-clock gaps and exceeded nominal attempt or campaign deadlines before the monitor next acted. Their exact durations are retained. The cause is not established, continuous CPU activity is not asserted, and a hard real-time cutoff is not claimed. Four stability configurations remain pruned, not completed.",
+  "evidence_sha256": {
+    "results/research_v3/campaign_budget.json": "69f7963cef8f28e24da0cb6b7a4de104ad72d1634896a85b38f90bbccd9bc802",
+    "results/research_v3/campaign_queue.json": "a998b90ddfe9020f3dd2551969f85b39f419fea436741f42641126aeeef3aff9",
+    "results/research_v3/experiment_registry.jsonl": "f6645e786ab477d9f11db32c7c83fe51f2a5bb59da147bffb95181e00a386db9",
+    "results/research_v3/fusion_registry.jsonl": "51184aa4b9e7721242e271659aa6ce05f0f100e9280e36a08ffa495c11bad6d0",
+    "results/research_v3/round_decisions.jsonl": "6e90401642a200a718bb2b901dda94d15df44faa875bf339e7383467e877f927",
+    "results/research_v3/training_events.jsonl": "c27e6b8d908c54556a75fc0140c52e94a09f999b5f56e9e67cf0bd30be3aeea9",
+    "results/research_v3/fixed_fusion_analysis_complete.json": "e12aead1ec58aef6cf64dd2f241009a1162416448f965b99cc9c8f3c1b290e05"
+  },
+  "closure_source_sha256": "dc9bb4469ea757e551eaa7f429ce56c2d4ff6cdd59961ce7c6e52bf8f70f4746"
+}

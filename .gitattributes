@@ -16,3 +16,5 @@ code/tools/*_v3.py -text
 code/tests/test_*_v3.py -text
 scripts/*_v3.py -text
 docs/research_v3/** -text
+reports/research_v3/** -text
+peer_review/** -text

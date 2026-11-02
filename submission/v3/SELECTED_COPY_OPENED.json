@@ -1,0 +1,15 @@
+{
+  "schema": "mp2-v3-selected-copy-opened-v1",
+  "created_at_utc": "2026-11-02T07:28:22.734173+00:00",
+  "validation_summary_sha256": "a5254acf03acdc4996733db4484adae90508e61dfc0fdd8e4b56b7870e423322",
+  "origin_checkpoint": "artifacts/research_v2/final_deepsets",
+  "destination": "artifacts/research_v3/final_selected",
+  "origin_asset_sha256": {
+    "config.json": "e2c210a3717c5b48ee312226491b4b9c444cb6642d94fb3afd1fa39226bd89cf",
+    "weights.npz": "2bb9002701b0bcb6105b30f88863db20d7fd7267bc530ce85048168d47a60ab1"
+  },
+  "producer": {
+    "path": "scripts/prepare_finalists_v3.py",
+    "sha256": "618af933fce8c07a8f97dbc1682122b08a5790d62c92f09b7dd496b46f4e107c"
+  }
+}
