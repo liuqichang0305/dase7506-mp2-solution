@@ -1,0 +1,18 @@
+test_any_v3_test_execution_record_contradicts_archive (__main__.CloseoutTests.test_any_v3_test_execution_record_contradicts_archive) ... ok
+test_builder_rejects_self_consistent_page_tamper_and_formal_schema (__main__.CloseoutTests.test_builder_rejects_self_consistent_page_tamper_and_formal_schema) ... ok
+test_complete_archive_has_ten_pages_honest_status_all_rows_and_chinese_guide (__main__.CloseoutTests.test_complete_archive_has_ten_pages_honest_status_all_rows_and_chinese_guide) ... ok
+test_deadline_no_score_and_monitoring_claims_are_required (__main__.CloseoutTests.test_deadline_no_score_and_monitoring_claims_are_required) ... ok
+test_fusion_delta_is_bound_to_named_member_not_weaker_attention (__main__.CloseoutTests.test_fusion_delta_is_bound_to_named_member_not_weaker_attention) ... ok
+test_incomplete_seeds_and_four_actual_fusions_cannot_be_omitted (__main__.CloseoutTests.test_incomplete_seeds_and_four_actual_fusions_cannot_be_omitted) ... ok
+test_missing_actual_reproduction_blocks_before_aggregate_read (__main__.CloseoutTests.test_missing_actual_reproduction_blocks_before_aggregate_read) ... ok
+test_old_formal_gates_still_require_completed_test (__main__.CloseoutTests.test_old_formal_gates_still_require_completed_test) ... ok
+test_optional_confidence_partial_or_wrong_choice_counts_cannot_be_reported (__main__.CloseoutTests.test_optional_confidence_partial_or_wrong_choice_counts_cannot_be_reported) ... ok
+test_protocol_reference_and_reproduction_instructions_are_explicit (__main__.CloseoutTests.test_protocol_reference_and_reproduction_instructions_are_explicit) ... ok
+test_rehashed_archive_freeze_cannot_allow_formal_test (__main__.CloseoutTests.test_rehashed_archive_freeze_cannot_allow_formal_test) ... ok
+test_saved_outputs_are_exclusive_and_do_not_create_pdf (__main__.CloseoutTests.test_saved_outputs_are_exclusive_and_do_not_create_pdf) ... ok
+test_unstarted_job_uses_queue_reason_without_inventing_an_attempt (__main__.CloseoutTests.test_unstarted_job_uses_queue_reason_without_inventing_an_attempt) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 7.657s
+
+OK

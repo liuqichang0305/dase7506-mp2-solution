@@ -20,3 +20,5 @@ reports/research_v3/** -text
 peer_review/** -text
 requirements*.txt -text
 code/requirements*.txt -text
+results/leaderboard-review-2026-11-02-final/** -text
+submission/SUBMISSION_VERIFICATION.json -text

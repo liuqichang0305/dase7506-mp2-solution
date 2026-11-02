@@ -1,0 +1,29 @@
+{
+  "number": 383,
+  "html_url": "https://github.com/xudongwu-0/xudongwu-0.github.io/issues/383",
+  "title": "[DASE7506 Peer Review Report] #240",
+  "body": "Peer review report, pending instructor review. Your GitHub account and report are public. Use the same checkpoint and evaluator. Reports alone do not affect grades.\n\n```json\n{\n  \"schema\": \"dase7506/peer-review-v1\",\n  \"protocol\": \"7506-submissions-v1\",\n  \"project\": \"mp2\",\n  \"submission\": 240,\n  \"reason\": \"Reproduced submission #240 from immutable commit 7e3a2792b7b4442f5e53705a64b4560a2e365de9 (submission-v1), using its submitted checkpoint without retraining. The official v5 full-test scorer returned 394/467 = 84.36830835118%. The published declaration is 84.3831%, a difference of -0.01479164882 percentage points; 394/467 matches the repository README. No misconduct is inferred from this small discrepancy.\\n\\nOne fresh CPU predictor plus separate scorer exited successfully: saved phase walls sum to 4.768631s; the saved first-start/last-end UTC interval is 4.784206s. The combined monotonic value was not serialized. Peak sampled task threads were 4, BLAS threads 1, and assets 86,179 bytes. This is a local Windows i9-12900H check, not Xeon certification.\\n\\nPrediction was guarded against references, networking and subprocesses. An overbroad postcheck rejected four read-only probes for nonexistent Python bytecode caches; independent review verified pinned source fallback and no reference access. Original FAILED/logs were preserved and existing outputs recovered without rerunning.\\n\\nThe first pip install timed out. A fresh isolated environment was reconstructed from exact-version local distributions with RECORD/SHA checks, then runtime files were verified byte-for-byte against anonymously downloaded public pinned wheels (NumPy 2.5.3, threadpoolctl 3.7.0, psutil 7.2.2). This was not a fresh PyPI installation. No peer result was used for our model research.\",\n  \"reproduced_score\": 84.36830835117773,\n  \"evidence_url\": \"https://github.com/liuqichang0305/dase7506-mp2-solution/blob/93ea59caa27c2160e1cad50c18ed9cd6f69ed603/peer_review/submission_240/REPRODUCTION_REPORT.md\"\n}\n```",
+  "user": {
+    "login": "liuqichang0305",
+    "id": 116426207,
+    "node_id": "U_kgDOBvCF3w",
+    "avatar_url": "https://avatars.githubusercontent.com/u/116426207?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/liuqichang0305",
+    "html_url": "https://github.com/liuqichang0305",
+    "followers_url": "https://api.github.com/users/liuqichang0305/followers",
+    "following_url": "https://api.github.com/users/liuqichang0305/following{/other_user}",
+    "gists_url": "https://api.github.com/users/liuqichang0305/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/liuqichang0305/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/liuqichang0305/subscriptions",
+    "organizations_url": "https://api.github.com/users/liuqichang0305/orgs",
+    "repos_url": "https://api.github.com/users/liuqichang0305/repos",
+    "events_url": "https://api.github.com/users/liuqichang0305/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/liuqichang0305/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "created_at": "2026-11-02T08:03:20Z",
+  "state": "open"
+}

@@ -31,6 +31,13 @@ DEFAULTS = {'analysis': BASE + 'analysis/final_search/analysis.json',
             'fusion_analysis': BASE + 'fixed_fusion_analysis_complete.json'}
 DEADLINE = datetime(2026, 10, 31, 16, tzinfo=timezone.utc)
 NOTICE = 'POST-DEADLINE RESEARCH ARCHIVE: V3 FORMAL TEST AND SCORE UPDATE NOT PERFORMED.'
+REFERENCES = (
+    '[1] Gorishniy et al. TabM: Advancing Tabular Deep Learning with Parameter-Efficient Ensembling. ICLR 2025. https://arxiv.org/abs/2410.24210',
+    '[2] Holzmuller et al. Better by Default: Strong Pre-Tuned MLPs and Boosted Trees on Tabular Data. NeurIPS 2024. https://arxiv.org/abs/2407.04491',
+    '[3] Zaheer et al. Deep Sets. NeurIPS 2017. https://arxiv.org/abs/1703.06114',
+    '[4] Vaswani et al. Attention Is All You Need. NeurIPS 2017. https://arxiv.org/abs/1706.03762',
+    '[5] Gorishniy et al. Benchmarking Optimizers for MLPs in Tabular Deep Learning. 2026 preprint, inspected v1 (Muon/EMA motivation). https://arxiv.org/abs/2604.15297v1',
+)
 
 
 def aware(value):
@@ -42,6 +49,61 @@ def aware(value):
 def bind_map(e, mapping):
     for path, digest in mapping.items():
         e.bind(path, digest)
+
+
+def fold_protocol(manifest):
+    """Describe saved indices only; never load a question or candidate bank."""
+    n = manifest['questions']; splits = manifest['folds']
+    require(n == 4755 and len(splits) == 3, 'The report requires the complete common three-fold protocol')
+    universe, held, sizes = set(range(n)), [], []
+    for split in splits:
+        arrays = [split[key] for key in ('outer_fit', 'holdout', 'inner_fit', 'inner_stop')]
+        require(all(len(a) == len(set(a)) for a in arrays), 'Saved fold indices contain duplicates')
+        a, b, c, d = map(set, arrays)
+        require(not (a & b) and a | b == universe and not (c & d) and c | d == a,
+                'Saved nested fold partitions are inconsistent')
+        held.extend(arrays[1]); sizes.append(tuple(map(len, arrays)))
+    require(sorted(held) == list(range(n)) and len(set(sizes)) == 1,
+            'Common folds must hold each question out exactly once with equal sizes')
+    outer, holdout, inner_fit, inner_stop = sizes[0]
+    return {'train_n': n, 'folds': len(splits), 'outer_fit_n': outer, 'holdout_n': holdout,
+            'inner_fit_n': inner_fit, 'inner_stop_n': inner_stop}
+
+
+def incomplete_reason(job):
+    attempts = job.get('attempts', [])
+    reason = (attempts[-1].get('stop_reason') if attempts else None) or job.get('stop_reason')
+    if reason:
+        return ('Not started: ' if not attempts else '') + reason
+    return 'No reason in saved attempt or queue' if attempts else 'Not started; no saved queue reason'
+
+
+def fusion_comparison(item, index):
+    def member(key):
+        version, name = key.split(':', 1)
+        require(version in ('v2', 'v3') and ('research_' + version, name) in index,
+                'Fusion control must be a completed, bound member')
+        return index['research_' + version, name]
+    members = {key: member(key) for key in item['methods']}
+    attention = item.get('attention_control')
+    if attention is None:
+        candidates = [key for key, row in members.items() if row['config']['family'] == 'attention']
+        require(len(candidates) == 1, 'Historical fusion needs exactly one identifiable Attention control')
+        attention = candidates[0]
+    matched = item.get('matched_control', item.get('decision_policy', {}).get('matched_control', attention))
+    require(attention in members and matched in members, 'Fusion controls must belong to the saved mixture')
+    metric = item['metrics']['hard']; count(metric)
+    require(all(row['hard_n'] == metric['n'] for row in members.values()), 'Fusion and control hard denominators differ')
+    attention_delta = metric['correct'] - members[attention]['hard_correct']
+    matched_delta = metric['correct'] - members[matched]['hard_correct']
+    require(item['hard_delta_questions_vs_attention_control'] == attention_delta,
+            'Saved fusion Attention delta differs from bound member counts')
+    if 'hard_delta_questions_vs_matched_control' in item:
+        require(item['hard_delta_questions_vs_matched_control'] == matched_delta,
+                'Saved fusion matched-control delta differs from bound member counts')
+    return {'experiment_id': item['experiment_id'], 'attention_control': attention, 'matched_control': matched,
+            'attention_correct': members[attention]['hard_correct'], 'matched_correct': members[matched]['hard_correct'],
+            'hard_correct': metric['correct'], 'attention_delta': attention_delta, 'matched_delta': matched_delta}
 
 
 def final_evidence(e):
@@ -129,7 +191,7 @@ def train_evidence(e, paths, freeze, close):
     analysis = e.read(paths['analysis'])
     e.bind('scripts/analyze_campaign_v3.py', analysis['source_sha256'])
     e.bind(str(Path(paths['analysis']).with_name('EXPERIMENT_TABLE.md')))
-    e.bind(BASE + 'common_folds.json', analysis['folds_sha256'])
+    protocol = fold_protocol(e.read(BASE + 'common_folds.json', analysis['folds_sha256']))
     rows = analysis['rows']
     index = {(row['version'], row['experiment_id']): row for row in rows}
     require(len(index) == len(rows) and rows, 'The complete train table must have unique rows')
@@ -220,7 +282,8 @@ def train_evidence(e, paths, freeze, close):
         e.bind((directory / raw['registration_file']).as_posix(), raw['registration_sha256'])
     return {'rows': rows, 'index': index, 'queue': queue, 'ledger': ledger, 'incomplete': incomplete,
             'references': references, 'v2': v2, 'fusion': fusion, 'r05': r05,
-            'stability': shared.stability_groups(rows), 'omitted_historical_analysis_hashes': omitted_hashes}
+            'stability': shared.stability_groups(rows), 'omitted_historical_analysis_hashes': omitted_hashes,
+            'protocol': protocol, 'fusion_comparisons': [fusion_comparison(item, index) for item in fusion['results']]}
 
 
 def confidence_evidence(e, final, index):
@@ -313,8 +376,18 @@ def prepare(root=ROOT, **paths):
             pair = best['paired_vs_v2_attention']; interval = pair['hard_bootstrap_95pct']
             require(len(interval) == 2 and finite(interval[0]) <= finite(interval[1]), 'Saved train paired interval is invalid')
             paired_rows.append([decision['round'], f(pair['hard_delta_pp'], 2), '[' + f(interval[0], 2) + ', ' + f(interval[1], 2) + ']'])
+    comparisons = train['fusion_comparisons']
+    # Exact IDs remain in the table; the named reference must not be inferred
+    # from an ambiguous "control" label or from the sign of an unrelated delta.
     fusion_rows = [[item['experiment_id'], count(item['metrics']['hard']),
-                   str(item['hard_delta_questions_vs_attention_control']), 'Rejected'] for item in train['fusion']['results']]
+                   str(comp['matched_delta']) + ' vs ' + comp['matched_control'].split(':', 1)[1], 'Rejected']
+                   for item, comp in zip(train['fusion']['results'], comparisons)]
+    extra_fusion_comparisons = ' '.join(
+        f"{item['experiment_id']}: {comp['attention_delta']:+d} hard questions versus {comp['attention_control'].split(':', 1)[1]} "
+        f"({comp['attention_correct']} correct), but {comp['matched_delta']:+d} versus the matched "
+        f"{comp['matched_control'].split(':', 1)[1]} ({comp['matched_correct']} correct); rejected."
+        for item, comp in zip(train['fusion']['results'], comparisons)
+        if comp['attention_control'] != comp['matched_control'])
     stable_rows = [[item['version'] + '/' + item['experiment_id'], ','.join(str(seed)[-3:] for seed in item['seeds']),
                    f(item['mean'], 2), f(item['sample_sd'], 2)] for item in train['stability']]
     val = final['validation']
@@ -348,13 +421,20 @@ def prepare(root=ROOT, **paths):
         block('paragraph', close['monitor_gap_disclosure']),
         block('small', 'Deadline: 2026-10-31 16:00 UTC (2026-11-01 00:00 UTC+8). Research closure after expiry is documented, not a claim that every planned experiment finished within the original budget.')),
       page(block('heading', '1. Representation and controlled comparisons'),
+        block('small', f"Protocol: {train['protocol']['train_n']} training questions, {final['chosen']['n']} validation questions and "
+              f"{final['prior']['actual_score']['n']} official test questions (V3 test unopened). The common {train['protocol']['folds']} outer folds "
+              f"each hold out {train['protocol']['holdout_n']}; the remaining {train['protocol']['outer_fit_n']} split into "
+              f"{train['protocol']['inner_fit_n']} inner-fit and {train['protocol']['inner_stop_n']} stopping questions. "
+              f"Fresh outer refits use all {train['protocol']['outer_fit_n']} with inner-selected epochs. All four candidates receive correctness "
+              'labels; alternate correct answers stay positive. Hard questions have at least two distinct parseable answer groups. '
+              'OOF-based architecture selection makes reported CV and paired intervals selection-optimistic.'),
         block('paragraph', 'Four candidate answers share an official answer parser and one question-level decision. Relation inputs contain 1,024 embedding coordinates, their 1,024 absolute deviations from the candidate mean, and 16 parsing/vote/text statistics. Reduced inputs omit the deviation block. Features exclude IDs and references. Scalers fit only the fitting partition.'),
         block('paragraph', 'The selector masks unparseable answers, groups equal parsed values and uses group log-sum-exp minus alpha times log group size, at tau=1. Deterministic ties return an original candidate index; all-unparseable rows return index0 with confidence zero. TabM averages member answer-group probabilities, not logits.'),
         table(['Architecture / control', 'Implementation tested'], [['MLP / ResMLP', 'Shared candidate network / residual transformations'],
-            ['Deep Sets / Attention', 'Permutation-compatible candidate context, without positional IDs'],
-            ['TabM', 'Shared matrices with member adapters; average member losses'],
-            ['RealMLP-inspired', 'Input scale, NTP, SELU, zero head and robust preprocessing controls'],
-            ['Muon / EMA', 'Hidden-matrix Muon plus auxiliary AdamW; same-trajectory post-step EMA']], [1.4, 3.8]),
+            ['Deep Sets / Attention [3,4]', 'Permutation-compatible candidate context, without positional IDs'],
+            ['TabM [1]', 'Shared matrices with member adapters; average member losses'],
+            ['RealMLP-inspired [2]', 'Input scale, NTP, SELU, zero head and robust preprocessing controls'],
+            ['Muon / EMA [5]', 'Hidden-matrix Muon plus auxiliary AdamW; same-trajectory post-step EMA']], [1.4, 3.8]),
         block('small', train['r05']['paragraph']),
         table(['No-fit train reference', 'All correct', 'Hard correct', 'Hard mean +/- SD'], ref_table, [1.7, 1, 1, 1.5]),
         block('small', 'Fixed0 always returns original index0. Majority ignores None, groups equal official parsed values, breaks ties by earliest original index and returns0 if all are unparseable. Their fold statistics are descriptive partitions, not three fits.')),
@@ -373,11 +453,12 @@ def prepare(root=ROOT, **paths):
       page(block('heading', '6. Research rounds, interruptions and limits'),
         table(['Registered round', 'Jobs', 'Complete', 'Best base-seed hard mean %'], round_rows, [2.4, .6, .7, 1.5]),
         table(['Incomplete job', 'Terminal status', 'Last recorded reason'], [[job['experiment_id'], job['status'],
-             (job.get('attempts') or [{}])[-1].get('stop_reason', 'No reason in the saved attempt')] for job in train['incomplete']], [2.5, .7, 2]),
+             incomplete_reason(job)] for job in train['incomplete']], [2.5, .7, 2]),
         block('small', 'Incomplete jobs and partial folds remain preserved and are excluded from whole-CV rankings. A logged fold seed is the fixed base seed plus the fold offset, not an independently selected repeat. Epoch checkpoints preserve model/optimizer/EMA/RNG state; a resumed attempt is not counted as another completed configuration.'),
         block('small', 'Original planning used a 24-hour absolute research clock and per-attempt budgets. Actual monitoring gaps, late closure and deadline failure are disclosed on page1; no claim of uninterrupted 24-hour CPU work or successful budget enforcement is made. Missing timing is not invented. Historical ledger rows without an analysis hash: ' + (', '.join(train['omitted_historical_analysis_hashes']) or 'none') + '. Their currently verified summaries are bound without rewriting prior records.')),
       page(block('heading', '7. Negative fixed fusions and paired uncertainty'),
-        table(['Fixed probability mixture', 'Hard correct', 'Delta questions vs control', 'Decision'], fusion_rows, [2.8, .8, .9, .7]),
+        table(['Fixed probability mixture', 'Hard correct', 'Delta vs named matched member', 'Decision'], fusion_rows, [2.4, .7, 1.5, .6]),
+        *([block('small', extra_fusion_comparisons)] if extra_fusion_comparisons else []),
         block('small', train['fusion']['cost_note']),
         block('paragraph', 'Each fusion followed saved reciprocal-error/oracle evidence and one registered equal-probability mixture. All four were rejected. No result is rescued by a post-hoc weight, temperature, member, seed or routing sweep. Passing a complementarity gate alone did not guarantee an improvement.'),
         table(['Base-seed round representative', 'Hard delta pp', 'Saved paired 95% interval'], paired_rows, [2.6, 1, 1.6]),
@@ -394,10 +475,19 @@ def prepare(root=ROOT, **paths):
         *([table(['Chosen-event diagnostic', 'Brier', 'ECE10', 'AURC'], confidence['rows'], [2.5, .9, .9, .9])] if confidence['rows'] else []),
         block('small', confidence['text'])),
       page(block('heading', '9. Reproduction, provenance and honest limits'),
-        block('paragraph', 'Archive source commit: ' + freeze['source_commit'] + '. Model: code/solution_v3.py; assets: artifacts/research_v3/final_selected. Follow the retained source/asset hashes and environment package versions, then reproduce validation predictions and official scoring using scripts/reproduce_selected_v3.py. The post-deadline block remains active; do not invoke a new formal test or score Issue.'),
+        block('paragraph', 'Archive source commit: ' + freeze['source_commit'] + '. Model: code/solution_v3.py; assets: artifacts/research_v3/final_selected. '
+              'For portable reproduction, use a separate clone at this exact source commit with the retained checkpoint and only the official '
+              'validation files. Verify source/asset hashes, then run a direct base-Python -S process for code/predict.py '
+              '--method code/solution_v3.py --checkpoint artifacts/research_v3/final_selected --split validation '
+              '--output validation-predictions.json, followed by an independent official code/score_predictions.py '
+              '--predictions validation-predictions.json --split validation --output validation-score.json. Full environment and thread commands '
+              'are in docs/research_v3/REPRODUCTION.md. The original scripts/reproduce_selected_v3.py coordinator receipt documents the measured '
+              'run; its local-path preflight is not a fresh-clone entry point. Do not copy training state, delete guards, or open test.'),
         block('paragraph', 'Training regeneration uses the committed configurations and common_folds.json through code/train_v3.py, including fold-local scaling, nested stopping and fresh refits. Existing closed-search guards remain active. Reproduction of archived predictions is separate from reopening model research.'),
-        block('paragraph', 'AI assistance was substantive: source inspection, implementation, experiment orchestration, diagnostics, report preparation and internal AI review. Actual logs and hashes support numerical claims; AI review is not instructor approval or a claim of independent human understanding. Primary model/optimizer references, author repository commits and licenses are retained in MODELS_SOURCES.md, OPTIMIZER_SOURCES.md and model-source-evidence.json.'),
-        block('paragraph', 'Limitations: missed formal deadline; monitoring gaps; four incomplete V3 seed repeats; selection-optimistic CV/bootstrap; validation reuse; known historical test aggregate; compact task adaptations rather than full source-paper benchmarks; negative fusions; and no new V3 test result. No training or validation statistic establishes a leaderboard position.'),
+        block('small', 'AI assistance was substantive: source inspection, implementation, experiment orchestration, diagnostics, report preparation and internal AI review. Actual logs and hashes support numerical claims; AI review is not instructor approval or a claim of independent human understanding. Author commits, licenses and adaptation details are retained in MODELS_SOURCES.md, OPTIMIZER_SOURCES.md and model-source-evidence.json.'),
+        {**block('heading', 'Primary method references'), 'level': 2},
+        *[block('small', citation) for citation in REFERENCES],
+        block('small', 'Limitations: missed formal deadline; monitoring gaps; four incomplete V3 seed repeats; selection-optimistic CV/bootstrap; validation reuse; known historical test aggregate; compact task adaptations rather than full source-paper benchmarks; negative fusions; and no new V3 test result. No training or validation statistic establishes a leaderboard position.'),
         block('small', 'Peer review is handled through the instructor\'s actual released workflow as a separate task. This report neither marks it complete nor postpones it by assumption. Consult its independent current evidence.'),
         block('small', 'Evidence index: final_search/EXPERIMENT_TABLE.md; round_decisions.jsonl; campaign_queue.json; fixed_fusion_analysis_complete.json; deterministic_train_references; R05 paired-and-slices; SELECTED_MODEL/FREEZE/REVIEW_RESULT/REPRODUCTION_RESULT; FORMAL_SUBMISSION_BLOCKED/RESEARCH_CLOSEOUT. All are hash-bound in closeout_inputs.json.'),
         block('heading', NOTICE))]
@@ -407,7 +497,8 @@ def prepare(root=ROOT, **paths):
         'generator_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), 'pages': pages,
         'evidence_sha256': dict(sorted(e.hashes.items())), 'paths': paths,
         'derived_aggregates': {'completed_v3': len(v3), 'historical_v2': len(v2), 'fixed_fusions': len(fusion_rows),
-            'confidence': confidence, 'confirmation_outcome': confirmation_text,
+            'confidence': confidence, 'confirmation_outcome': confirmation_text, 'protocol': train['protocol'],
+            'fusion_comparisons': comparisons,
             'incomplete_stability_ids': close['incomplete_stability_ids'], 'seed_stability': train['stability'],
             'v3_fit_seconds': fit_seconds, 'historical_fit_seconds': historical_seconds, 'recorded_attempt_seconds': wall_seconds,
             'attempts_without_wall_seconds': missing_wall, 'r05': train['r05']},

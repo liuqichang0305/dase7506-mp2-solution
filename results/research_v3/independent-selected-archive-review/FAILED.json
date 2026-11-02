@@ -1,0 +1,6 @@
+{
+  "stage": "selection evidence hash verification",
+  "cause": "Audit runner used freezer.safe which denies raw data; selection legitimately binds train-only data. No selected/source files changed. Fix audit caller to use the existing TRAIN_PATHS guard.",
+  "source_sha256": "a59cf875406607079f3d87c2a4d8d4b38c21f96fbaa98a64e1406506ad457567",
+  "typed_review_written": false
+}

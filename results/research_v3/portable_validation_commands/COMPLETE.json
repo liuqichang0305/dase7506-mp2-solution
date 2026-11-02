@@ -1,0 +1,108 @@
+{
+  "source_commit": "eee478b4959e555b6ec8c902b6db8b69f31df508",
+  "freeze_sha256": "d5c4439f0ea38c469c22df3753cae0db0733147d7607f342ad53075072303218",
+  "reused_environment_sha256": "56bc7ab323cb2865b932e82ee3fbca3993313773b6e0cad3889c39c41afbf437",
+  "script_sha256": "94d1cc52639856787b3f540e7187e8caef72721bd9d47134ce844a4098217948",
+  "documentation_sha256": "5463436eed8ca8fbcb64e4d897ab8a687b7a7e7984e55b95942b7bdfce3f7dca",
+  "fresh_installation": false,
+  "model_or_selection_changed": false,
+  "split": "validation",
+  "reason": "Verify portable official commands without coordinator preflight, train data or original training-state files.",
+  "status": "passed",
+  "completed_at_utc": "2026-11-02T08:22:41.557901+00:00",
+  "choices_equal": 798,
+  "correct": 740,
+  "n": 798,
+  "prediction_plus_scoring_seconds": 1.8680726999882609,
+  "sampled_peak_task_threads": 4,
+  "processes": [
+    {
+      "command": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-S",
+        "code/predict.py",
+        "--method",
+        "code/solution_v3.py",
+        "--checkpoint",
+        "artifacts/research_v3/final_selected",
+        "--split",
+        "validation",
+        "--output",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\portable_validation_commands\\validation-predictions.json"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "started_at_utc": "2026-11-02T08:22:39.687982+00:00",
+      "completed_at_utc": "2026-11-02T08:22:41.098563+00:00",
+      "wall_seconds": 1.4146675000083633,
+      "process_tree": [
+        {
+          "pid": 52912,
+          "create_time": 1793607759.6896806
+        }
+      ],
+      "sampled_peak_tree_threads": 4,
+      "sampled_peak_tree_rss_bytes": 143593472,
+      "sampled_peak_tree_plus_coordinator_threads": 8,
+      "sampled_cpu_seconds": 1.359375,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      },
+      "sampling_note": "Nominal 10 ms delay between process-tree samples, plus snapshot overhead. Observed children retain PID/creation identities after parent exit. Unobserved detached ancestry is not recoverable; formal workers use direct Python and deny spawning. CPU/RSS/threads are samples, not exact integrals."
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-S",
+        "code/score_predictions.py",
+        "--split",
+        "validation",
+        "--predictions",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\portable_validation_commands\\validation-predictions.json",
+        "--output",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\portable_validation_commands\\validation-score.json"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "started_at_utc": "2026-11-02T08:22:41.100765+00:00",
+      "completed_at_utc": "2026-11-02T08:22:41.551816+00:00",
+      "wall_seconds": 0.4526503999950364,
+      "process_tree": [
+        {
+          "pid": 24000,
+          "create_time": 1793607761.1042352
+        }
+      ],
+      "sampled_peak_tree_threads": 4,
+      "sampled_peak_tree_rss_bytes": 33882112,
+      "sampled_peak_tree_plus_coordinator_threads": 8,
+      "sampled_cpu_seconds": 0.390625,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      },
+      "sampling_note": "Nominal 10 ms delay between process-tree samples, plus snapshot overhead. Observed children retain PID/creation identities after parent exit. Unobserved detached ancestry is not recoverable; formal workers use direct Python and deny spawning. CPU/RSS/threads are samples, not exact integrals."
+    }
+  ],
+  "output_sha256": {
+    "prediction.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prediction.stdout.log": "86f48ede6e9f33d93a491e161bc6979f9c1934477f66ab1ad4caee0028ec25d4",
+    "scoring.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scoring.stdout.log": "b6bc7ed747677fdac967ab5490ea325d08e1d06e75fd9af7f79ed2573c00e243",
+    "STARTED.json": "21bdefc0869a22c33117ae26915748257b9c45bcc42e74d98c548ed2bfbfe8f5",
+    "validation-predictions.json": "d2bc399719f2c45678f80cdaa949d4b3b253dc8649afc5b031530419f4d63425",
+    "validation-score.json": "b6bc7ed747677fdac967ab5490ea325d08e1d06e75fd9af7f79ed2573c00e243"
+  },
+  "limitation": "Reused the prior clean checkout/environment; no second fresh installation. Official CLI replay has no audit-hook wrapper. Timing is local, not reference-Xeon certification."
+}

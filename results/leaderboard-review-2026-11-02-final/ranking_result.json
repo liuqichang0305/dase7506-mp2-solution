@@ -1,0 +1,121 @@
+{
+  "schema": "mp2-final-archive-ranking-review-v1",
+  "checked_at_utc": "2026-11-02T07:59:31.154Z",
+  "research_closed_and_frozen_before_read": true,
+  "freeze_sha256": "d5c4439f0ea38c469c22df3753cae0db0733147d7607f342ad53075072303218",
+  "site_commit": "65c16a3eef424e30b254ff58804dffe0fbda8793",
+  "snapshot_generated_at": "2026-11-01T04:44:26.738Z",
+  "snapshot_phase": "review",
+  "snapshot_url": "https://github.com/xudongwu-0/xudongwu-0.github.io/blob/65c16a3eef424e30b254ff58804dffe0fbda8793/courses/dase7506/data/leaderboard.json",
+  "publication_url": "https://github.com/xudongwu-0/xudongwu-0.github.io/blob/65c16a3eef424e30b254ff58804dffe0fbda8793/courses/dase7506/data/publication.json",
+  "leaderboard_url": "https://xudongwu-0.github.io/courses/dase7506/mp2/",
+  "raw": {
+    "sha256": "4812fe2b824fc07b71d5187329cba35eaf58ed650b5b9cca853de935a21e3aa4",
+    "git_blob": "c41a9132a89c8f9ca33d8725a0c98a94f8e90ef4",
+    "bytes": 621150
+  },
+  "publication_raw": {
+    "sha256": "001ac3fb24839c22b9a19cd8e77d1490ec019a0872f1fc66cb986ec396a0fd1d",
+    "git_blob": "be5449e360a6146a545f1c91fdca3baf4df749ac",
+    "bytes": 117134
+  },
+  "user": {
+    "student_id": "3036900957",
+    "issue": 294,
+    "issue_url": "https://github.com/xudongwu-0/xudongwu-0.github.io/issues/294",
+    "score": 74.51820128479658,
+    "status": "self-reported",
+    "score_source": "Existing Issue 294; no V3 score or artifact update"
+  },
+  "official_rules": {
+    "eligible_status": [
+      "self-reported",
+      "verified"
+    ],
+    "deduplication": "Literal valid student ID plus lower-cased account; highest score; equal score prefers more available artifact links; sort descending score then issue number",
+    "ties": "competition rank; 1 plus number of strictly higher rows",
+    "raw_status_counts": {
+      "self-reported": 138,
+      "withdrawn": 5,
+      "review": 2
+    }
+  },
+  "official_display": {
+    "count": 113,
+    "strictly_higher": 111,
+    "tied_including_user": 1,
+    "competition_rank": 112,
+    "tied_rank_interval": [
+      112,
+      112
+    ],
+    "floor_35_percent": 39,
+    "in_top_35_percent": false
+  },
+  "excluding_confirmed_teacher_example": {
+    "count": 112,
+    "strictly_higher": 111,
+    "tied_including_user": 1,
+    "competition_rank": 112,
+    "tied_rank_interval": [
+      112,
+      112
+    ],
+    "floor_35_percent": 39,
+    "in_top_35_percent": false
+  },
+  "same_account_u_prefix_normalization": {
+    "count": 111,
+    "strictly_higher": 110,
+    "tied_including_user": 1,
+    "competition_rank": 111,
+    "tied_rank_interval": [
+      111,
+      111
+    ],
+    "floor_35_percent": 38,
+    "in_top_35_percent": false
+  },
+  "excluding_also_short_unverified_id": {
+    "count": 110,
+    "strictly_higher": 109,
+    "tied_including_user": 1,
+    "competition_rank": 110,
+    "tied_rank_interval": [
+      110,
+      110
+    ],
+    "floor_35_percent": 38,
+    "in_top_35_percent": false
+  },
+  "exclusions": {
+    "teacher_example_best_row": [
+      238
+    ],
+    "teacher_example_all_rows": [
+      237,
+      238
+    ],
+    "instructor_entered_real_student_retained": 382,
+    "normalized_same_account_duplicate": [
+      258,
+      317
+    ],
+    "unverified_short_id_issue": 377
+  },
+  "interpretation": [
+    "The official site includes one teacher test row; it is excluded from the requested student-only view.",
+    "Issue 382 is an explicitly instructor-accepted and instructor-recorded student result, so the teacher account alone is not an exclusion reason.",
+    "The student-only literal-ID view has 112 records. Normalizing one leading u before ten digits merges issues 258 and 317 of the same account into one student, yielding 111.",
+    "Issue 377 uses a short public ID, so no official roster match can be established from this snapshot. Excluding only that unresolved identity yields 110. Both student-count conventions place this user last and outside top 35%.",
+    "The 35% cut is a requested project target computed as floor(0.35*N), not a new course grading promise.",
+    "Ranking is provisional self-reported leaderboard accuracy, subject to instructor reproduction and peer-review adjudication; it is not a final course grade.",
+    "No raw prediction or test data was read, no model research resumed, and no other student names, artifact URLs or full IDs were saved."
+  ],
+  "source_files": {
+    "peer_review/official_form/65c16a3eef424e30b254ff58804dffe0fbda8793/courses/dase7506/assets/arena.4f1cb17a638d.mjs": "4f1cb17a638df9ed13627f1ad10162b753bba132833bf423e220c20d32c217db",
+    "peer_review/official_form/65c16a3eef424e30b254ff58804dffe0fbda8793/courses/dase7506/assets/mp2.9a439c7af66b.mjs": "9a439c7af66b95d1d17403e4df2eeb542cbe7953297c8ce575849c1a4e507945"
+  },
+  "transport_note": "The first in-memory Node payload exceeded the tool 64000-byte review limit and was rejected before execution. The same connector content was transferred in smaller memory-only segments; exact Git blob hashes match the public commit. No raw full snapshot was written to disk.",
+  "minimal_snapshot_sha256": "77d944ba2961ef0409d454969808b58e8a1f88eee896869d291a58d962f0f49b"
+}

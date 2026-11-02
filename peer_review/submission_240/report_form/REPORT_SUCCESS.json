@@ -1,0 +1,15 @@
+{
+  "schema": "mp2-peer-report-success-v1",
+  "status": "created_and_read_back",
+  "verified_at_utc": "2026-11-02T08:03:29.840383+00:00",
+  "issue_number": 383,
+  "issue_url": "https://github.com/xudongwu-0/xudongwu-0.github.io/issues/383",
+  "author": "liuqichang0305",
+  "author_type": "User",
+  "readback_path": "publish-attempts/20261102T080209249516Z-d0871349/readback.json",
+  "readback_sha256": "f90e1463aa49872650c26c781b21163ff042e760ee4d0f3b3f731a772ec8a5b8",
+  "body_sha256": "adaeadb4a406a93159215faf02564de806b96cea73ee4c60f21c3f439f8bc86f",
+  "generated_form_sha256": "be59525c22158680ef2f7af9ec07cb8d5c6c6d6a547cb86e7b82ac237a616c60",
+  "report_input_sha256": "5af56841b1d38cf6f89fa051cf5b23debc6a613ad6990e197ef005c8af07bea3",
+  "target_submission": 240
+}

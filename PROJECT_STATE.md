@@ -17,26 +17,43 @@
 - The unique SELECTED_MODEL is historical deepsets_regularized_s0, copied
   byte-for-byte to artifacts/research_v3/final_selected. Actual798-question
   export agreement and contract checks passed in selected-export-validation.json
-  and selected-contract-validation.json. These checks do not by themselves mean
-  independent final review, fresh reproduction, freeze or report are complete.
+  and selected-contract-validation.json. Independent final review subsequently
+  passed; see submission/v3/REVIEW_RESULT.json.
+- Fresh public-checkout reproduction completed at exact source commit
+  eee478b4959e555b6ec8c902b6db8b69f31df508 with a new NumPy-only environment:
+  740/798, all 798 choices identical, fresh prediction plus independent scoring
+  2.2803907999768853 seconds on local hardware. See
+  submission/v3/REPRODUCTION_RESULT.json and docs/research_v3/REPRODUCTION.md.
+  The actual research-only submission/v3/FREEZE.json is complete and records
+  research_only=true/formal_test_allowed=false. Do not rerun the reproducer
+  inside this now-frozen checkout or remove its guards.
 - FORMAL_SUBMISSION_BLOCKED.json records the actual deadline/review-phase rule.
   No new V3 official test, score update, or replacement of historical submitted
   assets will be made. The immutable V1 Issue294 and its348/467 assets remain.
 - Official MP2 peer review opened2026-11-01T04:42:52.971Z and closes
   2026-11-09T00:00:00+08:00. The separate published-submission240 workflow
-  is in progress; completion and publication are not marked done here. It cannot influence our
-  closed research. See RULES_RESUMPTION_20261101.md for current public rules and
+  completed its exact-checkpoint reproduction and official Peer Review Report:
+  https://github.com/xudongwu-0/xudongwu-0.github.io/issues/383.
+  Creation and public readback are saved in
+  peer_review/submission_240/report_form/REPORT_SUCCESS.json. No duplicate
+  evaluation or POST is needed. It cannot influence our closed research.
+  See RULES_RESUMPTION_20261101.md for current public rules and
   the recorded incidental public-score exposure during the rules audit.
 - Saved confidence and paired validation diagnostics are complete; choices are
   unchanged and calibration worsened validation ECE. Their existence is not a
   new model score or an unqualified confidence-improvement claim.
-- Continue: independent final review, fresh public-checkout
-  reproduction, research-only freeze and honest closeout PDF/Chinese guide,
-  own PR review/merge, then actual authorized peer-review form/Issue.
-  Verify the actual records at each step; do not fabricate completion markers or
-  rerun completed selection/validation. The archive FREEZE must state
-  research_only=true and formal_test_allowed=false. The separate closeout report
-  workflow preserves the original TEST_COMPLETE-gated formal-report tools.
+- The 10-page English report and Chinese guide are complete. Delivered PDF:
+  reports/research_v3/research_closeout_delivered/research_closeout_v3.pdf.
+  All rendered pages passed visual QA; earlier attempts are preserved.
+  Portable official validation commands were also checked in the existing clean
+  environment without train data/states, retaining all 798 choices and 740/798.
+  The original guarded 2.2803908-second result remains the freeze evidence.
+- Remaining: own PR #3 review/merge and final delivery receipt. Do not rerun
+  completed selection, reproduction or peer evaluation. Original formal tools
+  remain TEST_COMPLETE-gated; no V3 test result or score update is claimed.
+- The post-freeze ranking check is already saved in
+  results/leaderboard-review-2026-11-02-final/README.md. Do not use it to reopen
+  research or imply a new V3 official score.
 
 ## V3 research history — 2026-10-30 UTC+8
 

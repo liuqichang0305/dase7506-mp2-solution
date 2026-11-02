@@ -80,7 +80,13 @@ class ReportInputTests(unittest.TestCase):
         self.put(r.SUB + 'TEST_COMPLETE.json', {'schema': 'mp2-v3-test-complete-v1', 'status': 'passed',
             'local_resource_eligible': True, 'split': 'test', 'n': 467, 'freeze_sha256': freeze_hash,
             'method': 'code/solution_v3.py', 'checkpoint': 'artifacts/research_v3/final_selected', 'output_sha256': outputs})
-        folds = self.put(r.BASE + 'common_folds.json', {'synthetic': True})
+        synthetic_folds = []
+        for number in range(3):
+            held = list(range(number * 1585, (number + 1) * 1585))
+            outer = sorted(set(range(4755)) - set(held))
+            synthetic_folds.append({'fold': number, 'holdout': held, 'outer_fit': outer,
+                                    'inner_fit': outer[:2536], 'inner_stop': outer[2536:]})
+        folds = self.put(r.BASE + 'common_folds.json', {'synthetic': True, 'questions': 4755, 'folds': synthetic_folds})
         rows = []
         for name, seed, version in [('primary_s0', r.SEED, 'research_v3'), ('primary_s1', r.SEED + 1, 'research_v3'),
                                      ('historical_s0', r.SEED, 'research_v2')]:

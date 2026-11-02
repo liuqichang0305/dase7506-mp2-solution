@@ -73,6 +73,12 @@ class CloseoutTests(unittest.TestCase):
             'monitor_gap_disclosure': 'Synthetic long monitoring gaps caused late closure. No continuous CPU-time claim is made.'})
         old = self.read(original_tests.r.DEFAULTS['fusion_analysis'])
         first = old['results'][0]
+        diagnostic = self.read(first['diagnostic_path'])
+        diagnostic['fusion']['metrics']['hard']['n'] = 2100
+        first['metrics'] = diagnostic['fusion']['metrics']
+        first['diagnostic_sha256'] = self.put(first['diagnostic_path'], diagnostic)
+        first['attention_control'] = 'v3:primary_s0'
+        first['hard_delta_questions_vs_attention_control'] = -75
         old['results'] = [dict(first, experiment_id=f'synthetic_fixed_fusion_{i}', decision='Reject: synthetic negative result.') for i in range(4)]
         self.put(c.DEFAULTS['fusion_analysis'], old)
         for file in ('reports/research_v3/prepare_report_inputs.py', 'reports/research_v2/build_report.py'):
@@ -166,6 +172,54 @@ class CloseoutTests(unittest.TestCase):
     def test_old_formal_gates_still_require_completed_test(self):
         with self.assertRaisesRegex(ValueError, 'missing submission/v3/TEST_COMPLETE.json'):
             original_tests.r.prepare(self.root)
+
+    def test_protocol_reference_and_reproduction_instructions_are_explicit(self):
+        record = c.prepare(self.root)
+        protocol = record['derived_aggregates']['protocol']
+        self.assertEqual(protocol, {'train_n': 4755, 'folds': 3, 'outer_fit_n': 3170,
+                                   'holdout_n': 1585, 'inner_fit_n': 2536, 'inner_stop_n': 634})
+        text = json.dumps(record['pages'])
+        self.assertIn('alternate correct answers stay positive', text)
+        self.assertIn('local-path preflight is not a fresh-clone entry point', text)
+        self.assertIn('separate clone at this exact source commit', text)
+        self.assertIn('only the official validation files', text)
+        self.assertIn('direct base-Python -S process for code/predict.py', text)
+        self.assertIn('--predictions validation-predictions.json --split validation', text)
+        self.assertIn('docs/research_v3/REPRODUCTION.md', text)
+        self.assertNotIn('python scripts/reproduce_selected_v3.py --attempt', text)
+        self.assertIn('Do not copy training state, delete guards, or open test', text)
+        self.assertIn(record['archive_facts']['source_commit'], text)
+        for paper in ('2410.24210', '2407.04491', '1703.06114', '1706.03762', '2604.15297v1'):
+            self.assertIn('https://arxiv.org/abs/' + paper, text)
+        folds = self.read(c.BASE + 'common_folds.json')
+        folds['folds'][0]['inner_stop'][0] = folds['folds'][0]['inner_fit'][0]
+        with self.assertRaisesRegex(ValueError, 'partitions are inconsistent'): c.fold_protocol(folds)
+
+    def test_unstarted_job_uses_queue_reason_without_inventing_an_attempt(self):
+        queue = self.read(c.BASE + 'campaign_queue.json')
+        queue['jobs'][-1].update(attempts=[], stop_reason='absolute_campaign_budget')
+        self.put(c.BASE + 'campaign_queue.json', queue)
+        record = c.prepare(self.root)
+        text = json.dumps(record['pages'][6])
+        self.assertIn('Not started: absolute_campaign_budget', text)
+        self.assertNotIn('No reason in the saved attempt', text)
+        self.assertEqual(record['derived_aggregates']['recorded_attempt_seconds'],
+                         sum(a.get('observed_wall_seconds', 0) for j in queue['jobs'] for a in j.get('attempts', [])))
+
+    def test_fusion_delta_is_bound_to_named_member_not_weaker_attention(self):
+        index = {('research_v3', 'att'): {'config': {'family': 'attention'}, 'hard_n': 100, 'hard_correct': 78},
+                 ('research_v3', 'tab'): {'config': {'family': 'tabm'}, 'hard_n': 100, 'hard_correct': 80}}
+        item = {'experiment_id': 'mixture', 'methods': ['v3:att', 'v3:tab'],
+                'attention_control': 'v3:att', 'matched_control': 'v3:tab', 'metrics': {'hard': {'n': 100, 'correct': 80}},
+                'hard_delta_questions_vs_attention_control': 2, 'hard_delta_questions_vs_matched_control': 0}
+        result = c.fusion_comparison(item, index)
+        self.assertEqual((result['attention_delta'], result['matched_delta']), (2, 0))
+        item['hard_delta_questions_vs_matched_control'] = 2
+        with self.assertRaisesRegex(ValueError, 'matched-control delta'): c.fusion_comparison(item, index)
+        path = c.DEFAULTS['fusion_analysis']; fusion = self.read(path)
+        fusion['results'][0]['hard_delta_questions_vs_attention_control'] += 1
+        self.put(path, fusion)
+        with self.assertRaisesRegex(ValueError, 'Attention delta'): c.prepare(self.root)
 
 
 if __name__ == '__main__': unittest.main(verbosity=2)

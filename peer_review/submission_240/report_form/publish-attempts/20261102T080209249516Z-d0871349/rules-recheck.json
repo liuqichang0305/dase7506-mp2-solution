@@ -1,0 +1,18 @@
+{
+  "checked_at_utc": "2026-11-02T08:02:19.641153+00:00",
+  "publication_blob_sha": "be5449e360a6146a545f1c91fdca3baf4df749ac",
+  "phase": "review",
+  "dates": {
+    "published_at": "2026-11-01T04:42:52.971Z",
+    "review_ends_at": "2026-11-09T00:00:00+08:00"
+  },
+  "source_blobs": {
+    "courses/dase7506/mp2/index.html": "53b5ad66a5f8b1069a55cf83633a4bf0c278b548",
+    "courses/dase7506/assets/mp2.9a439c7af66b.mjs": "b891777d9602c10b99f5ba5b5402974c08f9dad8",
+    "courses/dase7506/assets/arena.4f1cb17a638d.mjs": "a53803cc06195ba44d02a2d97dd91ffe28494aed",
+    "courses/dase7506/assets/projects.ae4b9dc4b02c.mjs": "bc0ea31136171598c902c7ad30c84636b162ead2"
+  },
+  "target_submission": 240,
+  "selected_entry_sha256": "8a5ae2aea14b33d5237173442dcdd66aebb82e93417c9c52d2adb98bee017a19",
+  "other_entries_retained": false
+}

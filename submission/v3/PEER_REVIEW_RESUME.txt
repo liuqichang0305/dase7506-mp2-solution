@@ -1,3 +1,30 @@
+CURRENT COMPLETED STATE -- 2026-11-02
+
+The separate peer review is COMPLETE. Submission#240 was reproduced from exact
+commit7e3a2792b7b4442f5e53705a64b4560a2e365de9 without retraining. The official
+score was394/467=84.36830835117773%. Independent source/recovery reviews and
+COMPLETE.json are saved under peer_review/submission_240. Four denied nonexistent
+Python cache-read probes caused a postcheck failure; the original FAILED and
+all logs are preserved, with evidence-only recovery and no prediction/scoring rerun.
+
+The official Peer Review Report was actually created and publicly read back:
+https://github.com/xudongwu-0/xudongwu-0.github.io/issues/383
+Receipt: peer_review/submission_240/report_form/REPORT_SUCCESS.json
+Status: created_and_read_back; target submission240; authorliuqichang0305.
+Do not create another report, re-evaluate this peer or use its outcome for our
+closed model research. The review window remains the instructor-recorded
+Nov1 release through2026-11-09T00:00:00+08:00; completion is based on the actual
+Issue/readback, not on the calendar alone.
+
+Our own independent review, fresh validation reproduction and research-only
+freeze are also complete (submission/v3/REVIEW_RESULT.json,
+REPRODUCTION_RESULT.json, FREEZE.json). No new V3 test or score update is allowed.
+Archive report generation and rendered-page QA are complete; only PR#3 delivery remains.
+Delivered report: reports/research_v3/research_closeout_delivered/research_closeout_v3.pdf.
+Do not duplicate this completed peer review while closing the archive PR.
+
+ARCHIVED PREPARATION BELOW -- RETAINED HISTORY, NOT CURRENT ACTIONS:
+
 DASE7506 MP2 V3 - resume the separately released course peer review
 
 Status: preparation only. No other student's work has been reproduced and no

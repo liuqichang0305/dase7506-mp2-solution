@@ -24,22 +24,37 @@ selected-export-validation.json and selected-contract-validation.json passed
 the full798-question input-only checks. Do not repeat candidate selection.
 
 Confidence and paired validation diagnostics are now recorded without changing
-choices; calibration worsened validation ECE. Continue only outstanding
-post-selection evidence: independent final review, fresh public-checkout validation reproduction, strict
-research-only FREEZE (research_only=true, formal_test_allowed=false), actual
-RESEARCH_CLOSEOUT, independent closeout PDF/Chinese guide and rendered-page QA,
-then own archive PR review/merge. Check files before marking any stage complete;
-none of those later stages is asserted complete in this checkpoint.
+choices; calibration worsened validation ECE. Independent final review, fresh
+public-checkout validation reproduction and the research-only FREEZE are NOW
+COMPLETE. Check submission/v3/REVIEW_RESULT.json, REPRODUCTION_RESULT.json and
+FREEZE.json. Exact source eee478b4959e555b6ec8c902b6db8b69f31df508 reproduced
+740/798, all798 choices identical, in2.2803907999768853s for fresh prediction
+plus independent scoring on local hardware. FREEZE records research_only=true
+and formal_test_allowed=false. No new own-model test has been run.
+Do not rerun scripts/reproduce_selected_v3.py in the now-frozen checkout or
+remove any freeze/completion marker. REPRODUCTION.md documents the actual
+final-selected-01 run and independent exact pre-freeze source checkout procedure.
+RESEARCH_CLOSEOUT, the10-page PDF/Chinese guide and rendered-page QA are complete.
+Delivered PDF: reports/research_v3/research_closeout_delivered/research_closeout_v3.pdf.
+REPRODUCTION.md uses portable official commands; the completed coordinator is
+not a clean-clone entry point because it verifies original training states.
+The portable commands have passed without those states, with all798 choices equal.
+Remaining action: own archive PR#3 review/merge and final delivery receipt.
 See docs/research_v3/RESEARCH_CLOSEOUT_REPORT.md for the separate report entry
 points. Old formal-report tools still require real TEST_COMPLETE and must not
 be weakened or fed a fabricated test record.
 
 Actual instructor-released MP2 peer review is separate: publication began
 2026-11-01T04:42:52.971Z; window ends2026-11-09T00:00:00+08:00. The selected
-peer workflow is in progress, not marked complete or posted here. Read its
-actual completion/preparation/approval/readback records; never blindly repeat
-a test or POST after partial/uncertain evidence. Peer outcomes cannot influence
-our closed model research or turn into an own-model score update.
+peer workflow is COMPLETE: submission#240 was reproduced from its immutable
+checkpoint and Peer Review Report#383 was created and publicly read back:
+https://github.com/xudongwu-0/xudongwu-0.github.io/issues/383
+Receipt: peer_review/submission_240/report_form/REPORT_SUCCESS.json.
+Keep the original failed postcheck and independent recovery receipts; no peer
+prediction/scoring was repeated. Do not rerun evaluation or create another POST.
+Peer outcomes cannot influence closed model research or an own-model score update.
+The final post-freeze ranking check is already saved at
+results/leaderboard-review-2026-11-02-final/README.md; do not re-query for research.
 
 ARCHIVED PRE-CLOSURE RESUME BELOW -- RETAINED HISTORY, DO NOT EXECUTE:
 

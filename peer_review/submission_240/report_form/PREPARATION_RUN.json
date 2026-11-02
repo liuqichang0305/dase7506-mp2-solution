@@ -1,0 +1,23 @@
+{
+  "command": [
+    "node",
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\peer_review\\tools\\prepare_official_peer_form.mjs",
+    "--root",
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution",
+    "--input",
+    "peer_review/submission_240/report_form/FORM_INPUT.json",
+    "--output",
+    "peer_review/submission_240/report_form"
+  ],
+  "exit_code": 0,
+  "completed_at_utc": "2026-11-02T07:59:52.230107+00:00",
+  "output_sha256": {
+    "adapter.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "adapter.stdout.log": "adb737f6da5a023bcda747822de62f91147530f60f99c4052ef8271fc1e6d2b5",
+    "FORM_INPUT.json": "5af56841b1d38cf6f89fa051cf5b23debc6a613ad6990e197ef005c8af07bea3",
+    "GENERATED_FORM.json": "be59525c22158680ef2f7af9ec07cb8d5c6c6d6a547cb86e7b82ac237a616c60",
+    "issue-body.txt": "adaeadb4a406a93159215faf02564de806b96cea73ee4c60f21c3f439f8bc86f",
+    "issue-title.txt": "68f3396e48849947d9977a11c7c044ba6f9402a2725d93b1b2501a29fa91a5fb",
+    "issue-url.txt": "af4fd9be6e2674f5d02404589369d2db062404da164194f5fd8d82cefc3556c8"
+  }
+}

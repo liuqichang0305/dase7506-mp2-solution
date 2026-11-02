@@ -12,12 +12,23 @@
   (hard292/355) and736/798 (hard293/355), below historical V2 Deep Sets740/798
   (hard297/355). The historical byte-identical fallback is selected. Lack of
   improvement is an actual research outcome, not a reason to reopen selection.
-- Export/contract checks have passed, but independent final review, clean
-  reproduction, research-only freeze, report/PDF QA and PR closure still require
-  their actual evidence. Do not label those stages complete from software tests.
-- MP2 peer review is now actually open under the recorded published window.
-  Its separate reproduction/report/Issue workflow remains in progress; no
-  completion or publication is asserted by this status update.
+- Resolved: independent final review, clean public-checkout reproduction and
+  research-only freeze have actual passing records in submission/v3.
+  Reproduction at source eee478b4959e555b6ec8c902b6db8b69f31df508 matched
+  all 798 choices and 740/798 in 2.2803907999768853 seconds on local hardware.
+  FREEZE.json records research_only=true/formal_test_allowed=false.
+- Resolved: separate peer submission #240 reproduction and report publication.
+  Peer Review Report https://github.com/xudongwu-0/xudongwu-0.github.io/issues/383
+  was created and read back; REPORT_SUCCESS.json is retained under
+  peer_review/submission_240/report_form. The original cache-probe postcheck
+  failure and its independently reviewed evidence-only recovery are preserved;
+  prediction/scoring were not repeated.
+- Resolved: 10-page closeout report, Chinese guide and rendered-page QA.
+  Delivered PDF: reports/research_v3/research_closeout_delivered/research_closeout_v3.pdf.
+  The original coordinator's absolute training-state dependency is documented;
+  portable official validation commands passed without those local states.
+  Neither the frozen implementation nor its guards were weakened.
+- Remaining delivery action: PR #3 review/merge and its actual receipt.
 
 ## Historical pre-closure checkpoints and incidents
 

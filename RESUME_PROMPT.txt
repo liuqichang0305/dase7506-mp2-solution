@@ -1,4 +1,4 @@
-Continue only the DASE7506 MP2 post-deadline research archive and actual peer review.
+Continue only the remaining DASE7506 MP2 post-deadline archive documentation and PR closure.
 CURRENT OVERRIDE (2026-11-02): research budget and score deadline have expired.
 SEARCH_CLOSED.json and FORMAL_SUBMISSION_BLOCKED.json exist. Do not resume
 the research scheduler, reset the clock, run V3 official test, update its score,
@@ -10,14 +10,27 @@ rule. SELECTED_MODEL is byte-identical historical deepsets_regularized_s0
 (740/798, hard297/355), copied to artifacts/research_v3/final_selected.
 Actual798-question export/contract checks passed. Do not rerun or retune these.
 Saved confidence and paired validation diagnostics are complete and change no
-choices; calibration did not improve validation ECE. Finish only outstanding
-independent final review, clean
-reproduction, research-only freeze/report/own-PR archive and the actually
-open peer review (release Nov1; closes Nov9 00:00UTC8). Read current PROJECT_STATE
-and RULES_RESUMPTION_20261101 before the historical general instructions below.
-Do not mark fresh reproduction, final review, freeze, report/PDF QA, PR merge or
-peer publication complete until the actual records prove it. The archive freeze
-must have research_only=true/formal_test_allowed=false. Use the separate
+choices; calibration did not improve validation ECE. Independent final review,
+clean public-checkout reproduction and research-only freeze are now COMPLETE.
+See submission/v3/REVIEW_RESULT.json, REPRODUCTION_RESULT.json and FREEZE.json.
+Exact reproduced source eee478b4959e555b6ec8c902b6db8b69f31df508:740/798,
+all798 choices identical, fresh prediction+separate scoring2.2803907999768853s
+on local hardware. FREEZE has research_only=true/formal_test_allowed=false.
+Do not rerun the reproducer in this now-frozen directory or remove its locks.
+docs/research_v3/REPRODUCTION.md documents the independently checked source
+commit and real final-selected-01 command/evidence.
+The separate peer checkpoint reproduction and official report are COMPLETE:
+https://github.com/xudongwu-0/xudongwu-0.github.io/issues/383
+Creation/readback receipt: peer_review/submission_240/report_form/REPORT_SUCCESS.json.
+Do not repeat the peer evaluation or POST; preserve original FAILED and recovery.
+The 10-page PDF/Chinese guide and rendered-page QA are complete.
+Delivered PDF: reports/research_v3/research_closeout_delivered/research_closeout_v3.pdf.
+Portable official validation commands have passed a separate smoke check in the
+preserved clean environment, with no train/state dependency and all798 choices equal.
+Remaining action: PR#3 review/merge and final delivery receipt.
+Read current PROJECT_STATE and RULES_RESUMPTION_20261101 before the historical
+instructions below. Saved ranking: results/leaderboard-review-2026-11-02-final/README.md;
+do not re-query it for research or reopen selection. Use the separate
 prepare_closeout_inputs.py/build_closeout.py workflow after genuine closeout
 evidence exists, never manufacture TEST_COMPLETE. Retain all logs, partial runs,
 monitoring gaps and historical Issue294/348467. No continuous24h CPU claim.

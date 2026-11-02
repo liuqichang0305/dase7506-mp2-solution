@@ -28,16 +28,35 @@ checkpoint is the byte-identical historical `deepsets_regularized_s0`, copied
 to `artifacts/research_v3/final_selected`. **No new validation improvement is
 claimed.** Saved 798-question export/contract checks passed. Confidence and
 paired validation diagnostics are recorded and change no selections; calibration
-did not improve validation ECE. Independent final
-review, clean reproduction, research-only freeze, closeout report and PR closure
-must each be completed and evidenced separately before being marked done.
+did not improve validation ECE. Independent final review, fresh public-checkout
+reproduction and the research-only freeze are now complete. At exact source
+commit `eee478b4959e555b6ec8c902b6db8b69f31df508`, the fresh NumPy environment
+reproduced **740/798**, with all **798 choices identical**, in **2.2803908 s**
+for fresh prediction plus separate scoring (local hardware). The freeze records
+`research_only=true` and `formal_test_allowed=false`.
+
+The separate peer reproduction and official report are also complete:
+[Peer Review Report #383](https://github.com/xudongwu-0/xudongwu-0.github.io/issues/383)
+was created and publicly read back for submission #240. Its evidence did not
+feed into this closed research. The [10-page English report](reports/research_v3/research_closeout_delivered/research_closeout_v3.pdf)
+and [Chinese guide](reports/research_v3/closeout_zh_delivered.md) are complete,
+with rendered-page QA. Earlier report attempts remain archived. PR #3 merge
+is the remaining delivery action. The portable official validation commands
+were separately checked in the preserved clean environment: all 798 choices
+and 740/798 match, without training data or local training states.
 
 Evidence: [search closure](results/research_v3/SEARCH_CLOSED.json),
 [formal update block](submission/v3/FORMAL_SUBMISSION_BLOCKED.json),
 [locked validation](results/research_v3/validation_summary.json),
 [unique selection](submission/v3/SELECTED_MODEL.json),
+[independent review](submission/v3/REVIEW_RESULT.json),
+[actual reproduction](submission/v3/REPRODUCTION_RESULT.json),
+[research freeze](submission/v3/FREEZE.json),
+[peer publication receipt](peer_review/submission_240/report_form/REPORT_SUCCESS.json),
 [current state](PROJECT_STATE.md), and
 [recovery instructions](docs/research_v3/RESUME.txt).
+See [the verified reproduction procedure](docs/research_v3/REPRODUCTION.md)
+and the [saved post-freeze ranking check](results/leaderboard-review-2026-11-02-final/README.md).
 The independent [V3 PR #3](https://github.com/liuqichang0305/dase7506-mp2-solution/pull/3)
 preserves source, old assets and actual logs. The separate
 [post-deadline report workflow](docs/research_v3/RESEARCH_CLOSEOUT_REPORT.md)
@@ -45,8 +64,8 @@ requires actual archive evidence and never fabricates `TEST_COMPLETE`.
 
 Do not restart the research scheduler, register new experiments, retry pruned
 seeds, tune on validation/test, or replace the old submitted artifacts. Current
-peer review is a separate instructor-released task; its completion/publication
-requires its own real evidence and cannot feed back into this closed research.
+peer review has its own completed reproduction/publication evidence. Do not
+repeat its evaluation or create a duplicate report Issue.
 
 <details>
 <summary>Historical V3 checkpoint from 30 October (superseded; not current resume instructions)</summary>
