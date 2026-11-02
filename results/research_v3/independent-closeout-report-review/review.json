@@ -1,0 +1,36 @@
+{
+  "schema": "mp2-v3-independent-closeout-source-review-v1",
+  "passed": true,
+  "started_at_utc": "2026-11-02T07:45:27.713657+00:00",
+  "completed_at_utc": "2026-11-02T07:45:32.653219+00:00",
+  "wall_seconds": 4.940314699953888,
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_closeout_report_v3.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "sources_before": {
+    "reports/research_v3/prepare_closeout_inputs.py": "1bb99fb8b0fd736c02f680397f2ed671687f92dc2baad4a1ed88acde481fda53",
+    "reports/research_v3/build_closeout.py": "5c916c453543fe13658c267a9f407278056ff6bcb01e95b9dc0dded026f64154",
+    "code/tests/test_closeout_report_v3.py": "7602913a1f3ba9ce63ae83ed2b1b6652f436efe90ddf024864b2737e9dc1adfc",
+    "docs/research_v3/RESEARCH_CLOSEOUT_REPORT.md": "167eb7daff5e2253a37211fb4bc146ad0a1bc6668e02004a021b86b408dd0ada"
+  },
+  "sources_after": {
+    "reports/research_v3/prepare_closeout_inputs.py": "1bb99fb8b0fd736c02f680397f2ed671687f92dc2baad4a1ed88acde481fda53",
+    "reports/research_v3/build_closeout.py": "5c916c453543fe13658c267a9f407278056ff6bcb01e95b9dc0dded026f64154",
+    "code/tests/test_closeout_report_v3.py": "7602913a1f3ba9ce63ae83ed2b1b6652f436efe90ddf024864b2737e9dc1adfc",
+    "docs/research_v3/RESEARCH_CLOSEOUT_REPORT.md": "167eb7daff5e2253a37211fb4bc146ad0a1bc6668e02004a021b86b408dd0ada"
+  },
+  "actual_report_produced": false,
+  "raw_holdout_data_read": false,
+  "actual_inference_or_training": false,
+  "scope": "Synthetic metadata fixtures; actual producer and PDF not executed",
+  "finding": "No blocking defect found in separate research-only archive gate, incomplete-seed and four-fusion disclosures, saved confidence-only processing or renderer input binding. Actual PDF page count and visual QA remain separate."
+}

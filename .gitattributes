@@ -18,3 +18,5 @@ scripts/*_v3.py -text
 docs/research_v3/** -text
 reports/research_v3/** -text
 peer_review/** -text
+requirements*.txt -text
+code/requirements*.txt -text

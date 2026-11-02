@@ -1,0 +1,18 @@
+{
+  "schema": "mp2-v3-reproduction-preflight-engineering-failure-v1",
+  "recorded_at_utc": "2026-11-02T07:47:12.518748+00:00",
+  "command": ".venv/Scripts/python.exe scripts/reproduce_selected_v3.py --attempt final-selected-01",
+  "source_commit": "ed7fbc6b6b90d547733b61aa823d59295abc4152",
+  "outcome": "Preflight refused before reserving an attempt, cloning, creating an environment, opening validation, or running prediction/scoring.",
+  "exception_type": "ValueError",
+  "error": "Frozen source/asset differs from committed bytes: requirements-lock.txt",
+  "checked_source_and_asset_files": 36,
+  "only_mismatch": {
+    "path": "requirements-lock.txt",
+    "local_sha256": "dcdbf72bc85488686bcc2e1dab4915d644cf18d63e1acae31ebd968555e3b6da",
+    "committed_sha256": "6a3f3e713a1eab6e324a78f463e153be8e8ed90876bd57eca4ebcfdebf41e975"
+  },
+  "repair": "Preserve raw requirements bytes using -text attributes and commit existing unchanged working bytes; no model, inference, training, dependency versions or checkpoint bytes are modified.",
+  "new_official_score_runs": 0,
+  "test_opened": false
+}
