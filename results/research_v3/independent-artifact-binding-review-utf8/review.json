@@ -1,0 +1,30 @@
+{
+  "scope": "Independent native AES/RSA generated-key tests and syntax check; no real form, score, network or credentials",
+  "sources_before": {
+    "submission/v3/artifact_binding.mjs": "18bf530727e9c43971d828c6c5aa562f94fdb78bce2052d07d2ca41a40095599",
+    "submission/v3/prepare_official_form.mjs": "afa14f54ecc13b062853642d669997654419aefeba283b244c17635fa1b5b012"
+  },
+  "sources_after": {
+    "submission/v3/artifact_binding.mjs": "18bf530727e9c43971d828c6c5aa562f94fdb78bce2052d07d2ca41a40095599",
+    "submission/v3/prepare_official_form.mjs": "afa14f54ecc13b062853642d669997654419aefeba283b244c17635fa1b5b012"
+  },
+  "runs": [
+    {
+      "command": [
+        "node",
+        "code/tests/test_artifact_binding_v3.mjs"
+      ],
+      "returncode": 0,
+      "seconds": 0.87801010000112
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "submission/v3/prepare_official_form.mjs"
+      ],
+      "returncode": 0,
+      "seconds": 0.10872879999806173
+    }
+  ]
+}

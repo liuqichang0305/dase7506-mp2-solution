@@ -1,0 +1,25 @@
+{'synthetic_processes_stopped': 4, 'real_data_read': False, 'training_started': False}
+test_actual_venv_launcher_and_sleep_descendants_are_stopped (test_scheduler_process_tree_v3.ProcessTreeTest.test_actual_venv_launcher_and_sleep_descendants_are_stopped) ... ok
+test_absolute_expiry_prunes_pending_without_spawning (test_scheduler_v3.SchedulerV3Tests.test_absolute_expiry_prunes_pending_without_spawning) ... ok
+test_active_lock_refuses_and_stale_lock_is_preserved (test_scheduler_v3.SchedulerV3Tests.test_active_lock_refuses_and_stale_lock_is_preserved) ... ok
+test_budget_uses_original_absolute_anchor_and_delivery_buffer (test_scheduler_v3.SchedulerV3Tests.test_budget_uses_original_absolute_anchor_and_delivery_buffer) ... ok
+test_changed_registered_source_or_data_rejects_launch (test_scheduler_v3.SchedulerV3Tests.test_changed_registered_source_or_data_rejects_launch) ... ok
+test_complete_authentic_three_fold_summary_is_accepted_without_retraining (test_scheduler_v3.SchedulerV3Tests.test_complete_authentic_three_fold_summary_is_accepted_without_retraining) ... ok
+test_completion_rejects_path_escape_before_reading_external_file (test_scheduler_v3.SchedulerV3Tests.test_completion_rejects_path_escape_before_reading_external_file) ... ok
+test_completion_rejects_tampered_outputs_assets_and_oof (test_scheduler_v3.SchedulerV3Tests.test_completion_rejects_tampered_outputs_assets_and_oof) ... ok
+test_completion_rejects_three_ids_with_an_incomplete_fold (test_scheduler_v3.SchedulerV3Tests.test_completion_rejects_three_ids_with_an_incomplete_fold) ... ok
+test_identity_requires_pid_creation_and_command (test_scheduler_v3.SchedulerV3Tests.test_identity_requires_pid_creation_and_command) ... ok
+test_incomplete_three_fold_summary_never_completes (test_scheduler_v3.SchedulerV3Tests.test_incomplete_three_fold_summary_never_completes) ... ok
+test_joint_queue_and_config_mutation_cannot_bypass_registered_digest (test_scheduler_v3.SchedulerV3Tests.test_joint_queue_and_config_mutation_cannot_bypass_registered_digest) ... ok
+test_monitor_enforces_real_attempt_and_absolute_wall_budgets (test_scheduler_v3.SchedulerV3Tests.test_monitor_enforces_real_attempt_and_absolute_wall_budgets) ... ok
+test_previous_log_is_never_overwritten (test_scheduler_v3.SchedulerV3Tests.test_previous_log_is_never_overwritten) ... ok
+test_registration_is_immutable_and_rejects_holdout_background_paths (test_scheduler_v3.SchedulerV3Tests.test_registration_is_immutable_and_rejects_holdout_background_paths) ... ok
+test_registration_rejects_closed_expired_and_over_capacity (test_scheduler_v3.SchedulerV3Tests.test_registration_rejects_closed_expired_and_over_capacity) ... ok
+test_retry_cap_reason_data_guard_and_failure_log_preservation (test_scheduler_v3.SchedulerV3Tests.test_retry_cap_reason_data_guard_and_failure_log_preservation) ... ok
+test_summary_from_changed_source_or_data_is_rejected (test_scheduler_v3.SchedulerV3Tests.test_summary_from_changed_source_or_data_is_rejected) ... ok
+test_unrecorded_live_project_trainer_prevents_duplicate_spawn (test_scheduler_v3.SchedulerV3Tests.test_unrecorded_live_project_trainer_prevents_duplicate_spawn) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 1.122s
+
+OK

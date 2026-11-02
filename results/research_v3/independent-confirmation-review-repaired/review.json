@@ -1,0 +1,56 @@
+{
+  "scope": "Read-only independent code review and isolated synthetic tests; no actual validation/test data",
+  "source_sha256_before": "603ca467bd28d51c8bc0d52b087b3c113375e41fe52262125a49bb25b26e15de",
+  "source_sha256_after": "603ca467bd28d51c8bc0d52b087b3c113375e41fe52262125a49bb25b26e15de",
+  "source_unchanged_during_tests": true,
+  "suite": {
+    "tests_run": 13,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  "regressions": [
+    {
+      "case": "valid_actual_numeric_linear_bundle",
+      "expected_reject": false,
+      "rejected": false,
+      "passed": true,
+      "reason": null,
+      "validation_file_present": false
+    },
+    {
+      "case": "malformed_numeric_weights_with_updated_lock_hash",
+      "expected_reject": true,
+      "rejected": true,
+      "passed": true,
+      "reason": "This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.",
+      "validation_file_present": false
+    },
+    {
+      "case": "selector_claims_tabm_alpha99_but_bundle_linear",
+      "expected_reject": true,
+      "rejected": true,
+      "passed": true,
+      "reason": "Single-model selector identity differs from actual frozen inference",
+      "validation_file_present": false
+    },
+    {
+      "case": "final_fit_source_provenance_only_common",
+      "expected_reject": true,
+      "rejected": true,
+      "passed": true,
+      "reason": "Final training provenance must bind the exact reviewed eleven training sources",
+      "validation_file_present": false
+    },
+    {
+      "case": "final_fit_assets_omit_weights",
+      "expected_reject": true,
+      "rejected": true,
+      "passed": true,
+      "reason": "Inference component differs from its final training/frozen assets",
+      "validation_file_present": false
+    }
+  ],
+  "single_model_preopen_status": "passed",
+  "fusion_status": "Pending extra future-output archive/registration hash checks; no actual fusion exists"
+}

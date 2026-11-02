@@ -1,0 +1,29 @@
+{
+  "scope": "Independent source review and generated-fixture tests only; no real holdout, scoring, training, network or production report generation.",
+  "started_at_utc": "2026-10-30T03:44:49.611042+00:00",
+  "completed_at_utc": "2026-10-30T03:44:53.590597+00:00",
+  "source_path": "reports/research_v3/prepare_figures.py",
+  "source_sha256_before": "7eacb0b9cab2765189bc54c7f744816ef3b1ac2395691d02c0b7a970d9a9fab9",
+  "source_sha256_after": "7eacb0b9cab2765189bc54c7f744816ef3b1ac2395691d02c0b7a970d9a9fab9",
+  "source_unchanged": true,
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_prepare_figures_v3.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "process_wall_seconds": 3.9758765999868046,
+  "test_source_path": "code/tests/test_prepare_figures_v3.py",
+  "test_source_sha256": "5c07ac4fd8fbb024dcd4ffa771a71b5b9a4a29ee89311450b8edf8ec2d2927fa",
+  "log_sha256": {
+    "stderr.log": "9788eb90825fd3fe1097e5890c9fe948a9120a0d52688227430892adfac94460",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "passed": true
+}

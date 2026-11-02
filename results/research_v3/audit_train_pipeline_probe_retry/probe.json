@@ -1,0 +1,176 @@
+{
+  "scope": "Resource/integration regression only: official train 4755 questions, pilot checkpoint fitted to a subset; not OOF or generalization evidence",
+  "started_at_utc": "2026-10-29T17:50:33.071750+00:00",
+  "checkpoint": "artifacts/research_v3/pilot_mlp_adamw_v3/fold0",
+  "method": "code/solution_v3.py",
+  "validation_or_test_evaluated": false,
+  "processes": [
+    {
+      "command": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-S",
+        "-c",
+        "import json,os,runpy,sys\nfrom pathlib import Path\nfrom threadpoolctl import threadpool_info\nscript,report=sys.argv[1:3]\nsys.argv=[script]+sys.argv[3:]\nsys.path.insert(0,str(Path(script).resolve().parent))\ntry:\n    runpy.run_path(script,run_name='__main__')\nfinally:\n    record={'script':script,'executable':sys.executable,'pythonpath':os.environ.get('PYTHONPATH'),\n            'thread_pools':threadpool_info(),'numpy_version':getattr(sys.modules.get('numpy'),'__version__',None),\n            'torch_imported':'torch' in sys.modules,\n            'thread_environment':{k:os.environ.get(k) for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS','OMP_THREAD_LIMIT')}}\n    with open(report,'x',encoding='utf-8') as f:\n        json.dump(record,f,indent=2);f.write('\\n')\n",
+        "code/predict.py",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\audit_train_pipeline_probe_retry\\prediction-thread-pools.json",
+        "--method",
+        "code/solution_v3.py",
+        "--checkpoint",
+        "artifacts/research_v3/pilot_mlp_adamw_v3/fold0",
+        "--split",
+        "train",
+        "--output",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\audit_train_pipeline_probe_retry\\train-predictions.json"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 6.5008814000029815,
+      "process_tree": [
+        {
+          "pid": 33560,
+          "create_time": 1793296235.052144
+        }
+      ],
+      "sampled_peak_tree_threads": 4,
+      "sampled_peak_tree_rss_bytes": 910516224,
+      "sampled_peak_tree_plus_coordinator_threads": 8,
+      "sampled_cpu_seconds": 6.3125,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      },
+      "sampling_note": "10 ms samples include launcher and all observed actual children; CPU/RSS/threads are sampled, not exact integrals."
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-S",
+        "-c",
+        "import json,os,runpy,sys\nfrom pathlib import Path\nfrom threadpoolctl import threadpool_info\nscript,report=sys.argv[1:3]\nsys.argv=[script]+sys.argv[3:]\nsys.path.insert(0,str(Path(script).resolve().parent))\ntry:\n    runpy.run_path(script,run_name='__main__')\nfinally:\n    record={'script':script,'executable':sys.executable,'pythonpath':os.environ.get('PYTHONPATH'),\n            'thread_pools':threadpool_info(),'numpy_version':getattr(sys.modules.get('numpy'),'__version__',None),\n            'torch_imported':'torch' in sys.modules,\n            'thread_environment':{k:os.environ.get(k) for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS','OMP_THREAD_LIMIT')}}\n    with open(report,'x',encoding='utf-8') as f:\n        json.dump(record,f,indent=2);f.write('\\n')\n",
+        "code/score_predictions.py",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\audit_train_pipeline_probe_retry\\scoring-thread-pools.json",
+        "--split",
+        "train",
+        "--predictions",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\audit_train_pipeline_probe_retry\\train-predictions.json",
+        "--output",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\audit_train_pipeline_probe_retry\\train-score.json"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 0.9041425999967032,
+      "process_tree": [
+        {
+          "pid": 6008,
+          "create_time": 1793296241.5563345
+        }
+      ],
+      "sampled_peak_tree_threads": 4,
+      "sampled_peak_tree_rss_bytes": 102162432,
+      "sampled_peak_tree_plus_coordinator_threads": 8,
+      "sampled_cpu_seconds": 0.859375,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      },
+      "sampling_note": "10 ms samples include launcher and all observed actual children; CPU/RSS/threads are sampled, not exact integrals."
+    }
+  ],
+  "retry_reason": "Prior probe source-inventory summary failed after commands; original outputs retained",
+  "prediction_plus_scoring_seconds": 7.411624199994549,
+  "completed_at_utc": "2026-10-29T17:50:42.458803+00:00",
+  "successful": true,
+  "sampled_peak_task_threads": 4,
+  "scientific_library_observations": [
+    {
+      "script": "code/predict.py",
+      "executable": "C:\\Program Files\\Python312\\python.exe",
+      "pythonpath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages",
+      "thread_pools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "version": "0.3.34.106.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ],
+      "numpy_version": "2.5.3",
+      "torch_imported": false,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      }
+    },
+    {
+      "script": "code/score_predictions.py",
+      "executable": "C:\\Program Files\\Python312\\python.exe",
+      "pythonpath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages",
+      "thread_pools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "version": "0.3.34.106.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ],
+      "numpy_version": "2.5.3",
+      "torch_imported": false,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      }
+    }
+  ],
+  "coordinator_rejected_reads": [],
+  "source_sha256": {
+    "code/mp2/__init__.py": "853575bfe208eeb5d5b8e0507c8c76d7841986e53225f8c2d8c95d7788d7e334",
+    "code/score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+    "code/tools/confirm_validation_v3.py": "846d9b0d211d5ef196037073a28925f291064026e00784d4d69fb596d573c1f0",
+    "code/solution_v3.py": "141e9616628503b6f19865799e1c393f6e7bed279dbb6115aeb5240f4f5da113",
+    "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+    "code/predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+    "code/tools/audit_assets.py": "7f099f89d9cf8b97e569e8d13c07bc1f942855c8131cb4b2f350836c7a2a9b33",
+    "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+    "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+    "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+    "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+    "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307",
+    "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c"
+  },
+  "evidence_sha256": {
+    "prediction-process.json": "a523873a6ff45876c17b18f7811a48bb60cded302c5091ab00bbf39ec170f78d",
+    "prediction-thread-pools.json": "df93e62f02506fd12ad6a19bb807623a4443e45e46d12e07c51c61b9355f512b",
+    "prediction.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prediction.stdout.log": "6e0885bb433411a33a32a90ba3387f5c45d58b3ebb18e635f8fc1414f40a1039",
+    "scoring-process.json": "1850546ca299273d6d63e5f1f83c8bc09f3a5cf83dcbc3ed47679d552aaf2e8d",
+    "scoring-thread-pools.json": "341766c81c6d8630b34c434ecef8c74e9892f72c6624faad1a2b26de05a1a547",
+    "scoring.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scoring.stdout.log": "7c375257d26c223c60e796085af82ecc1b9ddad0a7c9830d2045be12c303be2b",
+    "train-predictions.json": "e63990d96724f3e08c6038109baf2aca9c923491f156d2903c8c57f0d177129c",
+    "train-score.json": "7c375257d26c223c60e796085af82ecc1b9ddad0a7c9830d2045be12c303be2b"
+  }
+}

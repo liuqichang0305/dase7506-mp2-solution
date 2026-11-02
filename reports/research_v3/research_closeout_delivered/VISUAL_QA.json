@@ -1,0 +1,33 @@
+{
+  "schema": "mp2-v3-delivered-pdf-visual-qa-v1",
+  "status": "passed",
+  "reviewer": "root",
+  "reviewed_at_utc": "2026-11-02T08:30:32.383503+00:00",
+  "pdf_sha256": "a18795a3b659c5de41c32c674422bba6b27e180082b58a04e2fc225bda303ad3",
+  "pages": 10,
+  "render_command": "pdftoppm -r 120 -png reports/research_v3/research_closeout_delivered/research_closeout_v3.pdf tmp/pdfs/research-closeout-v3-delivered/page",
+  "rendered_sha256": {
+    "tmp/pdfs/research-closeout-v3-delivered/page-01.png": "4339bfdf169594dccc38f208ac1a1742a0c6500f1024c3667cce3efbe9ec2c87",
+    "tmp/pdfs/research-closeout-v3-delivered/page-02.png": "6909a5fc90e78af460b882150a710b67297698348ed41a23394b397fa9072d55",
+    "tmp/pdfs/research-closeout-v3-delivered/page-03.png": "6a090c9b7b046bb7700cf68dae12bef417fac2ea331803365c0d6e508ebc92b2",
+    "tmp/pdfs/research-closeout-v3-delivered/page-04.png": "40478fad9a4a0d17240ad0701b0d7376d9fcb51c6c46600f8ef4aecc5367448b",
+    "tmp/pdfs/research-closeout-v3-delivered/page-05.png": "c091ac3c9714748f82a1633e2d18eec0a0ef6a9fd8ac8ae19218b338afbefbb9",
+    "tmp/pdfs/research-closeout-v3-delivered/page-06.png": "4a3dfd797978d5f1fb7f540e70d0cadb1b3737024f886a6ea6448f43bf1cd0aa",
+    "tmp/pdfs/research-closeout-v3-delivered/page-07.png": "3e7d9e1e8f0997dca72e9d873ebaa401df89265bdcd01f08446ea85a6f9ce36b",
+    "tmp/pdfs/research-closeout-v3-delivered/page-08.png": "bcd80922eaba37a378b7083a537849de7b3518d6c54c98a79a89a7713f24b640",
+    "tmp/pdfs/research-closeout-v3-delivered/page-09.png": "d725cc8847a70c1f0fb3fab890c99204a3a5dc9e53d5513bab908dec88f08d9d",
+    "tmp/pdfs/research-closeout-v3-delivered/page-10.png": "7ac5851526a6889fd186ed2e99cf58c5328923486758a7bebc0a8cab36d23278"
+  },
+  "visual_review": "Pages1-9 rendered PNGs are byte-identical to the exact images already individually opened and visually reviewed in research_closeout_final/VISUAL_QA.json; the changed page10 was opened with view_image and fully inspected. No clipping, overflow or overlap.",
+  "prior_visual_qa_sha256": "d32fb2dde6f4932d8f7dc8cc12da0c941083a90efb992fd08946e687427c1671",
+  "independent_review": {
+    "path": "results/research_v3/independent-closeout-pdf-review/delivered_review.json",
+    "sha256": "ac56709d263dfd9d5e44993cb372493b6e8cededec272f1eb72b7251ab8e35d3"
+  },
+  "portable_validation_smoke_sha256": "31e5c21e071fe0d7c650aac157bb5b415c1eb5e472c26a66d01a58e405ab69b3",
+  "frozen_source_and_assets_reverified": true,
+  "superseded_attempts_preserved": [
+    "research_closeout",
+    "research_closeout_final"
+  ]
+}

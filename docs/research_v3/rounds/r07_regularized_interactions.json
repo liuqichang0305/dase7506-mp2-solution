@@ -1,0 +1,111 @@
+{
+  "round": "r07_regularized_interactions",
+  "hypothesis": "Historical Deep Sets is the selected validation fallback while the old ResMLP used a different less-regularized recipe. Establish both with the fixed small-width regularized V3 AdamW recipe and independently add same-trajectory EMA within each family. This tests a transferable regularized recipe and averaging, not a pure capacity-matched claim about pooling; actual parameter/asset counts remain explicit.",
+  "evidence": [
+    "results/research_v3/analysis/r03_complete/analysis.json",
+    "code/configs/research_v2/deepsets_regularized_s0.json",
+    "code/configs/research_v2/resmlp_group_s0.json"
+  ],
+  "configs": [
+    {
+      "family": "deepsets",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_deepsets_adamw_s0"
+    },
+    {
+      "family": "deepsets",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_deepsets_ema_s0",
+      "ema_decay": 0.99
+    },
+    {
+      "family": "resmlp",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_resmlp_adamw_s0",
+      "blocks": 1
+    },
+    {
+      "family": "resmlp",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_resmlp_ema_s0",
+      "blocks": 1,
+      "ema_decay": 0.99
+    }
+  ]
+}

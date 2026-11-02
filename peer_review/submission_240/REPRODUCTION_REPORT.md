@@ -1,0 +1,11 @@
+# Peer submission 240 checkpoint reproduction
+
+Reproduced submission #240 from immutable commit 7e3a2792b7b4442f5e53705a64b4560a2e365de9 (submission-v1), using its submitted checkpoint without retraining. The official v5 full-test scorer returned 394/467 = 84.36830835118%. The published declaration is 84.3831%, a difference of -0.01479164882 percentage points; 394/467 matches the repository README. No misconduct is inferred from this small discrepancy.
+
+One fresh CPU predictor plus separate scorer exited successfully: saved phase walls sum to 4.768631s; the saved first-start/last-end UTC interval is 4.784206s. The combined monotonic value was not serialized. Peak sampled task threads were 4, BLAS threads 1, and assets 86,179 bytes. This is a local Windows i9-12900H check, not Xeon certification.
+
+Prediction was guarded against references, networking and subprocesses. An overbroad postcheck rejected four read-only probes for nonexistent Python bytecode caches; independent review verified pinned source fallback and no reference access. Original FAILED/logs were preserved and existing outputs recovered without rerunning.
+
+The first pip install timed out. A fresh isolated environment was reconstructed from exact-version local distributions with RECORD/SHA checks, then runtime files were verified byte-for-byte against anonymously downloaded public pinned wheels (NumPy 2.5.3, threadpoolctl 3.7.0, psutil 7.2.2). This was not a fresh PyPI installation. No peer result was used for our model research.
+
+Evidence: `RECOVERED.json` binds the untouched `FAILED.json`, original process commands, all source/assets/data hashes, access logs, and independent review. `timing.json` retains both original process records. `COMPLETE.json` binds all files. The original command is preserved in `FAILED.json`; the recording-only recovery command is `python -S peer_review/submission_240/recover_recording.py`. Do not replay the once-only predictor. No report has been posted by this helper.

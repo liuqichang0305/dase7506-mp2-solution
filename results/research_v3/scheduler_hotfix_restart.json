@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-29T17:26:00.903788+00:00",
+  "reason": "Restart only scheduler to load Windows owned-process-tree timeout fix; preserve live trainer and checkpoint trajectory.",
+  "scheduler_pid": 41608,
+  "previous_loaded_source_sha256": "b791dcaabe7b21109e8e5961a1bc394dbd55d6f39efd43c8b47e8f8f07e63260",
+  "new_source_sha256": "6f1392b9be5f40cf8985f3f3bc5bb9566da3c75db8939fbc096c6669878dea28",
+  "trainer_pids_before": [
+    6452,
+    42980
+  ],
+  "trainer_pids_still_alive": [
+    6452,
+    42980
+  ]
+}

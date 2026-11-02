@@ -1,0 +1,90 @@
+{
+  "round": "r03_realmlp_preprocess",
+  "hypothesis": "RealMLP-inspired NTP/SELU and learned input scaling may benefit this small task. With its appropriate fixed Adam beta2/LR multipliers, compare standard scaling, robust clipping for auxiliary statistics only, and robust clipping for all dimensions. All statistics fit within the fitting partition.",
+  "configs": [
+    {
+      "family": "realmlp",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.01,
+      "weight_decay": 0.001,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_realmlp_standard_s0",
+      "depth": 3,
+      "beta2": 0.95,
+      "input_scale_lr_multiplier": 6,
+      "bias_lr_multiplier": 0.1
+    },
+    {
+      "family": "realmlp",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.01,
+      "weight_decay": 0.001,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "robust_stats",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_realmlp_robust_stats_s0",
+      "depth": 3,
+      "beta2": 0.95,
+      "input_scale_lr_multiplier": 6,
+      "bias_lr_multiplier": 0.1
+    },
+    {
+      "family": "realmlp",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.01,
+      "weight_decay": 0.001,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "robust_all",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_realmlp_robust_all_s0",
+      "depth": 3,
+      "beta2": 0.95,
+      "input_scale_lr_multiplier": 6,
+      "bias_lr_multiplier": 0.1
+    }
+  ]
+}

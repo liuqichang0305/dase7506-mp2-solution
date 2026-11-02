@@ -1,0 +1,29 @@
+{
+  "scope": "Generated fixtures and fake transport only; no official data/score, credentials, HTTP or submission",
+  "source_sha256_before": "58ef1084a8afc6f70359649c8cc84bac75d1086be34d21d5d9e815e1c2fbeec1",
+  "source_sha256_after": "58ef1084a8afc6f70359649c8cc84bac75d1086be34d21d5d9e815e1c2fbeec1",
+  "cases": [
+    {
+      "case": "wrong_form_protocol",
+      "fake_network_calls": 3,
+      "post_calls": 0,
+      "unexpectedly_accepted": true,
+      "result": {
+        "status": "existing_remote_issue_reconciled",
+        "issue_url": "https://github.com/xudongwu-0/xudongwu-0.github.io/issues/999",
+        "issue_number": 999
+      }
+    },
+    {
+      "case": "wrong_envelope_algorithm",
+      "fake_network_calls": 3,
+      "post_calls": 0,
+      "unexpectedly_accepted": true,
+      "result": {
+        "status": "existing_remote_issue_reconciled",
+        "issue_url": "https://github.com/xudongwu-0/xudongwu-0.github.io/issues/999",
+        "issue_number": 999
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+test_asset_source_and_fallback_changes_rejected (test_confirm_validation_v3.ConfirmationTests.test_asset_source_and_fallback_changes_rejected) ... ok
+test_completed_result_hash_resume_and_partial_preservation (test_confirm_validation_v3.ConfirmationTests.test_completed_result_hash_resume_and_partial_preservation) ... ok
+test_confirmation_resume_no_second_evaluation_and_no_changed_lock (test_confirm_validation_v3.ConfirmationTests.test_confirmation_resume_no_second_evaluation_and_no_changed_lock) ... ok
+test_exclusive_resource_lock_and_pid_creation_identity (test_confirm_validation_v3.ConfirmationTests.test_exclusive_resource_lock_and_pid_creation_identity) ... ok
+test_improvement_rule_pareto_baseline_and_resource_gate (test_confirm_validation_v3.ConfirmationTests.test_improvement_rule_pareto_baseline_and_resource_gate) ... ok
+test_lock_positive_never_needs_validation_or_test_files (test_confirm_validation_v3.ConfirmationTests.test_lock_positive_never_needs_validation_or_test_files) ... ok
+test_prediction_then_independent_scoring_complete_timing (test_confirm_validation_v3.ConfirmationTests.test_prediction_then_independent_scoring_complete_timing) ... ok
+test_prelock_integrity_rejects_mutations_and_third_candidate (test_confirm_validation_v3.ConfirmationTests.test_prelock_integrity_rejects_mutations_and_third_candidate) ... ok
+test_read_guard_in_fresh_process (test_confirm_validation_v3.ConfirmationTests.test_read_guard_in_fresh_process) ... ok
+test_real_tree_wait_and_timeout_no_orphan (test_confirm_validation_v3.ConfirmationTests.test_real_tree_wait_and_timeout_no_orphan) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 4.060s
+
+OK

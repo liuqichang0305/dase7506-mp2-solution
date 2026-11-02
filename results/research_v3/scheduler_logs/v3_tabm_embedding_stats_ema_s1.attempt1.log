@@ -1,0 +1,2 @@
+{"utc": "2026-10-30T04:48:36.359011+00:00", "pid": 38564, "experiment_id": "v3_tabm_embedding_stats_ema_s1", "fold": 0, "status": "running", "seed": 3036900958}
+{"phase": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\v3_tabm_embedding_stats_ema_s1\\fold0-inner-epochs.json", "epoch": 1, "train_loss": 0.3134082481500102, "elapsed_seconds": 12.17895669999416, "optimizer_steps": 20, "ema_updates": 20, "inner_stop_loss": 0.31565260887145996, "complete": false}

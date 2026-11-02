@@ -1,0 +1,19 @@
+{
+  "returncode": 0,
+  "seconds": 6.130216999998083,
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_confirm_validation_v3.py",
+    "-v"
+  ],
+  "source_sha256_before": "a3928fdd9b58bfd5d3036f51510a866516d5aab8a8289892212769aecf558aff",
+  "source_sha256_after": "a3928fdd9b58bfd5d3036f51510a866516d5aab8a8289892212769aecf558aff",
+  "scope": "Formal direct-base process runner; original public psutil descendant observation plus UTC bounds, no official validation/test",
+  "limitation": "Not a generic detached-process supervisor: unobserved exited intermediary ancestry cannot be reconstructed. Test formal workers deny process spawning."
+}

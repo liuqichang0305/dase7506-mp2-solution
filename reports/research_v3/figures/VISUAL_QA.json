@@ -1,0 +1,17 @@
+{
+  "schema": "mp2-v3-figure-visual-review-v1",
+  "reviewed_at_utc": "2026-11-02T07:51:59.312399+00:00",
+  "reviewer": "root",
+  "method": "Opened both actual PNGs with view_image and visually inspected the complete images.",
+  "status": "passed",
+  "files_sha256": {
+    "reports/research_v3/figures/cv_fit_cost_vs_hard_accuracy.png": "fb8f0338240ad904914930bc09f26b8bc5e0ecf5ac84c8e782e2b0cb9f68a97b",
+    "reports/research_v3/figures/chosen_event_confidence.png": "5bfb5d9289d31258dd13e75794171dd02987a433befebf644d2dc9e7453a2013"
+  },
+  "observations": [
+    "Axes, legends, points and uncertainty/selection caveats are readable with no clipping or overlap.",
+    "Training cost chart includes 54 completed historical/current rows and explicitly excludes four pruned jobs.",
+    "Confidence chart labels fitted-OOF optimism and already-used validation; it shows validation ECE worsening and unchanged choices."
+  ],
+  "no_model_or_metric_recomputed": true
+}

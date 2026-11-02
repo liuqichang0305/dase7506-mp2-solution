@@ -1,0 +1,17 @@
+{
+  "schema": "mp2-v3-background-ranking-only-v1",
+  "checked_at_utc": "2026-10-29 16:28:04 UTC",
+  "snapshot_generated_at": "2026-10-29T15:53:45.685Z",
+  "snapshot_commit": "63ee1cb984b9d3229196a14fc0d2312ba7704dd6",
+  "snapshot_blob_sha": "ee59603be3d29171568e5d050a66cec2cf721875",
+  "acquisition": "Reused already-read snapshot; official website HEAD unchanged. No additional leaderboard refresh.",
+  "eligible_students": 55,
+  "target_max_competition_rank": 19,
+  "target_fraction": 0.35,
+  "threshold_score_background_only": 83.94004282655246,
+  "threshold_status": "self-reported",
+  "own_issue": 294,
+  "own_current_rank": 55,
+  "ranking_rule": "Eligible self-reported/verified; best per exact student ID and case-insensitive account; higher score better; tied scores prefer more available artifacts; competition ranks; exclude only teacher xudongwu-0 explicitly named test.",
+  "use_restriction": "Background only. Must not be read by trainer, experiment selector, scheduler/model selection, or sent to model research agents. No refresh during development. One final post-submission rank check permitted."
+}

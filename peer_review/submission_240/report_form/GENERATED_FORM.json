@@ -1,0 +1,55 @@
+{
+  "schema": "mp2-peer-generated-form-v1",
+  "status": "prepared_not_submitted",
+  "generated_at_utc": "2026-11-02T07:59:52.146Z",
+  "intended_account": "liuqichang0305",
+  "expected_author_type": "User",
+  "target_submission": 240,
+  "official_source_commit": "65c16a3eef424e30b254ff58804dffe0fbda8793",
+  "official_source_snapshot_sha256": "e0f1a42d793eaf037106b85d34f4ca04a53d611f950b7fc96b09bb7bfe0f22d7",
+  "official_executed_entry": "courses/dase7506/assets/mp2.9a439c7af66b.mjs",
+  "report_input_sha256": "5af56841b1d38cf6f89fa051cf5b23debc6a613ad6990e197ef005c8af07bea3",
+  "official_payload": {
+    "schema": "dase7506/peer-review-v1",
+    "protocol": "7506-submissions-v1",
+    "project": "mp2",
+    "submission": 240,
+    "reason": "Reproduced submission #240 from immutable commit 7e3a2792b7b4442f5e53705a64b4560a2e365de9 (submission-v1), using its submitted checkpoint without retraining. The official v5 full-test scorer returned 394/467 = 84.36830835118%. The published declaration is 84.3831%, a difference of -0.01479164882 percentage points; 394/467 matches the repository README. No misconduct is inferred from this small discrepancy.\n\nOne fresh CPU predictor plus separate scorer exited successfully: saved phase walls sum to 4.768631s; the saved first-start/last-end UTC interval is 4.784206s. The combined monotonic value was not serialized. Peak sampled task threads were 4, BLAS threads 1, and assets 86,179 bytes. This is a local Windows i9-12900H check, not Xeon certification.\n\nPrediction was guarded against references, networking and subprocesses. An overbroad postcheck rejected four read-only probes for nonexistent Python bytecode caches; independent review verified pinned source fallback and no reference access. Original FAILED/logs were preserved and existing outputs recovered without rerunning.\n\nThe first pip install timed out. A fresh isolated environment was reconstructed from exact-version local distributions with RECORD/SHA checks, then runtime files were verified byte-for-byte against anonymously downloaded public pinned wheels (NumPy 2.5.3, threadpoolctl 3.7.0, psutil 7.2.2). This was not a fresh PyPI installation. No peer result was used for our model research.",
+    "reproduced_score": 84.36830835117773,
+    "evidence_url": "https://github.com/liuqichang0305/dase7506-mp2-solution/blob/93ea59caa27c2160e1cad50c18ed9cd6f69ed603/peer_review/submission_240/REPRODUCTION_REPORT.md"
+  },
+  "issue_title": "[DASE7506 Peer Review Report] #240",
+  "issue_body": "Peer review report, pending instructor review. Your GitHub account and report are public. Use the same checkpoint and evaluator. Reports alone do not affect grades.\n\n```json\n{\n  \"schema\": \"dase7506/peer-review-v1\",\n  \"protocol\": \"7506-submissions-v1\",\n  \"project\": \"mp2\",\n  \"submission\": 240,\n  \"reason\": \"Reproduced submission #240 from immutable commit 7e3a2792b7b4442f5e53705a64b4560a2e365de9 (submission-v1), using its submitted checkpoint without retraining. The official v5 full-test scorer returned 394/467 = 84.36830835118%. The published declaration is 84.3831%, a difference of -0.01479164882 percentage points; 394/467 matches the repository README. No misconduct is inferred from this small discrepancy.\\n\\nOne fresh CPU predictor plus separate scorer exited successfully: saved phase walls sum to 4.768631s; the saved first-start/last-end UTC interval is 4.784206s. The combined monotonic value was not serialized. Peak sampled task threads were 4, BLAS threads 1, and assets 86,179 bytes. This is a local Windows i9-12900H check, not Xeon certification.\\n\\nPrediction was guarded against references, networking and subprocesses. An overbroad postcheck rejected four read-only probes for nonexistent Python bytecode caches; independent review verified pinned source fallback and no reference access. Original FAILED/logs were preserved and existing outputs recovered without rerunning.\\n\\nThe first pip install timed out. A fresh isolated environment was reconstructed from exact-version local distributions with RECORD/SHA checks, then runtime files were verified byte-for-byte against anonymously downloaded public pinned wheels (NumPy 2.5.3, threadpoolctl 3.7.0, psutil 7.2.2). This was not a fresh PyPI installation. No peer result was used for our model research.\",\n  \"reproduced_score\": 84.36830835117773,\n  \"evidence_url\": \"https://github.com/liuqichang0305/dase7506-mp2-solution/blob/93ea59caa27c2160e1cad50c18ed9cd6f69ed603/peer_review/submission_240/REPRODUCTION_REPORT.md\"\n}\n```",
+  "issue_url": "https://github.com/xudongwu-0/xudongwu-0.github.io/issues/new?title=%5BDASE7506+Peer+Review+Report%5D+%23240&body=Peer+review+report%2C+pending+instructor+review.+Your+GitHub+account+and+report+are+public.+Use+the+same+checkpoint+and+evaluator.+Reports+alone+do+not+affect+grades.%0A%0A%60%60%60json%0A%7B%0A++%22schema%22%3A+%22dase7506%2Fpeer-review-v1%22%2C%0A++%22protocol%22%3A+%227506-submissions-v1%22%2C%0A++%22project%22%3A+%22mp2%22%2C%0A++%22submission%22%3A+240%2C%0A++%22reason%22%3A+%22Reproduced+submission+%23240+from+immutable+commit+7e3a2792b7b4442f5e53705a64b4560a2e365de9+%28submission-v1%29%2C+using+its+submitted+checkpoint+without+retraining.+The+official+v5+full-test+scorer+returned+394%2F467+%3D+84.36830835118%25.+The+published+declaration+is+84.3831%25%2C+a+difference+of+-0.01479164882+percentage+points%3B+394%2F467+matches+the+repository+README.+No+misconduct+is+inferred+from+this+small+discrepancy.%5Cn%5CnOne+fresh+CPU+predictor+plus+separate+scorer+exited+successfully%3A+saved+phase+walls+sum+to+4.768631s%3B+the+saved+first-start%2Flast-end+UTC+interval+is+4.784206s.+The+combined+monotonic+value+was+not+serialized.+Peak+sampled+task+threads+were+4%2C+BLAS+threads+1%2C+and+assets+86%2C179+bytes.+This+is+a+local+Windows+i9-12900H+check%2C+not+Xeon+certification.%5Cn%5CnPrediction+was+guarded+against+references%2C+networking+and+subprocesses.+An+overbroad+postcheck+rejected+four+read-only+probes+for+nonexistent+Python+bytecode+caches%3B+independent+review+verified+pinned+source+fallback+and+no+reference+access.+Original+FAILED%2Flogs+were+preserved+and+existing+outputs+recovered+without+rerunning.%5Cn%5CnThe+first+pip+install+timed+out.+A+fresh+isolated+environment+was+reconstructed+from+exact-version+local+distributions+with+RECORD%2FSHA+checks%2C+then+runtime+files+were+verified+byte-for-byte+against+anonymously+downloaded+public+pinned+wheels+%28NumPy+2.5.3%2C+threadpoolctl+3.7.0%2C+psutil+7.2.2%29.+This+was+not+a+fresh+PyPI+installation.+No+peer+result+was+used+for+our+model+research.%22%2C%0A++%22reproduced_score%22%3A+84.36830835117773%2C%0A++%22evidence_url%22%3A+%22https%3A%2F%2Fgithub.com%2Fliuqichang0305%2Fdase7506-mp2-solution%2Fblob%2F93ea59caa27c2160e1cad50c18ed9cd6f69ed603%2Fpeer_review%2Fsubmission_240%2FREPRODUCTION_REPORT.md%22%0A%7D%0A%60%60%60",
+  "issue_body_sha256": "adaeadb4a406a93159215faf02564de806b96cea73ee4c60f21c3f439f8bc86f",
+  "issue_title_sha256": "68f3396e48849947d9977a11c7c044ba6f9402a2725d93b1b2501a29fa91a5fb",
+  "issue_url_sha256": "af4fd9be6e2674f5d02404589369d2db062404da164194f5fd8d82cefc3556c8",
+  "official_phase": "review",
+  "official_phase_badge": "7-day public review",
+  "captured_publication": {
+    "projects": {
+      "mp2": {
+        "published_at": "2026-11-01T04:42:52.971Z",
+        "review_ends_at": "2026-11-09T00:00:00+08:00"
+      }
+    }
+  },
+  "visible_target": "MP2 · ID pending · #240 · self-reported 84.3831 %",
+  "adapter_sha256": "88460852fbd0809782fb134a73ae8447687e375cd316e4199b929c4558b75a11",
+  "fetch_log": [
+    {
+      "requested_url": "https://raw.githubusercontent.com/xudongwu-0/xudongwu-0.github.io/main/courses/dase7506/data/leaderboard.json?v=1793606392051",
+      "served": "one explicitly selected target plus publication dates",
+      "network_used": false
+    },
+    {
+      "requested_url": "../data/leaderboard.json",
+      "served": "one explicitly selected target plus publication dates",
+      "network_used": false
+    }
+  ],
+  "intervals_suppressed": [
+    30000
+  ],
+  "scope": "Unchanged published peer handler and exact dependencies. Single-target local DOM; no network, encrypted artifact operation, score submission, email or issue creation."
+}

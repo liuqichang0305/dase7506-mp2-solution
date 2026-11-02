@@ -1,0 +1,6 @@
+{
+  "status": "Independent wrapper capture failed before recording test outcome",
+  "exception": "UnicodeDecodeError: gbk cannot decode Node UTF-8 checkmark output; then None stdout concatenation TypeError",
+  "test_outcome_asserted": false,
+  "real_data_or_network_used": false
+}

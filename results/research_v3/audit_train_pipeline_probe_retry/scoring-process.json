@@ -1,0 +1,39 @@
+{
+  "command": [
+    "C:\\Program Files\\Python312\\python.exe",
+    "-S",
+    "-c",
+    "import json,os,runpy,sys\nfrom pathlib import Path\nfrom threadpoolctl import threadpool_info\nscript,report=sys.argv[1:3]\nsys.argv=[script]+sys.argv[3:]\nsys.path.insert(0,str(Path(script).resolve().parent))\ntry:\n    runpy.run_path(script,run_name='__main__')\nfinally:\n    record={'script':script,'executable':sys.executable,'pythonpath':os.environ.get('PYTHONPATH'),\n            'thread_pools':threadpool_info(),'numpy_version':getattr(sys.modules.get('numpy'),'__version__',None),\n            'torch_imported':'torch' in sys.modules,\n            'thread_environment':{k:os.environ.get(k) for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS','OMP_THREAD_LIMIT')}}\n    with open(report,'x',encoding='utf-8') as f:\n        json.dump(record,f,indent=2);f.write('\\n')\n",
+    "code/score_predictions.py",
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\audit_train_pipeline_probe_retry\\scoring-thread-pools.json",
+    "--split",
+    "train",
+    "--predictions",
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\audit_train_pipeline_probe_retry\\train-predictions.json",
+    "--output",
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\audit_train_pipeline_probe_retry\\train-score.json"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "wall_seconds": 0.9041425999967032,
+  "process_tree": [
+    {
+      "pid": 6008,
+      "create_time": 1793296241.5563345
+    }
+  ],
+  "sampled_peak_tree_threads": 4,
+  "sampled_peak_tree_rss_bytes": 102162432,
+  "sampled_peak_tree_plus_coordinator_threads": 8,
+  "sampled_cpu_seconds": 0.859375,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "OMP_THREAD_LIMIT": "1"
+  },
+  "sampling_note": "10 ms samples include launcher and all observed actual children; CPU/RSS/threads are sampled, not exact integrals."
+}

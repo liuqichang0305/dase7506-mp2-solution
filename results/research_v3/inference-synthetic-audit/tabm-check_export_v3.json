@@ -1,0 +1,120 @@
+{
+  "status": "passed",
+  "timestamp_utc": "2026-10-29T17:06:17.093745+00:00",
+  "input_source": "synthetic",
+  "purpose": "Full selected-input numerical export check only; no references, accuracy or model selection",
+  "questions": 137,
+  "kind": "single",
+  "members": [
+    {
+      "version": "v3",
+      "architecture": {
+        "activation": "relu",
+        "depth": 3,
+        "dropout": 0.1,
+        "family": "tabm",
+        "input_features": "relation",
+        "k": 4,
+        "start_scaling_init": "random-signs",
+        "width": 128
+      },
+      "decoder": {
+        "alpha": 0.0,
+        "mask": true,
+        "mode": "group_lse",
+        "tau": 1.0
+      },
+      "dtype": "float32",
+      "score_shape": [
+        137,
+        4,
+        4
+      ],
+      "torch_forward_seconds": 0.07662379999965196,
+      "status": "passed",
+      "absolute_tolerance": 3e-06,
+      "relative_tolerance": 3e-05,
+      "maximum_absolute_error": 6.705522537231445e-08,
+      "mean_absolute_error": 1.3965589884858931e-08,
+      "scores_outside_tolerance": 0,
+      "raw_argmax_difference_count": 0
+    }
+  ],
+  "candidate_scores": 2192,
+  "reference_files_read": false,
+  "rejected_input_reads": [],
+  "checkpoint": "C:\\Users\\Liuye\\AppData\\Local\\Temp\\mp2-v3-synthetic-assets-j0m2b08z\\tabm",
+  "assets_sha256": {
+    "config.json": "d8ac9e7c01cee9f0bd687a325469efee07d37ee1b0276fe98e3e9b2ec43982b7",
+    "weights.npz": "36553242a8f95b5f0e2bc74ceb239d1de4af64428b7ba5730badd8f5e485f49f"
+  },
+  "torch_version": "2.15.0+cpu",
+  "numpy_version": "2.5.3",
+  "device": "cpu",
+  "threads": {
+    "torch_intraop": 1,
+    "torch_interop": 1,
+    "environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "OMP_THREAD_LIMIT": "1"
+    }
+  },
+  "maximum_absolute_error": 6.705522537231445e-08,
+  "maximum_group_probability_error": 5.874178032883037e-09,
+  "group_probabilities_within_tolerance": true,
+  "choice_agreement": {
+    "equal": 137,
+    "n": 137
+  },
+  "differing_row_indices": [],
+  "differing_torch_choices": [],
+  "differing_numpy_choices": [],
+  "top_group_probability_margin_minimum": 0.0,
+  "top_group_probability_margin_below_1e_5_count": 1,
+  "numpy_features_and_forward_seconds": 0.3573181999963708,
+  "audit_total_seconds": 0.5470098000005237,
+  "timing_note": "In-process diagnostics only; not official fresh-process inference-plus-scoring timing",
+  "threadpool_info": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+      "version": "0.3.34.106.0",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libiomp",
+      "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\torch\\lib\\libiomp5md.dll",
+      "version": null
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libiomp",
+      "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages\\torch\\lib\\libiompstubs5md.dll",
+      "version": null
+    }
+  ],
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\code\\tools\\check_export_v3.py",
+    "--checkpoint",
+    "C:\\Users\\Liuye\\AppData\\Local\\Temp\\mp2-v3-synthetic-assets-j0m2b08z\\tabm",
+    "--input-source",
+    "synthetic",
+    "--output",
+    "results\\research_v3\\inference-synthetic-audit\\tabm-check_export_v3.json"
+  ]
+}

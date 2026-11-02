@@ -1,0 +1,20 @@
+test_asset_addition_or_preexisting_final_fit_rejected (test_prepare_finalists_v3.FinalistPreparationTests.test_asset_addition_or_preexisting_final_fit_rejected) ... ok
+test_changed_source_or_cv_scores_rejected (test_prepare_finalists_v3.FinalistPreparationTests.test_changed_source_or_cv_scores_rejected) ... ok
+test_changing_existing_selection_or_lock_never_overwrites (test_prepare_finalists_v3.FinalistPreparationTests.test_changing_existing_selection_or_lock_never_overwrites) ... ok
+test_exactly_two_explicit_candidates_lock_with_exact_union (test_prepare_finalists_v3.FinalistPreparationTests.test_exactly_two_explicit_candidates_lock_with_exact_union) ... ok
+test_extra_unrecorded_asset_is_rejected_before_lock_publication (test_prepare_finalists_v3.FinalistPreparationTests.test_extra_unrecorded_asset_is_rejected_before_lock_publication) ... ok
+test_final_fit_required_and_state_epoch_recipe_checked (test_prepare_finalists_v3.FinalistPreparationTests.test_final_fit_required_and_state_epoch_recipe_checked) ... ok
+test_historical_fallback_copy_uses_original_selector_and_oof (test_prepare_finalists_v3.FinalistPreparationTests.test_historical_fallback_copy_uses_original_selector_and_oof) ... ok
+test_missing_fold_rejected_before_selection_write (test_prepare_finalists_v3.FinalistPreparationTests.test_missing_fold_rejected_before_selection_write) ... ok
+test_new_selection_copy_is_exact_and_idempotent (test_prepare_finalists_v3.FinalistPreparationTests.test_new_selection_copy_is_exact_and_idempotent) ... ok
+test_partial_copy_and_inconsistent_saved_selection_are_preserved (test_prepare_finalists_v3.FinalistPreparationTests.test_partial_copy_and_inconsistent_saved_selection_are_preserved) ... ok
+test_scope_closure_and_holdout_guards (test_prepare_finalists_v3.FinalistPreparationTests.test_scope_closure_and_holdout_guards) ... ok
+test_select_then_actual_strict_lock_without_holdout_files (test_prepare_finalists_v3.FinalistPreparationTests.test_select_then_actual_strict_lock_without_holdout_files) ... ok
+test_stale_completed_scheduler_receipt_is_rejected (test_prepare_finalists_v3.FinalistPreparationTests.test_stale_completed_scheduler_receipt_is_rejected) ... ok
+test_strict_prevalidation_failure_does_not_publish_lock_or_patch_validator (test_prepare_finalists_v3.FinalistPreparationTests.test_strict_prevalidation_failure_does_not_publish_lock_or_patch_validator) ... ok
+test_wrong_seed_and_more_than_two_and_duplicate_ids_rejected (test_prepare_finalists_v3.FinalistPreparationTests.test_wrong_seed_and_more_than_two_and_duplicate_ids_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 16.336s
+
+OK

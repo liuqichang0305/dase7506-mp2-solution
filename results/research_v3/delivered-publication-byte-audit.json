@@ -1,0 +1,14 @@
+{
+  "schema": "mp2-v3-publication-byte-audit-v1",
+  "verified_at_utc": "2026-11-02T08:35:36.923471+00:00",
+  "status": "passed",
+  "bound_files": 381,
+  "report_input_sha256": "3e2762c26f11a3216530ccfbfdfe86b77e93dc3cc9374af81a30e0ded5d39bdb",
+  "all_staged_bytes_match_bound_hashes": true,
+  "serialization_repair": {
+    "file": "submission/SUBMISSION_VERIFICATION.json",
+    "before_git_sha256": "05186a2e0f5463f4a8eb3576fea5c62e190839022a55652f7facfb0a968a4cd4",
+    "unchanged_working_file_sha256": "53d4960a1747de3463513e3b8770921fcbcf40a825b70fdb1c7c2f0dde069279",
+    "operation": "Set -text attribute and git add --renormalize to preserve original raw log bytes in new commits. No working-file, original commit, original score, source or asset was edited."
+  }
+}

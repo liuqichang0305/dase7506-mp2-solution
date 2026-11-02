@@ -1,0 +1,18 @@
+test_attempts_are_unique_and_failed_retry_needs_reason_same_assets (test_reproduce_selected_v3.ReproductionTests.test_attempts_are_unique_and_failed_retry_needs_reason_same_assets) ... ok
+test_commands_fixed_direct_base_new_packages_and_validation (test_reproduce_selected_v3.ReproductionTests.test_commands_fixed_direct_base_new_packages_and_validation) ... ok
+test_complete_coordinator_with_fake_setup_and_fake_official_outputs (test_reproduce_selected_v3.ReproductionTests.test_complete_coordinator_with_fake_setup_and_fake_official_outputs) ... ok
+test_exact_fresh_environment_package_and_prefix_contract (test_reproduce_selected_v3.ReproductionTests.test_exact_fresh_environment_package_and_prefix_contract) ... ok
+test_output_comparison_covers_all_798_choices_and_official_counts (test_reproduce_selected_v3.ReproductionTests.test_output_comparison_covers_all_798_choices_and_official_counts) ... ok
+test_preflight_rejects_open_search_existing_freeze_and_invalid_selection (test_reproduce_selected_v3.ReproductionTests.test_preflight_rejects_open_search_existing_freeze_and_invalid_selection) ... ok
+test_real_guard_allows_prediction_inputs_and_scoring_gold (test_reproduce_selected_v3.ReproductionTests.test_real_guard_allows_prediction_inputs_and_scoring_gold) ... ok
+test_real_guard_prediction_references_history_write_and_spawn_denied (test_reproduce_selected_v3.ReproductionTests.test_real_guard_prediction_references_history_write_and_spawn_denied) ... ok
+test_setup_environment_removes_inherited_credentials_paths_and_config (test_reproduce_selected_v3.ReproductionTests.test_setup_environment_removes_inherited_credentials_paths_and_config) ... ok
+test_setup_failure_preserves_attempt_marker_and_failure_without_retry (test_reproduce_selected_v3.ReproductionTests.test_setup_failure_preserves_attempt_marker_and_failure_without_retry) ... ok
+test_unexpected_train_test_or_extra_data_rejected_before_copy (test_reproduce_selected_v3.ReproductionTests.test_unexpected_train_test_or_extra_data_rejected_before_copy) ... ok
+test_validation_only_copy_hashes_and_no_overwrite (test_reproduce_selected_v3.ReproductionTests.test_validation_only_copy_hashes_and_no_overwrite) ... ok
+test_wrong_original_manifest_hash_or_count_rejected (test_reproduce_selected_v3.ReproductionTests.test_wrong_original_manifest_hash_or_count_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.626s
+
+OK

@@ -1,0 +1,93 @@
+{
+  "schema": "mp2-v3-resumption-rules-audit-v1",
+  "checked_at_utc": "2026-11-01 12:03:16 UTC",
+  "acquisition": "GitHub connector read-only",
+  "branches": {
+    "mp2": {
+      "repository": "https://github.com/xudongwu-0/DASE7506-MP2/tree/main",
+      "sha": "bb801f4f2e7629d270df765ab12c333b2dc616bb",
+      "commit_date": "2026-10-12T10:01:22Z",
+      "message": "Make Guide the detailed student-facing MP2 handout"
+    },
+    "site": {
+      "repository": "https://github.com/xudongwu-0/xudongwu-0.github.io/tree/main",
+      "sha": "65c16a3eef424e30b254ff58804dffe0fbda8793",
+      "commit_date": "2026-11-01T04:50:44Z",
+      "message": "Prefer the newest MP2 snapshot when GitHub raw caches lag behind"
+    }
+  },
+  "sources": {
+    "guide": {
+      "repository": "xudongwu-0/DASE7506-MP2",
+      "commit": "bb801f4f2e7629d270df765ab12c333b2dc616bb",
+      "path": "guide/GUIDE.md",
+      "blob_sha": "6e3df3ee0542a87c098076f1664e9bc4b394c3b1",
+      "url": "https://github.com/xudongwu-0/DASE7506-MP2/blob/bb801f4f2e7629d270df765ab12c333b2dc616bb/guide/GUIDE.md",
+      "snapshot": "guide.md"
+    },
+    "code_readme": {
+      "repository": "xudongwu-0/DASE7506-MP2",
+      "commit": "bb801f4f2e7629d270df765ab12c333b2dc616bb",
+      "path": "code/README.md",
+      "blob_sha": "6219d660006faecd648d4f318b69f7ce9331d6ca",
+      "url": "https://github.com/xudongwu-0/DASE7506-MP2/blob/bb801f4f2e7629d270df765ab12c333b2dc616bb/code/README.md",
+      "snapshot": "code_readme.md"
+    },
+    "site_workflow": {
+      "repository": "xudongwu-0/xudongwu-0.github.io",
+      "commit": "65c16a3eef424e30b254ff58804dffe0fbda8793",
+      "path": "scripts/dase7506/README.md",
+      "blob_sha": "2f8e6ebb506aeb151df746048defd7e92c507166",
+      "url": "https://github.com/xudongwu-0/xudongwu-0.github.io/blob/65c16a3eef424e30b254ff58804dffe0fbda8793/scripts/dase7506/README.md",
+      "snapshot": "site_workflow.md"
+    },
+    "projects": {
+      "repository": "xudongwu-0/xudongwu-0.github.io",
+      "commit": "65c16a3eef424e30b254ff58804dffe0fbda8793",
+      "path": "courses/dase7506/projects.mjs",
+      "blob_sha": "bc0ea31136171598c902c7ad30c84636b162ead2",
+      "url": "https://github.com/xudongwu-0/xudongwu-0.github.io/blob/65c16a3eef424e30b254ff58804dffe0fbda8793/courses/dase7506/projects.mjs",
+      "snapshot": "projects.mjs"
+    },
+    "arena": {
+      "repository": "xudongwu-0/xudongwu-0.github.io",
+      "commit": "65c16a3eef424e30b254ff58804dffe0fbda8793",
+      "path": "courses/dase7506/arena.mjs",
+      "blob_sha": "7a090e6311349e00dfa253e697e0ca0f70c1aa53",
+      "url": "https://github.com/xudongwu-0/xudongwu-0.github.io/blob/65c16a3eef424e30b254ff58804dffe0fbda8793/courses/dase7506/arena.mjs",
+      "snapshot": "arena.mjs"
+    }
+  },
+  "publication_metadata": {
+    "blob_sha": "be5449e360a6146a545f1c91fdca3baf4df749ac",
+    "url": "https://github.com/xudongwu-0/xudongwu-0.github.io/blob/65c16a3eef424e30b254ff58804dffe0fbda8793/courses/dase7506/data/publication.json",
+    "snapshot": "publication_metadata_only.json",
+    "mp2": {
+      "published_at": "2026-11-01T04:42:52.971Z",
+      "review_ends_at": "2026-11-09T00:00:00+08:00"
+    }
+  },
+  "notice_searches": {
+    "official_code": {
+      "query": "repo:xudongwu-0/DASE7506-MP2 is:issue",
+      "issues": []
+    },
+    "teacher_recent": {
+      "query": "repo:xudongwu-0/xudongwu-0.github.io is:issue author:xudongwu-0 created:>=2026-10-29 -\"[DASE7506] MP2\"",
+      "non_score_notices": [],
+      "excluded_submission_or_score_records": 1
+    }
+  },
+  "scope_incident": {
+    "description": "An initial publication extraction accidentally emitted project entries, and a broad deadline issue search returned public submission records. This exposed public aggregate scores. No rank, threshold, comparison or model-selection conclusion was calculated from them; no prediction, reference or model artifact was opened. Subsequent extraction uses only whitelisted publication dates. Raw entries and score-bearing search responses are not saved in this audit or sent to research agents.",
+    "restricted_search_notices_authoritative": false
+  },
+  "findings": {
+    "new_scores": "Closed at 2026-10-31T16:00:00Z; late new scores and changed scores have no ordinary acceptance route.",
+    "current_phase_expected": "review",
+    "late_exception": "No explicit ordinary late-new-score exception found in checked official sources. Instructor-only correction/publication mechanisms are not student authorization.",
+    "supplements": "Existing issue artifacts only; preserve the deadline method/checkpoint. During current review the page hides score/link form; instructor may supplement published links without changing the frozen score or review window.",
+    "offline_work": "No course rule found forbidding offline preservation, development validation, report or research PR. This is an inference from the scope of the deadline rule, not deadline acceptance or permission to reset the user research budget.",
+    "peer_review": "Actually open; do not mark performed unless checkpoint reproduction/report is actually completed."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "checked_at_utc": "2026-10-30T03:13:37.546029+00:00",
+  "scope": "Independent source review, generated saved-output fixtures/mocked diagnostics and fake HTTP with real synthetic PDF parsing only. No real holdout/network/submission.",
+  "base_review": {
+    "path": "results/research_v3/audit_final_delivery_software_review.json",
+    "sha256": "25720e9e6d272a5d4c64a7f137d9c417f3dee3c3be894614cc1eede62d495851"
+  },
+  "source_sha256": {
+    "code/tools/freeze_v3.py": "d162e6baa95a24c8968f1cc9f84a2ed8566ac4657f492ec534f9a2ec185bd1ea",
+    "code/tools/prepare_selected_confidence_v3.py": "a07702f2b9afb964f5f5fc831a3cbe23382dc85aa754bc61e443de1531cb8696",
+    "submission/v3/verify_publication.py": "d2cb34ac2083beb35e623a54b8bfda4c848d9a121519a1061d9149e45e75af66"
+  },
+  "source_closure_change": "Compared full text against the reviewed a97c7f69 freeze snapshot: exactly one source-path addition, code/tools/prepare_selected_confidence_v3.py; no gate semantics changed.",
+  "evidence": {
+    "results/research_v3/independent-publication-review/review.json": "9bad7ad18212989cdafd4fa05fe986080409696b5eb6c399279dec8125eaefdf",
+    "results/research_v3/independent-selected-confidence-review/review.json": "cf73120f6305b199b8ebaff518ccf7422594b67949562e782de070c471c3beb1"
+  },
+  "tests": {
+    "publication": 12,
+    "selected_confidence": 8
+  },
+  "status": "No remaining blocking software issue in these reviewed revisions. Actual final selected-model evidence, final freeze and public delivery remain pending."
+}

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "git",
+    "-c",
+    "credential.helper=",
+    "-c",
+    "core.askPass=",
+    "-c",
+    "http.extraHeader=",
+    "-c",
+    "protocol.file.allow=never",
+    "-c",
+    "submodule.recurse=false",
+    "clone",
+    "--no-checkout",
+    "--no-local",
+    "https://github.com/liuqichang0305/dase7506-mp2-solution.git",
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507"
+  ],
+  "cwd": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution",
+  "started_at_utc": "2026-11-02T07:49:45.603115+00:00"
+}

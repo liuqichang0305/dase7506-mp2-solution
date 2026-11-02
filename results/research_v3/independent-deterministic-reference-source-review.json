@@ -1,0 +1,18 @@
+{
+  "schema": "mp2-v3-independent-source-review-v1",
+  "status": "passed",
+  "reviewed_at_utc": "2026-10-30T04:23:11.541819+00:00",
+  "source": "code/tools/deterministic_train_references_v3.py",
+  "source_sha256": "b90cadba041c9adf8af9214c2aeea36cf37e14e0fb361a7044df91753156e50b",
+  "test_source": "code/tests/test_deterministic_train_references_v3.py",
+  "scope": "Source-only independent review; no actual data or tests rerun.",
+  "findings": [
+    "Fixed index0 remains unconditional including None. Majority excludes None, uses original earliest candidate for ties and returns0 for all None.",
+    "Existing load_method verifies complete saved OOF/source/fold provenance; explicit train-ID SHA and parsed-group equality bind train candidate order.",
+    "Exclusive immutable output files and source/input/output receipts preserve completion or failure.",
+    "Hash checks refer to trusted immutable inputs and report-generation stability; they do not claim protection against adversarial concurrent input replacement."
+  ],
+  "validation_test_rank_read": false,
+  "actual_data_recomputed": false,
+  "blocking_findings": []
+}

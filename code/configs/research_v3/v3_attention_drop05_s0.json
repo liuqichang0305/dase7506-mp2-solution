@@ -1,0 +1,25 @@
+{
+  "family": "attention",
+  "width": 128,
+  "hidden": 64,
+  "dropout": 0.5,
+  "objective": "group",
+  "alpha": 0,
+  "reduction": "full",
+  "optimizer": "adamw",
+  "lr": 0.0003,
+  "weight_decay": 0.01,
+  "batch_size": 128,
+  "max_epochs": 60,
+  "patience": 10,
+  "seed": 3036900957,
+  "preprocess": "standard",
+  "decoder": {
+    "mode": "group_lse",
+    "alpha": 0,
+    "tau": 1,
+    "mask": true
+  },
+  "experiment_id": "v3_attention_drop05_s0",
+  "heads": 4
+}

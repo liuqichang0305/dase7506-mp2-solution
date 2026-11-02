@@ -1,0 +1,53 @@
+{
+  "schema": "mp2-v3-confidence-events-v1",
+  "split": "validation",
+  "selector": {
+    "kind": "single_model",
+    "experiment_id": "v3_attention_ema_s0",
+    "family": "attention",
+    "decoder": {
+      "mode": "group_lse",
+      "alpha": 0,
+      "tau": 1,
+      "mask": true
+    },
+    "member_probability_average": false
+  },
+  "metrics": {
+    "correct": 736,
+    "n": 798,
+    "accuracy": 92.23057644110276,
+    "hard_correct": 293,
+    "hard_n": 355,
+    "hard_accuracy": 82.53521126760563,
+    "single_positive_correct": 68,
+    "single_positive_n": 117,
+    "single_positive_accuracy": 58.119658119658126
+  },
+  "selection_lock": {
+    "path": "results/research_v3/FINALISTS_LOCK.json",
+    "sha256": "4dfc67595cabf6e9f7dc0d0ef5460721e522e96c08dbd01ff0f87467e36ff9cf"
+  },
+  "source_sha256": {
+    "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "code/mp2/__init__.py": "853575bfe208eeb5d5b8e0507c8c76d7841986e53225f8c2d8c95d7788d7e334",
+    "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+    "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+    "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+    "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+    "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307",
+    "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+    "code/predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+    "code/score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+    "code/solution_v3.py": "141e9616628503b6f19865799e1c393f6e7bed279dbb6115aeb5240f4f5da113",
+    "code/tools/audit_assets.py": "7f099f89d9cf8b97e569e8d13c07bc1f942855c8131cb4b2f350836c7a2a9b33",
+    "code/tools/confirm_validation_v3.py": "a3928fdd9b58bfd5d3036f51510a866516d5aab8a8289892212769aecf558aff"
+  },
+  "prediction_sha256": "4b64321d63f09497e52231797a73cd10e5b5bd592dee291f1815cb52eb1e7627",
+  "predictions_npz": {
+    "path": "validation-events.npz",
+    "sha256": "a22f114936a9444c5fc06aec131eac06747587b271c76545de5e5bb3f049ba79"
+  },
+  "event": "The locked deployed selector chose a candidate with the correct final numeric answer",
+  "usage": "Post-lock confirmation only; validation must not fit calibration, weights, preprocessing or fusion."
+}

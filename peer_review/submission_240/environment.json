@@ -1,0 +1,36 @@
+{
+  "python_executable": "C:\\Program Files\\Python312\\python.exe",
+  "python_prefix": "C:\\Program Files\\Python312",
+  "python_version": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.5.3",
+    "pip": "23.2.1",
+    "psutil": "7.2.2",
+    "threadpoolctl": "3.7.0"
+  },
+  "numpy_file": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\venv\\Lib\\site-packages\\numpy\\__init__.py",
+  "numpy_version": "2.5.3",
+  "thread_pools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+      "version": "0.3.34.106.0",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ],
+  "schema": "mp2-peer-environment-v1",
+  "created_at_utc": "2026-11-02T07:26:13.141536+00:00",
+  "venv_directory": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\venv",
+  "pythonpath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\venv\\Lib\\site-packages",
+  "command": [
+    "C:\\Program Files\\Python312\\python.exe",
+    "-S",
+    "-c",
+    "import sys,json,importlib.metadata,numpy,threadpoolctl,psutil;print(json.dumps({'python_executable':sys.executable,'python_prefix':sys.prefix,'python_version':sys.version,'packages':{d.metadata['Name'].lower():d.version for d in importlib.metadata.distributions()},'numpy_file':numpy.__file__,'numpy_version':numpy.__version__,'thread_pools':threadpoolctl.threadpool_info()}))"
+  ],
+  "reconstruction": "See environment_repair.json; direct base -S imports only the explicit fresh venv site-packages."
+}

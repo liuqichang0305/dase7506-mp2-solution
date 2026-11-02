@@ -1,0 +1,16 @@
+{
+  "schema": "mp2-peer-review-approval-v1",
+  "approved": true,
+  "reviewer": "root",
+  "approved_at_utc": "2026-11-02T08:00:50.240127+00:00",
+  "generated_form_sha256": "be59525c22158680ef2f7af9ec07cb8d5c6c6d6a547cb86e7b82ac237a616c60",
+  "report_input_sha256": "5af56841b1d38cf6f89fa051cf5b23debc6a613ad6990e197ef005c8af07bea3",
+  "complete_sha256": "8c401c3cfa4d462748451a9e3a67ebb21dfad248ad5879ad5e8a439d715c2e7f",
+  "target_sha256": "70bb33df04b87ca723cb61329ddb48bfba0eecb3d9734a542f8cb2952992f9b4",
+  "tool_sources": {
+    "peer_review/tools/peer_report.py": "66fe74eb35380e1b699f73d42f2967eb28a8c29d03016dcaa562b9999b3afc02",
+    "peer_review/tools/prepare_official_peer_form.mjs": "88460852fbd0809782fb134a73ae8447687e375cd316e4199b929c4558b75a11"
+  },
+  "review_scope": "Coordinator inspected exact generated public text, official payload, actual completion, preserved failure/recovery and independent final evidence review. Arithmetic, immutable peer checkpoint, environment workaround, missing combined monotonic timing, local resource limitation and no misconduct inference are disclosed. This is internal AI review, not instructor or human-student certification.",
+  "independent_final_review_sha256": "fd50d23278450b44046c8a0df887cbdb43a3b7e38e8998953f1f2eabc9e92943"
+}

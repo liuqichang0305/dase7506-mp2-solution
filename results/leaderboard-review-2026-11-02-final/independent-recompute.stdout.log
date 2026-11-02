@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "scopes_verified": 4,
+  "no_network": true,
+  "student_rank": {
+    "count": 111,
+    "strictly_higher": 110,
+    "tied_including_user": 1,
+    "competition_rank": 111,
+    "tied_rank_interval": [
+      111,
+      111
+    ],
+    "floor_35_percent": 38,
+    "in_top_35_percent": false
+  },
+  "identity_limited_alternative": {
+    "count": 110,
+    "strictly_higher": 109,
+    "tied_including_user": 1,
+    "competition_rank": 110,
+    "tied_rank_interval": [
+      110,
+      110
+    ],
+    "floor_35_percent": 38,
+    "in_top_35_percent": false
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "checked_at_utc": "2026-10-30T02:49:19.448317+00:00",
+  "scope": "Generated temporary files and fake process outputs only; no official validation/test, credentials, HTTP, submission or network packet",
+  "source_sha256_before": {
+    "code/tools/freeze_v3.py": "a97c7f69feda83f3d84bf6cab03ce41413a430af68fe917699f110647757ec24",
+    "submission/v3/evaluate_final.py": "fc94ad71a8be7805c97f3c2887869d2f89300a4966dc4c72e935434b84186655",
+    "submission/v3/submit_final.py": "58ef1084a8afc6f70359649c8cc84bac75d1086be34d21d5d9e815e1c2fbeec1"
+  },
+  "source_sha256_after": {
+    "code/tools/freeze_v3.py": "a97c7f69feda83f3d84bf6cab03ce41413a430af68fe917699f110647757ec24",
+    "submission/v3/evaluate_final.py": "fc94ad71a8be7805c97f3c2887869d2f89300a4966dc4c72e935434b84186655",
+    "submission/v3/submit_final.py": "58ef1084a8afc6f70359649c8cc84bac75d1086be34d21d5d9e815e1c2fbeec1"
+  },
+  "cases": [
+    {
+      "case": "wrong_selected_oof_directory",
+      "unexpectedly_accepted": false,
+      "exception": "ValueError",
+      "message": "Selected OOF directory differs from the actual fitted component"
+    },
+    {
+      "case": "arbitrary_text_only_review_and_reproduction",
+      "unexpectedly_accepted": false,
+      "exception": "ValueError",
+      "message": "Required typed evidence reference is absent/unbound: contract_result"
+    },
+    {
+      "case": "completion_output_inventory_subset",
+      "unexpectedly_accepted": false,
+      "exception": "ValueError",
+      "message": "Completed test evidence must contain the entire fixed output inventory"
+    },
+    {
+      "case": "completion_wrong_method_split_count",
+      "unexpectedly_accepted": false,
+      "exception": "ValueError",
+      "message": "Completed test identity/split/count differs from the fixed contract"
+    },
+    {
+      "case": "prediction_child_can_read_generated_gold",
+      "unexpectedly_accepted": false,
+      "exception": "PermissionError",
+      "message": "Traceback (most recent call last):\n  File \"<string>\", line 24, in <module>\n  File \"C:\\Program Files\\Python312\\Lib\\subprocess.py\", line 548, in run\n    with Popen(*popenargs, **kwargs) as process:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\subprocess.py\", line 1026, in __init__\n    self._execute_child(args, executable, preexec_fn, close_fds,\n  File \"C:\\Program Files\\Python312\\Lib\\subprocess.py\", line 1534, in _execute_child\n    sys.audit(\"subprocess.Popen\", executable, args, cwd, env)\n  File \"<string>\", line 6, in _phase_guard\nPermissionError: Official evaluation is offline and cannot spawn processes\n"
+    },
+    {
+      "case": "unblocked_socket_sendto_audit_event",
+      "unexpectedly_accepted": false,
+      "exception": "PermissionError",
+      "message": "Traceback (most recent call last):\n  File \"<string>\", line 24, in <module>\n  File \"<string>\", line 6, in _phase_guard\nPermissionError: Official evaluation is offline and cannot spawn processes\n"
+    },
+    {
+      "case": "submit_accepts_score_only_completion",
+      "unexpectedly_accepted": false,
+      "exception": "ValueError",
+      "message": "Full fixed test output inventory is required, not a subset"
+    }
+  ]
+}

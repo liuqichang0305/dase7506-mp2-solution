@@ -1,0 +1,85 @@
+{
+  "round": "r09_attention_regularization_capacity",
+  "hypothesis": "Attention remains the strongest family. Historical recipe changes were confounded, and V3 inner curves show training loss continuing to fall after the inner stopping optimum. Resolve regularization versus capacity with three separate one-setting changes from the V3 AdamW control: weight decay0.1, dropout0.5, or width256. Do not infer that any historical gain was caused by weight decay alone.",
+  "evidence": [
+    "results/research_v3/v3_attention_adamw_s0/summary.json",
+    "results/research_v3/v3_attention_adamw_s0/fold0-inner-epochs.json"
+  ],
+  "configs": [
+    {
+      "family": "attention",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.0003,
+      "weight_decay": 0.1,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_attention_wd01_s0",
+      "heads": 4
+    },
+    {
+      "family": "attention",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.5,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_attention_drop05_s0",
+      "heads": 4
+    },
+    {
+      "family": "attention",
+      "width": 256,
+      "hidden": 64,
+      "dropout": 0.3,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_attention_width256_s0",
+      "heads": 4
+    }
+  ]
+}

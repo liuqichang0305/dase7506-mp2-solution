@@ -1,0 +1,25 @@
+{
+  "architecture": {
+    "activation": "relu",
+    "depth": 3,
+    "dropout": 0.1,
+    "family": "tabm",
+    "input_features": "relation",
+    "k": 8,
+    "start_scaling_init": "random-signs",
+    "width": 128
+  },
+  "decoder": {
+    "alpha": 0,
+    "mask": true,
+    "mode": "group_lse",
+    "tau": 1
+  },
+  "features": "relation",
+  "output": "member_candidate_scores",
+  "preprocess": {
+    "mode": "standard",
+    "smooth_clip_bound": 3.0
+  },
+  "schema": "mp2-research-v3"
+}

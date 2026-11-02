@@ -1,0 +1,38 @@
+{
+  "scope": "Source review and temporary generated train/validation metadata, tiny numeric bundles and opaque state fixtures only. Actual unchanged validators exercised; no real search closure, finalist selection, lock, deployment copy, holdout bank, training, scoring or network operation.",
+  "started_at_utc": "2026-10-30T04:22:37.154030+00:00",
+  "completed_at_utc": "2026-10-30T04:22:53.936944+00:00",
+  "source_sha256_before": {
+    "scripts/prepare_finalists_v3.py": "618af933fce8c07a8f97dbc1682122b08a5790d62c92f09b7dd496b46f4e107c",
+    "code/tests/test_prepare_finalists_v3.py": "747388daca0ef6164293a6f9e896667dc431f427e95c12efe977ed53ad07c4c9",
+    "code/tools/confirm_validation_v3.py": "a3928fdd9b58bfd5d3036f51510a866516d5aab8a8289892212769aecf558aff",
+    "code/tools/freeze_v3.py": "d162e6baa95a24c8968f1cc9f84a2ed8566ac4657f492ec534f9a2ec185bd1ea",
+    "docs/research_v3/FINALIST_PREPARATION.md": "852e9dfe4f163cf4c552bfa12a2e6077d7daf9e7a66d762c9604bcf011a36f26"
+  },
+  "source_sha256_after": {
+    "scripts/prepare_finalists_v3.py": "618af933fce8c07a8f97dbc1682122b08a5790d62c92f09b7dd496b46f4e107c",
+    "code/tests/test_prepare_finalists_v3.py": "747388daca0ef6164293a6f9e896667dc431f427e95c12efe977ed53ad07c4c9",
+    "code/tools/confirm_validation_v3.py": "a3928fdd9b58bfd5d3036f51510a866516d5aab8a8289892212769aecf558aff",
+    "code/tools/freeze_v3.py": "d162e6baa95a24c8968f1cc9f84a2ed8566ac4657f492ec534f9a2ec185bd1ea",
+    "docs/research_v3/FINALIST_PREPARATION.md": "852e9dfe4f163cf4c552bfa12a2e6077d7daf9e7a66d762c9604bcf011a36f26"
+  },
+  "sources_unchanged": true,
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_prepare_finalists_v3.py",
+    "-v"
+  ],
+  "process_wall_seconds": 16.780715200002305,
+  "exit_code": 0,
+  "log_sha256": {
+    "stderr.log": "0b118773e132922c4d6b62c93a84978dbb44e1d7b4996c8d14d7438697de56a6",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "passed": true
+}

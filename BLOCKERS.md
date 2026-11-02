@@ -1,5 +1,52 @@
 # Blockers and resolved incidents
 
+- Current2026-11-02: the actual course deadline/review phase blocks a new score
+  update and automatic post-release artifact replacement. This project closes
+  V3 without a new formal test. No additional permission email is invented. Preserve historical
+  Issue294 and its exact submitted method/assets. Research-only archive work
+  and the now-open peer review continue independently.
+- The four extra-seed configurations did not complete before budget guards
+  pruned them. No retry or new search is permitted after SEARCH_CLOSED.
+- All35 base configurations and all four fixed fusions are complete; the
+  fusions were rejected. The two locked V3 validation candidates scored735/798
+  (hard292/355) and736/798 (hard293/355), below historical V2 Deep Sets740/798
+  (hard297/355). The historical byte-identical fallback is selected. Lack of
+  improvement is an actual research outcome, not a reason to reopen selection.
+- Resolved: independent final review, clean public-checkout reproduction and
+  research-only freeze have actual passing records in submission/v3.
+  Reproduction at source eee478b4959e555b6ec8c902b6db8b69f31df508 matched
+  all 798 choices and 740/798 in 2.2803907999768853 seconds on local hardware.
+  FREEZE.json records research_only=true/formal_test_allowed=false.
+- Resolved: separate peer submission #240 reproduction and report publication.
+  Peer Review Report https://github.com/xudongwu-0/xudongwu-0.github.io/issues/383
+  was created and read back; REPORT_SUCCESS.json is retained under
+  peer_review/submission_240/report_form. The original cache-probe postcheck
+  failure and its independently reviewed evidence-only recovery are preserved;
+  prediction/scoring were not repeated.
+- Resolved: 10-page closeout report, Chinese guide and rendered-page QA.
+  Delivered PDF: reports/research_v3/research_closeout_delivered/research_closeout_v3.pdf.
+  The original coordinator's absolute training-state dependency is documented;
+  portable official validation commands passed without those local states.
+  Neither the frozen implementation nor its guards were weakened.
+- Remaining delivery action: PR #3 review/merge and its actual receipt.
+
+## Historical pre-closure checkpoints and incidents
+
+The future actions and release-waiting statements below describe earlier
+checkpoints. They are preserved for traceability and are superseded by the
+current closure, validation and actual peer-release state above.
+
+- V3 current: no missing student identity, account authorization, dependencies or
+  data blocks the work. All35 base configurations completed common three-fold
+  training. The current remaining research is one separately reviewed fixed
+  fusion and the four already prepared fixed-seed repeats; no new validation or
+  test has been opened. These are unfinished tasks, not permission blockers.
+- V3 final test/submission requires the specified development, review, fresh
+  reproduction and freeze prerequisites; lack of a separate teacher email is not
+  an additional gate under the new explicit user instruction.
+- V3 peer review is still pending actual instructor release; preparation can
+  proceed now. Historical incidents below are retained for traceability.
+
 - Resolved: initial sandboxed git clone proxy failure. Authorized escalated git clone succeeded.
 - Resolved: WMI/CIM query denied; registry/platform/psutil recorded CPU, OS and physical RAM without changing system permissions.
 - Browser UI blocker: web text tool returned Internal Error; Computer Use ended because it could not confidently determine the browser URL. No further UI input issued. Official current website source and public key were downloaded with exact commit/hashes. A local adapter will execute the unchanged official form handler if verified; it will not claim a browser click occurred.

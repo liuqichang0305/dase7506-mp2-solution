@@ -1,0 +1,1 @@
+{"status": "complete", "methods": ["v3:v3_tabm_embedding_stats_ema_s0", "v3:v3_attention_ema_s0"], "slices": 37, "fusion": "complete"}

@@ -1,0 +1,107 @@
+CURRENT POST-DEADLINE RESUME -- 2026-11-02
+
+Research is CLOSED. Original absolute research end2026-10-30T16:22:42Z and
+formal score deadline2026-10-31T16:00:00Z have passed. Read actual
+results/research_v3/SEARCH_CLOSED.json and closure_evidence/SNAPSHOTS.json,
+submission/v3/FORMAL_SUBMISSION_BLOCKED.json, PROJECT_STATE.md and
+docs/research_v3/RULES_RESUMPTION_20261101.md before any action.
+
+Do not run the scheduler, register another round, retry pruned experiments,
+reset any clock, run a new V3 formal test, post a new V3 score Issue or replace
+the old submitted artifacts. Preserve old Issue294 and historical348/467.
+Current completed research:35 base configurations/105 outer folds,19 historical
+V2 configurations, four fixed fusions all rejected. Four extra-seed runs were
+pruned; their partial folds are not complete seed results. Retain monitor gaps
+and observed elapsed times; do not claim uninterrupted24h CPU execution.
+
+Locked final fitting and validation are ALREADY COMPLETE:
+  v3_tabm_embedding_stats_ema_s0:735/798, hard292/355
+  v3_attention_ema_s0:736/798, hard293/355
+Both failed the fixed replacement rule. SELECTED_MODEL.json selects the
+byte-identical historical deepsets_regularized_s0 fallback740/798,hard297/355,
+now copied to artifacts/research_v3/final_selected. No new validation gain.
+selected-export-validation.json and selected-contract-validation.json passed
+the full798-question input-only checks. Do not repeat candidate selection.
+
+Confidence and paired validation diagnostics are now recorded without changing
+choices; calibration worsened validation ECE. Independent final review, fresh
+public-checkout validation reproduction and the research-only FREEZE are NOW
+COMPLETE. Check submission/v3/REVIEW_RESULT.json, REPRODUCTION_RESULT.json and
+FREEZE.json. Exact source eee478b4959e555b6ec8c902b6db8b69f31df508 reproduced
+740/798, all798 choices identical, in2.2803907999768853s for fresh prediction
+plus independent scoring on local hardware. FREEZE records research_only=true
+and formal_test_allowed=false. No new own-model test has been run.
+Do not rerun scripts/reproduce_selected_v3.py in the now-frozen checkout or
+remove any freeze/completion marker. REPRODUCTION.md documents the actual
+final-selected-01 run and independent exact pre-freeze source checkout procedure.
+RESEARCH_CLOSEOUT, the10-page PDF/Chinese guide and rendered-page QA are complete.
+Delivered PDF: reports/research_v3/research_closeout_delivered/research_closeout_v3.pdf.
+REPRODUCTION.md uses portable official commands; the completed coordinator is
+not a clean-clone entry point because it verifies original training states.
+The portable commands have passed without those states, with all798 choices equal.
+Remaining action: own archive PR#3 review/merge and final delivery receipt.
+See docs/research_v3/RESEARCH_CLOSEOUT_REPORT.md for the separate report entry
+points. Old formal-report tools still require real TEST_COMPLETE and must not
+be weakened or fed a fabricated test record.
+
+Actual instructor-released MP2 peer review is separate: publication began
+2026-11-01T04:42:52.971Z; window ends2026-11-09T00:00:00+08:00. The selected
+peer workflow is COMPLETE: submission#240 was reproduced from its immutable
+checkpoint and Peer Review Report#383 was created and publicly read back:
+https://github.com/xudongwu-0/xudongwu-0.github.io/issues/383
+Receipt: peer_review/submission_240/report_form/REPORT_SUCCESS.json.
+Keep the original failed postcheck and independent recovery receipts; no peer
+prediction/scoring was repeated. Do not rerun evaluation or create another POST.
+Peer outcomes cannot influence closed model research or an own-model score update.
+The final post-freeze ranking check is already saved at
+results/leaderboard-review-2026-11-02-final/README.md; do not re-query for research.
+
+ARCHIVED PRE-CLOSURE RESUME BELOW -- RETAINED HISTORY, DO NOT EXECUTE:
+
+V3 research resume (PowerShell, repository root; historical):
+
+  git status --short
+  .venv\Scripts\python.exe scripts\run_campaign_v3.py status
+  .venv\Scripts\python.exe scripts\run_campaign_v3.py run
+
+The scheduler reattaches only to the recorded PID with matching creation time
+and command. It never resets the 2026-10-29T16:22:42Z campaign startup clock.
+Only pending/interrupted work resumes; successful full-CV results are preserved.
+Each failed/pruned experiment needs a concrete documented repair and at most
+two repair retries. Never retry a successful experiment for a better result.
+
+Read results/research_v3/campaign_queue.json, scheduler_heartbeat.json and
+experiment_registry.jsonl. Each attempt has its own scheduler_logs/*.log.
+Training checkpoints live under tmp/research_v3/training_states; retain them.
+Final export assets, fold scores, reports and source hashes are versioned.
+
+At the 2026-10-30T04:42Z checkpoint,35 new base recipes are complete;
+R11/R14 finished and scheduler PID44908 exited. Verify the actual current
+queue/process state instead of trusting an old heartbeat. R12 fixed fusion
+completed and was rejected (1680 hard). R15 improved-EMA fixed fusion is being
+independently reviewed/prepared; it must be actually run before the next queue.
+R13 fixed-seed stability is explicitly prepared but not registered:
+  .venv\Scripts\python.exe scripts\run_campaign_v3.py register docs/research_v3/rounds/r13_fixed_seed_stability.json
+  .venv\Scripts\python.exe scripts\run_campaign_v3.py run
+Its four runs repeat reduced TabM EMA and Attention EMA with seeds958/959.
+The R05 gain is62 hard questions over matched full-input TabM k4, concentrated
+in fold0; capacity and initialization also change. Reduced TabM EMA added19
+more hard correct (1687, matching historical pooled count), spread4/11/4 over
+the folds. Its specific equal mixture with Attention EMA has a new passing
+reciprocal-error gate. Do not confuse prepared files with execution.
+Deployment remains base seed3036900957 regardless of repeat results.
+
+Before adding a round, inspect completed TRAIN OOF only, write a registration
+JSON with round/hypothesis/configs (2--4 configurations), and execute:
+  .venv\Scripts\python.exe scripts\run_campaign_v3.py register <registration.json>
+
+Observe SEARCH_PLAN_V3.md and campaign_budget.json. No validation/test or class
+leaderboard access in research workers. If SEARCH_CLOSED.json exists, research
+cannot resume. Continue only locked finalist confirmation, audit, reproduction,
+unique final freeze/test, report and course submission according to state.
+
+Historical v1/v2 logs, freezes, assets, tests, reports and guards are immutable.
+The historical v2 separate-permission gate is superseded for this new campaign
+by the user's explicit V3 final-test/submission authorization, subject to any
+concrete current course restriction. Never use test results to reopen research.
+Peer review remains pending actual instructor release; no guessed opening date.

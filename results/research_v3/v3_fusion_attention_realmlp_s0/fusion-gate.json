@@ -1,0 +1,45 @@
+{
+  "gate": {
+    "methods": [
+      "v3:v3_attention_adamw_s0",
+      "v3:v3_realmlp_robust_all_s0"
+    ],
+    "overall": {
+      "n": 4755,
+      "member_correct": [
+        4323,
+        4252
+      ],
+      "member_unique_correct": [
+        156,
+        85
+      ],
+      "oracle_correct": 4408,
+      "all_correct": 4167,
+      "all_wrong": 347,
+      "oracle_gain_over_strongest_percentage_points": 1.7875920084121977
+    },
+    "hard": {
+      "n": 2114,
+      "member_correct": [
+        1682,
+        1611
+      ],
+      "member_unique_correct": [
+        156,
+        85
+      ],
+      "oracle_correct": 1767,
+      "all_correct": 1526,
+      "all_wrong": 347,
+      "oracle_gain_over_strongest_percentage_points": 4.02081362346263
+    },
+    "gate_passed": true,
+    "requirements": {
+      "minimum_each_unique_correct": 10,
+      "minimum_hard_oracle_gain_pp": 1.0
+    },
+    "interpretation": "Oracle is an unattainable diagnostic upper bound; no fusion prediction has been evaluated. For three methods, each must uniquely correct errors shared by both others."
+  },
+  "registration_sha256": "ced109794390b1abfe80e45bc530083872927ac3036c0b63287ab88ab1df1097"
+}

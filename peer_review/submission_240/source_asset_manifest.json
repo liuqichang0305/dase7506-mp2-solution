@@ -1,0 +1,73 @@
+{
+  "schema": "mp2-peer-source-asset-manifest-v1",
+  "created_at_utc": "2026-11-02T07:29:50.427829+00:00",
+  "peer_commit": "7e3a2792b7b4442f5e53705a64b4560a2e365de9",
+  "source_files_sha256": {
+    ".gitattributes": "99d6b72451924789bdd9853c677dc4abbc4f9a3455da903d3f06efead5a377b1",
+    "README.md": "83e3df0451749620411d84ec8ef30ffe40f5fbb0c3d706de9fb5cdb79aa046b4",
+    "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "code/features.py": "31a9c0472c6fa4a88f1aa4668abfef49edf090e131f2279c04d676daaff12ddb",
+    "code/model.py": "99ff12f129af9c69d7d9693f5a4d36b6f73314da76607986b9ccba6ec604338a",
+    "code/PACKAGE_MANIFEST.json": "2e9b714598e1addba61545f0d7ce4891d9d11aaf567fb341420d36694fcfd656",
+    "code/predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+    "code/requirements-train.txt": "036975b5b369b7c113e5cbbb6d7da940b1968ac39c97b2ac851799aeff21e094",
+    "code/requirements.txt": "5c12d85e7c08038d1dd9ffbf8119d12ce808885230a47e2bf65dcd9f114659d5",
+    "code/score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+    "code/submission.py": "e327b29e7b0b4a1fb7f0cc4d0a6160d6bf86e4ad600cac3e7db05fc09789ed4e",
+    "code/train.py": "eb5337e1d5e75b4dc519a0f4efe215c5e78ddfd6a18626945337873b5501b943",
+    "code/data/LICENSE.txt": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b",
+    "code/data/NOTICE.txt": "d577cdf7202ae22f2b19ace348b0ec69958a59aaf51d30cdab902bf7c1e67d78",
+    "code/runs/model_bundle/config.json": "53d377a3ece335620c1901077e284c0bdb08b1cf3fee9434b28e2bf3735ac914",
+    "code/runs/model_bundle/scaler_mean.npy": "6015e04095e365e4681ea4c72ea48e1bd0fcf45fc32049ec61293c16749f917a",
+    "code/runs/model_bundle/scaler_std.npy": "2f33f720a075e618873e648bcad839c749d4c9c1bec1d4728351e81dfa7964bf",
+    "code/runs/model_bundle/weights.npy": "070fd8454aecfb1cf9fe022dd5d6cca81c1717810a8001dc1e996122f1fc9bc0"
+  },
+  "assets": [
+    {
+      "path": "weights.npy",
+      "shape": [
+        3,
+        2129
+      ],
+      "dtype": "float64",
+      "numeric_bytes": 51096,
+      "file_bytes": 51224,
+      "sha256": "070fd8454aecfb1cf9fe022dd5d6cca81c1717810a8001dc1e996122f1fc9bc0",
+      "allow_pickle": false
+    },
+    {
+      "path": "scaler_mean.npy",
+      "shape": [
+        2129
+      ],
+      "dtype": "float64",
+      "numeric_bytes": 17032,
+      "file_bytes": 17160,
+      "sha256": "6015e04095e365e4681ea4c72ea48e1bd0fcf45fc32049ec61293c16749f917a",
+      "allow_pickle": false
+    },
+    {
+      "path": "scaler_std.npy",
+      "shape": [
+        2129
+      ],
+      "dtype": "float64",
+      "numeric_bytes": 17032,
+      "file_bytes": 17160,
+      "sha256": "2f33f720a075e618873e648bcad839c749d4c9c1bec1d4728351e81dfa7964bf",
+      "allow_pickle": false
+    },
+    {
+      "path": "config.json",
+      "file_bytes": 635,
+      "sha256": "53d377a3ece335620c1901077e284c0bdb08b1cf3fee9434b28e2bf3735ac914"
+    }
+  ],
+  "total_asset_bytes": 86179,
+  "asset_limit_bytes": 16777216,
+  "within_limit": true,
+  "numeric_header_checks_passed": true,
+  "asset_inventory_exact": true,
+  "uncompressed_accounting": "Plain NPY arrays plus JSON, file bytes including headers counted conservatively. No archive or learned arrays embedded in ordinary source.",
+  "license_notes": "Course data retain MIT LICENSE and NOTICE. No separate license for the peer original code was found in the submitted root listing; it is used only for the explicitly assigned checkpoint peer reproduction and will not be republished as our source."
+}

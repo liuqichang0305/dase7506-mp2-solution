@@ -1,0 +1,27 @@
+{
+  "scope": "Isolated synthetic fixtures only; no real validation/test input or experiment changes",
+  "reviewed_source_sha256": "846d9b0d211d5ef196037073a28925f291064026e00784d4d69fb596d573c1f0",
+  "cases": [
+    {
+      "case": "malformed_numeric_bundle_config_schema_only_and_no_weights_npz",
+      "current_gate_accepts": true,
+      "validation_file_present": false
+    },
+    {
+      "case": "selector_claims_tabm_alpha99_but_final_fit_config_linear",
+      "current_gate_accepts": true,
+      "validation_file_present": false
+    },
+    {
+      "case": "final_fit_source_provenance_only_common_py",
+      "current_gate_accepts": true,
+      "validation_file_present": false
+    },
+    {
+      "case": "final_fit_asset_manifest_omits_model_weights",
+      "current_gate_accepts": true,
+      "validation_file_present": false
+    }
+  ],
+  "status": "blocking_pre_open_validation_gaps_reproduced"
+}

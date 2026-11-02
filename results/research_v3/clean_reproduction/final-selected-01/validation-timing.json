@@ -1,0 +1,308 @@
+{
+  "schema": "mp2-v3-clean-reproduction-timing-v1",
+  "status": "passed",
+  "completed_at_utc": "2026-11-02T07:51:35.021364+00:00",
+  "prediction_plus_scoring_seconds": 2.2803907999768853,
+  "processes": [
+    {
+      "command": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-S",
+        "-c",
+        "import os,sys,json\nfrom pathlib import Path\n_reproduction_scope=json.loads('{\"checkout\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\", \"data\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\\\\\\\code\\\\\\\\data\", \"allowed_data\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\\\\\\\code\\\\\\\\data\\\\\\\\manifest.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\\\\\\\code\\\\\\\\data\\\\\\\\candidates\\\\\\\\gsm8k_validation.jsonl\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\\\\\\\code\\\\\\\\data\\\\\\\\candidates\\\\\\\\gsm8k_validation.npz\"], \"code\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\\\\\\\code\", \"assets\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\\\\\\\artifacts\\\\\\\\research_v3\\\\\\\\final_selected\", \"runtime\": [\"C:\\\\\\\\Program Files\\\\\\\\Python312\\\\\\\\python312.zip\", \"C:\\\\\\\\Program Files\\\\\\\\Python312\\\\\\\\DLLs\", \"C:\\\\\\\\Program Files\\\\\\\\Python312\\\\\\\\Lib\", \"C:\\\\\\\\Program Files\\\\\\\\Python312\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-env-final-selected-01-6f8dc1e8a507\\\\\\\\Lib\\\\\\\\site-packages\"], \"outputs\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\results\\\\\\\\research_v3\\\\\\\\clean_reproduction\\\\\\\\final-selected-01\\\\\\\\validation-predictions.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\results\\\\\\\\research_v3\\\\\\\\clean_reproduction\\\\\\\\final-selected-01\\\\\\\\validation-prediction-thread-pools.json\"], \"predictions\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\results\\\\\\\\research_v3\\\\\\\\clean_reproduction\\\\\\\\final-selected-01\\\\\\\\validation-predictions.json\", \"phase\": \"prediction\"}')\n_reproduction_denied=[]\nos.chdir(_reproduction_scope['checkout'])\ndef _reproduction_guard(event,args):\n    if event.startswith('socket.') or event in ('subprocess.Popen','os.system','os.spawn','os.posix_spawn','os.fork','os.forkpty','os.exec'):\n        _reproduction_denied.append(event)\n        raise PermissionError('Clean reproduction worker is offline and cannot spawn')\n    if event!='open' or isinstance(args[0],int):return\n    p=Path(os.fsdecode(args[0])).resolve()\n    mode,flags=args[1],args[2]\n    writing=(isinstance(mode,str) and any(c in mode for c in 'wax+')) or flags & (os.O_WRONLY|os.O_RDWR|os.O_CREAT|os.O_TRUNC)\n    allowed=str(p) in _reproduction_scope['outputs']\n    if not writing:\n        if p.is_relative_to(Path(_reproduction_scope['data'])):\n            allowed=str(p) in _reproduction_scope['allowed_data']\n        elif _reproduction_scope['phase']=='scoring' and str(p)==_reproduction_scope['predictions']:\n            allowed=True\n        elif p.is_relative_to(Path(_reproduction_scope['code'])):\n            allowed=p.suffix.lower() in ('.py','.pyc','.pyd','.dll')\n        elif p.is_relative_to(Path(_reproduction_scope['assets'])):\n            allowed=True\n        elif any(p==Path(base) or p.is_relative_to(Path(base)) for base in _reproduction_scope['runtime']):\n            allowed=True\n    if not allowed:\n        _reproduction_denied.append('open:'+str(p))\n        raise PermissionError('Clean worker cannot read references/history/outside files or modify inputs')\nsys.addaudithook(_reproduction_guard)\nimport json,os,runpy,sys\nfrom pathlib import Path\nfrom threadpoolctl import threadpool_info\nscript,report=sys.argv[1:3]\nsys.argv=[script]+sys.argv[3:]\nsys.path.insert(0,str(Path(script).resolve().parent))\ntry:\n    runpy.run_path(script,run_name='__main__')\nfinally:\n    record={'script':script,'executable':sys.executable,'pythonpath':os.environ.get('PYTHONPATH'),\n            'thread_pools':threadpool_info(),'numpy_version':getattr(sys.modules.get('numpy'),'__version__',None),\n            'torch_imported':'torch' in sys.modules,\n            'thread_environment':{k:os.environ.get(k) for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS','OMP_THREAD_LIMIT')}}\n    with open(report,'x',encoding='utf-8') as f:\n        json.dump(record,f,indent=2);f.write('\\n')\n\nif _reproduction_denied: raise PermissionError('Worker attempted a forbidden operation')\n",
+        "code/predict.py",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\clean_reproduction\\final-selected-01\\validation-prediction-thread-pools.json",
+        "--method",
+        "code/solution_v3.py",
+        "--checkpoint",
+        "artifacts/research_v3/final_selected",
+        "--split",
+        "validation",
+        "--output",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\clean_reproduction\\final-selected-01\\validation-predictions.json"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "started_at_utc": "2026-11-02T07:51:32.749539+00:00",
+      "completed_at_utc": "2026-11-02T07:51:34.388006+00:00",
+      "wall_seconds": 1.6405423000105657,
+      "process_tree": [
+        {
+          "pid": 40364,
+          "create_time": 1793605892.7543533
+        }
+      ],
+      "sampled_peak_tree_threads": 4,
+      "sampled_peak_tree_rss_bytes": 172949504,
+      "sampled_peak_tree_plus_coordinator_threads": 7,
+      "sampled_cpu_seconds": 1.59375,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      },
+      "sampling_note": "Nominal 10 ms delay between process-tree samples, plus snapshot overhead. Observed children retain PID/creation identities after parent exit. Unobserved detached ancestry is not recoverable; formal workers use direct Python and deny spawning. CPU/RSS/threads are samples, not exact integrals."
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-S",
+        "-c",
+        "import os,sys,json\nfrom pathlib import Path\n_reproduction_scope=json.loads('{\"checkout\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\", \"data\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\\\\\\\code\\\\\\\\data\", \"allowed_data\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\\\\\\\code\\\\\\\\data\\\\\\\\manifest.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\\\\\\\code\\\\\\\\data\\\\\\\\candidates\\\\\\\\gsm8k_validation.jsonl\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\\\\\\\code\\\\\\\\data\\\\\\\\candidates\\\\\\\\gsm8k_validation.npz\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\\\\\\\code\\\\\\\\data\\\\\\\\gsm8k_validation.jsonl\"], \"code\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\\\\\\\code\", \"assets\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\\\\\\\artifacts\\\\\\\\research_v3\\\\\\\\final_selected\", \"runtime\": [\"C:\\\\\\\\Program Files\\\\\\\\Python312\\\\\\\\python312.zip\", \"C:\\\\\\\\Program Files\\\\\\\\Python312\\\\\\\\DLLs\", \"C:\\\\\\\\Program Files\\\\\\\\Python312\\\\\\\\Lib\", \"C:\\\\\\\\Program Files\\\\\\\\Python312\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\reproduce-v3-env-final-selected-01-6f8dc1e8a507\\\\\\\\Lib\\\\\\\\site-packages\"], \"outputs\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\results\\\\\\\\research_v3\\\\\\\\clean_reproduction\\\\\\\\final-selected-01\\\\\\\\validation-score.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\results\\\\\\\\research_v3\\\\\\\\clean_reproduction\\\\\\\\final-selected-01\\\\\\\\validation-scoring-thread-pools.json\"], \"predictions\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\results\\\\\\\\research_v3\\\\\\\\clean_reproduction\\\\\\\\final-selected-01\\\\\\\\validation-predictions.json\", \"phase\": \"scoring\"}')\n_reproduction_denied=[]\nos.chdir(_reproduction_scope['checkout'])\ndef _reproduction_guard(event,args):\n    if event.startswith('socket.') or event in ('subprocess.Popen','os.system','os.spawn','os.posix_spawn','os.fork','os.forkpty','os.exec'):\n        _reproduction_denied.append(event)\n        raise PermissionError('Clean reproduction worker is offline and cannot spawn')\n    if event!='open' or isinstance(args[0],int):return\n    p=Path(os.fsdecode(args[0])).resolve()\n    mode,flags=args[1],args[2]\n    writing=(isinstance(mode,str) and any(c in mode for c in 'wax+')) or flags & (os.O_WRONLY|os.O_RDWR|os.O_CREAT|os.O_TRUNC)\n    allowed=str(p) in _reproduction_scope['outputs']\n    if not writing:\n        if p.is_relative_to(Path(_reproduction_scope['data'])):\n            allowed=str(p) in _reproduction_scope['allowed_data']\n        elif _reproduction_scope['phase']=='scoring' and str(p)==_reproduction_scope['predictions']:\n            allowed=True\n        elif p.is_relative_to(Path(_reproduction_scope['code'])):\n            allowed=p.suffix.lower() in ('.py','.pyc','.pyd','.dll')\n        elif p.is_relative_to(Path(_reproduction_scope['assets'])):\n            allowed=True\n        elif any(p==Path(base) or p.is_relative_to(Path(base)) for base in _reproduction_scope['runtime']):\n            allowed=True\n    if not allowed:\n        _reproduction_denied.append('open:'+str(p))\n        raise PermissionError('Clean worker cannot read references/history/outside files or modify inputs')\nsys.addaudithook(_reproduction_guard)\nimport json,os,runpy,sys\nfrom pathlib import Path\nfrom threadpoolctl import threadpool_info\nscript,report=sys.argv[1:3]\nsys.argv=[script]+sys.argv[3:]\nsys.path.insert(0,str(Path(script).resolve().parent))\ntry:\n    runpy.run_path(script,run_name='__main__')\nfinally:\n    record={'script':script,'executable':sys.executable,'pythonpath':os.environ.get('PYTHONPATH'),\n            'thread_pools':threadpool_info(),'numpy_version':getattr(sys.modules.get('numpy'),'__version__',None),\n            'torch_imported':'torch' in sys.modules,\n            'thread_environment':{k:os.environ.get(k) for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS','OMP_THREAD_LIMIT')}}\n    with open(report,'x',encoding='utf-8') as f:\n        json.dump(record,f,indent=2);f.write('\\n')\n\nif _reproduction_denied: raise PermissionError('Worker attempted a forbidden operation')\n",
+        "code/score_predictions.py",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\clean_reproduction\\final-selected-01\\validation-scoring-thread-pools.json",
+        "--split",
+        "validation",
+        "--predictions",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\clean_reproduction\\final-selected-01\\validation-predictions.json",
+        "--output",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v3\\clean_reproduction\\final-selected-01\\validation-score.json"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "started_at_utc": "2026-11-02T07:51:34.399788+00:00",
+      "completed_at_utc": "2026-11-02T07:51:35.019011+00:00",
+      "wall_seconds": 0.6221233999822289,
+      "process_tree": [
+        {
+          "pid": 48728,
+          "create_time": 1793605894.4040537
+        }
+      ],
+      "sampled_peak_tree_threads": 4,
+      "sampled_peak_tree_rss_bytes": 32956416,
+      "sampled_peak_tree_plus_coordinator_threads": 7,
+      "sampled_cpu_seconds": 0.5625,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      },
+      "sampling_note": "Nominal 10 ms delay between process-tree samples, plus snapshot overhead. Observed children retain PID/creation identities after parent exit. Unobserved detached ancestry is not recoverable; formal workers use direct Python and deny spawning. CPU/RSS/threads are samples, not exact integrals."
+    }
+  ],
+  "sampled_peak_task_process_tree_threads": 4,
+  "sampled_peak_worker_tree_plus_coordinator_threads": 7,
+  "scientific_library_observations": [
+    {
+      "script": "code/predict.py",
+      "executable": "C:\\Program Files\\Python312\\python.exe",
+      "pythonpath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduce-v3-env-final-selected-01-6f8dc1e8a507\\Lib\\site-packages",
+      "thread_pools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduce-v3-env-final-selected-01-6f8dc1e8a507\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "version": "0.3.34.106.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ],
+      "numpy_version": "2.5.3",
+      "torch_imported": false,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      }
+    },
+    {
+      "script": "code/score_predictions.py",
+      "executable": "C:\\Program Files\\Python312\\python.exe",
+      "pythonpath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduce-v3-env-final-selected-01-6f8dc1e8a507\\Lib\\site-packages",
+      "thread_pools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduce-v3-env-final-selected-01-6f8dc1e8a507\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "version": "0.3.34.106.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ],
+      "numpy_version": "2.5.3",
+      "torch_imported": false,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      }
+    }
+  ],
+  "scientific_library_thread_cap_passed": true,
+  "local_resource_eligible": true,
+  "resource": {
+    "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v3\\final_selected",
+    "files": [
+      {
+        "path": "config.json",
+        "sha256": "e2c210a3717c5b48ee312226491b4b9c444cb6642d94fb3afd1fa39226bd89cf",
+        "disk_bytes": 382,
+        "uncompressed_bytes": 382
+      },
+      {
+        "path": "weights.npz",
+        "sha256": "2bb9002701b0bcb6105b30f88863db20d7fd7267bc530ce85048168d47a60ab1",
+        "disk_bytes": 963288,
+        "uncompressed_bytes": 963288,
+        "members": [
+          {
+            "name": "mean.npy",
+            "uncompressed_bytes": 16640
+          },
+          {
+            "name": "scale.npy",
+            "uncompressed_bytes": 16640
+          },
+          {
+            "name": "phi1.weight.npy",
+            "uncompressed_bytes": 524416
+          },
+          {
+            "name": "phi1.bias.npy",
+            "uncompressed_bytes": 640
+          },
+          {
+            "name": "phi2.weight.npy",
+            "uncompressed_bytes": 65664
+          },
+          {
+            "name": "phi2.bias.npy",
+            "uncompressed_bytes": 640
+          },
+          {
+            "name": "rho.weight.npy",
+            "uncompressed_bytes": 336000
+          },
+          {
+            "name": "rho.bias.npy",
+            "uncompressed_bytes": 640
+          },
+          {
+            "name": "head.weight.npy",
+            "uncompressed_bytes": 640
+          },
+          {
+            "name": "head.bias.npy",
+            "uncompressed_bytes": 132
+          }
+        ],
+        "arrays": [
+          {
+            "name": "mean",
+            "shape": [
+              2064
+            ],
+            "dtype": "float64",
+            "array_bytes": 16512
+          },
+          {
+            "name": "scale",
+            "shape": [
+              2064
+            ],
+            "dtype": "float64",
+            "array_bytes": 16512
+          },
+          {
+            "name": "phi1.weight",
+            "shape": [
+              128,
+              1024
+            ],
+            "dtype": "float32",
+            "array_bytes": 524288
+          },
+          {
+            "name": "phi1.bias",
+            "shape": [
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 512
+          },
+          {
+            "name": "phi2.weight",
+            "shape": [
+              128,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 65536
+          },
+          {
+            "name": "phi2.bias",
+            "shape": [
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 512
+          },
+          {
+            "name": "rho.weight",
+            "shape": [
+              128,
+              656
+            ],
+            "dtype": "float32",
+            "array_bytes": 335872
+          },
+          {
+            "name": "rho.bias",
+            "shape": [
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 512
+          },
+          {
+            "name": "head.weight",
+            "shape": [
+              1,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 512
+          },
+          {
+            "name": "head.bias",
+            "shape": [
+              1
+            ],
+            "dtype": "float32",
+            "array_bytes": 4
+          }
+        ]
+      }
+    ],
+    "uncompressed_bytes": 963670,
+    "limit_bytes": 16777216,
+    "within_limit": true,
+    "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+    "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+  },
+  "hardware": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]"
+  },
+  "guard_policy": "Offline direct workers; no child processes, prior results, non-validation data, or input/asset writes; prediction cannot read gold.",
+  "measurement": "One shared 30-second deadline includes both sequential fresh official processes, startup, imports, input/assets, output, scoring and wrappers; setup excluded.",
+  "limitation": "Local measurement only, not certification on the reference Xeon hardware."
+}

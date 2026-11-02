@@ -1,0 +1,31 @@
+test_ambiguous_post_then_remote_reconciliation_without_second_post (test_submit_final_v3.SubmissionTests.test_ambiguous_post_then_remote_reconciliation_without_second_post) ... ok
+test_ambiguous_post_unresolved_blocks_blind_repost (test_submit_final_v3.SubmissionTests.test_ambiguous_post_unresolved_blocks_blind_repost) ... ok
+test_changed_asset_text_report_or_rules_rejected (test_submit_final_v3.SubmissionTests.test_changed_asset_text_report_or_rules_rejected) ... ok
+test_freshness_and_public_commit_mismatch_rejected (test_submit_final_v3.SubmissionTests.test_freshness_and_public_commit_mismatch_rejected) ... ok
+test_identity_deadline_and_official_phase_block_post (test_submit_final_v3.SubmissionTests.test_identity_deadline_and_official_phase_block_post) ... ok
+test_live_submission_lock_blocks_second_process (test_submit_final_v3.SubmissionTests.test_live_submission_lock_blocks_second_process) ... ok
+test_new_issue_exact_post_readback_and_local_success_retry (test_submit_final_v3.SubmissionTests.test_new_issue_exact_post_readback_and_local_success_retry) ... ERROR
+test_paginated_duplicate_found_before_post (test_submit_final_v3.SubmissionTests.test_paginated_duplicate_found_before_post) ... ok
+test_transport_allowlist_and_credential_errors_do_not_expose_secret (test_submit_final_v3.SubmissionTests.test_transport_allowlist_and_credential_errors_do_not_expose_secret) ... ok
+
+======================================================================
+ERROR: test_new_issue_exact_post_readback_and_local_success_retry (test_submit_final_v3.SubmissionTests.test_new_issue_exact_post_readback_and_local_success_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_submit_final_v3.py", line 139, in test_new_issue_exact_post_readback_and_local_success_retry
+    result = self.run_submit(retry, s.DEADLINE + timedelta(days=1))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\code\tests\test_submit_final_v3.py", line 125, in run_submit
+    return s.submit(self.root, transport=transport, now_fn=lambda: now,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\submission\v3\submit_final.py", line 353, in submit
+    checked_hash(inside(folder, success['readback_path']), success['readback_sha256'])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AAmy work information\7503vision\dase7506-mp2-solution\submission\v3\submit_final.py", line 66, in inside
+    raise ValueError('Unsafe relative evidence path')
+ValueError: Unsafe relative evidence path
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.650s
+
+FAILED (errors=1)

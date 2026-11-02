@@ -1,0 +1,18 @@
+{
+  "checked_at_utc": "2026-11-01T12:03:44.589Z",
+  "official_site_commit": "65c16a3eef424e30b254ff58804dffe0fbda8793",
+  "project": "mp2",
+  "phase": "review",
+  "deadline": "2026-11-01T00:00:00+08:00",
+  "deadline_utc": "2026-10-31T16:00:00.000Z",
+  "published_at": "2026-11-01T04:42:52.971Z",
+  "review_ends_at": "2026-11-09T00:00:00+08:00",
+  "review_ends_at_utc": "2026-11-08T16:00:00.000Z",
+  "sources": [
+    "arena.mjs",
+    "projects.mjs",
+    "publication_metadata_only.json"
+  ],
+  "submission_entries_loaded": false,
+  "network_operations": false
+}

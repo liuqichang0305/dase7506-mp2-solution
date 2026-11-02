@@ -1,0 +1,69 @@
+CURRENT COMPLETED STATE -- 2026-11-02
+
+The separate peer review is COMPLETE. Submission#240 was reproduced from exact
+commit7e3a2792b7b4442f5e53705a64b4560a2e365de9 without retraining. The official
+score was394/467=84.36830835117773%. Independent source/recovery reviews and
+COMPLETE.json are saved under peer_review/submission_240. Four denied nonexistent
+Python cache-read probes caused a postcheck failure; the original FAILED and
+all logs are preserved, with evidence-only recovery and no prediction/scoring rerun.
+
+The official Peer Review Report was actually created and publicly read back:
+https://github.com/xudongwu-0/xudongwu-0.github.io/issues/383
+Receipt: peer_review/submission_240/report_form/REPORT_SUCCESS.json
+Status: created_and_read_back; target submission240; authorliuqichang0305.
+Do not create another report, re-evaluate this peer or use its outcome for our
+closed model research. The review window remains the instructor-recorded
+Nov1 release through2026-11-09T00:00:00+08:00; completion is based on the actual
+Issue/readback, not on the calendar alone.
+
+Our own independent review, fresh validation reproduction and research-only
+freeze are also complete (submission/v3/REVIEW_RESULT.json,
+REPRODUCTION_RESULT.json, FREEZE.json). No new V3 test or score update is allowed.
+Archive report generation and rendered-page QA are complete; only PR#3 delivery remains.
+Delivered report: reports/research_v3/research_closeout_delivered/research_closeout_v3.pdf.
+Do not duplicate this completed peer review while closing the archive PR.
+
+ARCHIVED PREPARATION BELOW -- RETAINED HISTORY, NOT CURRENT ACTIONS:
+
+DASE7506 MP2 V3 - resume the separately released course peer review
+
+Status: preparation only. No other student's work has been reproduced and no
+Peer Review Report has been submitted by this V3 workflow. The startup rules
+snapshot did not show an instructor-opened MP2 peer-review period. Recheck the
+actual release when resuming; do not infer seven days from the submission deadline.
+
+1. Read submission/v3/SUBMISSION_RECORD.json (or its final Markdown receipt),
+   FREEZE.json and TEST_COMPLETE.json. Verify the user's current official Issue
+   and the matching immutable method/checkpoint URLs. Do not restart research,
+   change the frozen model, or repeat a score-update Issue.
+2. Visit https://xudongwu-0.github.io/courses/dase7506/mp2/ and the official course
+   notices. Save timestamp, exact instructor release and applicable closing time.
+   If MP2 peer review is not actually available, retain pending status and stop
+   this separate stage without marking it complete.
+3. Select one eligible public submission under the instructor's rules. Record
+   its submission number, author, exact code commit and matching checkpoint URL.
+   Review source before execution. Do not substitute the author's later main
+   branch, a different checkpoint, or weights retrained by this project.
+4. Use a new isolated checkout/environment under this project's tmp directory.
+   Install the declared dependencies, retain actual install logs and differences,
+   and fetch only official evaluation data allowed for reproduction. Keep the
+   other work separate from this frozen research and never use it to tune ours.
+5. Run the unchanged official prediction and separate scoring commands, offline,
+   on the exact submitted assets. Save hardware, full commands, all raw JSON,
+   elapsed times and hashes. An installation failure has no reproduced score;
+   never enter zero as a stand-in and never infer misconduct from a failure.
+6. Compare only observed evidence. Explain numerical, package, hardware and
+   timing differences. Use the current official Peer Review Report form/handler;
+   preserve its actual schema, encryption and submission number requirements.
+7. Before posting, check for an existing receipt and matching course Issue to
+   prevent duplicate reports. The user's adopted research specification already
+   authorizes one such course peer-review report when genuinely open. Any actual
+   platform approval/identity block must be stated precisely, without requesting
+   credentials in chat.
+8. Only actual creation of the official report Issue counts as submission.
+   Record URL, number, author, creation time, exact reproduced score and processing
+   status. An opened prefilled URL, local draft or report PDF is not submission.
+
+Prepared review template: submission/v3/PEER_REVIEW_TEMPLATE.md
+Source authority: docs/research_v3/AUTONOMOUS_RESEARCH_SPEC.txt, sections12--14.
+Do not overwrite any original V1/V2 submission or peer-review preparation.

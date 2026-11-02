@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="DASE7506 MP2 submissions, leaderboard and peer review.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>DASE7506 · MP2</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/arena.296ce415066a.css">
+  <script type="module" src="../assets/mp2.9a439c7af66b.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell masthead">
+    <a class="brand" href="#main">DASE7506 <span>/ MP2</span></a>
+    <nav aria-label="Course navigation"><a href="https://github.com/xudongwu-0/DASE7506-MP2/blob/main/guide/GUIDE.md">Guide</a><a href="https://github.com/xudongwu-0/DASE7506-MP2">Code &amp; data</a><a href="#leaderboard">Leaderboard</a></nav>
+  </header>
+  <main id="main" class="shell">
+    <div class="heading">
+      <h1>Selecting Reliable LLM Reasoning</h1>
+      <p class="caption">A language model gives four solutions to each maths problem. Choose a correct final answer and investigate what makes your choice reliable.</p>
+      <p><span class="open-badge" id="phase-badge">Submissions open</span><span class="caption">Deadline: 31 October 2026, 23:59 (UTC+8)</span></p>
+      <p class="caption" id="phase-note">Choose a correct answer from four LLM-generated solutions to each maths problem. Build your own method; no reference algorithm is supplied.</p>
+      <p class="verification-notice">Our automated checking agent verifies checkpoint scores. Results are subject to spot checks; serious misreporting will be recorded.</p>
+    </div>
+    <div id="workspace" class="workspace mp2-workspace">
+
+      <section id="submit" aria-labelledby="submit-title">
+        <h2 id="submit-title">Submit a score</h2>
+        <form id="submission-form" class="panel">
+          <div id="score-fields">
+            <label for="student-id">Student ID <span>Required</span></label>
+            <input id="student-id" type="text" maxlength="64" required autocomplete="off">
+            <label for="score">Self-reported score <span id="score-unit">%</span></label>
+            <input id="score" type="number" min="0" max="100" step="any" required placeholder="Accuracy percentage">
+          </div>
+          <div id="artifact-reference" hidden>
+            <label for="score-submission">Original submission number <span>Required</span></label>
+            <input id="score-submission" type="number" min="1" step="1" placeholder="GitHub issue number">
+          </div>
+          <p id="score-help" class="caption">Official full-test accuracy in percent (0–100).</p>
+          <label for="code-url">Code link <span class="link-requirement">Optional for early entries</span></label>
+          <input id="code-url" type="url" pattern="https://.*" maxlength="500" placeholder="https://github.com/you/project">
+          <label for="checkpoint-url">Checkpoint / configuration link <span class="link-requirement">Optional for early entries</span></label>
+          <input id="checkpoint-url" type="url" pattern="https://.*" maxlength="500" placeholder="https://...">
+          <p class="caption privacy-note">Student IDs and scores are public. Artifact links are encrypted for the instructor until release. GitHub records retain your account.</p>
+          <label class="check-label consent"><input id="consent" type="checkbox" required>I understand and confirm that this is my result.</label>
+          <button id="prepare-submit" type="submit" class="button full">Prepare score submission ↗</button>
+          <p class="caption handoff-note">Then click <strong>Submit on GitHub</strong> and create the issue to save your result. Use the same GitHub account for updates.</p>
+          <div id="submission-status" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+      <section id="leaderboard" aria-labelledby="leaderboard-title">
+        <div class="section-title"><h2 id="leaderboard-title">Leaderboard</h2><button class="text-button" id="refresh" type="button">Refresh ↻</button></div>
+        <div class="board-controls"><p class="caption">Best per student · Higher accuracy is better</p><label class="check-label"><input id="history" type="checkbox">All submissions</label></div>
+        <div class="table-wrap"><table><caption class="sr-only">MP2 self-reported accuracy</caption><thead><tr><th scope="col">Rank</th><th scope="col">Student ID</th><th scope="col" id="score-heading">Accuracy ↑</th><th scope="col">Artifacts</th><th scope="col">Status</th><th scope="col">Peer Review Report</th></tr></thead><tbody id="board-body"><tr><td colspan="6" class="empty">Loading submissions…</td></tr></tbody></table></div>
+        <div class="board-footer"><p class="caption" id="sync-status" role="status" aria-live="polite"></p><a href="https://github.com/xudongwu-0/xudongwu-0.github.io/issues?q=is%3Aissue+%22%5BDASE7506%5D%22" target="_blank" rel="noopener noreferrer">Submission records ↗</a></div>
+      </section>
+    </div>
+  </main>
+  <dialog id="challenge-dialog"><form id="challenge-form">
+    <div class="dialog-heading"><h2>Peer Review Report</h2><button type="button" id="close-dialog" class="text-button" aria-label="Close">×</button></div>
+    <p id="challenge-target" class="caption"></p>
+    <label for="reproduced-score">Reproduced score <span>Required</span></label><input id="reproduced-score" type="number" required step="any">
+    <label for="review-reason">Report (Markdown) <span>Optional</span></label><textarea id="review-reason" maxlength="2000" rows="4" placeholder="Describe your findings, commands or observations."></textarea>
+    <label for="evidence-url">Evidence link <span>Optional</span></label><input id="evidence-url" type="url" pattern="https://.*" maxlength="500" placeholder="https://github.com/you/reproduction">
+    <p class="caption handoff-note">Use the same checkpoint and evaluator. Reports submitted through GitHub are public. Confirmed discrepancies can earn rewards. Reports alone do not affect grades.</p>
+    <button type="submit" class="button full">Prepare Peer Review Report ↗</button>
+    <p class="caption handoff-note">You can also <a id="email-report" href="mailto:wu.xudong@connect.hku.hk">email your report to wu.xudong@connect.hku.hk</a>. Include the submission number and reproduced score.</p><div id="challenge-status" role="status" aria-live="polite"></div>
+  </form></dialog>
+  <noscript><p class="shell">Enable JavaScript to view the leaderboard and submit a peer review report.</p></noscript>
+</body>
+</html>

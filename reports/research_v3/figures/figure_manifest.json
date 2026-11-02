@@ -1,0 +1,38 @@
+{
+  "schema": "mp2-v3-report-figures-v1",
+  "scope": "saved_final_evidence_only",
+  "created_at_utc": "2026-11-02T07:40:15.506812+00:00",
+  "evidence_sha256": {
+    "results/research_v3/analysis/final_search/analysis.json": "ce2a5048b979387a5cbcff6b3d15bf7fee513955f093851a0cfd6148a54902ff",
+    "results/research_v3/campaign_queue.json": "a998b90ddfe9020f3dd2551969f85b39f419fea436741f42641126aeeef3aff9",
+    "results/research_v3/confidence_calibration/report.json": "75f1d13d69cf7347b542d5737765406fd1186a457364084ad30d79a207724160",
+    "results/research_v3/confidence_validation/report.json": "75aa8598169f7a2a9b4159481a6df948e47deb1c7a80aa7a383fb3c41822c131",
+    "reports/research_v3/prepare_figures.py": "7eacb0b9cab2765189bc54c7f744816ef3b1ac2395691d02c0b7a970d9a9fab9"
+  },
+  "figures": [
+    {
+      "path": "reports/research_v3/figures/cv_fit_cost_vs_hard_accuracy.png",
+      "sha256": "fb8f0338240ad904914930bc09f26b8bc5e0ecf5ac84c8e782e2b0cb9f68a97b",
+      "height": 235,
+      "caption": "All complete common-three-fold train-OOF methods and fixed extra seeds. The log x-axis is recorded fitting wall time, not inference latency; failed/pruned work is disclosed separately. OOF results were used for model selection.",
+      "generation_record": {
+        "path": "reports/research_v3/figures/cv_fit_cost_vs_hard_accuracy.generation.json",
+        "sha256": "9b1fd958569108fb5657bf8b9fae0d5f51cf23b89ac4c9cb7fd85e0079128d2d"
+      }
+    },
+    {
+      "path": "reports/research_v3/figures/chosen_event_confidence.png",
+      "sha256": "5bfb5d9289d31258dd13e75794171dd02987a433befebf644d2dc9e7453a2013",
+      "height": 235,
+      "caption": "Confidence describes the actual chosen answer. Train-OOF calibration is evaluated on its fitting outcomes and is optimistic. Validation is an already-used holdout. Calibration changes no choices; curves are descriptive, including stable within-tie ordering.",
+      "generation_record": {
+        "path": "reports/research_v3/figures/chosen_event_confidence.generation.json",
+        "sha256": "7a46d962548b85127c684e3c5d4ee18c292a7ee496dbd27eb4ba793208f4b8a0"
+      }
+    }
+  ],
+  "partial_rows_excluded": 0,
+  "no_pdf_generated": true,
+  "no_raw_bank_or_test_read": true,
+  "visual_qa_status": "pending_final_input_render_inspection"
+}

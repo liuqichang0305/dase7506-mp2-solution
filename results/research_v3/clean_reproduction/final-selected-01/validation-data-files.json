@@ -1,0 +1,44 @@
+[
+  {
+    "source": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\code\\data\\manifest.json",
+    "destination": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\code\\data\\manifest.json",
+    "relative_path": "manifest.json",
+    "sha256": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+    "bytes": 1732
+  },
+  {
+    "source": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\code\\data\\gsm8k_validation.jsonl",
+    "destination": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\code\\data\\gsm8k_validation.jsonl",
+    "relative_path": "gsm8k_validation.jsonl",
+    "sha256": "ae1522df02497e780909e208ffb4101788e97b4a5eabf883c56bb7fe40d13025",
+    "bytes": 477731
+  },
+  {
+    "source": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\code\\data\\candidates\\gsm8k_validation.jsonl",
+    "destination": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\code\\data\\candidates\\gsm8k_validation.jsonl",
+    "relative_path": "candidates/gsm8k_validation.jsonl",
+    "sha256": "f2ca7c7c7effa91e6a2e99c597ae13b9369d776f0c08d68622e8671b8229045a",
+    "bytes": 2018690
+  },
+  {
+    "source": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\code\\data\\candidates\\gsm8k_validation.npz",
+    "destination": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\code\\data\\candidates\\gsm8k_validation.npz",
+    "relative_path": "candidates/gsm8k_validation.npz",
+    "sha256": "a0c6c8e1919bf7e7ffe887b39954e0c905bbd4429b05135fe3fc9f4087a2c881",
+    "bytes": 12104462
+  },
+  {
+    "source": "immutable public checkout",
+    "destination": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\code\\data\\LICENSE.txt",
+    "relative_path": "LICENSE.txt",
+    "sha256": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b",
+    "bytes": 1062
+  },
+  {
+    "source": "immutable public checkout",
+    "destination": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduce-v3-checkout-final-selected-01-6f8dc1e8a507\\code\\data\\NOTICE.txt",
+    "relative_path": "NOTICE.txt",
+    "sha256": "d577cdf7202ae22f2b19ace348b0ec69958a59aaf51d30cdab902bf7c1e67d78",
+    "bytes": 1066
+  }
+]

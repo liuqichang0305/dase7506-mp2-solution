@@ -1,0 +1,29 @@
+{
+  "schema": "mp2-peer-static-source-safety-review-v1",
+  "peer_issue": 240,
+  "source_commit": "7e3a2792b7b4442f5e53705a64b4560a2e365de9",
+  "scope": "Complete read-only source review of submission.py, features.py and model.py; no peer code executed, no raw data read, no model-design transfer into closed research.",
+  "source_sha256": {
+    "code/submission.py": "e327b29e7b0b4a1fb7f0cc4d0a6160d6bf86e4ad600cac3e7db05fc09789ed4e",
+    "code/features.py": "31a9c0472c6fa4a88f1aa4668abfef49edf090e131f2279c04d676daaff12ddb",
+    "code/model.py": "99ff12f129af9c69d7d9693f5a4d36b6f73314da76607986b9ccba6ec604338a"
+  },
+  "blocking_source_finding": false,
+  "suitable_for_guarded_official_predict": true,
+  "runtime_dependencies": ["Python standard library", "NumPy"],
+  "training_only_dependency": "model.py optionally imports scipy.optimize; submission.py imports features.py and does not import model.py, so SciPy is unnecessary for the reviewed prediction entry point.",
+  "findings": [
+    "No network, subprocess, shell, arbitrary eval/exec, dynamic import, credential access or ID-keyed lookup was found in the reviewed source.",
+    "The prediction path reads only config.json, weights.npy, scaler_mean.npy and scaler_std.npy from the supplied checkpoint. NumPy load calls do not enable pickle; the execution environment must retain allow_pickle=False as its default.",
+    "The feature path consumes supplied question/candidate text and embeddings. No reference-answer file access was found. Training functions accept labels as parameters but are not called by submission.predict.",
+    "Arithmetic expression handling uses an explicit token parser and Fraction operations rather than Python eval. Long/deep or very large numerical strings remain a resource/exception risk, not evidence of arbitrary code execution.",
+    "Missing checkpoint files trigger a deterministic fallback rather than an error. Preflight must verify every expected checkpoint byte so that this fallback cannot silently replace the submitted model during reproduction."
+  ],
+  "required_runtime_boundaries": [
+    "Use the exact anonymously hash-verified source and full checkpoint; verify numeric array headers/dtypes/shapes and resource size before prediction.",
+    "Use a fresh process with sanitized environment and explicit imports resolving features.py to the reviewed peer source; do not inherit unrelated PYTHONPATH or credentials.",
+    "Deny network, subprocess/spawn, writes outside the attempt outputs, and any reference/gold access during prediction; expose only official input assets and the pinned checkpoint.",
+    "Keep independent scoring separate from prediction, and enforce the agreed wall/process/thread limits even if parsing fails or becomes slow."
+  ],
+  "limitations": "Static source review is not proof of runtime correctness, numerical fidelity, compliance, speed or score. Those claims require the separate bounded reproduction records."
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "mp2-v3-final-pdf-visual-qa-v1",
+  "status": "passed",
+  "reviewer": "root",
+  "reviewed_at_utc": "2026-11-02T08:11:21.574295+00:00",
+  "pdf_sha256": "bb8bebb96c7007403fbc782ea8cce26c2b421ced6551e3fbe99b990f3c1035b3",
+  "pages": 10,
+  "individually_viewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "render_command": "pdftoppm -r 120 -png reports/research_v3/research_closeout_final/research_closeout_v3.pdf tmp/pdfs/research-closeout-v3-final/page",
+  "rendered_sha256": {
+    "tmp/pdfs/research-closeout-v3-final/page-01.png": "4339bfdf169594dccc38f208ac1a1742a0c6500f1024c3667cce3efbe9ec2c87",
+    "tmp/pdfs/research-closeout-v3-final/page-02.png": "6909a5fc90e78af460b882150a710b67297698348ed41a23394b397fa9072d55",
+    "tmp/pdfs/research-closeout-v3-final/page-03.png": "6a090c9b7b046bb7700cf68dae12bef417fac2ea331803365c0d6e508ebc92b2",
+    "tmp/pdfs/research-closeout-v3-final/page-04.png": "40478fad9a4a0d17240ad0701b0d7376d9fcb51c6c46600f8ef4aecc5367448b",
+    "tmp/pdfs/research-closeout-v3-final/page-05.png": "c091ac3c9714748f82a1633e2d18eec0a0ef6a9fd8ac8ae19218b338afbefbb9",
+    "tmp/pdfs/research-closeout-v3-final/page-06.png": "4a3dfd797978d5f1fb7f540e70d0cadb1b3737024f886a6ea6448f43bf1cd0aa",
+    "tmp/pdfs/research-closeout-v3-final/page-07.png": "3e7d9e1e8f0997dca72e9d873ebaa401df89265bdcd01f08446ea85a6f9ce36b",
+    "tmp/pdfs/research-closeout-v3-final/page-08.png": "bcd80922eaba37a378b7083a537849de7b3518d6c54c98a79a89a7713f24b640",
+    "tmp/pdfs/research-closeout-v3-final/page-09.png": "d725cc8847a70c1f0fb3fab890c99204a3a5dc9e53d5513bab908dec88f08d9d",
+    "tmp/pdfs/research-closeout-v3-final/page-10.png": "9cf7b1c8a455a1e9675c6dfea396dc7387a006787b8b2ee694d108285710e3a2"
+  },
+  "findings": [
+    "Every actual final PNG opened with view_image; typography, tables, margins, footers and page numbers are readable, with no clipping or overlap.",
+    "Named fusion controls explain rejection of a mixture that only ties its stronger member.",
+    "Nested data partitions, unstarted seed reason, exact-commit reproduction prerequisites and primary references are explicit.",
+    "Historical test result, missed deadline, no V3 formal test/update, incomplete seed repeats and calibration worsening remain disclosed."
+  ],
+  "independent_review": {
+    "path": "results/research_v3/independent-closeout-pdf-review/final_review.json",
+    "sha256": "bdb2ba470eb0078f83c6ae0bfd1629e027dd7bab755649b849db038b2256d0d2"
+  },
+  "superseded_first_pdf_preserved": {
+    "path": "reports/research_v3/research_closeout/research_closeout_v3.pdf",
+    "sha256": "53945861fe0adeb71b29cda388c338720344feb59acf3248bfc75eeaa2beae1f"
+  }
+}

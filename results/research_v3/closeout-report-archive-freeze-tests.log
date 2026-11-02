@@ -1,0 +1,14 @@
+test_any_v3_test_execution_record_contradicts_archive (test_closeout_report_v3.CloseoutTests.test_any_v3_test_execution_record_contradicts_archive) ... ok
+test_builder_rejects_self_consistent_page_tamper_and_formal_schema (test_closeout_report_v3.CloseoutTests.test_builder_rejects_self_consistent_page_tamper_and_formal_schema) ... ok
+test_complete_archive_has_ten_pages_honest_status_all_rows_and_chinese_guide (test_closeout_report_v3.CloseoutTests.test_complete_archive_has_ten_pages_honest_status_all_rows_and_chinese_guide) ... ok
+test_deadline_no_score_and_monitoring_claims_are_required (test_closeout_report_v3.CloseoutTests.test_deadline_no_score_and_monitoring_claims_are_required) ... ok
+test_incomplete_seeds_and_four_actual_fusions_cannot_be_omitted (test_closeout_report_v3.CloseoutTests.test_incomplete_seeds_and_four_actual_fusions_cannot_be_omitted) ... ok
+test_missing_actual_reproduction_blocks_before_aggregate_read (test_closeout_report_v3.CloseoutTests.test_missing_actual_reproduction_blocks_before_aggregate_read) ... ok
+test_old_formal_gates_still_require_completed_test (test_closeout_report_v3.CloseoutTests.test_old_formal_gates_still_require_completed_test) ... ok
+test_rehashed_archive_freeze_cannot_allow_formal_test (test_closeout_report_v3.CloseoutTests.test_rehashed_archive_freeze_cannot_allow_formal_test) ... ok
+test_saved_outputs_are_exclusive_and_do_not_create_pdf (test_closeout_report_v3.CloseoutTests.test_saved_outputs_are_exclusive_and_do_not_create_pdf) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 2.676s
+
+OK

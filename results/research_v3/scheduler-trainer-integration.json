@@ -1,0 +1,25 @@
+{
+  "source_equal": true,
+  "data_fold_equal": true,
+  "config_hash_equal": true,
+  "source_files": [
+    "code/train_v3.py",
+    "code/common.py",
+    "code/mp2/models_v2.py",
+    "code/mp2/selection_v2.py",
+    "code/mp2/features.py",
+    "code/mp2/training.py",
+    "code/mp2/research_v3/training.py",
+    "code/mp2/research_v3/models.py",
+    "code/mp2/research_v3/optimizers.py",
+    "code/mp2/research_v3/preprocess.py",
+    "code/mp2/research_v3/selection.py"
+  ],
+  "data_files": [
+    "code/data/manifest.json",
+    "code/data/gsm8k_train.jsonl",
+    "code/data/candidates/gsm8k_train.jsonl",
+    "code/data/candidates/gsm8k_train.npz",
+    "results/research_v3/common_folds.json"
+  ]
+}

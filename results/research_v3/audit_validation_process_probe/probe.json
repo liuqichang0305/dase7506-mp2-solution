@@ -1,0 +1,71 @@
+{
+  "scope": "Synthetic matrix product only; no official data",
+  "site_packages": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Lib\\site-packages",
+  "results": {
+    "venv": {
+      "command": [
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import json,time,sys,numpy; from threadpoolctl import threadpool_info; print(json.dumps({'executable':sys.executable,'numpy_file':numpy.__file__,'pools':threadpool_info()})); x=numpy.ones((96,96)); [x@x for _ in range(100)]; time.sleep(.2)"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 0.5496767000004184,
+      "process_tree": [
+        {
+          "pid": 25016,
+          "create_time": 1793295730.7752717
+        },
+        {
+          "pid": 39276,
+          "create_time": 1793295730.7885306
+        }
+      ],
+      "sampled_peak_tree_threads": 7,
+      "sampled_peak_tree_rss_bytes": 32051200,
+      "sampled_peak_tree_plus_coordinator_threads": 11,
+      "sampled_cpu_seconds": 0.265625,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      },
+      "sampling_note": "10 ms samples include launcher and all observed actual children; CPU/RSS/threads are sampled, not exact integrals."
+    },
+    "base_isolated": {
+      "command": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-S",
+        "-c",
+        "import json,time,sys,numpy; from threadpoolctl import threadpool_info; print(json.dumps({'executable':sys.executable,'numpy_file':numpy.__file__,'pools':threadpool_info()})); x=numpy.ones((96,96)); [x@x for _ in range(100)]; time.sleep(.2)"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 0.5275886000017636,
+      "process_tree": [
+        {
+          "pid": 1204,
+          "create_time": 1793295731.3282983
+        }
+      ],
+      "sampled_peak_tree_threads": 4,
+      "sampled_peak_tree_rss_bytes": 27316224,
+      "sampled_peak_tree_plus_coordinator_threads": 8,
+      "sampled_cpu_seconds": 0.25,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      },
+      "sampling_note": "10 ms samples include launcher and all observed actual children; CPU/RSS/threads are sampled, not exact integrals."
+    }
+  }
+}

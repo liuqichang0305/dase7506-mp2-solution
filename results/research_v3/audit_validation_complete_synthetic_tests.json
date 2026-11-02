@@ -1,0 +1,18 @@
+{
+  "returncode": 0,
+  "seconds": 5.942901299997175,
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_confirm_validation_v3.py",
+    "-v"
+  ],
+  "source_sha256_before": "603ca467bd28d51c8bc0d52b087b3c113375e41fe52262125a49bb25b26e15de",
+  "source_sha256_after": "603ca467bd28d51c8bc0d52b087b3c113375e41fe52262125a49bb25b26e15de",
+  "scope": "Real numeric synthetic bundles plus prior-gated fixed fusion identity; no official validation/test"
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "mp2-v3-resumption-supplement-boundary-v1",
+  "source_commit": "65c16a3eef424e30b254ff58804dffe0fbda8793",
+  "source": "courses/dase7506/arena.mjs",
+  "source_blob_sha": "7a090e6311349e00dfa253e697e0ca0f70c1aa53",
+  "source_lines": [289, 296, 300, 314, 318],
+  "finding": "Artifact receipts created at or after release.published_at are ignored by the automatic snapshot. Current phase is review, so the normal score/link form is hidden. After-release correction of published artifact links is a documented instructor-controlled publication operation, preserving the original score and review window; it is not student authorization for a new score or replacement model.",
+  "relation_to_earlier_findings": "Refines the broad after-cutoff artifact-supplement statement in sources_and_findings.json with the now-active post-release boundary.",
+  "network_write_performed": false,
+  "new_score_or_artifact_issue_performed": false
+}

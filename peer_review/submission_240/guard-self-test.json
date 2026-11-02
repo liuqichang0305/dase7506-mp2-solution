@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "reference": true,
+    "outside": true,
+    "network": true,
+    "spawn": true
+  },
+  "denied": [
+    {
+      "event": "open",
+      "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\official\\data\\gsm8k_test.jsonl",
+      "writing": false
+    },
+    {
+      "event": "open",
+      "path": "C:\\Users\\Liuye\\.gitconfig",
+      "writing": false
+    },
+    {
+      "event": "socket.__new__"
+    },
+    {
+      "event": "subprocess.Popen"
+    }
+  ]
+}

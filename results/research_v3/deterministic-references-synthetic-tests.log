@@ -1,0 +1,12 @@
+Captured from the actual terminal tool result, not a regenerated test run.
+Command: .venv/Scripts/python.exe -m unittest discover -s code/tests -p test_deterministic_train_references_v3.py -v
+Process exit code: 0
+
+test_all_625_synthetic_parse_vote_patterns_and_ties (test_deterministic_train_references_v3.DeterministicReferenceTests.test_all_625_synthetic_parse_vote_patterns_and_ties) ... ok
+test_none_exclusion_first_occurrence_and_all_none (test_deterministic_train_references_v3.DeterministicReferenceTests.test_none_exclusion_first_occurrence_and_all_none) ... ok
+test_reject_invalid_shape_and_group_values (test_deterministic_train_references_v3.DeterministicReferenceTests.test_reject_invalid_shape_and_group_values) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.203s
+
+OK

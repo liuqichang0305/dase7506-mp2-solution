@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-10-29T17:52:24.038245+00:00",
+  "comparison": "results/research_v3/audit_preservation_implementation_comparison.json",
+  "baseline_count": 829,
+  "included_prefixes": [
+    "artifacts/",
+    "results/",
+    "reports/",
+    "submission/",
+    "docs/",
+    "code/"
+  ],
+  "excluded_prefix": "code/data/",
+  "root_active_files_excluded_from_829": [
+    ".gitattributes",
+    "PROJECT_STATE.md",
+    "DECISIONS.md",
+    "BLOCKERS.md"
+  ],
+  "interpretation": "829 inventoried historical files unchanged, not the whole repository. Root active state/config files have authorized V3 edits. Freeze 35 source/assets and prior92 protection checks are separately exact."
+}

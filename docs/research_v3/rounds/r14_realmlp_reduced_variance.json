@@ -1,0 +1,70 @@
+{
+  "round": "r14_realmlp_reduced_variance",
+  "hypothesis": "The completed R10 reduced-input RealMLP reached1665/2114 hard versus1611 for its full-input robust-all control (+54 questions). The family remains below the global Attention incumbent and this representation change also changes first-layer capacity/initialization. Before rejecting it, independently test dropout0.1 and same-trajectory EMA0.99 against the exact reduced-input control (dropout0, no EMA). Each changes one setting; learning rate/width/robust preprocessing/objective remain fixed. Lower learning rate and greater width on full input did not help, so there is no further LR/width grid.",
+  "evidence_sha256": {
+    "code/configs/research_v3/v3_realmlp_robust_embedding_stats_s0.json": "213fedfc6d2b366d3d366170ef87d5f959ebac1143f9be9463b1ea017bf5eb75",
+    "results/research_v3/v3_realmlp_robust_embedding_stats_s0/summary.json": "ff1af5711dc0db3159928434ecd7b2717964330eb2a572acb18d42f51068e4fb",
+    "results/research_v3/v3_realmlp_robust_all_s0/summary.json": "208723bd91f4a758659bee40779c87157c441cac056ecf4b9ad3d359e94692ee"
+  },
+  "configs": [
+    {
+      "family": "realmlp",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.1,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.01,
+      "weight_decay": 0.001,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "robust_all",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_realmlp_embedding_stats_drop01_s0",
+      "depth": 3,
+      "beta2": 0.95,
+      "input_scale_lr_multiplier": 6,
+      "bias_lr_multiplier": 0.1,
+      "input_features": "embedding_stats"
+    },
+    {
+      "family": "realmlp",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.01,
+      "weight_decay": 0.001,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "robust_all",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_realmlp_embedding_stats_ema_s0",
+      "depth": 3,
+      "beta2": 0.95,
+      "input_scale_lr_multiplier": 6,
+      "bias_lr_multiplier": 0.1,
+      "input_features": "embedding_stats",
+      "ema_decay": 0.99
+    }
+  ]
+}

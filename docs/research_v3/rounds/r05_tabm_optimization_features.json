@@ -1,0 +1,90 @@
+{
+  "round": "r05_tabm_optimization_features",
+  "hypothesis": "R02 TabM k4 selected epoch2 in all three inner folds and reached1606/2114 hard; k8 reached1619. Before rejecting the family, independently test a lower learning rate for optimization resolution, same-trajectory EMA for variance, and removal of abs(candidate-minus-question-mean) features for input complexity. Each variant changes only one setting from the existing k4 control; the common three outer folds and fixed deployment seed remain unchanged.",
+  "evidence": [
+    "results/research_v3/analysis/r02_complete/analysis.json",
+    "results/research_v3/v3_tabm_k4_s0/summary.json"
+  ],
+  "configs": [
+    {
+      "family": "tabm",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.1,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.0003,
+      "weight_decay": 0.001,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_tabm_k4_lr0003_s0",
+      "k": 4,
+      "depth": 3
+    },
+    {
+      "family": "tabm",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.1,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_tabm_k4_ema_s0",
+      "k": 4,
+      "depth": 3,
+      "ema_decay": 0.99
+    },
+    {
+      "family": "tabm",
+      "width": 128,
+      "hidden": 64,
+      "dropout": 0.1,
+      "objective": "group",
+      "alpha": 0,
+      "reduction": "full",
+      "optimizer": "adamw",
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 10,
+      "seed": 3036900957,
+      "preprocess": "standard",
+      "decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "experiment_id": "v3_tabm_k4_embedding_stats_s0",
+      "k": 4,
+      "depth": 3,
+      "input_features": "embedding_stats"
+    }
+  ]
+}

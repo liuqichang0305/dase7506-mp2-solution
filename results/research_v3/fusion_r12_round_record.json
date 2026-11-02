@@ -1,0 +1,145 @@
+{
+  "schema": "mp2-fixed-fusion-round-decision-v3",
+  "created_at_utc": "2026-10-30T04:38:36.960689+00:00",
+  "round": "r12_reduced_tabm_attention_equal_fusion",
+  "round_type": "hypothesis",
+  "status": "completed",
+  "configurations": 1,
+  "completed_outer_fits": 0,
+  "new_training_fits": 0,
+  "results": [
+    {
+      "experiment_id": "v3_fusion_reduced_tabm_attention_ema_s0",
+      "methods": [
+        "v3:v3_tabm_k4_embedding_stats_s0",
+        "v3:v3_attention_ema_s0"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "metrics": {
+        "overall": {
+          "correct": 4321,
+          "n": 4755,
+          "pooled_accuracy": 90.87276550998948,
+          "fold_mean": 90.87276550998949,
+          "fold_sd": 0.8112429662244338,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 1455,
+              "n": 1585,
+              "accuracy": 91.7981072555205
+            },
+            {
+              "fold": 1,
+              "correct": 1431,
+              "n": 1585,
+              "accuracy": 90.28391167192429
+            },
+            {
+              "fold": 2,
+              "correct": 1435,
+              "n": 1585,
+              "accuracy": 90.53627760252367
+            }
+          ]
+        },
+        "hard": {
+          "correct": 1680,
+          "n": 2114,
+          "pooled_accuracy": 79.47019867549669,
+          "fold_mean": 79.4698312916398,
+          "fold_sd": 1.8301985883928986,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 575,
+              "n": 705,
+              "accuracy": 81.56028368794325
+            },
+            {
+              "fold": 1,
+              "correct": 551,
+              "n": 705,
+              "accuracy": 78.15602836879432
+            },
+            {
+              "fold": 2,
+              "correct": 554,
+              "n": 704,
+              "accuracy": 78.69318181818183
+            }
+          ]
+        },
+        "single_positive": {
+          "correct": 379,
+          "n": 711,
+          "pooled_accuracy": 53.30520393811533,
+          "fold_mean": 53.30520393811533,
+          "fold_sd": 7.275677725106923,
+          "folds": [
+            {
+              "fold": 0,
+              "correct": 145,
+              "n": 237,
+              "accuracy": 61.18143459915611
+            },
+            {
+              "fold": 1,
+              "correct": 111,
+              "n": 237,
+              "accuracy": 46.835443037974684
+            },
+            {
+              "fold": 2,
+              "correct": 123,
+              "n": 237,
+              "accuracy": 51.89873417721519
+            }
+          ]
+        }
+      },
+      "attention_control": "v3:v3_attention_ema_s0",
+      "hard_delta_questions_vs_attention_control": -5,
+      "overall_delta_questions_vs_attention_control": -5,
+      "single_positive_delta_questions_vs_attention_control": -9,
+      "hard_delta_questions_vs_historical_best": -7,
+      "maximum_member_asset_bytes": 1876221,
+      "new_training_fits": 0,
+      "decision": "Reject this fixed mixture; no post-result weight, temperature, seed, member or routing changes.",
+      "local_retention_rule_passed": false,
+      "decision_policy": {
+        "matched_control": "v3:v3_attention_ema_s0",
+        "retain_for_final_comparison_only_if": "hard_correct > control.hard_correct AND overall_correct >= control.overall_correct",
+        "otherwise": "Reject this fixed mixture; no post-result weight, temperature, seed, member or routing changes.",
+        "single_positive": "Disclose its exact change; it is not a post-hoc tuning criterion.",
+        "final_selection": "A local pass is not automatic deployment. The unchanged campaign finalist/resource rules still apply.",
+        "historical_reference": "research_v2:attention_regularized_s0",
+        "historical_hard_correct": 1687,
+        "continuation_reference": "At registration lock the highest complete BASE957 common-three-fold hard mean across current V3, preserved V2 and prior registered fusions. Do not replace it after evaluating this mixture.",
+        "campaign_threshold_pp_strictly_greater_than": 0.5
+      },
+      "diagnostic_path": "results/research_v3/v3_fusion_reduced_tabm_attention_ema_s0/diagnostic.json",
+      "diagnostic_sha256": "f62c37770d10b1cd398e387fd3b83300f952d158dcebfdb798358bf787d4eb1e"
+    }
+  ],
+  "exceeds_registered_half_point": false,
+  "increment_above_global_reference_pp": -0.3315737158822145,
+  "global_reference": "research_v2:attention_regularized_s0",
+  "global_incumbent_before_evaluation": {
+    "experiment_id": "research_v2:attention_regularized_s0",
+    "path": "results/research_v2/attention_regularized_s0/summary.json",
+    "sha256": "822bba4dcdd4253744303ea650551fcd80780aeacce1f3b8a8bca475c612f497",
+    "hard_fold_mean": 79.80140500752202,
+    "hard_correct": 1687,
+    "hard_n": 2114
+  },
+  "decision": "Reject this fixed mixture; no post-result weight, temperature, seed, member or routing changes.",
+  "terminal_observed_wall_seconds": {
+    "v3_fusion_reduced_tabm_attention_ema_s0": 1.4882142999995267
+  },
+  "execution_path": "results/research_v3/fusion_r12_execution/execution.json",
+  "execution_sha256": "82c4cf1dde9f5f38feed931b536039bcec3679d9b3273424f31a16cdd53e4910"
+}

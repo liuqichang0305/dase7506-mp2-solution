@@ -1,0 +1,725 @@
+{
+  "schema": "mp2-validation-confirmation-v3",
+  "completed_at_utc": "2026-11-02T07:26:28.166998+00:00",
+  "lock_sha256": "4dfc67595cabf6e9f7dc0d0ef5460721e522e96c08dbd01ff0f87467e36ff9cf",
+  "finalists": [
+    {
+      "name": "v3_tabm_embedding_stats_ema_s0",
+      "method": "code/solution_v3.py",
+      "checkpoint": "artifacts/research_v3/final_v3_tabm_embedding_stats_ema_s0",
+      "selector": {
+        "kind": "single_model",
+        "experiment_id": "v3_tabm_embedding_stats_ema_s0",
+        "family": "tabm",
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "member_probability_average": true
+      },
+      "components": [
+        {
+          "kind": "new",
+          "experiment_id": "v3_tabm_embedding_stats_ema_s0",
+          "seed": 3036900957,
+          "bundle_subdir": ".",
+          "final_fit_path": "results/research_v3/v3_tabm_embedding_stats_ema_s0/final_fit.json",
+          "final_fit_sha256": "99c52d4df9a47cb9caeaac654a277c06e664282320963e0482c3ae7e621c1c36",
+          "cv_summary_sha256": "8f92c54587fc3f758939b3eb3ed51a5c2b0cb073305ffbd5fda93c83b8a17c28"
+        }
+      ],
+      "schema": "mp2-validation-candidate-complete-v3",
+      "lock_sha256": "4dfc67595cabf6e9f7dc0d0ef5460721e522e96c08dbd01ff0f87467e36ff9cf",
+      "status": "passed",
+      "local_resource_eligible": true,
+      "prediction_plus_scoring_seconds": 2.5644871999975294,
+      "resource": {
+        "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v3\\final_v3_tabm_embedding_stats_ema_s0",
+        "files": [
+          {
+            "path": "config.json",
+            "sha256": "8bbd5349ade14b3ad316738f035882fcd394e39b4691283def9d50c78d900cd8",
+            "disk_bytes": 513,
+            "uncompressed_bytes": 513
+          },
+          {
+            "path": "weights.npz",
+            "sha256": "4a9f070f02ef0a0df246bfb241476914c1c4390b7581bd42ef0f7637ef733e10",
+            "disk_bytes": 740400,
+            "uncompressed_bytes": 740400,
+            "members": [
+              {
+                "name": "mean.npy",
+                "uncompressed_bytes": 16640
+              },
+              {
+                "name": "scale.npy",
+                "uncompressed_bytes": 16640
+              },
+              {
+                "name": "prep_clip_mask.npy",
+                "uncompressed_bytes": 2192
+              },
+              {
+                "name": "prep_constant_mask.npy",
+                "uncompressed_bytes": 2192
+              },
+              {
+                "name": "blocks.0.weight.npy",
+                "uncompressed_bytes": 532608
+              },
+              {
+                "name": "blocks.0.r.npy",
+                "uncompressed_bytes": 16768
+              },
+              {
+                "name": "blocks.0.s.npy",
+                "uncompressed_bytes": 2176
+              },
+              {
+                "name": "blocks.0.bias.npy",
+                "uncompressed_bytes": 2176
+              },
+              {
+                "name": "blocks.1.weight.npy",
+                "uncompressed_bytes": 65664
+              },
+              {
+                "name": "blocks.1.r.npy",
+                "uncompressed_bytes": 2176
+              },
+              {
+                "name": "blocks.1.s.npy",
+                "uncompressed_bytes": 2176
+              },
+              {
+                "name": "blocks.1.bias.npy",
+                "uncompressed_bytes": 2176
+              },
+              {
+                "name": "blocks.2.weight.npy",
+                "uncompressed_bytes": 65664
+              },
+              {
+                "name": "blocks.2.r.npy",
+                "uncompressed_bytes": 2176
+              },
+              {
+                "name": "blocks.2.s.npy",
+                "uncompressed_bytes": 2176
+              },
+              {
+                "name": "blocks.2.bias.npy",
+                "uncompressed_bytes": 2176
+              },
+              {
+                "name": "head.weight.npy",
+                "uncompressed_bytes": 2176
+              },
+              {
+                "name": "head.bias.npy",
+                "uncompressed_bytes": 144
+              }
+            ],
+            "arrays": [
+              {
+                "name": "mean",
+                "shape": [
+                  2064
+                ],
+                "dtype": "float64",
+                "array_bytes": 16512
+              },
+              {
+                "name": "scale",
+                "shape": [
+                  2064
+                ],
+                "dtype": "float64",
+                "array_bytes": 16512
+              },
+              {
+                "name": "prep_clip_mask",
+                "shape": [
+                  2064
+                ],
+                "dtype": "uint8",
+                "array_bytes": 2064
+              },
+              {
+                "name": "prep_constant_mask",
+                "shape": [
+                  2064
+                ],
+                "dtype": "uint8",
+                "array_bytes": 2064
+              },
+              {
+                "name": "blocks.0.weight",
+                "shape": [
+                  128,
+                  1040
+                ],
+                "dtype": "float32",
+                "array_bytes": 532480
+              },
+              {
+                "name": "blocks.0.r",
+                "shape": [
+                  4,
+                  1040
+                ],
+                "dtype": "float32",
+                "array_bytes": 16640
+              },
+              {
+                "name": "blocks.0.s",
+                "shape": [
+                  4,
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 2048
+              },
+              {
+                "name": "blocks.0.bias",
+                "shape": [
+                  4,
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 2048
+              },
+              {
+                "name": "blocks.1.weight",
+                "shape": [
+                  128,
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 65536
+              },
+              {
+                "name": "blocks.1.r",
+                "shape": [
+                  4,
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 2048
+              },
+              {
+                "name": "blocks.1.s",
+                "shape": [
+                  4,
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 2048
+              },
+              {
+                "name": "blocks.1.bias",
+                "shape": [
+                  4,
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 2048
+              },
+              {
+                "name": "blocks.2.weight",
+                "shape": [
+                  128,
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 65536
+              },
+              {
+                "name": "blocks.2.r",
+                "shape": [
+                  4,
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 2048
+              },
+              {
+                "name": "blocks.2.s",
+                "shape": [
+                  4,
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 2048
+              },
+              {
+                "name": "blocks.2.bias",
+                "shape": [
+                  4,
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 2048
+              },
+              {
+                "name": "head.weight",
+                "shape": [
+                  4,
+                  1,
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 2048
+              },
+              {
+                "name": "head.bias",
+                "shape": [
+                  4,
+                  1
+                ],
+                "dtype": "float32",
+                "array_bytes": 16
+              }
+            ]
+          }
+        ],
+        "uncompressed_bytes": 740913,
+        "limit_bytes": 16777216,
+        "within_limit": true,
+        "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+        "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+      },
+      "output_sha256": {
+        "evaluation_started.json": "e8c1d0d4985fc3babc62647657363fef114f11d467d6cda23ccb00c2e0a51569",
+        "prediction-thread-pools.json": "df93e62f02506fd12ad6a19bb807623a4443e45e46d12e07c51c61b9355f512b",
+        "prediction.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "prediction.stdout.log": "64691638406d9962241e667cf52304c3b639417c8f3e437581f4ab3668cd497e",
+        "scoring-thread-pools.json": "341766c81c6d8630b34c434ecef8c74e9892f72c6624faad1a2b26de05a1a547",
+        "scoring.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scoring.stdout.log": "1a8b7a59f195b09909daa5c29caeee27d13e63aae947d64a8764ac80bf6e46f2",
+        "validation-predictions.json": "c21220768746bae2f4cf1fc875786127a6ccd7c29cbb0c83e57fc3329719bc7d",
+        "validation-score.json": "1a8b7a59f195b09909daa5c29caeee27d13e63aae947d64a8764ac80bf6e46f2",
+        "validation-timing.json": "83eea86e3e4d9512cf1d192c754c41718ebbea68b933fb0996b6ed7b3b797a6e"
+      },
+      "validation": {
+        "correct": 735,
+        "n": 798,
+        "accuracy": 92.10526315789474,
+        "hard_correct": 292,
+        "hard_n": 355,
+        "hard_accuracy": 82.25352112676056,
+        "single_positive_correct": 63,
+        "single_positive_n": 117,
+        "single_positive_accuracy": 53.84615384615385
+      }
+    },
+    {
+      "name": "v3_attention_ema_s0",
+      "method": "code/solution_v3.py",
+      "checkpoint": "artifacts/research_v3/final_v3_attention_ema_s0",
+      "selector": {
+        "kind": "single_model",
+        "experiment_id": "v3_attention_ema_s0",
+        "family": "attention",
+        "decoder": {
+          "mode": "group_lse",
+          "alpha": 0,
+          "tau": 1,
+          "mask": true
+        },
+        "member_probability_average": false
+      },
+      "components": [
+        {
+          "kind": "new",
+          "experiment_id": "v3_attention_ema_s0",
+          "seed": 3036900957,
+          "bundle_subdir": ".",
+          "final_fit_path": "results/research_v3/v3_attention_ema_s0/final_fit.json",
+          "final_fit_sha256": "4a79c15658c82ed50bf089044f5942227cd4d0a27ee3acb3b4874076f684722a",
+          "cv_summary_sha256": "0b6e265b3d47cc37ab6d8dabb1e8de0f28238702d8045afd58c15abecbea1e24"
+        }
+      ],
+      "schema": "mp2-validation-candidate-complete-v3",
+      "lock_sha256": "4dfc67595cabf6e9f7dc0d0ef5460721e522e96c08dbd01ff0f87467e36ff9cf",
+      "status": "passed",
+      "local_resource_eligible": true,
+      "prediction_plus_scoring_seconds": 1.892513400001917,
+      "resource": {
+        "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v3\\final_v3_attention_ema_s0",
+        "files": [
+          {
+            "path": "config.json",
+            "sha256": "5d8f04c4432d4ae34d64bd4221bf903683809b052f2601faf1f14ca410b5ee5b",
+            "disk_bytes": 496,
+            "uncompressed_bytes": 496
+          },
+          {
+            "path": "weights.npz",
+            "sha256": "0f0961ed281ed5b4e4347a48da37292653f2704eb045517ec57f4caafca8381c",
+            "disk_bytes": 1134812,
+            "uncompressed_bytes": 1134812,
+            "members": [
+              {
+                "name": "mean.npy",
+                "uncompressed_bytes": 16640
+              },
+              {
+                "name": "scale.npy",
+                "uncompressed_bytes": 16640
+              },
+              {
+                "name": "prep_clip_mask.npy",
+                "uncompressed_bytes": 2192
+              },
+              {
+                "name": "prep_constant_mask.npy",
+                "uncompressed_bytes": 2192
+              },
+              {
+                "name": "input.weight.npy",
+                "uncompressed_bytes": 524416
+              },
+              {
+                "name": "input.bias.npy",
+                "uncompressed_bytes": 640
+              },
+              {
+                "name": "norm1.weight.npy",
+                "uncompressed_bytes": 640
+              },
+              {
+                "name": "norm1.bias.npy",
+                "uncompressed_bytes": 640
+              },
+              {
+                "name": "qkv.weight.npy",
+                "uncompressed_bytes": 196736
+              },
+              {
+                "name": "qkv.bias.npy",
+                "uncompressed_bytes": 1664
+              },
+              {
+                "name": "out.weight.npy",
+                "uncompressed_bytes": 65664
+              },
+              {
+                "name": "out.bias.npy",
+                "uncompressed_bytes": 640
+              },
+              {
+                "name": "norm2.weight.npy",
+                "uncompressed_bytes": 640
+              },
+              {
+                "name": "norm2.bias.npy",
+                "uncompressed_bytes": 640
+              },
+              {
+                "name": "ff1.weight.npy",
+                "uncompressed_bytes": 131200
+              },
+              {
+                "name": "ff1.bias.npy",
+                "uncompressed_bytes": 1152
+              },
+              {
+                "name": "ff2.weight.npy",
+                "uncompressed_bytes": 131200
+              },
+              {
+                "name": "ff2.bias.npy",
+                "uncompressed_bytes": 640
+              },
+              {
+                "name": "rho.weight.npy",
+                "uncompressed_bytes": 36992
+              },
+              {
+                "name": "rho.bias.npy",
+                "uncompressed_bytes": 384
+              },
+              {
+                "name": "head.weight.npy",
+                "uncompressed_bytes": 384
+              },
+              {
+                "name": "head.bias.npy",
+                "uncompressed_bytes": 132
+              }
+            ],
+            "arrays": [
+              {
+                "name": "mean",
+                "shape": [
+                  2064
+                ],
+                "dtype": "float64",
+                "array_bytes": 16512
+              },
+              {
+                "name": "scale",
+                "shape": [
+                  2064
+                ],
+                "dtype": "float64",
+                "array_bytes": 16512
+              },
+              {
+                "name": "prep_clip_mask",
+                "shape": [
+                  2064
+                ],
+                "dtype": "uint8",
+                "array_bytes": 2064
+              },
+              {
+                "name": "prep_constant_mask",
+                "shape": [
+                  2064
+                ],
+                "dtype": "uint8",
+                "array_bytes": 2064
+              },
+              {
+                "name": "input.weight",
+                "shape": [
+                  128,
+                  1024
+                ],
+                "dtype": "float32",
+                "array_bytes": 524288
+              },
+              {
+                "name": "input.bias",
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 512
+              },
+              {
+                "name": "norm1.weight",
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 512
+              },
+              {
+                "name": "norm1.bias",
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 512
+              },
+              {
+                "name": "qkv.weight",
+                "shape": [
+                  384,
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 196608
+              },
+              {
+                "name": "qkv.bias",
+                "shape": [
+                  384
+                ],
+                "dtype": "float32",
+                "array_bytes": 1536
+              },
+              {
+                "name": "out.weight",
+                "shape": [
+                  128,
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 65536
+              },
+              {
+                "name": "out.bias",
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 512
+              },
+              {
+                "name": "norm2.weight",
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 512
+              },
+              {
+                "name": "norm2.bias",
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 512
+              },
+              {
+                "name": "ff1.weight",
+                "shape": [
+                  256,
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 131072
+              },
+              {
+                "name": "ff1.bias",
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "array_bytes": 1024
+              },
+              {
+                "name": "ff2.weight",
+                "shape": [
+                  128,
+                  256
+                ],
+                "dtype": "float32",
+                "array_bytes": 131072
+              },
+              {
+                "name": "ff2.bias",
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "array_bytes": 512
+              },
+              {
+                "name": "rho.weight",
+                "shape": [
+                  64,
+                  144
+                ],
+                "dtype": "float32",
+                "array_bytes": 36864
+              },
+              {
+                "name": "rho.bias",
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "array_bytes": 256
+              },
+              {
+                "name": "head.weight",
+                "shape": [
+                  1,
+                  64
+                ],
+                "dtype": "float32",
+                "array_bytes": 256
+              },
+              {
+                "name": "head.bias",
+                "shape": [
+                  1
+                ],
+                "dtype": "float32",
+                "array_bytes": 4
+              }
+            ]
+          }
+        ],
+        "uncompressed_bytes": 1135308,
+        "limit_bytes": 16777216,
+        "within_limit": true,
+        "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+        "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+      },
+      "output_sha256": {
+        "evaluation_started.json": "88961d7534fde09a17b31dce0c2629dc5e0e8ae764f00cab2e887aa073b405bc",
+        "prediction-thread-pools.json": "df93e62f02506fd12ad6a19bb807623a4443e45e46d12e07c51c61b9355f512b",
+        "prediction.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "prediction.stdout.log": "10673c0116ce0af1174eda3a584fa1749c970c1d64f5b5d6e512f7f060ae23e7",
+        "scoring-thread-pools.json": "341766c81c6d8630b34c434ecef8c74e9892f72c6624faad1a2b26de05a1a547",
+        "scoring.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scoring.stdout.log": "283720ec2a49fe25ece275b0b8bd2e5dae2b3a82c041b354eb5152555fed717f",
+        "validation-predictions.json": "4b64321d63f09497e52231797a73cd10e5b5bd592dee291f1815cb52eb1e7627",
+        "validation-score.json": "283720ec2a49fe25ece275b0b8bd2e5dae2b3a82c041b354eb5152555fed717f",
+        "validation-timing.json": "2e793e0f26026e487dbe12d31a3cc59afa00bdc35bd0e59e511bb9b812e3f31b"
+      },
+      "validation": {
+        "correct": 736,
+        "n": 798,
+        "accuracy": 92.23057644110276,
+        "hard_correct": 293,
+        "hard_n": 355,
+        "hard_accuracy": 82.53521126760563,
+        "single_positive_correct": 68,
+        "single_positive_n": 117,
+        "single_positive_accuracy": 58.119658119658126
+      }
+    }
+  ],
+  "selected": {
+    "name": "deepsets_regularized_s0",
+    "method": "code/solution_v2.py",
+    "checkpoint": "artifacts/research_v2/final_deepsets",
+    "historical_fallback": true
+  },
+  "baseline_validation": {
+    "correct": 740,
+    "n": 798,
+    "accuracy": 92.73182957393483,
+    "hard_correct": 297,
+    "hard_n": 355,
+    "hard_accuracy": 83.66197183098592,
+    "single_positive_correct": 68,
+    "single_positive_n": 117,
+    "single_positive_accuracy": 58.119658119658126
+  },
+  "evidence_sha256": {
+    "results/research_v3/validation/v3_tabm_embedding_stats_ema_s0/evaluation_complete.json": "323eccae1c8b3eab395ac7e72ffa9815a1a022f007f51c27cd179c170cd66a20",
+    "results/research_v3/validation/v3_tabm_embedding_stats_ema_s0/evaluation_started.json": "e8c1d0d4985fc3babc62647657363fef114f11d467d6cda23ccb00c2e0a51569",
+    "results/research_v3/validation/v3_tabm_embedding_stats_ema_s0/prediction-thread-pools.json": "df93e62f02506fd12ad6a19bb807623a4443e45e46d12e07c51c61b9355f512b",
+    "results/research_v3/validation/v3_tabm_embedding_stats_ema_s0/prediction.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/research_v3/validation/v3_tabm_embedding_stats_ema_s0/prediction.stdout.log": "64691638406d9962241e667cf52304c3b639417c8f3e437581f4ab3668cd497e",
+    "results/research_v3/validation/v3_tabm_embedding_stats_ema_s0/scoring-thread-pools.json": "341766c81c6d8630b34c434ecef8c74e9892f72c6624faad1a2b26de05a1a547",
+    "results/research_v3/validation/v3_tabm_embedding_stats_ema_s0/scoring.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/research_v3/validation/v3_tabm_embedding_stats_ema_s0/scoring.stdout.log": "1a8b7a59f195b09909daa5c29caeee27d13e63aae947d64a8764ac80bf6e46f2",
+    "results/research_v3/validation/v3_tabm_embedding_stats_ema_s0/validation-events.json": "47a1941ad87ff4712109ef6740fd36bb8afbd624f30ae11bf671d48b26ca369e",
+    "results/research_v3/validation/v3_tabm_embedding_stats_ema_s0/validation-events.npz": "8b77975d17b360dfe2c2a2564aeb34bbe52c4dcb6a6c687fafe4d2c19369aa2e",
+    "results/research_v3/validation/v3_tabm_embedding_stats_ema_s0/validation-predictions.json": "c21220768746bae2f4cf1fc875786127a6ccd7c29cbb0c83e57fc3329719bc7d",
+    "results/research_v3/validation/v3_tabm_embedding_stats_ema_s0/validation-score.json": "1a8b7a59f195b09909daa5c29caeee27d13e63aae947d64a8764ac80bf6e46f2",
+    "results/research_v3/validation/v3_tabm_embedding_stats_ema_s0/validation-timing.json": "83eea86e3e4d9512cf1d192c754c41718ebbea68b933fb0996b6ed7b3b797a6e",
+    "results/research_v3/validation/v3_attention_ema_s0/evaluation_complete.json": "efa95938efaf64348cf9bc2cdfd6b8b353353cb073b0b4edde1f759818176fb1",
+    "results/research_v3/validation/v3_attention_ema_s0/evaluation_started.json": "88961d7534fde09a17b31dce0c2629dc5e0e8ae764f00cab2e887aa073b405bc",
+    "results/research_v3/validation/v3_attention_ema_s0/prediction-thread-pools.json": "df93e62f02506fd12ad6a19bb807623a4443e45e46d12e07c51c61b9355f512b",
+    "results/research_v3/validation/v3_attention_ema_s0/prediction.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/research_v3/validation/v3_attention_ema_s0/prediction.stdout.log": "10673c0116ce0af1174eda3a584fa1749c970c1d64f5b5d6e512f7f060ae23e7",
+    "results/research_v3/validation/v3_attention_ema_s0/scoring-thread-pools.json": "341766c81c6d8630b34c434ecef8c74e9892f72c6624faad1a2b26de05a1a547",
+    "results/research_v3/validation/v3_attention_ema_s0/scoring.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/research_v3/validation/v3_attention_ema_s0/scoring.stdout.log": "283720ec2a49fe25ece275b0b8bd2e5dae2b3a82c041b354eb5152555fed717f",
+    "results/research_v3/validation/v3_attention_ema_s0/validation-events.json": "f1e14baa8f9c7c886b48e3b296a442c21c8d6e1a22cb22e8560cf159553f3ae4",
+    "results/research_v3/validation/v3_attention_ema_s0/validation-events.npz": "a22f114936a9444c5fc06aec131eac06747587b271c76545de5e5bb3f049ba79",
+    "results/research_v3/validation/v3_attention_ema_s0/validation-predictions.json": "4b64321d63f09497e52231797a73cd10e5b5bd592dee291f1815cb52eb1e7627",
+    "results/research_v3/validation/v3_attention_ema_s0/validation-score.json": "283720ec2a49fe25ece275b0b8bd2e5dae2b3a82c041b354eb5152555fed717f",
+    "results/research_v3/validation/v3_attention_ema_s0/validation-timing.json": "2e793e0f26026e487dbe12d31a3cc59afa00bdc35bd0e59e511bb9b812e3f31b"
+  },
+  "selection_status": "Development choice pending independent final contract/export and clean reproduction",
+  "selection_rule": "Resource eligible; hard>=297 and full>=740 with at least one strict improvement; hard/full/bytes/latency; exact historical tie retains historical checkpoint",
+  "search_remains_closed": true,
+  "new_test_evaluated": false,
+  "test_enabled": false,
+  "rejected_data_reads": [],
+  "limitation": "Previously used development holdout; at most two locked new candidates. Local timing does not certify reference hardware."
+}

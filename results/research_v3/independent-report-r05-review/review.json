@@ -1,0 +1,42 @@
+{
+  "scope": "Source review and synthetic aggregate fixtures only. No production report preparation/rendering, raw banks, actual validation/test scores, decoded arrays, training, evaluation or network access.",
+  "started_at_utc": "2026-10-30T04:47:57.162641+00:00",
+  "completed_at_utc": "2026-10-30T04:48:08.477453+00:00",
+  "source_sha256_before": {
+    "reports/research_v3/prepare_report_inputs.py": "06d534149e87bed06d49eddc32b51658fe67bdb285c1e58231c6891e6e9c38c2",
+    "code/tests/test_report_inputs_v3.py": "fb7096b5a4e5d3a604a34b030759462bc4783611c64a78f257a6d61a3228e932",
+    "docs/research_v3/REPORT_INPUTS.md": "7744c86c7d29956643a0d14136acb26830bff7cfa89d0855a1c3f8e5d3980651"
+  },
+  "source_sha256_after": {
+    "reports/research_v3/prepare_report_inputs.py": "06d534149e87bed06d49eddc32b51658fe67bdb285c1e58231c6891e6e9c38c2",
+    "code/tests/test_report_inputs_v3.py": "fb7096b5a4e5d3a604a34b030759462bc4783611c64a78f257a6d61a3228e932",
+    "docs/research_v3/REPORT_INPUTS.md": "7744c86c7d29956643a0d14136acb26830bff7cfa89d0855a1c3f8e5d3980651"
+  },
+  "sources_unchanged": true,
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_report_inputs_v3.py",
+    "-v"
+  ],
+  "process_wall_seconds": 11.310356400004821,
+  "exit_code": 0,
+  "log_sha256": {
+    "stderr.log": "24eb4bbc6282ac5003ee963c79a00a70487002d738a57a7e23791d748a32e4db",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "passed": true,
+  "review": [
+    "R05 adds saved matched TabM aggregate counts, fixed-seed 5000-draw paired intervals and per-fold gains, without recomputation.",
+    "Full historical diagnostic completion/output inventory and source snapshots are hash-bound. Raw train data hashes are reconciled to registrations without opening bank files.",
+    "Final analysis rows, exact primary-seed recipe differences, common folds, summary/OOF identities and paired contingency counts must agree.",
+    "The report explicitly distinguishes changed input/capacity/RNG consumption and conditional selected-OOF interval optimism.",
+    "Synthetic +9 gain/+2,+3,+4 folds differ from the actual saved +62 result to detect hardcoded narrative numbers. Actual compatibility report was read only; no production generator or historical OOF computation rerun.",
+    "Actual final PDF layout/page count remains a later production QA requirement."
+  ]
+}

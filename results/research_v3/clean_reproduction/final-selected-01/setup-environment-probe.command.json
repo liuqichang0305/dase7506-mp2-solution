@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduce-v3-env-final-selected-01-6f8dc1e8a507\\Scripts\\python.exe",
+    "-I",
+    "-c",
+    "import importlib.metadata,importlib.util,json,sys,sysconfig\nfrom pathlib import Path\nimport numpy\nprint(json.dumps({'python_prefix':sys.prefix,'python_executable':sys.executable,\n 'base_executable':str(Path(getattr(sys,'_base_executable',sys.executable)).resolve()),\n 'base_prefix':sys.base_prefix,'python_version':sys.version,\n 'site_packages':sorted({sysconfig.get_paths()[k] for k in ('purelib','platlib')}),\n 'runtime_paths':[p for p in sys.path if p and not Path(p).resolve().is_relative_to(Path(sys.prefix).resolve())],\n 'packages':sorted(d.metadata['Name'].lower().replace('_','-')+'=='+d.version for d in importlib.metadata.distributions()),\n 'numpy_version':numpy.__version__,'torch_available':importlib.util.find_spec('torch') is not None,\n 'tensorflow_available':importlib.util.find_spec('tensorflow') is not None},indent=2))\n"
+  ],
+  "cwd": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution",
+  "started_at_utc": "2026-11-02T07:51:31.677526+00:00"
+}

@@ -1,0 +1,44 @@
+{
+  "checked_at_utc": "2026-10-30T02:24:45.919976+00:00",
+  "scope": "Generated temporary files and fake process outputs only; no official validation/test, credentials, HTTP, submission or network packet",
+  "source_sha256_before": {
+    "code/tools/freeze_v3.py": "3d6b313202ba81b55c13bbb4089abcc4f2382627a57f75d87bb844e15188b6fc",
+    "submission/v3/evaluate_final.py": "34a3e699a9fa5c63e50bf80c9a86d45f547200155273160c7569e62efa8a3982",
+    "submission/v3/submit_final.py": "ce2377e9b100a841c908f5c6fae529cb7bf872a2aba846ccff2a7afc398f20f3"
+  },
+  "source_sha256_after": {
+    "code/tools/freeze_v3.py": "3d6b313202ba81b55c13bbb4089abcc4f2382627a57f75d87bb844e15188b6fc",
+    "submission/v3/evaluate_final.py": "34a3e699a9fa5c63e50bf80c9a86d45f547200155273160c7569e62efa8a3982",
+    "submission/v3/submit_final.py": "ce2377e9b100a841c908f5c6fae529cb7bf872a2aba846ccff2a7afc398f20f3"
+  },
+  "cases": [
+    {
+      "case": "wrong_selected_oof_directory",
+      "unexpectedly_accepted": true
+    },
+    {
+      "case": "arbitrary_text_only_review_and_reproduction",
+      "unexpectedly_accepted": true
+    },
+    {
+      "case": "completion_output_inventory_subset",
+      "unexpectedly_accepted": true
+    },
+    {
+      "case": "completion_wrong_method_split_count",
+      "unexpectedly_accepted": true
+    },
+    {
+      "case": "prediction_child_can_read_generated_gold",
+      "unexpectedly_accepted": true
+    },
+    {
+      "case": "unblocked_socket_sendto_audit_event",
+      "unexpectedly_accepted": true
+    },
+    {
+      "case": "submit_accepts_score_only_completion",
+      "unexpectedly_accepted": true
+    }
+  ]
+}

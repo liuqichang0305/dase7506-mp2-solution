@@ -1,0 +1,44 @@
+{
+  "schema": "mp2-closeout-final-pdf-independent-qa-v1",
+  "created_at_utc": "2026-11-02T08:10:13.433195+00:00",
+  "status": "passed",
+  "blocking_findings": [],
+  "scope": "Saved evidence and PDF extraction; visual pages2,7,8,10. No raw bank, training, inference, scoring or network submission.",
+  "final_artifact_sha256": {
+    "reports/research_v3/research_closeout_final/research_closeout_v3.pdf": "bb8bebb96c7007403fbc782ea8cce26c2b421ced6551e3fbe99b990f3c1035b3",
+    "reports/research_v3/closeout_inputs_final.json": "7206196be0b5ec3377366c0fbbcd600986d49cf246c513b7b287ddc510e3071d",
+    "reports/research_v3/research_closeout_final/report_content.md": "9401032a188ea2cf11e1d81fff0b4d6b09b5010607474e28b0b5a99646345f84",
+    "reports/research_v3/research_closeout_final/build_record.json": "266851594022b242bbc374aefb739fa372c24c587a6dfc3ce53bd83d2986cb0d",
+    "reports/research_v3/closeout_zh_final.md": "cf2b3fdf9de7cf8bc324e0a2d3aef27db2e6a40083fb37218588321ec63dd15d",
+    "reports/research_v3/prepare_closeout_inputs.py": "3ff92099a9b4b05ca908427d745c5c4e339e5a9edcf8afff4844edac537ce309",
+    "reports/research_v3/build_closeout.py": "5c916c453543fe13658c267a9f407278056ff6bcb01e95b9dc0dded026f64154"
+  },
+  "evidence_files_reverified": 381,
+  "first_review": {
+    "path": "results/research_v3/independent-closeout-pdf-review/review.json",
+    "sha256": "0c0aa852ad20933d7ec66b4e0889937adb49ec8fac1aa6f977dc795408b155fb"
+  },
+  "unchanged_pages_extracted_text_equal_to_verified_first_attempt": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    9
+  ],
+  "clarifications_verified": [
+    "saved nested fold sizes and all-candidate labels",
+    "zero-attempt queue reason",
+    "named fusion controls and zero improvement versus stronger member",
+    "exact source commit separate-clone preflight plus fixed-data preparation",
+    "five primary title/year/URL references"
+  ],
+  "visual_page_sha256": {
+    "tmp/pdfs/research-closeout-v3-final/page-02.png": "6909a5fc90e78af460b882150a710b67297698348ed41a23394b397fa9072d55",
+    "tmp/pdfs/research-closeout-v3-final/page-07.png": "3e7d9e1e8f0997dca72e9d873ebaa401df89265bdcd01f08446ea85a6f9ce36b",
+    "tmp/pdfs/research-closeout-v3-final/page-08.png": "bcd80922eaba37a378b7083a537849de7b3518d6c54c98a79a89a7713f24b640",
+    "tmp/pdfs/research-closeout-v3-final/page-10.png": "9cf7b1c8a455a1e9675c6dfea396dc7387a006787b8b2ee694d108285710e3a2"
+  },
+  "visual_observation": "All four revised pages fit their intended page with clear, legible type, intact table rows, aligned columns and adequate margins. No clipping, overlaps, overflow or missing-glyph blocks observed. Citations and explicit archive limitation remain readable.",
+  "all_ten_pages_visual_scope": "Root separately performs the complete ten-page visual QA; this independent review does not claim it."
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "mp2-closeout-portability-correction-v1",
+  "created_at_utc": "2026-11-02T08:19:55.698296+00:00",
+  "status": "instructions_corrected_pending_third_render",
+  "prior_qa_scope_correction": "Earlier PDF QA verified layout, saved facts and literal instructions but did not execute the proposed coordinator on a clean clone. The coordinator is nonportable because its validate_lock requires original absolute training-state paths. Prior saved measurement is valid evidence; the prior suggested clone entry point is superseded.",
+  "frozen_implementation_changed": false,
+  "report_change": "Page10 first paragraph only: exact source commit and retained inference checkpoint; only official validation files; direct base-Python -S official predictor then separate scorer; full environment and thread commands in docs/research_v3/REPRODUCTION.md. No copying training state, deleting guards, model refitting or test.",
+  "sha256": {
+    "reports/research_v3/research_closeout/research_closeout_v3.pdf": "53945861fe0adeb71b29cda388c338720344feb59acf3248bfc75eeaa2beae1f",
+    "reports/research_v3/research_closeout_final/research_closeout_v3.pdf": "bb8bebb96c7007403fbc782ea8cce26c2b421ced6551e3fbe99b990f3c1035b3",
+    "reports/research_v3/prepare_closeout_inputs.py": "bdbae9f2a1507bd129d99f28f5925a2be95a6b46692636882ee18510b47d887f",
+    "code/tools/confirm_validation_v3.py": "a3928fdd9b58bfd5d3036f51510a866516d5aab8a8289892212769aecf558aff",
+    "scripts/reproduce_selected_v3.py": "f4bf15bbe3bde42d8ad86b26b0f0c1e2971d69c5c8819a9bca5ff802fddb9acb",
+    "docs/research_v3/REPRODUCTION.md": "5463436eed8ca8fbcb64e4d897ab8a687b7a7e7984e55b95942b7bdfce3f7dca"
+  },
+  "portable_run": "Parent will execute the documented commands in its existing clean environment and preserve separate outputs; this correction record makes no new execution or resource-certification claim."
+}

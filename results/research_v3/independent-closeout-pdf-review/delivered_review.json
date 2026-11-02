@@ -1,0 +1,59 @@
+{
+  "schema": "mp2-closeout-delivered-pdf-independent-qa-v1",
+  "created_at_utc": "2026-11-02T08:28:35.546866+00:00",
+  "status": "passed",
+  "blocking_findings": [],
+  "artifact_sha256": {
+    "reports/research_v3/research_closeout_delivered/research_closeout_v3.pdf": "a18795a3b659c5de41c32c674422bba6b27e180082b58a04e2fc225bda303ad3",
+    "reports/research_v3/closeout_inputs_delivered.json": "3e2762c26f11a3216530ccfbfdfe86b77e93dc3cc9374af81a30e0ded5d39bdb",
+    "reports/research_v3/research_closeout_delivered/report_content.md": "3888abca3b06dac5186bbb967e6bffca7b88f315e39fe85f4e72776b361eed88",
+    "reports/research_v3/research_closeout_delivered/build_record.json": "ba62d0efa6b0181e7252078a56f485c3d7bbdb1468337a4762810ded2f925b1e",
+    "reports/research_v3/prepare_closeout_inputs.py": "bdbae9f2a1507bd129d99f28f5925a2be95a6b46692636882ee18510b47d887f",
+    "reports/research_v3/build_closeout.py": "5c916c453543fe13658c267a9f407278056ff6bcb01e95b9dc0dded026f64154",
+    "code/tests/test_closeout_report_v3.py": "1c1b7e8a9eddb9b515f7aa9927e5e04ddb95437e9063ae994f20495d10ad29b1",
+    "results/research_v3/delivered-closeout-tests.log": "76d019e6f1cdfba308e25560977b824e9b04bf12be4520f5e1164d29e15953fe",
+    "docs/research_v3/REPRODUCTION.md": "b74ec39e3a8e9864464d24603034ad85d22799d667718031cfcaf438439ee1e9"
+  },
+  "evidence_files_reverified": 381,
+  "pages": 10,
+  "first_nine_pages": {
+    "pdf_text_identical_to_previous_reviewed_attempt": true,
+    "rendered_png_bytes_identical_to_previous_reviewed_attempt": true
+  },
+  "page10_visual_review": "Individually viewed actual PNG: portable instructions readable and complete, references/AI disclosure/no-test limitation intact; no clipping, overlap, overflow or missing glyphs.",
+  "image_sha256": {
+    "tmp/pdfs/research-closeout-v3-delivered/page-01.png": "4339bfdf169594dccc38f208ac1a1742a0c6500f1024c3667cce3efbe9ec2c87",
+    "tmp/pdfs/research-closeout-v3-delivered/page-02.png": "6909a5fc90e78af460b882150a710b67297698348ed41a23394b397fa9072d55",
+    "tmp/pdfs/research-closeout-v3-delivered/page-03.png": "6a090c9b7b046bb7700cf68dae12bef417fac2ea331803365c0d6e508ebc92b2",
+    "tmp/pdfs/research-closeout-v3-delivered/page-04.png": "40478fad9a4a0d17240ad0701b0d7376d9fcb51c6c46600f8ef4aecc5367448b",
+    "tmp/pdfs/research-closeout-v3-delivered/page-05.png": "c091ac3c9714748f82a1633e2d18eec0a0ef6a9fd8ac8ae19218b338afbefbb9",
+    "tmp/pdfs/research-closeout-v3-delivered/page-06.png": "4a3dfd797978d5f1fb7f540e70d0cadb1b3737024f886a6ea6448f43bf1cd0aa",
+    "tmp/pdfs/research-closeout-v3-delivered/page-07.png": "3e7d9e1e8f0997dca72e9d873ebaa401df89265bdcd01f08446ea85a6f9ce36b",
+    "tmp/pdfs/research-closeout-v3-delivered/page-08.png": "bcd80922eaba37a378b7083a537849de7b3518d6c54c98a79a89a7713f24b640",
+    "tmp/pdfs/research-closeout-v3-delivered/page-09.png": "d725cc8847a70c1f0fb3fab890c99204a3a5dc9e53d5513bab908dec88f08d9d",
+    "tmp/pdfs/research-closeout-v3-delivered/page-10.png": "7ac5851526a6889fd186ed2e99cf58c5328923486758a7bebc0a8cab36d23278"
+  },
+  "synthetic_tests": {
+    "count": 13,
+    "elapsed_seconds": 6.804,
+    "log_sha256": "76d019e6f1cdfba308e25560977b824e9b04bf12be4520f5e1164d29e15953fe",
+    "log_encoding": "UTF-16 BOM; initial UTF-8-only QA read failed, corrected to BOM-aware decoding without rerunning tests."
+  },
+  "portable_entrypoint_evidence": {
+    "path": "results/research_v3/portable_validation_commands/COMPLETE.json",
+    "sha256": "31e5c21e071fe0d7c650aac157bb5b415c1eb5e472c26a66d01a58e405ab69b3",
+    "source_reviewed": "results/research_v3/check_portable_validation_commands.py",
+    "source_sha256": "94d1cc52639856787b3f540e7187e8caef72721bd9d47134ce844a4098217948",
+    "output_hashes_verified": 7,
+    "recorded_choices_equal": 798,
+    "score_correct": 740,
+    "score_n": 798,
+    "separate_elapsed_seconds": 1.8680726999882609,
+    "fresh_installation": false,
+    "new_resource_certification_claimed": false,
+    "original_guarded_measurement_retained_seconds": 2.2803907999768853,
+    "limitations": "Reused the prior clean checkout/environment; no second fresh installation. Official CLI replay has no audit-hook wrapper. Timing is local, not reference-Xeon certification."
+  },
+  "scope": "Read-only saved metadata/source/PDF/PNG review. No model or scorer rerun, raw bank or per-question array parsing. Portable equality comes from verified producer checks and hash-bound receipt. Frozen sources and report artifacts unchanged.",
+  "previous_instructions_superseded_record": "results/research_v3/independent-closeout-pdf-review/portability_correction.json"
+}

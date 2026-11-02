@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-30T08:12:26.455082+00:00",
+  "scheduler_pid": 27568,
+  "experiment_id": "v3_attention_ema_s1",
+  "training_pid": 49812,
+  "attempt_elapsed_seconds": 0.17333197593688965,
+  "campaign_remaining_seconds": 29415.632801532745,
+  "resource_sample": [
+    {
+      "pid": 49812,
+      "create_time": 1793347946.1975248,
+      "rss_bytes": 4464640,
+      "cpu_seconds": 0.015625,
+      "os_thread_count": 3
+    },
+    {
+      "pid": 49944,
+      "create_time": 1793347946.3580325,
+      "rss_bytes": 17022976,
+      "cpu_seconds": 0.0625,
+      "os_thread_count": 4
+    }
+  ],
+  "resource_note": "Point samples include Windows venv launcher descendants; OS threads are not active compute threads.",
+  "resume_command": ".venv\\Scripts\\python.exe scripts\\run_campaign_v3.py run"
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "mp2-validation-opened-v3",
+  "created_at_utc": "2026-11-02T07:26:16.492333+00:00",
+  "lock_sha256": "4dfc67595cabf6e9f7dc0d0ef5460721e522e96c08dbd01ff0f87467e36ff9cf",
+  "candidate_names": [
+    "v3_tabm_embedding_stats_ema_s0",
+    "v3_attention_ema_s0"
+  ],
+  "test_enabled": false
+}

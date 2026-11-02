@@ -1,0 +1,277 @@
+{
+  "schema": "mp2-validation-candidate-complete-v3",
+  "lock_sha256": "4dfc67595cabf6e9f7dc0d0ef5460721e522e96c08dbd01ff0f87467e36ff9cf",
+  "name": "v3_tabm_embedding_stats_ema_s0",
+  "status": "passed",
+  "local_resource_eligible": true,
+  "prediction_plus_scoring_seconds": 2.5644871999975294,
+  "resource": {
+    "bundle": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\artifacts\\research_v3\\final_v3_tabm_embedding_stats_ema_s0",
+    "files": [
+      {
+        "path": "config.json",
+        "sha256": "8bbd5349ade14b3ad316738f035882fcd394e39b4691283def9d50c78d900cd8",
+        "disk_bytes": 513,
+        "uncompressed_bytes": 513
+      },
+      {
+        "path": "weights.npz",
+        "sha256": "4a9f070f02ef0a0df246bfb241476914c1c4390b7581bd42ef0f7637ef733e10",
+        "disk_bytes": 740400,
+        "uncompressed_bytes": 740400,
+        "members": [
+          {
+            "name": "mean.npy",
+            "uncompressed_bytes": 16640
+          },
+          {
+            "name": "scale.npy",
+            "uncompressed_bytes": 16640
+          },
+          {
+            "name": "prep_clip_mask.npy",
+            "uncompressed_bytes": 2192
+          },
+          {
+            "name": "prep_constant_mask.npy",
+            "uncompressed_bytes": 2192
+          },
+          {
+            "name": "blocks.0.weight.npy",
+            "uncompressed_bytes": 532608
+          },
+          {
+            "name": "blocks.0.r.npy",
+            "uncompressed_bytes": 16768
+          },
+          {
+            "name": "blocks.0.s.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "blocks.0.bias.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "blocks.1.weight.npy",
+            "uncompressed_bytes": 65664
+          },
+          {
+            "name": "blocks.1.r.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "blocks.1.s.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "blocks.1.bias.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "blocks.2.weight.npy",
+            "uncompressed_bytes": 65664
+          },
+          {
+            "name": "blocks.2.r.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "blocks.2.s.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "blocks.2.bias.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "head.weight.npy",
+            "uncompressed_bytes": 2176
+          },
+          {
+            "name": "head.bias.npy",
+            "uncompressed_bytes": 144
+          }
+        ],
+        "arrays": [
+          {
+            "name": "mean",
+            "shape": [
+              2064
+            ],
+            "dtype": "float64",
+            "array_bytes": 16512
+          },
+          {
+            "name": "scale",
+            "shape": [
+              2064
+            ],
+            "dtype": "float64",
+            "array_bytes": 16512
+          },
+          {
+            "name": "prep_clip_mask",
+            "shape": [
+              2064
+            ],
+            "dtype": "uint8",
+            "array_bytes": 2064
+          },
+          {
+            "name": "prep_constant_mask",
+            "shape": [
+              2064
+            ],
+            "dtype": "uint8",
+            "array_bytes": 2064
+          },
+          {
+            "name": "blocks.0.weight",
+            "shape": [
+              128,
+              1040
+            ],
+            "dtype": "float32",
+            "array_bytes": 532480
+          },
+          {
+            "name": "blocks.0.r",
+            "shape": [
+              4,
+              1040
+            ],
+            "dtype": "float32",
+            "array_bytes": 16640
+          },
+          {
+            "name": "blocks.0.s",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "blocks.0.bias",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "blocks.1.weight",
+            "shape": [
+              128,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 65536
+          },
+          {
+            "name": "blocks.1.r",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "blocks.1.s",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "blocks.1.bias",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "blocks.2.weight",
+            "shape": [
+              128,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 65536
+          },
+          {
+            "name": "blocks.2.r",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "blocks.2.s",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "blocks.2.bias",
+            "shape": [
+              4,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "head.weight",
+            "shape": [
+              4,
+              1,
+              128
+            ],
+            "dtype": "float32",
+            "array_bytes": 2048
+          },
+          {
+            "name": "head.bias",
+            "shape": [
+              4,
+              1
+            ],
+            "dtype": "float32",
+            "array_bytes": 16
+          }
+        ]
+      }
+    ],
+    "uncompressed_bytes": 740913,
+    "limit_bytes": 16777216,
+    "within_limit": true,
+    "counting_rule": "All files; for ZIP/NPZ use max(physical bytes, sum uncompressed member bytes). Array payload bytes also disclosed.",
+    "scope": "Bundle inventory. Inference source must separately be reviewed for hidden parameters and external dependencies."
+  },
+  "output_sha256": {
+    "evaluation_started.json": "e8c1d0d4985fc3babc62647657363fef114f11d467d6cda23ccb00c2e0a51569",
+    "prediction-thread-pools.json": "df93e62f02506fd12ad6a19bb807623a4443e45e46d12e07c51c61b9355f512b",
+    "prediction.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prediction.stdout.log": "64691638406d9962241e667cf52304c3b639417c8f3e437581f4ab3668cd497e",
+    "scoring-thread-pools.json": "341766c81c6d8630b34c434ecef8c74e9892f72c6624faad1a2b26de05a1a547",
+    "scoring.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scoring.stdout.log": "1a8b7a59f195b09909daa5c29caeee27d13e63aae947d64a8764ac80bf6e46f2",
+    "validation-predictions.json": "c21220768746bae2f4cf1fc875786127a6ccd7c29cbb0c83e57fc3329719bc7d",
+    "validation-score.json": "1a8b7a59f195b09909daa5c29caeee27d13e63aae947d64a8764ac80bf6e46f2",
+    "validation-timing.json": "83eea86e3e4d9512cf1d192c754c41718ebbea68b933fb0996b6ed7b3b797a6e"
+  }
+}

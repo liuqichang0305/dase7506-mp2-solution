@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "experiment_id": "pilot_mlp_adamw_v3",
+  "fold": 0,
+  "inner": {
+    "seconds": 7.567202199999883,
+    "epochs_run": 14,
+    "best_epoch": 6,
+    "inner_best_loss": 0.2549222707748413,
+    "numpy_max_abs_error": 9.5367431640625e-07,
+    "effective_weight_decay": 0.001,
+    "hard_fraction": 0.444794952681388,
+    "torch_version": "2.15.0+cpu",
+    "device": "cpu",
+    "torch_threads": 1
+  },
+  "fit": {
+    "seconds": 3.699069200003578,
+    "epochs_run": 6,
+    "best_epoch": 6,
+    "inner_best_loss": null,
+    "numpy_max_abs_error": 6.258487701416016e-07,
+    "effective_weight_decay": 0.001,
+    "hard_fraction": 0.4444794952681388,
+    "torch_version": "2.15.0+cpu",
+    "device": "cpu",
+    "torch_threads": 1
+  },
+  "wall_seconds": 26.86636929999804,
+  "schema_note": "Timing pilot deliberately reuses immutable v2 training/export primitives; new v3 main-table runs use their registered trainer.",
+  "correct": 1410,
+  "n": 1585,
+  "accuracy": 88.95899053627761,
+  "hard_correct": 530,
+  "hard_n": 705,
+  "hard_accuracy": 75.177304964539,
+  "single_positive_correct": 115,
+  "single_positive_n": 237,
+  "single_positive_accuracy": 48.52320675105485
+}

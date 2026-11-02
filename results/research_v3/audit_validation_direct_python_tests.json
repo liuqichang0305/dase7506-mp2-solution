@@ -1,0 +1,19 @@
+{
+  "returncode": 0,
+  "seconds": 4.408292200001597,
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_confirm_validation_v3.py",
+    "-v"
+  ],
+  "source_sha256_before": "cdf6abe8049a3f5aa916a31e7b4c80c02d1fa51be918a4cf9d56c181203a2775",
+  "source_sha256_after": "cdf6abe8049a3f5aa916a31e7b4c80c02d1fa51be918a4cf9d56c181203a2775",
+  "scope": "Synthetic isolated files and harmless sleep processes only; no official validation or test data",
+  "thread_rule": "Strict task-process tree <=4 observed OS threads; external monitor disclosed separately; actual library pools <=1; direct base Python -S + explicit venv packages"
+}

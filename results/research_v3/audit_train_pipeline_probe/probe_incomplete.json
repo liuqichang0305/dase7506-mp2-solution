@@ -1,0 +1,18 @@
+{
+  "status": "official commands exited but coordinator summary failed",
+  "failure": "INFERENCE_SOURCE included nonexistent namespace package __init__.py; removed requirement",
+  "complete_external_wall_time_preserved": false,
+  "do_not_infer_resource_pass": true,
+  "official_outputs_preserved": [
+    "prediction-thread-pools.json",
+    "prediction.stderr.log",
+    "prediction.stdout.log",
+    "scoring-thread-pools.json",
+    "scoring.stderr.log",
+    "scoring.stdout.log",
+    "train-predictions.json",
+    "train-score.json"
+  ],
+  "scope": "Train-only integration probe; not OOF; no validation/test",
+  "recorded_at_utc": "2026-10-29T17:50:33.067517+00:00"
+}

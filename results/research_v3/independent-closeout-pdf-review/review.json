@@ -1,0 +1,50 @@
+{
+  "schema": "mp2-closeout-first-pdf-independent-qa-v1",
+  "created_at_utc": "2026-11-02T08:08:17.457253+00:00",
+  "scope": "First actual PDF; saved aggregate reconciliation and visual pages 3,4,9,10 only. No raw bank or per-question arrays parsed.",
+  "status": "facts_and_layout_verified_with_five_documented_clarifications",
+  "source_files_unchanged": {
+    "reports/research_v3/research_closeout/research_closeout_v3.pdf": "53945861fe0adeb71b29cda388c338720344feb59acf3248bfc75eeaa2beae1f",
+    "reports/research_v3/closeout_inputs.json": "6607edcd3f488e63783f8a916aa22b68c69f750f9ac0fab51e703ddd2eb58862",
+    "reports/research_v3/research_closeout/report_content.md": "fbe2cd01b1f248fceb5c51b789c2148232e3f42eaf11d797fa41cf594158afc9",
+    "reports/research_v3/research_closeout/build_record.json": "50c4df6dce72fd86e5a691ffa332902de9301ca40f88b1c1936c19bea4d6b198"
+  },
+  "evidence_files_verified": 381,
+  "all_54_experiment_table_rows_match_saved_summaries_and_pdf": true,
+  "independent_fit_seconds": {
+    "research_v3": 9660.943974500035,
+    "research_v2": 2020.0930347000085
+  },
+  "attempt_wall_seconds": 208968.88393735886,
+  "confidence_limitations_disclosed": true,
+  "no_new_test_or_score_update_verified": true,
+  "visual_page_hashes": {
+    "tmp/pdfs/research-closeout-v3/page-03.png": "6a090c9b7b046bb7700cf68dae12bef417fac2ea331803365c0d6e508ebc92b2",
+    "tmp/pdfs/research-closeout-v3/page-04.png": "40478fad9a4a0d17240ad0701b0d7376d9fcb51c6c46600f8ef4aecc5367448b",
+    "tmp/pdfs/research-closeout-v3/page-09.png": "d725cc8847a70c1f0fb3fab890c99204a3a5dc9e53d5513bab908dec88f08d9d",
+    "tmp/pdfs/research-closeout-v3/page-10.png": "9ece23b23a950241ae68c0bda38d8ce429c9d8325a14a384dff9ce5388013951"
+  },
+  "visual_observation": "Legible tables/paragraphs, consistent margins and footers; no visible clipping, overlap or missing glyphs on the four inspected pages. Root separately reviews all ten.",
+  "clarifications_for_second_attempt": [
+    "Page8 fourth mixture: +2 versus Attention EMA1685 is 0 versus stronger matched TabM EMA1687; spell out named controls.",
+    "Page7 Attention seed2 has zero attempts and an existing queue absolute_campaign_budget stop reason; identify it as not started.",
+    "Page10 reproduce from separate exact source-commit clone before later FREEZE metadata, with fixed official data prepared; current archive intentionally refuses reproduction preflight.",
+    "Page10 add primary paper title/year/URL citations instead of only pointers to local provenance docs.",
+    "Page2 spell out split/fold sizes, all-four-candidate labels and selection optimism."
+  ],
+  "primary_metadata_verified_urls": [
+    "https://arxiv.org/abs/2410.24210",
+    "https://arxiv.org/abs/2407.04491",
+    "https://arxiv.org/abs/1703.06114",
+    "https://arxiv.org/abs/1706.03762",
+    "https://arxiv.org/abs/2604.15297"
+  ],
+  "revised_producer_sha256": "3ff92099a9b4b05ca908427d745c5c4e339e5a9edcf8afff4844edac537ce309",
+  "revised_tests": {
+    "path": "results/research_v3/closeout-clarity-revision-tests.log",
+    "sha256": "3191c362ea036182a134fd64d2641b4b2fdafce86a285eb94428350134aa455d",
+    "passed": 13,
+    "note": "Final subsequent wording-only data-fetch clarification awaits root combined suite."
+  },
+  "final_revised_pdf_qa": "Pending actual second render; not certified by this record."
+}

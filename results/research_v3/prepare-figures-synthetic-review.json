@@ -1,0 +1,24 @@
+{
+    "schema":  "mp2-v3-figures-synthetic-review-v1",
+    "recorded_at_utc":  "2026-10-30T03:42:14.4927443Z",
+    "status":  "synthetic_passed_pending_independent_review",
+    "tests":  9,
+    "passed":  9,
+    "duration_seconds":  3.518,
+    "command_exit_code":  0,
+    "synthetic_visual_qa":  "Both current-source PNGs inspected; no clipping or overlap observed",
+    "synthetic_preview":  "tmp/research_v3/synthetic_figures_preview_02",
+    "final_output_exists":  false,
+    "actual_final_reports_read":  false,
+    "raw_data_read":  false,
+    "test_score_read":  false,
+    "model_or_calibration_fit":  false,
+    "pdf_generated":  false,
+    "source_and_log_sha256":  {
+                                  "reports/research_v3/prepare_figures.py":  "7eacb0b9cab2765189bc54c7f744816ef3b1ac2395691d02c0b7a970d9a9fab9",
+                                  "code/tests/test_prepare_figures_v3.py":  "5c07ac4fd8fbb024dcd4ffa771a71b5b9a4a29ee89311450b8edf8ec2d2927fa",
+                                  "docs/research_v3/REPORT_FIGURES.md":  "003876be7e0996e377e931b9c6b7d3124be9ebc0f3055505068dc4c2bf72f05a",
+                                  "results/research_v3/prepare-figures-synthetic-tests-final.log":  "41882eebedb046efc9b605cfa85bae90381ce09955dccea0f933edeb0085acd7",
+                                  "tmp/research_v3/synthetic_figures_preview_02/reports/research_v3/figures/figure_manifest.json":  "f71da8fbbce2b6629531f29f3e8cd8237df384a4037ffbb5b440fb0027a0bbc0"
+                              }
+}

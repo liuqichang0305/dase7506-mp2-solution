@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-11-01T12:03:44.206058+00:00",
+  "official_source_bytes_verified": {
+    "guide": {
+      "git_blob_sha": "6e3df3ee0542a87c098076f1664e9bc4b394c3b1",
+      "sha256": "7b4ab87265040f407854cdfb9860887f722008d24e03fffe311f99c2f2065130",
+      "bytes": 11599,
+      "matched": true
+    },
+    "code_readme": {
+      "git_blob_sha": "6219d660006faecd648d4f318b69f7ce9331d6ca",
+      "sha256": "4c4218d68818d850fbad2fe38d2b1f3d2b80b7646720f21d2356fe3c0e020bc2",
+      "bytes": 6677,
+      "matched": true
+    },
+    "site_workflow": {
+      "git_blob_sha": "2f8e6ebb506aeb151df746048defd7e92c507166",
+      "sha256": "07386958bad87f34fa8c6cc56b0fa486cecb229be5fb71d79669f2b9b7fce4e9",
+      "bytes": 18374,
+      "matched": true
+    },
+    "projects": {
+      "git_blob_sha": "bc0ea31136171598c902c7ad30c84636b162ead2",
+      "sha256": "ae4b9dc4b02cffa072a725441720d47eb81d496a89a9264a9bb4fd85390471fc",
+      "bytes": 751,
+      "matched": true
+    },
+    "arena": {
+      "git_blob_sha": "7a090e6311349e00dfa253e697e0ca0f70c1aa53",
+      "sha256": "fb06c6e023fb070aa4ec2e63e49df657013bbf0f3d074c001e1a27dee91dc586",
+      "bytes": 24085,
+      "matched": true
+    }
+  },
+  "publication_entries_saved": false,
+  "publication_note": "Only project review-window metadata retained; source commit/blob identify the complete public source."
+}

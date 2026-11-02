@@ -1,0 +1,7 @@
+{
+  "scope": "Auditor log-decoding failure, not a training/test failure",
+  "error": "UnicodeDecodeError: utf-8 cannot decode byte 0xff at position 0",
+  "cause": "PowerShell scheduler test log is BOM-marked UTF-16.",
+  "repair": "Decode BOM-marked UTF-16 and otherwise UTF-8-SIG; retain original log bytes and hash.",
+  "training_or_tests_run": false
+}

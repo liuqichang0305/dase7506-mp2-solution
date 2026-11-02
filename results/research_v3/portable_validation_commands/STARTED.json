@@ -1,0 +1,12 @@
+{
+  "source_commit": "eee478b4959e555b6ec8c902b6db8b69f31df508",
+  "freeze_sha256": "d5c4439f0ea38c469c22df3753cae0db0733147d7607f342ad53075072303218",
+  "reused_environment_sha256": "56bc7ab323cb2865b932e82ee3fbca3993313773b6e0cad3889c39c41afbf437",
+  "script_sha256": "94d1cc52639856787b3f540e7187e8caef72721bd9d47134ce844a4098217948",
+  "documentation_sha256": "5463436eed8ca8fbcb64e4d897ab8a687b7a7e7984e55b95942b7bdfce3f7dca",
+  "fresh_installation": false,
+  "model_or_selection_changed": false,
+  "split": "validation",
+  "reason": "Verify portable official commands without coordinator preflight, train data or original training-state files.",
+  "started_at_utc": "2026-11-02T08:22:37.747138+00:00"
+}

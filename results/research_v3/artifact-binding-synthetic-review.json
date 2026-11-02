@@ -1,0 +1,26 @@
+{
+    "schema":  "mp2-v3-artifact-binding-synthetic-review-v1",
+    "recorded_at_utc":  "2026-10-30T02:42:43.7356333Z",
+    "node_version":  "v24.14.0",
+    "status":  "synthetic_passed_pending_independent_review",
+    "tests":  11,
+    "passed":  11,
+    "duration_ms":  844.8646,
+    "command":  "node code/tests/test_artifact_binding_v3.mjs",
+    "adapter_syntax_check":  "passed",
+    "initial_runner_failure":  "node --test could not spawn child: Windows EPERM; original log preserved",
+    "actual_official_adapter_executed":  false,
+    "actual_score_read":  false,
+    "validation_or_test_data_read":  false,
+    "network_used":  false,
+    "keys_persisted":  false,
+    "v1_or_create_adapters_modified":  false,
+    "source_and_log_sha256":  {
+                                  "submission/v3/prepare_official_form.mjs":  "afa14f54ecc13b062853642d669997654419aefeba283b244c17635fa1b5b012",
+                                  "submission/v3/artifact_binding.mjs":  "18bf530727e9c43971d828c6c5aa562f94fdb78bce2052d07d2ca41a40095599",
+                                  "code/tests/test_artifact_binding_v3.mjs":  "29734aad1ef9f440abc962e75c04e143f3960f98a2222cdf7aa95ae5ff1cc23d",
+                                  "docs/research_v3/ARTIFACT_BINDING.md":  "2c2e7b712b18f7416a4e98ceec87b13cf4fed4b204dc67d1d23dac319e01254d",
+                                  "results/research_v3/artifact-binding-synthetic-tests-direct.log":  "bebcd04b2d39f4e2885a72c27e9f9819d385b75ddbb592942977e60cb9727bd2",
+                                  "results/research_v3/artifact-binding-synthetic-tests.log":  "77301a5f8d8898b3c310684e218e9b59278640a7cfe0865e88d6a09a9cc5c498"
+                              }
+}

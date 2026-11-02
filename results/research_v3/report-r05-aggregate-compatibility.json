@@ -1,0 +1,26 @@
+{
+  "scope": "train_aggregate_compatibility_only",
+  "generator_sha256": "06d534149e87bed06d49eddc32b51658fe67bdb285c1e58231c6891e6e9c38c2",
+  "paragraph": "R05 matched TabM recipe: embedding+statistics (1040 inputs) versus full relation (2064) scores 1668/2114 versus 1606/2114 hard questions: +62 (+2.93 pp; saved paired 95% interval [1.51, 4.40] pp), with fold 0/1/2 gains +45/+11/+6; all-question gain +62. This is not a pure feature-information effect: input width changes first-layer capacity and random initialization even at the same fixed seed. The interval is conditional on selected OOF predictions and retains search optimism.",
+  "fold_differences": [
+    {
+      "fold": 0,
+      "overall_difference": 45,
+      "hard_difference": 45
+    },
+    {
+      "fold": 1,
+      "overall_difference": 11,
+      "hard_difference": 11
+    },
+    {
+      "fold": 2,
+      "overall_difference": 6,
+      "hard_difference": 6
+    }
+  ],
+  "evidence_files_checked": 51,
+  "raw_bank_files_opened": false,
+  "per_question_arrays_decoded": false,
+  "final_report_generated": false
+}

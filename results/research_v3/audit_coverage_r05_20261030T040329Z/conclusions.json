@@ -1,0 +1,30 @@
+{
+  "created_at_utc": "2026-10-30T04:15:07.586645+00:00",
+  "scope": "Source/saved train-OOF independent audit plus one explicitly authorized deterministic train reference computation; no holdout, ranking or model fitting.",
+  "evidence_sha256": {
+    "scripts/prepare_stability_round_v3.py": "f9937daeed428d9709163eb7a9a2e00b594e6dc1e352c726e580658cd56215ef",
+    "code/tools/deterministic_train_references_v3.py": "b90cadba041c9adf8af9214c2aeea36cf37e14e0fb361a7044df91753156e50b",
+    "results/research_v3/deterministic_train_references/COMPLETION.json": "5bf71e64ecb1f074cf6069506b13c7890475dbe541986b245334012bf28f5b97",
+    "results/research_v3/deterministic_train_references/summary.json": "7a9557fa9a481f94239ad61d9ee1715c70011c75556bc0e4bfd456785ac72a29",
+    "results/research_v3/deterministic_train_references/selections.npz": "4d68871ec432e617144b8346f4156ac706955a1fa5b67c77f8a71f780c3f02c4",
+    "results/research_v3/deterministic-train-references-run.json": "87fa285c3907e0f7b6af12ecce60aef17a25ee4f9352a56d27b7ee8e6b833730",
+    "results/research_v3/deterministic-references-synthetic-tests.log": "f6a0afd41aeca7d1625399f1ce6287bb1856110ce99efea34425ca78da60f9d3",
+    "results/research_v3/audit_coverage_after_r05.py": "3f8b591887881c09dc00cffd22345441c9fbdbf8803a52bc8ef720ab34539f62"
+  },
+  "review_sha256": "6ac8f98b1b2039be65c5b0b59eec25ad1e8208c1606224e5434e7281c2ce917a",
+  "findings_sha256": "7ff5261bd4b150d39a70ba5c5eccb71c7bd63de2b15a02e234b4de69bf8375aa",
+  "no_invalidating_code_or_oof_defect_found": true,
+  "saturation_eligible_at_snapshot": false,
+  "minimum_stability_configurations": {
+    "one_selected_family_recipe": 2,
+    "two_selected_family_recipes": 4
+  },
+  "fixed_extra_seeds": [
+    3036900958,
+    3036900959
+  ],
+  "deployment_seed": 3036900957,
+  "existing_stability_preparer_invoked": false,
+  "deterministic_reference_new_fits": 0,
+  "actual_final_report_or_holdout_called": false
+}

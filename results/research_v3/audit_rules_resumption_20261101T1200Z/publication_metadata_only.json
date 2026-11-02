@@ -1,0 +1,16 @@
+{
+  "schema": "dase7506/publication-v1",
+  "blob_sha": "be5449e360a6146a545f1c91fdca3baf4df749ac",
+  "url": "https://github.com/xudongwu-0/xudongwu-0.github.io/blob/65c16a3eef424e30b254ff58804dffe0fbda8793/courses/dase7506/data/publication.json",
+  "projects": {
+    "mp1": {
+      "published_at": "2026-10-01T16:09:01.046Z",
+      "review_ends_at": "2026-10-08T16:09:01.046Z"
+    },
+    "mp2": {
+      "published_at": "2026-11-01T04:42:52.971Z",
+      "review_ends_at": "2026-11-09T00:00:00+08:00"
+    }
+  },
+  "scope": "Project publication-window metadata only; all entry/link/score records excluded."
+}

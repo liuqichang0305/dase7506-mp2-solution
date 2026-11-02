@@ -1,0 +1,14 @@
+test_ambiguous_post_then_remote_reconciliation_without_second_post (test_submit_final_v3.SubmissionTests.test_ambiguous_post_then_remote_reconciliation_without_second_post) ... ok
+test_ambiguous_post_unresolved_blocks_blind_repost (test_submit_final_v3.SubmissionTests.test_ambiguous_post_unresolved_blocks_blind_repost) ... ok
+test_changed_asset_text_report_or_rules_rejected (test_submit_final_v3.SubmissionTests.test_changed_asset_text_report_or_rules_rejected) ... ok
+test_freshness_and_public_commit_mismatch_rejected (test_submit_final_v3.SubmissionTests.test_freshness_and_public_commit_mismatch_rejected) ... ok
+test_identity_deadline_and_official_phase_block_post (test_submit_final_v3.SubmissionTests.test_identity_deadline_and_official_phase_block_post) ... ok
+test_live_submission_lock_blocks_second_process (test_submit_final_v3.SubmissionTests.test_live_submission_lock_blocks_second_process) ... ok
+test_new_issue_exact_post_readback_and_local_success_retry (test_submit_final_v3.SubmissionTests.test_new_issue_exact_post_readback_and_local_success_retry) ... ok
+test_paginated_duplicate_found_before_post (test_submit_final_v3.SubmissionTests.test_paginated_duplicate_found_before_post) ... ok
+test_transport_allowlist_and_credential_errors_do_not_expose_secret (test_submit_final_v3.SubmissionTests.test_transport_allowlist_and_credential_errors_do_not_expose_secret) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.697s
+
+OK

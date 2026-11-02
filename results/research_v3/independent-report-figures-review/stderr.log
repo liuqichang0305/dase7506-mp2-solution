@@ -1,0 +1,14 @@
+test_changed_selector_choices_or_synthetic_split_rejected (test_prepare_figures_v3.FigureTests.test_changed_selector_choices_or_synthetic_split_rejected) ... ok
+test_curve_truncation_and_changed_cumulative_risk_rejected (test_prepare_figures_v3.FigureTests.test_curve_truncation_and_changed_cumulative_risk_rejected) ... ok
+test_empty_bins_cannot_be_displayed_as_zero_accuracy (test_prepare_figures_v3.FigureTests.test_empty_bins_cannot_be_displayed_as_zero_accuracy) ... ok
+test_full_synthetic_plot_manifest_png_and_per_figure_source_hashes (test_prepare_figures_v3.FigureTests.test_full_synthetic_plot_manifest_png_and_per_figure_source_hashes) ... ok
+test_missing_final_evidence_creates_no_output (test_prepare_figures_v3.FigureTests.test_missing_final_evidence_creates_no_output) ... ok
+test_missing_or_nonpositive_cost_is_not_imputed (test_prepare_figures_v3.FigureTests.test_missing_or_nonpositive_cost_is_not_imputed) ... ok
+test_pooled_hard_counts_and_config_identity_checked (test_prepare_figures_v3.FigureTests.test_pooled_hard_counts_and_config_identity_checked) ... ok
+test_running_queue_or_missing_completed_method_rejected (test_prepare_figures_v3.FigureTests.test_running_queue_or_missing_completed_method_rejected) ... ok
+test_synthetic_mode_cannot_write_real_final_directory (test_prepare_figures_v3.FigureTests.test_synthetic_mode_cannot_write_real_final_directory) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 3.594s
+
+OK

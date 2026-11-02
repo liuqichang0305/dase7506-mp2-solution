@@ -1,0 +1,17 @@
+{
+  "schema": "mp2-campaign-budget-v3",
+  "started_at_utc": "2026-10-29T16:22:42Z",
+  "research_end_utc": "2026-10-30T16:22:42Z",
+  "deadline_utc": "2026-10-31T15:59:00Z",
+  "deadline_buffer_hours": 8,
+  "maximum_wall_seconds": 86400,
+  "maximum_unique_configurations": 96,
+  "maximum_repair_retries_per_experiment": 2,
+  "maximum_concurrent_training": 1,
+  "compute_threads_per_training": 1,
+  "minimum_hard_increment_percentage_points": 0.5,
+  "consecutive_nonimproving_rounds_for_saturation": 3,
+  "clock_must_not_reset_on_resume": true,
+  "selection_inputs": ["official_train_nested_CV", "at_most_two_locked_new_validation_finalists"],
+  "test_driven_return_to_research": false
+}

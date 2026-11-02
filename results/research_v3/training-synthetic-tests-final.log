@@ -1,0 +1,12 @@
+test_closed_and_frozen_stage_guards_and_safe_ids (test_training_v3.TrainingV3Tests.test_closed_and_frozen_stage_guards_and_safe_ids) ... ok
+test_completed_threefold_reuse_verifies_artifacts_without_retraining (test_training_v3.TrainingV3Tests.test_completed_threefold_reuse_verifies_artifacts_without_retraining) ... ok
+test_data_and_ranking_audit_hook_blocks_before_open (test_training_v3.TrainingV3Tests.test_data_and_ranking_audit_hook_blocks_before_open) ... ok
+test_epoch_resume_is_exact_with_muon_ema_dropout_and_permutation (test_training_v3.TrainingV3Tests.test_epoch_resume_is_exact_with_muon_ema_dropout_and_permutation) ... ok
+test_global_training_lock_blocks_live_and_preserves_stale (test_training_v3.TrainingV3Tests.test_global_training_lock_blocks_live_and_preserves_stale) ... ok
+test_partial_bundle_is_preserved_and_complete_bundle_never_overwritten (test_training_v3.TrainingV3Tests.test_partial_bundle_is_preserved_and_complete_bundle_never_overwritten) ... ok
+test_scaler_uses_fit_partition_and_tabm_raw_export (test_training_v3.TrainingV3Tests.test_scaler_uses_fit_partition_and_tabm_raw_export) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 8.569s
+
+OK

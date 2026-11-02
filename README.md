@@ -2,7 +2,115 @@
 
 Student 3036900957. Individual coursework with disclosed AI assistance. A small CPU verifier selects one of the four supplied candidate solutions. It does not generate answers or call an external model.
 
-## Performance research v2 — development verified, formal re-evaluation pending
+## Autonomous research v3 - closed, research archive only
+
+The research clock and formal score deadline have expired. **No V3 formal test
+or score update will be performed.** The original [course Issue #294](https://github.com/xudongwu-0/xudongwu-0.github.io/issues/294)
+and its submitted V1 result, **348/467**, remain unchanged. That historical score
+does not measure the V3 archive model.
+
+As recorded after locked validation on 2 November 2026, **35 V3 base
+configurations / 105 outer folds** completed on the common training folds,
+alongside 19 preserved V2 configurations. Four extra-seed jobs were pruned;
+their partial results do not establish completed V3 seed stability. All four
+fixed probability mixtures were evaluated and rejected. Monitoring gaps and
+actual elapsed-time overshoots are retained; continuous CPU execution or an
+uninterrupted 24-hour campaign is not claimed.
+
+| Locked research-only validation candidate | All correct | Hard correct |
+|---|---:|---:|
+| Reduced-input TabM EMA | 735/798 | 292/355 |
+| Attention EMA | 736/798 | 293/355 |
+| Historical V2 Deep Sets fallback | **740/798** | **297/355** |
+
+Neither new candidate met the fixed replacement rule. The selected research
+checkpoint is the byte-identical historical `deepsets_regularized_s0`, copied
+to `artifacts/research_v3/final_selected`. **No new validation improvement is
+claimed.** Saved 798-question export/contract checks passed. Confidence and
+paired validation diagnostics are recorded and change no selections; calibration
+did not improve validation ECE. Independent final review, fresh public-checkout
+reproduction and the research-only freeze are now complete. At exact source
+commit `eee478b4959e555b6ec8c902b6db8b69f31df508`, the fresh NumPy environment
+reproduced **740/798**, with all **798 choices identical**, in **2.2803908 s**
+for fresh prediction plus separate scoring (local hardware). The freeze records
+`research_only=true` and `formal_test_allowed=false`.
+
+The separate peer reproduction and official report are also complete:
+[Peer Review Report #383](https://github.com/xudongwu-0/xudongwu-0.github.io/issues/383)
+was created and publicly read back for submission #240. Its evidence did not
+feed into this closed research. The [10-page English report](reports/research_v3/research_closeout_delivered/research_closeout_v3.pdf)
+and [Chinese guide](reports/research_v3/closeout_zh_delivered.md) are complete,
+with rendered-page QA. Earlier report attempts remain archived. PR #3 merge
+is the remaining delivery action. The portable official validation commands
+were separately checked in the preserved clean environment: all 798 choices
+and 740/798 match, without training data or local training states.
+
+Evidence: [search closure](results/research_v3/SEARCH_CLOSED.json),
+[formal update block](submission/v3/FORMAL_SUBMISSION_BLOCKED.json),
+[locked validation](results/research_v3/validation_summary.json),
+[unique selection](submission/v3/SELECTED_MODEL.json),
+[independent review](submission/v3/REVIEW_RESULT.json),
+[actual reproduction](submission/v3/REPRODUCTION_RESULT.json),
+[research freeze](submission/v3/FREEZE.json),
+[peer publication receipt](peer_review/submission_240/report_form/REPORT_SUCCESS.json),
+[current state](PROJECT_STATE.md), and
+[recovery instructions](docs/research_v3/RESUME.txt).
+See [the verified reproduction procedure](docs/research_v3/REPRODUCTION.md)
+and the [saved post-freeze ranking check](results/leaderboard-review-2026-11-02-final/README.md).
+The independent [V3 PR #3](https://github.com/liuqichang0305/dase7506-mp2-solution/pull/3)
+preserves source, old assets and actual logs. The separate
+[post-deadline report workflow](docs/research_v3/RESEARCH_CLOSEOUT_REPORT.md)
+requires actual archive evidence and never fabricates `TEST_COMPLETE`.
+
+Do not restart the research scheduler, register new experiments, retry pruned
+seeds, tune on validation/test, or replace the old submitted artifacts. Current
+peer review has its own completed reproduction/publication evidence. Do not
+repeat its evaluation or create a duplicate report Issue.
+
+<details>
+<summary>Historical V3 checkpoint from 30 October (superseded; not current resume instructions)</summary>
+
+The following retained checkpoint describes earlier work. Its future-tense
+training/test/submission commands are no longer authorized actions after the
+closure and deadline above.
+
+The current `research/autonomous-v3` branch preserves every historical frozen
+method and adds a bounded, resumable campaign. [Draft PR #3](https://github.com/liuqichang0305/dase7506-mp2-solution/pull/3)
+contains the implementation and actual evidence. As of 30 October 2026 02:40 UTC,
+MLP optimizer controls, small TabM and RealMLP-inspired preprocessing controls
+have completed ten shared three-fold configurations. New Attention controls are
+running. The [verified R03 table](results/research_v3/analysis/r03_complete/EXPERIMENT_TABLE.md)
+includes all completed V2/V3 comparisons, with counts, seed/fold variation,
+training costs, asset sizes and question-paired intervals.
+
+The research clock ends at **2026-10-30 16:22:42 UTC** and is not reset on resume.
+See the [execution specification](docs/research_v3/AUTONOMOUS_RESEARCH_SPEC.txt),
+[search and selection protocol](docs/research_v3/SEARCH_PLAN_V3.md),
+[model sources](docs/research_v3/MODELS_SOURCES.md),
+[optimizer sources](docs/research_v3/OPTIMIZER_SOURCES.md), and
+[current project state](PROJECT_STATE.md).
+No new V3 validation or test score has been obtained at this checkpoint.
+At most two locked finalists will receive validation confirmation; only the
+uniquely selected, reviewed and freshly reproduced bundle can reach final test.
+Historical validation use and the known V1 test total are explicitly disclosed.
+
+Resume from the project root with the existing research environment:
+
+```powershell
+.venv\Scripts\python.exe scripts/run_campaign_v3.py status
+.venv\Scripts\python.exe scripts/run_campaign_v3.py run
+```
+
+The scheduler verifies hashes, refuses concurrent trainers, and resumes atomic
+epoch checkpoints or reuses completed folds. Read
+[the recovery instructions](docs/research_v3/RESUME.txt) before registering
+another round. Research commands do not automatically invoke final testing.
+Final inference is NumPy-only; pinned development and inference dependencies are
+in `code/requirements-training-v3.txt` and `code/requirements-inference-v3.txt`.
+
+</details>
+
+## Performance research v2 — preserved development result
 
 The independent `research/performance-v2` branch implements valid-answer masking,
 answer-group objectives, MLP/ResMLP, Deep Sets and four-token attention. Nineteen

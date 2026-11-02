@@ -1,0 +1,18 @@
+{
+  "returncode": 0,
+  "seconds": 5.669011700003466,
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "code/tests",
+    "-p",
+    "test_confirm_validation_v3.py",
+    "-v"
+  ],
+  "source_sha256_before": "9874482eb585515d51337b83757331020a8b3368a0bd7b1eafb90b94f7da2b1b",
+  "source_sha256_after": "9874482eb585515d51337b83757331020a8b3368a0bd7b1eafb90b94f7da2b1b",
+  "scope": "Real numeric synthetic bundles; no official validation/test"
+}

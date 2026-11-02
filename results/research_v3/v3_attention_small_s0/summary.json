@@ -1,0 +1,1113 @@
+{
+  "experiment_id": "v3_attention_small_s0",
+  "status": "complete",
+  "config": {
+    "family": "attention",
+    "width": 64,
+    "hidden": 64,
+    "dropout": 0.3,
+    "objective": "group",
+    "alpha": 0,
+    "reduction": "full",
+    "optimizer": "adamw",
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "batch_size": 128,
+    "max_epochs": 60,
+    "patience": 10,
+    "seed": 3036900957,
+    "preprocess": "standard",
+    "decoder": {
+      "mode": "group_lse",
+      "alpha": 0,
+      "tau": 1,
+      "mask": true
+    },
+    "experiment_id": "v3_attention_small_s0",
+    "heads": 4
+  },
+  "oof_decoder": {
+    "mode": "group_lse",
+    "alpha": 0,
+    "tau": 1,
+    "mask": true
+  },
+  "folds": [
+    {
+      "experiment_id": "v3_attention_small_s0",
+      "fold": 0,
+      "status": "complete",
+      "seed": 3036900957,
+      "provenance": {
+        "source_files": {
+          "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+          "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+          "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+          "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+          "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+          "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+          "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+          "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+          "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+          "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+          "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+        },
+        "data_files": {
+          "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+          "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+          "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+          "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2"
+        },
+        "git_commit": "7481c4d697e5f5c219b720ba1686fe2d53687f31",
+        "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+        "torch_version": "2.15.0+cpu",
+        "numpy_version": "2.5.3",
+        "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]"
+      },
+      "fit": {
+        "seconds": 12.065567600002396,
+        "epochs_run": 8,
+        "best_epoch": 8,
+        "inner_best_loss": null,
+        "evaluation_weights": "live",
+        "ema_updates": null,
+        "optimizer_steps": 200,
+        "optimizer_groups": [
+          {
+            "role": "adamw",
+            "lr": 0.0003,
+            "weight_decay": 0.01,
+            "param_names": [
+              "input.weight",
+              "qkv.weight",
+              "out.weight",
+              "ff1.weight",
+              "ff2.weight",
+              "rho.weight",
+              "head.weight"
+            ],
+            "shapes": [
+              [
+                64,
+                1024
+              ],
+              [
+                192,
+                64
+              ],
+              [
+                64,
+                64
+              ],
+              [
+                128,
+                64
+              ],
+              [
+                64,
+                128
+              ],
+              [
+                64,
+                80
+              ],
+              [
+                1,
+                64
+              ]
+            ],
+            "parameter_count": 103488
+          },
+          {
+            "role": "adamw",
+            "lr": 0.0003,
+            "weight_decay": 0.0,
+            "param_names": [
+              "input.bias",
+              "norm1.weight",
+              "norm1.bias",
+              "qkv.bias",
+              "out.bias",
+              "norm2.weight",
+              "norm2.bias",
+              "ff1.bias",
+              "ff2.bias",
+              "rho.bias",
+              "head.bias"
+            ],
+            "shapes": [
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                192
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                128
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                1
+              ]
+            ],
+            "parameter_count": 833
+          }
+        ],
+        "hard_fraction": 0.4444794952681388,
+        "resumed_from_epoch": 0,
+        "numpy_max_abs_error": 9.5367431640625e-07,
+        "device": "cpu",
+        "torch_threads": 1,
+        "torch_version": "2.15.0+cpu",
+        "checkpoint": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\research_v3\\training_states\\v3_attention_small_s0\\fold0\\outer\\current.pt",
+        "checkpoint_sha256": "8e18638af5cea383268d1c94ffde9d95a07fcdacb9b95eda664980ab29a0652e",
+        "context": {
+          "source_files": {
+            "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+            "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+            "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+            "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+            "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+            "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+            "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+            "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+            "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+            "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+            "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+          },
+          "data_files": {
+            "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+            "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+            "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+            "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2"
+          },
+          "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+          "fold": 0,
+          "phase": "outer"
+        }
+      },
+      "inner_stopping": {
+        "seconds": 28.352879500002018,
+        "epochs_run": 18,
+        "best_epoch": 8,
+        "inner_best_loss": 0.2179076075553894,
+        "evaluation_weights": "live",
+        "ema_updates": null,
+        "optimizer_steps": 360,
+        "optimizer_groups": [
+          {
+            "role": "adamw",
+            "lr": 0.0003,
+            "weight_decay": 0.01,
+            "param_names": [
+              "input.weight",
+              "qkv.weight",
+              "out.weight",
+              "ff1.weight",
+              "ff2.weight",
+              "rho.weight",
+              "head.weight"
+            ],
+            "shapes": [
+              [
+                64,
+                1024
+              ],
+              [
+                192,
+                64
+              ],
+              [
+                64,
+                64
+              ],
+              [
+                128,
+                64
+              ],
+              [
+                64,
+                128
+              ],
+              [
+                64,
+                80
+              ],
+              [
+                1,
+                64
+              ]
+            ],
+            "parameter_count": 103488
+          },
+          {
+            "role": "adamw",
+            "lr": 0.0003,
+            "weight_decay": 0.0,
+            "param_names": [
+              "input.bias",
+              "norm1.weight",
+              "norm1.bias",
+              "qkv.bias",
+              "out.bias",
+              "norm2.weight",
+              "norm2.bias",
+              "ff1.bias",
+              "ff2.bias",
+              "rho.bias",
+              "head.bias"
+            ],
+            "shapes": [
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                192
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                128
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                1
+              ]
+            ],
+            "parameter_count": 833
+          }
+        ],
+        "hard_fraction": 0.444794952681388,
+        "resumed_from_epoch": 0,
+        "numpy_max_abs_error": 7.152557373046875e-07,
+        "device": "cpu",
+        "torch_threads": 1,
+        "torch_version": "2.15.0+cpu",
+        "checkpoint": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\research_v3\\training_states\\v3_attention_small_s0\\fold0\\inner\\current.pt",
+        "checkpoint_sha256": "a78ceda54402d9de302668b442b40bd29c5c5940ac83214f10c0e72dfd8a257a",
+        "context": {
+          "source_files": {
+            "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+            "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+            "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+            "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+            "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+            "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+            "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+            "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+            "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+            "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+            "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+          },
+          "data_files": {
+            "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+            "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+            "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+            "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2"
+          },
+          "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+          "fold": 0,
+          "phase": "inner"
+        }
+      },
+      "parameters": 104321,
+      "numeric_asset_bytes": 454436,
+      "audited_uncompressed_bytes": 460491,
+      "checkpoint": "artifacts/research_v3/v3_attention_small_s0/fold0",
+      "scores_sha256": "fc2c8384b5170d5560e775e18ba24a9f9bac3a5fbb5dc1d33a98296aa8b12240",
+      "output_sha256": {
+        "fold0-scores.npy": "fc2c8384b5170d5560e775e18ba24a9f9bac3a5fbb5dc1d33a98296aa8b12240",
+        "fold0-raw-scores.npy": "fc2c8384b5170d5560e775e18ba24a9f9bac3a5fbb5dc1d33a98296aa8b12240"
+      },
+      "asset_sha256": {
+        "config.json": "a9eb1693b61ca1bfd8658cfdcb53a3cedf4ecfb12d538890604e4b9a9ab50a2b",
+        "weights.npz": "dc883e3de0462d6d1eaee47a5793ea69ee0bf6caa856ec8896c630da4c146dc8"
+      },
+      "oof_decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "correct": 1441,
+      "n": 1585,
+      "accuracy": 90.91482649842271,
+      "hard_correct": 561,
+      "hard_n": 705,
+      "hard_accuracy": 79.57446808510639,
+      "single_positive_correct": 132,
+      "single_positive_n": 237,
+      "single_positive_accuracy": 55.69620253164557
+    },
+    {
+      "experiment_id": "v3_attention_small_s0",
+      "fold": 1,
+      "status": "complete",
+      "seed": 3036900958,
+      "provenance": {
+        "source_files": {
+          "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+          "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+          "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+          "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+          "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+          "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+          "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+          "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+          "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+          "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+          "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+        },
+        "data_files": {
+          "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+          "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+          "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+          "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2"
+        },
+        "git_commit": "7481c4d697e5f5c219b720ba1686fe2d53687f31",
+        "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+        "torch_version": "2.15.0+cpu",
+        "numpy_version": "2.5.3",
+        "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]"
+      },
+      "fit": {
+        "seconds": 12.183759699997609,
+        "epochs_run": 8,
+        "best_epoch": 8,
+        "inner_best_loss": null,
+        "evaluation_weights": "live",
+        "ema_updates": null,
+        "optimizer_steps": 200,
+        "optimizer_groups": [
+          {
+            "role": "adamw",
+            "lr": 0.0003,
+            "weight_decay": 0.01,
+            "param_names": [
+              "input.weight",
+              "qkv.weight",
+              "out.weight",
+              "ff1.weight",
+              "ff2.weight",
+              "rho.weight",
+              "head.weight"
+            ],
+            "shapes": [
+              [
+                64,
+                1024
+              ],
+              [
+                192,
+                64
+              ],
+              [
+                64,
+                64
+              ],
+              [
+                128,
+                64
+              ],
+              [
+                64,
+                128
+              ],
+              [
+                64,
+                80
+              ],
+              [
+                1,
+                64
+              ]
+            ],
+            "parameter_count": 103488
+          },
+          {
+            "role": "adamw",
+            "lr": 0.0003,
+            "weight_decay": 0.0,
+            "param_names": [
+              "input.bias",
+              "norm1.weight",
+              "norm1.bias",
+              "qkv.bias",
+              "out.bias",
+              "norm2.weight",
+              "norm2.bias",
+              "ff1.bias",
+              "ff2.bias",
+              "rho.bias",
+              "head.bias"
+            ],
+            "shapes": [
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                192
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                128
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                1
+              ]
+            ],
+            "parameter_count": 833
+          }
+        ],
+        "hard_fraction": 0.4444794952681388,
+        "resumed_from_epoch": 0,
+        "numpy_max_abs_error": 1.1920928955078125e-06,
+        "device": "cpu",
+        "torch_threads": 1,
+        "torch_version": "2.15.0+cpu",
+        "checkpoint": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\research_v3\\training_states\\v3_attention_small_s0\\fold1\\outer\\current.pt",
+        "checkpoint_sha256": "2d8908c1edccdf0b3c75ddf8443615f39fbdcf75ab7a00b47fd527c91d4866b0",
+        "context": {
+          "source_files": {
+            "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+            "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+            "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+            "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+            "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+            "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+            "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+            "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+            "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+            "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+            "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+          },
+          "data_files": {
+            "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+            "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+            "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+            "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2"
+          },
+          "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+          "fold": 1,
+          "phase": "outer"
+        }
+      },
+      "inner_stopping": {
+        "seconds": 21.912719500003732,
+        "epochs_run": 18,
+        "best_epoch": 8,
+        "inner_best_loss": 0.20845872163772583,
+        "evaluation_weights": "live",
+        "ema_updates": null,
+        "optimizer_steps": 360,
+        "optimizer_groups": [
+          {
+            "role": "adamw",
+            "lr": 0.0003,
+            "weight_decay": 0.01,
+            "param_names": [
+              "input.weight",
+              "qkv.weight",
+              "out.weight",
+              "ff1.weight",
+              "ff2.weight",
+              "rho.weight",
+              "head.weight"
+            ],
+            "shapes": [
+              [
+                64,
+                1024
+              ],
+              [
+                192,
+                64
+              ],
+              [
+                64,
+                64
+              ],
+              [
+                128,
+                64
+              ],
+              [
+                64,
+                128
+              ],
+              [
+                64,
+                80
+              ],
+              [
+                1,
+                64
+              ]
+            ],
+            "parameter_count": 103488
+          },
+          {
+            "role": "adamw",
+            "lr": 0.0003,
+            "weight_decay": 0.0,
+            "param_names": [
+              "input.bias",
+              "norm1.weight",
+              "norm1.bias",
+              "qkv.bias",
+              "out.bias",
+              "norm2.weight",
+              "norm2.bias",
+              "ff1.bias",
+              "ff2.bias",
+              "rho.bias",
+              "head.bias"
+            ],
+            "shapes": [
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                192
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                128
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                1
+              ]
+            ],
+            "parameter_count": 833
+          }
+        ],
+        "hard_fraction": 0.444794952681388,
+        "resumed_from_epoch": 0,
+        "numpy_max_abs_error": 9.5367431640625e-07,
+        "device": "cpu",
+        "torch_threads": 1,
+        "torch_version": "2.15.0+cpu",
+        "checkpoint": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\research_v3\\training_states\\v3_attention_small_s0\\fold1\\inner\\current.pt",
+        "checkpoint_sha256": "b5ce61f272b6550b48fdd25cb9152598c89569136eab3b023498aa0ef94da7b8",
+        "context": {
+          "source_files": {
+            "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+            "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+            "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+            "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+            "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+            "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+            "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+            "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+            "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+            "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+            "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+          },
+          "data_files": {
+            "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+            "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+            "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+            "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2"
+          },
+          "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+          "fold": 1,
+          "phase": "inner"
+        }
+      },
+      "parameters": 104321,
+      "numeric_asset_bytes": 454436,
+      "audited_uncompressed_bytes": 460491,
+      "checkpoint": "artifacts/research_v3/v3_attention_small_s0/fold1",
+      "scores_sha256": "ab85ebaacd88ad12273525dec8f27637d51ce36805ce550401ed78c31da73e51",
+      "output_sha256": {
+        "fold1-scores.npy": "ab85ebaacd88ad12273525dec8f27637d51ce36805ce550401ed78c31da73e51",
+        "fold1-raw-scores.npy": "ab85ebaacd88ad12273525dec8f27637d51ce36805ce550401ed78c31da73e51"
+      },
+      "asset_sha256": {
+        "config.json": "a9eb1693b61ca1bfd8658cfdcb53a3cedf4ecfb12d538890604e4b9a9ab50a2b",
+        "weights.npz": "7b017d74bd563abc4dcebbff01a7c6b08ea41558d7b84104303ecbb63bcf9607"
+      },
+      "oof_decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "correct": 1432,
+      "n": 1585,
+      "accuracy": 90.34700315457414,
+      "hard_correct": 552,
+      "hard_n": 705,
+      "hard_accuracy": 78.29787234042553,
+      "single_positive_correct": 113,
+      "single_positive_n": 237,
+      "single_positive_accuracy": 47.67932489451477
+    },
+    {
+      "experiment_id": "v3_attention_small_s0",
+      "fold": 2,
+      "status": "complete",
+      "seed": 3036900959,
+      "provenance": {
+        "source_files": {
+          "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+          "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+          "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+          "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+          "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+          "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+          "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+          "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+          "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+          "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+          "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+        },
+        "data_files": {
+          "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+          "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+          "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+          "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2"
+        },
+        "git_commit": "7481c4d697e5f5c219b720ba1686fe2d53687f31",
+        "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+        "torch_version": "2.15.0+cpu",
+        "numpy_version": "2.5.3",
+        "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]"
+      },
+      "fit": {
+        "seconds": 13.429816200005007,
+        "epochs_run": 9,
+        "best_epoch": 9,
+        "inner_best_loss": null,
+        "evaluation_weights": "live",
+        "ema_updates": null,
+        "optimizer_steps": 225,
+        "optimizer_groups": [
+          {
+            "role": "adamw",
+            "lr": 0.0003,
+            "weight_decay": 0.01,
+            "param_names": [
+              "input.weight",
+              "qkv.weight",
+              "out.weight",
+              "ff1.weight",
+              "ff2.weight",
+              "rho.weight",
+              "head.weight"
+            ],
+            "shapes": [
+              [
+                64,
+                1024
+              ],
+              [
+                192,
+                64
+              ],
+              [
+                64,
+                64
+              ],
+              [
+                128,
+                64
+              ],
+              [
+                64,
+                128
+              ],
+              [
+                64,
+                80
+              ],
+              [
+                1,
+                64
+              ]
+            ],
+            "parameter_count": 103488
+          },
+          {
+            "role": "adamw",
+            "lr": 0.0003,
+            "weight_decay": 0.0,
+            "param_names": [
+              "input.bias",
+              "norm1.weight",
+              "norm1.bias",
+              "qkv.bias",
+              "out.bias",
+              "norm2.weight",
+              "norm2.bias",
+              "ff1.bias",
+              "ff2.bias",
+              "rho.bias",
+              "head.bias"
+            ],
+            "shapes": [
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                192
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                128
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                1
+              ]
+            ],
+            "parameter_count": 833
+          }
+        ],
+        "hard_fraction": 0.444794952681388,
+        "resumed_from_epoch": 0,
+        "numpy_max_abs_error": 9.5367431640625e-07,
+        "device": "cpu",
+        "torch_threads": 1,
+        "torch_version": "2.15.0+cpu",
+        "checkpoint": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\research_v3\\training_states\\v3_attention_small_s0\\fold2\\outer\\current.pt",
+        "checkpoint_sha256": "98efc9cd515588b74b05fd3491098515fd6f41b822ce40ce5bd6e6a2c1ebd5e7",
+        "context": {
+          "source_files": {
+            "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+            "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+            "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+            "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+            "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+            "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+            "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+            "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+            "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+            "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+            "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+          },
+          "data_files": {
+            "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+            "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+            "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+            "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2"
+          },
+          "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+          "fold": 2,
+          "phase": "outer"
+        }
+      },
+      "inner_stopping": {
+        "seconds": 23.136791900004027,
+        "epochs_run": 19,
+        "best_epoch": 9,
+        "inner_best_loss": 0.21771036088466644,
+        "evaluation_weights": "live",
+        "ema_updates": null,
+        "optimizer_steps": 380,
+        "optimizer_groups": [
+          {
+            "role": "adamw",
+            "lr": 0.0003,
+            "weight_decay": 0.01,
+            "param_names": [
+              "input.weight",
+              "qkv.weight",
+              "out.weight",
+              "ff1.weight",
+              "ff2.weight",
+              "rho.weight",
+              "head.weight"
+            ],
+            "shapes": [
+              [
+                64,
+                1024
+              ],
+              [
+                192,
+                64
+              ],
+              [
+                64,
+                64
+              ],
+              [
+                128,
+                64
+              ],
+              [
+                64,
+                128
+              ],
+              [
+                64,
+                80
+              ],
+              [
+                1,
+                64
+              ]
+            ],
+            "parameter_count": 103488
+          },
+          {
+            "role": "adamw",
+            "lr": 0.0003,
+            "weight_decay": 0.0,
+            "param_names": [
+              "input.bias",
+              "norm1.weight",
+              "norm1.bias",
+              "qkv.bias",
+              "out.bias",
+              "norm2.weight",
+              "norm2.bias",
+              "ff1.bias",
+              "ff2.bias",
+              "rho.bias",
+              "head.bias"
+            ],
+            "shapes": [
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                192
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                128
+              ],
+              [
+                64
+              ],
+              [
+                64
+              ],
+              [
+                1
+              ]
+            ],
+            "parameter_count": 833
+          }
+        ],
+        "hard_fraction": 0.44518927444794953,
+        "resumed_from_epoch": 0,
+        "numpy_max_abs_error": 9.5367431640625e-07,
+        "device": "cpu",
+        "torch_threads": 1,
+        "torch_version": "2.15.0+cpu",
+        "checkpoint": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\research_v3\\training_states\\v3_attention_small_s0\\fold2\\inner\\current.pt",
+        "checkpoint_sha256": "558a41e356e35491f22c7793f4833eca56ed372c69bcc197c5d5e3ab2ef62660",
+        "context": {
+          "source_files": {
+            "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+            "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+            "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+            "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+            "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+            "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+            "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+            "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+            "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+            "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+            "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+          },
+          "data_files": {
+            "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+            "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+            "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+            "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2"
+          },
+          "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+          "fold": 2,
+          "phase": "inner"
+        }
+      },
+      "parameters": 104321,
+      "numeric_asset_bytes": 454436,
+      "audited_uncompressed_bytes": 460491,
+      "checkpoint": "artifacts/research_v3/v3_attention_small_s0/fold2",
+      "scores_sha256": "318e320e00556a0537e7ff42d5616f4c51a6ce1c30c1a9642cd4ee29e3928ab4",
+      "output_sha256": {
+        "fold2-scores.npy": "318e320e00556a0537e7ff42d5616f4c51a6ce1c30c1a9642cd4ee29e3928ab4",
+        "fold2-raw-scores.npy": "318e320e00556a0537e7ff42d5616f4c51a6ce1c30c1a9642cd4ee29e3928ab4"
+      },
+      "asset_sha256": {
+        "config.json": "a9eb1693b61ca1bfd8658cfdcb53a3cedf4ecfb12d538890604e4b9a9ab50a2b",
+        "weights.npz": "b056c04c68e9d7e50b0aec2b4d76eeeec65ac3cb86cc68a7a3653b07b7178679"
+      },
+      "oof_decoder": {
+        "mode": "group_lse",
+        "alpha": 0,
+        "tau": 1,
+        "mask": true
+      },
+      "correct": 1438,
+      "n": 1585,
+      "accuracy": 90.7255520504732,
+      "hard_correct": 557,
+      "hard_n": 704,
+      "hard_accuracy": 79.11931818181817,
+      "single_positive_correct": 122,
+      "single_positive_n": 237,
+      "single_positive_accuracy": 51.47679324894515
+    }
+  ],
+  "provenance": {
+    "source_files": {
+      "code/train_v3.py": "46744ef8fa7258ccc8ff50f2dda5a70efa1f595c835f3082fb25d7d15eb3263f",
+      "code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+      "code/mp2/features.py": "c787f2dcd4bb08b7be3f9822c5557114f9c1e9773641085eed92a822f397cb69",
+      "code/mp2/training.py": "66323a6ffe4c1dbe0198c965ea146a3db3221824636636907a5c8ce3f033d7c2",
+      "code/mp2/selection_v2.py": "0ff501112044cf15796a13803f7effd92bd1257b78e3bd15f21dc20db7ea28af",
+      "code/mp2/models_v2.py": "932ee68a1c85ee566f9742bb15a5026793272c1b854a9fac7a8bc99680fb0c2c",
+      "code/mp2/research_v3/training.py": "a2db2f949ca2c749e062a2e856ec50f2677cd00bfa3b20e08edacd2a8ee1742d",
+      "code/mp2/research_v3/models.py": "73cf8a44bf2fc65df275c67dfb37fccb0c2cc7912d41635854e117b30ff5f926",
+      "code/mp2/research_v3/optimizers.py": "f690e99adfa5370cff3482d4f3a2d977c0bc3012201a6cdabcf0fb386abb2c2d",
+      "code/mp2/research_v3/preprocess.py": "cc3c0845a572614dbe998df73c50d792c6e7fc2bb95945fa187d4f9ba2aa982d",
+      "code/mp2/research_v3/selection.py": "03e512d59da58eb2e7818eae0ac7acf9b56c7a1d1900914e41577887385fa307"
+    },
+    "data_files": {
+      "code/data/manifest.json": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+      "code/data/gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+      "code/data/candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+      "code/data/candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2"
+    },
+    "git_commit": "7481c4d697e5f5c219b720ba1686fe2d53687f31",
+    "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+    "torch_version": "2.15.0+cpu",
+    "numpy_version": "2.5.3",
+    "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]"
+  },
+  "oof_sha256": "f406243cfd1b31a85d9cff746147339ef763842bc35fc5b3fdffe7a627b707aa",
+  "wall_seconds_this_invocation": 115.59643890000007,
+  "training_seconds": 111.08153440001479,
+  "correct": 4311,
+  "n": 4755,
+  "accuracy": 90.66246056782335,
+  "hard_correct": 1670,
+  "hard_n": 2114,
+  "hard_accuracy": 78.99716177861873,
+  "single_positive_correct": 367,
+  "single_positive_n": 711,
+  "single_positive_accuracy": 51.61744022503516,
+  "accuracy_fold_mean": 90.66246056782336,
+  "accuracy_fold_sd": 0.2891214949498927,
+  "hard_accuracy_fold_mean": 78.99721953578336,
+  "hard_accuracy_fold_sd": 0.6469970891410339,
+  "single_positive_accuracy_fold_mean": 51.61744022503516,
+  "single_positive_accuracy_fold_sd": 4.010289009671799
+}

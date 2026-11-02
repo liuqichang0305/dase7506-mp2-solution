@@ -1,0 +1,39 @@
+{
+  "schema": "mp2-v3-confidence-calibration-v1",
+  "coefficient": 0.8041222855160008,
+  "intercept": -0.09645166698285632,
+  "C": 1.0,
+  "logit_clip_epsilon": 1e-06,
+  "seed": 3036900957,
+  "sklearn_version": "1.9.1",
+  "numpy_version": "2.5.3",
+  "iterations": 13,
+  "objective": "Binary logistic loss with C=1 L2-regularized one-dimensional slope and unpenalized intercept.",
+  "fit_n": 4755,
+  "fit_correct": 4295,
+  "purpose": "Optional report-only analysis. Official predict does not load this map; choices are unchanged. These files are outside the inference bundle. If a future prediction path loads them, all such assets must be counted.",
+  "source_split": "train_oof",
+  "selector": {
+    "kind": "single_model",
+    "experiment_id": "deepsets_regularized_s0",
+    "family": "deepsets",
+    "decoder": {
+      "mode": "group_lse",
+      "alpha": 0,
+      "tau": 1,
+      "mask": true
+    },
+    "member_probability_average": false
+  },
+  "source_sha256": {
+    "summary.json": "a961c3df4dd3a8a549cfc578ad4f23c90f592d31f77aa225dc65ee9293b64b6b",
+    "registration.json": "56ffcc3b3b0256f823562aaeca556644df51502c4a7b7c2687ce13eb670adaf6",
+    "oof.npz": "81b290b538d261e30f267c1b0c2c7e5487c4248e93b8a94bd902678a106d4b99",
+    "selected_model_json": "5f71f84f5e4b8de2e93becd2020788e5a8905ad5cb7f0a72d60fa2b03e9ac113",
+    "validation_summary_json": "a5254acf03acdc4996733db4484adae90508e61dfc0fdd8e4b56b7870e423322"
+  },
+  "folds_sha256": "fc2e962ccb38e8def416bf03e519a720c021822f025021fcc2bb950de4a8c4c9",
+  "oof_directory": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\results\\research_v2\\deepsets_regularized_s0",
+  "analysis_source_sha256": "4b7e134a6d8a569e44b278a83970c572b9e2d42400f4b273106b0478efe8685d",
+  "fit_metrics_interpretation": "IN-SAMPLE: the mapping was fitted to these OOF outcomes. Calibration metrics are optimistic; OOF model selection adds further optimism. No unbiased/generalization claim."
+}
