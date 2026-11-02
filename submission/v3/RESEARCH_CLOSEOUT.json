@@ -1,0 +1,22 @@
+{
+  "schema": "mp2-v3-post-deadline-closeout-v1",
+  "created_at_utc": "2026-11-02T07:54:17.043350+00:00",
+  "freeze_sha256": "d5c4439f0ea38c469c22df3753cae0db0733147d7607f342ad53075072303218",
+  "selected_model_sha256": "5f71f84f5e4b8de2e93becd2020788e5a8905ad5cb7f0a72d60fa2b03e9ac113",
+  "formal_submission_blocked_sha256": "fae686287921063a3a10333e311e73239fd92b143e01a1cfb36282bea1193ff2",
+  "rules_audit_path": "docs/research_v3/RULES_RESUMPTION_20261101.md",
+  "rules_audit_sha256": "7ad6658c94c382986c3ec66171864e3e2d7eafc3f7e4836e7e78a867471def70",
+  "research_only": true,
+  "missed_deadline": true,
+  "no_new_test": true,
+  "no_new_score_update": true,
+  "prior_issue_number": 294,
+  "prior_issue_url": "https://github.com/xudongwu-0/xudongwu-0.github.io/issues/294",
+  "incomplete_stability_ids": [
+    "v3_attention_ema_s1",
+    "v3_attention_ema_s2",
+    "v3_tabm_embedding_stats_ema_s1",
+    "v3_tabm_embedding_stats_ema_s2"
+  ],
+  "monitor_gap_disclosure": "Four added-seed jobs were pruned without complete CV. Preserved attempt records include an elapsed wall duration of 186401.74966692924 seconds across 2026-10-30 to 2026-11-01, with long gaps in monitoring; this is not evidence of continuous CPU work or uninterrupted supervision. The underlying cause of the gaps is unestablished. Original nominal attempt and absolute campaign deadlines were not reset; resumption stopped overdue work. The formal closure occurred on 2026-11-02 after both the research budget and course score deadline. The reserved delivery buffer was missed, and no timely V3 submission is claimed."
+}

@@ -1,0 +1,175 @@
+{
+  "schema": "mp2-peer-download-v1",
+  "status": "complete",
+  "source_commit": "7e3a2792b7b4442f5e53705a64b4560a2e365de9",
+  "created_at_utc": "2026-11-02T07:15:30.535533+00:00",
+  "destination": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\source",
+  "anonymous": true,
+  "authentication_headers_sent": false,
+  "downloaded_code_executed": false,
+  "raw_task_data_downloaded": false,
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/README.md",
+      "http_status": 200,
+      "bytes": 4613,
+      "sha256": "83e3df0451749620411d84ec8ef30ffe40f5fbb0c3d706de9fb5cdb79aa046b4",
+      "git_blob_sha": "0768453cdb11a4ba9f54e01b40390d29a5661e17",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": ".gitattributes",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/.gitattributes",
+      "http_status": 200,
+      "bytes": 423,
+      "sha256": "99d6b72451924789bdd9853c677dc4abbc4f9a3455da903d3f06efead5a377b1",
+      "git_blob_sha": "fb515e9624336d2f11925ec655e1b114a6d63590",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": "code/submission.py",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/submission.py",
+      "http_status": 200,
+      "bytes": 4090,
+      "sha256": "e327b29e7b0b4a1fb7f0cc4d0a6160d6bf86e4ad600cac3e7db05fc09789ed4e",
+      "git_blob_sha": "2815f256c3f63c3c39ad7d5a519b515225d79fc0",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": "code/features.py",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/features.py",
+      "http_status": 200,
+      "bytes": 24494,
+      "sha256": "31a9c0472c6fa4a88f1aa4668abfef49edf090e131f2279c04d676daaff12ddb",
+      "git_blob_sha": "27e799e560b04d74c4433a5c309f52ec3d6ff894",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": "code/model.py",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/model.py",
+      "http_status": 200,
+      "bytes": 12512,
+      "sha256": "99ff12f129af9c69d7d9693f5a4d36b6f73314da76607986b9ccba6ec604338a",
+      "git_blob_sha": "4b0313ca8f015ee49700fedfe2c43b2f6383e816",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": "code/train.py",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/train.py",
+      "http_status": 200,
+      "bytes": 6216,
+      "sha256": "eb5337e1d5e75b4dc519a0f4efe215c5e78ddfd6a18626945337873b5501b943",
+      "git_blob_sha": "e9db13c532690f86d251a5cc7a13bccaf6f8ee5e",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": "code/requirements.txt",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/requirements.txt",
+      "http_status": 200,
+      "bytes": 13,
+      "sha256": "5c12d85e7c08038d1dd9ffbf8119d12ce808885230a47e2bf65dcd9f114659d5",
+      "git_blob_sha": "c853fa8fcdedf5d1bd8e4e79d335541549fabe57",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": "code/requirements-train.txt",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/requirements-train.txt",
+      "http_status": 200,
+      "bytes": 997,
+      "sha256": "036975b5b369b7c113e5cbbb6d7da940b1968ac39c97b2ac851799aeff21e094",
+      "git_blob_sha": "fcfcd326ab5324c9c09f51a5234350f7243c3a30",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": "code/common.py",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/common.py",
+      "http_status": 200,
+      "bytes": 4192,
+      "sha256": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+      "git_blob_sha": "a0b1698feb9a2c5a358fecce62212c659fd12147",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": "code/predict.py",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/predict.py",
+      "http_status": 200,
+      "bytes": 1680,
+      "sha256": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+      "git_blob_sha": "5f3faa7bba988787ee068f479cf81ef8ed4e3cad",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": "code/score_predictions.py",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/score_predictions.py",
+      "http_status": 200,
+      "bytes": 1283,
+      "sha256": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+      "git_blob_sha": "0f1eb78a9ad3453f544b732f9ad74f5870873499",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": "code/PACKAGE_MANIFEST.json",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/PACKAGE_MANIFEST.json",
+      "http_status": 200,
+      "bytes": 2110,
+      "sha256": "2e9b714598e1addba61545f0d7ce4891d9d11aaf567fb341420d36694fcfd656",
+      "git_blob_sha": "6088c5bf8f8c8f4f531fdc485f1d3b07915dd575",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": "code/runs/model_bundle/config.json",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/runs/model_bundle/config.json",
+      "http_status": 200,
+      "bytes": 635,
+      "sha256": "53d377a3ece335620c1901077e284c0bdb08b1cf3fee9434b28e2bf3735ac914",
+      "git_blob_sha": "4d0bd1ccc14a42c21922c200760aa37683b98183",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": "code/runs/model_bundle/scaler_mean.npy",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/runs/model_bundle/scaler_mean.npy",
+      "http_status": 200,
+      "bytes": 17160,
+      "sha256": "6015e04095e365e4681ea4c72ea48e1bd0fcf45fc32049ec61293c16749f917a",
+      "git_blob_sha": "d3dbadc1f87b596384812121c942ec0b0bef8c5d",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": "code/runs/model_bundle/scaler_std.npy",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/runs/model_bundle/scaler_std.npy",
+      "http_status": 200,
+      "bytes": 17160,
+      "sha256": "2f33f720a075e618873e648bcad839c749d4c9c1bec1d4728351e81dfa7964bf",
+      "git_blob_sha": "751bad3cfd9ec46ba1b1407393d2c208cfa595ad",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": "code/runs/model_bundle/weights.npy",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/runs/model_bundle/weights.npy",
+      "http_status": 200,
+      "bytes": 51224,
+      "sha256": "070fd8454aecfb1cf9fe022dd5d6cca81c1717810a8001dc1e996122f1fc9bc0",
+      "git_blob_sha": "2cbad279bf2f8bffa30e7c01244379d677bb19f3",
+      "git_blob_metadata_verified": true
+    },
+    {
+      "path": "code/data/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/data/LICENSE.txt",
+      "http_status": 200,
+      "bytes": 1062,
+      "sha256": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b",
+      "git_blob_sha": "9e84fcbc4d81a1f433c90caf9f1cef373c12edae",
+      "git_blob_metadata_verified": false
+    },
+    {
+      "path": "code/data/NOTICE.txt",
+      "url": "https://raw.githubusercontent.com/Dylan0528/DASE7506-Project2/7e3a2792b7b4442f5e53705a64b4560a2e365de9/code/data/NOTICE.txt",
+      "http_status": 200,
+      "bytes": 1066,
+      "sha256": "d577cdf7202ae22f2b19ace348b0ec69958a59aaf51d30cdab902bf7c1e67d78",
+      "git_blob_sha": "07c693f33b01d2f99c4197665816bed90bac76b4",
+      "git_blob_metadata_verified": false
+    }
+  ]
+}

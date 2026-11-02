@@ -1,0 +1,18 @@
+{
+  "schema": "mp2-peer-published-row-binding-v1",
+  "target_sha256": "70bb33df04b87ca723cb61329ddb48bfba0eecb3d9734a542f8cb2952992f9b4",
+  "student_id": "3036747276",
+  "submission": 240,
+  "issue_url": "https://github.com/xudongwu-0/xudongwu-0.github.io/issues/240",
+  "published_row_canonical_sha256": "8a5ae2aea14b33d5237173442dcdd66aebb82e93417c9c52d2adb98bee017a19",
+  "canonicalization": "UTF8 JSON sorted keys, compact separators, ensure_ascii=False",
+  "published_row": {
+    "submission": 240,
+    "author": "Dylan0528",
+    "score": 84.3831,
+    "code_url": "https://github.com/Dylan0528/DASE7506-Project2/tree/submission-v1",
+    "checkpoint_url": "https://github.com/Dylan0528/DASE7506-Project2/tree/submission-v1/code/runs/model_bundle",
+    "artifact_issue": 240
+  },
+  "peer_commit": "7e3a2792b7b4442f5e53705a64b4560a2e365de9"
+}

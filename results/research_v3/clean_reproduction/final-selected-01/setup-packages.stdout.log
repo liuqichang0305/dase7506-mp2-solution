@@ -1,0 +1,14 @@
+Collecting numpy==2.5.3
+  Obtaining dependency information for numpy==2.5.3 from https://files.pythonhosted.org/packages/3c/a1/accf6d4f0c80c5d9ba9735d6b1550e444180599f34dec69ca01360f717ad/numpy-2.5.3-cp312-cp312-win_amd64.whl.metadata
+  Using cached numpy-2.5.3-cp312-cp312-win_amd64.whl.metadata (6.6 kB)
+Collecting threadpoolctl==3.7.0
+  Obtaining dependency information for threadpoolctl==3.7.0 from https://files.pythonhosted.org/packages/43/3f/f88a53f60a472b46f4023f56d204dd7de33d34c5d2acbfa0d70a674e639e/threadpoolctl-3.7.0-py3-none-any.whl.metadata
+  Using cached threadpoolctl-3.7.0-py3-none-any.whl.metadata (24 kB)
+Collecting psutil==7.2.2
+  Obtaining dependency information for psutil==7.2.2 from https://files.pythonhosted.org/packages/b4/90/e2159492b5426be0c1fef7acba807a03511f97c5f86b3caeda6ad92351a7/psutil-7.2.2-cp37-abi3-win_amd64.whl.metadata
+  Using cached psutil-7.2.2-cp37-abi3-win_amd64.whl.metadata (22 kB)
+Using cached numpy-2.5.3-cp312-cp312-win_amd64.whl (12.6 MB)
+Using cached threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+Using cached psutil-7.2.2-cp37-abi3-win_amd64.whl (137 kB)
+Installing collected packages: threadpoolctl, psutil, numpy
+Successfully installed numpy-2.5.3 psutil-7.2.2 threadpoolctl-3.7.0

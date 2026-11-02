@@ -1,0 +1,63 @@
+{
+  "schema": "mp2-peer-official-files-v1",
+  "official_commit": "bb801f4f2e7629d270df765ab12c333b2dc616bb",
+  "package_manifest_sha256": "2e9b714598e1addba61545f0d7ce4891d9d11aaf567fb341420d36694fcfd656",
+  "files": [
+    {
+      "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\official\\common.py",
+      "official_path": "code/common.py",
+      "sha256": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+      "bytes": 4192
+    },
+    {
+      "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\official\\predict.py",
+      "official_path": "code/predict.py",
+      "sha256": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+      "bytes": 1680
+    },
+    {
+      "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\official\\score_predictions.py",
+      "official_path": "code/score_predictions.py",
+      "sha256": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+      "bytes": 1283
+    },
+    {
+      "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\official\\data\\manifest.json",
+      "official_path": "code/data/manifest.json",
+      "sha256": "8b3721d458e48c87eab3a28f660e663981b10617b6e7321123c6ff30b1fbe825",
+      "bytes": 1732
+    },
+    {
+      "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\official\\data\\candidates\\gsm8k_test.jsonl",
+      "official_path": "code/data/candidates/gsm8k_test.jsonl",
+      "sha256": "1d7b4cc651bbe7258b59c3ab4af4b0f8b6b0975975d98dadea3a4050d78b6e70",
+      "bytes": 1335791
+    },
+    {
+      "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\official\\data\\candidates\\gsm8k_test.npz",
+      "official_path": "code/data/candidates/gsm8k_test.npz",
+      "sha256": "b0805775b3902fa363253c83b850fc59c359d886a449fe4444393b8e355f0f63",
+      "bytes": 7098623
+    },
+    {
+      "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\official\\data\\gsm8k_test.jsonl",
+      "official_path": "code/data/gsm8k_test.jsonl",
+      "sha256": "60fe0e964e2e70c05f612823a04655a474512bf73821fafa88111313a9d87c16",
+      "bytes": 308792
+    },
+    {
+      "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\official\\data\\LICENSE.txt",
+      "official_path": "code/data/LICENSE.txt",
+      "sha256": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b",
+      "bytes": 1062
+    },
+    {
+      "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\official\\data\\NOTICE.txt",
+      "official_path": "code/data/NOTICE.txt",
+      "sha256": "d577cdf7202ae22f2b19ace348b0ec69958a59aaf51d30cdab902bf7c1e67d78",
+      "bytes": 1066
+    }
+  ],
+  "references_copied_for_independent_scorer_only": true,
+  "question_text_displayed": false
+}

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:\\Program Files\\Python312\\python.exe",
+    "-I",
+    "-m",
+    "venv",
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduce-v3-env-final-selected-01-6f8dc1e8a507"
+  ],
+  "cwd": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution",
+  "started_at_utc": "2026-11-02T07:51:02.044767+00:00"
+}

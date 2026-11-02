@@ -1,0 +1,26 @@
+{
+  "run_process_source": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\code\\tools\\confirm_validation_v3.py",
+  "sha256": "a3928fdd9b58bfd5d3036f51510a866516d5aab8a8289892212769aecf558aff",
+  "cooperative_lock": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\research_v3\\trainer.lock",
+  "worker_environment_keys": [
+    "BLIS_NUM_THREADS",
+    "COMSPEC",
+    "MKL_NUM_THREADS",
+    "NUMEXPR_NUM_THREADS",
+    "OMP_NUM_THREADS",
+    "OMP_THREAD_LIMIT",
+    "OPENBLAS_NUM_THREADS",
+    "PATH",
+    "PATHEXT",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONNOUSERSITE",
+    "PYTHONPATH",
+    "PYTHONUTF8",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "VECLIB_MAXIMUM_THREADS",
+    "WINDIR"
+  ],
+  "worker_credentials_inherited": false
+}

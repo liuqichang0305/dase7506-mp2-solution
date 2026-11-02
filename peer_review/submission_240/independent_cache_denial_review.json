@@ -1,0 +1,116 @@
+{
+  "schema": "mp2-peer-cache-denial-independent-review-v1",
+  "reviewed_at_utc": "2026-11-02T07:40:18.878613+00:00",
+  "peer_submission": 240,
+  "peer_commit": "7e3a2792b7b4442f5e53705a64b4560a2e365de9",
+  "read_only_review": true,
+  "input_sha256": {
+    "FAILED.json": "783d84d5bc9de1f7e592f17475d236d1f29c062bbd4fa11fd27ee030c36835dc",
+    "STARTED.json": "229eeb8b5615512545cba8985102df9f7269bd6e8cd2f46aea882c193ce70c65",
+    "prediction-access.json": "647e7ba788f1927d88e257c80a1620bc63a48bff12cae45c6fba54a0be0006d7",
+    "scoring-access.json": "0252438d5fcece48d2ebf68d8799c1f4115b0ccc93d9ebd71f78b1aa44a90a24",
+    "prediction-libraries.json": "65daa2a5030ba0ac4d6f687c4a3a5eb0b9225ccc42e1f86ef8a7ac4cbf45e382",
+    "scoring-libraries.json": "95a426eb3cce0c2ecc7caae0a39ae523c79af13a9d4c83c2f6122ff53c10b711",
+    "score.json": "37e84fc9992b16b6ab7582a7cde0574f970913fd24661f71f47dd5a9462734d7",
+    "run_guarded_peer.py": "c7bf4523f7fb002a4514e097316ad1b8daacaa5087a484883a6401d6262643c9"
+  },
+  "checks": [
+    {
+      "phase": "prediction",
+      "denied": [
+        {
+          "event": "open",
+          "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\official\\__pycache__\\common.cpython-312.pyc",
+          "writing": false
+        },
+        {
+          "event": "open",
+          "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\source\\code\\__pycache__\\submission.cpython-312.pyc",
+          "writing": false
+        },
+        {
+          "event": "open",
+          "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\source\\code\\__pycache__\\features.cpython-312.pyc",
+          "writing": false
+        }
+      ],
+      "denied_files_absent_now": true,
+      "corresponding_pinned_source_opened": true,
+      "reference_opened": false
+    },
+    {
+      "phase": "scoring",
+      "denied": [
+        {
+          "event": "open",
+          "path": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\official\\__pycache__\\common.cpython-312.pyc",
+          "writing": false
+        }
+      ],
+      "denied_files_absent_now": true,
+      "corresponding_pinned_source_opened": true,
+      "reference_opened": true
+    }
+  ],
+  "source_and_asset_sha256_verified": {
+    "tmp/peer_review/submission_240_7e3a2792/source/README.md": "83e3df0451749620411d84ec8ef30ffe40f5fbb0c3d706de9fb5cdb79aa046b4",
+    "tmp/peer_review/submission_240_7e3a2792/source/.gitattributes": "99d6b72451924789bdd9853c677dc4abbc4f9a3455da903d3f06efead5a377b1",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/submission.py": "e327b29e7b0b4a1fb7f0cc4d0a6160d6bf86e4ad600cac3e7db05fc09789ed4e",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/features.py": "31a9c0472c6fa4a88f1aa4668abfef49edf090e131f2279c04d676daaff12ddb",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/model.py": "99ff12f129af9c69d7d9693f5a4d36b6f73314da76607986b9ccba6ec604338a",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/train.py": "eb5337e1d5e75b4dc519a0f4efe215c5e78ddfd6a18626945337873b5501b943",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/requirements.txt": "5c12d85e7c08038d1dd9ffbf8119d12ce808885230a47e2bf65dcd9f114659d5",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/requirements-train.txt": "036975b5b369b7c113e5cbbb6d7da940b1968ac39c97b2ac851799aeff21e094",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/PACKAGE_MANIFEST.json": "2e9b714598e1addba61545f0d7ce4891d9d11aaf567fb341420d36694fcfd656",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/runs/model_bundle/config.json": "53d377a3ece335620c1901077e284c0bdb08b1cf3fee9434b28e2bf3735ac914",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/runs/model_bundle/scaler_mean.npy": "6015e04095e365e4681ea4c72ea48e1bd0fcf45fc32049ec61293c16749f917a",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/runs/model_bundle/scaler_std.npy": "2f33f720a075e618873e648bcad839c749d4c9c1bec1d4728351e81dfa7964bf",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/runs/model_bundle/weights.npy": "070fd8454aecfb1cf9fe022dd5d6cca81c1717810a8001dc1e996122f1fc9bc0",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/data/LICENSE.txt": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b",
+    "tmp/peer_review/submission_240_7e3a2792/source/code/data/NOTICE.txt": "d577cdf7202ae22f2b19ace348b0ec69958a59aaf51d30cdab902bf7c1e67d78",
+    "tmp/peer_review/submission_240_7e3a2792/official/common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "tmp/peer_review/submission_240_7e3a2792/official/predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+    "tmp/peer_review/submission_240_7e3a2792/official/score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960"
+  },
+  "processes": [
+    {
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 3.7338845999911427,
+      "started_at_utc": "2026-11-02T07:36:57.475449+00:00",
+      "completed_at_utc": "2026-11-02T07:37:01.207346+00:00",
+      "sampled_peak_tree_threads": 4
+    },
+    {
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 1.0347468000254594,
+      "started_at_utc": "2026-11-02T07:37:01.226958+00:00",
+      "completed_at_utc": "2026-11-02T07:37:02.259655+00:00",
+      "sampled_peak_tree_threads": 4
+    }
+  ],
+  "score_aggregate": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 394,
+    "n": 467,
+    "accuracy": 84.36830835117773,
+    "scoring_seconds": 0.06796369998482987
+  },
+  "no_unexpected_denials": true,
+  "no_prediction_reference_access": true,
+  "one_blas_thread_each_process": true,
+  "conclusion": "All four denied events are read-only import-cache probes for exactly the already hash-verified imported Python source modules. The bytecode files are absent and were not loaded; corresponding pinned .py source was opened. The two original official processes already exited successfully. Classifying only these exact events as benign denied cache probes supports validating the existing immutable outputs without rerunning prediction/scoring or changing the peer model.",
+  "not_performed": [
+    "No worker execution or rerun",
+    "No predictions content read or question-level analysis",
+    "No raw bank/reference read",
+    "No official data byte rehash; only saved metadata and source/assets checked",
+    "No modification of FAILED/STARTED/other original logs"
+  ],
+  "limitation": "This classification does not erase the original failed postcheck, authorize arbitrary denied operations, or replace the independent complete-output/resource validation required for recovery."
+}

@@ -1,0 +1,24 @@
+{
+  "command": [
+    "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\reproduce-v3-env-final-selected-01-6f8dc1e8a507\\Scripts\\python.exe",
+    "-I",
+    "-m",
+    "pip",
+    "--isolated",
+    "--disable-pip-version-check",
+    "install",
+    "--no-input",
+    "--only-binary=:all:",
+    "--no-deps",
+    "--index-url",
+    "https://pypi.org/simple",
+    "numpy==2.5.3",
+    "threadpoolctl==3.7.0",
+    "psutil==7.2.2"
+  ],
+  "cwd": "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution",
+  "started_at_utc": "2026-11-02T07:51:15.253534+00:00",
+  "returncode": 0,
+  "completed_at_utc": "2026-11-02T07:51:31.674535+00:00",
+  "wall_seconds": 16.42058590002125
+}

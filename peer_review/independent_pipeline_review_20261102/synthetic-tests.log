@@ -1,0 +1,19 @@
+test_actual_published_peer_handler_prepares_one_target_without_network (test_peer_report.PeerReportTests.test_actual_published_peer_handler_prepares_one_target_without_network) ... ok
+test_ambiguous_post_never_blindly_retries (test_peer_report.PeerReportTests.test_ambiguous_post_never_blindly_retries) ... ok
+test_changed_official_source_fails_before_handler (test_peer_report.PeerReportTests.test_changed_official_source_fails_before_handler) ... ok
+test_closed_window_long_reason_and_credentials_url_rejected (test_peer_report.PeerReportTests.test_closed_window_long_reason_and_credentials_url_rejected) ... ok
+test_conflicting_existing_peer_report_blocks_duplicates (test_peer_report.PeerReportTests.test_conflicting_existing_peer_report_blocks_duplicates) ... ok
+test_existing_remote_report_reconciles_without_post (test_peer_report.PeerReportTests.test_existing_remote_report_reconciles_without_post) ... ok
+test_incomplete_actual_reproduction_prevents_preparation (test_peer_report.PeerReportTests.test_incomplete_actual_reproduction_prevents_preparation) ... ok
+test_incomplete_preparation_receipt_blocks_even_reconciliation (test_peer_report.PeerReportTests.test_incomplete_preparation_receipt_blocks_even_reconciliation) ... ok
+test_malformed_review_protocol_rejected_before_remote_reads (test_peer_report.PeerReportTests.test_malformed_review_protocol_rejected_before_remote_reads) ... ok
+test_no_self_review_or_cross_target (test_peer_report.PeerReportTests.test_no_self_review_or_cross_target) ... ok
+test_one_publish_readback_then_success_reuse (test_peer_report.PeerReportTests.test_one_publish_readback_then_success_reuse) ... ok
+test_reconcile_is_read_only_and_new_publish_requires_review (test_peer_report.PeerReportTests.test_reconcile_is_read_only_and_new_publish_requires_review) ... ok
+test_wrong_identity_and_new_official_source_block_post (test_peer_report.PeerReportTests.test_wrong_identity_and_new_official_source_block_post) ... ok
+test_wrong_or_tampered_official_score_is_rejected (test_peer_report.PeerReportTests.test_wrong_or_tampered_official_score_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 7.955s
+
+OK

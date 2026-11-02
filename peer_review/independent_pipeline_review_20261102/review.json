@@ -1,0 +1,32 @@
+{
+  "schema": "mp2-independent-peer-pipeline-review-v1",
+  "reviewed_at_utc": "2026-11-02T07:29:23.968107+00:00",
+  "source_sha256_before": {
+    "peer_review/tools/peer_report.py": "66fe74eb35380e1b699f73d42f2967eb28a8c29d03016dcaa562b9999b3afc02",
+    "peer_review/tools/prepare_official_peer_form.mjs": "88460852fbd0809782fb134a73ae8447687e375cd316e4199b929c4558b75a11",
+    "code/tests/test_peer_report.py": "e6599764afad48b6d12340358b26ef11dfb1307effb62c77354c8e6ba3585e8e"
+  },
+  "source_sha256_after": {
+    "peer_review/tools/peer_report.py": "66fe74eb35380e1b699f73d42f2967eb28a8c29d03016dcaa562b9999b3afc02",
+    "peer_review/tools/prepare_official_peer_form.mjs": "88460852fbd0809782fb134a73ae8447687e375cd316e4199b929c4558b75a11",
+    "code/tests/test_peer_report.py": "e6599764afad48b6d12340358b26ef11dfb1307effb62c77354c8e6ba3585e8e"
+  },
+  "sources_unchanged": true,
+  "test_exit_code": 0,
+  "test_log_sha256": "74c3f0e89af647f2e078588906787106de0d57f689b42965d24aa533cda0712f",
+  "scope": "Source read plus synthetic evidence and fake HTTP transport; unchanged official local JS handler, no real peer preparation, no credential helper, no actual GET/POST, no bank reads.",
+  "source_review_findings": {
+    "official_peer_protocol_and_handler": "passed",
+    "exact_official_payload_title_body_url_binding": "passed",
+    "source_graph_and_preparation_completion": "passed",
+    "personal_account_and_request_scope": "passed",
+    "duplicate_conflicts_and_once_only_post": "passed",
+    "uncertain_post_reconciliation_only": "passed",
+    "secret_output_handling": "passed"
+  },
+  "blocking_software_finding": false,
+  "limitations": [
+    "Timing/complete-prediction factual validation is delegated to the exact peer reproduction COMPLETE producer and root review; this publisher validates score protocol/count/arithmetic and hashes the raw evidence, not the full timing schema.",
+    "Preparation synthetic tests intentionally exercise the actual official review phase and depend on its current window being open."
+  ]
+}

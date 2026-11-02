@@ -1,0 +1,49 @@
+{
+  "schema": "mp2-peer-official-form-source-v1",
+  "official_site_commit": "65c16a3eef424e30b254ff58804dffe0fbda8793",
+  "checked_at_utc": "2026-11-02T07:12:56Z",
+  "source_root": "peer_review/official_form/65c16a3eef424e30b254ff58804dffe0fbda8793",
+  "published_html": "courses/dase7506/mp2/index.html",
+  "published_entry": "courses/dase7506/assets/mp2.9a439c7af66b.mjs",
+  "published_arena": "courses/dase7506/assets/arena.4f1cb17a638d.mjs",
+  "published_projects": "courses/dase7506/assets/projects.ae4b9dc4b02c.mjs",
+  "files": [
+    {
+      "path": "courses/dase7506/mp2/index.html",
+      "git_blob_sha": "53b5ad66a5f8b1069a55cf83633a4bf0c278b548",
+      "url": "https://github.com/xudongwu-0/xudongwu-0.github.io/blob/65c16a3eef424e30b254ff58804dffe0fbda8793/courses/dase7506/mp2/index.html",
+      "sha256": "8dd7fa0c7d65e2fd403139eb10829da8e8d59d40f60d878bc2929e81dfaddd71",
+      "bytes": 6699
+    },
+    {
+      "path": "courses/dase7506/assets/mp2.9a439c7af66b.mjs",
+      "git_blob_sha": "b891777d9602c10b99f5ba5b5402974c08f9dad8",
+      "url": "https://github.com/xudongwu-0/xudongwu-0.github.io/blob/65c16a3eef424e30b254ff58804dffe0fbda8793/courses/dase7506/assets/mp2.9a439c7af66b.mjs",
+      "sha256": "9a439c7af66b95d1d17403e4df2eeb542cbe7953297c8ce575849c1a4e507945",
+      "bytes": 16256
+    },
+    {
+      "path": "courses/dase7506/assets/arena.4f1cb17a638d.mjs",
+      "git_blob_sha": "a53803cc06195ba44d02a2d97dd91ffe28494aed",
+      "url": "https://github.com/xudongwu-0/xudongwu-0.github.io/blob/65c16a3eef424e30b254ff58804dffe0fbda8793/courses/dase7506/assets/arena.4f1cb17a638d.mjs",
+      "sha256": "4f1cb17a638df9ed13627f1ad10162b753bba132833bf423e220c20d32c217db",
+      "bytes": 24098
+    },
+    {
+      "path": "courses/dase7506/assets/projects.ae4b9dc4b02c.mjs",
+      "git_blob_sha": "bc0ea31136171598c902c7ad30c84636b162ead2",
+      "url": "https://github.com/xudongwu-0/xudongwu-0.github.io/blob/65c16a3eef424e30b254ff58804dffe0fbda8793/courses/dase7506/assets/projects.ae4b9dc4b02c.mjs",
+      "sha256": "ae4b9dc4b02cffa072a725441720d47eb81d496a89a9264a9bb4fd85390471fc",
+      "bytes": 751
+    }
+  ],
+  "publication": {
+    "projects": {
+      "mp2": {
+        "published_at": "2026-11-01T04:42:52.971Z",
+        "review_ends_at": "2026-11-09T00:00:00+08:00"
+      }
+    }
+  },
+  "scope": "Published HTML and exact imported modules only. No board or peer records retained in this source snapshot."
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "mp2-peer-recovery-independent-final-review-v1",
+  "reviewed_at_utc": "2026-11-02T07:51:21.837651+00:00",
+  "passed": true,
+  "peer_submission": 240,
+  "peer_commit": "7e3a2792b7b4442f5e53705a64b4560a2e365de9",
+  "complete_sha256": "8c401c3cfa4d462748451a9e3a67ebb21dfad248ad5879ad5e8a439d715c2e7f",
+  "recovery_sha256": "886dd271d0d54a7293272a30e854494cc9151d209c2c20146765a74b70420dac",
+  "timing_sha256": "df113f27affcdf5c45bb175945543d9f6f97ecace8f455586a1fa730226823de",
+  "reviewer_source_sha256": "41fca15bd883d3f6dbb844f2895ee545429b8c7ce023d1a179666136121d80ef",
+  "verified_input_files": 27,
+  "verified_output_files": 45,
+  "verified_preserved_original_files": 41,
+  "prediction_contract": {
+    "n": 467,
+    "unique_nonempty_string_ids": 467,
+    "legal_integer_choices": 467,
+    "protocol_and_split_match": true,
+    "individual_ids_and_choices_logged": false
+  },
+  "score_aggregate": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 394,
+    "n": 467,
+    "accuracy": 84.36830835117773
+  },
+  "timing": {
+    "combined_monotonic_available": false,
+    "combined_monotonic_seconds": null,
+    "saved_phase_monotonic_sum_seconds": 4.768631400016602,
+    "saved_first_to_last_utc_seconds": 4.784206,
+    "saved_start_to_failure_utc_seconds": 4.802854,
+    "sampled_task_threads": 4,
+    "one_blas_thread_each_process": true,
+    "asset_bytes": 86179
+  },
+  "original_failed_record_preserved": true,
+  "exact_four_cache_denials_verified": true,
+  "no_prediction_reference_access": true,
+  "all_submitted_assets_actually_opened": true,
+  "scope": "Independent existing-evidence verification only. Official inputs, source and assets were streamed solely for SHA checks. Only saved prediction IDs/choice legality and aggregate score/timing were parsed; no raw examples, references, per-question correctness or error patterns were analyzed.",
+  "no_worker_or_scorer_rerun": true,
+  "no_source_or_model_change": true,
+  "no_network_or_publication": true,
+  "limitation": "Local sampled resource evidence is not reference-hardware certification; UTC elapsed scopes do not recover the unavailable original combined monotonic timer. Completion/output hashes bind bytes at their recorded recovery/review times, not a claimed earlier unavailable output-hash receipt."
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "mp2-peer-reproduction-failed-v1",
+  "status": "failed",
+  "error_type": "ValueError",
+  "error": "Peer attempted a prohibited operation",
+  "processes": [
+    {
+      "command": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-S",
+        "-c",
+        "import os,sys,json,runpy\nfrom pathlib import Path\n_scope=json.loads('{\"phase\": \"prediction\", \"read_files\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\data\\\\\\\\manifest.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\data\\\\\\\\candidates\\\\\\\\gsm8k_test.jsonl\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\data\\\\\\\\candidates\\\\\\\\gsm8k_test.npz\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\common.py\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\predict.py\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\score_predictions.py\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\source\\\\\\\\code\\\\\\\\submission.py\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\source\\\\\\\\code\\\\\\\\features.py\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\source\\\\\\\\code\\\\\\\\runs\\\\\\\\model_bundle\\\\\\\\config.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\source\\\\\\\\code\\\\\\\\runs\\\\\\\\model_bundle\\\\\\\\scaler_mean.npy\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\source\\\\\\\\code\\\\\\\\runs\\\\\\\\model_bundle\\\\\\\\scaler_std.npy\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\source\\\\\\\\code\\\\\\\\runs\\\\\\\\model_bundle\\\\\\\\weights.npy\"], \"write_files\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\peer_review\\\\\\\\submission_240\\\\\\\\predictions.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\peer_review\\\\\\\\submission_240\\\\\\\\prediction-libraries.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\peer_review\\\\\\\\submission_240\\\\\\\\prediction-access.json\"], \"read_directories\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\data\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\data\\\\\\\\candidates\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\source\\\\\\\\code\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\source\\\\\\\\code\\\\\\\\runs\\\\\\\\model_bundle\"], \"write_directory\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\peer_review\\\\\\\\submission_240\", \"library_roots\": [\"C:\\\\\\\\Program Files\\\\\\\\Python312\\\\\\\\Lib\", \"C:\\\\\\\\Program Files\\\\\\\\Python312\\\\\\\\DLLs\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\"], \"library_files\": [\"C:\\\\\\\\Program Files\\\\\\\\Python312\\\\\\\\python312.zip\"], \"cwd\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\", \"self_test\": false, \"reference\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\data\\\\\\\\gsm8k_test.jsonl\"}')\nos.chdir(_scope['cwd'])\nsys.dont_write_bytecode=True\n_opened=set();_denied=[]\ndef _under(path,base):return path==base or path.startswith(base+os.sep)\n_read=set(_scope['read_files']);_write=set(_scope['write_files'])\n_libraries=_scope['library_roots']\ndef _audit(event,args):\n    if event.startswith('socket.') or event in ('subprocess.Popen','os.system','os.spawn','os.posix_spawn','os.fork','os.forkpty','os.exec','os.startfile','os.startfile/2'):\n        _denied.append({'event':event});raise PermissionError('Peer worker is offline and cannot spawn')\n    if event in ('os.remove','os.rmdir','os.rename','os.link','os.symlink','os.chmod','os.chown','os.truncate'):\n        _denied.append({'event':event});raise PermissionError('Peer worker cannot mutate files')\n    if event in ('os.listdir','os.scandir'):\n        p=str(Path(os.fsdecode(args[0])).resolve())\n        if not any(_under(p,base) for base in _libraries) and p!=_scope['cwd'] and p not in _scope['read_directories']:\n            _denied.append({'event':event,'path':p});raise PermissionError('Directory enumeration outside libraries forbidden')\n    if event=='os.mkdir' and str(Path(os.fsdecode(args[0])).resolve())!=_scope['write_directory']:\n        _denied.append({'event':event});raise PermissionError('Directory creation outside output forbidden')\n    if event!='open' or isinstance(args[0],int):return\n    p=str(Path(os.fsdecode(args[0])).resolve());mode,flags=args[1],args[2]\n    writing=(isinstance(mode,str) and any(c in mode for c in 'wax+')) or flags & (os.O_WRONLY|os.O_RDWR|os.O_CREAT|os.O_TRUNC)\n    permitted=p in _write if writing else p in _read or p in _scope['library_files'] or any(_under(p,b) for b in _libraries)\n    if not permitted:\n        _denied.append({'event':event,'path':p,'writing':bool(writing)});raise PermissionError('File outside explicit peer phase allowlist')\n    _opened.add(p)\nsys.addaudithook(_audit)\n\nfrom threadpoolctl import threadpool_info\nscript,resource,access=sys.argv[1:4]\nsys.argv=[script]+sys.argv[4:]\nsys.path.insert(0,str(Path(script).resolve().parent))\ntry:\n    runpy.run_path(script,run_name='__main__')\nfinally:\n    report={'script':script,'phase':_scope['phase'],'python_executable':sys.executable,\n            'pythonpath':os.environ.get('PYTHONPATH'),'numpy_version':getattr(sys.modules.get('numpy'),'__version__',None),\n            'torch_imported':'torch' in sys.modules,'thread_pools':threadpool_info(),\n            'features_module_file':getattr(sys.modules.get('features'),'__file__',None)}\n    with open(resource,'x',encoding='utf-8') as stream:json.dump(report,stream,indent=2)\n    with open(access,'x',encoding='utf-8') as stream:json.dump({'phase':_scope['phase'],'opened_paths':sorted(_opened),'denied':_denied,'question_text_logged':False},stream,indent=2)\n",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\official\\predict.py",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\peer_review\\submission_240\\prediction-libraries.json",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\peer_review\\submission_240\\prediction-access.json",
+        "--split",
+        "test",
+        "--method",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\source\\code\\submission.py",
+        "--checkpoint",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\source\\code\\runs\\model_bundle",
+        "--output",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\peer_review\\submission_240\\predictions.json"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "started_at_utc": "2026-11-02T07:36:57.475449+00:00",
+      "completed_at_utc": "2026-11-02T07:37:01.207346+00:00",
+      "wall_seconds": 3.7338845999911427,
+      "process_tree": [
+        {
+          "pid": 45452,
+          "create_time": 1793605017.4783924
+        }
+      ],
+      "sampled_peak_tree_threads": 4,
+      "sampled_peak_tree_rss_bytes": 124178432,
+      "sampled_peak_tree_plus_coordinator_threads": 8,
+      "sampled_cpu_seconds": 3.53125,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      },
+      "sampling_note": "Nominal 10 ms delay between process-tree samples, plus snapshot overhead. Observed children retain PID/creation identities after parent exit. Unobserved detached ancestry is not recoverable; formal workers use direct Python and deny spawning. CPU/RSS/threads are samples, not exact integrals."
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-S",
+        "-c",
+        "import os,sys,json,runpy\nfrom pathlib import Path\n_scope=json.loads('{\"phase\": \"scoring\", \"read_files\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\data\\\\\\\\manifest.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\data\\\\\\\\candidates\\\\\\\\gsm8k_test.jsonl\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\data\\\\\\\\candidates\\\\\\\\gsm8k_test.npz\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\data\\\\\\\\gsm8k_test.jsonl\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\peer_review\\\\\\\\submission_240\\\\\\\\predictions.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\common.py\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\predict.py\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\score_predictions.py\"], \"write_files\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\peer_review\\\\\\\\submission_240\\\\\\\\score.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\peer_review\\\\\\\\submission_240\\\\\\\\scoring-libraries.json\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\peer_review\\\\\\\\submission_240\\\\\\\\scoring-access.json\"], \"read_directories\": [\"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\peer_review\\\\\\\\submission_240\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\data\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\data\\\\\\\\candidates\"], \"write_directory\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\peer_review\\\\\\\\submission_240\", \"library_roots\": [\"C:\\\\\\\\Program Files\\\\\\\\Python312\\\\\\\\Lib\", \"C:\\\\\\\\Program Files\\\\\\\\Python312\\\\\\\\DLLs\", \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\"], \"library_files\": [\"C:\\\\\\\\Program Files\\\\\\\\Python312\\\\\\\\python312.zip\"], \"cwd\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\", \"self_test\": false, \"reference\": \"C:\\\\\\\\AAmy work information\\\\\\\\7503vision\\\\\\\\dase7506-mp2-solution\\\\\\\\tmp\\\\\\\\peer_review\\\\\\\\submission_240_7e3a2792\\\\\\\\official\\\\\\\\data\\\\\\\\gsm8k_test.jsonl\"}')\nos.chdir(_scope['cwd'])\nsys.dont_write_bytecode=True\n_opened=set();_denied=[]\ndef _under(path,base):return path==base or path.startswith(base+os.sep)\n_read=set(_scope['read_files']);_write=set(_scope['write_files'])\n_libraries=_scope['library_roots']\ndef _audit(event,args):\n    if event.startswith('socket.') or event in ('subprocess.Popen','os.system','os.spawn','os.posix_spawn','os.fork','os.forkpty','os.exec','os.startfile','os.startfile/2'):\n        _denied.append({'event':event});raise PermissionError('Peer worker is offline and cannot spawn')\n    if event in ('os.remove','os.rmdir','os.rename','os.link','os.symlink','os.chmod','os.chown','os.truncate'):\n        _denied.append({'event':event});raise PermissionError('Peer worker cannot mutate files')\n    if event in ('os.listdir','os.scandir'):\n        p=str(Path(os.fsdecode(args[0])).resolve())\n        if not any(_under(p,base) for base in _libraries) and p!=_scope['cwd'] and p not in _scope['read_directories']:\n            _denied.append({'event':event,'path':p});raise PermissionError('Directory enumeration outside libraries forbidden')\n    if event=='os.mkdir' and str(Path(os.fsdecode(args[0])).resolve())!=_scope['write_directory']:\n        _denied.append({'event':event});raise PermissionError('Directory creation outside output forbidden')\n    if event!='open' or isinstance(args[0],int):return\n    p=str(Path(os.fsdecode(args[0])).resolve());mode,flags=args[1],args[2]\n    writing=(isinstance(mode,str) and any(c in mode for c in 'wax+')) or flags & (os.O_WRONLY|os.O_RDWR|os.O_CREAT|os.O_TRUNC)\n    permitted=p in _write if writing else p in _read or p in _scope['library_files'] or any(_under(p,b) for b in _libraries)\n    if not permitted:\n        _denied.append({'event':event,'path':p,'writing':bool(writing)});raise PermissionError('File outside explicit peer phase allowlist')\n    _opened.add(p)\nsys.addaudithook(_audit)\n\nfrom threadpoolctl import threadpool_info\nscript,resource,access=sys.argv[1:4]\nsys.argv=[script]+sys.argv[4:]\nsys.path.insert(0,str(Path(script).resolve().parent))\ntry:\n    runpy.run_path(script,run_name='__main__')\nfinally:\n    report={'script':script,'phase':_scope['phase'],'python_executable':sys.executable,\n            'pythonpath':os.environ.get('PYTHONPATH'),'numpy_version':getattr(sys.modules.get('numpy'),'__version__',None),\n            'torch_imported':'torch' in sys.modules,'thread_pools':threadpool_info(),\n            'features_module_file':getattr(sys.modules.get('features'),'__file__',None)}\n    with open(resource,'x',encoding='utf-8') as stream:json.dump(report,stream,indent=2)\n    with open(access,'x',encoding='utf-8') as stream:json.dump({'phase':_scope['phase'],'opened_paths':sorted(_opened),'denied':_denied,'question_text_logged':False},stream,indent=2)\n",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\tmp\\peer_review\\submission_240_7e3a2792\\official\\score_predictions.py",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\peer_review\\submission_240\\scoring-libraries.json",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\peer_review\\submission_240\\scoring-access.json",
+        "--split",
+        "test",
+        "--predictions",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\peer_review\\submission_240\\predictions.json",
+        "--output",
+        "C:\\AAmy work information\\7503vision\\dase7506-mp2-solution\\peer_review\\submission_240\\score.json"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "started_at_utc": "2026-11-02T07:37:01.226958+00:00",
+      "completed_at_utc": "2026-11-02T07:37:02.259655+00:00",
+      "wall_seconds": 1.0347468000254594,
+      "process_tree": [
+        {
+          "pid": 17780,
+          "create_time": 1793605021.231312
+        }
+      ],
+      "sampled_peak_tree_threads": 4,
+      "sampled_peak_tree_rss_bytes": 32452608,
+      "sampled_peak_tree_plus_coordinator_threads": 8,
+      "sampled_cpu_seconds": 1.0,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "OMP_THREAD_LIMIT": "1"
+      },
+      "sampling_note": "Nominal 10 ms delay between process-tree samples, plus snapshot overhead. Observed children retain PID/creation identities after parent exit. Unobserved detached ancestry is not recoverable; formal workers use direct Python and deny spawning. CPU/RSS/threads are samples, not exact integrals."
+    }
+  ],
+  "no_score_fabricated": true,
+  "completed_at_utc": "2026-11-02T07:37:02.264667+00:00"
+}

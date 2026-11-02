@@ -1,0 +1,19 @@
+{
+  "schema": "mp2-peer-recording-recovery-source-review-v1",
+  "peer_submission": 240,
+  "source_commit": "7e3a2792b7b4442f5e53705a64b4560a2e365de9",
+  "reviewed_source": "peer_review/submission_240/recover_recording.py",
+  "source_sha256": "b52f6830bf4c3588a5ebed77fdf6b4a0e29645dc95e77bc3e44bbbd4f97f383e",
+  "source_review_passed": true,
+  "scope": "Complete source-only review. The recovery helper was not imported or executed by this reviewer; no worker, test, training, scoring or network operation was run.",
+  "findings": [
+    "Recovery is restricted to the exact previously reviewed postcheck error and four denied nonexistent read-only bytecode probes. All unexpected denials, reference-access mismatches and changed source/input bytes are rejected.",
+    "The helper validates saved official v5/test aggregate arithmetic, prediction protocol/split, exactly467 unique IDs and integer candidate choices0..3. It does not recompute predictions or score them.",
+    "The original FAILED record and every existing file are preserved and hashed before new exclusive outputs. JSON writes flush and fsync; previous recovery outputs prevent replay.",
+    "The lost combined monotonic elapsed is explicitly unavailable/null. Original phase monotonic sums, saved first-to-last UTC interval and STARTED-to-FAILED UTC interval remain distinct and labeled. No missing exact measurement is fabricated.",
+    "Exact checkpoint files must have been opened, excluding silent fallback. Actual library observations, sampled task threads, resource size, wheel verification and original successful process chronology are checked.",
+    "The helper contains no process invocation, import/execution of peer/model code, train/test evaluation, network or publication. Input arrays and official banks are only streamed for SHA verification, not decoded."
+  ],
+  "permitted_next_step": "Run this exact helper once for recording-only recovery of the existing immutable outputs. Then independently review the generated recovery/completion/timing hashes and contract counts. Do not rerun the original predictor or scorer.",
+  "limitations": "Source review alone does not mark the actual recovery complete or authorize publication. The original failed postcheck remains evidence; future COMPLETE and any peer Issue require their own actual verification."
+}
